@@ -1,0 +1,20 @@
+@import '../../styles/style';
+
+
+.root {
+
+}
+
+.RegularCard {
+
+}
+
+@media (min-width: $width-notebook) {
+  .root {
+    display: flex;
+    width: 100%;
+    //justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

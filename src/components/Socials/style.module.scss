@@ -1,0 +1,151 @@
+@import '../../styles/style';
+
+.root {
+  .icon {
+
+  }
+
+  .instIcon {
+
+  }
+
+  .tgIcon {
+
+  }
+
+  .fbIcon {
+
+  }
+
+  .socialsInHeader {
+
+  }
+}
+
+.activeHeader {
+  display: none;
+}
+
+@media (min-width: $width-notebook) {
+  .root {
+    display: flex;
+    width: 10.8rem;
+    justify-content: space-between;
+
+    .icon {
+      cursor: pointer;
+    }
+    .instIcon {
+      svg {
+        g {
+          g {
+            stroke: $color-icon-default;
+            @include headerTransition();
+          }
+        }
+      }
+    }
+
+    .tgIcon {
+      svg {
+        g {
+          path:last-child {
+            stroke: $color-icon-default;
+            @include headerTransition();
+          }
+        }
+      }
+    }
+
+    .fbIcon {
+      svg {
+        g {
+          path:last-child {
+            stroke: $color-icon-default;
+            @include headerTransition();
+          }
+        }
+      }
+    }
+  }
+
+  .activeHeader {
+    .instIcon {
+      svg {
+        g {
+          g {
+            stroke: $color-icon-active;
+            @include headerTransition();
+          }
+        }
+      }
+    }
+
+    .tgIcon {
+      svg {
+        g {
+          path:last-child {
+            stroke: $color-icon-active;
+            @include headerTransition();
+          }
+        }
+      }
+    }
+
+    .fbIcon {
+      svg {
+        g {
+          path:last-child {
+            stroke: $color-icon-active;
+            @include headerTransition();
+          }
+        }
+      }
+    }
+  }
+
+  .socialsInHeader {
+    .icon {
+
+    }
+
+    .instIcon {
+      &:hover {
+        svg {
+          g {
+            g {
+              stroke: $color-inst-icon-hover;
+              @include headerTransition();
+            }
+          }
+        }
+      }
+    }
+
+    .tgIcon {
+      &:hover {
+        svg {
+          g {
+            path:last-child {
+              stroke: $color-tg-icon-hover;
+              @include headerTransition();
+            }
+          }
+        }
+      }
+    }
+
+    .fbIcon {
+      &:hover {
+        svg {
+          g {
+            path:last-child {
+              stroke: $color-fb-icon-hover;
+              @include headerTransition();
+            }
+          }
+        }
+      }
+    }
+  }
+}

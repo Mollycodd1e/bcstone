@@ -1,0 +1,67 @@
+@import '../../styles/style';
+
+.root {
+  width: 100%;
+  height: 4.1rem;
+  background-color: $color-bg-header-default;
+  padding: 0 .8rem 0 2.3rem;
+  position: fixed;
+  z-index: 11;
+  overflow: hidden;
+
+  @include headerTransition();
+}
+
+.active {
+  background-color: $color-bg-header-active;
+}
+
+.wrapper {
+  width: $width-mobile-sm;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.Socials {
+  display: none;
+}
+
+.Logo {
+  margin-right: auto;
+  margin-left: calc(50% - 6.85rem);
+}
+
+.Burger {
+}
+
+@media (min-width: $width-notebook) {
+  .root {
+    height: 10.6rem;
+  }
+
+  .wrapper {
+    width: $width-notebook;
+    margin: 0 auto;
+  }
+
+  .Logo {
+    margin-right: auto;
+    margin-left: calc(50% - 15.9rem);
+
+    svg {
+      width: 12.227rem !important;
+      height: 5.12rem !important;
+    }
+  }
+
+  .Burger {
+
+  }
+
+  .Socials {
+    display: block;
+    margin-right: 15.6rem;
+  }
+}

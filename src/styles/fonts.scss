@@ -1,0 +1,58 @@
+
+@font-face {
+  font-family: "Codec Cold";
+  src: url("/fonts/codeccold-regular.woff2") format("woff2"), url("/fonts/codeccold-regular.woff") format("woff");
+  font-weight: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Codec Cold";
+  src: url("/fonts/codeccold-extrabolditalic.woff2") format("woff2"), url("/fonts/codeccold-extrabolditalic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Codec Cold";
+  src: url("/fonts/codeccold-lightitalic.woff2") format("woff2"), url("/fonts/codeccold-lightitalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Codec Cold";
+  src: url("/fonts/codeccold-bold.woff2") format("woff2"), url("/fonts/codeccold-bold.woff") format("woff");
+  font-weight: 700;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Codec Cold";
+  src: url("/fonts/codeccold-extrabold.woff2") format("woff2"), url("/fonts/codeccold-extrabold.woff") format("woff");
+  font-weight: 800;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Codec Cold";
+  src: url("/fonts/codeccold-heavy.woff2") format("woff2"), url("/fonts/codeccold-heavy.woff") format("woff");
+  font-weight: 900;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Codec Cold";
+  src: url("/fonts/codeccold-light.woff2") format("woff2"), url("/fonts/codeccold-light.woff") format("woff");
+  font-weight: 300;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Bebas Neue Pro";
+  src: url("/fonts/BebasNeuePro-Bold.woff2") format("woff2"), url("/fonts/BebasNeuePro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: fallback;
+}

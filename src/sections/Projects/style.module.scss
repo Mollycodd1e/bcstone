@@ -1,0 +1,93 @@
+@import '../../styles/style';
+
+.root {
+  display: grid;
+  grid-template-columns: 1fr 222px 98px 1fr;
+  grid-template-rows: 43px 1fr;
+  grid-template-areas:
+    ". title Switcher ."
+    ". SliderRegularCard SliderRegularCard .";
+  padding-top: 3rem;
+}
+
+.RegularMap {
+  grid-area: RegularMap;
+
+}
+
+.mapView {
+  width: 100%;
+
+  grid-template-areas:
+    ". title Switcher ."
+    "RegularMap RegularMap RegularMap RegularMap";
+}
+
+.title {
+  grid-area: title;
+  justify-self: flex-end;
+  text-align: end;
+  align-self: flex-start;
+  color: $color-card-text;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+
+  &_mod {}
+}
+
+.Switcher {
+  grid-area: Switcher;
+  justify-self: flex-start;
+  align-self: flex-start;
+  margin-left: 1.5rem;
+}
+
+.CombineRegularCards {
+  grid-area: SliderRegularCard;
+}
+
+@media (min-width: $width-notebook) {
+  .root {
+    grid-template-columns: 1fr 968px 232px 1fr;
+    grid-template-rows: 52px 1fr;
+    //height: 30rem;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .mapView {
+    width: unset;
+    grid-template-areas:
+    ". title Switcher ."
+    ". RegularMap RegularMap .";
+  }
+
+  .title {
+    grid-area: title;
+    justify-self: flex-end;
+    text-align: end;
+    align-self: flex-end;
+    margin-right: 22.5rem;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    margin-bottom: 1.9rem;
+
+    &_mod {
+      margin-right: 12.5rem;
+    }
+  }
+
+  .Switcher {
+    justify-self: flex-end;
+
+    margin-right: 3.4rem;
+  }
+
+  .CombineRegularCards {
+    grid-area: SliderRegularCard;
+    justify-self: center;
+    width: 100%;
+    padding: 0 34px;
+  }
+}

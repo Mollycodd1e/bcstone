@@ -1,0 +1,31 @@
+@import '../../styles/style';
+
+.root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-gray-eight;
+}
+
+.wrapMiddleBlock {
+  @include wrapMiddleBlock;
+}
+
+@media (min-width: $width-notebook) {
+  .root {
+    flex-direction: row;
+    //align-items: stretch;
+    justify-content: center;
+    //justify-items: center;
+    background-color: transparent;
+  }
+
+  .wrapMiddleBlock {
+    //height: 100%;
+    //width: unset;
+    width: 539px;
+    margin-left: 70px;
+    margin-top: -88px;
+  }
+}

@@ -1,0 +1,216 @@
+@import '../../styles/style';
+
+//$retina-dpi: 144dpi;
+//$retina-dppx: 1.5dppx;
+//
+//$laptop_small: 1220px;
+
+.wrapMap {
+  width: 100%;
+  height: 50rem;
+  position: relative;
+  //margin-bottom: 110px;
+  //margin: 0 auto;
+}
+//
+//.metro {
+//  font-size: 14px;
+//  position: relative;
+//  z-index: 5;
+//  background-image: url("moscowmetro.svg");
+//  background-repeat: no-repeat;
+//  background-size: 93px 24px;
+//  width: 111px;
+//  background-position-y: 3px;
+//  background-position-x: 10px;
+//  height: 95px;
+//  text-align: center;
+//  padding-top: 30px;
+//}
+//
+//.marker {
+//  background-image: url("1.png");
+//  background-repeat: no-repeat;
+//  background-size: 110px 112px;
+//  width: 110px;
+//  height: 112px;
+//  z-index: 10;
+//  cursor: pointer;
+//  transform: translate(-50%, -50%);
+//  position: relative;
+//
+//  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+//    background-image: url("1@2x.png");
+//  }
+//}
+//
+//.pinBlock {
+//  position: absolute;
+//  right: -547px;
+//  top: -166px;
+//  width: 506px;
+//  background-color: rgb(255, 255, 255);
+//  opacity: .9;
+//
+//  .pinTitle {
+//    font-size: 20px;
+//    padding: 14px 25px;
+//    color: #fefefe;
+//    background-color: #2b2c2d;
+//    text-align: center;
+//
+//  }
+//}
+//
+//.infoBlock {
+//  &:first-child {
+//    margin-bottom: 38px;
+//  }
+//}
+//
+//.wrapperInfo {
+//  padding: 32px 65px 26px 28px;
+//}
+//
+//.infoBlockMain {
+//  font-weight: 300;
+//  font-size: 16px;
+//
+//  .line {
+//    margin-bottom: 9px;
+//    display: flex;
+//
+//    & div:last-child {
+//      margin-left: auto;
+//      min-width: 58px;
+//    }
+//
+//    & div:first-child {
+//      min-width: 270px;
+//    }
+//  }
+//}
+//
+//.infoBlockHeader {
+//  font-size: 18px;
+//  margin-bottom: 12px;
+//  padding-left: 27px;
+//  position: relative;
+//
+//  &:before {
+//    content: '';
+//    position: absolute;
+//    width: 19px;
+//    height: 19px;
+//    background-repeat: no-repeat;
+//    background-position: center;
+//    top: 1px;
+//    left: 0;
+//  }
+//}
+//
+//.infoBlock:first-child {
+//  .infoBlockHeader {
+//    &:before {
+//      background-size: 17px 13px;
+//      background-image: url("car.svg");
+//    }
+//  }
+//}
+//
+//.infoBlock:last-child {
+//  .infoBlockHeader {
+//    &:before {
+//      background-size: 19px 19px;
+//      background-image: url("walk.svg");
+//    }
+//  }
+//}
+//
+//@media (max-width: $laptop_small) {
+//  .wrapMap {
+//    width: 1920px;
+//    height: 596px;
+//    margin-bottom: 18px;
+//  }
+//
+//  .marker {
+//    background-size: 85px 87px;
+//    width: 85px;
+//    height: 87px;
+//  }
+//
+//  .pinBlock {
+//    right: -103px;
+//    top: -243px;
+//    width: 291px;
+//
+//
+//    .pinTitle {
+//      font-size: 13px;
+//      padding: 10px 3px;
+//    }
+//  }
+//
+//  .infoBlock {
+//    &:first-child {
+//      margin-bottom: 13px;
+//    }
+//  }
+//
+//  .wrapperInfo {
+//    padding: 12px 18px;
+//  }
+//
+//  .infoBlockHeader {
+//    font-size: 12px;
+//    margin-bottom: 4px;
+//    padding-left: 25px;
+//
+//    &:before {
+//      top: -3px;
+//      left: 0;
+//    }
+//  }
+//
+//  .infoBlock:first-child {
+//    .infoBlockHeader {
+//      &:before {
+//        background-size: 15px 11px;
+//      }
+//    }
+//  }
+//
+//  .infoBlock:last-child {
+//    .infoBlockHeader {
+//      &:before {
+//        background-size: 16px 16px;
+//      }
+//    }
+//  }
+//
+//  .infoBlockMain {
+//    font-size: 10px;
+//
+//    .line {
+//      margin-bottom: 8px;
+//
+//      & div:last-child {
+//        margin-left: auto;
+//        min-width: 58px;
+//      }
+//
+//      & div:first-child {
+//        min-width: 150px;
+//      }
+//    }
+//  }
+//}
+//
+
+
+@media (min-width: $width-notebook) {
+  .wrapMap {
+    height: 60rem !important;
+  }
+}

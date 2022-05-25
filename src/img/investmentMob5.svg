@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="320" height="250" viewBox="0 0 320 250">
+    <defs>
+        <linearGradient id="linear-gradient" x1="0.5" y1="0.201" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#284084"/>
+            <stop offset="1" stop-color="#284084" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
+    <g id="Сгруппировать_2643" data-name="Сгруппировать 2643" transform="translate(0 -211)">
+        <rect id="Прямоугольник_1811" data-name="Прямоугольник 1811" width="320" height="250" transform="translate(0 211)" fill="#fff"/>
+        <g id="Сгруппировать_2478" data-name="Сгруппировать 2478" transform="translate(-499.644 -4570.318)">
+            <g id="Объединение_7" data-name="Объединение 7" transform="translate(860.143 4887.5) rotate(180)" fill="#fff">
+                <path d="M 290.4996948242188 76.49951171875 L 110.4998016357422 76.49951171875 L 110.4998016357422 18.5000114440918 L 119.8917083740234 18.5000114440918 L 120.5641860961914 18.5000114440918 L 120.3705291748047 17.85601043701172 L 116.8794708251953 6.24738073348999 L 137.4524383544922 18.43023872375488 L 137.5702819824219 18.5000114440918 L 137.7072143554688 18.5000114440918 L 290.4996948242188 18.5000114440918 L 290.4996948242188 76.49951171875 Z" stroke="none"/>
+                <path d="M 289.9996948242188 75.99949645996094 L 289.9996948242188 18.9999942779541 L 137.4333343505859 18.9999942779541 L 117.7273559570312 7.33058500289917 L 121.236686706543 18.9999942779541 L 110.9998016357422 18.9999942779541 L 110.9998016357422 75.99949645996094 L 289.9996948242188 75.99949645996094 M 290.9996948242188 76.99949645996094 L 109.9998016357422 76.99949645996094 L 109.9998016357422 17.9999942779541 L 119.8917083740234 17.9999942779541 L 116.0316162109375 5.164208889007568 L 137.7072143554688 17.9999942779541 L 290.9996948242188 17.9999942779541 L 290.9996948242188 76.99949645996094 Z" stroke="none" fill="#284084"/>
+            </g>
+            <text id="Средние_значения_официальной_инфляции" data-name="Средние значения
+официальной инфляции" transform="translate(735.644 4836)" fill="#284084" font-size="12" font-family="CodecCold-Regular, Codec Cold"><tspan x="-122.402" y="0">Средние значения </tspan><tspan x="-151.219" y="13">официальной инфляции</tspan></text>
+        </g>
+        <g id="Сгруппировать_2630" data-name="Сгруппировать 2630" transform="translate(0 -35)">
+            <rect id="Прямоугольник_1596" data-name="Прямоугольник 1596" width="311" height="154" transform="translate(5 323)" fill="#fff" opacity="0"/>
+            <text id="_2018" data-name="2018" transform="translate(5 467)" fill="#8d8d8d" font-size="8" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2018</tspan></text>
+            <text id="_2019" data-name="2019" transform="translate(52 467)" fill="#8d8d8d" font-size="8" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2019</tspan></text>
+            <text id="_2020" data-name="2020" transform="translate(99 467)" fill="#8d8d8d" font-size="8" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2020</tspan></text>
+            <text id="Август_2021" data-name="Август
+2021" transform="translate(149 467)" fill="#8d8d8d" font-size="8" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">Август </tspan><tspan x="0" y="8">2021</tspan></text>
+            <line id="Линия_90" data-name="Линия 90" x2="293" transform="translate(13.5 454.16)" fill="none" stroke="#707070" stroke-width="1"/>
+            <text id="Сентябрь_2021" data-name="Сентябрь
+2021" transform="translate(207 467)" fill="#8d8d8d" font-size="8" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">Сентябрь </tspan><tspan x="0" y="8">2021</tspan></text>
+            <text id="Декабрь_2021" data-name="Декабрь
+2021" transform="translate(278 467)" fill="#8d8d8d" font-size="8" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">Декабрь</tspan><tspan x="0" y="8">2021</tspan></text>
+            <path id="Контур_5017" data-name="Контур 5017" d="M8734.5,5808.427v-15.951l49.056-24.66,45.289,18.507,63.148-52.784c0,.668,64.9-8.315,64.9-8.315-1,0,73.063-10.139,73.063-10.139v93.341Z" transform="translate(-8722.638 -5354.108)" opacity="0.16" fill="url(#linear-gradient)"/>
+            <text id="_8_4_" data-name="8,4%" transform="translate(267 348)" fill="#284084" font-size="20" font-family="CodecCold-Bold, Codec Cold" font-weight="700"><tspan x="0" y="0">8,4%</tspan></text>
+            <text id="_7_4_" data-name="7,4%" transform="translate(226.571 361.279)" fill="#2b2c2d" font-size="10" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">7,4%</tspan></text>
+            <text id="_6_7_" data-name="6,7%" transform="translate(159.741 397.633)" fill="#2b2c2d" font-size="10" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">6,7%</tspan></text>
+            <text id="_3_4_" data-name="3,4%" transform="translate(98.582 445.81)" fill="#2b2c2d" font-size="10" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">3,4%</tspan></text>
+            <text id="_4_5_" data-name="4,5%" transform="translate(53.134 405.649)" fill="#2b2c2d" font-size="10" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">4,5%</tspan></text>
+            <text id="_2_9_" data-name="2,9%" transform="translate(22 444.137)" fill="#2b2c2d" font-size="10" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2,9%</tspan></text>
+            <path id="Контур_5018" data-name="Контур 5018" d="M9187.5,5614.144l49.11-25.468,46,18.682L9344.085,5555l66-8.914,72.831-9.947" transform="translate(-9175.638 -5175.334)" fill="none" stroke="#284084" stroke-width="2"/>
+            <g id="Эллипс_597" data-name="Эллипс 597" transform="translate(9 433.637)" fill="#284084" stroke="#fff" stroke-width="2">
+                <circle cx="5" cy="5" r="5" stroke="none"/>
+                <circle cx="5" cy="5" r="4" fill="none"/>
+            </g>
+            <g id="Эллипс_598" data-name="Эллипс 598" transform="translate(57.648 409.577)" fill="#284084" stroke="#fff" stroke-width="2">
+                <circle cx="5" cy="5" r="5" stroke="none"/>
+                <circle cx="5" cy="5" r="4" fill="none"/>
+            </g>
+            <g id="Эллипс_599" data-name="Эллипс 599" transform="translate(104 426.137)" fill="#284084" stroke="#fff" stroke-width="2">
+                <circle cx="5" cy="5" r="5" stroke="none"/>
+                <circle cx="5" cy="5" r="4" fill="none"/>
+            </g>
+            <g id="Эллипс_600" data-name="Эллипс 600" transform="translate(164.92 374.633)" fill="#284084" stroke="#fff" stroke-width="2">
+                <circle cx="5" cy="5" r="5" stroke="none"/>
+                <circle cx="5" cy="5" r="4" fill="none"/>
+            </g>
+            <g id="Эллипс_601" data-name="Эллипс 601" transform="translate(231.583 365.304)" fill="#284084" stroke="#fff" stroke-width="2">
+                <circle cx="5" cy="5" r="5" stroke="none"/>
+                <circle cx="5" cy="5" r="4" fill="none"/>
+            </g>
+            <g id="Эллипс_602" data-name="Эллипс 602" transform="translate(302.321 354.945)" fill="#284084" stroke="#fff" stroke-width="2">
+                <circle cx="5" cy="5" r="5" stroke="none"/>
+                <circle cx="5" cy="5" r="4" fill="none"/>
+            </g>
+        </g>
+    </g>
+</svg>

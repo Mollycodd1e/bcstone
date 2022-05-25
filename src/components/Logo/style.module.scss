@@ -1,0 +1,47 @@
+@import '../../styles/style';
+
+.root {
+  cursor: pointer;
+ .logoInline {
+   svg {
+     width: 4.845rem;
+     height: 2.039rem;
+
+     g {
+       fill: $color-logo-default;
+       @include headerTransition();
+     }
+   }
+ }
+
+  &:hover {
+    .logoInline {
+      svg {
+        g {
+          fill: $color-logo-default-hover;
+        }
+      }
+    }
+  }
+}
+
+.active {
+ .logoInline {
+   svg {
+     g {
+       fill: $color-logo-active;
+     }
+   }
+ }
+
+
+  &:hover {
+    .logoInline {
+      svg {
+        g {
+          fill: $color-logo-active-hover;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,192 @@
+@import '../../styles/style';
+
+$width-desk-example-block: 1160px;
+
+.root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-gray-eight;
+}
+
+.sliderDesktop {
+  display: none;
+}
+
+.exampleMainTitle {
+  padding: 43px 0 24.5px;
+  font-size: 18px;
+  line-height: 19px;
+  text-align: right;
+}
+
+.slider {
+  & > div {
+    padding-bottom: 0 !important;
+
+    div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
+      bottom: 136px !important;
+      background-color: $color-dark-primary-alfa50;
+      padding-top: 15px;
+      padding-bottom: 14px;
+
+      span[class="swiper-pagination-bullet"] {
+        background: transparent !important;
+        border: 1px solid $color-white !important;
+        opacity: 1 !important;
+      }
+
+      span[class="swiper-pagination-bullet swiper-pagination-bullet-active"] {
+        background: $color-white !important;
+      }
+    }
+  }
+}
+
+.navigationBlock {
+  display: none;
+}
+
+.sliderNumber {
+  display: none;
+}
+
+.navBtn {
+  display: none;
+}
+
+@media (min-width: $width-notebook) {
+  .root {
+    background-color: transparent;
+    position: relative;
+  }
+
+  .navigationBlock {
+    position: absolute;
+    right: calc(50% - 601px);
+    bottom: 114px;
+    z-index: 10;
+    display: flex;
+    height: 48px;
+  }
+
+  .sliderNumber {
+    display: block;
+    font-family: "Bebas Neue Pro", "Arial", sans-serif;
+    color: $color-white;
+    font-size: 45px;
+    line-height: 51px;
+    font-weight: bold;
+    margin-right: 9px;
+  }
+
+  .navBtn {
+    display: block;
+    width: 52px;
+    border-width: 0;
+    background-color: $color-blue;
+    background-image: url("../../img/shevron_left_white.svg");
+    background-repeat: no-repeat;
+    background-size: 8px 14px;
+    background-position: center;
+    cursor: pointer;
+
+    &:last-of-type {
+      transform: rotate(180deg);
+    }
+  }
+
+  .slider {
+    display: none !important;
+  }
+
+  .sliderDesktop {
+    display: block;
+    width: $width-desk-example-block;
+    position: relative;
+
+    //& > div[class*="swiper-container"] {
+    //  width: calc(1160px + 20px);
+    //  margin-right: 20px;
+    //}
+
+    & > div {
+      width: $width-desk-example-block;
+
+      & div[class="swiper-wrapper"] {
+        width: $width-desk-example-block !important;
+        //margin-right: 20px;
+
+        div[class*="swiper-slide"] {
+          width: $width-desk-example-block !important;
+        }
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 611px;
+      background-color: transparent;
+      border: 1px solid $color-gray-two;
+      left: -1px;
+      top: -99px;
+    }
+  //
+  //  & div[class*="swiper-button-prev"],
+  //  & div[class*="swiper-button-next"] {
+  //    opacity: 1;
+  //    display: block;
+  //    width: 52.5px;
+  //    height: 48px;
+  //    background-color: $color-gray-eight !important;
+  //
+  //    &:after,
+  //    &:before {
+  //      content: none;
+  //    }
+  //  }
+  //
+  //  & div[class*="swiper-button-prev"],
+  //  & div[class*="swiper-button-next"] {
+  //    background-image: url("../../img/shevron_left.svg");
+  //    background-repeat: no-repeat;
+  //    background-size: 8px 14px;
+  //    background-position: center;
+  //
+  //    top: unset;
+  //    bottom: 288px;
+  //  }
+  //
+  //  & div[class*="swiper-button-prev"] {
+  //    left: 20px;
+  //  }
+  //
+  //  & div[class*="swiper-button-next"] {
+  //    transform: rotate(180deg);
+  //    right: 0;
+  //  }
+  }
+
+  .exampleMainTitle {
+    padding: 67px 0 0;
+    font-size: 30px;
+    line-height: 32px;
+    font-weight: 300;
+    text-align: left;
+    position: relative;
+
+    &:after {
+      content: '↓';
+      font-size: 31px;
+      line-height: 32px;
+      font-weight: 300;
+      position: absolute;
+      bottom: -1px;
+      right: -28px;
+
+    }
+  }
+}

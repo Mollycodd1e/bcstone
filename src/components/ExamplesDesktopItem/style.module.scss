@@ -1,0 +1,140 @@
+@import '../../styles/style';
+//
+//$cameoWidthMob: 109.05px;
+//$cameoHeightMob: 33.67px;
+//
+//$storyWidthMob: 117.14px;
+//$storyHeightMob: 36.79px;
+//
+//$playWidthMob: 121.05px;
+//$playHeightMob: 17.85px;
+
+.root {
+  //position: relative;
+  width: 1160px !important;
+  display: flex;
+  flex-direction: column;
+  padding-top: 56px;
+  align-items: center;
+}
+
+.topBlock {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 26px;
+}
+
+.btmBlock {
+  display: flex;
+  height: 99px;
+  width: 100%;
+  align-self: flex-start;
+}
+
+.project {
+  position: relative;
+  //width: 547px !important;
+}
+
+.imgWrapper {
+  width: 541px !important;
+  height: 368px !important;
+
+  & img {
+    width: 541px !important;
+    height: 368px !important;
+  }
+}
+
+.year {
+  position: absolute;
+  top: 17px;
+  left: -6px;
+  padding: 5px 12.2px 4px;
+  background-color: $color-dark-primary;
+  color: $color-white;
+  //border-radius: 12.5px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 300;
+}
+
+.logo {
+  //position: absolute;
+}
+
+.Promo {
+  position: absolute;
+  top: -40px;
+  right: 7px;
+  //left: 24px;
+
+}
+
+.typeBefore,
+.typeAfter {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 22px;
+  margin-top: 33px;
+}
+
+.typeBefore {
+  margin-left: 167px;
+}
+
+.typeAfter {
+  margin-left: auto;
+  margin-right: 164px;
+}
+
+.type {
+  //width: fit-content;
+  //margin: 26px auto 41px;
+  //font-size: 31px;
+  //line-height: 33px;
+  //font-weight: 300;
+}
+
+.cameoClass {
+  margin-left: 107px;
+  margin-top: 22.7px;
+  //top: 21.3px;
+  //left: 45px;
+  //width: $cameoWidthMob;
+  //height: $cameoHeightMob;
+  //
+  //& svg {
+  //  width: $cameoWidthMob;
+  //  height: $cameoHeightMob;
+  //}
+}
+
+.storyClass {
+  margin-left: 106.5px;
+  margin-top: 24px;
+  //top: 67px;
+  //right: 50.5px;
+  //width: $storyWidthMob;
+  //height: $storyHeightMob;
+  //
+  //& svg {
+  //  width: $storyWidthMob;
+  //  height: $storyHeightMob;
+  //}
+}
+
+.playClass {
+  margin-left: 95.6px;
+  margin-top: 31.6px;
+  //top: 16px;
+  //left: 45px;
+  //width: $playWidthMob;
+  //height: $playHeightMob;
+  //
+  //& svg {
+  //  width: $playWidthMob;
+  //  height: $playHeightMob;
+  //}
+}

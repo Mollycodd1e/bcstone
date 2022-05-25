@@ -1,0 +1,272 @@
+@import '../../styles/style';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 79.4px 23px 71.3px;
+  background-color: $color-gray-ten;
+  width: 100%;
+  color: $color-dark-primary;
+}
+
+.text1,
+.text2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  margin-bottom: 8.5px;
+}
+
+.text1 {
+  grid-area: text1;
+}
+
+.text2 {
+  grid-area: text2;
+}
+
+.phone {
+  text-align: center;
+  font-size: 26px;
+  line-height: 24px;
+  font-weight: bold;
+  margin-bottom: 32.6px;
+  color: $color-blue;
+  border-bottom: 1px solid $color-gray-two;
+  grid-area: phone;
+}
+
+.sales {
+  font-size: 14px;
+  line-height: 24px;
+  color: $color-blue;
+  margin-bottom: 33px;
+  grid-area: sales;
+}
+
+.geo {
+  font-size: 14px;
+  line-height: 15px;
+  border-bottom: 1px solid $color-gray-two;
+  margin-bottom: 55.8px;
+  color: $color-blue;
+  grid-area: geo;
+}
+
+.Socials {
+  margin-bottom: 44.4px;
+  grid-area: Socials;
+
+  & a {
+    & svg {
+      width: 37.33px;
+      height: 37.33px;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 28.7px;
+    }
+  }
+}
+
+.text3 {
+  font-size: 30px;
+  line-height: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  margin-right: 10px;
+  grid-area: text3;
+}
+
+.emptyLogo {
+  margin-bottom: 47px;
+  margin-right: 2px;
+  grid-area: emptyLogo;
+}
+
+.NavFooter {
+  margin-bottom: 57px;
+  grid-area: NavFooter;
+}
+
+.stoneLogo {
+  display: none;
+  grid-area: stoneLogo;
+}
+
+.developerLogo {
+  margin-right: 110px;
+  margin-bottom: 23.4px;
+  grid-area: developerLogo;
+
+  & svg {
+    width: 163.85px;
+    height: 26.48px;
+  }
+}
+
+.text4,
+.text5,
+.text6 {
+  font-size: 10px;
+  line-height: 11px;
+}
+
+.text4 {
+  margin-bottom: 12px;
+  margin-right: 110px;
+  grid-area: text4;
+}
+
+.text5 {
+  margin-bottom: 12px;
+  margin-right: 175px;
+  grid-area: text5;
+}
+
+.text6 {
+  margin-right: 29px;
+  grid-area: text6;
+}
+
+@media (min-width: $width-notebook) {
+  .root {
+    padding: 122px 0 108px;
+    background-color: $color-gray-eight;
+    display: grid;
+    grid-template-rows: repeat(12, auto);
+    grid-template-columns: 1fr 777px 167px 256px 1fr;
+    grid-template-areas:
+            ". text1 text1 text1 ."
+            ". phone phone phone ."
+            ". sales sales sales ."
+            ". text2 text2 text2 ."
+            ". geo geo geo ."
+            ". Socials Socials Socials ."
+            ". emptyLogo emptyLogo emptyLogo ."
+            ". text3 text3 text3 ."
+            ". NavFooter NavFooter NavFooter ."
+            ". text4 stoneLogo developerLogo ."
+            ". text5 stoneLogo developerLogo ."
+            ". text6 stoneLogo developerLogo .";
+  }
+
+  .root > *:not(.stoneLogo, .developerLogo, .text4, .text5, .text6) {
+    justify-self: center;
+  }
+
+  .text1 {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 14.7px;
+  }
+
+  .phone {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: unset;
+    margin-bottom: 57px;
+  }
+
+  .sales {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 46.4px;
+  }
+
+  .text2 {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 17px;
+  }
+
+  .geo {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 84px;
+  }
+
+  .Socials {
+    margin-bottom: 86.6px;
+    grid-area: Socials;
+    width: unset;
+
+    & a {
+      & svg {
+        width: 56.19px;
+        height: 56.19px;
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 44.5px;
+      }
+    }
+  }
+
+  .emptyLogo {
+    margin-bottom: 0;
+    margin-right: unset;
+
+    & svg {
+      width: 1194.53px;
+      height: 261.36px;
+
+      & g {
+        & path {
+          stroke: $color-dark-primary;
+          stroke-width: 0.3px;
+        }
+      }
+    }
+  }
+
+  .text3 {
+    font-size: 57px;
+    line-height: 64px;
+    margin-bottom: 119px;
+    margin-right: 84px;
+    margin-top: -108px;
+    font-weight: 900;
+  }
+
+  .NavFooter {
+    margin-bottom: 81.3px;
+  }
+
+  .text4,
+  .text5,
+  .text6 {
+    font-size: 12px;
+    line-height: 13px;
+    margin-bottom: 23.4px;
+  }
+
+  .text6 {
+    margin-bottom: 0;
+  }
+
+  .stoneLogo {
+    display: block;
+    align-self: flex-end;
+
+    & svg {
+      width: 117px;
+      height: 50px;
+    }
+  }
+
+  .developerLogo {
+    margin-right: 0;
+    margin-bottom: 10px;
+    align-self: flex-end;
+
+    & svg {
+      width: 253px;
+      height: 41px;
+    }
+  }
+}

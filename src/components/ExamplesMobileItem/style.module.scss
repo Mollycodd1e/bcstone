@@ -1,0 +1,84 @@
+@import '../../styles/style';
+
+$cameoWidthMob: 109.05px;
+$cameoHeightMob: 33.67px;
+
+$storyWidthMob: 117.14px;
+$storyHeightMob: 36.79px;
+
+$playWidthMob: 121.05px;
+$playHeightMob: 17.85px;
+
+.root {
+  position: relative;
+}
+
+.imgWrapper {
+
+}
+
+.year {
+  position: absolute;
+  top: 16px;
+  right: 21px;
+  padding: 7px 10.5px 4px 17.5px;
+  background-color: $color-dark-primary;
+  color: $color-white;
+  border-radius: 12.5px;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.logo {
+  position: absolute;
+}
+
+.Promo {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+}
+
+.type {
+  width: fit-content;
+  margin: 26px auto 41px;
+  font-size: 31px;
+  line-height: 33px;
+  font-weight: 300;
+}
+
+.cameoClass {
+  top: 21.3px;
+  left: 45px;
+  width: $cameoWidthMob;
+  height: $cameoHeightMob;
+
+  & svg {
+    width: $cameoWidthMob;
+    height: $cameoHeightMob;
+  }
+}
+
+.storyClass {
+  top: 67px;
+  right: 50.5px;
+  width: $storyWidthMob;
+  height: $storyHeightMob;
+
+  & svg {
+    width: $storyWidthMob;
+    height: $storyHeightMob;
+  }
+}
+
+.playClass {
+  top: 16px;
+  left: 45px;
+  width: $playWidthMob;
+  height: $playHeightMob;
+
+  & svg {
+    width: $playWidthMob;
+    height: $playHeightMob;
+  }
+}

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="542" viewBox="0 0 1200 542">
+    <defs>
+        <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#284084" stop-opacity="0.6"/>
+            <stop offset="0.5" stop-color="#284084"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
+    <g id="Сгруппировать_2620" data-name="Сгруппировать 2620" transform="translate(-360 -1362)">
+        <rect id="Прямоугольник_1728" data-name="Прямоугольник 1728" width="1200" height="542" transform="translate(360 1362)" fill="#fff"/>
+        <g id="Сгруппировать_2482" data-name="Сгруппировать 2482" transform="translate(619.108 -3269.631)">
+            <g id="Объединение_7" data-name="Объединение 7" transform="translate(680.2 4822.5)" fill="#fff">
+                <path d="M 199.3206787109375 77.60724639892578 L 191.8586120605469 64.74973297119141 L 191.7140808105469 64.50070953369141 L 191.4261627197266 64.50070953369141 L 0.4999999105930328 64.50070953369141 L 0.4999999105930328 0.499996691942215 L 211.19189453125 0.499996691942215 L 211.19189453125 64.50070953369141 L 202.3545989990234 64.50070953369141 L 201.9447937011719 64.50070953369141 L 201.8643493652344 64.90254974365234 L 199.3206787109375 77.60724639892578 Z" stroke="none"/>
+                <path d="M 199.08984375 76.21340179443359 L 201.5349731445312 64.00071716308594 L 210.69189453125 64.00071716308594 L 210.69189453125 0.9999937415122986 L 1.000002861022949 0.9999937415122986 L 1.000002861022949 64.00071716308594 L 192.0019683837891 64.00071716308594 L 199.08984375 76.21340179443359 M 199.5515289306641 79.00110626220703 L 191.4261474609375 65.00071716308594 L 2.821180487444508e-06 65.00071716308594 L 2.821180487444508e-06 -6.239149115572218e-06 L 211.69189453125 -6.239149115572218e-06 L 211.69189453125 65.00071716308594 L 202.3546142578125 65.00071716308594 L 199.5515289306641 79.00110626220703 Z" stroke="none" fill="#284084"/>
+            </g>
+            <text id="Размер_ключевой_ставки_" data-name="Размер ключевой
+ставки, %" transform="translate(870.263 4852)" fill="#284084" font-size="18" font-family="CodecCold-Regular, Codec Cold"><tspan x="-168.741" y="0">Размер ключевой</tspan><tspan x="-87.583" y="19">ставки, %</tspan></text>
+        </g>
+        <g id="Сгруппировать_2619" data-name="Сгруппировать 2619" transform="translate(-84 1093)">
+            <path id="Контур_4589" data-name="Контур 4589" d="M-535.668-22149.4l.3-33.051,7.455-.168,8.891-38.48,10.753-11.766h22.751l9.337-13.4h31.042l9.661-33.877,12.363-194.705h8.127l11.006,48.947,9.738,27.066h12.358l8.031,37.3,11.723,26.488h10.445l12.432,15.051h90.907l10.418,10.467h21.653l11.526,14.953h53.47l6.776,6.467h12.183l21.56,19.574h18.832l21.11,18.84h10.358l11.44,12.041h12.045l17.234,11.475H33.953l9.324-6.553h24.6l6.5-4.922h54.163l28.227,17.439,12.439,14.7,22.366,13.172,10.342,13.506,94.333-10.924v40.459Z" transform="translate(1186 22852)" opacity="0.15" fill="url(#linear-gradient)"/>
+            <path id="Контур_4587" data-name="Контур 4587" d="M-717.377-23561.279h7.3l9.74-40.018,9.7-10.7H-668.2l10.165-13.027h30.707l9.807-34.787,11.993-193.967h9.156l10.507,48.557,9.742,27.2h12.055l8.693,38.02,11.029,25.5h10.877l11.9,14.617h90.888l10.72,11.057h21.86l11.267,14.854h52.987l7.629,6.436h11.786l21.9,19.688H-274l20.912,18.646h11.141l10.816,11.951h11.54l17.387,11.6h54.4l9.246-6.354h24.5l6.685-5.25h54.2l27.979,17.611,12.1,14.578,22.056,12.871,10.507,14.016H120.574l23.57-14.016,27.168-7.83,21.637-19.619,9.016-23.748,17.094-16.25" transform="translate(1368 24231.35)" fill="none" stroke="#284084" stroke-width="3"/>
+            <text id="_8_5" data-name="8,5" transform="translate(1561 580)" fill="#284084" font-size="30" font-family="CodecCold-Bold, Codec Cold" font-weight="700"><tspan x="0" y="0">8,5</tspan></text>
+            <text id="_7_75" data-name="7,75" transform="translate(1222 643)" fill="#2b2c2d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">7,75</tspan></text>
+            <text id="_4_25" data-name="4,25" transform="translate(1388 661)" fill="#2b2c2d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">4,25</tspan></text>
+            <text id="_7_25" data-name="7,25" transform="translate(1151 649)" fill="#2b2c2d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">7,25</tspan></text>
+            <text id="_10" data-name="10" transform="translate(998 546)" fill="#2b2c2d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">10</tspan></text>
+            <text id="_11" data-name="11" transform="translate(884 520)" fill="#2b2c2d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">11</tspan></text>
+            <text id="_17" data-name="17" transform="translate(761 364)" fill="#2b2c2d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">17</tspan></text>
+            <text id="_8" data-name="8" transform="translate(718 596)" fill="#2b2c2d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">8</tspan></text>
+            <text id="_5_5" data-name="5,5" transform="translate(618 675)" fill="#2b2c2d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">5,5</tspan></text>
+            <text id="_2013" data-name="2013" transform="translate(641 724)" fill="#8d8d8d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2013</tspan></text>
+            <text id="_2014" data-name="2014" transform="translate(743 724)" fill="#8d8d8d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2014</tspan></text>
+            <text id="_2015" data-name="2015" transform="translate(847 724)" fill="#8d8d8d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2015</tspan></text>
+            <text id="_2016" data-name="2016" transform="translate(950 724)" fill="#8d8d8d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2016</tspan></text>
+            <text id="_2017" data-name="2017" transform="translate(1052 724)" fill="#8d8d8d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2017</tspan></text>
+            <text id="_2018" data-name="2018" transform="translate(1154 724)" fill="#8d8d8d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2018</tspan></text>
+            <text id="_2019" data-name="2019" transform="translate(1257 724)" fill="#8d8d8d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2019</tspan></text>
+            <text id="_2020" data-name="2020" transform="translate(1360 724)" fill="#8d8d8d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2020</tspan></text>
+            <path id="Контур_4590" data-name="Контур 4590" d="M8.816.139,949-.094" transform="translate(641.5 702.5)" fill="none" stroke="#707070" stroke-width="1"/>
+            <text id="_2021" data-name="2021" transform="translate(1468 724)" fill="#8d8d8d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2021</tspan></text>
+            <text id="_2022" data-name="2022" transform="translate(1571 724)" fill="#8d8d8d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2022</tspan></text>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,101 @@
+@import '../../styles/style';
+
+.root {
+  position: relative;
+  height: .6rem;
+  width: 3.7rem;
+  cursor: pointer;
+  @include headerTransition();
+
+  & > div {
+    left: 0;
+    position: absolute;
+    height: .1rem;
+    background-color: $color-burger-default;
+    @include headerTransition();
+  }
+
+  &:hover {
+    & > div {
+      background-color: $color-burger-default-hover;
+    }
+  }
+
+  div:nth-child(1),
+  div:nth-child(2) {
+    top: 0;
+    width: 100%;
+  }
+
+  div:nth-child(3) {
+    bottom: 0;
+    width: 1.3rem;
+  }
+}
+
+.active {
+  width: 1.68rem;
+  height: 1.68rem;
+  margin-right: 2.02rem;
+
+  & > div {
+    background-color: $color-burger-active;
+    left: -.4rem;
+  }
+
+
+  &:hover {
+    & > div {
+      background-color: $color-burger-active;
+    }
+  }
+
+  div:nth-child(1),
+  div:nth-child(2) {
+    top: calc(50% - .05rem);
+    width: 2.375rem;
+  }
+
+  div:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  div:nth-child(2) {
+    transform: rotate(-45deg);
+  }
+
+  div:nth-child(3) {
+    opacity: 0;
+  }
+}
+
+@media (min-width: $width-notebook) {
+  .root {
+    height: 1.1rem;
+    width: 6.4rem;
+
+    & > div {
+      height: .2rem;
+    }
+
+    div:nth-child(3) {
+      width: 4rem;
+    }
+  }
+
+  .active {
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-right: 3.6rem;
+
+    & > div {
+      left: -.6rem;
+    }
+
+    div:nth-child(1),
+    div:nth-child(2) {
+      top: calc(50% - .1rem);
+      width: 4rem;
+    }
+  }
+}

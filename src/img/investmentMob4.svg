@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="320" height="250" viewBox="0 0 320 250">
+    <defs>
+        <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#284084" stop-opacity="0.6"/>
+            <stop offset="0.5" stop-color="#284084"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
+    <g id="Сгруппировать_2642" data-name="Сгруппировать 2642" transform="translate(0 -211)">
+        <rect id="Прямоугольник_1811" data-name="Прямоугольник 1811" width="320" height="250" transform="translate(0 211)" fill="#fff"/>
+        <g id="Сгруппировать_2628" data-name="Сгруппировать 2628" transform="translate(0 -43)">
+            <rect id="Прямоугольник_1596" data-name="Прямоугольник 1596" width="311" height="195" transform="translate(5 282)" fill="#fff" opacity="0"/>
+            <path id="Контур_4589" data-name="Контур 4589" d="M-535.668-22372.74l.1-10.371,2.339-.053,2.79-12.072,3.374-3.691h7.139l2.93-4.205h9.74l3.031-10.631,3.879-61.092h2.55l3.453,15.359,3.056,8.492h3.877l2.52,11.7,3.678,8.311h3.277l3.9,4.723h28.523l3.269,3.285h6.794l3.616,4.693h16.777l2.126,2.025h3.823l6.765,6.141h5.909l6.624,5.914h3.25l3.59,3.777h3.779l5.407,3.6h16.847l2.925-2.055h7.72l2.04-1.545h16.994l8.857,5.471,3.9,4.613,7.018,4.133,3.245,4.238,29.6-3.428v12.693Z" transform="translate(549.134 22811.838)" opacity="0.15" fill="url(#linear-gradient)"/>
+            <path id="Контур_4587" data-name="Контур 4587" d="M-717.377-23762h2.29l3.056-12.557,3.043-3.354h7.041l3.189-4.09h9.635l3.077-10.914,3.763-60.861h2.873l3.3,15.238,3.057,8.533h3.782l2.727,11.93,3.461,8h3.413l3.735,4.586h28.517l3.364,3.471h6.859l3.535,4.66h16.625l2.394,2.018h3.7l6.873,6.178h5.812l6.561,5.852h3.5l3.394,3.75h3.621l5.455,3.641h17.069l2.9-1.992h7.686l2.1-1.648h17.007l8.779,5.527,3.8,4.572,6.92,4.037,3.3,4.4h31.723l7.4-4.4,8.524-2.455,6.789-6.154,2.829-7.453,5.363-5.1" transform="translate(730.935 24190.895)" fill="none" stroke="#284084" stroke-width="2"/>
+            <text id="_8_5" data-name="8,5" transform="translate(281.5 396.606)" fill="#284084" font-size="20" font-family="CodecCold-Bold, Codec Cold" font-weight="700"><tspan x="0" y="0">8,5</tspan></text>
+            <text id="_7_75" data-name="7,75" transform="translate(194.884 424.127)" fill="#2b2c2d" font-size="10" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">7,75</tspan></text>
+            <text id="_4_25" data-name="4,25" transform="translate(244.583 425.209)" fill="#2b2c2d" font-size="10" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">4,25</tspan></text>
+            <text id="_7_25" data-name="7,25" transform="translate(166.583 425.127)" fill="#2b2c2d" font-size="10" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">7,25</tspan></text>
+            <text id="_10" data-name="10" transform="translate(120.938 389.716)" fill="#2b2c2d" font-size="10" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">10</tspan></text>
+            <text id="_11" data-name="11" transform="translate(85.445 380.606)" fill="#2b2c2d" font-size="10" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">11</tspan></text>
+            <text id="_17" data-name="17" transform="translate(45.925 331.949)" fill="#2b2c2d" font-size="10" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">17</tspan></text>
+            <text id="_8" data-name="8" transform="translate(32.747 404.935)" fill="#2b2c2d" font-size="10" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">8</tspan></text>
+            <text id="_5_5" data-name="5,5" transform="translate(7 440.264)" fill="#2b2c2d" font-size="10" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">5,5</tspan></text>
+            <text id="_2013" data-name="2013" transform="translate(5 474.529)" fill="#8d8d8d" font-size="8" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2013</tspan></text>
+            <text id="_2016" data-name="2016" transform="translate(102 474.529)" fill="#8d8d8d" font-size="8" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2016</tspan></text>
+            <text id="_2019" data-name="2019" transform="translate(199 474.529)" fill="#8d8d8d" font-size="8" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2019</tspan></text>
+            <line id="Линия_90" data-name="Линия 90" x2="293" transform="translate(13.5 461.689)" fill="none" stroke="#707070" stroke-width="1"/>
+            <text id="_2022" data-name="2022" transform="translate(297 474.529)" fill="#8d8d8d" font-size="8" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2022</tspan></text>
+        </g>
+        <g id="Сгруппировать_2478" data-name="Сгруппировать 2478" transform="translate(-473.466 -4549.318)">
+            <g id="Объединение_7" data-name="Объединение 7" transform="translate(860.143 4887.5) rotate(180)" fill="#fff">
+                <path d="M 251.5 69.49929809570312 L 110.4998016357422 69.49929809570312 L 110.4998016357422 18.50000381469727 L 119.8917083740234 18.50000381469727 L 120.5642013549805 18.50000381469727 L 120.3705291748047 17.85600280761719 L 116.8794631958008 6.247372627258301 L 137.4524536132812 18.43022155761719 L 137.5702667236328 18.50000381469727 L 137.7072143554688 18.50000381469727 L 251.5 18.50000381469727 L 251.5 69.49929809570312 Z" stroke="none"/>
+                <path d="M 251 68.99929809570312 L 251 19.00000381469727 L 137.433349609375 19.00000381469727 L 117.7273330688477 7.330573081970215 L 121.2366714477539 19.00000381469727 L 110.9998016357422 19.00000381469727 L 110.9998016357422 68.99929809570312 L 251 68.99929809570312 M 252 69.99929809570312 L 109.9998016357422 69.99929809570312 L 109.9998016357422 18.00000381469727 L 119.8917083740234 18.00000381469727 L 116.0316009521484 5.164203643798828 L 137.7072143554688 18.00000381469727 L 252 18.00000381469727 L 252 69.99929809570312 Z" stroke="none" fill="#284084"/>
+            </g>
+            <text id="Размер_ключевой_ставки_" data-name="Размер ключевой
+ставки, %" transform="translate(735.644 4840)" fill="#284084" font-size="12" font-family="CodecCold-Regular, Codec Cold"><tspan x="-112.494" y="0">Размер ключевой</tspan><tspan x="-58.389" y="13">ставки, %</tspan></text>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,137 @@
+@import '../../styles/style';
+
+$topPosition: 60px;
+$beginPosition: calc(50% - 100px);
+
+.root {
+  width: 100%;
+  padding-top: 62px;
+  padding-bottom: 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 18px;
+  line-height: 19px;
+  text-align: center;
+}
+
+@keyframes move-left {
+  from,
+  to {
+    left: $beginPosition;
+  }
+  25% {left: calc(#{$beginPosition} + 5px)}
+  50% {left: calc(#{$beginPosition} - 2px)}
+}
+
+@keyframes move-right {
+  from,
+  to {
+    right: $beginPosition;
+  }
+  25% {right: calc(#{$beginPosition} + 5px)}
+  50% {right: calc(#{$beginPosition} - 2px)}
+}
+
+.slider {
+  display: block;
+  position: relative;
+
+  div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
+    display: none;
+  }
+
+  & div[class*="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events"] {
+    padding-bottom: 0;
+  }
+
+  &:before {
+    content: '';
+    width: 23px;
+    height: 9px;
+    background-image: url("left.svg");
+    background-repeat: no-repeat;
+    background-size: 23px 9px;
+    position: absolute;
+    top: $topPosition;
+    left: $beginPosition;
+    animation: move-left 1.1s infinite ease-out;
+  }
+
+  &:after {
+    content: '';
+    width: 23px;
+    height: 9px;
+    background-image: url("right.svg");
+    background-repeat: no-repeat;
+    background-size: 23px 9px;
+    position: absolute;
+    top: $topPosition;
+    right: $beginPosition;
+    animation: move-right 1.1s infinite ease-out;
+  }
+}
+
+.desktop {
+  display: none;
+}
+
+@media (min-width: $width-notebook) {
+  .root {
+    padding-top: 131px;
+    padding-bottom: 117px;
+  }
+
+  .slider {
+    display: none;
+  }
+
+  .title {
+    font-size: 30px;
+    line-height: 32px;
+    font-weight: 300;
+    margin-bottom: 15px;
+  }
+
+  .desktop {
+    display: grid;
+    //width: 1200px;
+    margin: 0 auto;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(2, 530px);
+    //column-gap: 10px;
+    row-gap: 70px;
+    grid-template-areas:  "location healthyBuilding"
+                          "technologies infrastructure"
+                          "layoutPlan layoutPlan";
+    justify-content: center;
+
+    div[class*="locationArea"] {
+      //grid-area: location;
+      //width: 320px;
+      //align-self: flex-end;
+      //justify-self: center;
+    }
+
+    div[class*="healthyBuildingArea"] {
+      //grid-area: healthyBuilding;
+    }
+
+    div[class*="technologiesArea"] {
+      //grid-area: technologies;
+    }
+
+    div[class*="infrastructureArea"] {
+      //grid-area: infrastructure;
+    }
+
+    div[class*="layoutPlanArea"] {
+      //grid-area: layoutPlan;
+    }
+
+
+  }
+}

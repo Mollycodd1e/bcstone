@@ -1,0 +1,78 @@
+@mixin headerTransition() {
+  transition: all .35s;
+}
+
+@mixin switchIconTransition() {
+  transition: stroke 150ms;
+}
+
+@mixin wrapMiddleBlock() {
+  min-height: 21.7rem;
+  background-color: $color-dark-primary;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $color-white;
+}
+
+//@media (min-width: $width-notebook) {
+//  @mixin wrapMiddleBlock() {
+//    //min-height: 21.7rem;
+//    //background-color: $color-dark-primary;
+//    //width: 100%;
+//    //display: flex;
+//    //flex-direction: column;
+//    //justify-content: space-between;
+//    //color: $color-white;
+//    height: 100%;
+//  }
+//}
+
+@mixin visuallyHiddenMix() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+
+$checkBoxDisabledHoverCol_WhiteBgMod: $color-gray-ten;
+$inputTextBgCol_WhiteBgMod: $color-gray-eight;
+
+$checkBoxDisabledHoverCol_GrayBgMod: $color-white;
+$inputTextBgCol_GrayBgMod: $color-white;
+
+$gray: $color-gray-eight;
+$white: $color-white;
+
+@mixin backgroundMode($checkBoxDisabledHoverCol, $inputTextBgCol, $backgroundColor) {
+  background-color: $backgroundColor;
+
+  .checkBoxDisabled {
+    &:before {
+      border: 1px solid $checkBoxDisabledHoverCol;
+      background-color: $checkBoxDisabledHoverCol;
+    }
+  }
+
+  .inputTextClass {
+    &:hover, &:focus {
+      background-color: $inputTextBgCol;
+    }
+  }
+}
+
+@mixin whiteBgMode {
+  @include backgroundMode($checkBoxDisabledHoverCol: $checkBoxDisabledHoverCol_WhiteBgMod, $inputTextBgCol: $inputTextBgCol_WhiteBgMod, $backgroundColor: $white)
+}
+
+@mixin grayBgMode {
+  @include backgroundMode($checkBoxDisabledHoverCol: $checkBoxDisabledHoverCol_GrayBgMod, $inputTextBgCol: $inputTextBgCol_GrayBgMod, $backgroundColor: $gray)
+}

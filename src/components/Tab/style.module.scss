@@ -1,0 +1,100 @@
+@import '../../styles/style';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-width: 0;
+  z-index: 10;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &.active {
+    .tabTitle {
+      color: $color-white;
+      @include headerTransition();
+    }
+
+    .tabIcon {
+      background-color: $color-white;
+      @include headerTransition();
+
+      //svg {
+      //  g, path {
+      //    stroke: $color-dark-primary;
+      //    @include headerTransition();
+      //  }
+      //}
+    }
+  }
+}
+
+
+.tabTitle {
+  margin-bottom: .8rem;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  color: $color-gray-six;
+}
+
+.tabIcon {
+  flex-shrink: 0;
+  width: 5.241rem;
+  height: 5.241rem;
+  border-radius: 50%;
+  background-color: $color-gray-seven;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: $width-notebook) {
+  .root {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0 2.6rem 1rem;
+    border-bottom: 4px solid transparent;
+
+    &:hover,
+    &.active {
+      border-bottom: 4px solid $color-white;
+      padding: 0 2.6rem 1rem;
+      transition: border 150ms;
+
+      .tabTitle {
+        color: $color-white;
+        @include headerTransition();
+      }
+
+      .tabIcon {
+        background-color: transparent;
+        @include headerTransition();
+
+        svg {
+          g, path {
+            stroke: $color-white;
+            transition: stroke 150ms;
+          }
+        }
+      }
+    }
+  }
+
+  .tabIcon {
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    background-color: transparent;
+    margin-right: 1.1rem;
+  }
+
+  .tabTitle {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+}

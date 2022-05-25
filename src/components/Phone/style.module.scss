@@ -1,0 +1,90 @@
+@import '../../styles/style';
+
+.root {
+
+}
+
+.HeaderSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6.7rem;
+  height: 6.7rem;
+  background-color: $color-bg-phone-default;
+  border-radius: 50%;
+  cursor: pointer;
+  @include headerTransition();
+}
+
+.logoInline {
+  padding-left: .4rem;
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    path {
+      stroke: $color-icon-phone-default;
+      @include headerTransition();
+    }
+  }
+}
+
+.active {
+  background-color: $color-bg-phone-active;
+
+  .logoInline {
+    svg {
+      path {
+        stroke: $color-icon-phone-active;
+      }
+    }
+  }
+}
+
+.phoneNumber {
+  display: none;
+  @include headerTransition();
+}
+
+.phoneNumberFooter {
+}
+
+@media (min-width: $width-notebook) {
+  .HeaderSection {
+    background-color: transparent;
+    width: unset;
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  .phoneNumber {
+    display: block;
+    color: $color-text-phone-default;
+    font-size: 1.8rem;
+    line-height: 1.9rem;
+    white-space: nowrap;
+    margin-bottom: .5rem;
+    margin-top: 1rem;
+
+    &:hover {
+      color: $color-text-phone-default-hover;
+    }
+  }
+
+  .logoInline {
+    display: none;
+  }
+
+  .phoneNumberFooter {
+  }
+
+  .active {
+    .phoneNumber {
+      color: $color-text-phone-active;
+
+      &:hover {
+        color: $color-text-phone-active-hover;
+      }
+    }
+  }
+}

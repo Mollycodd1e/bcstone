@@ -1,0 +1,52 @@
+@import '../../styles/style';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+.item {
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+
+  &:not(:last-of-type) {
+    margin-bottom: 25px;
+  }
+
+  &.offers {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-blue;
+    border-bottom: 1px solid $color-gray-two;
+  }
+}
+
+@media (min-width: $width-notebook) {
+  .root {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 60.5px 0 65.5px;
+    width: $width-notebook;
+  }
+
+  .item {
+    font-size: 25px;
+
+    &:not(:last-of-type) {
+      margin-bottom: unset;
+    }
+
+    &.offers {
+      font-weight: unset;
+      text-transform: unset;
+      color: unset;
+      border-bottom: unset;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../styles/style';
+
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.OpenPopupBtn {
+  display: none;
+}
+
+@media (min-width: $width-notebook) {
+
+  .OpenPopupBtn {
+    display: block;
+  }
+}

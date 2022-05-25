@@ -1,0 +1,18 @@
+@import '../../styles/style';
+
+.root {
+  width: 100%;
+}
+
+.FormBtm {
+  padding-top: 49px;
+  padding-bottom: 49.2px;
+}
+
+@media (min-width: $width-notebook) {
+  .FormBtm {
+    border: 1px solid #C6C6C6;
+    padding-top: 75px;
+    padding-bottom: 49.2px;
+  }
+}

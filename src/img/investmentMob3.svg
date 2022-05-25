@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="320" height="250" viewBox="0 0 320 250">
+    <defs>
+        <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#284084"/>
+            <stop offset="1" stop-color="#284084" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
+    <g id="Сгруппировать_2641" data-name="Сгруппировать 2641" transform="translate(0 -212)">
+        <rect id="Прямоугольник_1811" data-name="Прямоугольник 1811" width="320" height="250" transform="translate(0 212)" fill="#fff"/>
+        <g id="Сгруппировать_2626" data-name="Сгруппировать 2626" transform="translate(0 -42)">
+            <text id="_2015" data-name="2015" transform="translate(19 474.529)" fill="#8d8d8d" font-size="8" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2015</tspan></text>
+            <text id="_2016" data-name="2016" transform="translate(58 474.529)" fill="#8d8d8d" font-size="8" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2016</tspan></text>
+            <text id="_2017" data-name="2017" transform="translate(96 474.529)" fill="#8d8d8d" font-size="8" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2017</tspan></text>
+            <text id="_2018" data-name="2018" transform="translate(134 474.529)" fill="#8d8d8d" font-size="8" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2018</tspan></text>
+            <text id="_2019" data-name="2019" transform="translate(173 474.529)" fill="#8d8d8d" font-size="8" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2019</tspan></text>
+            <text id="_2020" data-name="2020" transform="translate(212 474.529)" fill="#8d8d8d" font-size="8" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2020</tspan></text>
+            <line id="Линия_90" data-name="Линия 90" x2="293" transform="translate(8.414 461.689)" fill="none" stroke="#707070" stroke-width="1"/>
+            <text id="_2021" data-name="2021" transform="translate(253 474.529)" fill="#8d8d8d" font-size="8" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2021</tspan></text>
+            <text id="_2022" data-name="2022" transform="translate(291 474.529)" fill="#8d8d8d" font-size="8" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2022</tspan></text>
+            <path id="Контур_5014" data-name="Контур 5014" d="M4688.866,5845.718h245.941v-80.085H4892.5l-40.923,6.409-38.406,2.425-43.274,31.981-40.526-29.707-40.506-18.056Z" transform="translate(-4667.445 -5390.869)" opacity="0.16" fill="url(#linear-gradient)"/>
+            <path id="Контур_5013" data-name="Контур 5013" d="M4473.048,4829.995l40.989,18.414,40.167,29.331,20.213-14.833,22.973-16.859,37.541-2.809,42.268-5.861h42.136" transform="translate(-4451.627 -4462.42)" fill="none" stroke="#284084" stroke-width="2"/>
+            <g id="Эллипс_590" data-name="Эллипс 590" transform="translate(16.421 362.574)" fill="#284084" stroke="#fff" stroke-width="1">
+                <circle cx="5" cy="5" r="5" stroke="none"/>
+                <circle cx="5" cy="5" r="4.5" fill="none"/>
+            </g>
+            <g id="Эллипс_592" data-name="Эллипс 592" transform="translate(98.081 409.345)" fill="#284084" stroke="#fff" stroke-width="1">
+                <circle cx="5" cy="5" r="5" stroke="none"/>
+                <circle cx="5" cy="5" r="4.5" fill="none"/>
+            </g>
+            <g id="Эллипс_594" data-name="Эллипс 594" transform="translate(178.926 375.323)" fill="#284084" stroke="#fff" stroke-width="1">
+                <circle cx="5" cy="5" r="5" stroke="none"/>
+                <circle cx="5" cy="5" r="4.5" fill="none"/>
+            </g>
+            <g id="Эллипс_595" data-name="Эллипс 595" transform="translate(223.466 369.503)" fill="#284084" stroke="#fff" stroke-width="1">
+                <circle cx="5" cy="5" r="5" stroke="none"/>
+                <circle cx="5" cy="5" r="4.5" fill="none"/>
+            </g>
+            <g id="Эллипс_596" data-name="Эллипс 596" transform="translate(262.708 369.503)" fill="#284084" stroke="#fff" stroke-width="1">
+                <circle cx="5" cy="5" r="5" stroke="none"/>
+                <circle cx="5" cy="5" r="4.5" fill="none"/>
+            </g>
+            <g id="Эллипс_593" data-name="Эллипс 593" transform="translate(142 379.503)" fill="#284084" stroke="#fff" stroke-width="1">
+                <circle cx="5" cy="5" r="5" stroke="none"/>
+                <circle cx="5" cy="5" r="4.5" fill="none"/>
+            </g>
+            <g id="Эллипс_591" data-name="Эллипс 591" transform="translate(58 381.323)" fill="#284084" stroke="#fff" stroke-width="1">
+                <circle cx="5" cy="5" r="5" stroke="none"/>
+                <circle cx="5" cy="5" r="4.5" fill="none"/>
+            </g>
+            <line id="Линия_115" data-name="Линия 115" y2="76.189" transform="translate(267.238 385.5)" fill="none" stroke="#707070" stroke-width="1" stroke-dasharray="6"/>
+            <line id="Линия_116" data-name="Линия 116" y2="114.189" transform="translate(301.554 347.5)" fill="none" stroke="#707070" stroke-width="1" stroke-dasharray="6"/>
+            <path id="Контур_5015" data-name="Контур 5015" d="M5473.61,5825.915l8.253-8.587,8.775,8.587" transform="translate(-5214.762 -5436.825)" fill="none" stroke="#707070" stroke-width="1"/>
+            <path id="Контур_5016" data-name="Контур 5016" d="M5473.61,5825.915l8.253-8.587,8.775,8.587" transform="translate(-5180.446 -5473.825)" fill="none" stroke="#707070" stroke-width="1"/>
+            <text id="_32_480" data-name="32 480" transform="translate(244.192 335.977)" fill="#284084" font-size="20" font-family="CodecCold-Bold, Codec Cold" font-weight="700"><tspan x="0" y="0">32 480</tspan></text>
+            <text id="Прогноз_стабильного_роста_арендных_ставок" data-name="Прогноз стабильного
+роста арендных ставок" transform="translate(117 341)" fill="#707070" font-size="12" font-family="CodecCold-Regular, Codec Cold"><tspan x="35" y="9">Прогноз стабильного</tspan><tspan x="21.2" y="22">роста арендных ставок</tspan></text>
+        </g>
+        <g id="Сгруппировать_2478" data-name="Сгруппировать 2478" transform="translate(-544.466 -4583.318)">
+            <g id="Объединение_7" data-name="Объединение 7" transform="translate(860.143 4887.5) rotate(180)" fill="#fff">
+                <path d="M 273.4996032714844 76.49950408935547 L 110.4997940063477 76.49950408935547 L 110.4997940063477 39.97277450561523 L 110.4997940063477 39.64970779418945 L 110.2052536010742 39.51693344116211 L 94.72805023193359 32.54094696044922 L 110.157341003418 27.41841125488281 L 110.4997940063477 27.30472946166992 L 110.4997940063477 26.94388771057129 L 110.4997940063477 18.50000190734863 L 273.4996032714844 18.50000190734863 L 273.4996032714844 76.49950408935547 Z" stroke="none"/>
+                <path d="M 272.9996032714844 75.99950408935547 L 272.9996032714844 19.00000190734863 L 110.9997940063477 19.00000190734863 L 110.9997940063477 27.66556930541992 L 96.10182952880859 32.61170196533203 L 110.9997940063477 39.32661437988281 L 110.9997940063477 75.99950408935547 L 272.9996032714844 75.99950408935547 M 273.9996032714844 76.99950408935547 L 109.9997940063477 76.99950408935547 L 109.9997940063477 39.97277450561523 L 93.35429382324219 32.47020721435547 L 109.9997940063477 26.94388771057129 L 109.9997940063477 18.00000190734863 L 273.9996032714844 18.00000190734863 L 273.9996032714844 76.99950408935547 Z" stroke="none" fill="#284084"/>
+            </g>
+            <text id="Арендные_ставки_в_бизнес-центрах_класса_А_тыс._руб._м2" data-name="Арендные ставки
+в бизнес-центрах
+класса А, тыс. руб./м2" transform="translate(735.644 4830)" fill="#284084" font-size="12" font-family="CodecCold-Regular, Codec Cold"><tspan x="-110.619" y="0">Арендные ставки</tspan><tspan x="-111.422" y="13">в бизнес-центрах</tspan><tspan x="-135.856" y="26">класса А, тыс. руб./м</tspan><tspan y="26" font-size="7" baseline-shift="3.9995999620726357">2</tspan></text>
+        </g>
+    </g>
+</svg>

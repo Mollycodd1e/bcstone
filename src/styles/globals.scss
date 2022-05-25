@@ -1,0 +1,81 @@
+@import "style.scss";
+
+html {
+  /* 10px */
+  //font-size: 62.5%;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Codec Cold", "Arial", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-wrapper {
+  margin: 0 auto;
+  //max-width: $width-desktop-lg;
+  //min-width: $width-mobile-sm;
+  max-width: $width-mobile-md;
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //// todo: убрать
+  //box-shadow:
+  //        0 5px 10px gray,
+  //        -5px -10px 20px pink;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.brDesktop {
+  display: none;
+}
+
+.brMobile {
+  display: block;
+}
+
+@media (min-width: $width-notebook) {
+  .page-wrapper {
+    max-width: $width-desktop-lg;
+  }
+
+  .brDesktop {
+    display: block;
+  }
+
+  .brMobile {
+    display: none;
+  }
+}

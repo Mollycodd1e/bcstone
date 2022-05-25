@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="542" viewBox="0 0 1200 542">
+    <defs>
+        <linearGradient id="linear-gradient" x1="0.5" y1="0.582" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#284084"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
+    <g id="Сгруппировать_2616" data-name="Сгруппировать 2616" transform="translate(-360 -194)">
+        <rect id="Прямоугольник_1726" data-name="Прямоугольник 1726" width="1200" height="542" transform="translate(360 194)" fill="#fff"/>
+        <g id="Сгруппировать_2615" data-name="Сгруппировать 2615">
+            <g id="Сгруппировать_1509" data-name="Сгруппировать 1509" transform="translate(-23.5 -200.631)">
+                <path id="Контур_4945" data-name="Контур 4945" d="M2779.5,6036.5V5778.2l115.705,46.028,119.418,48.68,111.37,55.259,115.379,38.44,118.533-27.736,118.422,27.736V6036.5Z" transform="translate(-2010 -5292)" opacity="0.15" fill="url(#linear-gradient)"/>
+                <path id="Контур_4944" data-name="Контур 4944" d="M2294,5846l114.867,44.139,115.6,46.921,122.046,61.053,107.354,34.354,120.738-28.413,114.4,28.413" transform="translate(-1524.5 -5359.438)" fill="none" stroke="#284084" stroke-width="3"/>
+                <text id="_2015" data-name="2015" transform="translate(752 766)" fill="#707070" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2015</tspan></text>
+                <text id="_2016" data-name="2016" transform="translate(868 766)" fill="#707070" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2016</tspan></text>
+                <text id="_2017" data-name="2017" transform="translate(982 766)" fill="#707070" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2017</tspan></text>
+                <text id="_2018" data-name="2018" transform="translate(1096 766)" fill="#707070" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2018</tspan></text>
+                <text id="_2019" data-name="2019" transform="translate(1211 766)" fill="#707070" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2019</tspan></text>
+                <text id="_2020" data-name="2020" transform="translate(1327 766)" fill="#707070" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2020</tspan></text>
+                <text id="_2021" data-name="2021" transform="translate(1447 766)" fill="#707070" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">2021</tspan></text>
+                <line id="Линия_108" data-name="Линия 108" x2="824" transform="translate(727.5 744.5)" fill="none" stroke="#707070" stroke-width="1"/>
+                <line id="Линия_113" data-name="Линия 113" y2="303" transform="translate(727.5 441.5)" fill="none" stroke="#707070" stroke-width="1"/>
+                <g id="Эллипс_576" data-name="Эллипс 576" transform="translate(763 481)" fill="#284084" stroke="#fff" stroke-width="2">
+                    <ellipse cx="6.5" cy="6" rx="6.5" ry="6" stroke="none"/>
+                    <ellipse cx="6.5" cy="6" rx="5.5" ry="5" fill="none"/>
+                </g>
+                <g id="Эллипс_570" data-name="Эллипс 570" transform="translate(878.5 524.438)" fill="#284084" stroke="#fff" stroke-width="2">
+                    <ellipse cx="6.5" cy="6" rx="6.5" ry="6" stroke="none"/>
+                    <ellipse cx="6.5" cy="6" rx="5.5" ry="5" fill="none"/>
+                </g>
+                <g id="Эллипс_571" data-name="Эллипс 571" transform="translate(996 573.795)" fill="#284084" stroke="#fff" stroke-width="2">
+                    <ellipse cx="6.5" cy="6" rx="6.5" ry="6" stroke="none"/>
+                    <ellipse cx="6.5" cy="6" rx="5.5" ry="5" fill="none"/>
+                </g>
+                <g id="Эллипс_572" data-name="Эллипс 572" transform="translate(1109 628.438)" fill="#284084" stroke="#fff" stroke-width="2">
+                    <ellipse cx="6.5" cy="6" rx="6.5" ry="6" stroke="none"/>
+                    <ellipse cx="6.5" cy="6" rx="5.5" ry="5" fill="none"/>
+                </g>
+                <g id="Эллипс_573" data-name="Эллипс 573" transform="translate(1224 667.028)" fill="#284084" stroke="#fff" stroke-width="2">
+                    <ellipse cx="6.5" cy="6" rx="6.5" ry="6" stroke="none"/>
+                    <ellipse cx="6.5" cy="6" rx="5.5" ry="5" fill="none"/>
+                </g>
+                <g id="Эллипс_574" data-name="Эллипс 574" transform="translate(1343 640.438)" fill="#284084" stroke="#fff" stroke-width="2">
+                    <ellipse cx="6.5" cy="6" rx="6.5" ry="6" stroke="none"/>
+                    <ellipse cx="6.5" cy="6" rx="5.5" ry="5" fill="none"/>
+                </g>
+                <g id="Эллипс_575" data-name="Эллипс 575" transform="translate(1458.5 667)" fill="#284084" stroke="#fff" stroke-width="2">
+                    <ellipse cx="6.5" cy="6" rx="6.5" ry="6" stroke="none"/>
+                    <ellipse cx="6.5" cy="6" rx="5.5" ry="5" fill="none"/>
+                </g>
+                <text id="_9_5_" data-name="9,5%" transform="translate(1481 680)" fill="#284084" font-size="30" font-family="CodecCold-Bold, Codec Cold" font-weight="700"><tspan x="0" y="0">9,5%</tspan></text>
+                <text id="_11_7_" data-name="11,7%" transform="translate(1327 626)" fill="#2b2c2d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">11,7%</tspan></text>
+                <text id="_9_4_" data-name="9,4%" transform="translate(1209 652)" fill="#2b2c2d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">9,4%</tspan></text>
+                <text id="_12_5_" data-name="12,5%" transform="translate(1116 615)" fill="#2b2c2d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">12,5%</tspan></text>
+                <text id="_17_1_" data-name="17,1%" transform="translate(1016 570)" fill="#2b2c2d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">17,1%</tspan></text>
+                <text id="_20_7_" data-name="20,7%" transform="translate(892 518)" fill="#2b2c2d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">20,7%</tspan></text>
+                <text id="_24_4_" data-name="24,4%" transform="translate(776 475)" fill="#2b2c2d" font-size="16" font-family="CodecCold-Regular, Codec Cold"><tspan x="0" y="0">24,4%</tspan></text>
+            </g>
+            <g id="Сгруппировать_2614" data-name="Сгруппировать 2614" transform="translate(625.05 -4499.561)">
+                <g id="Объединение_7" data-name="Объединение 7" transform="translate(2891.2 4836.5)" fill="#fff">
+                    <path d="M -2028.26416015625 76.95005035400391 L -2046.788452148438 50.71193695068359 L -2046.937866210938 50.50031280517578 L -2047.196899414062 50.50031280517578 L -2311.500244140625 50.50031280517578 L -2311.500244140625 -13.50039577484131 L -1983.39990234375 -13.50039577484131 L -1983.39990234375 50.50031280517578 L -2020.573364257812 50.50031280517578 L -2020.953857421875 50.50031280517578 L -2021.055297851562 50.86710357666016 L -2028.26416015625 76.95005035400391 Z" stroke="none"/>
+                    <path d="M -2028.46484375 75.7989501953125 L -2021.33447265625 50.00031280517578 L -1983.89990234375 50.00031280517578 L -1983.89990234375 -13.00039577484131 L -2311.000244140625 -13.00039577484131 L -2311.000244140625 50.00031280517578 L -2046.678833007812 50.00031280517578 L -2028.46484375 75.7989501953125 M -2028.063598632812 78.10110473632812 L -2047.196899414062 51.00031280517578 L -2312.000244140625 51.00031280517578 L -2312.000244140625 -14.00039577484131 L -1982.89990234375 -14.00039577484131 L -1982.89990234375 51.00031280517578 L -2020.573364257812 51.00031280517578 L -2028.063598632812 78.10110473632812 Z" stroke="none" fill="#284084"/>
+                </g>
+                <text id="Процент_вакантных_площадей_в_бизнес-центрах_класса_А" data-name="Процент вакантных площадей
+в бизнес-центрах класса А" transform="translate(886.672 4852)" fill="#284084" font-size="18" font-family="CodecCold-Regular, Codec Cold"><tspan x="-291.832" y="0">Процент вакантных площадей</tspan><tspan x="-257.449" y="19">в бизнес-центрах класса А</tspan></text>
+            </g>
+        </g>
+    </g>
+</svg>

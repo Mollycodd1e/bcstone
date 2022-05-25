@@ -1,0 +1,84 @@
+// first lvl
+$color-black: #000000;
+$color-dark-primary: #2b2c2d;
+$color-dark-primary-alfa50: rgba(43, 44, 45, 0.5);
+$color-dark-primary-alfa80: rgba(43, 44, 45, 0.8);
+$color-dark-primary-alfa90: rgba(43, 44, 45, 0.9);
+$color-dark-rare: #343636;
+$color-gray-mask: rgba(83, 83, 83, 0.1);
+$color-gray-one: #f0f0f0;
+$color-gray-two: #C6C6C6;
+$color-gray-three: #696969;
+$color-gray-four: #E8E8E8;
+$color-gray-five: #707070;
+$color-gray-six: #7E7E7E;
+$color-gray-seven: #454545;
+$color-gray-eight: #F7F7F7;
+$color-gray-nine: #8D8D8D;
+$color-gray-ten: #EFEFEF;
+$color-white: #ffffff;
+$color-whitish-alfa80: rgba(247, 247, 247, 0.8);
+$color-white-opacity-one: rgba(255, 255, 255, 0.11);
+$color-helper-transparent: rgba(255, 255, 255, 0);
+$color-dark-cooked: #2e3031;
+$color-blue: #1F336C;
+$color-blue-second: #284084;
+$color-inst: #B231A8;
+$color-tg: #29A6E7;
+$color-fb: #1977F2;
+
+// second lvl
+// header - light/dark themes -
+$color-bg-header-default: $color-white;
+$color-bg-header-active: $color-dark-cooked;
+
+$color-burger-default: $color-dark-rare;
+$color-burger-default-hover: $color-blue;
+$color-burger-active: $color-white;
+
+$color-logo-default: $color-dark-primary;
+$color-logo-default-hover: $color-blue;
+$color-logo-active: $color-white;
+$color-logo-active-hover: $color-gray-two;
+
+$color-bg-phone-default: $color-gray-one;
+$color-bg-phone-active: $color-white-opacity-one;
+
+$color-icon-phone-default: $color-dark-primary;
+$color-icon-phone-active: $color-white;
+
+$color-text-phone-active: $color-white;
+$color-text-phone-active-hover: $color-gray-two;
+$color-text-phone-default: $color-dark-primary;
+$color-text-phone-default-hover: $color-blue;
+
+$color-text-OpenPopupBtn-default: $color-dark-primary;
+$color-text-OpenPopupBtn-active: $color-white;
+
+$color-inst-icon-hover: $color-inst;
+$color-tg-icon-hover: $color-tg;
+$color-fb-icon-hover: $color-fb;
+$color-icon-default: $color-dark-primary;
+$color-icon-active: $color-white;
+
+$color-hero-bg: $color-dark-primary;
+$color-hero-bg-second: $color-white;
+$color-hero-text: $color-white;
+
+$color-switch-bg: $color-gray-two;
+$color-switch-bg-active: $color-white;
+$color-switch-active-icon: $color-gray-three;
+$color-switch-default-icon: $color-gray-four;
+
+$color-more-info-text: $color-white;
+$color-card-bg: $color-white;
+
+$color-card-decoration: $color-dark-primary;
+$color-card-decoration-border: $color-gray-five;
+$color-card-text: $color-dark-primary;
+
+$color-close-btn-dark: $color-dark-primary-alfa90;
+$color-close-btn-light: $color-whitish-alfa80;
+$color-close-btn-line-light: $color-white;
+$color-close-btn-line-dark: $color-dark-primary;
+
