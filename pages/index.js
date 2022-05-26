@@ -17,33 +17,34 @@ import classes from './style.module.scss';
 import {useWindowSize, Context} from "../src/library";
 import Script from 'next/script'
 import axios from "axios";
+import {S_Menu} from "../src/sections/S_Menu";
 
 export default function Home() {
-    const [isNavMenuActive, setIsNavMenuActive] = useState(false);
-    const [isPopupVisible, setIsPopUpVisible] = useState(false);
+    // const [isNavMenuActive, setIsNavMenuActive] = useState(false);
+    // const [isPopupVisible, setIsPopUpVisible] = useState(false);
     const [width, height] = useWindowSize();
 
     const [data, getData] = useState([]);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const res = await axios.get('https://stonehedge.ru/api/landing-news/bcstone');
-                const stoneNews = res.data;
-                getData(stoneNews);
-
-                return { stoneNews };
-            } catch (error) {
-                return { error };
-            }
-        };
-        fetchData();
-
-    }, []);
-
-    useEffect(() => {
-        console.log('stoneNews', data);
-    }, [data])
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const res = await axios.get('https://stonehedge.ru/api/landing-news/bcstone');
+    //             const stoneNews = res.data;
+    //             getData(stoneNews);
+    //
+    //             return { stoneNews };
+    //         } catch (error) {
+    //             return { error };
+    //         }
+    //     };
+    //     fetchData();
+    //
+    // }, []);
+    //
+    // useEffect(() => {
+    //     console.log('stoneNews', data);
+    // }, [data])
 
     return (
         // <Context.Provider value={setIsPopUpVisible}>
@@ -64,24 +65,28 @@ export default function Home() {
                     </Head>
                     {/*TODO: googletagmanager 2 ? */}
                     {/*<noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7GL33F";height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>*/}
-                    <Header isActive={isNavMenuActive} setIsActive={setIsNavMenuActive} setIsPopUpVisible={setIsPopUpVisible} />
-                    <div className={classes.heroProjectWrapper} id={"hero"}>
-                        <Hero />
-                        <Projects setIsPopUpVisible={setIsPopUpVisible} />
-                    </div>
-                    <Offices setIsPopUpVisible={setIsPopUpVisible} />
-                    <FormTop />
-                    <AdvantagesTop />
-                    <Examples />
-                    <AdvantagesBtm />
-                    <FormBtm />
-                    {data.length !== 0 ?
-                        <SummaryNews newsList={data} />
-                        : null
-                    }
-                    <Footer />
-                    <FormPopup isPopupVisible={isPopupVisible} setIsPopUpVisible={setIsPopUpVisible} />
-                    <Navigation isActive={isNavMenuActive} setIsActive={setIsNavMenuActive} />
+
+                    <S_Menu />
+
+                    {/*<Header isActive={isNavMenuActive} setIsActive={setIsNavMenuActive} setIsPopUpVisible={setIsPopUpVisible} />*/}
+                    {/*<div className={classes.heroProjectWrapper} id={"hero"}>*/}
+                    {/*    <Hero />*/}
+                    {/*    <Projects setIsPopUpVisible={setIsPopUpVisible} />*/}
+                    {/*</div>*/}
+                    {/*<Offices setIsPopUpVisible={setIsPopUpVisible} />*/}
+                    {/*<FormTop />*/}
+                    {/*<AdvantagesTop />*/}
+                    {/*<Examples />*/}
+                    {/*<AdvantagesBtm />*/}
+                    {/*<FormBtm />*/}
+                    {/*{data.length !== 0 ?*/}
+                    {/*    <SummaryNews newsList={data} />*/}
+                    {/*    : null*/}
+                    {/*}*/}
+                    {/*<Footer />*/}
+                    {/*<FormPopup isPopupVisible={isPopupVisible} setIsPopUpVisible={setIsPopUpVisible} />*/}
+                    {/*<Navigation isActive={isNavMenuActive} setIsActive={setIsNavMenuActive} />*/}
+
                 </div>
                 <Script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3xsHwkwIhhfEFp3og9dunH0Jw39tsxi0" strategy="beforeInteractive"/>
             </Context.Provider>

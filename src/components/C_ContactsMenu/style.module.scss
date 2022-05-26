@@ -1,0 +1,14 @@
+@import '../../styles/style';
+
+.root {
+}
+
+.whatsup {
+  display: none;
+}
+
+@media (min-width: $width-tablet-md) {
+  .whatsup {
+    display: block;
+  }
+}
