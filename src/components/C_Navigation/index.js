@@ -1,6 +1,7 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
 import { C_Logo } from "../C_Logo";
+import main_data from "../../data/main.json"
 
 
 export function C_Navigation({className, actFooter, actServices, actMain, activeItem, setActiveItem, isClosed, setIsClosed}) {
@@ -15,10 +16,11 @@ export function C_Navigation({className, actFooter, actServices, actMain, active
 
             <div className={classNames(classes.elements)}>
                 <C_Logo className={classes.C_Logo} />
-                <div>Проекты</div>
-                <div>Пресс-центр</div>
-                <div>Девелопер</div>
-                <div>Контакты</div>
+                {main_data.menu.nav.map((el, i) => {
+                    return (
+                        <div key={i}>{el.name}</div>
+                    )
+                })}
                 <div>Оставить заявку</div>
             </div>
         </nav>
