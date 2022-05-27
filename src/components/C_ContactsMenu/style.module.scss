@@ -10,6 +10,12 @@
 @media (min-width: $width-tablet-md) {
   .whatsup {
     display: block;
+    width: 52px;
+    height: 52px;
+    background-image: url("../../img/s_whatsup_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 52px 52px;
   }
 }
 
@@ -17,5 +23,7 @@
 @media (min-width: $width-desktop-lg) {
   .root {
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

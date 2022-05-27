@@ -1,0 +1,15 @@
+@import '../../styles/style';
+
+.root {
+  font-family: "Codec Cold", "Arial", sans-serif;
+  position: relative;
+  cursor: pointer;
+  border-width: 0;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 19px;
+  color: white;
+  padding: 12px 40px;
+  background-color: $color-dark-primary;
+  border-radius: 21.5px;
+}

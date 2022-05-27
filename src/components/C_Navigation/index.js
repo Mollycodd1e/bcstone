@@ -3,6 +3,7 @@ import classNames from "classnames";
 import { C_Logo } from "../C_Logo";
 import main_data from "../../data/main.json"
 import {useState} from "react";
+import {C_MainButton} from "../C_MainButton";
 
 
 export function C_Navigation({className}) {
@@ -26,7 +27,15 @@ export function C_Navigation({className}) {
                                 className={classes.firstLvlMenuEl}
                                 onClick={() => setToggle(prev => !prev)}
                             >
-                                <span>{el.name}</span>
+                                <span className={classNames({[classes.chevronWrapper]: toggle && el.sub.length !== 0})}>
+                                    <span>{el.name}</span>
+                                    {el.sub.length !== 0 && <div
+                                        className={classNames({
+                                            [classes.chevron]: el.sub.length !== 0,
+                                            [classes.chevronActive]: toggle && el.sub.length !== 0
+                                        })}
+                                    />}
+                                </span>
                                 <ul key={"list" + item} className={classNames(classes.secondLvlMenuEl, {[classes.secondLvlMenuElActive]:toggle && el.sub.length !== 0})}>
                                     {el.sub.length !== 0 && el.sub.map((el, i) => {
                                         return (
@@ -42,7 +51,7 @@ export function C_Navigation({className}) {
                         )
                     })}
                 </ul>
-                <div>Оставить заявку</div>
+                <C_MainButton onClick={() => console.log('click')} />
             </div>
         </nav>
     )

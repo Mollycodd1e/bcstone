@@ -5,8 +5,6 @@ import {links} from "../../data/stoneLinks";
 export const C_Logo = ({className}) => {
     const cls = classNames(classes.root, {[className]: className });
     return (
-        <a className={cls} href={links.stoneHedge} target={"_blank"} rel="noreferrer">
-            LOGO
-        </a>
+        <a className={cls} href={links.stoneHedge} target={"_blank"} rel="noreferrer" />
     )
 }

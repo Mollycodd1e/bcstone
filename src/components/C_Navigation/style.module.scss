@@ -28,17 +28,44 @@
   margin: 0;
   padding: 0;
   position: relative;
+  font-size: 19px;
+  line-height: 21px;
+  cursor: pointer;
 }
 
 .secondLvlMenuEl {
   position: absolute;
-  top: 0;
+  top: 32px;
   left: 0;
   display: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chevronWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.chevron {
+  margin-left: 10px;
+  display: inline-block;
+  width: 10px;
+  height: 5px;
+  background-image: url("../../img/s_chevron.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 5px;
+}
+
+.chevronActive {
+  transform: rotate(180deg);
 }
 
 .secondLvlMenuElActive {
   display: block;
+  list-style: none;
+
 }
 
 @media (min-width: $width-tablet-md) {
@@ -48,6 +75,7 @@
 
   .elements {
     display: flex;
+    align-items: center;
   }
 }
 
@@ -60,189 +88,3 @@
     margin: 0 35px 0 0;
   }
 }
-
-//
-//$border-rule: 1px solid $color-border-main;
-//$transition-black-time: .2s;
-//
-//@mixin hovered($bc) {
-//  &:hover {
-//    background-color: $bc;
-//  }
-//}
-//
-//.navigation {
-//  border-right: $border-rule;
-//  position: relative;
-//}
-//
-//.burger {
-//  background-color: black;
-//  width: 64px;
-//  height: 64px;
-//
-//  position: absolute;
-//  z-index: 50;
-//  border: 1px solid white !important;
-//  transition: background-color $transition-black-time;
-//
-//  &:hover {
-//    background-color: $color-header-element-hovered;
-//  }
-//}
-//
-//.icon {
-//  position: absolute;
-//  top: calc(50% - 22px);
-//  left: calc(50% - 22px);
-//}
-//
-//.hide {
-//  opacity: 0;
-//  visibility: hidden;
-//  transition: opacity .5s;
-//}
-//
-//.show {
-//  opacity: 1;
-//  visibility: visible;
-//  transition: opacity .5s;
-//}
-//
-//.hideElements {
-//  top: -100vh;
-//  transition: top .6s ease-in;
-//}
-//
-//.showElements {
-//  top: 62px;
-//}
-//
-//.elements {
-//  position: absolute;
-//  z-index: 0;
-//  left: 62px;
-//  background-color: $color-header-bg;
-//  border-top: $border-rule;
-//  border-right: $border-rule;
-//  border-bottom: $border-rule;
-//  width: calc(100vw - (63.5px * 2));
-//  height: 100vh;
-//  display: flex;
-//  flex-direction: column;
-//  padding-top: 160px;
-//
-//  &:before {
-//    position: absolute;
-//    top: -2px;
-//    left: -63px;
-//    content: '';
-//    width: 62px;
-//    height: 100vh;
-//    background-color: $color-header-bg;
-//    border-left: $border-rule;
-//    border-right: $border-rule;
-//    border-bottom: $border-rule;
-//    z-index: 0;
-//  }
-//}
-//
-//.navItem {
-//  background-color: #000000;
-//  transition: background-color $transition-black-time, color $transition-black-time;
-//  @include hovered($bc: $color-header-element-hovered);
-//  //@include hoveredCursor;
-//  font-size: 16px !important;
-//  line-height: 19.2px;
-//  padding: 22px 0 23px 80px;
-//  border-top: $border-rule;
-//
-//  &:last-child {
-//    border-bottom: $border-rule;
-//  }
-//}
-//
-//.navItemActive {
-//  background-color: #FFFFFF;
-//  color: #000000;
-//
-//  &:hover {
-//    background-color: #FFFFFF;
-//    color: #000000;
-//  }
-//}
-//
-//.actFooter {
-//  & .navItem {
-//    &:last-child {
-//      background-color: #FFFFFF;
-//      color: #000000;
-//    }
-//  }
-//}
-//
-//.actServices {
-//  & .navItem {
-//    &:nth-child(2) {
-//      background-color: #FFFFFF;
-//      color: #000000;
-//    }
-//  }
-//}
-//
-//.actMain {
-//  & .navItem {
-//    &:first-child {
-//      background-color: #FFFFFF;
-//      color: #000000;
-//    }
-//  }
-//}
-//
-//@media (min-width: $width-mobile-md) {
-//  .elements {
-//    width: calc(100vw - (63px + 224px));
-//  }
-//}
-//
-//@media (min-width: $width-tablet-md) {
-//  .burger {
-//    display: none;
-//  }
-//
-//  .navigation {
-//  }
-//
-//  .elements {
-//    position: static;
-//    opacity: 1;
-//    visibility: visible;
-//    width: 100%;
-//    border: unset;
-//    height: 100%;
-//    padding: 0;
-//    display: grid;
-//    grid-template-columns: repeat(3, 1fr);
-//
-//    &:before {
-//      content: none;
-//    }
-//  }
-//
-//  .navItem {
-//    border-top: unset;
-//    border-bottom: unset;
-//    padding: 0;
-//    display: flex;
-//    align-items: center;
-//    justify-content: center;
-//    border-right: $border-rule;
-//    font-size: 14px !important;
-//    line-height: 16.8px;
-//
-//    &:last-child {
-//      border-bottom: unset;
-//      //border-right: unset;
-//    }
-//  }
-//}

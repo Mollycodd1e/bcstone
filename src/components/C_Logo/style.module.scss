@@ -2,6 +2,13 @@
 
 .root {
   cursor: pointer;
+  display: block;
+  width: 102px;
+  height: 38px;
+  background-image: url("../../img/s_logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 102px 38px;
 // .logoInline {
 //   svg {
 //     width: 4.845rem;
