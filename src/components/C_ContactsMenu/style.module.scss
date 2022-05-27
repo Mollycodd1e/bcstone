@@ -3,12 +3,16 @@
 .root {
 }
 
-.whatsup {
+.whatsapp {
   display: none;
 }
 
+.phone {
+
+}
+
 @media (min-width: $width-tablet-md) {
-  .whatsup {
+  .whatsapp {
     display: block;
     width: 52px;
     height: 52px;
@@ -16,6 +20,12 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 52px 52px;
+  }
+
+  .phone {
+    font-size: 20px;
+    line-height: 22px;
+    color: $color-dark-primary;
   }
 }
 
@@ -25,5 +35,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .phone {
+    margin-left: 22px;
   }
 }
