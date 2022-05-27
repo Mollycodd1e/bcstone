@@ -38,8 +38,32 @@
   top: 32px;
   left: 0;
   display: none;
-  padding: 0;
+  padding: 24px 34px 22px 39px;
   margin: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  list-style: none;
+  font-size: 20px;
+  color: $color-dark-primary;
+  border-radius: 15px;
+}
+
+.secondLvlMenuElActive {
+  display: flex;
+  flex-direction: column;
+  min-width: fit-content;
+}
+
+.subEl {
+  white-space: nowrap;
+
+
+  &:not(:last-child) {
+    margin-bottom: 17px;
+  }
+}
+
+.marked {
+  font-weight: 800;
 }
 
 .chevronWrapper {
@@ -60,12 +84,6 @@
 
 .chevronActive {
   transform: rotate(180deg);
-}
-
-.secondLvlMenuElActive {
-  display: block;
-  list-style: none;
-
 }
 
 @media (min-width: $width-tablet-md) {

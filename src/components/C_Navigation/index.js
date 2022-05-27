@@ -25,10 +25,10 @@ export function C_Navigation({className}) {
                             <li
                                 key={el.name + item}
                                 className={classes.firstLvlMenuEl}
-                                onClick={() => setToggle(prev => !prev)}
+
                             >
                                 <span className={classNames({[classes.chevronWrapper]: toggle && el.sub.length !== 0})}>
-                                    <span>{el.name}</span>
+                                    <span onClick={() => setToggle(prev => !prev)}>{el.name}</span>
                                     {el.sub.length !== 0 && <div
                                         className={classNames({
                                             [classes.chevron]: el.sub.length !== 0,
@@ -40,9 +40,13 @@ export function C_Navigation({className}) {
                                     {el.sub.length !== 0 && el.sub.map((el, i) => {
                                         return (
                                             <li
+                                                className={classes.subEl}
                                                 key={el.name + i}
                                             >
-                                                {el.name}
+                                                <a href="#">
+                                                    <span className={classes.marked}>STONE </span>
+                                                    <span>{el.name}</span>
+                                                </a>
                                             </li>
                                         )
                                     })}
