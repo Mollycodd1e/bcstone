@@ -16,6 +16,31 @@
 
 }
 
+.firstLvlMenuList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.firstLvlMenuEl {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.secondLvlMenuEl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.secondLvlMenuElActive {
+  display: block;
+}
+
 @media (min-width: $width-tablet-md) {
   .burger {
     display: none;
@@ -29,6 +54,10 @@
 @media (min-width: $width-desktop-lg) {
   .C_Logo {
     margin-right: 370px;
+  }
+
+  .firstLvlMenuEl {
+    margin: 0 35px 0 0;
   }
 }
 
