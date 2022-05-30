@@ -18,6 +18,7 @@ import {useWindowSize, Context} from "../src/library";
 import Script from 'next/script'
 import axios from "axios";
 import {S_Menu} from "../src/sections/S_Menu";
+import {S_Hero} from "../src/components/S_Hero";
 
 export default function Home() {
     // const [isNavMenuActive, setIsNavMenuActive] = useState(false);
@@ -67,6 +68,7 @@ export default function Home() {
                     {/*<noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7GL33F";height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>*/}
 
                     <S_Menu />
+                    <S_Hero />
 
                     {/*<Header isActive={isNavMenuActive} setIsActive={setIsNavMenuActive} setIsPopUpVisible={setIsPopUpVisible} />*/}
                     {/*<div className={classes.heroProjectWrapper} id={"hero"}>*/}

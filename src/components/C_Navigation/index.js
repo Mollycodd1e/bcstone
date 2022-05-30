@@ -55,7 +55,7 @@ export function C_Navigation({className}) {
                         )
                     })}
                 </ul>
-                <C_MainButton onClick={() => console.log('click')} />
+                <C_MainButton text={"Оставить заявку"} onClick={() => console.log('click')} />
             </div>
         </nav>
     )
