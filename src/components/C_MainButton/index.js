@@ -7,6 +7,9 @@ export const C_MainButton = ({className, text, onClick}) => {
         {[className]: className}
     );
     return (
-        <button className={cls} onClick={() => onClick()} >{text}</button>
+        <button className={cls} onClick={() => onClick()} >
+            <span className={classes.span}/>
+            <span className={classes.text}>{text}</span>
+        </button>
     )
 }
