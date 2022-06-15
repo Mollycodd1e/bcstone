@@ -16,7 +16,7 @@ $time: 0.7s;
   background-color: $color-dark-primary;
   border-radius: 21px;
   overflow: hidden;
-  transition: background-color 1.1s;
+  transition: background-color 1.3s;
 
   &:hover {
     background-color: white;
@@ -41,8 +41,6 @@ $time: 0.7s;
     z-index: 0;
     width: 0;
     height: 0;
-    //border-radius: 21.5px;
-
     border-radius: 100%;
     /* цвет заливки */
     background: rgb(255, 255, 255);
