@@ -25,42 +25,35 @@ export const S_Hero = ({className}) => {
         let yBlockPercent = 0
         xBlockPercent = Math.abs((e.pageX - (rect.x + pageXOffset))/(interactiveBlock.current.clientWidth / 100))
         yBlockPercent = Math.abs((e.pageY - (rect.y + pageYOffset))/(interactiveBlock.current.clientHeight / 100))
+
         // console.log('Позиция курсора по X в % относительно блока', xBlockPercent)
         // console.log('Позиция курсора по Y в % относительно блока', yBlockPercent)
-
 
         // topPic.current.style.clipPath = `circle(230px at ${xBlockPercent}% ${yBlockPercent}%);`
 
         // topPic.current.style['clip-path'] = `circle(230px at ${xBlockPercent}% ${yBlockPercent}%)`
         // console.log(`circle(230px at ${xBlockPercent}% ${yBlockPercent}%)`, topPic.current.style['clip-path'])
-        // todo: сделать динамический размер
+
         let size = 0;
         const maxCircle = 4.1;
         const limitCircle = maxCircle * 50;
-        const borderX = 50;
-        const borderY = 20;
-        const grownSpeed = 1.6;
+        const borderX = 40; // 0 - 50
+        const borderY = 20; // 0 - 50
+        const specialYCorrection = ((100/2) / borderY)
+        const specialXCorrection = ((100/2) / borderX)
+        const grownSpeed = 1.7;
+        const totalGrownSpeed = maxCircle * grownSpeed;
 
         if (xBlockPercent <= borderX && yBlockPercent <= borderY) {
-            size =  Math.min((maxCircle * grownSpeed * Math.min(xBlockPercent, yBlockPercent * 2.5)), limitCircle)
+            size =  Math.min((totalGrownSpeed * Math.min((xBlockPercent * specialXCorrection), (yBlockPercent * specialYCorrection))), limitCircle)
         } else if (xBlockPercent <= borderX && yBlockPercent > borderY) {
-            size = Math.min((maxCircle * grownSpeed * Math.min(xBlockPercent, (100 - yBlockPercent))), limitCircle)
+            size = Math.min((totalGrownSpeed * Math.min((xBlockPercent * specialXCorrection), (100 - yBlockPercent))), limitCircle)
         } else if  (xBlockPercent > borderX && yBlockPercent > borderY) {
-            size = Math.min((maxCircle * grownSpeed * Math.min((100 - xBlockPercent), (100 - yBlockPercent))), limitCircle)
+            size = Math.min((totalGrownSpeed * Math.min((100 - xBlockPercent), (100 - yBlockPercent))), limitCircle)
         } else {
-            size = Math.min((maxCircle * grownSpeed * Math.min((100 - xBlockPercent), (yBlockPercent * 2.5))), limitCircle)
+            size = Math.min((totalGrownSpeed * Math.min((100 - xBlockPercent), (yBlockPercent * specialYCorrection))), limitCircle)
         }
-        console.log(size)
         topPic.current.style['clip-path'] = `circle(${size}px at ${xBlockPercent}% ${yBlockPercent}%)`
-
-        // if (xBlockPercent <=10 || yBlockPercent <= 10) {
-        //     topPic.current.style['clip-path'] = `circle(30px at ${xBlockPercent}% ${yBlockPercent}%)`
-        // }
-        // else {
-        //     topPic.current.style['clip-path'] = `circle(230px at ${xBlockPercent}% ${yBlockPercent}%)`
-        // }
-
-
     }
     return (
         <div className={cls} >
@@ -79,17 +72,11 @@ export const S_Hero = ({className}) => {
             <div
                 className={classes.interactiveBlock}
                 ref={interactiveBlock}
-                // onMouseMove={(e) => updateCursor(e, topPic, interactiveBlock)}
-                // onMouseOut={(e) => {
-                //     topPic.current.style['clip-path'] = `circle(0 at 0 0)`
-                // }}
             >
                 <div className={classes.btmPic}/>
                 <div
                     className={classes.topPic}
                     ref={topPic}
-
-
 
                     // onMouseDown={(e) => {
                     //     const rect = topPic.current.getBoundingClientRect()
@@ -131,7 +118,6 @@ export const S_Hero = ({className}) => {
                     //
                     //     topPic.current.style.clipPath = `circle(230px at ${xBlockPercent}% ${yBlockPercent}%);`
                     // }}
-
                 />
                 <div className={classes.hover}
                      onMouseMove={(e) => updateCursor(e, topPic, interactiveBlock)}
