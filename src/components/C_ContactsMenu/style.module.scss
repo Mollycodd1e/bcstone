@@ -1,0 +1,43 @@
+@import '../../styles/style';
+
+.root {
+}
+
+.whatsapp {
+  display: none;
+}
+
+.phone {
+
+}
+
+@media (min-width: $width-tablet-md) {
+  .whatsapp {
+    display: block;
+    width: 52px;
+    height: 52px;
+    background-image: url("../../img/s_whatsup_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 52px 52px;
+  }
+
+  .phone {
+    font-size: 20px;
+    line-height: 22px;
+    color: $color-dark-primary;
+  }
+}
+
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .phone {
+    margin-left: 22px;
+  }
+}

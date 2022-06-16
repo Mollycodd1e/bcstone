@@ -1,0 +1,150 @@
+@import '../../styles/style';
+
+.root {
+  width: 100%;
+  color: $color-dark-primary;
+}
+
+.textBlock {
+
+}
+
+.interactiveBlock {
+
+}
+
+.titleHelper {
+
+}
+
+.mainTitle {
+
+}
+
+.listName {
+
+}
+
+.list {
+
+}
+
+.item {
+
+}
+
+.mainButton {
+
+}
+
+.btmPic {
+
+}
+
+.topPic {
+
+}
+
+.hover {
+
+}
+
+@media (min-width: $width-tablet-md) {
+
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    display: flex;
+    background-color: $color-gray-eleven;
+    padding: 96.5px 0 0 222px;
+  }
+
+  .textBlock {
+    display: flex;
+    flex-direction: column;
+    padding: 22.5px 0 0;
+  }
+
+  .interactiveBlock {
+    width: 1075px;
+    height:  782px;
+
+    margin-left: -107px;
+    position: relative;
+  }
+
+  .btmPic {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../img/s_hero_bg.png");
+    background-size: 1075px 782px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .topPic {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../img/s_bg_top_hero.png");
+    background-size: 1075px 761px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    clip-path: circle(0 at 0 0);
+  }
+
+  .hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+  }
+
+  .titleHelper {
+    font-size: 22px;
+    line-height: 23px;
+    text-transform: uppercase;
+    margin: 0 0 0 15.5px;
+  }
+
+  .mainTitle {
+    font-size: 202px;
+    line-height: 217px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    z-index: 10;
+  }
+
+  .listName {
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 35px;
+    margin-bottom: 39px;
+  }
+
+  .list {
+    margin-bottom: 54px;
+    padding: 0 0 0 21px;
+  }
+
+  .item {
+    font-size: 20px;
+    line-height: 22px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .mainButton {
+    align-self: flex-start;
+  }
+}

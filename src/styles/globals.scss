@@ -30,9 +30,9 @@ img {
 
 .page-wrapper {
   margin: 0 auto;
-  //max-width: $width-desktop-lg;
-  //min-width: $width-mobile-sm;
-  max-width: $width-mobile-md;
+  max-width: $width-desktop-lg;
+  min-width: $width-mobile-sm;
+  //max-width: $width-mobile-md;
   background-color: $color-white;
   display: flex;
   flex-direction: column;
@@ -41,6 +41,7 @@ img {
   //box-shadow:
   //        0 5px 10px gray,
   //        -5px -10px 20px pink;
+  //height: 1000px;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -68,7 +69,7 @@ input[type="radio"].visually-hidden {
 
 @media (min-width: $width-notebook) {
   .page-wrapper {
-    max-width: $width-desktop-lg;
+    //max-width: $width-desktop-lg;
   }
 
   .brDesktop {

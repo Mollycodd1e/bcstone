@@ -1,0 +1,108 @@
+@import '../../styles/style';
+
+.root {
+
+}
+
+.burger {
+
+}
+
+.elements {
+
+}
+
+.C_Logo {
+
+}
+
+.firstLvlMenuList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.firstLvlMenuEl {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-size: 19px;
+  line-height: 21px;
+  cursor: pointer;
+}
+
+.secondLvlMenuEl {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  display: none;
+  padding: 24px 34px 22px 39px;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  list-style: none;
+  font-size: 20px;
+  color: $color-dark-primary;
+  border-radius: 15px;
+}
+
+.secondLvlMenuElActive {
+  display: flex;
+  flex-direction: column;
+  min-width: fit-content;
+}
+
+.subEl {
+  white-space: nowrap;
+
+
+  &:not(:last-child) {
+    margin-bottom: 17px;
+  }
+}
+
+.marked {
+  font-weight: 800;
+}
+
+.chevronWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.chevron {
+  margin-left: 10px;
+  display: inline-block;
+  width: 10px;
+  height: 5px;
+  background-image: url("../../img/s_chevron.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 5px;
+}
+
+.chevronActive {
+  transform: rotate(180deg);
+}
+
+@media (min-width: $width-tablet-md) {
+  .burger {
+    display: none;
+  }
+
+  .elements {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .C_Logo {
+    margin-right: 370px;
+  }
+
+  .firstLvlMenuEl {
+    margin: 0 35px 0 0;
+  }
+}

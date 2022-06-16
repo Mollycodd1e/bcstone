@@ -1,0 +1,54 @@
+@import '../../styles/style';
+
+.root {
+  cursor: pointer;
+  display: block;
+  width: 102px;
+  height: 38px;
+  background-image: url("../../img/s_logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 102px 38px;
+// .logoInline {
+//   svg {
+//     width: 4.845rem;
+//     height: 2.039rem;
+//
+//     g {
+//       fill: $color-logo-default;
+//       @include headerTransition();
+//     }
+//   }
+// }
+//
+//  &:hover {
+//    .logoInline {
+//      svg {
+//        g {
+//          fill: $color-logo-default-hover;
+//        }
+//      }
+//    }
+//  }
+//}
+//
+//.active {
+// .logoInline {
+//   svg {
+//     g {
+//       fill: $color-logo-active;
+//     }
+//   }
+// }
+//
+//
+//  &:hover {
+//    .logoInline {
+//      svg {
+//        g {
+//          fill: $color-logo-active-hover;
+//        }
+//      }
+//    }
+//  }
+}
