@@ -92,7 +92,7 @@
     background-size: 1075px 761px;
     background-repeat: no-repeat;
     background-position: right top;
-    clip-path: circle(230px at 65% 55%);
+    clip-path: circle(0 at 0 0);
   }
 
   .titleHelper {
@@ -107,6 +107,7 @@
     line-height: 217px;
     font-weight: 800;
     margin-bottom: 16px;
+    z-index: 10;
   }
 
   .listName {
