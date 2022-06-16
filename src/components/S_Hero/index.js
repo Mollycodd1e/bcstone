@@ -34,7 +34,24 @@ export const S_Hero = ({className}) => {
         // topPic.current.style['clip-path'] = `circle(230px at ${xBlockPercent}% ${yBlockPercent}%)`
         // console.log(`circle(230px at ${xBlockPercent}% ${yBlockPercent}%)`, topPic.current.style['clip-path'])
         // todo: сделать динамический размер
-        topPic.current.style['clip-path'] = `circle(${xBlockPercent * 2}px at ${xBlockPercent}% ${yBlockPercent}%)`
+        let size = 0;
+        const maxCircle = 4.1;
+        const limitCircle = maxCircle * 50;
+        const borderX = 50;
+        const borderY = 20;
+        const grownSpeed = 1.6;
+
+        if (xBlockPercent <= borderX && yBlockPercent <= borderY) {
+            size =  Math.min((maxCircle * grownSpeed * Math.min(xBlockPercent, yBlockPercent * 2.5)), limitCircle)
+        } else if (xBlockPercent <= borderX && yBlockPercent > borderY) {
+            size = Math.min((maxCircle * grownSpeed * Math.min(xBlockPercent, (100 - yBlockPercent))), limitCircle)
+        } else if  (xBlockPercent > borderX && yBlockPercent > borderY) {
+            size = Math.min((maxCircle * grownSpeed * Math.min((100 - xBlockPercent), (100 - yBlockPercent))), limitCircle)
+        } else {
+            size = Math.min((maxCircle * grownSpeed * Math.min((100 - xBlockPercent), (yBlockPercent * 2.5))), limitCircle)
+        }
+        console.log(size)
+        topPic.current.style['clip-path'] = `circle(${size}px at ${xBlockPercent}% ${yBlockPercent}%)`
 
         // if (xBlockPercent <=10 || yBlockPercent <= 10) {
         //     topPic.current.style['clip-path'] = `circle(30px at ${xBlockPercent}% ${yBlockPercent}%)`
@@ -62,7 +79,10 @@ export const S_Hero = ({className}) => {
             <div
                 className={classes.interactiveBlock}
                 ref={interactiveBlock}
-                onMouseMove={(e) => updateCursor(e, topPic, interactiveBlock)}
+                // onMouseMove={(e) => updateCursor(e, topPic, interactiveBlock)}
+                // onMouseOut={(e) => {
+                //     topPic.current.style['clip-path'] = `circle(0 at 0 0)`
+                // }}
             >
                 <div className={classes.btmPic}/>
                 <div
@@ -113,6 +133,11 @@ export const S_Hero = ({className}) => {
                     // }}
 
                 />
+                <div className={classes.hover}
+                     onMouseMove={(e) => updateCursor(e, topPic, interactiveBlock)}
+                     onMouseOut={(e) => {
+                         topPic.current.style['clip-path'] = `circle(0 at 0 0)`
+                     }}/>
             </div>
 
         </div>
