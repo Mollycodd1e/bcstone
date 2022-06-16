@@ -20,7 +20,11 @@ export const S_Hero = ({className}) => {
                 </ul>
                 <C_MainButton text={"Получить предложение"} onClick={() => console.log('click')} className={classes.mainButton} />
             </div>
-            <div className={classes.interactiveBlock} />
+            <div className={classes.interactiveBlock} >
+                <div className={classes.btmPic}/>
+                <div className={classes.topPic}/>
+            </div>
+
         </div>
     )
 }

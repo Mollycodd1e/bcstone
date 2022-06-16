@@ -37,6 +37,14 @@
 
 }
 
+.btmPic {
+
+}
+
+.topPic {
+
+}
+
 @media (min-width: $width-tablet-md) {
 
 }
@@ -57,11 +65,34 @@
   .interactiveBlock {
     width: 1075px;
     height:  782px;
+
+    margin-left: -107px;
+    position: relative;
+  }
+
+  .btmPic {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
     background-image: url("../../img/s_hero_bg.png");
     background-size: 1075px 782px;
     background-repeat: no-repeat;
     background-position: center;
-    margin-left: -107px;
+  }
+
+  .topPic {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../img/s_bg_top_hero.png");
+    background-size: 1075px 761px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    clip-path: circle(230px at 65% 55%);
   }
 
   .titleHelper {
