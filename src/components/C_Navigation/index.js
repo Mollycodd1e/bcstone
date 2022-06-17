@@ -57,9 +57,13 @@ export function C_Navigation({className}) {
                                                     className={classes.subEl}
                                                     key={el.name + i}
                                                 >
-                                                    <a href="#">
+                                                    <a href="#" className={classes.projectName}>
                                                         <span className={classes.marked}>STONE </span>
                                                         <span>{el.name}</span>
+                                                        <span
+                                                            className={classes.underline}
+                                                            style={{backgroundColor: `${el.color}`}}
+                                                        />
                                                     </a>
                                                 </li>
                                             )
