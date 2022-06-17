@@ -28,7 +28,11 @@ export function C_Navigation({className}) {
 
                             >
                                 <span className={classNames({[classes.chevronWrapper]: toggle && el.sub.length !== 0})}>
-                                    <span onClick={() => setToggle(prev => !prev)}>{el.name}</span>
+                                    <span
+                                        className={classes.firstLvlMenuName}
+                                        onMouseOver={() => setToggle(prev => true)}
+                                        onMouseOut={() => setToggle(prev => false)}
+                                    >{el.name}</span>
                                     {el.sub.length !== 0 && <div
                                         className={classNames({
                                             [classes.chevron]: el.sub.length !== 0,
@@ -36,21 +40,36 @@ export function C_Navigation({className}) {
                                         })}
                                     />}
                                 </span>
-                                <ul key={"list" + item} className={classNames(classes.secondLvlMenuEl, {[classes.secondLvlMenuElActive]:toggle && el.sub.length !== 0})}>
-                                    {el.sub.length !== 0 && el.sub.map((el, i) => {
-                                        return (
-                                            <li
-                                                className={classes.subEl}
-                                                key={el.name + i}
-                                            >
-                                                <a href="#">
-                                                    <span className={classes.marked}>STONE </span>
-                                                    <span>{el.name}</span>
-                                                </a>
-                                            </li>
-                                        )
-                                    })}
-                                </ul>
+                                <div
+                                    key={"list" + item}
+                                    className={classNames(classes.secondLvlMenuElWrapper, {[classes.secondLvlMenuElWrapperActive]:toggle && el.sub.length !== 0})}
+                                    onMouseOver={() => setToggle(prev => true)}
+                                    onMouseOut={() => setToggle(prev => false)}
+                                >
+                                    <ul
+                                        key={"list" + item}
+                                        className={classNames(classes.secondLvlMenuEl)}
+
+                                    >
+                                        {el.sub.length !== 0 && el.sub.map((el, i) => {
+                                            return (
+                                                <li
+                                                    className={classes.subEl}
+                                                    key={el.name + i}
+                                                >
+                                                    <a href="#" className={classes.projectName}>
+                                                        <span className={classes.marked}>STONE </span>
+                                                        <span>{el.name}</span>
+                                                        <span
+                                                            className={classes.underline}
+                                                            style={{backgroundColor: `${el.color}`}}
+                                                        />
+                                                    </a>
+                                                </li>
+                                            )
+                                        })}
+                                    </ul>
+                                </div>
                             </li>
                         )
                     })}
