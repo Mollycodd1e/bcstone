@@ -19,7 +19,7 @@ export function C_Navigation({className}) {
                 <C_Logo className={classes.C_Logo} />
                 <ul className={classes.firstLvlMenuList}>
                     {main_data.menu.nav.map((el, item) => {
-                        const [toggle, setToggle] = useState(true);
+                        const [toggle, setToggle] = useState(false);
 
                         return (
                             <li
