@@ -4,6 +4,8 @@ import {logo} from '../../img/svgInlineImg.js'
 import {links} from "../../data/stoneLinks";
 import {C_MainButton} from "../C_MainButton";
 import {useRef} from "react";
+import Swipe from "react-easy-swipe";
+
 
 export const S_Hero = ({className}) => {
     const interactiveBlock = useRef(null);
@@ -13,8 +15,8 @@ export const S_Hero = ({className}) => {
         const rect = interactiveBlock.current.getBoundingClientRect()
         let xBlockPercent = 0
         let yBlockPercent = 0
-        xBlockPercent = Math.abs((e.pageX - (rect.x + pageXOffset))/(interactiveBlock.current.clientWidth / 100))
-        yBlockPercent = Math.abs((e.pageY - (rect.y + pageYOffset))/(interactiveBlock.current.clientHeight / 100))
+        xBlockPercent = e.touches && e.touches.length !==0 && e.touches[0].pageX ? Math.abs((e.touches[0].pageX - (rect.x + pageXOffset))/(interactiveBlock.current.clientWidth / 100)) : Math.abs((e.pageX - (rect.x + pageXOffset))/(interactiveBlock.current.clientWidth / 100))
+        yBlockPercent = e.touches && e.touches.length !==0 && e.touches[0].pageY ? Math.abs((e.touches[0].pageY - (rect.y + pageYOffset))/(interactiveBlock.current.clientHeight / 100)) : Math.abs((e.pageY - (rect.y + pageYOffset))/(interactiveBlock.current.clientHeight / 100))
 
         if (customCircleSize === undefined) {
             let size = 0;
@@ -38,6 +40,7 @@ export const S_Hero = ({className}) => {
             }
 
             topPic.current.style['clip-path'] = `circle(${size}px at ${xBlockPercent}% ${yBlockPercent}%)`
+            // console.log('x', xBlockPercent)
         } else {
             topPic.current.style['clip-path'] = `circle(${customCircleSize}px at ${xBlockPercent}% ${yBlockPercent}%)`
         }
@@ -56,6 +59,20 @@ export const S_Hero = ({className}) => {
                 </ul>
                 <C_MainButton text={"Получить предложение"} onClick={() => console.log('click')} className={classes.mainButton} />
             </div>
+            {/*<Swipe*/}
+            {/*    onSwipeStart={(pos, e) => {*/}
+            {/*        console.log(pos.x)*/}
+            {/*        updateCursor(e, topPic, interactiveBlock, 0)*/}
+            {/*    }}*/}
+            {/*    onSwipeMove={(pos, e) => {*/}
+            {/*        console.log(pos.x)*/}
+            {/*        updateCursor(e, topPic, interactiveBlock)*/}
+            {/*    }}*/}
+            {/*    onSwipeEnd={(e) => {*/}
+
+            {/*        updateCursor(e, topPic, interactiveBlock, 0)*/}
+            {/*    }}*/}
+            {/*>*/}
             <div
                 className={classes.interactiveBlock}
                 ref={interactiveBlock}
@@ -108,31 +125,48 @@ export const S_Hero = ({className}) => {
 
                     // {/*проверка событий*/}
                 />
-                <div className={classes.hover}
-                     onMouseMove={(e) => {
-                         e.preventDefault()
-                         updateCursor(e, topPic, interactiveBlock)
-                     }}
-                     onMouseOut={(e) => {
-                         e.preventDefault()
-                         updateCursor(e, topPic, interactiveBlock, 0)
-                     }}
 
-                     // onTouchStart={(e) => {
-                     //     // e.preventDefault()
-                     //     updateCursor(e, topPic, interactiveBlock)
-                     // }}
-                     // onTouchMove={(e) => {
-                     //     // e.preventDefault()
-                     //     updateCursor(e, topPic, interactiveBlock)
-                     // }}
-                     // onTouchEnd={(e) => {
-                     //     // e.preventDefault()
-                     //     updateCursor(e, topPic, interactiveBlock, 0)
-                     // }}
-                />
+                    <div className={classes.hover}
+                         onMouseOver={(e) => {
+                             updateCursor(e, topPic, interactiveBlock, 0)
+                         }}
+                         onMouseMove={(e) => {
+                             updateCursor(e, topPic, interactiveBlock)
+                         }}
+                         onMouseOut={(e) => {
+                             updateCursor(e, topPic, interactiveBlock, 0)
+                         }}
+
+                        onTouchStart={(e) => {
+                            // // updateCursor(e, topPic, interactiveBlock)
+                            // console.log('x', e.touches[0].pageX)
+                            // // console.log('x2', e.touches[0].clientX)
+                            // console.log('y', e.touches[0].pageY)
+                            // // console.log('y2', e.touches[0].clientY)
+                            // console.log('123', e.targetTouches)
+                            // console.log('456', e.target.getBoundingClientRect())
+                            // console.log('456', e.target.clientWidth)
+                            // console.log('456', pageXOffset)
+                            // console.log('456', pageYOffset)
+                            updateCursor(e, topPic, interactiveBlock, 0)
+                        }}
+
+                         // onTouchStart={(e) => {
+                         //     // e.preventDefault()
+                         //     updateCursor(e, topPic, interactiveBlock)
+                         // }}
+                         onTouchMove={(e) => {
+                             // e.preventDefault()
+                             updateCursor(e, topPic, interactiveBlock)
+                         }}
+                         onTouchEnd={(e) => {
+                             // e.preventDefault()
+                             updateCursor(e, topPic, interactiveBlock, 0)
+                         }}
+                    />
+
             </div>
-
+            {/*</Swipe>*/}
         </div>
     )
 }
