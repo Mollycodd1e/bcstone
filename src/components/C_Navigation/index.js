@@ -8,6 +8,8 @@ import {C_MainButton} from "../C_MainButton";
 
 export function C_Navigation({className}) {
     const cx = classNames(classes.root, { [className]: className });
+    //todo: переделать на отдельные компоненты
+    const [toggle, setToggle] = useState(false);
     return (
         <nav className={cx}>
             <div className={classes.burger}>
@@ -19,8 +21,6 @@ export function C_Navigation({className}) {
                 <C_Logo className={classes.C_Logo} />
                 <ul className={classes.firstLvlMenuList}>
                     {main_data.menu.nav.map((el, item) => {
-                        const [toggle, setToggle] = useState(false);
-
                         return (
                             <li
                                 key={el.name + item}
