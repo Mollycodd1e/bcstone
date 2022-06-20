@@ -33,7 +33,9 @@ $animationDurationHero: 1.1s;
 }
 
   .root {
-  width: 100%;
+  //width: 100%;
+  //  todo: временно
+    width: 1698px;
   color: $color-dark-primary;
 }
 
@@ -84,8 +86,8 @@ $animationDurationHero: 1.1s;
 @media (min-width: $width-tablet-md) {
 
 }
-
-@media (min-width: $width-desktop-lg) {
+//  todo: временно - вернуть - (min-width: $width-desktop-lg)
+@media (min-width: 0) {
   .root {
     display: flex;
     background-color: $color-gray-eleven;

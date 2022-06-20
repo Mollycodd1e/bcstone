@@ -105,6 +105,8 @@ export const S_Hero = ({className}) => {
                     //
                     //     topPic.current.style.clipPath = `circle(230px at ${xBlockPercent}% ${yBlockPercent}%);`
                     // }}
+
+                    // {/*проверка событий*/}
                 />
                 <div className={classes.hover}
                      onMouseMove={(e) => {
@@ -114,12 +116,12 @@ export const S_Hero = ({className}) => {
                          updateCursor(e, topPic, interactiveBlock, 0)
                      }}
 
-                     // onTouchMove={(e) => {
-                     //     updateCursor(e, topPic, interactiveBlock)
-                     // }}
-                     // onTouchEnd={(e) => {
-                     //     updateCursor(e, topPic, interactiveBlock, 0)
-                     // }}
+                     onTouchMove={(e) => {
+                         updateCursor(e, topPic, interactiveBlock)
+                     }}
+                     onTouchEnd={(e) => {
+                         updateCursor(e, topPic, interactiveBlock, 0)
+                     }}
                 />
             </div>
 
