@@ -139,7 +139,16 @@ export const S_Hero = ({className}) => {
 
                         onTouchStart={(e) => {
                             // updateCursor(e, topPic, interactiveBlock)
-                            console.log(e)
+                            console.log('x', e.touches[0].pageX)
+                            // console.log('x2', e.touches[0].clientX)
+                            console.log('y', e.touches[0].pageY)
+                            // console.log('y2', e.touches[0].clientY)
+                            console.log('123', e.targetTouches)
+                            console.log('456', e.target.getBoundingClientRect())
+                            console.log('456', e.target.clientWidth)
+                            console.log('456', pageXOffset)
+                            console.log('456', pageYOffset)
+
                         }}
 
                          // onTouchStart={(e) => {
