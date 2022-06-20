@@ -110,18 +110,26 @@ export const S_Hero = ({className}) => {
                 />
                 <div className={classes.hover}
                      onMouseMove={(e) => {
+                         e.preventDefault()
                          updateCursor(e, topPic, interactiveBlock)
                      }}
                      onMouseOut={(e) => {
+                         e.preventDefault()
                          updateCursor(e, topPic, interactiveBlock, 0)
                      }}
 
-                     onTouchMove={(e) => {
-                         updateCursor(e, topPic, interactiveBlock)
-                     }}
-                     onTouchEnd={(e) => {
-                         updateCursor(e, topPic, interactiveBlock, 0)
-                     }}
+                     // onTouchStart={(e) => {
+                     //     // e.preventDefault()
+                     //     updateCursor(e, topPic, interactiveBlock)
+                     // }}
+                     // onTouchMove={(e) => {
+                     //     // e.preventDefault()
+                     //     updateCursor(e, topPic, interactiveBlock)
+                     // }}
+                     // onTouchEnd={(e) => {
+                     //     // e.preventDefault()
+                     //     updateCursor(e, topPic, interactiveBlock, 0)
+                     // }}
                 />
             </div>
 
