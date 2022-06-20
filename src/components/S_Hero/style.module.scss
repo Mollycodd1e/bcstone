@@ -2,7 +2,37 @@
 
 $animationDurationHero: 1.1s;
 
-.root {
+@mixin middleAnimationSpeed {
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: .1;
+  }
+  40% {
+    opacity: .15;
+  }
+  50% {
+    opacity: .2;
+  }
+  60% {
+    opacity: .25;
+  }
+  70% {
+    opacity: .5;
+  }
+  80% {
+    opacity: .7;
+  }
+  90% {
+    opacity: .9;
+  }
+}
+
+  .root {
   width: 100%;
   color: $color-dark-primary;
 }
@@ -117,33 +147,7 @@ $animationDurationHero: 1.1s;
       opacity: 0;
       left: -200px;
     }
-    10% {
-      opacity: 0;
-    }
-    20% {
-      opacity: 0;
-    }
-    30% {
-      opacity: .1;
-    }
-    40% {
-      opacity: .15;
-    }
-    50% {
-      opacity: .2;
-    }
-    60% {
-      opacity: .25;
-    }
-    70% {
-      opacity: .5;
-    }
-    80% {
-      opacity: .7;
-    }
-    90% {
-      opacity: .9;
-    }
+    @include middleAnimationSpeed;
     100% {
       opacity: 1;
       left: 0;
@@ -155,33 +159,7 @@ $animationDurationHero: 1.1s;
       opacity: 0;
       right: -200px;
     }
-    10% {
-      opacity: 0;
-    }
-    20% {
-      opacity: 0;
-    }
-    30% {
-      opacity: .1;
-    }
-    40% {
-      opacity: .15;
-    }
-    50% {
-      opacity: .2;
-    }
-    60% {
-      opacity: .25;
-    }
-    70% {
-      opacity: .5;
-    }
-    80% {
-      opacity: .7;
-    }
-    90% {
-      opacity: .9;
-    }
+    @include middleAnimationSpeed;
     100% {
       opacity: 1;
       right: 105px;
@@ -219,33 +197,7 @@ $animationDurationHero: 1.1s;
       opacity: 0;
       top: 150px;
     }
-    10% {
-      opacity: 0;
-    }
-    20% {
-      opacity: 0;
-    }
-    30% {
-      opacity: .1;
-    }
-    40% {
-      opacity: .15;
-    }
-    50% {
-      opacity: .2;
-    }
-    60% {
-      opacity: .25;
-    }
-    70% {
-      opacity: .5;
-    }
-    80% {
-      opacity: .7;
-    }
-    90% {
-      opacity: .9;
-    }
+    @include middleAnimationSpeed;
     100% {
       opacity: 1;
       top: 0;

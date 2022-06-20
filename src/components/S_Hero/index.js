@@ -113,6 +113,13 @@ export const S_Hero = ({className}) => {
                      onMouseOut={(e) => {
                          updateCursor(e, topPic, interactiveBlock, 0)
                      }}
+
+                     // onTouchMove={(e) => {
+                     //     updateCursor(e, topPic, interactiveBlock)
+                     // }}
+                     // onTouchEnd={(e) => {
+                     //     updateCursor(e, topPic, interactiveBlock, 0)
+                     // }}
                 />
             </div>
 
