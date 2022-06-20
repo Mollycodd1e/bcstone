@@ -15,8 +15,8 @@ export const S_Hero = ({className}) => {
         const rect = interactiveBlock.current.getBoundingClientRect()
         let xBlockPercent = 0
         let yBlockPercent = 0
-        xBlockPercent = Math.abs((e.pageX - (rect.x + pageXOffset))/(interactiveBlock.current.clientWidth / 100))
-        yBlockPercent = Math.abs((e.pageY - (rect.y + pageYOffset))/(interactiveBlock.current.clientHeight / 100))
+        xBlockPercent = e.touches && e.touches.length !==0 && e.touches[0].pageX ? Math.abs((e.touches[0].pageX - (rect.x + pageXOffset))/(interactiveBlock.current.clientWidth / 100)) : Math.abs((e.pageX - (rect.x + pageXOffset))/(interactiveBlock.current.clientWidth / 100))
+        yBlockPercent = e.touches && e.touches.length !==0 && e.touches[0].pageY ? Math.abs((e.touches[0].pageY - (rect.y + pageYOffset))/(interactiveBlock.current.clientHeight / 100)) : Math.abs((e.pageY - (rect.y + pageYOffset))/(interactiveBlock.current.clientHeight / 100))
 
         if (customCircleSize === undefined) {
             let size = 0;
@@ -138,31 +138,31 @@ export const S_Hero = ({className}) => {
                          }}
 
                         onTouchStart={(e) => {
-                            // updateCursor(e, topPic, interactiveBlock)
-                            console.log('x', e.touches[0].pageX)
-                            // console.log('x2', e.touches[0].clientX)
-                            console.log('y', e.touches[0].pageY)
-                            // console.log('y2', e.touches[0].clientY)
-                            console.log('123', e.targetTouches)
-                            console.log('456', e.target.getBoundingClientRect())
-                            console.log('456', e.target.clientWidth)
-                            console.log('456', pageXOffset)
-                            console.log('456', pageYOffset)
-
+                            // // updateCursor(e, topPic, interactiveBlock)
+                            // console.log('x', e.touches[0].pageX)
+                            // // console.log('x2', e.touches[0].clientX)
+                            // console.log('y', e.touches[0].pageY)
+                            // // console.log('y2', e.touches[0].clientY)
+                            // console.log('123', e.targetTouches)
+                            // console.log('456', e.target.getBoundingClientRect())
+                            // console.log('456', e.target.clientWidth)
+                            // console.log('456', pageXOffset)
+                            // console.log('456', pageYOffset)
+                            updateCursor(e, topPic, interactiveBlock, 0)
                         }}
 
                          // onTouchStart={(e) => {
                          //     // e.preventDefault()
                          //     updateCursor(e, topPic, interactiveBlock)
                          // }}
-                         // onTouchMove={(e) => {
-                         //     e.preventDefault()
-                         //     updateCursor(e, topPic, interactiveBlock)
-                         // }}
-                         // onTouchEnd={(e) => {
-                         //     // e.preventDefault()
-                         //     updateCursor(e, topPic, interactiveBlock, 0)
-                         // }}
+                         onTouchMove={(e) => {
+                             // e.preventDefault()
+                             updateCursor(e, topPic, interactiveBlock)
+                         }}
+                         onTouchEnd={(e) => {
+                             // e.preventDefault()
+                             updateCursor(e, topPic, interactiveBlock, 0)
+                         }}
                     />
 
             </div>
