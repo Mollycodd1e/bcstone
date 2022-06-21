@@ -1,35 +1,31 @@
 @import '../../styles/style';
 
 $menuTransition: .4s;
+//todo использовать secondLvlMenuEl
 .root {
-  padding-top: 18px;
-  visibility: hidden;
+  //visibility: hidden;
   opacity: 0;
-  z-index: -1;
-  transition: opacity $menuTransition;
-  position: absolute;
-  top: 14px;
-  left: 0;
+  transition: opacity .6s, height .6s, transform $menuTransition, top $menuTransition;
+  //transition: height $menuTransition;
+  height: 0;
+  //transform: scaleY(0);
+  //position: relative;
+  //top: -300px;
+  overflow: hidden;
 }
 
 .secondLvlMenuElWrapperActive {
-  visibility: visible;
+  //visibility: visible;
   opacity: 1;
-  z-index: 10;
+  height: 100%;
+  //transform: scaleY(1);
+  //top: 0;
 }
 
 .secondLvlMenuEl {
-  padding: 24px 34px 22px 39px;
-  margin: 0;
-  background-color: rgba(255, 255, 255, 0.95);
   list-style: none;
-  font-size: 20px;
-
-  border-radius: 15px;
-
-  display: flex;
-  flex-direction: column;
-  min-width: fit-content;
+  padding: 0;
+  margin: 0;
 }
 
 @media (min-width: $width-tablet-md) {
@@ -37,5 +33,34 @@ $menuTransition: .4s;
 }
 
 @media (min-width: $width-desktop-lg) {
+  .root {
+    padding-top: 18px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity $menuTransition;
+    position: absolute;
+    top: 14px;
+    left: 0;
+  }
 
+  .secondLvlMenuElWrapperActive {
+    visibility: visible;
+    opacity: 1;
+    z-index: 10;
+  }
+
+  .secondLvlMenuEl {
+    padding: 24px 34px 22px 39px;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+
+    font-size: 20px;
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    min-width: fit-content;
+  }
 }

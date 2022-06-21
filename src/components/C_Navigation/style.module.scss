@@ -3,7 +3,8 @@
 $menuTransition: .4s;
 
 .root {
-
+  position: relative;
+  min-height: 41px;
 }
 
 .burger {
@@ -15,19 +16,38 @@ $menuTransition: .4s;
   background-image: url("../../img/s_burger.svg");
   transition: background-image $menuTransition;
   cursor: pointer;
+  z-index: 10;
+  position: absolute;
+  top: 12px;
+  left: 30px;
 }
 
 .openBurger {
   background-size: 9px 18px ;
   background-image: url("../../img/s_burger_open.svg");
+
+
 }
 
 .elements {
-
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: -278px;
+  background-color: white;
+  width: 278px;
+  height: 520px;
+  border-radius: 0 15px 15px 0;
+  opacity: 0.98;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+  transition: left .5s ease-in-out;
+  padding: 52px 0 0;
 }
-//todo
-.showElements {
 
+.showElements {
+  left: 0;
 }
 
 .C_Logo {
@@ -39,15 +59,22 @@ $menuTransition: .4s;
   .burger {
     display: none;
   }
-
-  .elements {
-    display: flex;
-    align-items: center;
-  }
 }
 
 @media (min-width: $width-desktop-lg) {
   .C_Logo {
     margin-right: 370px;
+  }
+
+  .elements {
+    flex-direction: row;
+    position: static;
+    background-color: unset;
+    border-radius: unset;
+    opacity: unset;
+    box-shadow: unset;
+    width: unset;
+    height: unset;
+    padding: unset;
   }
 }

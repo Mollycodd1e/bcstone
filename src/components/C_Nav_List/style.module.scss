@@ -5,12 +5,16 @@
   margin: 0;
   padding: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 @media (min-width: $width-tablet-md) {
 }
 
 @media (min-width: $width-desktop-lg) {
-
+  .root {
+    flex-direction: row;
+    align-items: center;
+  }
 }
