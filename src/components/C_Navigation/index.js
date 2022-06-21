@@ -3,16 +3,24 @@ import classNames from "classnames";
 import { C_Logo } from "../C_Logo";
 import {C_MainButton} from "../C_MainButton";
 import {C_Nav_List} from "../C_Nav_List";
+import {useState} from "react";
 
 
 export function C_Navigation({className}) {
     const cx = classNames(classes.root, { [className]: className });
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     return (
         <nav className={cx}>
-            <div className={classes.burger}>
-                <div>Burger icon</div>
-                <div>Close icon</div>
-            </div>
+            <div
+                onClick={() => setIsMobileMenuOpen(prev => !prev)}
+                className={
+                    classNames(
+                        classes.burger,
+                        {
+                            [classes.openBurger]: isMobileMenuOpen
+                        })
+                }
+            />
             <div className={classNames(classes.elements)}>
                 <C_Logo className={classes.C_Logo} />
                 <C_Nav_List />

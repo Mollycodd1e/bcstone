@@ -7,7 +7,19 @@ $menuTransition: .4s;
 }
 
 .burger {
+  width: 23px;
+  height: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 23px 10px;
+  background-image: url("../../img/s_burger.svg");
+  transition: background-image $menuTransition;
+  cursor: pointer;
+}
 
+.openBurger {
+  background-size: 9px 18px ;
+  background-image: url("../../img/s_burger_open.svg");
 }
 
 .elements {
