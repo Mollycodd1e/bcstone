@@ -16,12 +16,12 @@ export function C_Navigation({className}) {
                 className={
                     classNames(
                         classes.burger,
-                        {
-                            [classes.openBurger]: isMobileMenuOpen
-                        })
-                }
+                        {[classes.openBurger]: isMobileMenuOpen})}
             />
-            <div className={classNames(classes.elements)}>
+            <div className={classNames(
+                classes.elements,
+                {[classes.showElements]: isMobileMenuOpen})}
+            >
                 <C_Logo className={classes.C_Logo} />
                 <C_Nav_List />
                 <C_MainButton text={"Оставить заявку"} onClick={() => console.log('click')} />
