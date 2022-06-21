@@ -160,10 +160,10 @@ export const S_Hero = ({className}) => {
                          //     // e.preventDefault()
                          //     updateCursor(e, topPic, interactiveBlock)
                          // }}
-                         onTouchMove={(e) => {
-                             // e.preventDefault()
-                             updateCursor(e, topPic, interactiveBlock, undefined, true)
-                         }}
+                         // onTouchMove={(e) => {
+                         //     // e.preventDefault()
+                         //     updateCursor(e, topPic, interactiveBlock, undefined, true)
+                         // }}
 
                          // onTouchEnd={(e) => {
                          //     // e.preventDefault()

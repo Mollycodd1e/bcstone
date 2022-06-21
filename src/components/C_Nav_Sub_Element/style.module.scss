@@ -1,0 +1,45 @@
+@import '../../styles/style';
+
+.root {
+  white-space: nowrap;
+
+  &:not(:last-child) {
+    margin-bottom: 17px;
+  }
+
+  &:hover {
+    .underline {
+      transform: scaleX(1);
+      //transform-origin: top left;
+    }
+  }
+}
+
+.projectName {
+  position: relative;
+
+  & .underline {
+    width: 100%;
+    height: 5px;
+    border-radius: 2.5px;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    display: block;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform .25s ease-in-out;
+  }
+}
+
+.marked {
+  font-weight: 800;
+}
+
+@media (min-width: $width-tablet-md) {
+
+}
+
+@media (min-width: $width-desktop-lg) {
+
+}
