@@ -54,6 +54,12 @@ $menuTransition: .4s;
   margin: 0 0 30px;
 }
 
+.C_Nav_List {
+
+}
+.C_MainButton {
+
+}
 
 @media (min-width: $width-tablet-md) {
   .burger {
@@ -77,5 +83,9 @@ $menuTransition: .4s;
     min-height: unset;
     padding: unset;
     align-items: unset;
+  }
+
+  .C_Nav_List {
+
   }
 }
