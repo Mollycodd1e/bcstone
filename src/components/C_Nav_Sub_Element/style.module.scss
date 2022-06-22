@@ -7,6 +7,10 @@
     margin-bottom: 17px;
   }
 
+  &:last-child {
+    margin-bottom: 9px;
+  }
+
   &:hover {
     .underline {
       transform: scaleX(1);
@@ -17,6 +21,8 @@
 
 .projectName {
   position: relative;
+  font-size: 16px;
+  line-height: 16px;
 
   & .underline {
     width: 100%;
@@ -41,5 +47,8 @@
 }
 
 @media (min-width: $width-desktop-lg) {
-
+  .projectName {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

@@ -1,8 +1,9 @@
 @import '../../styles/style';
 
-$menuTransition: .4s;
 
 .root {
+  margin: 0 0 0 20px;
+  transition: margin $menuTransition ease-out;
   & .secondLvlMenuEl {
     max-height: 0;
     overflow: hidden;
@@ -10,8 +11,9 @@ $menuTransition: .4s;
   }
 
   &.secondLvlMenuElWrapperActive {
+    margin: 14.5px 0 4px 20px;
     & .secondLvlMenuEl {
-      max-height: 300px;
+      max-height: 500px;
     }
   }
 }
@@ -28,7 +30,8 @@ $menuTransition: .4s;
 
 @media (min-width: $width-desktop-lg) {
   .root {
-    padding-top: 18px;
+    margin: 0;
+    padding: 18px 0 0;
     visibility: hidden;
     opacity: 0;
     z-index: -1;

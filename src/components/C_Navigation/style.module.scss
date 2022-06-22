@@ -38,7 +38,7 @@ $menuTransition: .4s;
   left: -278px;
   background-color: white;
   width: 278px;
-  height: 520px;
+  min-height: 520px;
   border-radius: 0 15px 15px 0;
   opacity: 0.98;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
@@ -74,7 +74,7 @@ $menuTransition: .4s;
     opacity: unset;
     box-shadow: unset;
     width: unset;
-    height: unset;
+    min-height: unset;
     padding: unset;
     align-items: unset;
   }
