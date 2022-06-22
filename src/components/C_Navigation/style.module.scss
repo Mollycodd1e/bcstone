@@ -31,7 +31,7 @@ $menuTransition: .4s;
 
 .elements {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   position: absolute;
   top: 0;
@@ -43,7 +43,7 @@ $menuTransition: .4s;
   opacity: 0.98;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
   transition: left .5s ease-in-out;
-  padding: 52px 0 0;
+  padding: 52px 0 0 25px;
 }
 
 .showElements {
@@ -51,7 +51,7 @@ $menuTransition: .4s;
 }
 
 .C_Logo {
-
+  margin: 0 0 30px;
 }
 
 
@@ -63,7 +63,7 @@ $menuTransition: .4s;
 
 @media (min-width: $width-desktop-lg) {
   .C_Logo {
-    margin-right: 370px;
+    margin: 0 370px 0 0;
   }
 
   .elements {
@@ -76,5 +76,6 @@ $menuTransition: .4s;
     width: unset;
     height: unset;
     padding: unset;
+    align-items: unset;
   }
 }

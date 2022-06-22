@@ -5,11 +5,12 @@ import {C_Nav_Sub_List} from "../C_Nav_Sub_List";
 
 export const C_Nav_Element = ({className, item, el}) => {
     const cls = classNames(classes.root, {[className]: className});
-    const [toggle, setToggle] = useState(false);
+    //todo false вернуть
+    const [toggle, setToggle] = useState(true);
     const {name, sub} = el;
     return (
         <li
-            key={el.name + item}
+            key={name + item}
             className={cls}
         >
             <span className={classNames({[classes.chevronWrapper]: toggle && sub.length !== 0})}>
@@ -18,7 +19,9 @@ export const C_Nav_Element = ({className, item, el}) => {
                     onMouseOver={() => setToggle(prev => true)}
                     onMouseOut={() => setToggle(prev => false)}
                     onClick={() => setToggle(prev => !prev)}
-                >{name}</span>
+                >
+                    {name}
+                </span>
                 {sub.length !== 0 && <div
                     className={classNames({
                         [classes.chevron]: sub.length !== 0,

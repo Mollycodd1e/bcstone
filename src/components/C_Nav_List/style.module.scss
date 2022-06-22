@@ -2,7 +2,7 @@
 
 .root {
   list-style: none;
-  margin: 0;
+  margin: 0 0 27px;
   padding: 0;
   display: flex;
   align-items: flex-start;
@@ -14,6 +14,7 @@
 
 @media (min-width: $width-desktop-lg) {
   .root {
+    margin: 0;
     flex-direction: row;
     align-items: center;
   }

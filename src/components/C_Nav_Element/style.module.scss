@@ -6,10 +6,22 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin: 0 0 14px;
+  }
 }
 
 .firstLvlMenuName {
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-dark-primary;
+  transition: color $menuTransition;
 
+  &:hover {
+    color: $color-gray-twelve !important;
+  }
 }
 
 .chevronWrapper {
@@ -45,47 +57,28 @@
 
 @media (min-width: $width-desktop-lg) {
   .root {
-    margin: 0 35px 0 0;
+    margin: 0 35px 0 0 !important;
     padding: 0;
     position: relative;
-    font-size: 19px;
-    line-height: 21px;
-    cursor: pointer;
   }
 
   .firstLvlMenuName {
-    color: $color-dark-primary;
-    transition: color $menuTransition;
+    font-size: 19px;
+    line-height: 21px;
 
-    &:hover {
-      color: $color-gray-twelve !important;
-    }
   }
 
   .chevronWrapper {
-    display: flex;
-    align-items: center;
-
     & .firstLvlMenuName {
-      color: $color-gray-twelve !important;
     }
   }
 
   .chevron {
-    margin-left: 10px;
-    display: inline-block;
-    width: 10px;
-    height: 5px;
-    background-image: url("../../img/s_chevron.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 10px 5px;
-    transition: transform $menuTransition;
+
   }
 
   .chevronActive {
-    background-image: url("../../img/s_chevron_active.svg");
-    transform: scaleY(-1);
+
   }
 
 }
