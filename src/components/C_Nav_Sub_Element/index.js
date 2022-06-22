@@ -1,14 +1,14 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
 
-export const C_Nav_Sub_Element = ({className, el, i}) => {
+export const C_Nav_Sub_Element = ({className, el, i, key}) => {
     const cls = classNames(classes.root, {[className]: className});
     const {name, color} = el;
 
     return (
         <li
             className={cls}
-            key={name + i}
+            key={key}
         >
             <a href="#" className={classes.projectName}>
                 <span className={classes.marked}>STONE </span>
