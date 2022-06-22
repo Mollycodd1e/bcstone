@@ -11,6 +11,7 @@ export const C_Nav_List = ({className}) => {
                 return <C_Nav_Element
                     el={el}
                     item={item}
+                    key={el+item}
                 />
             })}
         </ul>

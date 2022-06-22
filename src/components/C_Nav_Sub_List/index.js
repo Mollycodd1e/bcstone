@@ -20,6 +20,7 @@ export const C_Nav_Sub_List = ({className, item, toggle, setToggle, el}) => {
                     return <C_Nav_Sub_Element
                         el={el}
                         i={i}
+                        key={el+i}
                     />
                 })}
             </ul>
