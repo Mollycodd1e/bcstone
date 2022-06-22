@@ -18,7 +18,7 @@ export const C_Nav_Element = ({className, item, el, key}) => {
                     className={classes.firstLvlMenuName}
                     onMouseOver={() => setToggle(prev => true)}
                     onMouseOut={() => setToggle(prev => false)}
-                    onClick={() => setToggle(prev => !prev)}
+                    // onClick={() => setToggle(prev => !prev)}
                 >
                     {name}
                 </span>
