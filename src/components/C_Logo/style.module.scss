@@ -3,12 +3,12 @@
 .root {
   cursor: pointer;
   display: block;
-  width: 102px;
-  height: 38px;
+  width: 68px;
+  height: 25px;
   background-image: url("../../img/s_logo.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 102px 38px;
+  background-size: 68px 25px;
 // .logoInline {
 //   svg {
 //     width: 4.845rem;
@@ -51,4 +51,16 @@
 //      }
 //    }
 //  }
+}
+
+@media (min-width: $width-tablet-md) {
+
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    width: 102px;
+    height: 38px;
+    background-size: 102px 38px;
+  }
 }

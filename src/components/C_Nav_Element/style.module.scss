@@ -15,15 +15,29 @@ $menuTransition: .4s;
 }
 
 .chevronWrapper {
+  display: flex;
+  align-items: center;
 
+  & .firstLvlMenuName {
+    color: $color-gray-twelve !important;
+  }
 }
 
 .chevron {
-
+  margin-left: 10px;
+  display: inline-block;
+  width: 10px;
+  height: 5px;
+  background-image: url("../../img/s_chevron.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 5px;
+  transition: transform $menuTransition;
 }
 
 .chevronActive {
-
+  background-image: url("../../img/s_chevron_active.svg");
+  transform: scaleY(-1);
 }
 
 
