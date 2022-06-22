@@ -11,12 +11,17 @@ export const S_Hero = ({className}) => {
     const interactiveBlock = useRef(null);
     const topPic = useRef(null);
     const cls = classNames(classes.root, {[className]: className });
-    const updateCursor = (e, topPic, interactiveBlock, customCircleSize = undefined) => {
+    const updateCursor = (e, topPic, interactiveBlock, customCircleSize = undefined, isTouchEvent = false) => {
         const rect = interactiveBlock.current.getBoundingClientRect()
         let xBlockPercent = 0
         let yBlockPercent = 0
-        xBlockPercent = e.touches && e.touches.length !==0 && e.touches[0].pageX ? Math.abs((e.touches[0].pageX - (rect.x + pageXOffset))/(interactiveBlock.current.clientWidth / 100)) : Math.abs((e.pageX - (rect.x + pageXOffset))/(interactiveBlock.current.clientWidth / 100))
-        yBlockPercent = e.touches && e.touches.length !==0 && e.touches[0].pageY ? Math.abs((e.touches[0].pageY - (rect.y + pageYOffset))/(interactiveBlock.current.clientHeight / 100)) : Math.abs((e.pageY - (rect.y + pageYOffset))/(interactiveBlock.current.clientHeight / 100))
+        if ((isTouchEvent && e.touches && e.touches.length !==0 && e.touches[0].pageX) || (isTouchEvent && e.touches && e.touches.length !==0 && e.touches[0].pageY)) {
+            xBlockPercent = Math.abs((e.touches[0].pageX - (rect.x + pageXOffset))/(interactiveBlock.current.clientWidth / 100))
+            yBlockPercent = Math.abs((e.touches[0].pageY - (rect.y + pageYOffset))/(interactiveBlock.current.clientHeight / 100))
+        } else {
+            xBlockPercent = Math.abs((e.pageX - (rect.x + pageXOffset))/(interactiveBlock.current.clientWidth / 100))
+            yBlockPercent = Math.abs((e.pageY - (rect.y + pageYOffset))/(interactiveBlock.current.clientHeight / 100))
+        }
 
         if (customCircleSize === undefined) {
             let size = 0;
@@ -137,32 +142,37 @@ export const S_Hero = ({className}) => {
                              updateCursor(e, topPic, interactiveBlock, 0)
                          }}
 
-                        onTouchStart={(e) => {
-                            // // updateCursor(e, topPic, interactiveBlock)
-                            // console.log('x', e.touches[0].pageX)
-                            // // console.log('x2', e.touches[0].clientX)
-                            // console.log('y', e.touches[0].pageY)
-                            // // console.log('y2', e.touches[0].clientY)
-                            // console.log('123', e.targetTouches)
-                            // console.log('456', e.target.getBoundingClientRect())
-                            // console.log('456', e.target.clientWidth)
-                            // console.log('456', pageXOffset)
-                            // console.log('456', pageYOffset)
-                            updateCursor(e, topPic, interactiveBlock, 0)
-                        }}
+                        // onTouchStart={(e) => {
+                        //     // // updateCursor(e, topPic, interactiveBlock)
+                        //     // console.log('x', e.touches[0].pageX)
+                        //     // // console.log('x2', e.touches[0].clientX)
+                        //     // console.log('y', e.touches[0].pageY)
+                        //     // // console.log('y2', e.touches[0].clientY)
+                        //     // console.log('123', e.targetTouches)
+                        //     // console.log('456', e.target.getBoundingClientRect())
+                        //     // console.log('456', e.target.clientWidth)
+                        //     // console.log('456', pageXOffset)
+                        //     // console.log('456', pageYOffset)
+                        //     updateCursor(e, topPic, interactiveBlock, 0)
+                        // }}
 
                          // onTouchStart={(e) => {
                          //     // e.preventDefault()
                          //     updateCursor(e, topPic, interactiveBlock)
                          // }}
-                         onTouchMove={(e) => {
-                             // e.preventDefault()
-                             updateCursor(e, topPic, interactiveBlock)
-                         }}
-                         onTouchEnd={(e) => {
-                             // e.preventDefault()
-                             updateCursor(e, topPic, interactiveBlock, 0)
-                         }}
+                         // onTouchMove={(e) => {
+                         //     // e.preventDefault()
+                         //     updateCursor(e, topPic, interactiveBlock, undefined, true)
+                         // }}
+
+                         // onTouchEnd={(e) => {
+                         //     // e.preventDefault()
+                         //     updateCursor(e, topPic, interactiveBlock, 0, true)
+                         // }}
+                         // onTouchCancel={(e) => {
+                         //     // e.preventDefault()
+                         //     updateCursor(e, topPic, interactiveBlock, 0, true)
+                         // }}
                     />
 
             </div>
