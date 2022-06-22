@@ -26,7 +26,6 @@ $time: 0.7s;
     color: white;
     position: relative;
     z-index: 5;
-
     transition: color $time;
   }
 
@@ -59,4 +58,30 @@ $time: 0.7s;
   font-size: 16px;
   line-height: 18px;
   text-decoration: underline;
+  background-color: unset;
+  padding: 0;
+
+
+  & .text {
+    color: $color-dark-primary;
+  }
+}
+
+@media (min-width: $width-tablet-md) {
+
+}
+
+@media (min-width: $width-desktop-lg) {
+  .mode {
+    font-size: 18px;
+    line-height: 19px;
+    text-decoration: unset;
+    padding: 12px 40px;
+    background-color: $color-dark-primary;
+
+
+    & .text {
+      color: white;
+    }
+  }
 }
