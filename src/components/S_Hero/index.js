@@ -1,7 +1,7 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
 import {C_MainButton} from "../C_MainButton";
-import {useContext, useRef} from "react";
+import {useContext, useRef, useState} from "react";
 import {Context} from "../../library";
 import {sizes} from "../../data/sizes";
 
@@ -51,6 +51,8 @@ export const S_Hero = ({className}) => {
     const topPic = useRef(null);
     const cls = classNames(classes.root, {[className]: className });
     const [width, height] = useContext(Context);
+    const isDesktop = width >= sizes.widthDesktopLg;
+    const [isAnimation, setIsAnimation] = useState(false);
     const updateCursor = (e, topPic, interactiveBlock, customCircleSize = undefined, isTouchEvent = false) => {
         const rect = interactiveBlock.current.getBoundingClientRect()
         let xBlockPercent = 0
@@ -92,18 +94,52 @@ export const S_Hero = ({className}) => {
     }
     return (
         <div className={cls} >
-            <div className={classes.textBlock}>
-                <div className={classes.titleHelper}>Бизнес-центры класса а</div>
-                <div className={classes.mainTitle}>STONE</div>
-                <div className={classes.listName}>Аренда / продажа офисов и ритейла <br/>в Москве у метро</div>
-                <ul className={classes.listInfo}>
-                    <li className={classes.item}>Доходность до 45%</li>
-                    <li className={classes.item}>Окупаемость 6 лет</li>
-                    <li className={classes.item}>Вложения от 12 млн руб.</li>
-                    <li className={classes.item}>Девелопер STONE HEDGE</li>
-                </ul>
-                <C_MainButton text={"Получить предложение"} onClick={() => console.log('click')} className={classes.mainButton} />
-            </div>
+            {/*<div className={classes.textBlock}>*/}
+            {/*    <div className={classes.titleHelper}>Бизнес-центры класса а</div>*/}
+            {/*    <div className={classes.mainTitle}>STONE</div>*/}
+            {/*    <div className={classes.listName}>Аренда / продажа офисов и ритейла <br/>в Москве у метро</div>*/}
+            {/*    <ul className={classes.listInfo}>*/}
+            {/*        <li className={classes.item}>Доходность до 45%</li>*/}
+            {/*        <li className={classes.item}>Окупаемость 6 лет</li>*/}
+            {/*        <li className={classes.item}>Вложения от 12 млн руб.</li>*/}
+            {/*        <li className={classes.item}>Девелопер STONE HEDGE</li>*/}
+            {/*    </ul>*/}
+            {/*    <C_MainButton text={"Получить предложение"} onClick={() => console.log('click')} className={classes.mainButton} />*/}
+            {/*</div>*/}
+
+            {/*<div*/}
+            {/*    className={classes.interactiveBlock}*/}
+            {/*    ref={interactiveBlock}*/}
+            {/*>*/}
+            {/*    <div className={classes.btmPic} />*/}
+            {/*    <div*/}
+            {/*        className={classes.topPic}*/}
+            {/*        ref={topPic}*/}
+            {/*    />*/}
+            {/*    <div className={classes.hover}*/}
+            {/*         onMouseOver={(e) => {*/}
+            {/*             updateCursor(e, topPic, interactiveBlock, 0)*/}
+            {/*         }}*/}
+            {/*         onMouseMove={(e) => {*/}
+            {/*             updateCursor(e, topPic, interactiveBlock)*/}
+            {/*         }}*/}
+            {/*         onMouseOut={(e) => {*/}
+            {/*             updateCursor(e, topPic, interactiveBlock, 0)*/}
+            {/*         }}*/}
+            {/*    />*/}
+            {/*</div>*/}
+
+
+            <div className={classes.titleHelper}>Бизнес-центры класса а</div>
+            <div className={classes.mainTitle} />
+            <div className={classes.listName}>Аренда / продажа офисов и ритейла <br/>в Москве у метро</div>
+            <ul className={classes.listInfo}>
+                <li className={classes.item}>Доходность до 45%</li>
+                <li className={classes.item}>Окупаемость 6 лет</li>
+                <li className={classes.item}>Вложения от 12 млн руб.</li>
+                <li className={classes.item}>Девелопер STONE HEDGE</li>
+            </ul>
+            <C_MainButton text={"Получить предложение"} onClick={() => console.log('click')} className={classes.mainButton} />
 
             <div
                 className={classes.interactiveBlock}
@@ -111,19 +147,21 @@ export const S_Hero = ({className}) => {
             >
                 <div className={classes.btmPic} />
                 <div
-                    className={classes.topPic}
+                    className={classNames(classes.topPic, {[classes.topPicAnimation]:isAnimation})}
                     ref={topPic}
                 />
                 <div className={classes.hover}
                      onMouseOver={(e) => {
-                         updateCursor(e, topPic, interactiveBlock, 0)
+                         isDesktop ? updateCursor(e, topPic, interactiveBlock, 0) : e.preventDefault()
+
                      }}
                      onMouseMove={(e) => {
-                         updateCursor(e, topPic, interactiveBlock)
+                         isDesktop ? updateCursor(e, topPic, interactiveBlock) : e.preventDefault()
                      }}
                      onMouseOut={(e) => {
-                         updateCursor(e, topPic, interactiveBlock, 0)
+                         isDesktop ? updateCursor(e, topPic, interactiveBlock, 0) : e.preventDefault()
                      }}
+                     onClick={() => setIsAnimation(true)}
                 />
             </div>
         </div>
