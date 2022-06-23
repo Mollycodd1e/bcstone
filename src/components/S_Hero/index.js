@@ -1,20 +1,61 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
-import {logo} from '../../img/svgInlineImg.js'
-import {links} from "../../data/stoneLinks";
 import {C_MainButton} from "../C_MainButton";
-import {useRef} from "react";
-import Swipe from "react-easy-swipe";
+import {useContext, useRef} from "react";
+import {Context} from "../../library";
+import {sizes} from "../../data/sizes";
 
+// onMouseDown={(e) => {
+//     const rect = topPic.current.getBoundingClientRect()
+//
+//     // console.log('Координата начала блока по X относительно документа:', rect.x + pageXOffset)
+//     // console.log('координата начала блока по Y относительно документа:', rect.y + pageYOffset)
+//     // console.log('Ширина блока:', topPic.current.clientWidth)
+//     // console.log('Высота блока:', topPic.current.clientHeight)
+//     // // console.log('Координата конца блока по X относительно документа:', rect.x + pageXOffset + topPic.current.clientWidth)
+//     // // console.log('Координата конца блока по Y относительно документа:', rect.y + pageYOffset + topPic.current.clientHeight)
+//     // console.log('Позиция курсора по X', e.pageX)
+//     // console.log('Позиция курсора по Y', e.pageY)
+//
+//     let xBlockPercent = Math.abs(Math.round((e.pageX - (rect.x + pageXOffset))/(topPic.current.clientWidth / 100)))
+//     let yBlockPercent = Math.abs(Math.round((e.pageY - (rect.y + pageYOffset))/(topPic.current.clientHeight / 100)))
+//     // console.log('Позиция курсора по X в % относительно блока', xBlockPercent)
+//     // console.log('Позиция курсора по Y в % относительно блока', yBlockPercent)
+//
+//
+//     topPic.current.style.clipPath = `circle(230px at ${xBlockPercent}% ${yBlockPercent}%);`
+// }}
+// onMouseUp={(e) => {
+//     const rect = topPic.current.getBoundingClientRect()
+//
+//     // console.log('Координата начала блока по X относительно документа:', rect.x + pageXOffset)
+//     // console.log('координата начала блока по Y относительно документа:', rect.y + pageYOffset)
+//     // console.log('Ширина блока:', topPic.current.clientWidth)
+//     // console.log('Высота блока:', topPic.current.clientHeight)
+//     // // console.log('Координата конца блока по X относительно документа:', rect.x + pageXOffset + topPic.current.clientWidth)
+//     // // console.log('Координата конца блока по Y относительно документа:', rect.y + pageYOffset + topPic.current.clientHeight)
+//     // console.log('Позиция курсора по X', e.pageX)
+//     // console.log('Позиция курсора по Y', e.pageY)
+//
+//     let xBlockPercent = Math.abs(Math.round((e.pageX - (rect.x + pageXOffset))/(topPic.current.clientWidth / 100)))
+//     let yBlockPercent = Math.abs(Math.round((e.pageY - (rect.y + pageYOffset))/(topPic.current.clientHeight / 100)))
+//     // console.log('Позиция курсора по X в % относительно блока', xBlockPercent)
+//     // console.log('Позиция курсора по Y в % относительно блока', yBlockPercent)
+//
+//
+//     topPic.current.style.clipPath = `circle(230px at ${xBlockPercent}% ${yBlockPercent}%);`
+// }}
 
 export const S_Hero = ({className}) => {
     const interactiveBlock = useRef(null);
     const topPic = useRef(null);
     const cls = classNames(classes.root, {[className]: className });
+    const [width, height] = useContext(Context);
     const updateCursor = (e, topPic, interactiveBlock, customCircleSize = undefined, isTouchEvent = false) => {
         const rect = interactiveBlock.current.getBoundingClientRect()
         let xBlockPercent = 0
         let yBlockPercent = 0
+
         if ((isTouchEvent && e.touches && e.touches.length !==0 && e.touches[0].pageX) || (isTouchEvent && e.touches && e.touches.length !==0 && e.touches[0].pageY)) {
             xBlockPercent = Math.abs((e.touches[0].pageX - (rect.x + pageXOffset))/(interactiveBlock.current.clientWidth / 100))
             yBlockPercent = Math.abs((e.touches[0].pageY - (rect.y + pageYOffset))/(interactiveBlock.current.clientHeight / 100))
@@ -45,7 +86,6 @@ export const S_Hero = ({className}) => {
             }
 
             topPic.current.style['clip-path'] = `circle(${size}px at ${xBlockPercent}% ${yBlockPercent}%)`
-            // console.log('x', xBlockPercent)
         } else {
             topPic.current.style['clip-path'] = `circle(${customCircleSize}px at ${xBlockPercent}% ${yBlockPercent}%)`
         }
@@ -56,7 +96,7 @@ export const S_Hero = ({className}) => {
                 <div className={classes.titleHelper}>Бизнес-центры класса а</div>
                 <div className={classes.mainTitle}>STONE</div>
                 <div className={classes.listName}>Аренда / продажа офисов и ритейла <br/>в Москве у метро</div>
-                <ul className={classes.list}>
+                <ul className={classes.listInfo}>
                     <li className={classes.item}>Доходность до 45%</li>
                     <li className={classes.item}>Окупаемость 6 лет</li>
                     <li className={classes.item}>Вложения от 12 млн руб.</li>
@@ -64,119 +104,28 @@ export const S_Hero = ({className}) => {
                 </ul>
                 <C_MainButton text={"Получить предложение"} onClick={() => console.log('click')} className={classes.mainButton} />
             </div>
-            {/*<Swipe*/}
-            {/*    onSwipeStart={(pos, e) => {*/}
-            {/*        console.log(pos.x)*/}
-            {/*        updateCursor(e, topPic, interactiveBlock, 0)*/}
-            {/*    }}*/}
-            {/*    onSwipeMove={(pos, e) => {*/}
-            {/*        console.log(pos.x)*/}
-            {/*        updateCursor(e, topPic, interactiveBlock)*/}
-            {/*    }}*/}
-            {/*    onSwipeEnd={(e) => {*/}
 
-            {/*        updateCursor(e, topPic, interactiveBlock, 0)*/}
-            {/*    }}*/}
-            {/*>*/}
             <div
                 className={classes.interactiveBlock}
                 ref={interactiveBlock}
             >
-                <div className={classes.btmPic}/>
+                <div className={classes.btmPic} />
                 <div
                     className={classes.topPic}
                     ref={topPic}
-
-                    // onMouseDown={(e) => {
-                    //     const rect = topPic.current.getBoundingClientRect()
-                    //
-                    //     // console.log('Координата начала блока по X относительно документа:', rect.x + pageXOffset)
-                    //     // console.log('координата начала блока по Y относительно документа:', rect.y + pageYOffset)
-                    //     // console.log('Ширина блока:', topPic.current.clientWidth)
-                    //     // console.log('Высота блока:', topPic.current.clientHeight)
-                    //     // // console.log('Координата конца блока по X относительно документа:', rect.x + pageXOffset + topPic.current.clientWidth)
-                    //     // // console.log('Координата конца блока по Y относительно документа:', rect.y + pageYOffset + topPic.current.clientHeight)
-                    //     // console.log('Позиция курсора по X', e.pageX)
-                    //     // console.log('Позиция курсора по Y', e.pageY)
-                    //
-                    //     let xBlockPercent = Math.abs(Math.round((e.pageX - (rect.x + pageXOffset))/(topPic.current.clientWidth / 100)))
-                    //     let yBlockPercent = Math.abs(Math.round((e.pageY - (rect.y + pageYOffset))/(topPic.current.clientHeight / 100)))
-                    //     // console.log('Позиция курсора по X в % относительно блока', xBlockPercent)
-                    //     // console.log('Позиция курсора по Y в % относительно блока', yBlockPercent)
-                    //
-                    //
-                    //     topPic.current.style.clipPath = `circle(230px at ${xBlockPercent}% ${yBlockPercent}%);`
-                    // }}
-                    // onMouseUp={(e) => {
-                    //     const rect = topPic.current.getBoundingClientRect()
-                    //
-                    //     // console.log('Координата начала блока по X относительно документа:', rect.x + pageXOffset)
-                    //     // console.log('координата начала блока по Y относительно документа:', rect.y + pageYOffset)
-                    //     // console.log('Ширина блока:', topPic.current.clientWidth)
-                    //     // console.log('Высота блока:', topPic.current.clientHeight)
-                    //     // // console.log('Координата конца блока по X относительно документа:', rect.x + pageXOffset + topPic.current.clientWidth)
-                    //     // // console.log('Координата конца блока по Y относительно документа:', rect.y + pageYOffset + topPic.current.clientHeight)
-                    //     // console.log('Позиция курсора по X', e.pageX)
-                    //     // console.log('Позиция курсора по Y', e.pageY)
-                    //
-                    //     let xBlockPercent = Math.abs(Math.round((e.pageX - (rect.x + pageXOffset))/(topPic.current.clientWidth / 100)))
-                    //     let yBlockPercent = Math.abs(Math.round((e.pageY - (rect.y + pageYOffset))/(topPic.current.clientHeight / 100)))
-                    //     // console.log('Позиция курсора по X в % относительно блока', xBlockPercent)
-                    //     // console.log('Позиция курсора по Y в % относительно блока', yBlockPercent)
-                    //
-                    //
-                    //     topPic.current.style.clipPath = `circle(230px at ${xBlockPercent}% ${yBlockPercent}%);`
-                    // }}
-
-                    // {/*проверка событий*/}
                 />
-
-                    <div className={classes.hover}
-                         onMouseOver={(e) => {
-                             updateCursor(e, topPic, interactiveBlock, 0)
-                         }}
-                         onMouseMove={(e) => {
-                             updateCursor(e, topPic, interactiveBlock)
-                         }}
-                         onMouseOut={(e) => {
-                             updateCursor(e, topPic, interactiveBlock, 0)
-                         }}
-
-                        // onTouchStart={(e) => {
-                        //     // // updateCursor(e, topPic, interactiveBlock)
-                        //     // console.log('x', e.touches[0].pageX)
-                        //     // // console.log('x2', e.touches[0].clientX)
-                        //     // console.log('y', e.touches[0].pageY)
-                        //     // // console.log('y2', e.touches[0].clientY)
-                        //     // console.log('123', e.targetTouches)
-                        //     // console.log('456', e.target.getBoundingClientRect())
-                        //     // console.log('456', e.target.clientWidth)
-                        //     // console.log('456', pageXOffset)
-                        //     // console.log('456', pageYOffset)
-                        //     updateCursor(e, topPic, interactiveBlock, 0)
-                        // }}
-
-                         // onTouchStart={(e) => {
-                         //     // e.preventDefault()
-                         //     updateCursor(e, topPic, interactiveBlock)
-                         // }}
-                         // onTouchMove={(e) => {
-                         //     // e.preventDefault()
-                         //     updateCursor(e, topPic, interactiveBlock, undefined, true)
-                         // }}
-
-                         // onTouchEnd={(e) => {
-                         //     // e.preventDefault()
-                         //     updateCursor(e, topPic, interactiveBlock, 0, true)
-                         // }}
-                         // onTouchCancel={(e) => {
-                         //     // e.preventDefault()
-                         //     updateCursor(e, topPic, interactiveBlock, 0, true)
-                         // }}
-                    />
-
+                <div className={classes.hover}
+                     onMouseOver={(e) => {
+                         updateCursor(e, topPic, interactiveBlock, 0)
+                     }}
+                     onMouseMove={(e) => {
+                         updateCursor(e, topPic, interactiveBlock)
+                     }}
+                     onMouseOut={(e) => {
+                         updateCursor(e, topPic, interactiveBlock, 0)
+                     }}
+                />
             </div>
-            {/*</Swipe>*/}
         </div>
     )
 }
