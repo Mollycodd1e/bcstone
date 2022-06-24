@@ -109,7 +109,7 @@ $animationDurationHero: 1.1s;
   text-transform: uppercase;
   font-size: 12px;
   line-height: 12px;
-  margin: 0 0 7px;
+  margin: 0 0 7px 25px;
 }
 
 .mainTitle {
@@ -120,6 +120,7 @@ $animationDurationHero: 1.1s;
   background-repeat: no-repeat;
   background-size: 208px 46px;
   background-position: center;
+  margin: 0 0 0 25px;
 }
 
 .listName {
@@ -127,18 +128,23 @@ $animationDurationHero: 1.1s;
   font-weight: bold;
   font-size: 14px;
   line-height: 15px;
+  margin: 0 0 0 25px;
 }
 
 .listInfo {
   grid-area: listInfo;
+  padding: 0 0 0 13px;
+  margin: 0 0 0 25px;
 }
 
 .item {
-
+  font-size: 12px;
+  line-height: 17px;
 }
 
 .mainButton {
   grid-area: mainButton;
+  margin: 0 0 0 25px;
 }
 
 @media (min-width: $width-tablet-md) {
