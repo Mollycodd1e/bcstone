@@ -63,6 +63,7 @@ $animationDurationHero: 1.1s;
   height: calc(67.1875vw);
   min-height: 215px;
   position: relative;
+  margin: 0 0 0 16px;
 }
 
 .btmPic {
@@ -120,7 +121,7 @@ $animationDurationHero: 1.1s;
   background-repeat: no-repeat;
   background-size: 208px 46px;
   background-position: center;
-  margin: 0 0 0 25px;
+  margin: 0 0 18.5px 25px;
 }
 
 .listName {
@@ -128,12 +129,12 @@ $animationDurationHero: 1.1s;
   font-weight: bold;
   font-size: 14px;
   line-height: 15px;
-  margin: 0 0 0 25px;
+  margin: 0 0 13px 25px;
 }
 
 .listInfo {
   grid-area: listInfo;
-  padding: 0 0 0 13px;
+  padding: 0 0 24px 13px;
   margin: 0 0 0 25px;
 }
 
@@ -168,7 +169,7 @@ $animationDurationHero: 1.1s;
     width: 1075px;
     height:  782px;
 
-    margin-left: -107px;
+    margin: 0 0 0 -107px;
 
   }
 
