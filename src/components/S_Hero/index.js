@@ -53,6 +53,7 @@ export const S_Hero = ({className}) => {
     const [width, height] = useContext(Context);
     const isDesktop = width >= sizes.widthDesktopLg;
     const [isAnimation, setIsAnimation] = useState(false);
+    const [isAnimationOff, setIsAnimationOff] = useState(false);
     const updateCursor = (e, topPic, interactiveBlock, customCircleSize = undefined, isTouchEvent = false) => {
         const rect = interactiveBlock.current.getBoundingClientRect()
         let xBlockPercent = 0
@@ -150,7 +151,7 @@ export const S_Hero = ({className}) => {
                     className={classNames(classes.topPic, {[classes.topPicAnimation]:isAnimation})}
                     ref={topPic}
                 />
-                <div className={classes.hover}
+                <div className={classNames(classes.hover, {[classes.animationOff]:isAnimationOff})}
                      onMouseOver={(e) => {
                          isDesktop ? updateCursor(e, topPic, interactiveBlock, 0) : e.preventDefault()
 
@@ -161,7 +162,10 @@ export const S_Hero = ({className}) => {
                      onMouseOut={(e) => {
                          isDesktop ? updateCursor(e, topPic, interactiveBlock, 0) : e.preventDefault()
                      }}
-                     onClick={() => setIsAnimation(true)}
+                     onClick={() => {
+                         setIsAnimation(true);
+                         setIsAnimationOff(true);
+                     }}
                 />
             </div>
         </div>
