@@ -96,13 +96,65 @@ $animationDurationHero: 1.1s;
   clip-path: circle(100% at 50% 50%);
 }
 
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(123, 123, 123, 0.3), 0 0 0 0 rgba(123, 123, 123, 0.3), 0 0 0 0 rgba(123, 123, 123,  0.3);
+  }
+  40% {
+    box-shadow: 0 0 0 20px rgba(123, 123, 123, 0.3), 0 0 0 0 rgba(123, 123, 123, 0.3), 0 0 0 10px rgba(123, 123, 123, 0.3);
+  }
+  80% {
+    box-shadow: 0 0 0 20px rgba(123, 123, 123, 0), 0 0 0 15px rgba(123, 123, 123, 0), 0 0 0 20px rgba(123, 123, 123, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(123, 123, 123, 0), 0 0 0 15px rgba(123, 123, 123, 0), 0 0 0 5px rgba(123, 123, 123, 0);
+  }
+}
+
+@keyframes exist {
+  0% {
+    opacity: 0;
+  }
+
+  @include middleAnimationSpeed;
+
+  100% {
+    opacity: 1;
+  }
+}
+
+$existTimer: 2.5s;
+
 .hover {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  right: 50%;
+  width: 0;
+  height: 0;
   z-index: 15;
+  cursor: pointer;
+  animation: exist $existTimer ease-out;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: pulse $existTimer linear infinite;
+  }
+
+  //&:after {
+  //  content: "";
+  //  position: absolute;
+  //  top: 50%;
+  //  left: 50%;
+  //  transform: translate(-50%, -50%);
+  //}
 }
 
 .titleHelper {
@@ -200,7 +252,15 @@ $animationDurationHero: 1.1s;
   }
 
   .hover {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
     cursor: none;
+
+    &:before {
+      content: none;
+    }
   }
 
   @keyframes helperAnima {
