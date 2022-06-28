@@ -83,12 +83,12 @@ $menuTransition: .4s;
     top: -46px;
     left: -533px;
     width: 376px;
-    min-height: 520px;
+    min-height: 100vh;
     border-radius: 0 15px 15px 0;
     opacity: 0.98;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
     transition: left .5s ease-in-out;
-    padding: 83px 0 0 25px;
+    padding: 83px 0 0 33px;
   }
 
   .showElements {
@@ -100,6 +100,12 @@ $menuTransition: .4s;
     width: 92px !important;
     height: 39px !important;
     background-size: 92px 39px !important;
+  }
+
+  .C_MainButton {
+    padding: 0 !important;
+    font-size: 21px;
+    line-height: 22px;
   }
 }
 

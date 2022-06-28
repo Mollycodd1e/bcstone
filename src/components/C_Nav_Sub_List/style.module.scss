@@ -4,6 +4,7 @@
 .root {
   margin: 0 0 0 20px;
   transition: margin $menuTransition ease-out;
+
   & .secondLvlMenuEl {
     max-height: 0;
     overflow: hidden;
@@ -26,7 +27,13 @@
 }
 
 @media (min-width: $width-tablet-md) {
+  .root {
+    margin: 0 0 0 41px;
 
+    &.secondLvlMenuElWrapperActive {
+      margin: 22px 0 4px 41px;
+    }
+  }
 }
 
 @media (min-width: $width-desktop-lg) {

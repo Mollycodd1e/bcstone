@@ -10,6 +10,9 @@
 }
 
 @media (min-width: $width-tablet-md) {
+  .root {
+    margin: 0 0 38px;
+  }
 }
 
 @media (min-width: $width-desktop-lg) {
