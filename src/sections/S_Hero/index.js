@@ -1,6 +1,6 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
-import {C_MainButton} from "../C_MainButton";
+import {C_MainButton} from "../../components/C_MainButton";
 import {useContext, useRef, useState} from "react";
 import {Context} from "../../library";
 import {sizes} from "../../data/sizes";
