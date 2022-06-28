@@ -240,7 +240,15 @@ $existTimer: 2.5s;
 }
 
 @media (min-width: $width-tablet-md) {
+  .interactiveBlock {
+    &:before {
+      content: none;
+    }
 
+    &:after {
+      content: none;
+    }
+  }
 }
 
 @media (min-width: $width-desktop-lg) {
