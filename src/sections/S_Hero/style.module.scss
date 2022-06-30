@@ -1,0 +1,559 @@
+@import '../../styles/style';
+
+$animationDurationHero: 1.1s;
+$existTimer: 2.5s;
+
+@mixin middleAnimationSpeed {
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: .1;
+  }
+  40% {
+    opacity: .15;
+  }
+  50% {
+    opacity: .2;
+  }
+  60% {
+    opacity: .25;
+  }
+  70% {
+    opacity: .5;
+  }
+  80% {
+    opacity: .7;
+  }
+  90% {
+    opacity: .9;
+  }
+}
+
+@mixin decor {
+  content: "";
+  width: 93%;
+  height: .5px;
+  background-color: $color-gray-five;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(123, 123, 123, 0.3), 0 0 0 0 rgba(123, 123, 123, 0.3), 0 0 0 0 rgba(123, 123, 123,  0.3);
+  }
+  40% {
+    box-shadow: 0 0 0 20px rgba(123, 123, 123, 0.3), 0 0 0 0 rgba(123, 123, 123, 0.3), 0 0 0 10px rgba(123, 123, 123, 0.3);
+  }
+  80% {
+    box-shadow: 0 0 0 20px rgba(123, 123, 123, 0), 0 0 0 15px rgba(123, 123, 123, 0), 0 0 0 20px rgba(123, 123, 123, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(123, 123, 123, 0), 0 0 0 15px rgba(123, 123, 123, 0), 0 0 0 5px rgba(123, 123, 123, 0);
+  }
+}
+
+@keyframes exist {
+  0% {
+    opacity: 0;
+  }
+
+  @include middleAnimationSpeed;
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(250%, 250%);
+  }
+
+  100% {
+    transform: translate(-25%, -25%);
+  }
+}
+
+@keyframes helperAnima {
+  0% {
+    opacity: 0;
+    left: -200px;
+  }
+
+  @include middleAnimationSpeed;
+
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes helperAnimaAfter {
+  0% {
+    opacity: 0;
+    right: -154px;
+  }
+
+  @include middleAnimationSpeed;
+
+  100% {
+    opacity: 1;
+    right: 46px;
+  }
+}
+
+@keyframes helperAnimaAfterDesktop {
+  0% {
+    opacity: 0;
+    right: -209px;
+  }
+
+  @include middleAnimationSpeed;
+
+  100% {
+    opacity: 1;
+    right: -9px;
+  }
+}
+
+@keyframes helperAnimaTitle {
+  0% {
+    opacity: 0;
+    top: 150px;
+  }
+
+  @include middleAnimationSpeed;
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.root {
+  width: 100%;
+  color: $color-dark-primary;
+  padding: 13px 0 29px;
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  grid-template-columns: 1fr;
+  grid-template-areas:  'titleHelper'
+                        'mainTitle'
+                        'interactiveBlock'
+                        'listName'
+                        'listInfo'
+                        'mainButton';
+  justify-items: start;
+}
+
+.interactiveBlock {
+  grid-area: interactiveBlock;
+  align-self: stretch;
+  width: 100vw;
+  height: calc(67.1875vw);
+  min-height: 215px;
+  position: relative;
+  margin: 0 0 16px 0;
+
+  &:before {
+    @include decor;
+    top: 0;
+  }
+
+  &:after {
+    @include decor;
+    bottom: 0;
+  }
+}
+
+@mixin pictureRules {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  //background-size: auto 100%;
+  //background-position: right top;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.btmPic {
+  @include pictureRules();
+  background-image: url('../../img/s_hero_bg.png');
+}
+
+.topPic {
+  @include pictureRules();
+  background-image: url('../../img/s_bg_top_hero.png');
+  clip-path: circle(0 at 50% 50%);
+  transition: 3s ease-in-out;
+}
+
+.topPicAnimation {
+  clip-path: circle(100% at 50% 50%);
+}
+
+.hover {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 0;
+  height: 0;
+  z-index: 15;
+  cursor: pointer;
+  animation: exist $existTimer ease-out;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-image: url("../../img/s_click_effect.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 31px 30px;
+    border-radius: 50%;
+    animation: pulse $existTimer linear infinite;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%, -25%);
+    background-image: url("../../img/s_hand.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 56px 53px;
+    width: 56px;
+    height: 53px;
+    animation: move $existTimer ease-out;
+  }
+
+  &.animationOff {
+    opacity: 0;
+    transition: 2.5s;
+    cursor: default;
+  }
+}
+
+.titleHelper {
+  grid-area: titleHelper;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 12px;
+  margin: 0 0 7px 25px;
+}
+
+.mainTitle {
+  grid-area: mainTitle;
+  background-image: url("../../img/s_logo_stone.svg");
+  width: 208px;
+  height: 46px;
+  background-size: 208px 46px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 0 18.5px 25px;
+}
+
+.listName {
+  grid-area: listName;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 15px;
+  margin: 0 0 13px 25px;
+}
+
+.listInfo {
+  grid-area: listInfo;
+  padding: 0 0 24px 13px;
+  margin: 0 0 0 25px;
+}
+
+.item {
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.mainButton {
+  grid-area: mainButton;
+  margin: 0 0 0 25px;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    padding: 33px 23px 0 100px;
+    grid-template-rows: 12px 114px 67px 121px 1fr;
+    grid-template-columns: 345px 1fr;
+    grid-template-areas:  'titleHelper interactiveBlock'
+                          'mainTitle interactiveBlock'
+                          'listName interactiveBlock'
+                          'listInfo interactiveBlock'
+                          'mainButton interactiveBlock';
+    justify-items: start;
+    align-items: start;
+    align-content: start;
+    min-height: 374px;
+  }
+
+  .titleHelper {
+    font-size: 11px;
+    line-height: 12px;
+    margin: 0;
+
+    animation-duration: $animationDurationHero;
+    animation-name: helperAnima;
+    position: relative;
+  }
+
+  .mainTitle {
+    position: relative;
+    top: 0;
+    margin: 0;
+    width: 345px;
+    height: 106px;
+    background-size: 345px 106px;
+    animation-duration: $animationDurationHero;
+    animation-name: helperAnimaTitle;
+  }
+
+  .listName {
+    margin: 0;
+    font-size: 17px;
+    line-height: 23px;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      right: 46px;
+      top: -126px;
+      content: '';
+      width: 98px;
+      height: 10px;
+      background-image: url('../../img/s_hero_decor_2.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 98px 10px;
+      display: block;
+      animation-duration: $animationDurationHero;
+      animation-name: helperAnimaAfter;
+    }
+  }
+
+  .listInfo {
+    margin: 0 0 30px 0;
+  }
+
+  .item {
+    font-size: 16px;
+    line-height: 18px;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  .mainButton {
+    margin: 0 0 60px 0;
+    align-self: end;
+  }
+
+  .interactiveBlock {
+    width: 100%;
+    height: calc(37.5vw);
+    margin: 0;
+
+    &:before {
+      content: none;
+    }
+
+    &:after {
+      content: none;
+    }
+  }
+
+  @mixin tabletPicStyles {
+    background-position: 50% 100%;
+    background-size: auto 100%;
+  }
+
+  .btmPic {
+    @include tabletPicStyles;
+  }
+
+  .topPic {
+    @include tabletPicStyles;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    padding: 92px 0 142px 5px;
+    grid-template-rows: 69px 218px 100px 132px 101px;
+    grid-template-columns: 657px 1fr;
+    //display: flex;
+    //background-color: $color-gray-eleven;
+    //padding: 96.5px 0 0 222px;
+    width: 1587px;
+  }
+
+  //.textBlock {
+  //  display: flex;
+  //  flex-direction: column;
+  //  padding: 22.5px 0 0;
+  //}
+
+  .interactiveBlock {
+    width: 1075px;
+    height:  782px;
+    //
+    margin: 0 0 0 -107px;
+    justify-self: right;
+
+  }
+
+  .btmPic {
+    //position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    //background-image: url('../../img/s_hero_bg.png');
+    background-size: 1075px 782px;
+    //background-repeat: no-repeat;
+    //background-position: center;
+    background-position: right top;
+  }
+
+  .topPic {
+    //position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    //background-image: url('../../img/s_bg_top_hero.png');
+    background-size: 1075px 761px;
+    //background-repeat: no-repeat;
+    background-position: right top;
+    clip-path: circle(0 at 0 0);
+    transition: 0.1s;
+  }
+
+  .hover {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    cursor: none !important;
+
+    &:before {
+      content: none;
+    }
+
+    &:after {
+      content: none;
+    }
+  }
+
+
+  .titleHelper {
+    font-size: 22px;
+    line-height: 23px;
+    margin: 27px 0 27px 0;
+    //margin: 0 0 0 15.5px;
+
+    //animation-duration: $animationDurationHero;
+    //animation-name: helperAnima;
+    //position: relative;
+    //
+    //&:after {
+    //  position: absolute;
+    //  right: 105px;
+    //  top: 0;
+    //  content: '';
+    //  width: 220px;
+    //  height: 16px;
+    //  background-image: url('../../img/s_hero_decor_1.svg');
+    //  background-repeat: no-repeat;
+    //  background-position: center;
+    //  background-size: 220px 16px;
+    //  display: block;
+    //  animation-duration: $animationDurationHero;
+    //  animation-name: helperAnimaAfter;
+    //}
+  }
+
+  .mainTitle {
+    width: 650px;
+    height: 149px;
+    background-size: 650px 149px;
+    //position: relative;
+    //top: 0;
+    //left: 0;
+    //font-size: 202px;
+    //line-height: 217px;
+    //font-weight: 800;
+    //margin-bottom: 16px;
+    margin: 0;
+    z-index: 10;
+  }
+
+  .listName {
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 35px;
+    margin: 0;
+
+    &:after {
+      //position: absolute;
+      right: -9px;
+      top: -260px;
+      //content: '';
+      width: 220px;
+      height: 16px;
+      background-image: url('../../img/s_hero_decor_1.svg');
+      //background-repeat: no-repeat;
+      //background-position: center;
+      background-size: 220px 16px;
+      //display: block;
+      //animation-duration: $animationDurationHero;
+      animation-name: helperAnimaAfterDesktop;
+    }
+  }
+
+  .listInfo {
+    margin: 0 0 54px 0;
+    padding: 0 0 0 21px;
+  }
+
+  .item {
+    font-size: 20px;
+    line-height: 22px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .mainButton {
+    //align-self: flex-start;
+    margin: 0;
+
+    &:last-child(span) {
+
+    }
+  }
+}

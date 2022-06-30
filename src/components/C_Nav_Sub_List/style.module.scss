@@ -3,7 +3,8 @@
 
 .root {
   margin: 0 0 0 20px;
-  transition: margin $menuTransition ease-out;
+  transition: margin $menuTransition ease-out, padding $menuTransition ease-out;
+
   & .secondLvlMenuEl {
     max-height: 0;
     overflow: hidden;
@@ -11,7 +12,9 @@
   }
 
   &.secondLvlMenuElWrapperActive {
-    margin: 14.5px 0 4px 20px;
+    margin: 0 0 4px 20px;
+    padding: 14.5px 0 0 0;
+
     & .secondLvlMenuEl {
       max-height: 500px;
     }
@@ -25,7 +28,14 @@
 }
 
 @media (min-width: $width-tablet-md) {
+  .root {
+    margin: 0 0 0 41px;
 
+    &.secondLvlMenuElWrapperActive {
+      margin: 0 0 4px 41px;
+      padding: 22px 0 0 0;
+    }
+  }
 }
 
 @media (min-width: $width-desktop-lg) {
@@ -39,6 +49,10 @@
     position: absolute;
     top: 14px;
     left: 0;
+
+    &.secondLvlMenuElWrapperActive {
+      margin: 0;
+    }
   }
 
   .secondLvlMenuElWrapperActive {

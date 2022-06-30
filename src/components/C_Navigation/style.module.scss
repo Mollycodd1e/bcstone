@@ -10,9 +10,9 @@ $menuTransition: .4s;
 .burger {
   width: 23px;
   height: 18px;
+  background-size: 23px 10px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 23px 10px;
   background-image: url("../../img/s_burger.svg");
   transition: background-image $menuTransition;
   cursor: pointer;
@@ -23,10 +23,8 @@ $menuTransition: .4s;
 }
 
 .openBurger {
-  background-size: 9px 18px ;
+  background-size: 9px 18px;
   background-image: url("../../img/s_burger_open.svg");
-
-
 }
 
 .elements {
@@ -40,7 +38,7 @@ $menuTransition: .4s;
   width: 278px;
   min-height: 520px;
   border-radius: 0 15px 15px 0;
-  opacity: 0.98;
+
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
   transition: left .5s ease-in-out;
   padding: 52px 0 0 25px;
@@ -48,6 +46,7 @@ $menuTransition: .4s;
 
 .showElements {
   left: 0;
+  //opacity: 0.98;
 }
 
 .C_Logo {
@@ -62,8 +61,52 @@ $menuTransition: .4s;
 }
 
 @media (min-width: $width-tablet-md) {
+  .root {
+    min-height: unset !important;
+  }
+
   .burger {
-    display: none;
+    width: 47px;
+    height: 25px;
+    background-size: 47px 20px;
+    top: 0;
+    //left: 30px;
+    transition: left $menuTransition, top $menuTransition;
+  }
+
+  .openBurger {
+    background-size: 12px 25px;
+    left: -136px;
+    top: -25px;
+  }
+
+  .elements {
+    top: -46px;
+    left: -533px;
+    width: 376px;
+    min-height: 100vh;
+    border-radius: 0 15px 15px 0;
+    //opacity: 0.98;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+    transition: left .5s ease-in-out;
+    padding: 83px 0 0 33px;
+  }
+
+  .showElements {
+    left: -154px;
+  }
+
+  .C_Logo {
+    //margin: 0 370px 0 0;
+    width: 92px !important;
+    height: 39px !important;
+    background-size: 92px 39px !important;
+  }
+
+  .C_MainButton {
+    padding: 0;
+    font-size: 21px;
+    line-height: 22px;
   }
 }
 
@@ -72,12 +115,16 @@ $menuTransition: .4s;
     margin: 0 370px 0 0;
   }
 
+  .burger {
+    display: none;
+  }
+
   .elements {
     flex-direction: row;
     position: static;
     background-color: unset;
     border-radius: unset;
-    opacity: unset;
+    //opacity: unset;
     box-shadow: unset;
     width: unset;
     min-height: unset;
@@ -87,5 +134,9 @@ $menuTransition: .4s;
 
   .C_Nav_List {
 
+  }
+
+  .C_MainButton {
+    //padding: unset;
   }
 }

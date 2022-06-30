@@ -43,7 +43,10 @@
 }
 
 @media (min-width: $width-tablet-md) {
-
+  .projectName {
+    font-size: 21px;
+    line-height: 22px;
+  }
 }
 
 @media (min-width: $width-desktop-lg) {

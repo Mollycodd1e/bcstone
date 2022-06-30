@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="98.139" height="9" viewBox="0 0 98.139 9">
+    <g id="линия" transform="translate(-152.302 -4)">
+        <path id="Контур_67" data-name="Контур 67" d="M0,89.631V0" transform="translate(241.933 8.258) rotate(90)" fill="none" stroke="#d9d9d9" stroke-width="1"/>
+        <g id="Эллипс_19" data-name="Эллипс 19" transform="translate(241.44 4)" fill="none" stroke="#d9d9d9" stroke-width="1">
+            <circle cx="4.5" cy="4.5" r="4.5" stroke="none"/>
+            <circle cx="4.5" cy="4.5" r="4" fill="none"/>
+        </g>
+    </g>
+</svg>

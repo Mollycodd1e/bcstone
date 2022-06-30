@@ -3,14 +3,14 @@ import classNames from "classnames";
 import {useState} from "react";
 import {C_Nav_Sub_List} from "../C_Nav_Sub_List";
 
-export const C_Nav_Element = ({className, item, el, key}) => {
+export const C_Nav_Element = ({className, item, el, _key}) => {
     const cls = classNames(classes.root, {[className]: className});
 
     const [toggle, setToggle] = useState(false);
     const {name, sub} = el;
     return (
         <li
-            key={key}
+            key={_key}
             className={cls}
         >
             <span className={classNames({[classes.chevronWrapper]: toggle && sub.length !== 0})}>
