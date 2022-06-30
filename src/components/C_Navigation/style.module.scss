@@ -38,7 +38,7 @@ $menuTransition: .4s;
   width: 278px;
   min-height: 520px;
   border-radius: 0 15px 15px 0;
-  opacity: 0.98;
+
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
   transition: left .5s ease-in-out;
   padding: 52px 0 0 25px;
@@ -46,6 +46,7 @@ $menuTransition: .4s;
 
 .showElements {
   left: 0;
+  //opacity: 0.98;
 }
 
 .C_Logo {
@@ -85,7 +86,7 @@ $menuTransition: .4s;
     width: 376px;
     min-height: 100vh;
     border-radius: 0 15px 15px 0;
-    opacity: 0.98;
+    //opacity: 0.98;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
     transition: left .5s ease-in-out;
     padding: 83px 0 0 33px;
@@ -123,7 +124,7 @@ $menuTransition: .4s;
     position: static;
     background-color: unset;
     border-radius: unset;
-    opacity: unset;
+    //opacity: unset;
     box-shadow: unset;
     width: unset;
     min-height: unset;

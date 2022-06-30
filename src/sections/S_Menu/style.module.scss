@@ -1,7 +1,9 @@
 @import '../../styles/style';
 
 .root {
-  background-color: $color-gray-eleven;
+  //background-color: $color-gray-eleven;
+  background-color: transparent;
+  transition: background-color .3s ease-out;
   position: sticky;
   top: 0;
   width: 100vw;
@@ -14,6 +16,17 @@
   justify-content: space-between;
   align-items: center;
   z-index: 20;
+  //opacity: 0.97 !important;
+}
+
+.menuOnTop {
+  background: #fff;
+  opacity: 0.97 !important;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+  & * {
+    opacity: 1 !important;
+  }
 }
 
 .C_Logo_Menu {
@@ -56,9 +69,15 @@
 @media (min-width: $width-desktop-lg) {
   .root {
     padding: 30px 83px 30px 133px;
+    max-width: 1920px;
   }
 
   .C_Logo_Menu {
     display: none !important;
   }
+
+  .C_Navigation {
+    top: 0;
+  }
+
 }

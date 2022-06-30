@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 import {useWindowSize, Context} from "../src/library";
 import Script from 'next/script'
@@ -8,6 +8,25 @@ import {S_Hero} from "../src/sections/S_Hero";
 
 export default function Home() {
     const [width, height] = useWindowSize();
+
+    const topMenuEl = useRef(null);
+    const [menuOnTop, isMenuOnTop] = useState(false)
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            window.onscroll = () => {
+                const menuEl = topMenuEl.current && topMenuEl.current.getBoundingClientRect();
+                console.log('menuEl.top', menuEl.top)
+
+                if (menuEl.top < 0) {
+                    isMenuOnTop(true);
+                    // setActiveItem(1);
+                } else {
+                    isMenuOnTop(false);
+                }
+            }
+        }
+    }, []);
 
     return (
         // <Context.Provider value={setIsPopUpVisible}>
@@ -28,9 +47,10 @@ export default function Home() {
                     </Head>
                     {/*TODO: googletagmanager 2 ? */}
                     {/*<noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7GL33F";height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>*/}
-
-                    <S_Menu />
-                    <S_Hero />
+                    <div className={"common_top_bg"}  ref={topMenuEl}>
+                        <S_Menu menuOnTop={menuOnTop}/>
+                        <S_Hero />
+                    </div>
 
                 </div>
                 <Script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3xsHwkwIhhfEFp3og9dunH0Jw39tsxi0" strategy="beforeInteractive"/>

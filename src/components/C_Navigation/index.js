@@ -1,9 +1,9 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
 import { C_Logo } from "../C_Logo";
-import {C_MainButton} from "../C_MainButton";
-import {C_Nav_List} from "../C_Nav_List";
-import {useState} from "react";
+import { C_MainButton } from "../C_MainButton";
+import { C_Nav_List } from "../C_Nav_List";
+import { useState } from "react";
 
 
 export function C_Navigation({className}) {
