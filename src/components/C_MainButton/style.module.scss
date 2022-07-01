@@ -9,9 +9,6 @@ $time: 0.7s;
   cursor: pointer;
   border-width: 0;
   font-weight: normal;
-  //font-size: 18px;
-  //line-height: 19px;
-
   padding: 10px 23px;
   background-color: $color-dark-primary;
   border-radius: 21px;
@@ -97,18 +94,16 @@ $time: 0.7s;
 
 @media (min-width: $width-desktop-lg) {
   .root {
-    //padding: 12px 40px;
-
     & .text {
       font-size: 18px;
       line-height: 19px;
     }
   }
+
   .mode {
     text-decoration: unset;
     padding: 12px 40px 11px;
     background-color: $color-dark-primary;
-
 
     & .text {
       color: white;
