@@ -422,24 +422,23 @@ $existTimer: 2.5s;
   .topPic {
     @include tabletPicStyles;
   }
-}
 
-.hover {
-  &:before {
-    width: 86px;
-    height: 86px;
-    background-size: 42px 42px;
-    animation: pulseTablet $existTimer linear infinite;
+  .hover {
+    &:before {
+      width: 86px;
+      height: 86px;
+      background-size: 42px 42px;
+      animation: pulseTablet $existTimer linear infinite;
+    }
+
+    &:after {
+      transform: translate(-21%, -20%);
+      animation: moveTablet $existTimer ease-out;
+      background-size: 111px 121px;
+      width: 100px;
+      height: 100px;
+    }
   }
-
-  &:after {
-    transform: translate(-21%, -20%);
-    animation: moveTablet $existTimer ease-out;
-    background-size: 111px 121px;
-    width: 100px;
-    height: 100px;
-  }
-
 }
 
 @media (min-width: $width-desktop-lg) {
