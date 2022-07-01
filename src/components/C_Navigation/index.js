@@ -25,6 +25,7 @@ export function C_Navigation({className}) {
                 <C_Logo className={classes.C_Logo} />
                 <C_Nav_List className={classes.C_Nav_List} />
                 <C_MainButton text={"Оставить заявку"} onClick={() => console.log('click')} className={classes.C_MainButton} mode={true} />
+                {/*<C_MainButton text={"Оставить заявку"} onClick={() => console.log('click')} className={classes.C_MainButton} mode={true} />*/}
             </div>
         </nav>
     )
