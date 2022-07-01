@@ -58,6 +58,21 @@ $existTimer: 2.5s;
   }
 }
 
+@keyframes pulseTablet {
+  0% {
+    box-shadow: 0 0 0 0 rgba(123, 123, 123, 0.3), 0 0 0 0 rgba(123, 123, 123, 0.3), 0 0 0 0 rgba(123, 123, 123,  0.3);
+  }
+  40% {
+    box-shadow: 0 0 0 40px rgba(123, 123, 123, 0.3), 0 0 0 0 rgba(123, 123, 123, 0.3), 0 0 0 20px rgba(123, 123, 123, 0.3);
+  }
+  80% {
+    box-shadow: 0 0 0 40px rgba(123, 123, 123, 0), 0 0 0 15px rgba(123, 123, 123, 0), 0 0 0 40px rgba(123, 123, 123, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(123, 123, 123, 0), 0 0 0 30px rgba(123, 123, 123, 0), 0 0 0 10px rgba(123, 123, 123, 0);
+  }
+}
+
 @keyframes exist {
   0% {
     opacity: 0;
@@ -77,6 +92,16 @@ $existTimer: 2.5s;
 
   100% {
     transform: translate(-25%, -25%);
+  }
+}
+
+@keyframes moveTablet {
+  0% {
+    transform: translate(250%, 250%);
+  }
+
+  100% {
+    transform: translate(-21%, -20%);
   }
 }
 
@@ -399,54 +424,55 @@ $existTimer: 2.5s;
   }
 }
 
+.hover {
+  &:before {
+    width: 86px;
+    height: 86px;
+    background-size: 42px 42px;
+    animation: pulseTablet $existTimer linear infinite;
+  }
+
+  &:after {
+    transform: translate(-21%, -20%);
+    animation: moveTablet $existTimer ease-out;
+    background-size: 111px 121px;
+    width: 100px;
+    height: 100px;
+  }
+
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     padding: 92px 0 142px 5px;
     grid-template-rows: 69px 218px 100px 132px 101px;
     grid-template-columns: 657px 1fr;
-    //display: flex;
-    //background-color: $color-gray-eleven;
-    //padding: 96.5px 0 0 222px;
     width: 1587px;
   }
-
-  //.textBlock {
-  //  display: flex;
-  //  flex-direction: column;
-  //  padding: 22.5px 0 0;
-  //}
 
   .interactiveBlock {
     width: 1075px;
     height:  782px;
-    //
     margin: 0 0 0 -107px;
     justify-self: right;
 
   }
 
   .btmPic {
-    //position: absolute;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
-    //background-image: url('../../img/s_hero_bg.png');
     background-size: 1075px 782px;
-    //background-repeat: no-repeat;
-    //background-position: center;
     background-position: right top;
   }
 
   .topPic {
-    //position: absolute;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
-    //background-image: url('../../img/s_bg_top_hero.png');
     background-size: 1075px 761px;
-    //background-repeat: no-repeat;
     background-position: right top;
     clip-path: circle(0 at 0 0);
     transition: 0.1s;
@@ -473,40 +499,12 @@ $existTimer: 2.5s;
     font-size: 22px;
     line-height: 23px;
     margin: 27px 0 27px 0;
-    //margin: 0 0 0 15.5px;
-
-    //animation-duration: $animationDurationHero;
-    //animation-name: helperAnima;
-    //position: relative;
-    //
-    //&:after {
-    //  position: absolute;
-    //  right: 105px;
-    //  top: 0;
-    //  content: '';
-    //  width: 220px;
-    //  height: 16px;
-    //  background-image: url('../../img/s_hero_decor_1.svg');
-    //  background-repeat: no-repeat;
-    //  background-position: center;
-    //  background-size: 220px 16px;
-    //  display: block;
-    //  animation-duration: $animationDurationHero;
-    //  animation-name: helperAnimaAfter;
-    //}
   }
 
   .mainTitle {
     width: 650px;
     height: 149px;
     background-size: 650px 149px;
-    //position: relative;
-    //top: 0;
-    //left: 0;
-    //font-size: 202px;
-    //line-height: 217px;
-    //font-weight: 800;
-    //margin-bottom: 16px;
     margin: 0;
     z-index: 10;
   }
@@ -518,18 +516,12 @@ $existTimer: 2.5s;
     margin: 0;
 
     &:after {
-      //position: absolute;
       right: -9px;
       top: -260px;
-      //content: '';
       width: 220px;
       height: 16px;
       background-image: url('../../img/s_hero_decor_1.svg');
-      //background-repeat: no-repeat;
-      //background-position: center;
       background-size: 220px 16px;
-      //display: block;
-      //animation-duration: $animationDurationHero;
       animation-name: helperAnimaAfterDesktop;
     }
   }
@@ -549,11 +541,6 @@ $existTimer: 2.5s;
   }
 
   .mainButton {
-    //align-self: flex-start;
     margin: 0;
-
-    &:last-child(span) {
-
-    }
   }
 }
