@@ -18,19 +18,6 @@
   color: $color-white;
 }
 
-//@media (min-width: $width-notebook) {
-//  @mixin wrapMiddleBlock() {
-//    //min-height: 21.7rem;
-//    //background-color: $color-dark-primary;
-//    //width: 100%;
-//    //display: flex;
-//    //flex-direction: column;
-//    //justify-content: space-between;
-//    //color: $color-white;
-//    height: 100%;
-//  }
-//}
-
 @mixin visuallyHiddenMix() {
   border: 0;
   clip: rect(0 0 0 0);

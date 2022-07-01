@@ -7,6 +7,10 @@
   display: none;
 }
 
+.callMe {
+  display: none;
+}
+
 .phone {
   font-size: 11px;
   line-height: 11px;
@@ -22,14 +26,29 @@
 }
 
 @media (min-width: $width-tablet-md) {
-  .whatsapp {
+  .root {
+    display: flex;
+    align-items: center;
+  }
+
+  @mixin icon {
+    width: 39px;
+    height: 39px;
+    background-size: 39px;
     display: block;
-    width: 52px;
-    height: 52px;
-    background-image: url("../../img/s_whatsup_icon.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 52px 52px;
+    margin-right: 16px;
+  }
+
+  .whatsapp {
+    @include icon;
+    background-image: url("../../img/s_whatsup_icon.svg");
+  }
+
+  .callMe {
+    @include icon;
+    background-image: url("../../img/s_call_icon.svg");
   }
 
   .phone {
@@ -39,15 +58,30 @@
   }
 }
 
-
 @media (min-width: $width-desktop-lg) {
   .root {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 252px;
   }
 
+  @mixin bigIcon {
+    width: 52px;
+    height: 52px;
+    background-size: 52px;
+  }
+
+  .whatsapp {
+    @include bigIcon;
+  }
+
+  .callMe {
+    display: none;
+  }
+
+
   .phone {
-    margin: 0 0 0 22px;
+    margin: 0;
   }
 }

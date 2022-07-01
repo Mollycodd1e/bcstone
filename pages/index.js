@@ -87,7 +87,7 @@ export default function Home() {
                     {/*TODO: googletagmanager 2 ? */}
                     {/*<noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7GL33F";height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>*/}
 
-                    {data.length == 0 ? (
+                    {data.length !== 0 ? (
                             <>
                                 <div className={"common_top_bg"}  ref={topMenuEl}>
                                     <S_Menu menuOnTop={menuOnTop}/>

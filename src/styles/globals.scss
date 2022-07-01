@@ -33,16 +33,10 @@ img {
   margin: 0 auto;
   max-width: $width-desktop-lg;
   min-width: $width-mobile-sm;
-  //max-width: $width-mobile-md;
   background-color: $color-white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  //// todo: убрать
-  //box-shadow:
-  //        0 5px 10px gray,
-  //        -5px -10px 20px pink;
-  //height: 1000px;
 }
 
 .common_top_bg {
@@ -50,8 +44,6 @@ img {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  //background: linear-gradient(#fff 0%, #808080 100%);
-  //background-color: radial-gradient(#fff 0%, #808080 100%);
   background: radial-gradient(#fff 0%, #808080 300%);
 }
 
@@ -95,6 +87,7 @@ input[type="radio"].visually-hidden {
   align-self: center;
   justify-self: center;
 }
+
 .lds-grid div {
   position: absolute;
   width: 16px;
@@ -103,51 +96,61 @@ input[type="radio"].visually-hidden {
   background: #484848;
   animation: lds-grid 3.2s ease-in-out infinite;
 }
+
 .lds-grid div:nth-child(1) {
   top: 8px;
   left: 8px;
   animation-delay: 0s;
 }
+
 .lds-grid div:nth-child(2) {
   top: 8px;
   left: 32px;
   animation-delay: -0.4s;
 }
+
 .lds-grid div:nth-child(3) {
   top: 8px;
   left: 56px;
   animation-delay: -0.8s;
 }
+
 .lds-grid div:nth-child(4) {
   top: 32px;
   left: 8px;
   animation-delay: -0.4s;
 }
+
 .lds-grid div:nth-child(5) {
   top: 32px;
   left: 32px;
   animation-delay: -0.8s;
 }
+
 .lds-grid div:nth-child(6) {
   top: 32px;
   left: 56px;
   animation-delay: -1.2s;
 }
+
 .lds-grid div:nth-child(7) {
   top: 56px;
   left: 8px;
   animation-delay: -0.8s;
 }
+
 .lds-grid div:nth-child(8) {
   top: 56px;
   left: 32px;
   animation-delay: -1.2s;
 }
+
 .lds-grid div:nth-child(9) {
   top: 56px;
   left: 56px;
   animation-delay: -1.6s;
 }
+
 @keyframes lds-grid {
   0%, 100% {
     opacity: 1;
@@ -158,10 +161,6 @@ input[type="radio"].visually-hidden {
 }
 
 @media (min-width: $width-notebook) {
-  .page-wrapper {
-    //max-width: $width-desktop-lg;
-  }
-
   .brDesktop {
     display: block;
   }
