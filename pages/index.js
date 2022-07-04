@@ -27,7 +27,7 @@ export default function Home() {
         }
     }, []);
 
-    const [data, getData] = useState([]);
+    const [data, setData] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -38,7 +38,7 @@ export default function Home() {
                     }
                 });
                 const { data } = res;
-                getData(data);
+                setData(data);
                 return { data };
             } catch (error) {
                 return { error };
@@ -46,28 +46,13 @@ export default function Home() {
         };
         fetchData();
 
-        // var myHeaders = new Headers();
-        // myHeaders.append("site-slug", "stone");
-        //
-        // var requestOptions = {
-        //     method: 'GET',
-        //     headers: myHeaders,
-        //     redirect: 'follow'
-        // };
-        //
-        // fetch("https://satellites.stonehedge.ru/api/pages", requestOptions)
-        //     .then(response => response.text())
-        //     .then(result => console.log(result))
-        //     .catch(error => console.log('error', error));
-
-
     }, []);
 
-    // useEffect(async () => {
-    //     let data1 = await data;
-    //     // console.log('data 111 ', data[0] && data[0].logo_title);
-    //     console.log(data1);
-    // }, [data])
+    const mainPageData = data && data.data && data.data.length !== 0 && data.data.filter(el => {
+        if (el && el.id) {
+            return el.id === 2
+        }
+    });
 
     return (
         // <Context.Provider value={data}>
@@ -92,8 +77,8 @@ export default function Home() {
                     {data.length !== 0 ? (
                             <>
                                 <div className={"common_top_bg"}  ref={topMenuEl}>
-                                    <S_Menu menuOnTop={menuOnTop} data={data} />
-                                    <S_Hero data={data} />
+                                    <S_Menu menuOnTop={menuOnTop} data={mainPageData[0]} />
+                                    <S_Hero data={mainPageData[0]} />
                                 </div>
                             </>
                         ) : (
@@ -110,10 +95,8 @@ export default function Home() {
                                     <div/>
                                 </div>
                             </div>
-                    )
-
+                        )
                     }
-
 
                 </div>
                 <Script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3xsHwkwIhhfEFp3og9dunH0Jw39tsxi0" strategy="beforeInteractive"/>
