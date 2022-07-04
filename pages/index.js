@@ -92,7 +92,7 @@ export default function Home() {
                     {data.length !== 0 ? (
                             <>
                                 <div className={"common_top_bg"}  ref={topMenuEl}>
-                                    <S_Menu menuOnTop={menuOnTop}/>
+                                    <S_Menu menuOnTop={menuOnTop} data={data} />
                                     <S_Hero data={data} />
                                 </div>
                             </>
