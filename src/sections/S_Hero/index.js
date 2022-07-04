@@ -1,7 +1,7 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
 import {C_MainButton} from "../../components/C_MainButton";
-import {useContext, useRef, useState} from "react";
+import React, {useContext, useRef, useState} from "react";
 import {Context} from "../../library";
 import {sizes} from "../../data/sizes";
 
@@ -46,7 +46,7 @@ import {sizes} from "../../data/sizes";
 //     topPic.current.style.clipPath = `circle(230px at ${xBlockPercent}% ${yBlockPercent}%);`
 // }}
 
-export const S_Hero = ({className}) => {
+export const S_Hero = ({className, data}) => {
     const interactiveBlock = useRef(null);
     const topPic = useRef(null);
     const cls = classNames(classes.root, {[className]: className });
@@ -131,14 +131,11 @@ export const S_Hero = ({className}) => {
             {/*</div>*/}
 
 
-            <div className={classes.titleHelper}>Бизнес-центры класса а</div>
+            <div className={classes.titleHelper}>{data.data[0].logo_title}</div>
             <div className={classes.mainTitle} />
-            <div className={classes.listName}>Аренда / продажа офисов и ритейла <br/>в Москве у метро</div>
+            <div className={classes.listName} dangerouslySetInnerHTML={{ __html: data.data[0].titile_description}}/>
             <ul className={classes.listInfo}>
-                <li className={classes.item}>Доходность до 45%</li>
-                <li className={classes.item}>Окупаемость 6 лет</li>
-                <li className={classes.item}>Вложения от 12 млн руб.</li>
-                <li className={classes.item}>Девелопер STONE HEDGE</li>
+                {data.data[0].list_description.map((el, i) => <li key={i} className={classes.item}>{el.text}</li>)}
             </ul>
             <C_MainButton text={"Получить предложение"} onClick={() => console.log('click')} className={classes.mainButton} />
 

@@ -63,12 +63,14 @@ export default function Home() {
 
     }, []);
 
-    useEffect(() => {
-        console.log('data', data);
-    }, [data])
+    // useEffect(async () => {
+    //     let data1 = await data;
+    //     // console.log('data 111 ', data[0] && data[0].logo_title);
+    //     console.log(data1);
+    // }, [data])
 
     return (
-        // <Context.Provider value={setIsPopUpVisible}>
+        // <Context.Provider value={data}>
             <Context.Provider value={[width, height]}>
                 <div className={"page-wrapper"}>
                     <Head>
@@ -91,7 +93,7 @@ export default function Home() {
                             <>
                                 <div className={"common_top_bg"}  ref={topMenuEl}>
                                     <S_Menu menuOnTop={menuOnTop}/>
-                                    <S_Hero />
+                                    <S_Hero data={data} />
                                 </div>
                             </>
                         ) : (
