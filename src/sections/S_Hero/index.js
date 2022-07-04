@@ -55,9 +55,9 @@ export const S_Hero = ({className, data}) => {
     const [isAnimation, setIsAnimation] = useState(false);
     const [isAnimationOff, setIsAnimationOff] = useState(false);
     const updateCursor = (e, topPic, interactiveBlock, customCircleSize = undefined, isTouchEvent = false) => {
-        const rect = interactiveBlock.current.getBoundingClientRect()
-        let xBlockPercent = 0
-        let yBlockPercent = 0
+        const rect = interactiveBlock.current.getBoundingClientRect();
+        let xBlockPercent = 0;
+        let yBlockPercent = 0;
 
         if ((isTouchEvent && e.touches && e.touches.length !==0 && e.touches[0].pageX) || (isTouchEvent && e.touches && e.touches.length !==0 && e.touches[0].pageY)) {
             xBlockPercent = Math.abs((e.touches[0].pageX - (rect.x + pageXOffset))/(interactiveBlock.current.clientWidth / 100))
@@ -93,6 +93,7 @@ export const S_Hero = ({className, data}) => {
             topPic.current.style['clip-path'] = `circle(${customCircleSize}px at ${xBlockPercent}% ${yBlockPercent}%)`
         }
     }
+
     return (
         <div className={cls} >
             {/*<div className={classes.textBlock}>*/}
@@ -131,11 +132,11 @@ export const S_Hero = ({className, data}) => {
             {/*</div>*/}
 
 
-            <div className={classes.titleHelper}>{data.data[0].logo_title}</div>
+            <div className={classes.titleHelper}>{data.logo_title}</div>
             <div className={classes.mainTitle} />
-            <div className={classes.listName} dangerouslySetInnerHTML={{ __html: data.data[0].titile_description}}/>
+            <div className={classes.listName} dangerouslySetInnerHTML={{ __html: data.titile_description}}/>
             <ul className={classes.listInfo}>
-                {data.data[0].list_description.map((el, i) => <li key={i} className={classes.item}>{el.text}</li>)}
+                {data.list_description.map((el, i) => <li key={i} className={classes.item}>{el.text}</li>)}
             </ul>
             <C_MainButton text={"Получить предложение"} onClick={() => console.log('click')} className={classes.mainButton} />
 
