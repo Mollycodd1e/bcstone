@@ -1,0 +1,14 @@
+@import '../../styles/style';
+
+.root {
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+  }
+}
