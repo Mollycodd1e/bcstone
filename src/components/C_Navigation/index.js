@@ -6,7 +6,7 @@ import { C_Nav_List } from "../C_Nav_List";
 import { useState } from "react";
 
 
-export function C_Navigation({className}) {
+export function C_Navigation({className, data}) {
     const cx = classNames(classes.root, { [className]: className });
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     return (
@@ -23,7 +23,7 @@ export function C_Navigation({className}) {
                 {[classes.showElements]: isMobileMenuOpen})}
             >
                 <C_Logo className={classes.C_Logo} />
-                <C_Nav_List className={classes.C_Nav_List} />
+                <C_Nav_List className={classes.C_Nav_List} data={data} />
                 <C_MainButton text={"Оставить заявку"} onClick={() => console.log('click')} className={classes.C_MainButton} mode={true} />
                 {/*<C_MainButton text={"Оставить заявку"} onClick={() => console.log('click')} className={classes.C_MainButton} mode={true} />*/}
             </div>

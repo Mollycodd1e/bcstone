@@ -210,12 +210,12 @@ $existTimer: 2.5s;
 
 .btmPic {
   @include pictureRules();
-  background-image: url('../../img/s_hero_bg.png');
+  //background-image: url('../../img/s_hero_bg.png');
 }
 
 .topPic {
   @include pictureRules();
-  background-image: url('../../img/s_bg_top_hero.png');
+  //background-image: url('../../img/s_bg_top_hero.png');
   clip-path: circle(0 at 50% 50%);
   transition: 3s ease-in-out;
 }
