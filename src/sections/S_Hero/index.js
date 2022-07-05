@@ -144,10 +144,18 @@ export const S_Hero = ({className, data}) => {
                 className={classes.interactiveBlock}
                 ref={interactiveBlock}
             >
-                <div className={classes.btmPic} />
+                <div
+                    className={classes.btmPic}
+                    style={{
+                        backgroundImage:  `url("${data.hero_image.front_img.src}")`
+                    }}
+                />
                 <div
                     className={classNames(classes.topPic, {[classes.topPicAnimation]:isAnimation})}
                     ref={topPic}
+                    style={{
+                        backgroundImage:  `url("${data.hero_image.back_img.src}")`
+                    }}
                 />
                 <div className={classNames(classes.hover, {[classes.animationOff]:isAnimationOff})}
                      onMouseOver={(e) => {

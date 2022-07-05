@@ -9,7 +9,7 @@ export const S_Menu = ({className, menuOnTop, data}) => {
     return (
         <div className={cls}>
             <C_Logo className={classes.C_Logo_Menu} />
-            <C_Navigation className={classes.C_Navigation} />
+            <C_Navigation className={classes.C_Navigation} data={data} />
             <C_ContactsMenu className={classes.C_ContactsMenu} data={data} />
         </div>
     )
