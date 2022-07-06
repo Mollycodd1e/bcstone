@@ -1,9 +1,45 @@
 @import '../../styles/style';
 
-@mixin card() {
+$min-width-sm: 242px;
+$min-width-md: 270px;
+
+$border-sm: 1px solid #d9d9d9;
+$border-md-lg: none;
+
+$size-sm: 15px;
+$size-md: 20px;
+
+$common-padding-sm: 11px 11px 8px 12px;
+$common-padding-md: 20px 18px 16px 26px;
+
+$border-radius-sm: 8px;
+$border-radius-md: 12px;
+
+$title-font-size-sm: 14px;
+$title-line-height-sm: 14px;
+$content-font-size-sm: 12px;
+$content-line-height-sm: 13px;
+$decor-padding-sm: 12px 9px 0 12px;
+
+@mixin card(
+  $min-width,
+  $border,
+  $border-radius,
+  $common-padding,
+  $size,
+  $title-font-size,
+  $title-line-height,
+  $content-font-size,
+  $content-line-height,
+  $decor-padding,
+) {
+
   .root {
-    min-width: 242px;
-    border: 1px solid #d9d9d9;
+    min-width: $min-width;
+    border: $border;
+    border-radius: $border-radius;
+    padding: $common-padding;
+
   }
 
   .wrap {
@@ -11,26 +47,34 @@
   }
 
   .decor {
-    width: 15px;
-    height: 15px;
+    width: $size;
+    height: $size;
+    padding: $decor-padding;
   }
 
   .title {
-
+    font-size: $title-font-size;
+    line-height: $title-line-height;
   }
 
   .content {
-
+    font-size: $content-font-size;
+    line-height: $content-line-height;
   }
 
   .link {
-
+    font-size: $content-font-size;
+    line-height: $content-line-height;
   }
-
 }
+
+
+
+
 
 .root {
   display: flex;
+  background-color: #ffffff;
 }
 
 .wrap {
@@ -39,16 +83,20 @@
 }
 
 .decor {
-
+  border-radius: 50%;
+  opacity: 0.82;
 }
 
 .title {
+  font-weight: 800;
 }
 
 .content {
 }
 
 .link {
+  text-decoration: underline;
+  color: rgba(43, 44, 44, 0.55);
 }
 
 
