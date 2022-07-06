@@ -2,6 +2,7 @@
 
 $width-sm: 242px;
 $width-md: 270px;
+$width-lg: 398px;
 
 $height-sm: 95px;
 $height-md: 141px;
@@ -15,30 +16,38 @@ $border-md-lg: none;
 
 $size-sm: 15px;
 $size-md: 20px;
+$size-lg: 27px;
 
 $common-padding-sm: 11px 11px 8px 12px;
 $common-padding-md: 20px 18px 16px 26px;
+$common-padding-lg: 24px 36px 18px 28px;
 
 $border-radius-sm: 8px;
 $border-radius-md-lg: 12px;
 
 $title-font-size-sm: 14px;
 $title-font-size-md: 15px;
+$title-font-size-lg: 21px;
 
 $title-line-height-sm: 14px;
 $title-line-height-md: 22px;
+$title-line-height-lg: 30px;
 
 $title-margin-sm: 0 0 3px 0;
 $title-margin-md: 3px 0 10px 0;
+$title-margin-lg: 3px 0 7px 0;
 
 $content-font-size-sm: 12px;
 $content-font-size-md: 13px;
+$content-font-size-lg: 18px;
 
 $content-line-height-sm: 13px;
 $content-line-height-md: 14px;
+$content-line-height-lg: 19px;
 
-$decor-padding-sm: 12px 9px 0 12px;
-$decor-padding-md: 20px 14px 0 26px;
+$decor-margin-sm: 1px 9px 0 12px;
+$decor-margin-md: 0 14px 0 26px;
+$decor-margin-lg: 0 14px 0 26px;
 
 @mixin card(
   $width,
@@ -50,7 +59,7 @@ $decor-padding-md: 20px 14px 0 26px;
   $title-line-height,
   $content-font-size,
   $content-line-height,
-  $decor-padding,
+  $decor-margin,
   $box-shadow,
   $title-margin,
   $height,
@@ -72,7 +81,7 @@ $decor-padding-md: 20px 14px 0 26px;
   .decor {
     width: $size;
     height: $size;
-    padding: $decor-padding;
+    margin: $decor-margin;
   }
 
   .title {
