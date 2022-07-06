@@ -1,7 +1,56 @@
 @import '../../styles/style';
 
-.root {
+@mixin card() {
+  .root {
+    min-width: 242px;
+    border: 1px solid #d9d9d9;
+  }
+
+  .wrap {
+
+  }
+
+  .decor {
+    width: 15px;
+    height: 15px;
+  }
+
+  .title {
+
+  }
+
+  .content {
+
+  }
+
+  .link {
+
+  }
+
 }
+
+.root {
+  display: flex;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.decor {
+
+}
+
+.title {
+}
+
+.content {
+}
+
+.link {
+}
+
 
 @media (min-width: $width-tablet-md) {
   .root {
