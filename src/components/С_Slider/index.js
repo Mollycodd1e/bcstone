@@ -14,7 +14,7 @@ export const С_Slider = ({className, isBtnClose, items, initialSlide, onBtnClos
         <div className={cls}>
             <Swiper
                 slidesPerView={1}
-                spaceBetween={0}
+                spaceBetween={-65}
                 loop
                 pagination={{"clickable": true}}
                 className={classNames(classes.swiper, {[classes.swiperMode]: isBtnClose})}

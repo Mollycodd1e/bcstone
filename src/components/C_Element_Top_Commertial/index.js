@@ -22,7 +22,6 @@ export const C_Element_Top_Commertial = ({className, element}) => {
                     href={`${link}`}>
                     {link_text}
                 </a>
-
             </div>
        </div>
     )

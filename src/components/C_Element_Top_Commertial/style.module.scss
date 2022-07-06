@@ -31,10 +31,10 @@ $title-font-size-lg: 21px;
 
 $title-line-height-sm: 14px;
 $title-line-height-md: 22px;
-$title-line-height-lg: 30px;
+$title-line-height-lg: 23px;
 
 $title-margin-sm: 0 0 3px 0;
-$title-margin-md: 3px 0 10px 0;
+$title-margin-md: 0 0 10px 0;
 $title-margin-lg: 3px 0 7px 0;
 
 $content-font-size-sm: 12px;
@@ -45,9 +45,9 @@ $content-line-height-sm: 13px;
 $content-line-height-md: 14px;
 $content-line-height-lg: 19px;
 
-$decor-margin-sm: 1px 9px 0 12px;
-$decor-margin-md: 0 14px 0 26px;
-$decor-margin-lg: 0 14px 0 26px;
+$decor-margin-sm: -1px 9px 0 0;
+$decor-margin-md: 0 14px 0 0;
+$decor-margin-lg: 0 14px 0 0;
 
 @mixin card(
   $width,
@@ -79,7 +79,7 @@ $decor-margin-lg: 0 14px 0 26px;
   }
 
   .decor {
-    width: $size;
+    min-width: $size;
     height: $size;
     margin: $decor-margin;
   }
@@ -133,13 +133,48 @@ $decor-margin-lg: 0 14px 0 26px;
   margin-top: auto;
 }
 
+@include card(  $width: $width-sm,
+                $border: $border-sm,
+                $border-radius: $border-radius-sm,
+                $common-padding: $common-padding-sm,
+                $size: $size-sm,
+                $title-font-size: $title-font-size-sm,
+                $title-line-height: $title-line-height-sm,
+                $content-font-size: $content-font-size-sm,
+                $content-line-height: $content-line-height-sm,
+                $decor-margin: $decor-margin-sm,
+                $box-shadow: $box-shadow-sm,
+                $title-margin: $title-margin-sm,
+                $height: $height-sm);
 
 @media (min-width: $width-tablet-md) {
-  .root {
-  }
+  @include card(  $width: $width-md,
+  $border: $border-md-lg,
+  $border-radius: $border-radius-md-lg,
+  $common-padding: $common-padding-md,
+  $size: $size-md,
+  $title-font-size: $title-font-size-md,
+  $title-line-height: $title-line-height-md,
+  $content-font-size: $content-font-size-md,
+  $content-line-height: $content-line-height-md,
+  $decor-margin: $decor-margin-md,
+  $box-shadow: $box-shadow-md-lg,
+  $title-margin: $title-margin-md,
+  $height: $height-md);
 }
 
 @media (min-width: $width-desktop-lg) {
-  .root {
-  }
+  @include card(  $width: $width-lg,
+  $border: $border-md-lg,
+  $border-radius: $border-radius-md-lg,
+  $common-padding: $common-padding-lg,
+  $size: $size-lg,
+  $title-font-size: $title-font-size-lg,
+  $title-line-height: $title-line-height-lg,
+  $content-font-size: $content-font-size-lg,
+  $content-line-height: $content-line-height-lg,
+  $decor-margin: $decor-margin-lg,
+  $box-shadow: $box-shadow-md-lg,
+  $title-margin: $title-margin-lg,
+  $height: $height-lg);
 }
