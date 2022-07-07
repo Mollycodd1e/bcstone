@@ -47,15 +47,19 @@ const test_data = {
 export const S_Top_Commercial = ({className, data}) => {
     const cls = classNames(classes.root, {[className]: className });
     const [width, height] = useContext(Context);
-    const isDesktop = width >= sizes.widthDesktopLg;
+    const isTablet = width >= sizes.widthTabletMd;
+    // const isDesktop = width >= sizes.widthDesktopLg;
     const cuttedElements = test_data.list.slice(0, test_data.config.shownElements);
     const elements = cuttedElements.map((el, i) => {
         return <C_Element_Top_Commertial element={el} key={i} />
     })
 
     return (
-        <div className={cls} >
-            <С_Slider isBtnClose={true} items={elements} initialSlide={0} />
-        </div>
+        <>
+            {isTablet
+                ? <div className={cls}>{elements}</div>
+                : <С_Slider className={classes.С_Slider} isBtnClose={true} items={elements} initialSlide={0} />
+            }
+        </>
     )
 }

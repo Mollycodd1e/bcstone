@@ -1,14 +1,26 @@
 @import '../../styles/style';
 
+
 .root {
+}
+
+.С_Slider {
+  background-color: white;
+  padding: 0 0 35px 0;
 }
 
 @media (min-width: $width-tablet-md) {
   .root {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1250px;
+    margin: 0 0 45px 0;
   }
 }
 
 @media (min-width: $width-desktop-lg) {
   .root {
+    max-width: 1364px;
   }
 }
