@@ -1,14 +1,14 @@
 @import '../../styles/style';
 
 .root {
-
+  width: 1000px;
+  display: flex;
+  justify-items: center;
 }
 
 .swiper {
   min-width: 320px;
-  //max-width: 500px;
-  //todo
-  width: 100vw;
+  width: 1000px;
   height: auto;
   margin: 0;
   position: relative;
@@ -54,6 +54,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  //width: 242px !important;
 }
 //
 @media (min-width: 500px) {
