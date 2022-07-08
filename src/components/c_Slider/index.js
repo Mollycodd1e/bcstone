@@ -11,12 +11,13 @@ SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 //todo доработать
 export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible}) => {
     const cls = classNames(classes.root, { [className]: className });
+                {/*todo spaceBetween временно в 0*/}
     return (
         <div className={cls}>
             <Swiper
                 slidesPerView={3}
-                spaceBetween={-225}
-                // spaceBetween={0}
+                // spaceBetween={-225}
+                spaceBetween={0}
                 centeredSlides={true}
                 loop
                 autoplay={{

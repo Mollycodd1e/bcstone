@@ -6,7 +6,7 @@
   grid-template-rows: 43px 1fr;
   grid-template-areas:
     ". title Switcher ."
-    ". SliderRegularCard SliderRegularCard .";
+    "SliderRegularCard SliderRegularCard SliderRegularCard SliderRegularCard";
   padding-top: 3rem;
 }
 
@@ -54,6 +54,9 @@
     background-image: linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);;
     background-repeat: no-repeat;
     background-position: center;
+    grid-template-areas:
+    ". title Switcher ."
+    ". SliderRegularCard SliderRegularCard .";
   }
 
   .mapView {

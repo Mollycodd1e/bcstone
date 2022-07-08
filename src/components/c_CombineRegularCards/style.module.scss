@@ -2,17 +2,32 @@
 
 
 .root {
-
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .RegularCard {
 
 }
 
+.sliderWrapper {
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media (min-width: $width-notebook) {
   .root {
-    display: flex;
+    //display: flex;
+    overflow: unset;
     width: 100%;
+    flex-direction: row;
+    align-items: unset;
     //justify-content: space-between;
     flex-wrap: wrap;
     justify-content: center;

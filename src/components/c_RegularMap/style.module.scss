@@ -14,6 +14,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: 100vw;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .oneCard {
@@ -23,3 +27,12 @@
 }
 
 .RegularCard {}
+
+//.sliderWrapper {
+//  width: 100vw;
+//  flex-direction: column;
+//  overflow: hidden;
+//
+//  display: flex;
+//  align-items: center;
+//}

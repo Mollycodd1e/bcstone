@@ -82,7 +82,7 @@ export default function Home() {
                                     <S_Menu menuOnTop={menuOnTop} data={mainPageData[0]} />
                                     <S_Hero data={mainPageData[0]} />
                                     <S_Top_Commercial />
-                                    {/*<S_Projects />*/}
+                                    <S_Projects />
                                 </div>
                             </>
                         ) : (
