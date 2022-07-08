@@ -1,0 +1,55 @@
+@import '../../styles/style';
+
+.root {
+  width: 3.7rem;
+  height: 3.7rem;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  border-width: 0;
+  z-index: 5;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 20.8px;
+    height: 1px;
+    background-color: $color-close-btn-line-light;
+    top: 50%;
+    left: calc(50% - 10.4px);
+    z-index: 2;
+  }
+
+  &:before {
+    transform: rotate(-45deg);
+  }
+
+  &:after {
+    transform: rotate(45deg);
+  }
+}
+
+.dark {
+  background-color: $color-close-btn-dark;
+}
+
+.light {
+  width: 3.1rem;
+  height: 3.1rem;
+  background-color: $color-close-btn-light;
+
+  &:before,
+  &:after {
+    background-color: $color-close-btn-line-dark;
+  }
+}
+
+.transparent {
+  background-color: transparent;
+
+  &:before,
+  &:after {
+    background-color: $color-close-btn-line-dark;
+  }
+}

@@ -1,9 +1,9 @@
 import {cards} from "../../data/helper";
-import {RegularCard} from "../../components/RegularCard";
+import {C_RegularCard} from "../../components/c_RegularCard";
 import React from "react";
 
-export const regularCards = (className, isBtnClose, onBtnCloseClick, setIsPopUpVisible) => {
-    const rCards = cards.map((card, i) => <RegularCard
+export const CC_regularCards = (className, isBtnClose, onBtnCloseClick, setIsPopUpVisible) => {
+    const rCards = cards.map((card, i) => <C_RegularCard
             key={card.alt + i}
             logo={card.logo}
             alt={card.alt}

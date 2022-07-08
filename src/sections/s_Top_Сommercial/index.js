@@ -3,8 +3,8 @@ import classNames from "classnames";
 import React, {useContext, useRef, useState} from "react";
 import {Context} from "../../library";
 import {sizes} from "../../data/sizes";
-import {С_Slider} from "../../components/С_Slider";
-import {C_Element_Top_Commertial} from "../../components/C_Element_Top_Commertial";
+import {C_Slider} from "../../components/c_Slider";
+import {C_Element_Top_Commertial} from "../../components/c_Element_Top_Commertial";
 
 const test_data = {
     config: {
@@ -58,7 +58,7 @@ export const S_Top_Commercial = ({className, data}) => {
         <>
             {isTablet
                 ? <div className={cls}>{elements}</div>
-                : <div className={classes.sliderWrapper}><С_Slider className={classes.С_Slider} isBtnClose={true} items={elements} initialSlide={0} /></div>
+                : <div className={classes.sliderWrapper}><C_Slider className={classes.С_Slider} isBtnClose={true} items={elements} initialSlide={0} /></div>
             }
         </>
     )

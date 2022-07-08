@@ -8,7 +8,8 @@ import {Swiper, SwiperSlide} from "swiper/swiper-react.cjs.js";
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
-export const С_Slider = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible}) => {
+//todo доработать
+export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible}) => {
     const cls = classNames(classes.root, { [className]: className });
     return (
         <div className={cls}>

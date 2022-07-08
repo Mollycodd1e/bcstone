@@ -1,8 +1,8 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
-import { C_Navigation } from "../../components/C_Navigation";
-import { C_ContactsMenu } from "../../components/C_ContactsMenu";
-import { C_Logo } from "../../components/C_Logo";
+import { C_Navigation } from "../../components/c_Navigation";
+import { C_ContactsMenu } from "../../components/c_ContactsMenu";
+import { C_Logo } from "../../components/c_Logo";
 
 export const S_Menu = ({className, menuOnTop, data}) => {
     const cls = classNames(classes.root, {[classes.menuOnTop]:menuOnTop, [className]: className});

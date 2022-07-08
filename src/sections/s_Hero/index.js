@@ -1,6 +1,6 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
-import {C_MainButton} from "../../components/C_MainButton";
+import {C_MainButton} from "../../components/c_MainButton";
 import React, {useContext, useRef, useState} from "react";
 import {Context} from "../../library";
 import {sizes} from "../../data/sizes";
@@ -106,7 +106,7 @@ export const S_Hero = ({className, data}) => {
             {/*        <li className={classes.item}>Вложения от 12 млн руб.</li>*/}
             {/*        <li className={classes.item}>Девелопер STONE HEDGE</li>*/}
             {/*    </ul>*/}
-            {/*    <C_MainButton text={"Получить предложение"} onClick={() => console.log('click')} className={classes.mainButton} />*/}
+            {/*    <c_MainButton text={"Получить предложение"} onClick={() => console.log('click')} className={classes.mainButton} />*/}
             {/*</div>*/}
 
             {/*<div*/}
