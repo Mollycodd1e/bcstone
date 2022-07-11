@@ -57,6 +57,7 @@ export const C_RegularCard = ({
                     />
                 </div>
                 <С_CardInfo
+                    className={classes.С_CardInfo}
                     title={title}
                     list={list}
                 />

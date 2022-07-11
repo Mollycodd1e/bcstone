@@ -44,6 +44,10 @@
   z-index: 15;
 }
 
+.С_CardInfo {
+  align-self: flex-start;
+}
+
 @media (min-width: $width-notebook) {
   .root {
     margin-right: 48px;
