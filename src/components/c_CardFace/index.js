@@ -11,16 +11,16 @@ export const С_CardFace = ({className, logo, alt, img, img2x, imgMob, img2xMob,
     const isDesktop = width >= sizes.widthNotebook;
     return (
         <div className={cls}>
-            <div className={classes.logo} dangerouslySetInnerHTML={{ __html: logo}} />
+            {/*<div className={classes.logo} dangerouslySetInnerHTML={{ __html: logo}} />*/}
             <Image
                 className={classes.pic}
                 alt={alt}
                 src={isDesktop ? img2x : img2xMob}
                 layout="fixed"
-                width={isDesktop ? 253 : 274}
-                height={isDesktop ? 207 : 151}
+                width={isDesktop ? 253 : 224}
+                height={isDesktop ? 207 : 130}
             />
-            <div className={classes.extraInfo} dangerouslySetInnerHTML={{ __html: extraInfo}} />
+            {/*<div className={classes.extraInfo} dangerouslySetInnerHTML={{ __html: extraInfo}} />*/}
         </div>
     )
 }

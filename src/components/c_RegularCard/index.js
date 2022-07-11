@@ -36,27 +36,29 @@ export const C_RegularCard = ({
                 : null
             }
             <div className={classes.wrapper}>
-                <С_CardFace
-                    logo={logo}
-                    alt={alt}
-                    img={img}
-                    img2x={img2x}
-                    imgMob={imgMob}
-                    img2xMob={img2xMob}
-                    extraInfo={extraInfo}
-                />
+                <div className={classes.faceWrap}>
+                    <С_CardFace
+                        logo={logo}
+                        alt={alt}
+                        img={img}
+                        img2x={img2x}
+                        imgMob={imgMob}
+                        img2xMob={img2xMob}
+                        extraInfo={extraInfo}
+                    />
+                    <С_CardBtn
+                        bgColorFirst={bgColorFirst}
+                        bgColorSecond={bgColorSecond}
+                        textColor={textColor}
+                        isMainCardBtn={true}
+                        className={classes.CardBtn}
+                        link={link}
+                        setIsPopUpVisible={setIsPopUpVisible}
+                    />
+                </div>
                 <С_CardInfo
                     title={title}
                     list={list}
-                />
-                <С_CardBtn
-                    bgColorFirst={bgColorFirst}
-                    bgColorSecond={bgColorSecond}
-                    textColor={textColor}
-                    isMainCardBtn={true}
-                    className={classes.CardBtn}
-                    link={link}
-                    setIsPopUpVisible={setIsPopUpVisible}
                 />
             </div>
             <div

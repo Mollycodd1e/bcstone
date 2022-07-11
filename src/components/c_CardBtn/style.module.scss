@@ -8,13 +8,16 @@
   border: none;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  width: 224px;
+  padding-bottom: 4px;
+  border-radius: 8px;
 }
 
 .mainCardBtn {
-  height: 4.3rem;
-  font-size: 1.2rem;
-  line-height: 1.3rem;
+  height: 43px;
+  font-size: 12px;
+  line-height: 13px;
 }
 
 .secondaryCardBtn {

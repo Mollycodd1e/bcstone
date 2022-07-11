@@ -12,6 +12,10 @@ SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible}) => {
     const cls = classNames(classes.root, { [className]: className });
                 {/*todo spaceBetween временно в 0*/}
+    // autoplay={{
+    //     delay: 10000,
+    //         disableOnInteraction: false,
+    // }}
     return (
         <div className={cls}>
             <Swiper
@@ -20,10 +24,6 @@ export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnClose
                 spaceBetween={0}
                 centeredSlides={true}
                 loop
-                autoplay={{
-                    delay: 10000,
-                    disableOnInteraction: false,
-                }}
                 pagination={{"clickable": true}}
                 className={classNames(classes.swiper, {[classes.swiperMode]: isBtnClose})}
                 initialSlide={Number(initialSlide) || 0}
