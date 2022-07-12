@@ -1,5 +1,55 @@
 @import '../../styles/style';
 
+
+@mixin card($widthCard,
+$heightCard,
+$boxShadow,
+$borderRadius,
+$border,
+$paddingCard,
+$widthPic,
+$heightPic,
+$heightMainBtn,
+$heightLogo,
+$widthLogo,
+$listTemplateColumns,
+$listTemplateRows,
+$listTemplateAreas,
+) {
+  .root {
+    width: $widthCard;
+    height: $heightCard;
+    border-radius: $borderRadius;
+    box-shadow: $boxShadow;
+    border: $border;
+    padding: $paddingCard;
+
+    & div[class*='pic'] {
+      width: $widthPic;
+      height: $heightPic;
+    }
+
+    & a[class*='mainCardBtn'],
+    & a[class*='CardBtn'] {
+      width: $widthPic;
+      height: $heightMainBtn;
+    }
+
+    & div[class*='logo'] {
+      height: $heightLogo;
+      width: $widthLogo;
+      background-size: auto $heightLogo;
+    }
+
+    & ul[class*='list'] {
+      display: grid;
+      grid-template-columns: $listTemplateColumns;
+      grid-template-rows: $listTemplateRows;
+      grid-template-areas: $listTemplateAreas;
+    }
+  }
+}
+
 .root {
   background-color: $color-card-bg;
   display: flex;
@@ -10,6 +60,24 @@
   //box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   border: 1px solid #d9d9d9;
   padding: 9px 0 0 0;
+
+  //& div[class*='pic'] {
+  //  width: 100px;
+  //  height: 100px;
+  //}
+
+  //& a[class*='mainCardBtn'],
+  //& a[class*='CardBtn'] {
+  //  width: 100px;
+  //  height: 5px;
+  //}
+
+  //& ul[class*='list'] {
+  //  display: grid;
+  //  grid-template-columns: 1fr;
+  //  grid-template-rows: repeat(4, auto);
+  //  grid-template-areas: "cardInfoEl1" "cardInfoEl2" "cardInfoEl3" "cardInfoEl4";
+  //}
 }
 
 .wrapper {
@@ -49,6 +117,7 @@ $pos: -12px;
 .С_CardInfo {
   align-self: flex-start;
 }
+
 //
 //@media (min-width: $width-notebook) {
 //  .root {

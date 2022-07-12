@@ -54,24 +54,32 @@
   }
 
   &:nth-child(1) {
+    grid-area: cardInfoEl1;
+
     &:before {
       @include pseudo;
       background-image: url("../../img/s_metro_icon.svg");
     }
   }
   &:nth-child(2) {
+    grid-area: cardInfoEl2;
+
     &:before {
       @include pseudo;
       background-image: url("../../img/s_clock_icon.svg");
     }
   }
   &:nth-child(3) {
+    grid-area: cardInfoEl3;
+
     &:before {
       @include pseudo;
       background-image: url("../../img/s_calendar_icon.svg");
     }
   }
   &:nth-child(4) {
+    grid-area: cardInfoEl4;
+
     &:before {
       @include pseudo;
       background-image: url("../../img/s_m2_icon.svg");
