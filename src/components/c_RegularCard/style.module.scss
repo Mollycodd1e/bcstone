@@ -34,12 +34,12 @@ $heightPic_tab: 201px;
 $heightPic_desk: 262px;
 $heightPic_desk_map: 193px;
 
-$heightMainBtn,
-$heightLogo,
-$widthLogo,
-$listTemplateColumns,
-$listTemplateRows,
-$listTemplateAreas ;
+$heightMainBtn: 0 ;
+$heightLogo: 0 ;
+$widthLogo: 0 ;
+$listTemplateColumns: 0 ;
+$listTemplateRows: 0 ;
+$listTemplateAreas: 0 ;
 
 @mixin card($widthCard,
 $heightCard,
@@ -164,21 +164,21 @@ $pos: -12px;
   align-self: flex-start;
 }
 
-@include card($widthCard,
-$heightCard,
-$boxShadow,
-$borderRadius,
-$border,
-$paddingCard,
-$widthPic,
-$heightPic,
-$heightMainBtn,
-$heightLogo,
-$widthLogo,
-$listTemplateColumns,
-$listTemplateRows,
-$listTemplateAreas,
-)
+//@include card($widthCard,
+//$heightCard,
+//$boxShadow,
+//$borderRadius,
+//$border,
+//$paddingCard,
+//$widthPic,
+//$heightPic,
+//$heightMainBtn,
+//$heightLogo,
+//$widthLogo,
+//$listTemplateColumns,
+//$listTemplateRows,
+//$listTemplateAreas,
+//);
 
 @media (min-width: $width-desktop-lg) {
   .С_CardFace {
