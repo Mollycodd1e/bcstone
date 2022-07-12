@@ -38,6 +38,7 @@ export const C_RegularCard = ({
             <div className={classes.wrapper}>
                 <div className={classes.faceWrap}>
                     <С_CardFace
+                        className={classes.С_CardFace}
                         logo={logo}
                         alt={alt}
                         img={img}

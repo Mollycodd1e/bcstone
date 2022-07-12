@@ -99,10 +99,16 @@ $listTemplateAreas,
   display: none;
 }
 
+.С_CardFace {
+
+}
+
+$faceBtm: -22px;
+
 .CardBtn {
   //width: 100%;
   position: absolute;
-  bottom: -22px;
+  bottom: $faceBtm;
 }
 
 $pos: -12px;
@@ -116,6 +122,23 @@ $pos: -12px;
 
 .С_CardInfo {
   align-self: flex-start;
+}
+
+@media (min-width: $width-desktop-lg) {
+  .С_CardFace {
+    position: relative;
+    bottom: calc(#{$faceBtm} + 10px);
+    transition: bottom .5s ease-out;
+  }
+
+  .faceWrap {
+    &:hover {
+      & .С_CardFace {
+        bottom: calc(#{$faceBtm} + 40px);
+      }
+    }
+  }
+
 }
 
 //

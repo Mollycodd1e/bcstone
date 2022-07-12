@@ -163,7 +163,7 @@ export const cards = [
         img2x: img2x_stoneKur,
         imgMob: imgMob_stoneKur,
         img2xMob: img2xMob_stoneKur,
-        extraInfo: 'Скоро в продаже',
+        extraInfo: 'Tower A',
         info: {
             title: entireBuilding,
             list: [

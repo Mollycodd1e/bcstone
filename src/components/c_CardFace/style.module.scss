@@ -38,12 +38,14 @@
 
 .extraInfo {
   position: absolute;
-  bottom: .9rem;
-  left: 1.7rem;
-  font-weight: bold;
-  font-size: 1.4rem;
-  line-height: 1.5rem;
-  color: $color-more-info-text;
+  top: 8px;
+  left: 16px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 9px;
+  line-height: 9px;
+  border-radius: 13px;
+  color: #ffffff;
+  padding: 5px 11px 3px;
   z-index: 3;
 }
 
