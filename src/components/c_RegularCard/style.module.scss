@@ -1,5 +1,45 @@
 @import '../../styles/style';
 
+$widthCard_mob: 242px;
+$widthCard_tab: 352px;
+$widthCard_desk: 439px;
+$widthCard_desk_map: 348px;
+
+$heightCard_mob: 322px;
+$heightCard_tab: 339px;
+$heightCard_desk: 423px;
+$heightCard_desk_map: 405px;
+
+$boxShadow: none;
+$boxShadow_map: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+$borderRadius_mob: 8px;
+$borderRadius_tab: 15px;
+$borderRadius_desk: 11px;
+
+$border: none;
+$border_mob: 1px solid #d9d9d9;
+
+$paddingCard_mob: 9px 0 0 0;
+$paddingCard_tab_desk: 0;
+//$paddingCard_desk: 0;
+
+$widthPic_mob: 224px;
+$widthPic_tab: 352px;
+$widthPic_desk: 439px;
+$widthPic_desk_map: 324px;
+
+$heightPic_mob: 130px;
+$heightPic_tab: 201px;
+$heightPic_desk: 262px;
+$heightPic_desk_map: 193px;
+
+$heightMainBtn,
+$heightLogo,
+$widthLogo,
+$listTemplateColumns,
+$listTemplateRows,
+$listTemplateAreas ;
 
 @mixin card($widthCard,
 $heightCard,
@@ -123,6 +163,22 @@ $pos: -12px;
 .С_CardInfo {
   align-self: flex-start;
 }
+
+@include card($widthCard,
+$heightCard,
+$boxShadow,
+$borderRadius,
+$border,
+$paddingCard,
+$widthPic,
+$heightPic,
+$heightMainBtn,
+$heightLogo,
+$widthLogo,
+$listTemplateColumns,
+$listTemplateRows,
+$listTemplateAreas,
+)
 
 @media (min-width: $width-desktop-lg) {
   .С_CardFace {
