@@ -1,5 +1,7 @@
 @import '../../styles/style';
 
+$width: 14px;
+
 .root {
   width: 3.7rem;
   height: 3.7rem;
@@ -13,11 +15,11 @@
   &:after {
     content: '';
     position: absolute;
-    width: 20.8px;
     height: 1px;
     background-color: $color-close-btn-line-light;
     top: 50%;
-    left: calc(50% - 10.4px);
+    width: $width;
+    left: calc(50% - #{$width/2});
     z-index: 2;
   }
 
@@ -35,13 +37,13 @@
 }
 
 .light {
-  width: 3.1rem;
-  height: 3.1rem;
-  background-color: $color-close-btn-light;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(255, 255, 255);
 
   &:before,
   &:after {
-    background-color: $color-close-btn-line-dark;
+    background-color: #969696;
   }
 }
 

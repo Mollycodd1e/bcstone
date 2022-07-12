@@ -30,7 +30,7 @@ export const C_RegularCard = ({
             { isBtnClose ?
                 <С_CloseBtn
                     className={classes.CloseBtn}
-                    mode={'dark'}
+                    mode={'light'}
                     onClick={onBtnCloseClick}
                 />
                 : null
@@ -62,12 +62,12 @@ export const C_RegularCard = ({
                     list={list}
                 />
             </div>
-            <div
-                className={classes.decor}
-                style={{
-                    backgroundColor: bgColorFirst,
-                }}
-            />
+            {/*<div*/}
+            {/*    className={classes.decor}*/}
+            {/*    style={{*/}
+            {/*        backgroundColor: bgColorFirst,*/}
+            {/*    }}*/}
+            {/*/>*/}
         </div>
     )
 }
