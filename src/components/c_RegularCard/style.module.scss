@@ -1,60 +1,68 @@
 @import '../../styles/style';
 
-$widthCard_mob: 242px;
+//$widthCard_mob: 242px;
 $widthCard_tab: 352px;
 $widthCard_desk: 439px;
 $widthCard_desk_map: 348px;
 
-$heightCard_mob: 322px;
+//$heightCard_mob: 322px;
 $heightCard_tab: 339px;
 $heightCard_desk: 423px;
 $heightCard_desk_map: 405px;
 
-$boxShadow: none;
+//$boxShadow: none;
 $boxShadow_map: 0 3px 6px rgba(0, 0, 0, 0.16);
 
-$borderRadius_mob: 8px;
+//$borderRadius_mob: 8px;
 $borderRadius_tab: 15px;
 $borderRadius_desk: 11px;
 
-$border: none;
+//$border: none;
 $border_mob: 1px solid #d9d9d9;
 
-$paddingCard_mob: 9px 0 0 0;
+//$paddingCard_mob: 9px 0 0 0;
 $paddingCard_tab_desk: 0;
-//$paddingCard_desk: 0;
 
-$widthPic_mob: 224px;
+//$widthPic_mob: 224px;
 $widthPic_tab: 352px;
 $widthPic_desk: 439px;
 $widthPic_desk_map: 324px;
 
-$heightPic_mob: 130px;
+//$heightPic_mob: 130px;
 $heightPic_tab: 201px;
 $heightPic_desk: 262px;
 $heightPic_desk_map: 193px;
 
-$heightLogo_mob: 16px;
+//$heightLogo_mob: 16px;
 $heightLogo_tab: 22px;
 $heightLogo_desk: 24px;
 $heightLogo_desk_map: 22px;
 
-$listTemplateColumns: 0 ;
-$listTemplateRows: 0 ;
-$listTemplateAreas: 0 ;
+//$listTemplateColumns_mob: 1fr;
+$listTemplateColumns_tab_desk: 1fr 1fr;
 
-@mixin card($widthCard,
-$heightCard,
-$boxShadow,
-$borderRadius,
-$border,
-$paddingCard,
-$widthPic,
-$heightPic,
-$heightLogo,
-$listTemplateColumns,
-$listTemplateRows,
-$listTemplateAreas,
+//$listTemplateColumnsGap: none;
+$listTemplateColumnsGap_tab_desk: 8px;
+
+//$listTemplateRows_mob: repeat(4, auto);
+$listTemplateRows_tab_desk: repeat(3, auto);
+
+//$listTemplateAreas: "cardInfoEl1" "cardInfoEl2" "cardInfoEl3" "cardInfoEl4";
+$listTemplateAreas_threeRows: "cardInfoEl1 cardInfoEl2" "cardInfoEl3 cardInfoEl3" "cardInfoEl4 cardInfoEl4";
+
+@mixin card($widthCard: 242px,
+$heightCard: 322px,
+$boxShadow: none,
+$borderRadius: 8px,
+$border: none,
+$paddingCard: 9px 0 0 0,
+$widthPic: 224px,
+$heightPic: 130px,
+$heightLogo: 16px,
+$listTemplateColumns: 1fr,
+$listTemplateColumnsGap: none,
+$listTemplateRows: repeat(4, auto),
+$listTemplateAreas: "cardInfoEl1" "cardInfoEl2" "cardInfoEl3" "cardInfoEl4",
 ) {
   .root {
     width: $widthCard;
@@ -76,7 +84,6 @@ $listTemplateAreas,
 
     & div[class*='logo'] {
       height: $heightLogo;
-      width: $widthLogo;
       background-size: auto $heightLogo;
     }
 
@@ -85,38 +92,75 @@ $listTemplateAreas,
       grid-template-columns: $listTemplateColumns;
       grid-template-rows: $listTemplateRows;
       grid-template-areas: $listTemplateAreas;
+      grid-column-gap: $listTemplateColumnsGap;
     }
   }
 }
+
+@mixin mob_card {
+  @include card($border: $border_mob);
+}
+
+@mixin tab_card {
+  @include card($widthCard: $widthCard_tab,
+    $heightCard: $heightCard_tab,
+    $borderRadius: $borderRadius_tab,
+    $paddingCard: $paddingCard_tab_desk,
+    $widthPic: $widthPic_tab,
+    $heightPic: $heightPic_tab,
+    $heightLogo: $heightLogo_tab,
+    $listTemplateColumns: $listTemplateColumns_tab,
+    $listTemplateColumnsGap: $listTemplateColumnsGap_tab,
+    $listTemplateRows: $listTemplateRows_tab,
+    $listTemplateAreas: $listTemplateAreas_threeRows,
+  );
+}
+
+@mixin mob_tab_map_card {
+  @include card($boxShadow: $boxShadow_map);
+}
+
+@mixin desk_card {
+  @include card($widthCard: $widthCard_desk,
+  $heightCard: $heightCard_desk,
+  $borderRadius: $borderRadius_desk,
+  $paddingCard: $paddingCard_tab_desk,
+  $widthPic: $widthPic_desk,
+  $heightPic: $heightPic_desk,
+  $heightLogo: $heightLogo_desk,
+  $listTemplateColumns: $listTemplateColumns_tab_desk,
+  $listTemplateColumnsGap: $listTemplateColumnsGap_tab_desk,
+  $listTemplateRows: $listTemplateRows_tab_desk,
+  $listTemplateAreas: $listTemplateAreas_threeRows,
+  );
+}
+
+@mixin desk_map_card {
+  @include card($widthCard: $widthCard_desk_map,
+  $heightCard: $heightCard_desk_map,
+  $borderRadius: $borderRadius_desk,
+  $paddingCard: $paddingCard_tab_desk,
+  $widthPic: $widthPic_desk_map,
+  $heightPic: $heightPic_desk_map,
+  $heightLogo: $heightLogo_desk_map,
+  $listTemplateColumns: $listTemplateColumns_tab_desk,
+  $listTemplateColumnsGap: $listTemplateColumnsGap_tab_desk,
+  $listTemplateRows: $listTemplateRows_tab_desk,
+  $listTemplateAreas: $listTemplateAreas_threeRows,
+  );
+}
+
 
 .root {
   background-color: $color-card-bg;
   display: flex;
   position: relative;
-  width: 242px;
-  height: 322px;
-  border-radius: 8px;
-  //box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  border: 1px solid #d9d9d9;
-  padding: 9px 0 0 0;
-
-  //& div[class*='pic'] {
-  //  width: 100px;
-  //  height: 100px;
-  //}
-
-  //& a[class*='mainCardBtn'],
-  //& a[class*='CardBtn'] {
-  //  width: 100px;
-  //  height: 5px;
-  //}
-
-  //& ul[class*='list'] {
-  //  display: grid;
-  //  grid-template-columns: 1fr;
-  //  grid-template-rows: repeat(4, auto);
-  //  grid-template-areas: "cardInfoEl1" "cardInfoEl2" "cardInfoEl3" "cardInfoEl4";
-  //}
+  //width: 242px;
+  //height: 322px;
+  //border-radius: 8px;
+  ////box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  //border: 1px solid #d9d9d9;
+  //padding: 9px 0 0 0;
 }
 
 .wrapper {
@@ -164,19 +208,7 @@ $pos: -12px;
   align-self: flex-start;
 }
 
-//@include card($widthCard,
-//$heightCard,
-//$boxShadow,
-//$borderRadius,
-//$border,
-//$paddingCard,
-//$widthPic,
-//$heightPic,
-//$heightLogo,
-//$listTemplateColumns,
-//$listTemplateRows,
-//$listTemplateAreas,
-//);
+@include mob_card;
 
 @media (min-width: $width-desktop-lg) {
   .С_CardFace {
