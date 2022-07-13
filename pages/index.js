@@ -3,9 +3,11 @@ import {useEffect, useRef, useState} from "react";
 
 import {useWindowSize, Context} from "../src/library";
 import Script from 'next/script'
-import {S_Menu} from "../src/sections/S_Menu";
-import {S_Hero} from "../src/sections/S_Hero";
+import {S_Menu} from "../src/sections/s_Menu";
+import {S_Hero} from "../src/sections/s_Hero";
 import axios from "axios";
+import {S_Top_Commercial} from "../src/sections/s_Top_Сommercial";
+import {S_Projects} from "../src/sections/s_Projects";
 
 export default function Home() {
     const [width, height] = useWindowSize();
@@ -79,7 +81,9 @@ export default function Home() {
                                 <div className={"common_top_bg"}  ref={topMenuEl}>
                                     <S_Menu menuOnTop={menuOnTop} data={mainPageData[0]} />
                                     <S_Hero data={mainPageData[0]} />
+                                    <S_Top_Commercial />
                                 </div>
+                                <S_Projects />
                             </>
                         ) : (
                             <div className="lds-grid-wrapper">

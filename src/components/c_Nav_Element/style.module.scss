@@ -1,0 +1,79 @@
+@import '../../styles/style';
+
+.root {
+  margin: 0;
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin: 0 0 14px;
+  }
+}
+
+.firstLvlMenuName {
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-dark-primary;
+  transition: color $menuTransition;
+
+  &:hover {
+    color: $color-gray-twelve !important;
+  }
+}
+
+.chevronWrapper {
+  display: flex;
+  align-items: center;
+
+  & .firstLvlMenuName {
+    color: $color-gray-twelve !important;
+  }
+}
+
+.chevron {
+  margin-left: 10px;
+  display: inline-block;
+  width: 13px;
+  height: 7.5px;
+  background-image: url("../../img/s_chevron.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 13px 7px;
+  transition: transform $menuTransition;
+}
+
+.chevronActive {
+  background-image: url("../../img/s_chevron_active.svg");
+  transform: scaleY(-1);
+}
+
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    &:not(:last-child) {
+      margin: 0 0 21px;
+    }
+  }
+
+  .firstLvlMenuName {
+    font-size: 21px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    margin: 0 35px 0 0 !important;
+    padding: 0;
+    position: relative;
+  }
+
+  .firstLvlMenuName {
+    font-size: 19px;
+    line-height: 21px;
+  }
+
+}

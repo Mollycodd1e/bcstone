@@ -1,0 +1,180 @@
+@import '../../styles/style';
+
+$width-sm: 242px;
+$width-md: 270px;
+$width-lg: 398px;
+
+$height-sm: 95px;
+$height-md: 141px;
+$height-lg: 164px;
+
+$box-shadow-sm: none;
+$box-shadow-md-lg: 0 3px 5px rgba(0, 0, 0, 0.07);
+
+$border-sm: 1px solid #d9d9d9;
+$border-md-lg: none;
+
+$size-sm: 15px;
+$size-md: 20px;
+$size-lg: 27px;
+
+$common-padding-sm: 11px 11px 8px 12px;
+$common-padding-md: 20px 18px 16px 26px;
+$common-padding-lg: 24px 36px 18px 28px;
+
+$border-radius-sm: 8px;
+$border-radius-md-lg: 12px;
+
+$title-font-size-sm: 14px;
+$title-font-size-md: 15px;
+$title-font-size-lg: 21px;
+
+$title-line-height-sm: 14px;
+$title-line-height-md: 22px;
+$title-line-height-lg: 23px;
+
+$title-margin-sm: 0 0 3px 0;
+$title-margin-md: 0 0 10px 0;
+$title-margin-lg: 3px 0 7px 0;
+
+$content-font-size-sm: 12px;
+$content-font-size-md: 13px;
+$content-font-size-lg: 18px;
+
+$content-line-height-sm: 13px;
+$content-line-height-md: 14px;
+$content-line-height-lg: 19px;
+
+$decor-margin-sm: -1px 9px 0 0;
+$decor-margin-md: 0 14px 0 0;
+$decor-margin-lg: 0 14px 0 0;
+
+@mixin card(
+  $width,
+  $border,
+  $border-radius,
+  $common-padding,
+  $size,
+  $title-font-size,
+  $title-line-height,
+  $content-font-size,
+  $content-line-height,
+  $decor-margin,
+  $box-shadow,
+  $title-margin,
+  $height,
+) {
+
+  .root {
+    width: $width;
+    height: $height;
+    border: $border;
+    border-radius: $border-radius;
+    padding: $common-padding;
+    box-shadow: $box-shadow;
+  }
+
+  .wrap {
+
+  }
+
+  .decor {
+    min-width: $size;
+    height: $size;
+    margin: $decor-margin;
+  }
+
+  .title {
+    font-size: $title-font-size;
+    line-height: $title-line-height;
+    margin: $title-margin;
+  }
+
+  .content {
+    font-size: $content-font-size;
+    line-height: $content-line-height;
+  }
+
+  .link {
+    font-size: $content-font-size;
+    line-height: $content-line-height;
+  }
+}
+
+
+
+
+
+.root {
+  display: flex;
+  background-color: #ffffff;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.decor {
+  border-radius: 50%;
+  opacity: 0.82;
+}
+
+.title {
+  font-weight: 800;
+}
+
+.content {
+}
+
+.link {
+  text-decoration: underline;
+  color: rgba(43, 44, 44, 0.55);
+  margin-top: auto;
+}
+
+@include card(  $width: $width-sm,
+                $border: $border-sm,
+                $border-radius: $border-radius-sm,
+                $common-padding: $common-padding-sm,
+                $size: $size-sm,
+                $title-font-size: $title-font-size-sm,
+                $title-line-height: $title-line-height-sm,
+                $content-font-size: $content-font-size-sm,
+                $content-line-height: $content-line-height-sm,
+                $decor-margin: $decor-margin-sm,
+                $box-shadow: $box-shadow-sm,
+                $title-margin: $title-margin-sm,
+                $height: $height-sm);
+
+@media (min-width: $width-tablet-md) {
+  @include card(  $width: $width-md,
+  $border: $border-md-lg,
+  $border-radius: $border-radius-md-lg,
+  $common-padding: $common-padding-md,
+  $size: $size-md,
+  $title-font-size: $title-font-size-md,
+  $title-line-height: $title-line-height-md,
+  $content-font-size: $content-font-size-md,
+  $content-line-height: $content-line-height-md,
+  $decor-margin: $decor-margin-md,
+  $box-shadow: $box-shadow-md-lg,
+  $title-margin: $title-margin-md,
+  $height: $height-md);
+}
+
+@media (min-width: $width-desktop-lg) {
+  @include card(  $width: $width-lg,
+  $border: $border-md-lg,
+  $border-radius: $border-radius-md-lg,
+  $common-padding: $common-padding-lg,
+  $size: $size-lg,
+  $title-font-size: $title-font-size-lg,
+  $title-line-height: $title-line-height-lg,
+  $content-font-size: $content-font-size-lg,
+  $content-line-height: $content-line-height-lg,
+  $decor-margin: $decor-margin-lg,
+  $box-shadow: $box-shadow-md-lg,
+  $title-margin: $title-margin-lg,
+  $height: $height-lg);
+}
