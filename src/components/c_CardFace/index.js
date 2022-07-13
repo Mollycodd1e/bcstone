@@ -8,7 +8,7 @@ import {useContext} from "react";
 export const С_CardFace = ({className, logo, alt, img, img2x, imgMob, img2xMob, extraInfo}) => {
     const cls = classNames(classes.root, {[className]: className });
     const [width, height] = useContext(Context);
-    const isDesktop = width >= sizes.widthNotebook;
+    const isDesktop = width >= sizes.widthTabletMd;
 
     const exmplPic ='https://stone-len.ru/_nuxt/img/slide1.ddcd6db.jpg';
 

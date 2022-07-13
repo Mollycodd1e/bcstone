@@ -65,11 +65,15 @@ $pos: -12px;
     & div[class*='pic'] {
       width: $widthPic;
       height: $heightPic;
+      background-size: $widthPic $heightPic;
     }
 
     & a[class*='mainCardBtn'],
-    & a[class*='CardBtn'] {
+    & a[class*='CardBtn'],
+    & button[class*='mainCardBtn'],
+    & button[class*='CardBtn'] {
       width: $widthPic;
+      border-radius: $borderRadius;
     }
 
     & div[class*='logo'] {

@@ -16,7 +16,7 @@ export const С_CardBtn = ({className, bgColorFirst, bgColorSecond, textColor, i
                 link === "" ? <button
                     className={cls}
                     style={{
-                        backgroundColor: !isMainCardBtn && width < sizes.widthNotebook ? bgColorSecond : bgColorFirst,
+                        backgroundColor: !isMainCardBtn && width < sizes.widthTabletMd ? bgColorSecond : bgColorFirst,
                         color: textColor,
                     }}
                     onClick={() => setIsPopUpVisible(true)}
@@ -29,7 +29,7 @@ export const С_CardBtn = ({className, bgColorFirst, bgColorSecond, textColor, i
                     rel="noreferrer"
                     className={cls}
                     style={{
-                        backgroundColor: !isMainCardBtn && width < sizes.widthNotebook ? bgColorSecond : bgColorFirst,
+                        backgroundColor: !isMainCardBtn && width < sizes.widthTabletMd ? bgColorSecond : bgColorFirst,
                         color: textColor,
                     }}
                 >

@@ -2,8 +2,9 @@ import {cards} from "../../data/helper";
 import {C_RegularCard} from "../../components/c_RegularCard";
 import React from "react";
 
-export const CC_regularCards = (className, isBtnClose, onBtnCloseClick, setIsPopUpVisible) => {
+export const CC_regularCards = (className, isBtnClose, onBtnCloseClick, setIsPopUpVisible, isMapMode) => {
     const rCards = cards.map((card, i) => <C_RegularCard
+            isMapMode={isMapMode}
             key={card.alt + i}
             logo={card.logo}
             alt={card.alt}

@@ -9,12 +9,12 @@ import {C_Slider} from "../c_Slider";
 import {CC_regularCards} from "../../complexComponents/cc_regularCards";
 
 
-export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUpVisible}) => {
+export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUpVisible, isMapMode}) => {
     const cls = classNames(classes.root, { [className]: className });
     const [isCardVisible, setIsCardVisible] = useState(false);
     const close = () => setIsCardVisible(false);
 
-    const rCards = CC_regularCards(classes.RegularCard, isBtnClose, () => close(), setIsPopUpVisible);
+    const rCards = CC_regularCards(classes.RegularCard, isBtnClose, () => close(), setIsPopUpVisible, isMapMode);
     const [width, height] = useContext(Context);
 
     const [initialSlide, setInitialSlide] = useState(0);
@@ -29,14 +29,14 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
                 isCardVisible={isCardVisible}
             />
             {
-                isCardVisible && width < sizes.widthNotebook
+                isCardVisible && width < sizes.widthTabletMd
                 ?
                     <div className={classes.wrapperSlider}>
                         <C_Slider isBtnClose={isBtnClose} items={rCards} initialSlide={initialSlide} setIsPopUpVisible={setIsPopUpVisible} />
                     </div>
-                : isCardVisible && width >= sizes.widthNotebook ?
+                : isCardVisible && width >= sizes.widthTabletMd ?
                     <div className={classes.oneCard}>
-                        {CC_regularCards(classes.RegularCard, isBtnClose, () => close(), setIsPopUpVisible)[initialSlide]}
+                        {CC_regularCards(classes.RegularCard, isBtnClose, () => close(), setIsPopUpVisible, isMapMode)[initialSlide]}
                     </div>
                 : null
             }

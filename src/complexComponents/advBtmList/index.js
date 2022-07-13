@@ -6,7 +6,7 @@ import {sizes} from "../../data/sizes";
 
 export const AdvBtmList = () => {
     const [width, height] = useContext(Context);
-    const isDesktop = width >= sizes.widthNotebook;
+    const isDesktop = width >= sizes.widthTabletMd;
 
     return advantagesBtm.map((el, i) => {
         const {img, imgDesk, signature, title, reason, extraText} = el;

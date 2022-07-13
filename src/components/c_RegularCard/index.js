@@ -6,6 +6,7 @@ import {С_CloseBtn} from "../c_CloseBtn";
 import {С_CardBtn} from "../c_CardBtn";
 
 export const C_RegularCard = ({
+    isMapMode,
     className,
     logo,
     alt,
@@ -24,7 +25,7 @@ export const C_RegularCard = ({
     link,
     setIsPopUpVisible,
 }) => {
-    const cls = classNames(classes.root, { [className]: className });
+    const cls = classNames(classes.root, { [className]: className, [classes.map_mod]: isMapMode });
     return (
         <div className={cls}>
             { isBtnClose ?

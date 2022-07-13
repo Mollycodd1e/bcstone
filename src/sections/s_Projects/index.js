@@ -16,8 +16,8 @@ export const S_Projects = ({className, setIsPopUpVisible}) => {
     return (
         <div className={cls}>
             <div
-                className={classNames(classes.title, { [classes.title_mod]: !isListView && width >= sizes.widthNotebook })}
-                dangerouslySetInnerHTML={{ __html: !isListView && width >= sizes.widthNotebook ? cardsTitle.textMap : cardsTitle.text}}
+                className={classNames(classes.title, { [classes.title_mod]: !isListView && width >= sizes.widthTabletMd })}
+                dangerouslySetInnerHTML={{ __html: !isListView && width >= sizes.widthTabletMd ? cardsTitle.textMap : cardsTitle.text}}
             />
             <C_Switcher
                 className={classes.Switcher}
@@ -31,12 +31,14 @@ export const S_Projects = ({className, setIsPopUpVisible}) => {
                         isBtnClose={false}
                         onBtnCloseClick={() => {}}
                         setIsPopUpVisible={setIsPopUpVisible}
+                        isMapMode={false}
                     />
                 : <C_RegularMap
                     className={classes.RegularMap}
                     isBtnClose={true}
                     onBtnCloseClick={() => {}}
                     setIsPopUpVisible={setIsPopUpVisible}
+                    isMapMode={true}
                 />
             }
         </div>
