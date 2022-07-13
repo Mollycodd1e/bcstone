@@ -34,9 +34,11 @@ $heightPic_tab: 201px;
 $heightPic_desk: 262px;
 $heightPic_desk_map: 193px;
 
-$heightMainBtn: 0 ;
-$heightLogo: 0 ;
-$widthLogo: 0 ;
+$heightLogo_mob: 16px;
+$heightLogo_tab: 22px;
+$heightLogo_desk: 24px;
+$heightLogo_desk_map: 22px;
+
 $listTemplateColumns: 0 ;
 $listTemplateRows: 0 ;
 $listTemplateAreas: 0 ;
@@ -49,9 +51,7 @@ $border,
 $paddingCard,
 $widthPic,
 $heightPic,
-$heightMainBtn,
 $heightLogo,
-$widthLogo,
 $listTemplateColumns,
 $listTemplateRows,
 $listTemplateAreas,
@@ -72,7 +72,6 @@ $listTemplateAreas,
     & a[class*='mainCardBtn'],
     & a[class*='CardBtn'] {
       width: $widthPic;
-      height: $heightMainBtn;
     }
 
     & div[class*='logo'] {
@@ -149,6 +148,7 @@ $faceBtm: -22px;
   //width: 100%;
   position: absolute;
   bottom: $faceBtm;
+  height: 100px !important;
 }
 
 $pos: -12px;
@@ -172,9 +172,7 @@ $pos: -12px;
 //$paddingCard,
 //$widthPic,
 //$heightPic,
-//$heightMainBtn,
 //$heightLogo,
-//$widthLogo,
 //$listTemplateColumns,
 //$listTemplateRows,
 //$listTemplateAreas,
