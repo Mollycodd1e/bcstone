@@ -5,8 +5,8 @@ import {cards} from "../../data/helper";
 const example = {
     logo: 'https://stone-svl.ru/_nuxt/img/logo_sav_short.63c76f8.svg',
     list: [
-        `Бизнес-центр. Класс А`,
-        `м. «Савеловская»`,
+        `Бизнес-центр`,
+        `м. «Ленинский»`,
         `От 8 до 20&nbsp;000 м&#178;`,
         `Готовность: 2025`,
     ],
