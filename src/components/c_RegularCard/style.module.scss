@@ -29,7 +29,7 @@ $heightLogo_tab: 22px;
 $heightLogo_desk: 24px;
 $heightLogo_desk_map: 22px;
 
-$listTemplateColumns_tab_desk: 1fr 1fr;
+$listTemplateColumns_tab_desk: repeat(2, auto);
 
 $listTemplateColumnsGap_tab_desk: 30px;
 
@@ -87,6 +87,10 @@ $pos: -12px;
       grid-template-rows: $listTemplateRows;
       grid-template-areas: $listTemplateAreas;
       grid-column-gap: $listTemplateColumnsGap;
+
+      & li {
+        justify-self: flex-start;
+      }
     }
 
 }

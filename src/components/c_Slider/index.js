@@ -9,7 +9,7 @@ import {Swiper, SwiperSlide} from "swiper/swiper-react.cjs.js";
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
 //todo доработать
-export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible}) => {
+export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = -225}) => {
     const cls = classNames(classes.root, { [className]: className });
                 {/*todo spaceBetween временно в 0
                 spaceBetween={180} - сделать для планшетной версии
@@ -24,7 +24,7 @@ export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnClose
             <Swiper
                 slidesPerView={3}
                 // spaceBetween={-225}
-                spaceBetween={-225}
+                spaceBetween={slidersSpaceBetween}
                 centeredSlides={true}
                 loop
                 pagination={{"clickable": true}}

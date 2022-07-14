@@ -69,3 +69,15 @@
 //    width: 500px;
 //  }
 //}
+
+@media (min-width: $width-tablet-md) {
+
+  .root {
+    width: calc(100vw - 104px);
+  }
+
+  .swiper {
+    min-width: 320px;
+    width: calc(100vw - 104px);
+  }
+}
