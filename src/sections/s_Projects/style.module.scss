@@ -2,12 +2,17 @@
 
 .root {
   display: grid;
-  grid-template-columns: 1fr 222px 98px 1fr;
-  grid-template-rows: 43px 1fr;
-  grid-template-areas:
-    ". title Switcher ."
-    "SliderRegularCard SliderRegularCard SliderRegularCard SliderRegularCard";
-  padding-top: 3rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
+  //grid-template-rows: 43px 1fr;
+  //grid-template-areas:
+  //  ". title Switcher ."
+  //  "SliderRegularCard SliderRegularCard SliderRegularCard SliderRegularCard";
+  //padding-top: 3rem;
+}
+
+.ProjectTitle {
+  grid-area: ProjectTitle;
 }
 
 .RegularMap {
@@ -46,9 +51,19 @@
   grid-area: SliderRegularCard;
 }
 
-@media (min-width: $width-notebook) {
+.C_MainButton {
+  grid-area: C_MainButton;
+}
+
+@media (min-width: $width-tablet-md) {
   .root {
-    grid-template-columns: 1fr 968px 232px 1fr;
+    border: 1px solid #707070;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    grid-template-columns: 1fr 800px 800px 1fr;
     grid-template-rows: 52px 1fr;
     //height: 30rem;
     background-image: linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);

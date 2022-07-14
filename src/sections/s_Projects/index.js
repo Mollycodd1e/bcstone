@@ -8,6 +8,7 @@ import {sizes} from "../../data/sizes";
 import {Context} from "../../library";
 import {C_RegularMap} from "../../components/c_RegularMap";
 import {C_CombineRegularCards} from "../../components/c_CombineRegularCards";
+import {C_MainButton} from "../../components/c_MainButton";
 
 export const S_Projects = ({className, setIsPopUpVisible}) => {
     const [isListView, setIsListView] = useState(true);
@@ -15,6 +16,7 @@ export const S_Projects = ({className, setIsPopUpVisible}) => {
     const cls = classNames(classes.root, { [classes.mapView]: !isListView, [className]: className });
     return (
         <div className={cls}>
+            <div className={classes.ProjectTitle}>Бизнес-центры</div>
             <div
                 className={classNames(classes.title, { [classes.title_mod]: !isListView && width >= sizes.widthTabletMd })}
                 dangerouslySetInnerHTML={{ __html: !isListView && width >= sizes.widthTabletMd ? cardsTitle.textMap : cardsTitle.text}}
@@ -41,6 +43,7 @@ export const S_Projects = ({className, setIsPopUpVisible}) => {
                     isMapMode={true}
                 />
             }
+            {/*<C_MainButton text={"Получить предложение"} onClick={() => console.log('click from project')} className={classes.C_MainButton} />*/}
         </div>
     )
 }
