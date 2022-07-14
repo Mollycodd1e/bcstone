@@ -223,8 +223,33 @@ $pos: -12px;
 
   .root {
     @include desk_card;
+
+    & a[class*='mainCardBtn'],
+    & a[class*='CardBtn'],
+    & button[class*='mainCardBtn'],
+    & button[class*='CardBtn'] {
+     padding-bottom: 12px;
+      font-size: 18px;
+      line-height: 18px;
+    }
+
     &.map_mod {
+
+      & a[class*='mainCardBtn'],
+      & a[class*='CardBtn'],
+      & button[class*='mainCardBtn'],
+      & button[class*='CardBtn'] {
+        padding-bottom: 4px;
+        font-size: 12px;
+        line-height: 13px;
+      }
+
       @include desk_map_card;
+      padding-top: 22px;
+
+      & .С_CardFace {
+        bottom: unset !important;
+      }
     }
   }
 }

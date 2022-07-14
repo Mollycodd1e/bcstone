@@ -13,7 +13,6 @@ export const C_CombineRegularCards = ({className, isBtnClose, onBtnCloseClick, s
     const [width, height] = useContext(Context);
     // const setIsPopUpVisible = useContext(Context);
     const rCards = CC_regularCards(classes.RegularCard, isBtnClose, onBtnCloseClick, setIsPopUpVisible, isMapMode);
-    //todo добавить логику перехода с мобильного на планшетный размеры
     return (
         <div className={cls}>
             {width < sizes.widthDesktopLg
