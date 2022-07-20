@@ -16,9 +16,16 @@ export const S_Projects = ({className, setIsPopUpVisible}) => {
     const cls = classNames(classes.root, { [classes.mapView]: !isListView, [className]: className });
     return (
         <div className={cls}>
-            <div className={classes.ProjectTitle}>Бизнес-центры</div>
+            <div className={classes.ProjectTitle}>
+                <span className={classes.bg_text}>Проекты</span>
+                <div className={classes.wrap_title}>
+                    <span>Бизнес </span>
+                    <span>-центры</span>
+                </div>
+
+            </div>
             <div
-                className={classNames(classes.title, { [classes.title_mod]: !isListView && width >= sizes.widthTabletMd })}
+                className={classNames(classes.sub_title, { [classes.sub_title_mod]: !isListView && width >= sizes.widthTabletMd })}
                 dangerouslySetInnerHTML={{ __html: !isListView && width >= sizes.widthTabletMd ? cardsTitle.textMap : cardsTitle.text}}
             />
             <C_Switcher

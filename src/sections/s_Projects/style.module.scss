@@ -5,45 +5,74 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, auto);
   //grid-template-rows: 43px 1fr;
-  //grid-template-areas:
+  grid-template-areas: "ProjectTitle" "sub_title" "Switcher" "SliderRegularCard" "RegularMap";
   //  ". title Switcher ."
   //  "SliderRegularCard SliderRegularCard SliderRegularCard SliderRegularCard";
   //padding-top: 3rem;
+  //align-items: center;
+  justify-items: center;
 }
 
 .ProjectTitle {
   grid-area: ProjectTitle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 0 -30px;
+
+  & span {
+    font-size: 49px;
+    line-height: 42px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .bg_text {
+    display: block;
+    margin: 0 0 -15px -15px;
+    color: #F6F6F6;
+  }
+
+  .wrap_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 0 -20px;
+
+    & span:last-child {
+      margin: 0 0 0 85px;
+    }
+  }
+
 }
 
 .RegularMap {
   grid-area: RegularMap;
-
 }
 
 .mapView {
   width: 100%;
-
-  grid-template-areas:
-    ". title Switcher ."
-    "RegularMap RegularMap RegularMap RegularMap";
+  //
+  //grid-template-areas:
+  //  ". title Switcher ."
+  //  "RegularMap RegularMap RegularMap RegularMap";
 }
 
-.title {
-  grid-area: title;
-  justify-self: flex-end;
+.sub_title {
+  //justify-self: flex-end;
   text-align: end;
-  align-self: flex-start;
+  //align-self: flex-start;
   color: $color-card-text;
   font-size: 1.2rem;
   line-height: 1.3rem;
-
+  grid-area: sub_title;
   &_mod {}
 }
 
 .Switcher {
   grid-area: Switcher;
-  justify-self: flex-start;
-  align-self: flex-start;
+  //justify-self: flex-start;
+  //align-self: flex-start;
   margin-left: 1.5rem;
 }
 
@@ -70,18 +99,18 @@
     background-repeat: no-repeat;
     background-position: center;
     grid-template-areas:
-    ". title Switcher ."
+    ". sub_title Switcher ."
     ". SliderRegularCard SliderRegularCard .";
   }
 
   .mapView {
     width: unset;
     grid-template-areas:
-    ". title Switcher ."
+    ". sub_title Switcher ."
     ". RegularMap RegularMap .";
   }
 
-  .title {
+  .sub_title {
     grid-area: title;
     justify-self: flex-end;
     text-align: end;
