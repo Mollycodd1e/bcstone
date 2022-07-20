@@ -17,9 +17,9 @@ export const S_Projects = ({className, setIsPopUpVisible}) => {
     return (
         <div className={cls}>
             <div className={classes.ProjectTitle}>
-                <span className={classes.bg_text}>Проекты</span>
+                <div className={classes.bg_text}>Проекты</div>
                 <div className={classes.wrap_title}>
-                    <span>Бизнес </span>
+                    <span>Бизнес</span>
                     <span>-центры</span>
                 </div>
 
