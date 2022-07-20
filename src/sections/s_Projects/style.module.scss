@@ -27,31 +27,31 @@
     //text-transform: uppercase;
   }
 
-  .bg_text {
+  & .bg_text {
     display: block;
     margin: 0 0 -15px -15px;
     color: #F6F6F6;
-    font-size: 49px;
-    line-height: 42px;
-    font-weight: 800;
-    text-transform: uppercase;
   }
 
-  .wrap_title {
+  & .wrap_title {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 0 0 -20px;
-    font-size: 49px;
-    line-height: 42px;
-    font-weight: 800;
-    text-transform: uppercase;
+
 
     & span:last-child {
       margin: 0 0 0 85px;
     }
   }
 
+  & .bg_text,
+  & .wrap_title {
+    font-size: 49px;
+    line-height: 42px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
 }
 
 .RegularMap {
@@ -113,54 +113,93 @@
 @media (min-width: $width-tablet-md) {
   .root {
     border: 1px solid #707070;
+    border-radius: 20px;
+    margin: 88px 66px 35px;
+  }
+
+  .ProjectTitle {
+    & .bg_text,
+    & .wrap_title {
+      font-size: 82px;
+      line-height: 82px;
+    }
+
+    & .wrap_title {
+      margin: 0 !important;
+    }
+
+    & .bg_text {
+      margin: 0 0 -39px -405px !important;
+    }
   }
 }
 
 @media (min-width: $width-desktop-lg) {
-  .root {
-    grid-template-columns: 1fr 800px 800px 1fr;
-    grid-template-rows: 52px 1fr;
-    //height: 30rem;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
-    background-repeat: no-repeat;
-    background-position: center;
-    grid-template-areas:
-    ". sub_title Switcher ."
-    ". SliderRegularCard SliderRegularCard .";
-  }
+  //.root {
+  //  grid-template-columns: 1fr 800px 800px 1fr;
+  //  grid-template-rows: 52px 1fr;
+  //  //height: 30rem;
+  //  background-image: linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+  //  background-repeat: no-repeat;
+  //  background-position: center;
+  //  grid-template-areas:
+  //  ". sub_title Switcher ."
+  //  ". SliderRegularCard SliderRegularCard .";
+  //}
+  //
+  //.mapView {
+  //  width: unset;
+  //  grid-template-areas:
+  //  ". sub_title Switcher ."
+  //  ". RegularMap RegularMap .";
+  //}
 
-  .mapView {
-    width: unset;
-    grid-template-areas:
-    ". sub_title Switcher ."
-    ". RegularMap RegularMap .";
-  }
+  //.sub_title {
+  //  grid-area: title;
+  //  justify-self: flex-end;
+  //  text-align: end;
+  //  align-self: flex-end;
+  //  margin-right: 22.5rem;
+  //  font-size: 2rem;
+  //  line-height: 2.2rem;
+  //  margin-bottom: 1.9rem;
+  //
+  //  &_mod {
+  //    margin-right: 12.5rem;
+  //  }
+  //}
+  //
+  //.Switcher {
+  //  justify-self: flex-end;
+  //
+  //  margin-right: 3.4rem;
+  //}
+  //
+  //.CombineRegularCards {
+  //  grid-area: SliderRegularCard;
+  //  justify-self: center;
+  //  width: 100%;
+  //  padding: 0 34px;
+  //}
 
-  .sub_title {
-    grid-area: title;
-    justify-self: flex-end;
-    text-align: end;
-    align-self: flex-end;
-    margin-right: 22.5rem;
-    font-size: 2rem;
-    line-height: 2.2rem;
-    margin-bottom: 1.9rem;
 
-    &_mod {
-      margin-right: 12.5rem;
+  .ProjectTitle {
+    & .bg_text,
+    & .wrap_title {
+      font-size: 133px;
+      line-height: 133px;
+    }
+
+    & .wrap_title {
+      margin: 0 !important;
+    }
+
+    & .bg_text {
+      margin: 0 0 -60px -721px !important;
     }
   }
-
-  .Switcher {
-    justify-self: flex-end;
-
-    margin-right: 3.4rem;
-  }
-
-  .CombineRegularCards {
-    grid-area: SliderRegularCard;
-    justify-self: center;
-    width: 100%;
-    padding: 0 34px;
-  }
 }
+
+//border: 1px solid #707070;
+//border-radius: 20px;
+//margin: 88px 66px 35px;
