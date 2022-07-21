@@ -1,142 +1,189 @@
 @import '../../styles/style';
 
-$hoverSize: 3rem;
-
 .root {
-  width: 6rem;
-  height: 3.2rem;
-  border-width: 0;
-  border-radius: 1.6rem;
-  background-color: $color-switch-bg;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  position: relative;
-  z-index: 1;
-}
-
-.first,
-.second {
-  width: $hoverSize;
-  height: $hoverSize;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 3;
-}
-
-.first {
-  svg {
-    g {
-      stroke: $color-switch-active-icon;
-      @include switchIconTransition;
-    }
-  }
-}
-
-.second {
-  svg {
-    g {
-      stroke: $color-switch-default-icon;
-      @include switchIconTransition;
-    }
-  }
-}
-
-.activeBg {
-  width: 2.9rem;
-  height: 3rem;
-  background: $color-switch-bg-active;
-  border-radius: 14.5px;
-  z-index: 2;
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  @include headerTransition;
-}
-
-.mapView {
-  .first {
-    svg {
-      g {
-        stroke: $color-switch-default-icon;
-      }
-    }
-  }
-
-  .second {
-    svg {
-      g {
-        stroke: $color-switch-active-icon;
-      }
-    }
-  }
-
-  .activeBg {
-    left: 50%;
-  }
- }
-
-@media (min-width: $width-tablet-md) {
-  .root {
-    width: 20rem;
-    height: 3.6rem;
-    border-radius: 1.8rem;
-
-    background-color: $color-switch-bg;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  & span {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    padding: 0 10px 15px 0;
+    font-size: 12px;
+    line-height: 12px;
+    color: #BABABA;
     position: relative;
-    z-index: 1;
+    border-bottom: 2px solid #BABABA;
   }
 
-  .first {
-    &:after {
-      content: "Список";
-    }
+  & .list {
+
   }
 
-  .second {
-    &:after {
-      content: "Карта";
-    }
-  }
+  & .map {
 
-  .first,
-  .second {
-    border-radius: 1.8rem;
-    height: 3.6rem;
-    width: 10rem;
-    position: relative;
-
-    & svg {
-      display: none;
-    }
-
-    &:after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 2;
-      font-size: 1.4rem;
-      line-height: 1.5rem;
-    }
-  }
-
-  .activeBg {
-    width: 10rem;
-    height: 3.6rem;
-    border-radius: 1.8rem;
-    top: 0;
-    left: 0;
   }
 }
+
+.listViewActive {
+  & .list {
+    color: #2B2C2D;
+    border-bottom: 3px solid #2B2C2D;
+  }
+
+  & .map {
+
+  }
+}
+
+.mapViewActive {
+  & .list {
+
+  }
+
+  & .map {
+    color: #2B2C2D;
+    border-bottom: 3px solid #2B2C2D;
+  }
+}
+
+
+
+//
+//$hoverSize: 3rem;
+//
+//.root {
+//  width: 6rem;
+//  height: 3.2rem;
+//  border-width: 0;
+//  border-radius: 1.6rem;
+//  background-color: $color-switch-bg;
+//  cursor: pointer;
+//  display: flex;
+//  align-items: center;
+//  justify-content: space-around;
+//  position: relative;
+//  z-index: 1;
+//}
+//
+//.first,
+//.second {
+//  width: $hoverSize;
+//  height: $hoverSize;
+//  background-color: transparent;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//  z-index: 3;
+//}
+//
+//.first {
+//  svg {
+//    g {
+//      stroke: $color-switch-active-icon;
+//      @include switchIconTransition;
+//    }
+//  }
+//}
+//
+//.second {
+//  svg {
+//    g {
+//      stroke: $color-switch-default-icon;
+//      @include switchIconTransition;
+//    }
+//  }
+//}
+//
+//.activeBg {
+//  width: 2.9rem;
+//  height: 3rem;
+//  background: $color-switch-bg-active;
+//  border-radius: 14.5px;
+//  z-index: 2;
+//  position: absolute;
+//  top: 1px;
+//  left: 1px;
+//  @include headerTransition;
+//}
+//
+//.mapView {
+//  .first {
+//    svg {
+//      g {
+//        stroke: $color-switch-default-icon;
+//      }
+//    }
+//  }
+//
+//  .second {
+//    svg {
+//      g {
+//        stroke: $color-switch-active-icon;
+//      }
+//    }
+//  }
+//
+//  .activeBg {
+//    left: 50%;
+//  }
+// }
+//
+//@media (min-width: $width-tablet-md) {
+//  .root {
+//    width: 20rem;
+//    height: 3.6rem;
+//    border-radius: 1.8rem;
+//
+//    background-color: $color-switch-bg;
+//    cursor: pointer;
+//    display: flex;
+//    align-items: center;
+//    justify-content: space-around;
+//    position: relative;
+//    z-index: 1;
+//  }
+//
+//  .first {
+//    &:after {
+//      content: "Список";
+//    }
+//  }
+//
+//  .second {
+//    &:after {
+//      content: "Карта";
+//    }
+//  }
+//
+//  .first,
+//  .second {
+//    border-radius: 1.8rem;
+//    height: 3.6rem;
+//    width: 10rem;
+//    position: relative;
+//
+//    & svg {
+//      display: none;
+//    }
+//
+//    &:after {
+//      position: absolute;
+//      top: 0;
+//      left: 0;
+//      width: 100%;
+//      height: 100%;
+//      display: flex;
+//      align-items: center;
+//      justify-content: center;
+//      z-index: 2;
+//      font-size: 1.4rem;
+//      line-height: 1.5rem;
+//    }
+//  }
+//
+//  .activeBg {
+//    width: 10rem;
+//    height: 3.6rem;
+//    border-radius: 1.8rem;
+//    top: 0;
+//    left: 0;
+//  }
+//}
