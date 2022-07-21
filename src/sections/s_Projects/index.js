@@ -24,10 +24,14 @@ export const S_Projects = ({className, setIsPopUpVisible}) => {
                 </div>
 
             </div>
-            <div
-                className={classNames(classes.sub_title, { [classes.sub_title_mod]: !isListView && width >= sizes.widthTabletMd })}
-                dangerouslySetInnerHTML={{ __html: !isListView && width >= sizes.widthTabletMd ? cardsTitle.textMap : cardsTitle.text}}
-            />
+            {/*<div*/}
+            {/*    className={classNames(classes.sub_title, { [classes.sub_title_mod]: !isListView && width >= sizes.widthTabletMd })}*/}
+            {/*    dangerouslySetInnerHTML={{ __html: !isListView && width >= sizes.widthTabletMd ? cardsTitle.textMap : cardsTitle.text}}*/}
+            {/*/>*/}
+            <div className={classes.sub_title}>
+                <span>Продажа и аренда</span>
+                <span>Офисы и ритейл</span>
+            </div>
             <C_Switcher
                 className={classes.Switcher}
                 isListView={isListView}

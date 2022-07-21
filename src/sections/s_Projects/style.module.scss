@@ -67,14 +67,17 @@
 }
 
 .sub_title {
-  //justify-self: flex-end;
-  text-align: end;
-  //align-self: flex-start;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 300;
   color: $color-card-text;
-  font-size: 1.2rem;
-  line-height: 1.3rem;
   grid-area: sub_title;
-  &_mod {}
+  margin: 0 0 32px;
+
+  & span {
+    display: block;
+    text-align: center;
+  }
 }
 
 .Switcher {
@@ -107,6 +110,35 @@
   .bg_text {
     margin: 0 0 -15px -218px !important;
   }
+
+
+  .sub_title {
+    & span {
+      display: inline-block;
+
+      &:first-child {
+        margin-right: 60px;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          right: -44px;
+          top: 3px;
+          width: 30px;
+          height: 12px;
+          background-image: url("../../img/s_arrow_cards_section.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 30px 12px;
+        }
+      }
+
+      &:last-child {
+        text-transform: lowercase;
+      }
+    }
+  }
 }
 
 
@@ -133,6 +165,13 @@
 
     & .bg_text {
       margin: 0 0 -39px -405px !important;
+    }
+  }
+
+  .sub_title {
+    & span {
+      font-size: 20px;
+      line-height: 20px;
     }
   }
 }
@@ -184,6 +223,28 @@
   //  width: 100%;
   //  padding: 0 34px;
   //}
+
+
+
+  .sub_title {
+    & span {
+      font-size: 31px;
+      line-height: 31px;
+
+      &:first-child {
+        margin-right: 72px;
+
+        &:after {
+          right: -57px;
+          top: 7px;
+          width: 40px;
+          height: 16px;
+          background-size: 40px 16px;
+        }
+      }
+    }
+  }
+
 
 
   .ProjectTitle {
