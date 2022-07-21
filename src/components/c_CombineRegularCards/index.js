@@ -19,7 +19,7 @@ export const C_CombineRegularCards = ({className, isBtnClose, onBtnCloseClick, s
                 ?
                     <C_Slider isBtnClose={isBtnClose} items={rCards} initialSlide={0} slidersSpaceBetween={width < sizes.widthTabletMd ? -225 : width < sizes.widthNotebook ? 280 : width < sizes.widthDesktopSm ? 100 : -150}/>
                 :
-                    <>
+                    <div className={classes.cards}>
                         {rCards.map((card, i) => {
                                 return (
                                     <React.Fragment key={i}>
@@ -28,7 +28,7 @@ export const C_CombineRegularCards = ({className, isBtnClose, onBtnCloseClick, s
                                 )
                             })
                         }
-                    </>
+                    </div>
             }
         </div>
     )
