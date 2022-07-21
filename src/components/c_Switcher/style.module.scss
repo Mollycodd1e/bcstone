@@ -68,6 +68,46 @@
   }
 }
 
+@media (min-width: $width-tablet-md) {
+  .root {
+    margin-bottom: 36px;
+
+    & span {
+      font-weight: bold;
+      font-size: 17px;
+      line-height: 17px;
+      width: 155px;
+      padding: 0 27px 15px 0;
+    }
+
+    & .list {
+      &:before {
+        background-image: url("../../img/s_list_icon.png");
+        width: 16px;
+        height: 12px;
+        background-size: 16px 12px;
+        top: 1px;
+        left: 15px;
+      }
+    }
+
+    & .map {
+      &:before {
+        top: -1px;
+        left: 20px;
+      }
+    }
+  }
+
+  .listViewActive {
+    & .list {
+      &:before {
+        background-image: url("../../img/s_list_icon_active.png");
+      }
+    }
+  }
+}
+
 
 
 //
