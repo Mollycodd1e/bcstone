@@ -1,6 +1,8 @@
 @import '../../styles/style';
 
 .root {
+  margin-bottom: 18px;
+
   & span {
     display: inline-block;
     width: 100px;
@@ -11,14 +13,36 @@
     color: #BABABA;
     position: relative;
     border-bottom: 2px solid #BABABA;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
   & .list {
-
+    &:before {
+      background-image: url("../../img/s_list_icon_mob.png");
+      width: 19px;
+      height: 10px;
+      background-size: 19px 10px;
+      top: 0;
+      left: 10px;
+    }
   }
 
   & .map {
-
+    &:before {
+      background-image: url("../../img/s_map_icon.png");
+      width: 12px;
+      height: 16px;
+      background-size: 12px 16px;
+      top: -2px;
+      left: 12px;
+    }
   }
 }
 
@@ -26,21 +50,21 @@
   & .list {
     color: #2B2C2D;
     border-bottom: 3px solid #2B2C2D;
-  }
 
-  & .map {
-
+    &:before {
+      background-image: url("../../img/s_list_icon_mob_active.png");
+    }
   }
 }
 
 .mapViewActive {
-  & .list {
-
-  }
-
   & .map {
     color: #2B2C2D;
     border-bottom: 3px solid #2B2C2D;
+
+    &:before {
+      background-image: url("../../img/s_map_icon_active.png");
+    }
   }
 }
 
