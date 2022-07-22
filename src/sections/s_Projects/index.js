@@ -24,10 +24,6 @@ export const S_Projects = ({className, setIsPopUpVisible}) => {
                 </div>
 
             </div>
-            {/*<div*/}
-            {/*    className={classNames(classes.sub_title, { [classes.sub_title_mod]: !isListView && width >= sizes.widthTabletMd })}*/}
-            {/*    dangerouslySetInnerHTML={{ __html: !isListView && width >= sizes.widthTabletMd ? cardsTitle.textMap : cardsTitle.text}}*/}
-            {/*/>*/}
             <div className={classes.sub_title}>
                 <span>Продажа и аренда</span>
                 <span>Офисы и ритейл</span>
@@ -54,7 +50,7 @@ export const S_Projects = ({className, setIsPopUpVisible}) => {
                     isMapMode={true}
                 />
             }
-            {/*<C_MainButton text={"Получить предложение"} onClick={() => console.log('click from project')} className={classes.C_MainButton} />*/}
+            <C_MainButton text={"Получить предложение"} onClick={() => console.log('click from project')} className={classes.C_MainButton} />
         </div>
     )
 }

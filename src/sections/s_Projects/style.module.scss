@@ -5,12 +5,13 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, auto);
   //grid-template-rows: 43px 1fr;
-  grid-template-areas: "ProjectTitle" "sub_title" "Switcher" "SliderRegularCard" "RegularMap";
+  grid-template-areas: "ProjectTitle" "sub_title" "Switcher" "SliderRegularCard" "RegularMap" "C_MainButton";
   //  ". title Switcher ."
   //  "SliderRegularCard SliderRegularCard SliderRegularCard SliderRegularCard";
   //padding-top: 3rem;
   //align-items: center;
   justify-items: center;
+  padding-bottom: 45px;
 }
 
 .ProjectTitle {
@@ -57,6 +58,7 @@
 .RegularMap {
   grid-area: RegularMap;
   width: 100%;
+  margin-bottom: -18px;
 }
 
 .mapView {
@@ -90,6 +92,7 @@
 
 .CombineRegularCards {
   grid-area: SliderRegularCard;
+  margin-bottom: 23px;
 }
 
 .C_MainButton {
@@ -148,6 +151,7 @@
     border: 1px solid #707070;
     border-radius: 20px;
     margin: 88px 66px 35px;
+    padding-bottom: 40px;
   }
 
 
@@ -175,57 +179,16 @@
       line-height: 20px;
     }
   }
+
+  .mapView {
+    width: calc(100vw - 102px);
+  }
 }
 
 @media (min-width: $width-desktop-lg) {
-  //.root {
-  //  grid-template-columns: 1fr 800px 800px 1fr;
-  //  grid-template-rows: 52px 1fr;
-  //  //height: 30rem;
-  //  background-image: linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
-  //  background-repeat: no-repeat;
-  //  background-position: center;
-  //  grid-template-areas:
-  //  ". sub_title Switcher ."
-  //  ". SliderRegularCard SliderRegularCard .";
-  //}
-  //
-  //.mapView {
-  //  width: unset;
-  //  grid-template-areas:
-  //  ". sub_title Switcher ."
-  //  ". RegularMap RegularMap .";
-  //}
-
-  //.sub_title {
-  //  grid-area: title;
-  //  justify-self: flex-end;
-  //  text-align: end;
-  //  align-self: flex-end;
-  //  margin-right: 22.5rem;
-  //  font-size: 2rem;
-  //  line-height: 2.2rem;
-  //  margin-bottom: 1.9rem;
-  //
-  //  &_mod {
-  //    margin-right: 12.5rem;
-  //  }
-  //}
-  //
-  //.Switcher {
-  //  justify-self: flex-end;
-  //
-  //  margin-right: 3.4rem;
-  //}
-  //
-  //.CombineRegularCards {
-  //  grid-area: SliderRegularCard;
-  //  justify-self: center;
-  //  width: 100%;
-  //  padding: 0 34px;
-  //}
-
-
+  .root {
+    padding-bottom: 95px;
+  }
 
   .sub_title {
     & span {
@@ -262,6 +225,10 @@
     & .bg_text {
       margin: 0 0 -60px -721px !important;
     }
+  }
+
+  .C_MainButton {
+    margin-top: 15px;
   }
 }
 
