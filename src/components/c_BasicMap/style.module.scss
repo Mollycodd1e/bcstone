@@ -12,6 +12,16 @@
   //margin-bottom: 110px;
   //margin: 0 auto;
 }
+
+@media (min-width: $width-tablet-md) {
+  .wrapMap {
+    & > div {
+      & > div {
+        border-radius: 15px;
+      }
+    }
+  }
+}
 //
 //.metro {
 //  font-size: 14px;
@@ -209,8 +219,8 @@
 //
 
 
-@media (min-width: $width-notebook) {
-  .wrapMap {
-    height: 60rem !important;
-  }
-}
+//@media (min-width: $width-notebook) {
+//  .wrapMap {
+//    height: 60rem !important;
+//  }
+//}
