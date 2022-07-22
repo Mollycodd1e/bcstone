@@ -151,7 +151,7 @@
     border: 1px solid #707070;
     border-radius: 20px;
     margin: 88px 66px 35px;
-    padding-bottom: 40px;
+    padding-bottom: 40px !important;
   }
 
 
@@ -189,6 +189,10 @@
     //& > div > div > div {
     //  border-radius: 50px !important;
     //}
+  }
+
+  .RegularMap {
+    margin-bottom: 50px;
   }
 }
 
