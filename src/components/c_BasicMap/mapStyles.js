@@ -46,10 +46,7 @@ let styles=[
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#c7c7c7"
-            },
-            {
-                "lightness": 20
+                "color": "#444444"
             }
         ]
     },
@@ -58,13 +55,7 @@ let styles=[
         "elementType": "geometry.stroke",
         "stylers": [
             {
-                "color": "#b4b4b4"
-            },
-            {
-                "lightness": 17
-            },
-            {
-                "weight": 1.2
+                "color": "#444444"
             }
         ]
     },
@@ -73,10 +64,7 @@ let styles=[
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#ffffff"
-            },
-            {
-                "lightness": 20
+                "color": "#f2f2f2"
             }
         ]
     },
@@ -84,6 +72,9 @@ let styles=[
         "featureType": "poi",
         "elementType": "geometry",
         "stylers": [
+            {
+                "visibility": "off"
+            },
             {
                 "color": "#f1f1f1"
             },
@@ -96,6 +87,9 @@ let styles=[
         "featureType": "poi.park",
         "elementType": "geometry",
         "stylers": [
+            {
+                "visibility": "off"
+            },
             {
                 "color": "#eeeeee"
             },
@@ -112,7 +106,7 @@ let styles=[
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#f5f5f5"
+                "color": "#e1e1e1"
             },
             {
                 "lightness": 17
@@ -148,7 +142,7 @@ let styles=[
                 "visibility": "simplified"
             },
             {
-                "color": "#bbbbbb"
+                "color": "#777777"
             }
         ]
     },
@@ -229,7 +223,7 @@ let styles=[
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#e6e6e6"
+                "color": "#c0e4f3"
             },
             {
                 "lightness": 17
