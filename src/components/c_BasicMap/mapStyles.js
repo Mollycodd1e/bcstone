@@ -166,10 +166,7 @@ let styles=[
         "elementType": "labels",
         "stylers": [
             {
-                "visibility": "simplified"
-            },
-            {
-                "color": "#c7c7c7"
+                "visibility": "off"
             }
         ]
     },
