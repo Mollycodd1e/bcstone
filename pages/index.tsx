@@ -82,7 +82,7 @@ export default function Home() {
                                 <div className={"common_top_bg"}  ref={topMenuEl}>
                                     <S_Menu menuOnTop={menuOnTop} data={mainPageData[0]} />
                                     <S_Hero data={mainPageData[0]} />
-                                    <S_Top_Commercial />
+                                    <S_Top_Commercial data={mainPageData[0]} />
                                 </div>
                                 <S_Projects />
                             </>
