@@ -11,7 +11,10 @@ export const S_Top_Commercial = ({className, data}) => {
     const cls = classNames(classes.root, {[className]: className });
     const [width, height] = useContext(Context);
     const isTablet = width >= sizes.widthTabletMd;
-    const cuttedElements = data_2 && data_2.list.length !==0 && data_2.list.slice(0, data_2.config.shownElements);
+    let cuttedElements = data_2 && data_2.list.length !==0 && data_2.list.slice(0, data_2.config.shownElements);
+    cuttedElements.sort(function (a, b) {
+        return a.order - b.order;
+    })
     const elements = cuttedElements.length !== 0 && cuttedElements.map((el, i) => {
         return <C_Element_Top_Commertial element={el} key={i} />
     })
