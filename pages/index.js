@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import {useEffect, useRef, useState} from "react";
-import type { NextPage } from 'next'
 
 import {useWindowSize, Context} from "../src/library";
 import Script from 'next/script'

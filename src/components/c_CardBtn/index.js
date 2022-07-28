@@ -1,6 +1,5 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
-import {moreInfoBtn} from "../../data/helper";
 import {sizes} from "../../data/sizes";
 import {Context} from "../../library";
 import {useContext} from "react";
@@ -21,7 +20,7 @@ export const С_CardBtn = ({className, bgColorFirst, bgColorSecond, textColor, i
                     }}
                     onClick={() => setIsPopUpVisible(true)}
                 >
-                    {moreInfoBtn.text}
+                        Оставить заявку
                 </button> :
                 <a
                     href={link}
@@ -33,7 +32,7 @@ export const С_CardBtn = ({className, bgColorFirst, bgColorSecond, textColor, i
                         color: textColor,
                     }}
                 >
-                    {moreInfoBtn.textLink}
+                    Подробнее
                 </a>
             }
         </React.Fragment>
