@@ -13,14 +13,13 @@ export const C_CombineRegularCards = ({className, isBtnClose, onBtnCloseClick, s
     const [width, height] = useContext(Context);
     // const setIsPopUpVisible = useContext(Context);
     const rCards = CC_regularCards(classes.RegularCard, isBtnClose, onBtnCloseClick, setIsPopUpVisible, isMapMode);
-
     return (
         <div className={cls}>
-            {width < sizes.widthTabletMd
+            {width < sizes.widthDesktopLg
                 ?
-                    <C_Slider isBtnClose={isBtnClose} items={rCards} initialSlide={0}/>
+                    <C_Slider isBtnClose={isBtnClose} items={rCards} initialSlide={0} slidersSpaceBetween={width < sizes.widthTabletMd ? -225 : width < sizes.widthNotebook ? 280 : width < sizes.widthDesktopSm ? 100 : -150}/>
                 :
-                    <>
+                    <div className={classes.cards}>
                         {rCards.map((card, i) => {
                                 return (
                                     <React.Fragment key={i}>
@@ -29,7 +28,7 @@ export const C_CombineRegularCards = ({className, isBtnClose, onBtnCloseClick, s
                                 )
                             })
                         }
-                    </>
+                    </div>
             }
         </div>
     )

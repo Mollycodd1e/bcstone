@@ -20,7 +20,7 @@ export const C_Element_Top_Commertial = ({className, element}) => {
                 </span>
                 <a  className={classes.link}
                     href={`${link}`}>
-                    {link_text}
+                    Подробнее
                 </a>
             </div>
        </div>

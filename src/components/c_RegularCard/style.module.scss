@@ -29,9 +29,9 @@ $heightLogo_tab: 22px;
 $heightLogo_desk: 24px;
 $heightLogo_desk_map: 22px;
 
-$listTemplateColumns_tab_desk: 1fr 1fr;
+$listTemplateColumns_tab_desk: repeat(2, auto);
 
-$listTemplateColumnsGap_tab_desk: 8px;
+$listTemplateColumnsGap_tab_desk: 30px;
 
 $listTemplateRows_tab_desk: repeat(3, auto);
 
@@ -54,7 +54,7 @@ $pos: -12px;
   $listTemplateRows: repeat(4, auto),
   $listTemplateAreas: "cardInfoEl1" "cardInfoEl2" "cardInfoEl3" "cardInfoEl4",
 ) {
-  .root {
+
     width: $widthCard;
     height: $heightCard;
     border-radius: $borderRadius;
@@ -87,8 +87,12 @@ $pos: -12px;
       grid-template-rows: $listTemplateRows;
       grid-template-areas: $listTemplateAreas;
       grid-column-gap: $listTemplateColumnsGap;
+
+      & li {
+        justify-self: flex-start;
+      }
     }
-  }
+
 }
 
 @mixin mob_card {
@@ -148,6 +152,12 @@ $pos: -12px;
   background-color: $color-card-bg;
   display: flex;
   position: relative;
+
+  @include mob_card;
+
+  &.map_mod {
+    @include mob_tab_map_card;
+  }
 }
 
 .wrapper {
@@ -189,14 +199,11 @@ $pos: -12px;
   align-self: flex-start;
 }
 
-@include mob_card;
-
-.map_mod {
-  @include mob_tab_map_card;
-}
 
 @media (min-width: $width-tablet-md) {
-  @include tab_card;
+  .root{
+    @include tab_card;
+  }
 }
 
 @media (min-width: $width-desktop-lg) {
@@ -214,9 +221,35 @@ $pos: -12px;
     }
   }
 
-  @include desk_card;
+  .root {
+    @include desk_card;
 
-  .map_mod {
-    @include desk_map_card;
+    & a[class*='mainCardBtn'],
+    & a[class*='CardBtn'],
+    & button[class*='mainCardBtn'],
+    & button[class*='CardBtn'] {
+     padding-bottom: 12px;
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    &.map_mod {
+
+      & a[class*='mainCardBtn'],
+      & a[class*='CardBtn'],
+      & button[class*='mainCardBtn'],
+      & button[class*='CardBtn'] {
+        padding-bottom: 4px;
+        font-size: 12px;
+        line-height: 13px;
+      }
+
+      @include desk_map_card;
+      padding-top: 22px;
+
+      & .С_CardFace {
+        bottom: unset !important;
+      }
+    }
   }
 }

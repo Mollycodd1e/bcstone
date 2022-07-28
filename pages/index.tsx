@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import {useEffect, useRef, useState} from "react";
+import type { NextPage } from 'next'
 
 import {useWindowSize, Context} from "../src/library";
 import Script from 'next/script'
@@ -81,7 +82,7 @@ export default function Home() {
                                 <div className={"common_top_bg"}  ref={topMenuEl}>
                                     <S_Menu menuOnTop={menuOnTop} data={mainPageData[0]} />
                                     <S_Hero data={mainPageData[0]} />
-                                    <S_Top_Commercial />
+                                    <S_Top_Commercial data={mainPageData[0]} />
                                 </div>
                                 <S_Projects />
                             </>

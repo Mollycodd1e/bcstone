@@ -56,16 +56,15 @@
   justify-content: center;
   //width: 242px !important;
 }
-//
-@media (min-width: 500px) {
-  //.swiperSlide {
-  //  margin-right: -100px !important;
-  //  margin-left: -100px !important;
-  //}
+
+@media (min-width: $width-tablet-md) {
+
+  .root {
+    width: calc(100vw - 104px);
+  }
+
+  .swiper {
+    min-width: 320px;
+    width: calc(100vw - 104px);
+  }
 }
-//
-//@media (min-width: $width-desktop-lg) {
-//  .swiper {
-//    width: 500px;
-//  }
-//}

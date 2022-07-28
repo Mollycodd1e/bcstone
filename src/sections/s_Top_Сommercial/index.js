@@ -6,51 +6,16 @@ import {sizes} from "../../data/sizes";
 import {C_Slider} from "../../components/c_Slider";
 import {C_Element_Top_Commertial} from "../../components/c_Element_Top_Commertial";
 
-const test_data = {
-    config: {
-        "shownElements": 3,
-    },
-    "list": [
-        {
-            "title": "Классический текст",
-            "content": "Является искажённым отрывком из философского трактата Марка Туллия",
-            "link": "",
-            "link_text": "Подробнее",
-            "color": "#43111D"
-        },
-        {
-            "title": "Просто текст",
-            "content": "«О пределах добра и зла», написанного в 45 году до н. э. на латинском языке",
-            "link": "",
-            "link_text": "Подробнее",
-            "color": "#E1FD4A"
-        },
-        {
-            "title": "Классический текст",
-            "content": "«О пределах добра и зла», написанного в 45 году до н. э. на латинском языке",
-            "link": "",
-            "link_text": "Подробнее",
-            "color": "#505998"
-        },
-        {
-            "title": "Много текста, когда не будет помещаться",
-            "content": "Обнаружение сходства приписывается Ричарду…",
-            "link": "",
-            "link_text": "Подробнее",
-            "color": "#505998"
-        }
-    ],
-}
-
-
-
 export const S_Top_Commercial = ({className, data}) => {
+    const data_2 = data.top_commercial;
     const cls = classNames(classes.root, {[className]: className });
     const [width, height] = useContext(Context);
     const isTablet = width >= sizes.widthTabletMd;
-    // const isDesktop = width >= sizes.widthDesktopLg;
-    const cuttedElements = test_data.list.slice(0, test_data.config.shownElements);
-    const elements = cuttedElements.map((el, i) => {
+    let cuttedElements = data_2 && data_2.list.length !==0 && data_2.list.slice(0, data_2.config.shownElements);
+    cuttedElements.sort(function (a, b) {
+        return a.order - b.order;
+    })
+    const elements = cuttedElements.length !== 0 && cuttedElements.map((el, i) => {
         return <C_Element_Top_Commertial element={el} key={i} />
     })
 

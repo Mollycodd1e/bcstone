@@ -204,5 +204,29 @@ export const cards = [
         },
         link: '',
     },
+    {
+        alt: 'Stone Ленинский',
+        logo: stoneLeninskiyLogo,
+        img: img_stoneLen,
+        img2x: img2x_stoneLen,
+        imgMob: imgMob_stoneLen,
+        img2xMob: img2xMob_stoneLen,
+        extraInfo: 'Скоро в продаже',
+        info: {
+            title: justOffices,
+            list: [
+                `Премиальный бизнес-центр`,
+                `4 минуты от метро<br>«Лениниский проспект»<br>и «Площадь Гагарина»`,
+                `От 70 м<sup>2</sup>`,
+                `Готовность: 2025`,
+            ],
+        },
+        brandColor: {
+            first: brandColors.leninskiy.first,
+            second: brandColors.leninskiy.second,
+            text: brandColors.leninskiy.text,
+        },
+        link: '',
+    },
 
 ]

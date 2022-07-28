@@ -7,10 +7,28 @@
 
 .wrapMap {
   width: 100%;
-  height: 50rem;
+  height: 440px;
   position: relative;
   //margin-bottom: 110px;
   //margin: 0 auto;
+}
+
+@media (min-width: $width-tablet-md) {
+  .wrapMap {
+    height: 355px;
+
+    & > div {
+      & > div {
+        border-radius: 15px;
+      }
+    }
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .wrapMap {
+    height: 900px;
+  }
 }
 //
 //.metro {
@@ -209,8 +227,8 @@
 //
 
 
-@media (min-width: $width-notebook) {
-  .wrapMap {
-    height: 60rem !important;
-  }
-}
+//@media (min-width: $width-notebook) {
+//  .wrapMap {
+//    height: 60rem !important;
+//  }
+//}
