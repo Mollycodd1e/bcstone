@@ -10,7 +10,7 @@ import {C_RegularMap} from "../../components/c_RegularMap";
 import {C_CombineRegularCards} from "../../components/c_CombineRegularCards";
 import {C_MainButton} from "../../components/c_MainButton";
 
-export const S_Projects = ({className, setIsPopUpVisible}) => {
+export const S_Projects = ({className, setIsPopUpVisible, data}) => {
     const [isListView, setIsListView] = useState(true);
     const [width, height] = useContext(Context);
     const cls = classNames(classes.root, { [classes.mapView]: !isListView, [className]: className });
@@ -41,6 +41,7 @@ export const S_Projects = ({className, setIsPopUpVisible}) => {
                         onBtnCloseClick={() => {}}
                         setIsPopUpVisible={setIsPopUpVisible}
                         isMapMode={false}
+                        data={data}
                     />
                 : <C_RegularMap
                     className={classes.RegularMap}

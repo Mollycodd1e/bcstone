@@ -83,7 +83,7 @@ export default function Home() {
                                     <S_Hero data={mainPageData[0]} />
                                     <S_Top_Commercial data={mainPageData[0]} />
                                 </div>
-                                <S_Projects />
+                                <S_Projects data={mainPageData[0]} />
                             </>
                         ) : (
                             <div className="lds-grid-wrapper">

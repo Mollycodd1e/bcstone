@@ -8,11 +8,11 @@ import {sizes} from "../../data/sizes";
 import {CC_regularCards} from "../../complexComponents/cc_regularCards";
 import { C_Slider } from "../c_Slider";
 
-export const C_CombineRegularCards = ({className, isBtnClose, onBtnCloseClick, setIsPopUpVisible, isMapMode}) => {
+export const C_CombineRegularCards = ({className, isBtnClose, onBtnCloseClick, setIsPopUpVisible, isMapMode, data}) => {
     const cls = classNames(classes.root, {[className]: className });
     const [width, height] = useContext(Context);
     // const setIsPopUpVisible = useContext(Context);
-    const rCards = CC_regularCards(classes.RegularCard, isBtnClose, onBtnCloseClick, setIsPopUpVisible, isMapMode);
+    const rCards = CC_regularCards(classes.RegularCard, isBtnClose, onBtnCloseClick, setIsPopUpVisible, isMapMode, data);
     return (
         <div className={cls}>
             {width < sizes.widthDesktopLg
