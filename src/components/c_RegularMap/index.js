@@ -9,12 +9,12 @@ import {C_Slider} from "../c_Slider";
 import {CC_regularCards} from "../../complexComponents/cc_regularCards";
 
 
-export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUpVisible, isMapMode}) => {
+export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUpVisible, isMapMode, data}) => {
     const cls = classNames(classes.root, { [className]: className });
     const [isCardVisible, setIsCardVisible] = useState(false);
     const close = () => setIsCardVisible(false);
 
-    const rCards = CC_regularCards(classes.RegularCard, isBtnClose, () => close(), setIsPopUpVisible, isMapMode);
+    const rCards = CC_regularCards(classes.RegularCard, isBtnClose, () => close(), setIsPopUpVisible, isMapMode, data);
     const [width, height] = useContext(Context);
 
     const [initialSlide, setInitialSlide] = useState(0);
@@ -36,7 +36,7 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
                     </div>
                 : isCardVisible && width >= sizes.widthTabletMd ?
                     <div className={classes.oneCard}>
-                        {CC_regularCards(classes.RegularCard, isBtnClose, () => close(), setIsPopUpVisible, isMapMode)[initialSlide]}
+                        {CC_regularCards(classes.RegularCard, isBtnClose, () => close(), setIsPopUpVisible, isMapMode, data)[initialSlide]}
                     </div>
                 : null
             }

@@ -49,6 +49,7 @@ export const S_Projects = ({className, setIsPopUpVisible, data}) => {
                     onBtnCloseClick={() => {}}
                     setIsPopUpVisible={setIsPopUpVisible}
                     isMapMode={true}
+                    data={data}
                 />
             }
             <C_MainButton text={"Получить предложение"} onClick={() => console.log('click from project')} className={classes.C_MainButton} />

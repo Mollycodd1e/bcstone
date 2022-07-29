@@ -24,7 +24,6 @@ export const C_RegularCard = ({
     isBtnClose,
     link,
     setIsPopUpVisible,
-    data,
 }) => {
     const cls = classNames(classes.root, { [className]: className, [classes.map_mod]: isMapMode });
     return (
@@ -63,7 +62,6 @@ export const C_RegularCard = ({
                     className={classes.С_CardInfo}
                     title={title}
                     list={list}
-                    data={data}
                     logo={logo}
                 />
             </div>

@@ -25,7 +25,6 @@ export const CC_regularCards = (className, isBtnClose, onBtnCloseClick, setIsPop
             onBtnCloseClick={onBtnCloseClick}
             link={card.link}
             setIsPopUpVisible={setIsPopUpVisible}
-            data={data}
         />
     // const rCards = cards.map((card, i) => <C_RegularCard
     //         isMapMode={isMapMode}
