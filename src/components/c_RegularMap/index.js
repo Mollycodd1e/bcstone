@@ -4,7 +4,7 @@ import classes from './style.module.scss';
 import classNames from "classnames";
 import {sizes} from "../../data/sizes";
 import {Context} from "../../library";
-import C_BasicMap from "../c_BasicMap";
+import {C_BasicMap} from "../c_BasicMap";
 import {C_Slider} from "../c_Slider";
 import {CC_regularCards} from "../../complexComponents/cc_regularCards";
 
@@ -27,6 +27,7 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
                 setInitialSlide={setInitialSlide}
                 setIsCardVisible={setIsCardVisible}
                 isCardVisible={isCardVisible}
+                data={data}
             />
             {
                 isCardVisible && width < sizes.widthTabletMd
@@ -36,7 +37,7 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
                     </div>
                 : isCardVisible && width >= sizes.widthTabletMd ?
                     <div className={classes.oneCard}>
-                        {CC_regularCards(classes.RegularCard, isBtnClose, () => close(), setIsPopUpVisible, isMapMode, data)[initialSlide]}
+                        {rCards[initialSlide]}
                     </div>
                 : null
             }

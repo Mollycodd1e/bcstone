@@ -1,48 +1,38 @@
 import classes from './style.module.scss';
-import React, {useContext, useState} from 'react';
+import React from 'react';
 import GoogleMapReact from 'google-map-react';
 import mapStyles from './mapStyles';
-import {mapType1Pins} from "../../data/mapType1";
 import {C_MainMarker} from "../c_MainMarker";
 
-class C_BasicMap extends React.Component {
-    static defaultProps = {
-        center: {lat: 55.75, lng: 37.615},
-        zoom: 12,
-    };
-
-    render() {
+export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isCardVisible, data}) => {
 
         return (
             <div className={classes.wrapMap}>
-                <GoogleMapReact
-                    defaultCenter={this.props.center}
-                    defaultZoom={this.props.zoom}
+                {data.projects.length !== 0 ? <GoogleMapReact
+                    defaultCenter={{lat: 55.75, lng: 37.615}}
+                    defaultZoom={12}
                     options={{styles: mapStyles.styles}}
                 >
                     {
-                        mapType1Pins.map((pin, i) => {
+                        data.projects.filter(el => el.isShownOnMap).map((project, i) => {
                             return (
                                 <C_MainMarker
                                     key={i}
-                                    lat={pin.lat}
-                                    lng={pin.lng}
+                                    lat={project.coordinates.lat}
+                                    lng={project.coordinates.lng}
                                     onClick={() => {
-                                        this.props.setInitialSlide(prev => pin.id);
-                                        this.props.setIsCardVisible(prev => true)
+                                        setInitialSlide(prev => project.order - 1);
+                                        setIsCardVisible(prev => true)
                                     }}
-                                    imgDefault={pin.iconDefault}
-                                    imgActive={pin.iconActive}
-                                    isPinActive={this.props.isCardVisible && pin.id === this.props.initialSlide}
+                                    imgDefault={project.pin.default.src}
+                                    imgActive={project.pin.active.src}
+                                    isPinActive={isCardVisible && project.order - 1 === initialSlide}
                                 />
                             )
                         })
                     }
 
-                </GoogleMapReact>
+                </GoogleMapReact> : null}
             </div>
         );
-    }
-};
-
-export default C_BasicMap;
+}
