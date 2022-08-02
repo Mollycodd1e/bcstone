@@ -5,8 +5,6 @@ import mapStyles from './mapStyles';
 import {C_MainMarker} from "../c_MainMarker";
 import useSupercluster from "use-supercluster";
 
-const Marker = ({ children }) => children;
-
 export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isCardVisible, data}) => {
 
     const {map_settings} = data;
@@ -34,23 +32,12 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
         })
     });
 
-    // useEffect(() => {
-    //     if (zoom > 17) {
-    //         setZoom(17)
-    //     }
-    //     if (zoom < 10) {
-    //         setZoom(10)
-    //     }
-    // }, [zoom])
-
     const { clusters, supercluster } = useSupercluster({
         points,
         bounds,
         zoom,
         options: { radius: 70, maxZoom: 15 }
     });
-
-    console.log('clusters', clusters)
 
         return (
             <div className={classes.wrapMap}>
@@ -60,18 +47,16 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                     options={
                         {
                             styles: mapStyles.styles,
-                            minZoom: 4,
-                            maxZoom: 18
+                            minZoom: 10,
+                            maxZoom: 13
                         }
                     }
-                    minZoom={10}
-                    maxZoom={14}
                     yesIWantToUseGoogleMapApiInternals
                     onGoogleApiLoaded={({ map }) => {
                         mapRef.current = map;
                     }}
                     onChange={({ zoom, bounds }) => {
-                        setZoom(zoom);
+                        setZoom(zoom)
                         setBounds([
                             bounds.nw.lng,
                             bounds.se.lat,
@@ -126,10 +111,14 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                             );
                                             mapRef.current.setZoom(expansionZoom);
                                             mapRef.current.panTo({ lat: latitude, lng: longitude });
+                                            // получает данные карточек нажатого кластера
+                                            // const clickedCluster = supercluster.getLeaves(project.id);
+                                            // console.log('clickedCluster', clickedCluster)
                                         }}
                                         imgDefault={map_settings.defaultPin.src}
                                         imgActive={map_settings.activePin.src}
-                                        isPinActive={isCardVisible && project.properties.order - 1 === initialSlide}
+                                        isPinActive={true}
+                                        pointCount={pointCount}
                                     />
                                 );
                             }
