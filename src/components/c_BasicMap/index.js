@@ -1,5 +1,5 @@
 import classes from './style.module.scss';
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import GoogleMapReact from 'google-map-react';
 import mapStyles from './mapStyles';
 import {C_MainMarker} from "../c_MainMarker";
@@ -8,9 +8,11 @@ import useSupercluster from "use-supercluster";
 const Marker = ({ children }) => children;
 
 export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isCardVisible, data}) => {
+
+    const {map_settings} = data;
     const mapRef = useRef();
     const [bounds, setBounds] = useState(null);
-    const [zoom, setZoom] = useState(12);
+    const [zoom, setZoom] = useState(map_settings.defaultZoom);
 
     const points = data.projects.filter(el => el.isShownOnMap).map(project => {
         return ({
@@ -32,6 +34,15 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
         })
     });
 
+    // useEffect(() => {
+    //     if (zoom > 17) {
+    //         setZoom(17)
+    //     }
+    //     if (zoom < 10) {
+    //         setZoom(10)
+    //     }
+    // }, [zoom])
+
     const { clusters, supercluster } = useSupercluster({
         points,
         bounds,
@@ -44,9 +55,17 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
         return (
             <div className={classes.wrapMap}>
                 {points.length !== 0 ? <GoogleMapReact
-                    defaultCenter={{lat: 55.75, lng: 37.615}}
-                    defaultZoom={12}
-                    options={{styles: mapStyles.styles}}
+                    defaultCenter={{lat: parseFloat(map_settings.lat), lng: parseFloat(map_settings.lng)}}
+                    defaultZoom={parseFloat(map_settings.defaultZoom)}
+                    options={
+                        {
+                            styles: mapStyles.styles,
+                            minZoom: 4,
+                            maxZoom: 18
+                        }
+                    }
+                    minZoom={10}
+                    maxZoom={14}
                     yesIWantToUseGoogleMapApiInternals
                     onGoogleApiLoaded={({ map }) => {
                         mapRef.current = map;
@@ -72,29 +91,46 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
 
                             if (isCluster) {
                                 return (
-                                    <Marker
+                                    // <Marker
+                                    //     key={`cluster-${project.id}`}
+                                    //     lat={latitude}
+                                    //     lng={longitude}
+                                    // >
+                                    //     <div
+                                    //         className={classes.clusterMarker}
+                                    //         style={{
+                                    //             width: `${10 + (pointCount / points.length) * 20}px`,
+                                    //             height: `${10 + (pointCount / points.length) * 20}px`
+                                    //         }}
+                                    //         onClick={() => {
+                                    //             const expansionZoom = Math.min(
+                                    //                 supercluster.getClusterExpansionZoom(project.id),
+                                    //                 20
+                                    //             );
+                                    //             mapRef.current.setZoom(expansionZoom);
+                                    //             mapRef.current.panTo({ lat: latitude, lng: longitude });
+                                    //         }}
+                                    //     >
+                                    //         {pointCount}
+                                    //     </div>
+                                    // </Marker>
+
+                                    <C_MainMarker
                                         key={`cluster-${project.id}`}
                                         lat={latitude}
                                         lng={longitude}
-                                    >
-                                        <div
-                                            className={classes.clusterMarker}
-                                            style={{
-                                                width: `${10 + (pointCount / points.length) * 20}px`,
-                                                height: `${10 + (pointCount / points.length) * 20}px`
-                                            }}
-                                            onClick={() => {
-                                                const expansionZoom = Math.min(
-                                                    supercluster.getClusterExpansionZoom(project.id),
-                                                    20
-                                                );
-                                                mapRef.current.setZoom(expansionZoom);
-                                                mapRef.current.panTo({ lat: latitude, lng: longitude });
-                                            }}
-                                        >
-                                            {pointCount}
-                                        </div>
-                                    </Marker>
+                                        onClick={() => {
+                                            const expansionZoom = Math.min(
+                                                supercluster.getClusterExpansionZoom(project.id),
+                                                20
+                                            );
+                                            mapRef.current.setZoom(expansionZoom);
+                                            mapRef.current.panTo({ lat: latitude, lng: longitude });
+                                        }}
+                                        imgDefault={map_settings.defaultPin.src}
+                                        imgActive={map_settings.activePin.src}
+                                        isPinActive={isCardVisible && project.properties.order - 1 === initialSlide}
+                                    />
                                 );
                             }
 
