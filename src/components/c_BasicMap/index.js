@@ -34,7 +34,7 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
         points,
         bounds,
         zoom,
-        options: { radius: 60, maxZoom: 15 }
+        options: { radius: 70, maxZoom: 15 }
     });
 
     console.log('clusters', clusters)
