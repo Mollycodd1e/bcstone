@@ -5,6 +5,8 @@ import mapStyles from './mapStyles';
 import {C_MainMarker} from "../c_MainMarker";
 import useSupercluster from "use-supercluster";
 
+const Marker = ({ children }) => children;
+
 export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isCardVisible, data}) => {
     const mapRef = useRef();
     const [bounds, setBounds] = useState(null);
@@ -60,8 +62,44 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                     }}
                 >
                     {
-                        points.map((project, i) => {
+                        clusters.map((project, i) => {
                             const [ longitude, latitude ] = project.geometry.coordinates;
+                            const {
+                                cluster: isCluster,
+                                point_count: pointCount
+                            } = project.properties;
+
+
+                            if (isCluster) {
+                                return (
+                                    <Marker
+                                        key={`cluster-${project.id}`}
+                                        lat={latitude}
+                                        lng={longitude}
+                                    >
+                                        <div
+                                            className={classes.clusterMarker}
+                                            style={{
+                                                width: `${10 + (pointCount / points.length) * 20}px`,
+                                                height: `${10 + (pointCount / points.length) * 20}px`
+                                            }}
+                                            onClick={() => {
+                                                const expansionZoom = Math.min(
+                                                    supercluster.getClusterExpansionZoom(project.id),
+                                                    20
+                                                );
+                                                mapRef.current.setZoom(expansionZoom);
+                                                mapRef.current.panTo({ lat: latitude, lng: longitude });
+                                            }}
+                                        >
+                                            {pointCount}
+                                        </div>
+                                    </Marker>
+                                );
+                            }
+
+
+
                             return (
                                 <C_MainMarker
                                     key={i}
