@@ -76,30 +76,6 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
 
                             if (isCluster) {
                                 return (
-                                    // <Marker
-                                    //     key={`cluster-${project.id}`}
-                                    //     lat={latitude}
-                                    //     lng={longitude}
-                                    // >
-                                    //     <div
-                                    //         className={classes.clusterMarker}
-                                    //         style={{
-                                    //             width: `${10 + (pointCount / points.length) * 20}px`,
-                                    //             height: `${10 + (pointCount / points.length) * 20}px`
-                                    //         }}
-                                    //         onClick={() => {
-                                    //             const expansionZoom = Math.min(
-                                    //                 supercluster.getClusterExpansionZoom(project.id),
-                                    //                 20
-                                    //             );
-                                    //             mapRef.current.setZoom(expansionZoom);
-                                    //             mapRef.current.panTo({ lat: latitude, lng: longitude });
-                                    //         }}
-                                    //     >
-                                    //         {pointCount}
-                                    //     </div>
-                                    // </Marker>
-
                                     <C_MainMarker
                                         key={`cluster-${project.id}`}
                                         lat={latitude}
@@ -122,8 +98,6 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                     />
                                 );
                             }
-
-
 
                             return (
                                 <C_MainMarker
