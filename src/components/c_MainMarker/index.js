@@ -10,6 +10,7 @@ export const C_MainMarker = ({className, onClick, imgDefault, imgActive, isPinAc
             <Image src={isPinActive ? imgActive : imgDefault}
                    layout="fixed"
                    height={41}
+                   width={361}
             />
         </div>
     )

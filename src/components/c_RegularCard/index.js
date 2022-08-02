@@ -62,6 +62,7 @@ export const C_RegularCard = ({
                     className={classes.С_CardInfo}
                     title={title}
                     list={list}
+                    logo={logo}
                 />
             </div>
             {/*<div*/}

@@ -17,6 +17,8 @@ export const coordinates = {
     },
 };
 
+//55.770365, 37.566153
+
 export const contentOfficesMaxMobSizes = {
     width: 576,
     height: 381,
