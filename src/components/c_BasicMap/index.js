@@ -15,6 +15,7 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
             type: "Feature",
             properties: {
                 cluster: false,
+                category: project.name,
                 order: project.order,
                 defaultPin: project.pin.default.src,
                 activePin: project.pin.active.src,
@@ -22,8 +23,8 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
             geometry: {
                 type: "Point",
                 coordinates: [
+                    parseFloat(project.coordinates.lng),
                     parseFloat(project.coordinates.lat),
-                    parseFloat(project.coordinates.lng)
                 ]
             }
         })
@@ -33,8 +34,10 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
         points,
         bounds,
         zoom,
-        options: { radius: 75, maxZoom: 20 }
+        options: { radius: 60, maxZoom: 15 }
     });
+
+    console.log('clusters', clusters)
 
         return (
             <div className={classes.wrapMap}>
@@ -58,7 +61,7 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                 >
                     {
                         points.map((project, i) => {
-                            const [ latitude, longitude ] = project.geometry.coordinates;
+                            const [ longitude, latitude ] = project.geometry.coordinates;
                             return (
                                 <C_MainMarker
                                     key={i}
