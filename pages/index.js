@@ -19,7 +19,7 @@ export default function Home() {
         if (typeof window !== 'undefined') {
             window.onscroll = () => {
                 const menuEl = topMenuEl.current && topMenuEl.current.getBoundingClientRect();
-                if (menuEl.top < 0) {
+                if (menuEl && menuEl.top < 0) {
                     isMenuOnTop(true);
                     // setActiveItem(1);
                 } else {

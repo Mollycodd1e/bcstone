@@ -10,28 +10,67 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
     const [bounds, setBounds] = useState(null);
     const [zoom, setZoom] = useState(12);
 
+    const points = data.projects.filter(el => el.isShownOnMap).map(project => {
+        return ({
+            type: "Feature",
+            properties: {
+                cluster: false,
+                order: project.order,
+                defaultPin: project.pin.default.src,
+                activePin: project.pin.active.src,
+            },
+            geometry: {
+                type: "Point",
+                coordinates: [
+                    parseFloat(project.coordinates.lat),
+                    parseFloat(project.coordinates.lng)
+                ]
+            }
+        })
+    });
+
+    const { clusters, supercluster } = useSupercluster({
+        points,
+        bounds,
+        zoom,
+        options: { radius: 75, maxZoom: 20 }
+    });
+
         return (
             <div className={classes.wrapMap}>
-                {data.projects.length !== 0 ? <GoogleMapReact
+                {points.length !== 0 ? <GoogleMapReact
                     defaultCenter={{lat: 55.75, lng: 37.615}}
                     defaultZoom={12}
                     options={{styles: mapStyles.styles}}
                     yesIWantToUseGoogleMapApiInternals
+                    onGoogleApiLoaded={({ map }) => {
+                        mapRef.current = map;
+                    }}
+                    onChange={({ zoom, bounds }) => {
+                        setZoom(zoom);
+                        setBounds([
+                            bounds.nw.lng,
+                            bounds.se.lat,
+                            bounds.se.lng,
+                            bounds.nw.lat
+                        ]);
+                    }}
                 >
                     {
-                        data.projects.filter(el => el.isShownOnMap).map((project, i) => {
+                        points.map((project, i) => {
+                            const [ latitude, longitude ] = project.geometry.coordinates;
                             return (
                                 <C_MainMarker
                                     key={i}
-                                    lat={project.coordinates.lat}
-                                    lng={project.coordinates.lng}
+                                    lat={latitude}
+                                    lng={longitude}
                                     onClick={() => {
-                                        setInitialSlide(prev => project.order - 1);
+                                        setInitialSlide(prev => project.properties.order - 1);
                                         setIsCardVisible(prev => true)
                                     }}
-                                    imgDefault={project.pin.default.src}
-                                    imgActive={project.pin.active.src}
-                                    isPinActive={isCardVisible && project.order - 1 === initialSlide}
+                                    imgDefault={project.properties.defaultPin}
+                                    imgActive={project.properties.activePin}
+                                    isPinActive={isCardVisible && project.properties.order - 1 === initialSlide}
                                 />
                             )
                         })
