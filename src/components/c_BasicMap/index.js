@@ -1,10 +1,14 @@
 import classes from './style.module.scss';
-import React from 'react';
+import React, {useRef, useState} from 'react';
 import GoogleMapReact from 'google-map-react';
 import mapStyles from './mapStyles';
 import {C_MainMarker} from "../c_MainMarker";
+import useSupercluster from "use-supercluster";
 
 export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isCardVisible, data}) => {
+    const mapRef = useRef();
+    const [bounds, setBounds] = useState(null);
+    const [zoom, setZoom] = useState(12);
 
         return (
             <div className={classes.wrapMap}>
@@ -12,6 +16,7 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                     defaultCenter={{lat: 55.75, lng: 37.615}}
                     defaultZoom={12}
                     options={{styles: mapStyles.styles}}
+                    yesIWantToUseGoogleMapApiInternals
                 >
                     {
                         data.projects.filter(el => el.isShownOnMap).map((project, i) => {

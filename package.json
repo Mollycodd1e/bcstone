@@ -21,7 +21,9 @@
     "react-easy-swipe": "0.0.22",
     "react-ellipsis-text": "^1.2.1",
     "react-number-format": "^4.9.1",
-    "swiper": "^6.8.1"
+    "supercluster": "^7.1.5",
+    "swiper": "^6.8.1",
+    "use-supercluster": "^0.4.0"
   },
   "devDependencies": {
     "@types/node": "^18.0.3",
