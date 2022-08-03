@@ -5,7 +5,7 @@ import mapStyles from './mapStyles';
 import {C_MainMarker} from "../c_MainMarker";
 import useSupercluster from "use-supercluster";
 
-export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isCardVisible, data}) => {
+export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isCardVisible, data, clustersProjects, setClustersProjects, shownSliders, setShownSliders}) => {
 
     const {map_settings} = data;
     const mapRef = useRef();
@@ -36,7 +36,7 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
         points,
         bounds,
         zoom,
-        options: { radius: 70, maxZoom: 15 }
+        options: { radius: parseFloat(map_settings.clusterRadius), maxZoom: parseFloat(map_settings.maxZoom) }
     });
 
         return (
@@ -47,8 +47,8 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                     options={
                         {
                             styles: mapStyles.styles,
-                            minZoom: 10,
-                            maxZoom: 13
+                            minZoom: parseFloat(map_settings.minZoom),
+                            maxZoom: parseFloat(map_settings.maxZoom),
                         }
                     }
                     yesIWantToUseGoogleMapApiInternals
@@ -73,7 +73,6 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                 point_count: pointCount
                             } = project.properties;
 
-
                             if (isCluster) {
                                 return (
                                     <C_MainMarker
@@ -87,9 +86,12 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                             );
                                             mapRef.current.setZoom(expansionZoom);
                                             mapRef.current.panTo({ lat: latitude, lng: longitude });
+
                                             // получает данные карточек нажатого кластера
-                                            // const clickedCluster = supercluster.getLeaves(project.id);
-                                            // console.log('clickedCluster', clickedCluster)
+                                            setClustersProjects(supercluster.getLeaves(project.id));
+                                            setIsCardVisible(prev => true);
+
+
                                         }}
                                         imgDefault={map_settings.defaultPin.src}
                                         imgActive={map_settings.activePin.src}
@@ -105,12 +107,13 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                     lat={latitude}
                                     lng={longitude}
                                     onClick={() => {
-                                        setInitialSlide(prev => project.properties.order - 1);
-                                        setIsCardVisible(prev => true)
+                                        // setInitialSlide(prev => project.properties.order - 1);
+                                        setShownSliders([project.properties.order - 1]);
+                                        setIsCardVisible(prev => true);
                                     }}
                                     imgDefault={project.properties.defaultPin}
                                     imgActive={project.properties.activePin}
-                                    isPinActive={isCardVisible && project.properties.order - 1 === initialSlide}
+                                    isPinActive={isCardVisible && project.properties.order - 1 === shownSliders[0]}
                                 />
                             )
                         })
