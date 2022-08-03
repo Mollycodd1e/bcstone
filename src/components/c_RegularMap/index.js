@@ -54,19 +54,19 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
                         <C_Slider isBtnClose={isBtnClose} items={rCards} initialSlide={rCards[shownSliders[0]]} setIsPopUpVisible={setIsPopUpVisible} />
                     </div>
                 : isCardVisible && width >= sizes.widthTabletMd ?
-                    // <div>
-                    //     {
-                    //         shownSliders.slice(0, 4).map(slide => {
-                    //             return (<div>
-                    //                 {rCards[slide]}
-                    //             </div>)
-                    //         })
-                    //     }
-                    // </div>
-                    <div className={classes.oneCard}>
-                        {/*{rCards[initialSlide]}*/}
-                        {rCards[shownSliders[0]]}
+                    <div className={classes.fourCards}>
+                        {
+                            shownSliders.slice(0, 4).map(slide => {
+                                return (<div>
+                                    {rCards[slide]}
+                                </div>)
+                            })
+                        }
                     </div>
+                    // <div className={classes.oneCard}>
+                    //     {/*{rCards[initialSlide]}*/}
+                    //     {rCards[shownSliders[0]]}
+                    // </div>
                 : null
             }
         </div>

@@ -113,7 +113,7 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                     }}
                                     imgDefault={project.properties.defaultPin}
                                     imgActive={project.properties.activePin}
-                                    isPinActive={isCardVisible && project.properties.order - 1 === initialSlide}
+                                    isPinActive={isCardVisible && project.properties.order - 1 === shownSliders[0]}
                                 />
                             )
                         })
