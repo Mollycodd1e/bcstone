@@ -56,8 +56,8 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
                 : isCardVisible && width >= sizes.widthTabletMd ?
                     <div className={classes.fourCards}>
                         {
-                            shownSliders.slice(0, 4).map(slide => {
-                                return (<div>
+                            shownSliders.slice(0, 4).map((slide, i) => {
+                                return (<div key={i}>
                                     {rCards[slide]}
                                 </div>)
                             })
