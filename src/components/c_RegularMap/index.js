@@ -19,10 +19,17 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
 
     const [initialSlide, setInitialSlide] = useState(0);
     const [clustersProjects, setClustersProjects] = useState([]);
+    const [shownSliders, setShownSliders] = useState([0]);
 
-    // useEffect(() => {
-    //     console.log('clustersProjects', clustersProjects)
-    // }, [clustersProjects]);
+    useEffect(() => {
+        console.log('clustersProjects', clustersProjects)
+        const orderList = clustersProjects.map(project => {
+            // project.properties.order - 1
+            return parseFloat(project.properties.order - 1);
+            // setShownSliders(prev => prev.length !== 0 && prev.unshift(project.properties.order - 1));
+        })
+        setShownSliders(orderList)
+    }, [clustersProjects]);
     // useEffect(() => {
     //     console.log('initialSlide', initialSlide)
     // }, [initialSlide]);
@@ -37,16 +44,28 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
                 data={data}
                 clustersProjects={clustersProjects}
                 setClustersProjects={setClustersProjects}
+                shownSliders={shownSliders}
+                setShownSliders={setShownSliders}
             />
             {
                 isCardVisible && width < sizes.widthTabletMd
                 ?
                     <div className={classes.wrapperSlider}>
-                        <C_Slider isBtnClose={isBtnClose} items={rCards} initialSlide={initialSlide} setIsPopUpVisible={setIsPopUpVisible} />
+                        <C_Slider isBtnClose={isBtnClose} items={rCards} initialSlide={rCards[shownSliders[0]]} setIsPopUpVisible={setIsPopUpVisible} />
                     </div>
                 : isCardVisible && width >= sizes.widthTabletMd ?
+                    // <div>
+                    //     {
+                    //         shownSliders.slice(0, 4).map(slide => {
+                    //             return (<div>
+                    //                 {rCards[slide]}
+                    //             </div>)
+                    //         })
+                    //     }
+                    // </div>
                     <div className={classes.oneCard}>
-                        {rCards[initialSlide]}
+                        {/*{rCards[initialSlide]}*/}
+                        {rCards[shownSliders[0]]}
                     </div>
                 : null
             }

@@ -5,7 +5,7 @@ import mapStyles from './mapStyles';
 import {C_MainMarker} from "../c_MainMarker";
 import useSupercluster from "use-supercluster";
 
-export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isCardVisible, data, clustersProjects, setClustersProjects}) => {
+export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isCardVisible, data, clustersProjects, setClustersProjects, shownSliders, setShownSliders}) => {
 
     const {map_settings} = data;
     const mapRef = useRef();
@@ -89,6 +89,7 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
 
                                             // получает данные карточек нажатого кластера
                                             setClustersProjects(supercluster.getLeaves(project.id));
+                                            setIsCardVisible(prev => true);
 
 
                                         }}
@@ -106,8 +107,9 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                     lat={latitude}
                                     lng={longitude}
                                     onClick={() => {
-                                        setInitialSlide(prev => project.properties.order - 1);
-                                        setIsCardVisible(prev => true)
+                                        // setInitialSlide(prev => project.properties.order - 1);
+                                        setShownSliders([project.properties.order - 1]);
+                                        setIsCardVisible(prev => true);
                                     }}
                                     imgDefault={project.properties.defaultPin}
                                     imgActive={project.properties.activePin}
