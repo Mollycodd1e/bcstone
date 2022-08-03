@@ -36,7 +36,7 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
         points,
         bounds,
         zoom,
-        options: { radius: 70, maxZoom: 15 }
+        options: { radius: parseFloat(map_settings.clusterRadius), maxZoom: parseFloat(map_settings.maxZoom) }
     });
 
         return (
@@ -47,8 +47,8 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                     options={
                         {
                             styles: mapStyles.styles,
-                            minZoom: 10,
-                            maxZoom: 13
+                            minZoom: parseFloat(map_settings.minZoom),
+                            maxZoom: parseFloat(map_settings.maxZoom),
                         }
                     }
                     yesIWantToUseGoogleMapApiInternals
