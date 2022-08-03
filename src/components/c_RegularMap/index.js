@@ -20,9 +20,12 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
     const [initialSlide, setInitialSlide] = useState(0);
     const [clustersProjects, setClustersProjects] = useState([]);
 
-    useEffect(() => {
-        console.log('clustersProjects', clustersProjects)
-    }, [clustersProjects]);
+    // useEffect(() => {
+    //     console.log('clustersProjects', clustersProjects)
+    // }, [clustersProjects]);
+    // useEffect(() => {
+    //     console.log('initialSlide', initialSlide)
+    // }, [initialSlide]);
 
     return (
         <div className={cls}>
