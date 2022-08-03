@@ -5,7 +5,7 @@ import mapStyles from './mapStyles';
 import {C_MainMarker} from "../c_MainMarker";
 import useSupercluster from "use-supercluster";
 
-export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isCardVisible, data}) => {
+export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isCardVisible, data, clustersProjects, setClustersProjects}) => {
 
     const {map_settings} = data;
     const mapRef = useRef();
@@ -73,7 +73,6 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                 point_count: pointCount
                             } = project.properties;
 
-
                             if (isCluster) {
                                 return (
                                     <C_MainMarker
@@ -87,9 +86,11 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                             );
                                             mapRef.current.setZoom(expansionZoom);
                                             mapRef.current.panTo({ lat: latitude, lng: longitude });
+
                                             // получает данные карточек нажатого кластера
-                                            // const clickedCluster = supercluster.getLeaves(project.id);
-                                            // console.log('clickedCluster', clickedCluster)
+                                            setClustersProjects(supercluster.getLeaves(project.id));
+
+
                                         }}
                                         imgDefault={map_settings.defaultPin.src}
                                         imgActive={map_settings.activePin.src}

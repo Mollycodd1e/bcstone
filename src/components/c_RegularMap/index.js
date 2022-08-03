@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 
 import classes from './style.module.scss';
 import classNames from "classnames";
@@ -18,7 +18,11 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
     const [width, height] = useContext(Context);
 
     const [initialSlide, setInitialSlide] = useState(0);
+    const [clustersProjects, setClustersProjects] = useState([]);
 
+    useEffect(() => {
+        console.log('clustersProjects', clustersProjects)
+    }, [clustersProjects]);
 
     return (
         <div className={cls}>
@@ -28,6 +32,8 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
                 setIsCardVisible={setIsCardVisible}
                 isCardVisible={isCardVisible}
                 data={data}
+                clustersProjects={clustersProjects}
+                setClustersProjects={setClustersProjects}
             />
             {
                 isCardVisible && width < sizes.widthTabletMd
