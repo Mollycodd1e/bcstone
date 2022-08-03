@@ -80,12 +80,13 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                         lat={latitude}
                                         lng={longitude}
                                         onClick={() => {
-                                            const expansionZoom = Math.min(
-                                                supercluster.getClusterExpansionZoom(project.id),
-                                                20
-                                            );
-                                            mapRef.current.setZoom(expansionZoom);
-                                            mapRef.current.panTo({ lat: latitude, lng: longitude });
+                                            // приближение при нажатии на кластер
+                                            // const expansionZoom = Math.min(
+                                            //     supercluster.getClusterExpansionZoom(project.id),
+                                            //     20
+                                            // );
+                                            // mapRef.current.setZoom(expansionZoom);
+                                            // mapRef.current.panTo({ lat: latitude, lng: longitude });
 
                                             // получает данные карточек нажатого кластера
                                             setClustersProjects(supercluster.getLeaves(project.id));
@@ -113,7 +114,7 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                     }}
                                     imgDefault={project.properties.defaultPin}
                                     imgActive={project.properties.activePin}
-                                    isPinActive={isCardVisible && project.properties.order - 1 === shownSliders[0]}
+                                    isPinActive={isCardVisible && (project.properties.order - 1 === shownSliders[0]) }
                                 />
                             )
                         })
