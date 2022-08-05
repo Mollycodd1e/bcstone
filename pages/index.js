@@ -8,6 +8,7 @@ import {S_Hero} from "../src/sections/s_Hero";
 import axios from "axios";
 import {S_Top_Commercial} from "../src/sections/s_Top_Сommercial";
 import {S_Projects} from "../src/sections/s_Projects";
+import {S_About} from "../src/sections/s_About";
 
 export default function Home() {
     const [width, height] = useWindowSize();
@@ -84,6 +85,7 @@ export default function Home() {
                                     <S_Top_Commercial data={mainPageData[0]} />
                                 </div>
                                 <S_Projects data={mainPageData[0]} />
+                                <S_About />
                             </>
                         ) : (
                             <div className="lds-grid-wrapper">
