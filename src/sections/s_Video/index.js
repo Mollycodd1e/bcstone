@@ -1,5 +1,5 @@
 import { C_Video } from '../../components/c_Video';
-import { C_VideoDescription } from '../../components/c_VideoDescription';
+import { C_Description } from '../../components/c_Description';
 import classes from './style.module.scss';
 
 export const S_Video = ({url, description}) => {
@@ -7,7 +7,7 @@ export const S_Video = ({url, description}) => {
     return (
       <div className={classes.root}>
         <C_Video url={url} />
-        <C_VideoDescription description={description} />
+        <C_Description description={description} />
       </div>
     )
 }

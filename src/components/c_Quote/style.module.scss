@@ -1,0 +1,30 @@
+.root {
+  display: flex;
+  align-content: center;
+  min-height: 76px;
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+.root img {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+}
+
+.root div {
+  margin-left: 16px;
+}
+
+.root p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: normal;
+  color: #2B2C2C;
+}
+
+.root span {
+  font-size: 11px;
+  padding-right: 100px;  
+  color: #A0A0A0;
+}

@@ -1,5 +1,5 @@
 import classes from './style.module.scss';
-import { C_BackButton } from '../../components/c_BackButton';
+import { C_BackButton } from '../../components/c_BackBtn';
 import { C_Tag } from '../../components/c_Tag';
 
 export const S_Tags = ({hashtagList}) => {
@@ -10,7 +10,7 @@ export const S_Tags = ({hashtagList}) => {
             <ul>
                 {hashtagList.map((hashtag) =>
                     <li>
-                        <C_Tag text={hashtag} key={hashtag}/>
+                        <C_Tag text={hashtag} key={hashtag[0]}/>
                     </li>    
                 )}
             </ul>
