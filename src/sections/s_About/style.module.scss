@@ -8,16 +8,25 @@
 
   width: 100%;
 
+
 }
 
-.ProjectTitle {
+.frame {
   grid-area: ProjectTitle;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  //display: flex;
+  //flex-direction: column;
+  //align-items: center;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
+  justify-items: center;
+  width: 100%;
+
   //margin: 0 0 10px -30px;
   background: radial-gradient(#fff 0%, #808080 300%);
-  width: 100%;
+  //width: 100%;
+  //height: 100%;
   padding-top: 45px;
 
   & .bg_text {
@@ -27,15 +36,15 @@
     color: #F6F6F6;
   }
 
-  & .wrap_title {
+  & .title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 0 0 52px;
+    margin: 0 0 24px 52px;
   }
 
   & .bg_text,
-  & .wrap_title {
+  & .title {
     font-size: 47px;
     line-height: 47px;
     font-weight: 800;
@@ -44,7 +53,7 @@
 }
 //
 //@media (min-width: $width-mobile-md) {
-//  .wrap_title {
+//  .title {
 //    //background: black;
 //    width: 100%;
 //    flex-direction: row !important;
@@ -63,20 +72,24 @@
 
 @media (min-width: $width-tablet-md) {
   .root {
-    padding-top: 40px;
+    //padding-top: 40px;
+    padding: 0 50px;
+
   }
 
-  .ProjectTitle {
+  .frame {
     //margin: 50px 0 43px -30px;
+    //margin: 0 66px;
+    border-radius: 20px;
 
     & .bg_text,
-    & .wrap_title {
+    & .title {
       font-size: 82px;
       line-height: 82px;
     }
 
-    & .wrap_title {
-      margin: 0 !important;
+    & .title {
+      margin: 0 0 57px 0 !important;
     }
 
     & .bg_text {
@@ -89,24 +102,24 @@
 
 @media (min-width: $width-desktop-lg) {
   .root {
-
+    padding: 0 65px;
   }
 
-  .ProjectTitle {
+  .frame {
     //margin: 75px 0 50px -30px;
 
     & .bg_text,
-    & .wrap_title {
+    & .title {
       font-size: 133px;
       line-height: 133px;
     }
 
-    & .wrap_title {
-      margin: 0 !important;
+    & .title {
+      margin: 0 0 80px -583px !important;
     }
 
     & .bg_text {
-      margin: 0 0 -60px -721px !important;
+      margin: 0 0 -60px -1155px !important;
     }
   }
 
