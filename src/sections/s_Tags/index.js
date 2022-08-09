@@ -9,8 +9,8 @@ export const S_Tags = ({hashtagList}) => {
             <C_BackButton />
             <ul>
                 {hashtagList.map((hashtag) =>
-                    <li>
-                        <C_Tag text={hashtag} key={hashtag[0]}/>
+                    <li key={hashtag.id}>
+                        <C_Tag text={hashtag.hashtag}/>
                     </li>    
                 )}
             </ul>
