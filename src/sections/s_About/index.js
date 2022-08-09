@@ -7,12 +7,12 @@ export const S_About = ({className, menuOnTop, data}) => {
     return (
         <div className={cls}>
             <div className={classes.ProjectTitle}>
-                <div className={classes.bg_text}>О нас</div>
-                <div className={classes.wrap_title}>
-                    <span>Девелопер</span>
-                    <span></span>
+                <div className={classes.bg_text}>
+                    О нас
                 </div>
-
+                <div className={classes.wrap_title}>
+                    Девелопер
+                </div>
             </div>
         </div>
     )

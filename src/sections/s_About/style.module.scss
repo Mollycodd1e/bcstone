@@ -5,8 +5,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   width: 100%;
-  background: radial-gradient(#fff 0%, #808080 300%);
+
 }
 
 .ProjectTitle {
@@ -14,12 +15,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 0 10px -30px;
+  //margin: 0 0 10px -30px;
+  background: radial-gradient(#fff 0%, #808080 300%);
+  width: 100%;
+  padding-top: 45px;
 
   & .bg_text {
     display: block;
     //margin: 0 0 -15px -15px;
-    margin: 0 0 -15px -218px;
+    margin: 0 0 -22px -108px;
     color: #F6F6F6;
   }
 
@@ -27,91 +31,43 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 0 0 -20px;
-
-
-    & span:last-child {
-      margin: 0 0 0 85px;
-    }
+    margin: 0 0 0 52px;
   }
 
   & .bg_text,
   & .wrap_title {
-    font-size: 49px;
-    line-height: 42px;
+    font-size: 47px;
+    line-height: 47px;
     font-weight: 800;
     text-transform: uppercase;
   }
 }
-
-.sub_title {
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 300;
-  color: $color-card-text;
-  grid-area: sub_title;
-  margin: 0 0 32px;
-
-  & span {
-    display: block;
-    text-align: center;
-  }
-}
-
-
-@media (min-width: $width-mobile-md) {
-  .wrap_title {
-    //background: black;
-    width: 100%;
-    flex-direction: row !important;
-
-    & span {
-      display: inline;
-      margin: 0 !important;
-    }
-  }
-
-  .bg_text {
-    margin: 0 0 -15px -218px !important;
-  }
-
-
-  .sub_title {
-    & span {
-      display: inline-block;
-
-      &:first-child {
-        margin-right: 60px;
-        position: relative;
-
-        &:after {
-          content: "";
-          position: absolute;
-          right: -44px;
-          top: 3px;
-          width: 30px;
-          height: 12px;
-          background-image: url("../../img/s_arrow_cards_section.svg");
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: 30px 12px;
-        }
-      }
-
-      &:last-child {
-        text-transform: lowercase;
-      }
-    }
-  }
-}
+//
+//@media (min-width: $width-mobile-md) {
+//  .wrap_title {
+//    //background: black;
+//    width: 100%;
+//    flex-direction: row !important;
+//
+//    & span {
+//      display: inline;
+//      margin: 0 !important;
+//    }
+//  }
+//
+//  .bg_text {
+//    margin: 0 0 -15px -218px !important;
+//  }
+//}
 
 
 @media (min-width: $width-tablet-md) {
   .root {
+    padding-top: 40px;
   }
 
   .ProjectTitle {
-    margin: 50px 0 43px -30px;
+    //margin: 50px 0 43px -30px;
 
     & .bg_text,
     & .wrap_title {
@@ -124,14 +80,7 @@
     }
 
     & .bg_text {
-      margin: 0 0 -39px -405px !important;
-    }
-  }
-
-  .sub_title {
-    & span {
-      font-size: 20px;
-      line-height: 20px;
+      margin: 0 0 -50px -340px;
     }
   }
 }
@@ -143,27 +92,8 @@
 
   }
 
-  .sub_title {
-    & span {
-      font-size: 31px;
-      line-height: 31px;
-
-      &:first-child {
-        margin-right: 72px;
-
-        &:after {
-          right: -57px;
-          top: 7px;
-          width: 40px;
-          height: 16px;
-          background-size: 40px 16px;
-        }
-      }
-    }
-  }
-
   .ProjectTitle {
-    margin: 75px 0 50px -30px;
+    //margin: 75px 0 50px -30px;
 
     & .bg_text,
     & .wrap_title {
