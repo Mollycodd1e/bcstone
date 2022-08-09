@@ -1,6 +1,7 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
 import React from "react";
+import {C_ContentAbout} from "../../components/c_ContentAbout";
 
 export const S_About = ({className, menuOnTop, data}) => {
     const cls = classNames(classes.root, {[classes.menuOnTop]:menuOnTop, [className]: className});
@@ -14,6 +15,8 @@ export const S_About = ({className, menuOnTop, data}) => {
                     Девелопер
                 </div>
             </div>
+            <C_ContentAbout />
+
         </div>
     )
 }
