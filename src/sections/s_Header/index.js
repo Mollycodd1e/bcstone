@@ -1,4 +1,4 @@
-import { C_Header } from '../../components/c_header';
+import { C_Header } from '../../components/c_Header';
 import { C_HeaderData } from '../../components/c_HeaderData';
 import { C_HeaderDescription } from '../../components/c_HeaderDescription';
 import classes from './style.module.scss';

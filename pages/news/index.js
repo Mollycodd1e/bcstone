@@ -65,6 +65,11 @@ export default function News() {
     });
 
     const mocks = {
+        header: {
+            name: 'Максим Гейзер в рейтинге CRE 100',
+            description: '100 самых влиятельных персон рынка коммерческой недвижимости 2022/23',
+            data: '20/04/2022'
+        },
         video: {
             url: 'https://www.youtube.com/watch?v=Onn38VeEAC8',
             description: 'Видео с вручения премии, которая, несомненно, внесла большой вклад.'
@@ -137,9 +142,9 @@ export default function News() {
                                 </div>
                                 <S_Tags hashtagList={mocks.hashtagList}/>
                                 <S_Header 
-                                    header={'Максим Гейзерв рейтинге CRE 100'} 
-                                    text={`100 самых влиятельных персон рынка коммерческой недвижимости 2022/23`}
-                                    data={'20/04/2022'}
+                                    header={mocks.header.name} 
+                                    text={mocks.header.description}
+                                    data={mocks.header.data}
                                 />
                                 <S_Video url={mocks.video.url} 
                                     description={mocks.video.description}

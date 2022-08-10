@@ -1,13 +1,14 @@
 .root {
-  margin-top: 10px;
-  padding: 3px 3px 3px 11px;
-  border-left: 9px solid #515dac;
+  margin-top: 5px;
+  padding: 3px 3px 0 11px;
+  border-left: 8px solid #515dac;
 }
 
 .root p {
   box-sizing: border-box;
   margin: 0;
   font-size: 12px;
-  padding-right: 30px;
-  
+  line-height: 14px;
+  letter-spacing: -0.07em;
+  padding-right: 50px;
 }
