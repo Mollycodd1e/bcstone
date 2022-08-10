@@ -160,7 +160,7 @@ input[type="radio"].visually-hidden {
   }
 }
 
-@media (min-width: $width-notebook) {
+@media (min-width: $width-tablet-md) {
   .brDesktop {
     display: block;
   }
