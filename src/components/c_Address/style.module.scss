@@ -1,0 +1,16 @@
+.root {
+  margin: 0 auto;
+  margin-top: 16px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #343636;
+}
+
+.root p {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.root p:nth-child(2) {
+  margin-top: 10px;
+}

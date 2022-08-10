@@ -1,13 +1,16 @@
+import classNames from 'classnames';
 import Link from 'next/link';
 import classes from './style.module.scss';
 
 export const C_MoreInfoBtn = ({}) => {
     
-    return (
-        <div className={classes.root}>
-          <Link href={`#`} >
-            <a>Узнать больше</a>
-          </Link>  
-        </div>
-    )
+  const cls = classNames(classes.root, {[classNames]: classNames});
+
+  return (
+      <div className={cls}>
+        <Link href={`#`} >
+          <a>Узнать больше</a>
+        </Link>  
+      </div>
+  )
 }

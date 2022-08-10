@@ -23,16 +23,16 @@
   color: #A0A0A0;
 }
 
-.root div[class='input__name-wrapper'] {
+.root .input__name_wrapper {
   margin-top: 21px;
 }
 
-.root div[class='input__mail-wrapper'] {
+.root .input__mail_wrapper {
   margin-top: 17px;
 }
 
-.root div[class='input__name-wrapper'] input,
-.root div[class='input__mail-wrapper'] input {
+.root .input__name_wrapper input,
+.root .input__mail_wrapper input {
   width: 100%;
   padding: 6px 5px 6px 23px;
   font-size: 12px;
@@ -48,14 +48,14 @@
   }
 }
 
-.root div[class='input__checkbox-wrapper'] {
+.root .input__checkbox_wrapper {
   position: relative;
   margin-top: 14px;
   font-size: 10px;
   line-height: 10px;
 }
 
-.root div[class='input__checkbox-wrapper'] input:not(:checked) + label::before {
+.root .input__checkbox_wrapper input:not(:checked) + label::before {
   content: '';
   position: absolute;
 
@@ -71,7 +71,7 @@
   cursor: pointer;
 }
 
-.root div[class='input__checkbox-wrapper'] input:checked + label::after {
+.root .input__checkbox_wrapper input:checked + label::after {
   content: '';
   position: absolute;
 
@@ -86,7 +86,7 @@
   cursor: pointer;
 }
 
-.root div[class='input__checkbox-wrapper'] label {
+.root .input__checkbox_wrapper label {
   padding-left: 18px;
   letter-spacing: -0.04em;
   cursor: pointer;

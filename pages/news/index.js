@@ -16,6 +16,7 @@ import { S_Quote } from "../../src/sections/s_Quote";
 import { S_Picture } from "../../src/sections/s_Picture";
 import { S_MoreInfoBtn } from "../../src/sections/s_MoreInfoBtn";
 import { S_Form } from "../../src/sections/s_Form";
+import { S_Footer } from "../../src/sections/s_Footer";
 
 export default function News() {
     const [width, height] = useWindowSize();
@@ -71,7 +72,7 @@ export default function News() {
             data: '20/04/2022'
         },
         video: {
-            url: 'https://www.youtube.com/watch?v=Onn38VeEAC8',
+            url: 'https://www.youtube.com/embed/Onn38VeEAC8',
             description: 'Видео с вручения премии, которая, несомненно, внесла большой вклад.'
         },
         hashtagList: [
@@ -124,8 +125,17 @@ export default function News() {
                 }
             ],
             description : 'Фотографии с вручения премии, которая, несомненно,внесла вклад.'
+        },
+        contacts: {
+            phone: '+7 (495) 124-45-67',
+            mail: 'sales@bc-stone.ru',
+            address: 'г. Москва, Бумажный проезд, вл. 19',
+            sales: 'Отдел продаж по телефону:пн. - пт.: с 9:00 до 21:00сб. - вс.: c 9:30 до 20:00',
+            telegram: '@stone_by_stonehedge'
         }    
     }
+
+    const {header, video, slider, author, image, contacts} = mocks;
 
     return (
             <Context.Provider value={[width, height]}>
@@ -142,26 +152,29 @@ export default function News() {
                                 </div>
                                 <S_Tags hashtagList={mocks.hashtagList}/>
                                 <S_Header 
-                                    header={mocks.header.name} 
-                                    text={mocks.header.description}
-                                    data={mocks.header.data}
+                                    header={header.name} 
+                                    text={header.description}
+                                    data={header.data}
                                 />
-                                <S_Video url={mocks.video.url} 
-                                    description={mocks.video.description}
+                                <S_Video url={video.url} 
+                                    description={video.description}
                                 />
                                 <S_Text text={mocks.textList[0].text}
                                 />
-                                <S_Slider items={[<img src={mocks.slider.images[0].url}/>, <img src={mocks.slider.images[1].url}/>]} description={mocks.slider.description} />
+                                <S_Slider items={[<img src={slider.images[0].url}/>, <img src={slider.images[1].url}/>]} 
+                                    description={slider.description} />
                                 <S_Text text={mocks.textList[1].text}
                                 />
-                                <S_Quote photo={mocks.author.photo} name={mocks.author.name} description={mocks.author.description}
-                                    text={mocks.author.quote}
+                                <S_Quote photo={author.photo} name={author.name} description={author.description}
+                                    text={author.quote}
                                 />
-                                <S_Picture src={mocks.image.url} description={mocks.image.description}/>
+                                <S_Picture src={image.url} description={image.description}/>
                                 <S_Text text={mocks.textList[2].text}
                                 />
                                 <S_MoreInfoBtn />
                                 <S_Form />
+                                <S_Footer phone_number={contacts.phone} mail={contacts.mail} address={contacts.address} 
+                                    sales_number={contacts.sales} telegram={contacts.telegram}/>
                             </>
                         ) : (
                             <div className="lds-grid-wrapper">
