@@ -9,7 +9,7 @@ export const C_ContentAbout = ({className, data}) => {
     return (
         <div className={cls}>
             <C_SliderVideoAbout />
-            <C_TextContentAbout />
+            <C_TextContentAbout data={data} />
         </div>
     )
 }
