@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import { C_FooterContacts } from '../../components/c_FooterContacts';
 import { C_Logo } from '../../components/c_Logo';
 import { C_LogoSH } from '../../components/c_LogoSH';
-import { C_Politics } from '../../components/c_Copyright';
+import { C_Copyright } from '../../components/c_Copyright';
 import classes from './style.module.scss';
 
 export const S_Footer = ({phone_number, mail, address, sales_number, telegram, copyright}) => {
@@ -15,8 +15,8 @@ export const S_Footer = ({phone_number, mail, address, sales_number, telegram, c
         <C_FooterContacts phone_number={phone_number} mail={mail} address={address} 
           sales_number={sales_number} telegram={telegram}/>
         <C_Logo className={classes.logo_footer}/>
-        <C_LogoSH />
-        <C_Politics copyright={copyright}/>
+        <C_LogoSH className={classes.logoSH_footer}/>
+        <C_Copyright copyright={copyright}/>
       </div>
   )
 }

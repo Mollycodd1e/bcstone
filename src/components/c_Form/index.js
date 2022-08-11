@@ -14,12 +14,22 @@ export const C_Form = ({header, description, ready}) => {
 
   const validName = /^(([a-zA-Zа-яА-ЯЁё-]{1,30}))$/u;
 
+  const EMAIL_REGEXP = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  
   const onInputCheck = (evt) => {
     if (evt) {
-      (evt.target.value.length > 0) && (validName.test(evt.target.value)) ? evt.target.style.borderColor = formColor.valid 
-      : (evt.target.value.length > 0) && (!validName.test(evt.target.value)) ? evt.target.style.borderColor = formColor.invalid 
-      : evt.target.style.borderColor = formColor.default
+      console.log(evt.target.nextElementSibling);
+      (evt.target.value.length > 0) && (validName.test(evt.target.value)) ? (evt.target.style.borderColor = formColor.valid , evt.target.nextElementSibling.classList.add('visually-hidden'))
+      : (evt.target.value.length > 0) && (!validName.test(evt.target.value)) ? (evt.target.style.borderColor = formColor.invalid, evt.target.nextElementSibling.classList.remove('visually-hidden'))
+      : (evt.target.style.borderColor = formColor.default, evt.target.nextElementSibling.classList.add('visually-hidden'))
     }
+  }
+
+  const onEmailCheck = (evt) => {
+    evt.target.value.length === 0 ? (evt.target.style.borderColor = formColor.default, evt.target.nextElementSibling.classList.add('visually-hidden'))
+    : EMAIL_REGEXP.test(evt.target.value) ? (evt.target.style.borderColor = formColor.valid , evt.target.nextElementSibling.classList.add('visually-hidden'))
+    : !EMAIL_REGEXP.test(evt.target.value) ? (evt.target.style.borderColor = formColor.invalid, evt.target.nextElementSibling.classList.remove('visually-hidden'))
+    : (evt.target.style.borderColor = formColor.default, evt.target.nextElementSibling.classList.add('visually-hidden'))
   }
 
   return (
@@ -30,11 +40,11 @@ export const C_Form = ({header, description, ready}) => {
             <p>{description}</p>
             <div className={classes.input__name_wrapper}>
               <input placeholder="Как к вам обращаться" name="name" id="id-name" onInput={(evt) => onInputCheck(evt)}/>
-              <label htmlFor="id-name"/>
+              <label className={'visually-hidden'} htmlFor="id-name">Имя должно содержать только буквы</label>
             </div>
             <div className={classes.input__mail_wrapper}>
-              <input type="email" placeholder='E-mail*' name="email" id="id-email" required/>
-              <label id="id-email" />
+              <input type="email" placeholder='E-mail*' name="email" id="id-email" onBlur={(evt) => onEmailCheck(evt)} required/>
+              <label className={'visually-hidden'} htmlFor="id-email">Адрес введен неверно</label>
             </div>
             <button type="submit">
               <span >Хочу быть в курсе</span>

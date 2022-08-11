@@ -29,7 +29,7 @@ export const C_SliderC = ({className, isBtnClose, items, initialSlide, onBtnClos
                         return (
                             <SwiperSlide className = {classes.swiperSlide} key={i}>
                                 {item}
-                            < /SwiperSlide>
+                            </SwiperSlide>
                         )
                     })
                 }

@@ -1,7 +1,5 @@
 .root {
   width: 100%;
-  padding: 22px 37px 38px 23px;
-  background-color: #F6F6F6;
 }
 
 .root fieldset {
@@ -12,48 +10,61 @@
 
 .root legend {
   font-size: 22px;
-  line-height: 30px;
-  color: #2B2C2D;
+  line-height: 22px;
+  letter-spacing: -0.2px;
+  color: #2b2c2d;
 }
 
 .root p {
   margin: 0;
+  margin-top: 10px;
   font-size: 14px;
-  line-height: 19px;
-  color: #A0A0A0;
+  line-height: 15px;
+  color: #a0a0a0;
 }
 
-.root .input__name_wrapper {
-  margin-top: 21px;
+.input__name_wrapper {
+  margin-top: 30px;
 }
 
-.root .input__mail_wrapper {
+.input__mail_wrapper {
   margin-top: 17px;
+}
+
+.input__mail_wrapper label,
+.input__name_wrapper label {
+  display: block;
+  margin-top: 5px;
+  margin-left: 23px;
+  color: #c98080;
 }
 
 .root .input__name_wrapper input,
 .root .input__mail_wrapper input {
   width: 100%;
-  padding: 6px 5px 6px 23px;
+  padding: 6px 5px 8px 23px;
   font-size: 12px;
   line-height: 16px;
   border-radius: 16px;
-  border: 1px solid #CCCCCC;
-  color: #7B7B7B;
+  border: 1px solid #cccccc;
+  color: #7b7b7b;
   outline: none;
 
   &::placeholder {
     font-size: 12px;
     line-height: 16px;
-    color: #CCCCCC;
+    letter-spacing: 0.7px;
+    color: #cccccc;
   }
 }
 
 .root .input__checkbox_wrapper {
   position: relative;
-  margin-top: 14px;
+  margin-top: 18px;
   font-size: 10px;
   line-height: 10px;
+  height: 15px;
+  cursor: pointer;
 }
 
 .root .input__checkbox_wrapper input:not(:checked) + label::before {
@@ -66,8 +77,9 @@
   width: 10px;
   height: 10px;
 
-  background: url('../c_Form/unchecked.png');
+  background: url('../../img/c_Form/unchecked.png');
   background-repeat: no-repeat;
+  background-size: 10px 10px;
   
   cursor: pointer;
 }
@@ -82,8 +94,9 @@
   height: 10px;
   border-radius: 4px;
 
-  background: url('../c_Form/checked.png');
+  background: url('../../img/c_Form/checked.png');
   background-repeat: no-repeat;
+  background-size: 10px 10px;
   cursor: pointer;
 }
 
@@ -100,7 +113,7 @@
   margin-top: 37px;
   border-radius: 16px;
   border: none;
-  background-color: #515DAC;
-  color: #FFFFFF;
+  background-color: #515dac;
+  color: #ffffff;
   cursor: pointer;
 }
