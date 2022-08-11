@@ -39,7 +39,8 @@
   line-height: 16px;
   border-radius: 16px;
   border: 1px solid #CCCCCC;
-  color: #CCCCCC;
+  color: #7B7B7B;
+  outline: none;
 
   &::placeholder {
     font-size: 12px;
@@ -65,7 +66,7 @@
   width: 10px;
   height: 10px;
 
-  background: url('../c_Form/fffff.png');
+  background: url('../c_Form/unchecked.png');
   background-repeat: no-repeat;
   
   cursor: pointer;
@@ -81,7 +82,7 @@
   height: 10px;
   border-radius: 4px;
 
-  background: url('../c_Form/gggg.png');
+  background: url('../c_Form/checked.png');
   background-repeat: no-repeat;
   cursor: pointer;
 }

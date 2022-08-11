@@ -1,0 +1,15 @@
+.root {
+  margin-top: 22px;
+  order: 4;
+}
+
+.root div {
+  width: 100%;
+  font-size: 10px;
+  line-height: 12px;
+  color: #343636;
+}
+
+.root div:nth-child(n + 2) {
+  margin-top: 11px;
+}

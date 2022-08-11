@@ -1,14 +1,15 @@
 import classNames from 'classnames';
-import { C_Form } from '../../components/c_Form';
 import classes from './style.module.scss';
 
-export const S_Form = ({header, description, ready}) => {
+export const C_Copyright = ({copyright}) => {
   
   const cls = classNames(classes.root, {[classNames]: classNames});
-  
+
   return (
       <div className={cls}>
-        <C_Form header={header} description={description} ready={ready}/>
+        <div>{copyright.name}</div>
+        <div>{copyright.author}</div>
+        <div>{copyright.description}</div>
       </div>
   )
 }

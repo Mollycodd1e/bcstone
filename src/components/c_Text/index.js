@@ -7,7 +7,7 @@ export const C_Text = ({text}) => {
 
   return (
     <div className={cls}>
-      <p>{text}</p>
+      <p dangerouslySetInnerHTML={{ __html: text}}></p>
     </div>
   )
 }

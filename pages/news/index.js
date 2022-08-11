@@ -67,12 +67,12 @@ export default function News() {
 
     const mocks = {
         header: {
-            name: 'Максим Гейзер в рейтинге CRE 100',
+            name: `Максим Гейзер в${'\u00A0'}рейтинге CRE 100`,
             description: '100 самых влиятельных персон рынка коммерческой недвижимости 2022/23',
             data: '20/04/2022'
         },
         video: {
-            url: 'https://www.youtube.com/embed/Onn38VeEAC8',
+            //url: 'https://www.youtube.com/embed/Onn38VeEAC8',
             description: 'Видео с вручения премии, которая, несомненно, внесла большой вклад.'
         },
         hashtagList: [
@@ -132,11 +132,22 @@ export default function News() {
             address: 'г. Москва, Бумажный проезд, вл. 19',
             sales: 'Отдел продаж по телефону:пн. - пт.: с 9:00 до 21:00сб. - вс.: c 9:30 до 20:00',
             telegram: '@stone_by_stonehedge'
-        }    
+        },
+        copyright: {
+            header: `Инвестируйте Выгодно В${'\u00A0'}ликвидную недвижимость`,
+            name: 'Политика конфиденциальности',
+            author: '© АО «СТОУНХЕДЖ»',
+            description: 'Содержимое данного сайта (включая размещенную информацию и материалы) охраняется авторским правом (ст. 1271 ГК РФ). Запрещено копирование дизайна настоящего сайта, его структуры и отдельных элементов без предварительного письменного согласия АО «СТОУНХЕД»'
+        },
+        form: {
+            header: 'Новости рынка и проектов',
+            ready: 'Готово!',
+            description: 'Одним из первых узнавайте о новостях рынка коммерческой недвижимости'       
+        }
     }
 
-    const {header, video, slider, author, image, contacts} = mocks;
-
+    const {header, video, slider, author, image, contacts, copyright, form} = mocks;
+    
     return (
             <Context.Provider value={[width, height]}>
                 <Head>
@@ -172,9 +183,9 @@ export default function News() {
                                 <S_Text text={mocks.textList[2].text}
                                 />
                                 <S_MoreInfoBtn />
-                                <S_Form />
+                                <S_Form header={form.header} description={form.description} ready={form.ready}/>
                                 <S_Footer phone_number={contacts.phone} mail={contacts.mail} address={contacts.address} 
-                                    sales_number={contacts.sales} telegram={contacts.telegram}/>
+                                    sales_number={contacts.sales} telegram={contacts.telegram} copyright={copyright}/>
                             </>
                         ) : (
                             <div className="lds-grid-wrapper">

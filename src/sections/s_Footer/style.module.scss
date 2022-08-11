@@ -1,5 +1,23 @@
 .root {
+  display: flex;
+  flex-direction: column;
   padding: 44px 36px 89px 20px;
   background-image: url('../s_Footer/bg.png');
   background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.root h2 {
+  order: 2;
+  margin: 0;
+  margin-top: 25px;
+  font-size: 28px;
+  line-height: 34px;
+  color: #343636;
+}
+
+.logo_footer {
+  margin-top: 156px;
+  order: 3;
 }
