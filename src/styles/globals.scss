@@ -62,6 +62,10 @@ input[type="radio"].visually-hidden {
   width: 1px;
 }
 
+.brTablet {
+  display: none;
+}
+
 .brDesktop {
   display: none;
 }
@@ -161,11 +165,29 @@ input[type="radio"].visually-hidden {
 }
 
 @media (min-width: $width-tablet-md) {
-  .brDesktop {
-    display: block;
-  }
-
   .brMobile {
     display: none;
+  }
+
+  .brDesktop {
+    display: none;
+  }
+
+  .brTablet {
+    display: block;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .brMobile {
+    display: none;
+  }
+
+  .brTablet {
+    display: none;
+  }
+
+  .brDesktop {
+    display: block;
   }
 }
