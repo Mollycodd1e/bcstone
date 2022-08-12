@@ -8,7 +8,7 @@ export const C_ContentAbout = ({className, data}) => {
     const cls = classNames(classes.root, {[className]: className});
     return (
         <div className={cls}>
-            <C_SliderVideoAbout />
+            <C_SliderVideoAbout data={data} />
             <C_TextContentAbout data={data} />
         </div>
     )
