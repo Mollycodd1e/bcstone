@@ -37,6 +37,7 @@
   margin-top: 5px;
   margin-left: 23px;
   color: #c98080;
+  cursor: pointer;
 }
 
 .root .input__name_wrapper input,
@@ -49,6 +50,7 @@
   border: 1px solid #cccccc;
   color: #7b7b7b;
   outline: none;
+  cursor: pointer;
 
   &::placeholder {
     font-size: 12px;
@@ -77,7 +79,7 @@
   width: 10px;
   height: 10px;
 
-  background: url('../../img/c_Form/unchecked.png');
+  background: url('../../img/unchecked.png');
   background-repeat: no-repeat;
   background-size: 10px 10px;
   
@@ -94,7 +96,7 @@
   height: 10px;
   border-radius: 4px;
 
-  background: url('../../img/c_Form/checked.png');
+  background: url('../../img/checked.png');
   background-repeat: no-repeat;
   background-size: 10px 10px;
   cursor: pointer;
@@ -116,4 +118,8 @@
   background-color: #515dac;
   color: #ffffff;
   cursor: pointer;
+}
+
+.mail__need-wrapper {
+  display: none;
 }
