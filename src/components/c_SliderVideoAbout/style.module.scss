@@ -9,5 +9,16 @@
 }
 
 .С_Slider {
+  & > div {
+    & > div {
+      & > div {
+      //background: black;
 
+      }
+    }
+
+  }
+  //& div[class="swiper-slide"] {
+  //  border-radius: 8px;
+  //}
 }
