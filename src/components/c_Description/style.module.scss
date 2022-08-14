@@ -1,3 +1,5 @@
+@import '../../styles/style';
+
 .root {
   margin-top: 5px;
   padding: 3px 3px 0 11px;
@@ -11,4 +13,28 @@
   line-height: 14px;
   letter-spacing: -0.1px;
   padding-right: 49px;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root p {
+    font-size: 16px;
+    line-height: 19px;
+    max-width: 265px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    border-bottom: 8px solid #515dac;
+    border-left: none;
+    align-self: end;
+    width: 100%;
+    margin-left: 100px;
+    padding: 0;
+    margin-bottom: 50px;
+  }
+
+  .root p {
+    padding-right: 0;
+  }
 }

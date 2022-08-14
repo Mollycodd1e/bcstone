@@ -1,3 +1,5 @@
+@import '../../styles/style';
+
 .root {
   width: 100%;
   margin-top: 21px;
@@ -7,5 +9,32 @@
 .root img {
   width: 260px;
   min-height: 176px;
+  max-height: 439px;
   border-radius: 8px;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    margin-top: 47px;
+    padding: 0 130px 10px 130px;
+  }
+
+  .root img {
+    width: 100%;
+    min-height: 176px;
+    border-radius: 8px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    display: flex;
+    margin-top: 200px;
+    padding: 0 393px 10px 418px;
+  }
+
+  .root img {
+    width: 100%;
+    max-width: 788px;
+    min-height: 560px;  }
 }

@@ -69,3 +69,9 @@
     width: calc(100vw - 104px);
   }
 }
+
+@media (min-width: $width-desktop-lg) {
+  .swiper {
+    min-width: 788px;
+  }
+}

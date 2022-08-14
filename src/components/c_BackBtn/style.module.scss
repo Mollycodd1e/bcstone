@@ -1,3 +1,5 @@
+@import '../../styles/style';
+
 .root {
   position: relative;
   display: block;
@@ -24,5 +26,33 @@
   &::after {
     top: 12px;
     transform: rotate(45deg);
+  }
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1px solid #B7B7B7;
+  
+    &::before,
+    &::after {
+      width: 10px;
+      height: 1px;
+      background-color: #B7B7B7;
+    }
+  
+    &::before {
+      top: 20px;
+      left: 20px;
+      transform: rotate(-45deg);
+    }
+  
+    &::after {
+      top: 27px;
+      left: 20px;
+      transform: rotate(45deg);
+    }
   }
 }

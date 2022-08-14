@@ -1,3 +1,5 @@
+@import '../../styles/style';
+
 .root {
   margin-top: 13px;
   position: relative;
@@ -43,4 +45,57 @@
   letter-spacing: -0.1px;
   padding-right: 100px;  
   color: #A0A0A0;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .root p {
+    font-size: 30px;
+    line-height: 32px;
+    letter-spacing: -0.1px;
+  }
+  
+  .root span {
+    display: block;
+    font-size: 16px;
+    line-height: 19px;
+    width: 450px;
+  }
+}
+
+@media (min-width: $width-tablet-md) {
+  .root img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .root p {
+    font-size: 30px;
+    line-height: 32px;
+    letter-spacing: -0.1px;
+  }
+  
+  .root span {
+    display: block;
+    font-size: 16px;
+    line-height: 19px;
+    width: 450px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root img {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .root span {
+    font-size: 18px;
+    line-height: 20px;
+    width: 450px;
+  }
 }

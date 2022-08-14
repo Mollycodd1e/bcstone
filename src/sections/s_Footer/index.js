@@ -14,9 +14,13 @@ export const S_Footer = ({phone_number, mail, address, sales_number, telegram, c
         <h2>{copyright.header}</h2>
         <C_FooterContacts phone_number={phone_number} mail={mail} address={address} 
           sales_number={sales_number} telegram={telegram}/>
-        <C_Logo className={classes.logo_footer}/>
-        <C_LogoSH className={classes.logoSH_footer}/>
-        <C_Copyright copyright={copyright}/>
+        <div className={classes.copyright_wrapper}>
+          <div className={classes.logo_wrapper}>
+            <C_Logo className={classes.logo_footer}/>
+            <C_LogoSH className={classes.logoSH_footer}/>
+          </div>
+          <C_Copyright copyright={copyright}/>
+        </div>
       </div>
   )
 }

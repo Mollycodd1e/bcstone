@@ -1,3 +1,5 @@
+@import '../../styles/style';
+
 .root {
   display: flex;
   flex-direction: column;
@@ -27,4 +29,17 @@
   line-height: 31px;
   margin-top: 6px;
   color: #343636;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root a:first-child {
+    font-size: 38px;
+    line-height: 40px;  
+  }
+  
+  .root a:nth-child(2) {
+    font-size: 38px;
+    line-height: 40px;  
+    margin-top: 13px;
+  }
 }

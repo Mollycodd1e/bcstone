@@ -1,3 +1,5 @@
+@import '../../styles/style';
+
 .root {
   margin-top: 2px;
 }
@@ -7,6 +9,15 @@
   padding-right: 50px;
   font-size: 14px;
   line-height: 16px;
+  font-weight: 300;
   letter-spacing: -0.2px;
   color: #a0a0a0;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root p {
+    font-size: 22px;
+    line-height: 25px;
+    letter-spacing: -0.2px;
+  }
 }

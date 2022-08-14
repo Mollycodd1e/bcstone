@@ -9,7 +9,7 @@ export const S_Quote = ({photo, name, description, text}) => {
     return (
         <div className={cls}>
           <C_Quote photo={photo} name={name} description={description} />
-          <div className={classes.quote_text}>{text} </div>
+          <div className={classes.quote_text}>{text}</div>
         </div>
     )
 }

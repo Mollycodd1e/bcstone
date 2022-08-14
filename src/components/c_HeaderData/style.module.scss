@@ -1,3 +1,5 @@
+@import '../../styles/style';
+
 .root {
   margin-top: 6px;
   padding: 0;
@@ -10,4 +12,11 @@
   font-style: italic;
   letter-spacing: -0.07px;
   color: #515dac;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root p {
+    font-size: 22px;
+    line-height: 23px;
+  }
 }
