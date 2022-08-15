@@ -3,10 +3,16 @@
 .root {
   width: 242px;
   height: 164px;
+  border-radius: 8px;
+  overflow: hidden;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
-  border-radius: 8px !important;
+  background-size: cover;
+  //border: 1px solid black;
+
+  & > div {
+
+  }
 }
 
 @media (min-width: $width-tablet-md) {

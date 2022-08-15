@@ -11,7 +11,7 @@ export const C_SliderVideoAbout = ({className, data}) => {
     console.log(slider.gallery)
 
     const elements = slider.gallery.map((el, i) => {
-        return <C_SliderElementAbout img={el.src}/>
+        return <C_SliderElementAbout key={i} img={el.src}/>
 
     })
 
