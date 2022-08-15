@@ -9,23 +9,20 @@
   margin-bottom: 25px;
 }
 
+.С_Slider {
+
+}
+
 @media (min-width: $width-tablet-md) {
   .root {
     width: auto;
   }
-}
 
-.С_Slider {
-  & > div {
-    & > div {
-      & > div {
-      //background: black;
-
-      }
-    }
+  .С_Slider {
 
   }
-  //& div[class="swiper-slide"] {
-  //  border-radius: 8px;
-  //}
+}
+
+@media (min-width: $width-desktop-lg) {
+
 }
