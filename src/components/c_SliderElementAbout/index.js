@@ -1,3 +1,4 @@
+import {useEffect, useRef} from "react";
 import classes from './style.module.scss';
 import classNames from "classnames";
 

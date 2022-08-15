@@ -10,12 +10,13 @@
 }
 
 .С_Slider {
-
+  height: 100%;
 }
 
 @media (min-width: $width-tablet-md) {
   .root {
-    width: auto;
+    width: 100%;
+    border-radius: 10px;
   }
 
   .С_Slider {
