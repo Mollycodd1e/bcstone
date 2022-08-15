@@ -12,35 +12,59 @@ export const C_Form = ({header, description, ready}) => {
     default: '#cccccc'
   }
 
-  const mail = document.querySelector('#id-email');
+  var mail = document.querySelector('#id-email');
 
   const validName = /^(([a-zA-Zа-яА-ЯЁё-]{1,30}))$/u;
 
   const EMAIL_REGEXP = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
   
+  const onInputValid = (evt) => {
+    evt.target.style.borderColor = formColor.valid;
+    evt.target.nextElementSibling.classList.add('visually-hidden');
+  }
+
+  const onInputInvalid = (evt) => {
+    evt.target.style.borderColor = formColor.invalid;
+    evt.target.nextElementSibling.style.color= formColor.invalid;
+    evt.target.nextElementSibling.classList.remove('visually-hidden');
+  }
+
+  const onInputDefault = (evt) => {
+    evt.target.style.borderColor = formColor.default;
+    evt.target.nextElementSibling.classList.add('visually-hidden');
+  }
+
+  const onInputNeed = (e) => {
+    var input = document.querySelector('#id-email');
+    //input.value='',
+    e.preventDefault();
+    input.nextElementSibling.classList.remove('visually-hidden');
+    input.nextElementSibling.style.color= formColor.need,
+    input.nextElementSibling.innerHTML='Введите почту',
+    input.style=`border-color: ${formColor.need}`
+  }
+
   const onInputCheck = (evt) => {
     if (evt) {
-      (evt.target.value.length > 0) && (validName.test(evt.target.value)) ? (evt.target.style.borderColor = formColor.valid , evt.target.nextElementSibling.classList.add('visually-hidden'))
-      : (evt.target.value.length > 0) && (!validName.test(evt.target.value)) ? (evt.target.style.borderColor = formColor.invalid, evt.target.nextElementSibling.classList.remove('visually-hidden'))
-      : (evt.target.style.borderColor = formColor.default, evt.target.nextElementSibling.classList.add('visually-hidden'))
+      (evt.target.value.length > 0) && (validName.test(evt.target.value)) ? (onInputValid(evt))
+      : (evt.target.value.length > 0) && (!validName.test(evt.target.value)) ? (onInputInvalid(evt))
+      : (onInputDefault(evt))
     }
   }
 
   const onEmailCheck = (evt) => {
-    evt.target.value.length === 0 ? (evt.target.style.borderColor = formColor.default, evt.target.nextElementSibling.classList.add('visually-hidden'))
-    : EMAIL_REGEXP.test(evt.target.value) ? (evt.target.style.borderColor = formColor.valid , evt.target.nextElementSibling.classList.add('visually-hidden'))
-    : !EMAIL_REGEXP.test(evt.target.value) ? (evt.target.style.borderColor = formColor.invalid, evt.target.nextElementSibling.classList.remove('visually-hidden'))
-    : (evt.target.style.borderColor = formColor.default, evt.target.nextElementSibling.classList.add('visually-hidden'))
+    evt.target.value.length === 0 ? (onInputDefault(evt))
+    : EMAIL_REGEXP.test(evt.target.value) ? (onInputValid(evt))
+    : !EMAIL_REGEXP.test(evt.target.value) ? (onInputInvalid(evt))
+    : (onInputDefault(evt))
   }
 
   const onFormSubmit = (e) => {
       var input = document.querySelector('#id-email');
-      e.preventDefault();
-      ((input.value.length < 1) || (EMAIL_REGEXP.test(input.value))) ? (input.value='', e.preventDefault(),input.nextElementSibling.classList.remove('visually-hidden'),
-      input.nextElementSibling.style.color= formColor.need , input.nextElementSibling.innerHTML='Введите почту', 
-      input.style=`border-color: ${formColor.need}`) : (input.style.borderColor = formColor.default, input.nextElementSibling.classList.add('visually-hidden'))
+      console.log(input.value);
+      ((input.value.length < 1) || (EMAIL_REGEXP.test(`input.value`))) ? (onInputNeed(e)) : (input.style.borderColor = formColor.default, input.nextElementSibling.classList.add('visually-hidden'), input.nextElementSibling.style.color= formColor.invalid)
   };
-  //onFocus={(e) => (mail.style.borderColor = formColor.default, mail.nextElementSibling.style.color = formColor.error, mail.nextElementSibling.classList.add('visually-hidden'), mail.nextElementSibling.innerHTML='Адрес введен неверно')}
+  
   return (
       <div className={cls}>
         <form onSubmit={(e) => onFormSubmit(e)}>

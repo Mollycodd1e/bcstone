@@ -1,7 +1,6 @@
 import {useEffect, useRef, useState} from "react";
 import {useWindowSize, Context} from "../../src/library";
 import Script from 'next/script'
-import {S_Menu} from "../../src/sections/s_Menu";
 import axios from "axios";
 import Head from 'next/head';
 import classes from  './style.module.scss';
@@ -10,13 +9,13 @@ import { S_Header } from "../../src/sections/s_Header";
 import { isNoSubstitutionTemplateLiteral } from "typescript";
 import { S_Video } from "../../src/sections/s_Video";
 import { S_Text } from "../../src/sections/s_Text";
-import { C_Slider } from "../../src/components/c_Slider";
 import { S_Slider } from "../../src/sections/s_Slider";
 import { S_Quote } from "../../src/sections/s_Quote";
 import { S_Picture } from "../../src/sections/s_Picture";
 import { S_MoreInfoBtn } from "../../src/sections/s_MoreInfoBtn";
 import { S_Form } from "../../src/sections/s_Form";
 import { S_Footer } from "../../src/sections/s_Footer";
+import { S_MenuC } from "../../src/sections/s_MenuC";
 
 export default function News() {
     const [width, height] = useWindowSize();
@@ -86,6 +85,18 @@ export default function News() {
             },
             {
                 id: 3,
+                hashtag: 'отчет'
+            },
+            {
+                id: 4,
+                hashtag: 'премия'
+            },
+            {
+                id: 5,
+                hashtag: 'вручение'
+            },
+            {
+                id: 6,
                 hashtag: 'отчет'
             },
         ],
@@ -162,7 +173,7 @@ export default function News() {
                     {data.length !== 0 ? (
                             <>
                                 <div className={`common_top_bg + ${classes.common_top_bg_news}`}  ref={topMenuEl}>
-                                    <S_Menu menuOnTop={menuOnTop} data={mainPageData[0]} />
+                                    <S_MenuC menuOnTop={menuOnTop} data={mainPageData[0]} />
                                 </div>
                                 <S_Tags hashtagList={mocks.hashtagList}/>
                                 <S_Header 

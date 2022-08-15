@@ -6,6 +6,6 @@ export const C_Video = ({url}) => {
   const cls = classNames(classes.root, {[classNames]: classNames});
 
   return (
-    <iframe className={cls} src={url}  />
+    <iframe className={cls} src={url} />
   )
 }

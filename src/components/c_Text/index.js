@@ -8,7 +8,7 @@ export const C_Text = ({text, fullText}) => {
   return (
     <div className={cls}>
       <p dangerouslySetInnerHTML={{ __html: text}}></p>
-      <p dangerouslySetInnerHTML={{ __html: `${window.width < 1000 ? '' : fullText}`}}></p>
+      <p dangerouslySetInnerHTML={{ __html: `${window.innerWidth < 1000 ? '' : fullText}`}}></p>
     </div>
   )
 }
