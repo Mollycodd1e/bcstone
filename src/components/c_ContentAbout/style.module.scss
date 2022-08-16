@@ -16,7 +16,7 @@
 @media (min-width: $width-tablet-md) {
   .root {
     display: grid;
-    grid-template-columns: auto 362px;
+    grid-template-columns: auto auto;
     grid-template-rows: 218px;
     width: 100%;
     grid-template-areas: "C_SliderVideoAbout C_TextContentAbout";
@@ -29,5 +29,8 @@
 
 
 @media (min-width: $width-desktop-lg) {
-
+  .root {
+    grid-column-gap: 95px;
+    grid-template-rows: 573px;
+  }
 }
