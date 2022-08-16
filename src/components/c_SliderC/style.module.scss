@@ -76,7 +76,20 @@
 }
 
 @media (min-width: $width-desktop-lg) {
+  .root {
+    min-height: 570px;
+    margin-bottom: 0;
+  }
+  .root img {
+    min-height: 570px;
+  }
+
   .swiper {
     min-width: 788px;
+    min-height: 570px;
+  }
+
+  .swiper-pagination {
+    display: none;
   }
 }

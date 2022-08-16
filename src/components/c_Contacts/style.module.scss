@@ -48,3 +48,21 @@
     margin-top: 13px;
   }
 }
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    padding-left: 0;
+    padding-right: 54px;
+  }
+
+  .root a:first-child {
+    font-size: 50px;
+    line-height: 51px;  
+  }
+  
+  .root a:nth-child(2) {
+    font-size: 50px;
+    line-height: 51px;   
+    margin-top: 25px;
+  }
+}

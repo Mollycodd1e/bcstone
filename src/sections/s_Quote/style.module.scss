@@ -51,18 +51,20 @@
 
 @media (min-width: $width-desktop-lg) {
   .root {
+    margin-top: 49px;
     padding: 47px 415px 5px 416px;
   }
 
   .root .quote_text {
     font-size: 18px;
     line-height: 21px;
-    padding-left: 250px;
-    padding-right: 200px;
-    margin-top: -140px;
+    padding-left: 320px;
+    padding-right: 150px;
+    margin-top: -128px;
+    letter-spacing: -0.5px;
 
     &::after {
-      bottom: -84px;
+      bottom: -58px;
     }
   }
 }

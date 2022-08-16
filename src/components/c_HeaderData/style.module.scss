@@ -25,3 +25,13 @@
     line-height: 23px;
   }
 }
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    margin-top: 22px;
+  }
+
+  .root p {
+    letter-spacing: 1.4px;
+  }
+}

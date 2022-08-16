@@ -14,8 +14,9 @@
   justify-content: flex-end;
   flex-wrap: wrap;
   max-height: 25px;
-  overflow: scroll;
+  overflow-y: scroll;
   align-self: center;
+  justify-content: flex-start;
 }
 
 .root li {
@@ -32,7 +33,6 @@
   .root ul {
     max-height: 45px;
     align-items: center;
-    justify-content: flex-start;
   }
 
   .root li {
@@ -43,5 +43,14 @@
 @media (min-width: $width-desktop-lg) {
   .root {
     padding: 20px 508px 5px 306px;
+  }
+
+  .root ul {
+    max-height: 45px;
+    align-items: center;
+  }
+
+  .root li {
+    margin-left: 9px;
   }
 }

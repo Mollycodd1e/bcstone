@@ -32,3 +32,18 @@
     margin-top: 15px;
   }
 }
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    font-size: 20px;
+    line-height: 21px;
+    margin-top: 32px;
+    padding-left: 0;
+    padding-right: 54px;
+  }
+  
+  .root p:nth-child(2) {
+    width: 300px;
+    margin-top: 24px;
+  }
+}

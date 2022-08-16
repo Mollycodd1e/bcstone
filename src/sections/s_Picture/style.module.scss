@@ -38,12 +38,17 @@
 @media (min-width: $width-desktop-lg) {
   .root {
     display: flex;
-    margin-top: 200px;
+    margin-top: 152px;
     padding: 0 393px 10px 418px;
   }
 
   .root img {
     width: 100%;
-    max-width: 788px;
-    min-height: 560px;  }
+    min-width: 788px;
+    min-height: 561px;
+  }
+
+  .root p {
+    max-width: 215px;
+  }
 }

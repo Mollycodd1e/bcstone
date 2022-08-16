@@ -27,3 +27,13 @@
     margin-left: 8px;
   }
 }
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    height: 35px;
+    margin-top: 4px;
+    font-size: 18px;
+    line-height: 19px;
+    padding: 9px 20px 10px 20px;
+  }
+}

@@ -123,7 +123,7 @@
   border-radius: 16px;
   border: none;
   background-color: #515dac;
-  $color-white: #ffffff;
+  color: $color-white;
   cursor: pointer;
 }
 
@@ -203,5 +203,28 @@
     margin-top: 26px;
     border-radius: 20px;
     letter-spacing: 0.7px;
+  }
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    padding: 40px 115px 38px 149px;
+  }
+
+  .root .input__checkbox_wrapper input:not(:checked) + label::before {
+    top: -3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+  
+    background-size: 16px 16px;
+  }
+  
+  .root .input__checkbox_wrapper input:checked + label::after {
+    top: -3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background-size: 16px 16px;
   }
 }
