@@ -15,18 +15,24 @@
 
 @media (min-width: $width-tablet-md) {
   .root {
-    width: 410px;
+    width: 369px;
     //border-radius: 10px;
     margin-bottom: unset;
     overflow: unset;
   }
 
   .С_Slider {
+    width: 100%;
+
     & div[class*="swiper-container"] {
       padding-bottom: unset;
+      border-radius: 15px;
     }
 
-    width: 100%;
+    & div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
+      display: none;
+    }
+
   }
 }
 

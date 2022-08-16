@@ -7,7 +7,7 @@ import {sizes} from "../../data/sizes";
 
 export const S_About = ({className, menuOnTop, data, width}) => {
     const cls = classNames(classes.root, {[classes.menuOnTop]:menuOnTop, [className]: className});
-    const isTablet = width >= sizes.widthTabletMd;
+
 
     return (
         <div className={cls}>
@@ -20,8 +20,7 @@ export const S_About = ({className, menuOnTop, data, width}) => {
                 </div>
 
                 <C_ContentAbout data={data} />
-                {isTablet ? <C_MainButton text={"Получить предложение"} onClick={() => console.log('click from project')}
-                               className={classes.C_MainButton}/> : null}
+
             </div>
         </div>
     )
