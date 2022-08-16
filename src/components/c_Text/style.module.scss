@@ -16,6 +16,11 @@
   .root p {
     font-size: 16px;
     line-height: 21px;
+    letter-spacing: -0.3px;
+  }
+
+  .root p:nth-child(2) {
+    margin-top: 20px;
   }
 }
 

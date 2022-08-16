@@ -12,6 +12,5 @@ export const S_Slider = ({items, description}) => {
             <C_SliderC className={classes.slider} items={items} />
             <C_Description description={description} />
         </div>
-
     )
 }

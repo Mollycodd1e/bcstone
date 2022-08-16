@@ -59,12 +59,17 @@
 }
 
 @media (min-width: $width-tablet-md) {
-
   .root {
+    min-height: 452px;
     width: calc(100vw - 104px);
+    margin-bottom: 22px;
+  }
+  .root img {
+    min-height: 452px;
   }
 
   .swiper {
+    min-height: 452px;
     min-width: 320px;
     width: calc(100vw - 104px);
   }

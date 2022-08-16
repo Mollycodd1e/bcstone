@@ -1,7 +1,8 @@
 @import '../../styles/style';
 
 .root {
-  margin-top: 31px;
+  margin-top: 30px;
+  padding-left: 6px;
 }
 
 .root .telegram_wrapper {
@@ -16,7 +17,7 @@
   font-weight: 700;
   margin: 0;
   text-align: center;
-  color: #343636;
+  color: $color-dark-primary;
   text-transform: uppercase;
 }
 
@@ -30,13 +31,15 @@
   font-size: 12px;
   line-height: 15px;
   letter-spacing: -0.1px;
-  color: #343636;
+  color: $color-dark-primary;
   border: 1px solid #c6c6c6;
   border-radius: 20px;
   cursor: pointer;
 }
 
 .root svg {
+  width: 25px;
+  height: 25px;
   margin-right: 6px;
 }
 
@@ -46,13 +49,14 @@
 
 @media (min-width: $width-tablet-md) {
   .root {
-    margin-top: 49px;
+    margin-top: 44px;
+    padding-left: 80px;
     display: flex;
   }
 
   .root .telegram_wrapper {
-    margin-left: 20px;
-    margin-top: 15px;
+    margin-left: 23px;
+    margin-top: 21px;
   }
 
   .root p {
@@ -62,9 +66,15 @@
     width: 250px;
   }
 
+  .root svg {
+    margin-right: 9px;
+  }
+
   .root a {
-    padding-left: 0;
     margin-right: auto;
+    margin-top: 7px;
+    padding-left: 0;
+    letter-spacing: 0.7px;
     border: none;
   }
 

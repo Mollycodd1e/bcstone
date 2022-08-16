@@ -1,3 +1,5 @@
+@import '../../styles/style';
+
 .root {
   width: auto;
   height: 20px;
@@ -10,4 +12,18 @@
 
 .root:nth-child(n + 3) {
   margin-left: 4px;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    height: 30px;
+    margin-top: 7px;
+    font-size: 14px;
+    line-height: 15px;
+    padding: 7px 19px 8px 20px;
+  }
+  
+  .root:nth-child(n + 3) {
+    margin-left: 8px;
+  }
 }

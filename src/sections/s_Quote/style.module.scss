@@ -2,8 +2,8 @@
 
 .root {
   width: 100%;
-  padding: 22px 30px 26px 30px;
-
+  padding: 2px 30px 26px 30px;
+  margin-top: 8px;
   background-image: url('../../img/quotes.png');
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -30,7 +30,8 @@
 
 @media (min-width: $width-tablet-md) {
   .root {
-    padding: 47px 124px 5px 130px;
+    padding: 40px 124px 5px 130px;
+    margin-top: 3px;
     background-size: 200px 179px;
     background-position: bottom right 300px;
   }
@@ -38,8 +39,13 @@
   .root .quote_text {
     font-size: 16px;
     line-height: 19px;
-    padding-left: 170px;
-    margin-top: -60px;
+    padding-left: 204px;
+    margin-top: -59px;
+    letter-spacing: -0.3px;
+
+    &::after {
+      bottom: -46px;
+    }
   }
 }
 

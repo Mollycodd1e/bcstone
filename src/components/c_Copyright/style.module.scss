@@ -1,16 +1,16 @@
 @import '../../styles/style';
 
 .root {
-  margin-top: 20px;
-  margin-left: -18px;
+  margin-top: 25px;
+  margin-left: 2px;
   order: 4;
 }
 
 .root div {
   width: 100%;
   font-size: 10px;
-  line-height: 12px;
-  color: #343636;
+  line-height: 11px;
+  color: $color-dark-rare;
 }
 
 .root div:nth-child(n + 2) {
@@ -18,6 +18,26 @@
 }
 
 @media (min-width: $width-tablet-md) {
+  .root {
+    margin-top: 0;
+  }
+
+  .root div {
+    font-size: 12px;
+    line-height: 13px;
+  }
+
+  .root div:nth-child(n + 2) {
+    margin-top: 9px;
+  }
+
+  .root div:nth-child(n + 3) {
+    margin-top: 40px;
+    font-size: 10px;
+    line-height: 10px;
+    max-width: 420px;
+    letter-spacing: -0.6px;
+  }
 }
 
 @media (min-width: $width-desktop-lg) {

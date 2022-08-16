@@ -3,7 +3,7 @@
 .root {
   display: flex;
   flex-direction: column;
-  padding: 47px 36px 18px 35px;
+  padding: 47px 21px 18px 17px;
   background-image: url('../../img/bgstone-mobile.png');
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -13,66 +13,69 @@
 .root h2 {
   order: 2;
   margin: 0;
-  margin-left: -15px;
+  margin-left: 3px;
   margin-top: 30px;
   font-size: 28px;
   line-height: 31px;
   text-transform: uppercase;
-  color: #343636;
+  color: $color-dark-primary;
 }
 
 .logo_footer {
-  margin-top: 60px;
-  margin-left: -17px;
   order: 3;
 }
 
 .copyright_wrapper {
+  margin-top: 60px;
   order: 4;
 }
 
 .logoSH_footer {
-  margin-left: -17px;
-  margin-top: 25px;
-}
-
-.copyright_wrapper {
   margin-top: 25px;
 }
 
 @media (min-width: $width-tablet-md) {
   .root {
     width: 100%;
-    padding: 47px 118px 18px 107px;
+    padding: 64px 118px 18px 50px;
     background-image: url('../../img/bgstone-tablet.png');
+    margin-top: 40px;
     min-height: 971px;
   }
 
   .root h2 {  
     font-size: 46px;
-    line-height: 37px;
-    margin-top: 124px;
+    line-height: 55px;
+    margin-top: 75px;
+    margin-left: 57px;
+    letter-spacing: 0.3px;
   }
 
   .copyright_wrapper {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
-    margin-top: 120px;
+    margin-top: 119px;
   }
 
   .logo_wrapper {
-    margin-left: 119px;
+    margin-left: 74px;
   }
 
   .logo_footer {
     margin-top: 0;
     margin-left: 0;
+    width: 120px;
+    height: 40px;
+    background-size: 120px 40px;
   }
 
   .logoSH_footer {
     margin-left: 0;
-    margin-top: 20px;
+    margin-top: 35px;
+    width: 230px;
+    height: 35px;
+    background-size: 230px 35px;
   }
 }
 

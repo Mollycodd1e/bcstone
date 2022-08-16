@@ -4,13 +4,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 7px;
 }
 
 .root a:first-child {
   position: relative;
   font-size: 24px;
   line-height: 29px;
-  color: #343636;
+  color: $color-dark-rare;
 
   &::after {
     position: absolute;
@@ -19,7 +20,7 @@
     height: 1px;
     left: 0;
     bottom: 5px;
-    background-color: #343636;
+    background-color: $color-dark-rare;
   }
 
 }
@@ -28,10 +29,14 @@
   font-size: 26px;
   line-height: 31px;
   margin-top: 6px;
-  color: #343636;
+  color: $color-dark-rare;
 }
 
 @media (min-width: $width-tablet-md) {
+  .root {
+    padding-left: 64px;
+  }
+
   .root a:first-child {
     font-size: 38px;
     line-height: 40px;  

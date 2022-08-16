@@ -12,10 +12,10 @@
   &::after {
     position: absolute;
     content: '';
-    width: 10px;
+    width: 14px;
     height: 1px;
-    left: 0px;
-    background-color: #000000;
+    left: 0;
+    background-color: $color-black;
   }
 
   &::before {
@@ -31,6 +31,7 @@
 
 @media (min-width: $width-tablet-md) {
   .root {
+    min-width: 52px;
     width: 52px;
     height: 52px;
     border-radius: 50%;
@@ -38,20 +39,19 @@
   
     &::before,
     &::after {
-      width: 10px;
+      width: 14px;
       height: 1px;
+      left: 15px;
       background-color: #B7B7B7;
     }
   
     &::before {
-      top: 20px;
-      left: 20px;
+      top: 21px;
       transform: rotate(-45deg);
     }
   
     &::after {
-      top: 27px;
-      left: 20px;
+      top: 30px;
       transform: rotate(45deg);
     }
   }

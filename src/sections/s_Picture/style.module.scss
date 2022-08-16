@@ -2,28 +2,36 @@
 
 .root {
   width: 100%;
-  margin-top: 21px;
-  padding: 0 15px 10px 30px;
+  margin-top: 18px;
+  padding: 0 29px 10px 30px;
 }
 
 .root img {
-  //width: 260px;
+  min-width: 260px;
   width: 100%;
   min-height: 176px;
   max-height: 439px;
   border-radius: 8px;
 }
 
+.root p {
+  padding-right: 15px;
+}
+
 @media (min-width: $width-tablet-md) {
   .root {
-    margin-top: 47px;
+    margin-top: 89px;
     padding: 0 130px 10px 130px;
   }
 
   .root img {
     width: 100%;
     min-height: 176px;
-    border-radius: 8px;
+    border-radius: 15px;
+  }
+
+  .root p {
+    max-width: 215px;
   }
 }
 
