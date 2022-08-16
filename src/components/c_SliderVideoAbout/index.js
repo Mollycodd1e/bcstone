@@ -34,7 +34,7 @@ export const C_SliderVideoAbout = ({className, data}) => {
 
     return (
         <div className={cls} ref={divBlock}
-             style={{ height:  `${width < sizes.widthTabletMd ? 190 : heightBlock}px`}}
+             // style={{ height:  `${width < sizes.widthTabletMd ? 190 : heightBlock}px`}}
         >
             {slider.isVisible && !video.isVisible
                 ? <C_Slider

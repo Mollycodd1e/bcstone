@@ -35,6 +35,11 @@
 }
 
 @media (min-width: $width-tablet-md) {
+  .root {
+    align-items: flex-start;
+    padding: 0;
+  }
+
   .stoneHedgeLogo {
     width: 249px;
     height: 25px;

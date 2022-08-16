@@ -16,11 +16,14 @@
 @media (min-width: $width-tablet-md) {
   .root {
     display: grid;
-    grid-template-columns: 1fr 362px;
-    grid-template-rows: auto;
+    grid-template-columns: auto 362px;
+    grid-template-rows: 218px;
     width: 100%;
     grid-template-areas: "C_SliderVideoAbout C_TextContentAbout";
     padding-left: 85px;
+    //justify-items: center;
+    justify-content: center;
+    grid-column-gap: 80px;
   }
 }
 

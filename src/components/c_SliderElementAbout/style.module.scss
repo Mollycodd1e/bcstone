@@ -12,10 +12,12 @@
 
 @media (min-width: $width-tablet-md) {
   .root {
-    min-width: 100%;
-    min-height: 218px;
-    height: 100%;
-    border-radius: unset;
+    //min-width: 100%;
+    //min-height: 218px;
+    //height: 100%;
+    height: 218px;
+    width: 369px;
+    border-radius: 15px;
   }
 }
 
