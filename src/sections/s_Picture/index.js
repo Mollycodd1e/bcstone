@@ -9,7 +9,9 @@ export const S_Picture = ({className, src, description}) => {
 
     return (
         <div className={cls}>
-          <Image src={src} width={260} height={176}/>
+          <div className={classes.image_wrapper}>
+            <Image src={src} width={260} height={176} layout='fill'/>
+          </div>
           <C_Description description={description} />
         </div>
     )

@@ -1,7 +1,7 @@
 @import '../../styles/style';
 
 .root {
-  height: 51.04167vw;
+  height: 49vw;
   max-height: 439px;
 }
 
@@ -14,9 +14,15 @@
 }
 
 @media (min-width: $width-tablet-md) {
+  .root {
+    height: 49vw;
+    max-height: 560px;
+  }
+
   .root iframe {
     min-height: 439px;
     border-radius: 15px;
+    max-height: 560px;
   }
 }
 

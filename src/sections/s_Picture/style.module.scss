@@ -12,6 +12,16 @@
   min-height: 176px;
   max-height: 439px;
   border-radius: 8px;
+  height: 100%;
+}
+
+.image_wrapper {
+  display: block;
+  position: relative;
+  min-height: 176px;
+  height: 51.04167vw;
+  width: 100%;
+  max-height: 439px;
 }
 
 .root p {
@@ -26,8 +36,14 @@
 
   .root img {
     width: 100%;
-    min-height: 176px;
+    min-height: 439px;
     border-radius: 15px;
+    height: 560px;
+  }
+
+  .image_wrapper {
+    height: 43.9vw;
+    max-height: 560px;
   }
 
   .root p {

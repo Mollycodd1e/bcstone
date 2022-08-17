@@ -1,13 +1,16 @@
 @import '../../styles/style';
 
 .root {
+  background: radial-gradient(#fff 0%, #808080 300%);
+}
+
+.footer_wrapper {
   display: flex;
   flex-direction: column;
-  padding: 47px 21px 18px 17px;
-  background-image: url('../../img/bgstone-mobile.png');
+  background-image: url('../../img/bgstone.png');
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: top;
+  background-position: left top 47px;
+  padding: 47px 21px 18px 17px;
 }
 
 .root h2 {
@@ -37,10 +40,15 @@
 @media (min-width: $width-tablet-md) {
   .root {
     width: 100%;
-    padding: 64px 118px 18px 50px;
-    background-image: url('../../img/bgstone-tablet.png');
     margin-top: 40px;
     min-height: 971px;
+  }
+
+  .footer_wrapper {
+    background-image: url('../../img/bgstone-tablet.png');
+    background-repeat: no-repeat;
+    background-position: center bottom 210px;
+    padding: 64px 118px 18px 50px;
   }
 
   .root h2 {  
@@ -81,7 +89,6 @@
 
 @media (min-width: $width-desktop-lg) {
   .root {
-    background-image: url('../../img/bgstone-desktop.png');
     min-height: 1310px;
     margin-top: 65px;
     padding: 125px 118px 18px 174px;
