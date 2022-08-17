@@ -3,9 +3,9 @@ import { C_BackButton } from '../../components/c_BackBtn';
 import { C_Tag } from '../../components/c_Tag';
 import classNames from 'classnames';
 
-export const S_Tags = ({hashtagList}) => {
+export const S_Tags = ({className, hashtagList}) => {
     
-    const cls = classNames(classes.root, {[classNames]: classNames});
+    const cls = classNames(classes.root, {[className]: className});
 
     return (
         <div className={cls}>

@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 import classes from './style.module.scss';
 
-export const C_Copyright = ({copyright}) => {
+export const C_Copyright = ({className, copyright}) => {
   
-  const cls = classNames(classes.root, {[classNames]: classNames});
+  const cls = classNames(classes.root, {[className]: className});
 
   return (
       <div className={cls}>

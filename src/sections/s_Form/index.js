@@ -3,9 +3,9 @@ import { C_Form } from '../../components/c_Form';
 import { C_Logo } from '../../components/c_Logo';
 import classes from './style.module.scss';
 
-export const S_Form = ({header, description, ready}) => {
+export const S_Form = ({className, header, description, ready}) => {
   
-  const cls = classNames(classes.root, {[classNames]: classNames});
+  const cls = classNames(classes.root, {[className]: className});
   
   return (
       <div className={cls}>

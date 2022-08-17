@@ -2,9 +2,9 @@ import classNames from 'classnames';
 import { C_Quote } from '../../components/c_Quote';
 import classes from './style.module.scss';
 
-export const S_Quote = ({photo, name, description, text}) => {
+export const S_Quote = ({className, photo, name, description, text}) => {
     
-    const cls = classNames(classes.root, {[classNames]: classNames});
+    const cls = classNames(classes.root, {[className]: className});
     
     return (
         <div className={cls}>

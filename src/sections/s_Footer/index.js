@@ -5,9 +5,9 @@ import { C_LogoSH } from '../../components/c_LogoSH';
 import { C_Copyright } from '../../components/c_Copyright';
 import classes from './style.module.scss';
 
-export const S_Footer = ({phone_number, mail, address, sales_number, telegram, copyright}) => {
+export const S_Footer = ({className, phone_number, mail, address, sales_number, telegram, copyright}) => {
   
-  const cls = classNames(classes.root, {[classNames]: classNames});
+  const cls = classNames(classes.root, {[className]: className});
 
   return (
       <div className={cls}>

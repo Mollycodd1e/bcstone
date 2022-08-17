@@ -4,8 +4,8 @@ import { C_HeaderData } from '../../components/c_HeaderData';
 import { C_HeaderDescription } from '../../components/c_HeaderDescription';
 import classes from './style.module.scss';
 
-export const S_Header = ({header, text, data}) => {
-  const cls = classNames(classes.root, {[classNames]: classNames});
+export const S_Header = ({className, header, text, data}) => {
+  const cls = classNames(classes.root, {[className]: className});
 
   return (
     <div className={cls}>

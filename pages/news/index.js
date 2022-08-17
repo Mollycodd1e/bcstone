@@ -86,7 +86,7 @@ export default function News() {
             {
                 id: 3,
                 hashtag: 'отчет'
-                },
+            },
             // {
             //     id: 4,
             //     hashtag: 'премия'
@@ -218,7 +218,7 @@ export default function News() {
                                 />
                                 <S_Text text={mocks.textList[0].text} fullText={mocks.textList[0].fullText}
                                 />
-                                <S_Slider items={[<img src={slider.images[0].url}/>, <img src={slider.images[1].url}/>]} 
+                                <S_Slider items={[<img src={slider.images[0].url}/>, <img src={slider.images[1].url}/>, <img src={slider.images[0].url}/>]} 
                                     description={slider.description} />
                                 <S_Text text={mocks.textList[1].text} fullText={mocks.textList[1].fullText}
                                 />

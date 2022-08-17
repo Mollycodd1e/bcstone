@@ -1,9 +1,9 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
 
-export const C_Contacts = ({phone_number, mail}) => {
+export const C_Contacts = ({className, phone_number, mail}) => {
 
-  const cls = classNames(classes.root, {[classNames]: classNames});
+  const cls = classNames(classes.root, {[className]: className});
 
     return (
       <div className={cls}>

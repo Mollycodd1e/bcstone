@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 import classes from './style.module.scss';
 
-export const C_Form = ({header, description, ready}) => {
+export const C_Form = ({className, header, description, ready}) => {
   
-  const cls = classNames(classes.root, {[classNames]: classNames});
+  const cls = classNames(classes.root, {[className]: className});
 
   const formColor = {
     valid: '#A2D3AA',

@@ -3,9 +3,9 @@ import { C_Description } from '../../components/c_Description';
 import classes from './style.module.scss';
 import classNames from 'classnames';
 
-export const S_Video = ({url, description}) => {
+export const S_Video = ({className, url, description}) => {
     
-    const cls = classNames(classes.root, {[classNames]: classNames});
+    const cls = classNames(classes.root, {[className]: className});
 
     return (
       <div className={cls}>

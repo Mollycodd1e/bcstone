@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 import classes from './style.module.scss';
 
-export const C_Text = ({text, fullText}) => {
+export const C_Text = ({className, text, fullText}) => {
   
-  const cls = classNames(classes.root, {[classNames]: classNames});
+  const cls = classNames(classes.root, {[className]: className});
 
   return (
     <div className={cls}>
