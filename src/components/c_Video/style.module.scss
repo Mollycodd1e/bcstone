@@ -1,7 +1,11 @@
 @import '../../styles/style';
 
 .root {
-  //position: absolute;
+  height: 51.04167vw;
+  max-height: 439px;
+}
+
+.root iframe {
   width: 100%;
   height: 100%;
   min-height: 154px;
@@ -10,14 +14,14 @@
 }
 
 @media (min-width: $width-tablet-md) {
-  .root {
+  .root iframe {
     min-height: 439px;
     border-radius: 15px;
   }
 }
 
 @media (min-width: $width-desktop-lg) {
-  .root {
+  .root iframe {
     min-height: 469px;
     min-width: 788px;
   }

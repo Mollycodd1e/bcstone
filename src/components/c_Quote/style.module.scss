@@ -19,9 +19,14 @@
 }
 
 .root img {
-  width: 76px;
+  min-width: 76px;
+  width: 100%;
   height: 76px;
   border-radius: 50%;
+}
+
+.root span:nth-child(1) {
+  min-width: 76px;
 }
 
 .root .author_name_wrapper {

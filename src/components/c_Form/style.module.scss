@@ -4,7 +4,6 @@
   width: 100%;
   background-color: #f6f6f6;
   padding: 30px 37px 33px 23px;
-  border-radius: 20px;
 }
 
 .root fieldset {
@@ -30,16 +29,21 @@
 }
 
 .input__name_wrapper {
+  position: relative;
   margin-top: 30px;
 }
 
 .input__mail_wrapper {
+  position: relative;
   margin-top: 17px;
 }
 
 .input__mail_wrapper label,
 .input__name_wrapper label {
   display: block;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
   margin-top: 5px;
   margin-left: 23px;
   color: #c98080;
@@ -134,6 +138,7 @@
 @media (min-width: $width-tablet-md) {
   .root {
     padding: 40px 115px 38px 80px;
+    border-radius: 20px;
   }
 
   .root legend {

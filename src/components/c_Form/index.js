@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import { useState } from 'react';
 import classes from './style.module.scss';
 
 export const C_Form = ({className, header, description, ready}) => {
@@ -11,6 +12,8 @@ export const C_Form = ({className, header, description, ready}) => {
     need: '#E5BF5B',
     default: '#cccccc'
   }
+
+  const [isSubmit, setSubmit] = useState(false);
 
   var mail = document.querySelector('#id-email');
 
@@ -36,11 +39,10 @@ export const C_Form = ({className, header, description, ready}) => {
 
   const onInputNeed = (e) => {
     var input = document.querySelector('#id-email');
-    //input.value='',
     e.preventDefault();
     input.nextElementSibling.classList.remove('visually-hidden');
     input.nextElementSibling.style.color= formColor.need,
-    input.nextElementSibling.innerHTML='Введите почту',
+    input.nextElementSibling.innerHTML='Обязательно поле',
     input.style=`border-color: ${formColor.need}`
   }
 
@@ -61,25 +63,30 @@ export const C_Form = ({className, header, description, ready}) => {
 
   const onFormSubmit = (e) => {
       var input = document.querySelector('#id-email');
-      console.log(input.value);
-      ((input.value.length < 1) || (EMAIL_REGEXP.test(`input.value`))) ? (onInputNeed(e)) : (input.style.borderColor = formColor.default, input.nextElementSibling.classList.add('visually-hidden'), input.nextElementSibling.style.color= formColor.invalid)
+      var inputName = document.querySelector('#id-name');
+
+      console.log(input.value.length);
+      (input.value.length < 1) ? (onInputNeed(e)) : 
+      (!EMAIL_REGEXP.test(input.value)) ? (e.preventDefault()) : 
+      ((!validName.test(inputName.value)) && (inputName.value.length > 0)) ? (e.preventDefault()) :
+      (setSubmit(true), input.style.borderColor = formColor.default, input.nextElementSibling.classList.add('visually-hidden'), input.nextElementSibling.style.color= formColor.invalid)
   };
   
   return (
       <div className={cls}>
         <form onSubmit={(e) => onFormSubmit(e)}>
           <fieldset>
-            <legend>{header}</legend>
+            <legend>{isSubmit ? ready : header}</legend>
             <p>{description}</p>
             <div className={classes.input__name_wrapper}>
               <input placeholder="Как к вам обращаться" name="name" id="id-name" onInput={(evt) => onInputCheck(evt)}/>
               <label className={'visually-hidden'} htmlFor="id-name">Имя должно содержать только буквы</label>
             </div>
             <div className={classes.input__mail_wrapper}>
-              <input type="email" placeholder='E-mail*' name="email" id="id-email"  onFocus={(e) => (mail.style.borderColor = formColor.default, mail.nextElementSibling.style.color = formColor.error, mail.nextElementSibling.classList.add('visually-hidden'), mail.nextElementSibling.innerHTML='Адрес введен неверно')} onBlur={(evt) => onEmailCheck(evt)}/>
+              <input placeholder='E-mail*' name="email" id="id-email" onFocus={(e) => (mail.style.borderColor = formColor.default, mail.nextElementSibling.style.color = formColor.error, mail.nextElementSibling.classList.add('visually-hidden'), mail.nextElementSibling.innerHTML='Адрес введен неверно')} onBlur={(evt) => onEmailCheck(evt)}/>
               <label className={'visually-hidden'} htmlFor="id-email">Адрес введен неверно</label>
             </div>
-            <button type="submit" >
+            <button type="submit">
               <span >Хочу быть в курсе</span>
             </button>
             <div className={classes.input__checkbox_wrapper}>
