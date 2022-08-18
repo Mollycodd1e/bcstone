@@ -91,7 +91,13 @@
   .root {
     min-height: 1310px;
     margin-top: 65px;
-    padding: 125px 118px 18px 174px;
+    padding: 62px 118px 18px 124px;
+  }
+
+  .footer_wrapper {
+    background-image: url('../../img/bgstone-desktop.png');
+    background-position: left 52px bottom 212px;
+    padding: 64px 118px 18px 50px;
   }
 
   .root h2 {  
@@ -105,7 +111,7 @@
   .logo_wrapper {
     display: flex;
     flex-direction: row-reverse;
-    margin-left: 252px;
+    margin-left: 272px;
     align-items: flex-end;
   }
 

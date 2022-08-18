@@ -42,7 +42,8 @@
 
 @media (min-width: $width-desktop-lg) {
   .root div {
-    max-width: 836px;
+    min-width: 838px;
+    max-width: 840px;
     font-size: 16px;
     line-height: 18px;
   }

@@ -216,6 +216,10 @@
     padding: 40px 115px 38px 149px;
   }
 
+  .root legend {
+    letter-spacing: -0.7px;
+  }
+
   .root .input__checkbox_wrapper input:not(:checked) + label::before {
     top: -3px;
     left: 3px;

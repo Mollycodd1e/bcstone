@@ -13,11 +13,18 @@
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  flex-wrap: wrap;
   max-height: 25px;
-  overflow-y: scroll;
+  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   align-self: center;
   justify-content: flex-start;
+  cursor: grab;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
 }
 
 .root li {

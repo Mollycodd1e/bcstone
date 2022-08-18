@@ -96,6 +96,11 @@
     height: 240px;
   }
   
+  .root span:nth-child(1) {
+    min-width: 240px;
+    min-height: 240px;
+  }
+
   .root .author_name_wrapper {
     margin-top: 24px;
     margin-left: 77px;

@@ -64,7 +64,18 @@
     min-height: 561px;
   }
 
+  .image_wrapper {
+    min-width: 788px;
+  }
+
   .root p {
-    max-width: 215px;
+    max-width: 225px;
+    padding-right: 1px;
+    margin-right: 0;
+    letter-spacing: -1px;
+  }
+
+  .root div:nth-child(2) {
+    margin-bottom: 55px;
   }
 }

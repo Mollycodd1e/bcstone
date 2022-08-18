@@ -8,8 +8,10 @@
   color: #2b2c2c;
 }
 
-.root p:nth-child(2) {
-  margin-top: 10px;
+.root a {
+  text-decoration: underline;
+  color: $color-blue;
+  cursor: pointer;
 }
 
 @media (min-width: $width-tablet-md) {
@@ -18,10 +20,6 @@
     line-height: 21px;
     letter-spacing: -0.3px;
   }
-
-  .root p:nth-child(2) {
-    margin-top: 20px;
-  }
 }
 
 @media (min-width: $width-desktop-lg) {
@@ -29,9 +27,5 @@
     font-size: 18px;
     line-height: 23px;
     letter-spacing: -0.4px;
-  }
-
-  .root p:nth-child(2) {
-    margin-top: 22px;
   }
 }
