@@ -87,50 +87,50 @@ export default function News() {
                 id: 3,
                 hashtag: 'отчет'
             },
-            {
-                id: 4,
-                hashtag: 'премия'
-            },
-            {
-                id: 5,
-                hashtag: 'вручение'
-            },
-            {
-                id: 6,
-                hashtag: 'отчет'
-            },
-            {
-                id: 7,
-                hashtag: 'отчет'
-            },
-            {
-                id: 8,
-                hashtag: 'премия'
-            },
-            {
-                id: 9,
-                hashtag: 'вручение'
-            },
-            {
-                id: 10,
-                hashtag: 'отчет'
-            },
-            {
-                id: 11,
-                hashtag: 'отчет'
-            },
-            {
-                id: 12,
-                hashtag: 'премия'
-            },
-            {
-                id: 13,
-                hashtag: 'вручение'
-            },
-            {
-                id: 14,
-                hashtag: 'отчет'
-            },
+            // {
+            //     id: 4,
+            //     hashtag: 'премия'
+            // },
+            // {
+            //     id: 5,
+            //     hashtag: 'вручение'
+            // },
+            // {
+            //     id: 6,
+            //     hashtag: 'отчет'
+            // },
+            // {
+            //     id: 7,
+            //     hashtag: 'отчет'
+            // },
+            // {
+            //     id: 8,
+            //     hashtag: 'премия'
+            // },
+            // {
+            //     id: 9,
+            //     hashtag: 'вручение'
+            // },
+            // {
+            //     id: 10,
+            //     hashtag: 'отчет'
+            // },
+            // {
+            //     id: 11,
+            //     hashtag: 'отчет'
+            // },
+            // {
+            //     id: 12,
+            //     hashtag: 'премия'
+            // },
+            // {
+            //     id: 13,
+            //     hashtag: 'вручение'
+            // },
+            // {
+            //     id: 14,
+            //     hashtag: 'отчет'
+            // },
         ],
         textList: [
             {

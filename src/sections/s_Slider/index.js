@@ -10,7 +10,7 @@ export const S_Slider = ({className, items, description}) => {
     return (
         <div className={cls}>          
             <C_SliderC className={classes.slider} items={items} />
-            <C_Description description={description} />
+            <C_Description className={classes.description} description={description} />
         </div>
     )
 }

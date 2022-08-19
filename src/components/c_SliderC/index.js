@@ -8,19 +8,21 @@ import {Swiper, SwiperSlide} from "swiper/swiper-react.cjs.js";
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
-export const C_SliderC = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = 60}) => {
+export const C_SliderC = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = 200}) => {
     const cls = classNames(classes.root, { [className]: className });
 
     return (
         <div className={cls}>
+            {console.log(<Navigation/>)}
             <Swiper
                 slidesPerView={1}
                 spaceBetween={slidersSpaceBetween}
-                centeredSlides={true}
-                loop
+                //centeredSlides={true}
+                //loop
+                navigation
                 pagination={{"clickable": true}}
                 className={classNames(classes.swiper, {[classes.swiperMode]: isBtnClose})}
-                initialSlide={Number(initialSlide) || 0}
+                initialSlide={Number(initialSlide) || 1}
             >     
                 {items.map((item, i) => {
                         return (
