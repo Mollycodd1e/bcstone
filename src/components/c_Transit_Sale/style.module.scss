@@ -32,6 +32,9 @@
 
 .link {
   grid-area: link;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
@@ -40,6 +43,21 @@
   line-height: 48px;
   font-weight: 800;
   margin: -10px 0 0;
+}
+
+.roundButton {
+  margin: 0 2px 7px 0;
+}
+
+.arrowButton {
+  display: none;
+}
+
+.buttonText {
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 300;
+  color: #C4C4C4;
 }
 
 @media (min-width: $width-tablet-md) {
