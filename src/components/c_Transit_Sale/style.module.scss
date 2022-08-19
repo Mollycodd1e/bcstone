@@ -2,18 +2,27 @@
 
 .root {
   display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2, auto);
+  grid-template-areas:  "picture link"
+                        "title link";
+
+  &.reverse {
+    grid-template-areas:  "link picture"
+                          "link title";
+  }
 }
 
 .picture {
-
+  grid-area: picture;
 }
 
 .link {
-
+  grid-area: link;
 }
 
 .title {
-
+  grid-area: title;
 }
 
 @media (min-width: $width-tablet-md) {

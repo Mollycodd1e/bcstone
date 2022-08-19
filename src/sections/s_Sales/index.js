@@ -4,7 +4,7 @@ import classNames from "classnames";
 import {C_Transit_Sale} from "../../components/c_Transit_Sale";
 
 const sales = [
-    {type: "office", name: "Офисы", url: ""},
+    {type: "office", name: "Офисы", url: "", },
     {type: "retail", name: "Ритейл", url: ""},
 ];
 

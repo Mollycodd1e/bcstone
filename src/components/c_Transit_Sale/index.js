@@ -3,10 +3,11 @@ import classNames from "classnames";
 import Link from "next/link";
 
 export const C_Transit_Sale = ({className, url, name, type }) => {
-    const cls = classNames(classes.root, {[className]: className });
+    const cls = classNames(classes.root, {[classes.reverse]: type === "retail", [className]: className });
     return (
         <div className={cls}>
-            <div className={classes.picture}/>
+            <div className={classes.picture}
+                 style={{backgroundImage:  `url("${logo}")`}}/>
             <Link href={url} className={classes.link}>
                 <a>перейти</a>
             </Link>
