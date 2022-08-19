@@ -1,7 +1,10 @@
 @import '../../styles/style';
 
 .root {
-
+  width: 100%;
+  //& > div:nth-child(2n + 1) {
+  //  margin-right: auto;
+  //}
 }
 
 @media (min-width: $width-tablet-md) {

@@ -6,10 +6,17 @@
   grid-template-columns: repeat(2, auto);
   grid-template-areas:  "picture link"
                         "title link";
+  align-items: center;
+  justify-items: center;
+
 
   &.reverse {
     grid-template-areas:  "link picture"
                           "link title";
+
+    & .picture {
+      margin: 0 0 0 7px;
+    }
   }
 }
 
@@ -20,7 +27,7 @@
   background-size: 164px 215px;
   background-position: center;
   background-repeat: no-repeat;
-
+  margin: 0 0 0 17px;
 }
 
 .link {
@@ -29,6 +36,10 @@
 
 .title {
   grid-area: title;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 800;
+  margin: -10px 0 0;
 }
 
 @media (min-width: $width-tablet-md) {
