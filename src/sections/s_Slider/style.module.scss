@@ -6,25 +6,30 @@
   padding: 0 22px 10px 30px;
 }
 
-.root .description {
-  margin-left: 100px;
-}
-
 @media (min-width: $width-tablet-md) {
   .root {
     margin-top: 24px;
     margin-bottom: 5px;
-    //padding: 0 130px 5px 130px;
-    padding: 0 30px 5px 30px;
+    padding: 0 30px 5px 20px;
+  }
+
+  .root .description {
+    margin-left: 100px;
+    margin-top: 9px;
   }
 }
 
 @media (min-width: $width-desktop-lg) {
   .root {
     display: flex;
-    max-width: 1221px;
-    padding: 0 337px 0 362px;
+    max-width: 1260px;
+    //padding: 0 337px 0 362px;
     margin-top: 24px;
-    margin-bottom: 0;
+    margin-bottom: 5px;
+  }
+
+  .root .description {
+    margin-left: -260px;
+    margin-top: 9px;
   }
 }
