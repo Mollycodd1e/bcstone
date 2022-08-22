@@ -46,6 +46,7 @@
 
   .wrapper {
     column-gap: unset;
+    grid-template-columns: repeat(2, 1fr);
 
     &:after {
       content: none;

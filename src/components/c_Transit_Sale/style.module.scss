@@ -115,7 +115,8 @@
 
 @media (min-width: $width-desktop-lg) {
   .root {
-    grid-template-rows: repeat(2, 1fr);
+
+    grid-template-columns: repeat(2, auto);
     grid-template-areas:  "picture title"
                           "picture link";
 
