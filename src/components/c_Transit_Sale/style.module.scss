@@ -63,9 +63,11 @@
 
 .arrowButton {
   display: none;
+  grid-area: arrowButton;
 }
 
 .buttonText {
+  grid-area: buttonText;
   font-size: 15px;
   line-height: 15px;
   font-weight: 300;
@@ -75,6 +77,7 @@
 @media (min-width: $width-tablet-md) {
   .root {
     padding: 28px 0 25px;
+
     &.reverse {
       & .picture {
         margin: 0;
@@ -107,5 +110,45 @@
   .roundButton {
     width: 69px;
     height: 69px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:  "picture title"
+                          "picture link";
+
+    &.reverse {
+      grid-template-areas:  "title picture"
+                            "link picture";
+    }
+  }
+
+  .roundButton {
+    display: none;
+  }
+
+  .arrowButton {
+    display: block;
+    margin-right: 12px;
+  }
+
+  .link {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .buttonText {
+    font-size: 31px;
+    line-height: 31px;
+  }
+
+  .picture {
+    opacity: .25;
+    width: 233px;
+    height: 303px;
+    background-size: 233px 303px;
   }
 }
