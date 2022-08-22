@@ -74,6 +74,38 @@
 
 @media (min-width: $width-tablet-md) {
   .root {
+    padding: 28px 0 25px;
+    &.reverse {
+      & .picture {
+        margin: 0;
+      }
 
+      & .title {
+        justify-self: center;
+      }
     }
+  }
+
+  .picture {
+    width: 212px;
+    height: 276px;
+    background-size: 212px 276px;
+    margin: 0;
+  }
+
+  .title {
+    justify-self: center;
+    font-size: 62px;
+    line-height: 62px;
+  }
+
+  .buttonText {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .roundButton {
+    width: 69px;
+    height: 69px;
+  }
 }

@@ -20,9 +20,11 @@
   .wrapper {
     border-radius: 20px;
     border: 1px solid #707070;
-    display: flex;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 153px;
     justify-content: center;
-    //align-items: center;
     position: relative;
 
     &:after {
