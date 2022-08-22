@@ -7,9 +7,33 @@
   //}
 }
 
+.wrapper {
+  width: 100%;
+}
+
 @media (min-width: $width-tablet-md) {
   .root {
+    padding: 40px 50px;
 
+  }
+
+  .wrapper {
+    border-radius: 20px;
+    border: 1px solid #707070;
+    display: flex;
+    justify-content: center;
+    //align-items: center;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 69%;
+      width: 1px;
+      background-color: #2C2D2D;
+      top: 15%;
+      left: 50%;
+    }
   }
 }
 

@@ -7,10 +7,13 @@ export const S_Sales = ({className, data}) => {
     const cls = classNames(classes.root, {[className]: className});
     return (
         <div className={cls}>
-            {data.sales.map((el, i) => {
-                const {type, name, url, picture} = el;
-                return (<C_Transit_Sale type={type} name={name} url={url} picture={picture} key={i} />)
-            })}
+            <div className={classes.wrapper}>
+                {data.sales.map((el, i) => {
+                    const {type, name, url, picture} = el;
+                    return (<C_Transit_Sale type={type} name={name} url={url} picture={picture} key={i} />)
+                })}
+            </div>
+
         </div>
     )
 }
