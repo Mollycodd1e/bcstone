@@ -71,7 +71,7 @@ export default function News() {
             data: '20/04/2022'
         },
         video: {
-            //url: 'https://www.youtube.com/embed/Onn38VeEAC8',
+            url: 'https://www.youtube.com/embed/Onn38VeEAC8',
             description: 'Видео с вручения премии, которая, несомненно, внесла большой вклад.'
         },
         hashtagList: [
@@ -87,50 +87,50 @@ export default function News() {
                 id: 3,
                 hashtag: 'отчет'
             },
-            // {
-            //     id: 4,
-            //     hashtag: 'премия'
-            // },
-            // {
-            //     id: 5,
-            //     hashtag: 'вручение'
-            // },
-            // {
-            //     id: 6,
-            //     hashtag: 'отчет'
-            // },
-            // {
-            //     id: 7,
-            //     hashtag: 'отчет'
-            // },
-            // {
-            //     id: 8,
-            //     hashtag: 'премия'
-            // },
-            // {
-            //     id: 9,
-            //     hashtag: 'вручение'
-            // },
-            // {
-            //     id: 10,
-            //     hashtag: 'отчет'
-            // },
-            // {
-            //     id: 11,
-            //     hashtag: 'отчет'
-            // },
-            // {
-            //     id: 12,
-            //     hashtag: 'премия'
-            // },
-            // {
-            //     id: 13,
-            //     hashtag: 'вручение'
-            // },
-            // {
-            //     id: 14,
-            //     hashtag: 'отчет'
-            // },
+            {
+                id: 4,
+                hashtag: 'премия'
+            },
+            {
+                id: 5,
+                hashtag: 'вручение'
+            },
+            {
+                id: 6,
+                hashtag: 'отчет'
+            },
+            {
+                id: 7,
+                hashtag: 'отчет'
+            },
+            {
+                id: 8,
+                hashtag: 'премия'
+            },
+            {
+                id: 9,
+                hashtag: 'вручение'
+            },
+            {
+                id: 10,
+                hashtag: 'отчет'
+            },
+            {
+                id: 11,
+                hashtag: 'отчет'
+            },
+            {
+                id: 12,
+                hashtag: 'премия'
+            },
+            {
+                id: 13,
+                hashtag: 'вручение'
+            },
+            {
+                id: 14,
+                hashtag: 'отчет'
+            },
         ],
         textList: [
             {
@@ -165,6 +165,10 @@ export default function News() {
                 {
                     id: 2,
                     url: 'https://via.placeholder.com/260x176'
+                },
+                {
+                    id: 3,
+                    url: 'https://via.placeholder.com/260x176'
                 }
             ],
             description : 'Фотографии с вручения премии, которая, несомненно,внесла вклад.'
@@ -190,7 +194,7 @@ export default function News() {
     }
 
     const {header, video, slider, author, image, contacts, copyright, form} = mocks;
-    
+    console.log(mainPageData)
     return (
             <Context.Provider value={[width, height]}>
                 <Head>
@@ -215,7 +219,7 @@ export default function News() {
                                 />
                                 <S_Text text={mocks.textList[0].text}
                                 />
-                                <S_Slider items={[<img src={slider.images[0].url}/>, <img src={slider.images[1].url}/>, <img src={slider.images[0].url}/>]} 
+                                <S_Slider items={data.data[1].data[5].content.gallery} 
                                     description={slider.description} />
                                 <S_Text text={mocks.textList[1].text}
                                 />

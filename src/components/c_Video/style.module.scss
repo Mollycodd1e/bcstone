@@ -23,6 +23,7 @@
     min-height: 439px;
     border-radius: 15px;
     max-height: 470px;
+    max-width: 964px;
   }
 }
 
@@ -30,5 +31,6 @@
   .root iframe {
     min-height: 469px;
     min-width: 788px;
+    max-width: unset;
   }
 }

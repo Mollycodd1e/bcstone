@@ -15,7 +15,7 @@ export const C_Form = ({className, header, description, ready}) => {
 
   const [isSubmit, setSubmit] = useState(false);
 
-  var mail = document.querySelector('#id-email');
+  let mail = document.querySelector('#id-email');
 
   const validName = /^(([a-zA-Zа-яА-ЯЁё-]{1,30}))$/u;
 
@@ -38,7 +38,7 @@ export const C_Form = ({className, header, description, ready}) => {
   }
 
   const onInputNeed = (e) => {
-    var input = document.querySelector('#id-email');
+    let input = document.querySelector('#id-email');
     e.preventDefault();
     input.nextElementSibling.classList.remove('visually-hidden');
     input.nextElementSibling.style.color= formColor.need,
@@ -48,6 +48,7 @@ export const C_Form = ({className, header, description, ready}) => {
 
   const onInputCheck = (evt) => {
     if (evt) {
+      console.log(evt.target.value);
       (evt.target.value.length > 0) && (validName.test(evt.target.value)) ? (onInputValid(evt))
       : (evt.target.value.length > 0) && (!validName.test(evt.target.value)) ? (onInputInvalid(evt))
       : (onInputDefault(evt))
@@ -55,6 +56,7 @@ export const C_Form = ({className, header, description, ready}) => {
   }
 
   const onEmailCheck = (evt) => {
+    console.log(evt.target.value);
     evt.target.value.length === 0 ? (onInputDefault(evt))
     : EMAIL_REGEXP.test(evt.target.value) ? (onInputValid(evt))
     : !EMAIL_REGEXP.test(evt.target.value) ? (onInputInvalid(evt))
@@ -62,8 +64,8 @@ export const C_Form = ({className, header, description, ready}) => {
   }
 
   const onFormSubmit = (e) => {
-      var input = document.querySelector('#id-email');
-      var inputName = document.querySelector('#id-name');
+      let input = document.querySelector('#id-email');
+      let inputName = document.querySelector('#id-name');
 
       console.log(input.value.length);
       (input.value.length < 1) ? (onInputNeed(e)) : 
@@ -74,7 +76,7 @@ export const C_Form = ({className, header, description, ready}) => {
   
   return (
       <div className={cls}>
-        <form onSubmit={(e) => onFormSubmit(e)}>
+        <form onSubmit={(e) => e.preventDefault()}>
           <fieldset>
             <legend>{isSubmit ? ready : header}</legend>
             <p>{description}</p>
@@ -86,7 +88,7 @@ export const C_Form = ({className, header, description, ready}) => {
               <input placeholder='E-mail*' name="email" id="id-email" onFocus={(e) => (mail.style.borderColor = formColor.default, mail.nextElementSibling.style.color = formColor.error, mail.nextElementSibling.classList.add('visually-hidden'), mail.nextElementSibling.innerHTML='Адрес введен неверно')} onBlur={(evt) => onEmailCheck(evt)}/>
               <label className={'visually-hidden'} htmlFor="id-email">Адрес введен неверно</label>
             </div>
-            <button type="submit">
+            <button onClick={(e) => onFormSubmit(e)} type="submit">
               <span >Хочу быть в курсе</span>
             </button>
             <div className={classes.input__checkbox_wrapper}>

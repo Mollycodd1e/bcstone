@@ -6,7 +6,7 @@ import classNames from 'classnames';
 export const S_Tags = ({className, hashtagList}) => {
     
     const cls = classNames(classes.root, {[className]: className});
-
+    
     return (
         <div className={cls}>
             <C_BackButton />
