@@ -6,9 +6,27 @@
   flex-direction: row;
 }
 
+.image_wrapper {
+  display: block;
+  min-height: 175px;
+  height: 51.04167vw;
+  max-height: 439px;
+}
+
+.root .image_wrapper img {
+    display: block;
+    width: 100%;
+    min-height: 175px;
+    min-width: 258px;
+    height: auto;
+    max-height: 439px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
 .root .swiper {
   display: block;
-  min-width: 264px;
+  min-width: 250px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -16,17 +34,7 @@
   min-height: 192px;
   margin: 0;
   position: relative;
-  padding-bottom: 2.6rem;
-
-  image {
-    display: block;
-    width: 100%;
-    min-height: 175px;
-    height: auto;
-    max-height: 439px;
-    margin: 0 auto;
-    border-radius: 10px;
-  }
+  padding-bottom: 1.5rem;
 
   div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
     bottom: 0 !important;
@@ -48,17 +56,11 @@
   }
 }
 
-.image_wrapper {
-  display: block;
-  min-height: 175px;
-  height: 51.04167vw;
-  max-height: 439px;
-}
-
 .swiperSlide {
   min-height: 175px;
   height: 100%;
   max-width: 100%;
+  width: 100%;
 }
 
 .swiper_button_next,
@@ -72,6 +74,30 @@
   .root {
     position: relative;
     min-height: 439px;
+  }
+
+  .image_wrapper {
+    display: block;
+    min-height: 439px;
+    max-height: 560px;
+    height: 43.9vw;
+    max-width: 1200px !important;
+    margin: 0 auto;
+  }
+
+  .root .image_wrapper img {
+    margin: 0 auto;
+    width: 100% !important;
+    min-width: 742px !important;
+    max-width: 1200px !important;
+    min-height: 439px;
+    border-radius: 16px;
+  }
+
+  .root .swiper {
+    margin-left: 47px;
+    min-height: 439px;
+    padding-bottom: 2.8rem;
   }
 
   .swiper_button_next,
@@ -131,24 +157,6 @@
     &:disabled {
      opacity: 0.5;
    }
-  }
-
-  .root .swiper img {
-    margin: 0 auto;
-    width: 100%;
-    min-width: 740px;
-    min-height: 439px;
-    border-radius: 16px;
-  }
-
-  .image_wrapper {
-    min-height: 439px;
-    max-height: 560px;
-  }
-
-  .root .swiper {
-    margin-left: 47px;
-    min-height: 439px;
   }
 
   .swiperSlide {

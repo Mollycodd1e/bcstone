@@ -71,7 +71,7 @@ export default function News() {
             data: '20/04/2022'
         },
         video: {
-            url: 'https://www.youtube.com/embed/Onn38VeEAC8',
+            //url: 'https://www.youtube.com/embed/Onn38VeEAC8',
             description: 'Видео с вручения премии, которая, несомненно, внесла большой вклад.'
         },
         hashtagList: [
