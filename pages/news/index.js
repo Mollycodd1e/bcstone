@@ -194,7 +194,7 @@ export default function News() {
     }
 
     const {header, video, slider, author, image, contacts, copyright, form} = mocks;
-    console.log(mainPageData)
+    //console.log(data.data[1].data[0].content.list)
     return (
             <Context.Provider value={[width, height]}>
                 <Head>
@@ -208,7 +208,7 @@ export default function News() {
                                 <div className={`common_top_bg + ${classes.common_top_bg_news}`}  ref={topMenuEl}>
                                     <S_MenuC menuOnTop={menuOnTop} data={mainPageData[0]} />
                                 </div>
-                                <S_Tags hashtagList={mocks.hashtagList}/>
+                                <S_Tags hashtagList={data.data[1].data[0].content.list}/>
                                 <S_Header 
                                     header={header.name} 
                                     text={header.description}
@@ -226,7 +226,7 @@ export default function News() {
                                 <S_Quote photo={author.photo} name={author.name} description={author.description}
                                     text={author.quote}
                                 />
-                                <S_Picture src={image.url} description={image.description}/>
+                                <S_Picture src={data.data[1].data[4].content.image.src} description={data.data[1].data[4].content.description}/>
                                 <S_Text text={mocks.textList[2].text}
                                 />
                                 <S_MoreInfoBtn />

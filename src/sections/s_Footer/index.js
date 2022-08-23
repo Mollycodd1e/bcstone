@@ -4,6 +4,7 @@ import { C_Logo } from '../../components/c_Logo';
 import { C_LogoSH } from '../../components/c_LogoSH';
 import { C_Copyright } from '../../components/c_Copyright';
 import classes from './style.module.scss';
+import { C_OnTopBtn } from '../../components/c_OnTopBtn';
 
 export const S_Footer = ({className, phone_number, mail, address, sales_number, telegram, copyright}) => {
   
@@ -23,6 +24,7 @@ export const S_Footer = ({className, phone_number, mail, address, sales_number, 
             <C_Copyright copyright={copyright}/>
           </div>
         </div>
+        <C_OnTopBtn className={classes.footer_ontop_btn}/>
       </div>
   )
 }

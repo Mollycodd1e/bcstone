@@ -42,7 +42,7 @@
   //display: none;
   background-image: url("../../img/s_whatsup_icon.svg");
   @include iconMob;
-  bottom: 80px;
+  bottom: 136px;
   animation: exist2 10s ease-out;
   //animation-delay: 2s;
 }
@@ -51,7 +51,7 @@
   //display: none;
   background-image: url("../../img/s_call_icon.svg");
   @include iconMob;
-  bottom: 24px;
+  bottom: 80px;
   animation: exist 2s ease-out;
 }
 

@@ -13,7 +13,7 @@ export const S_Tags = ({className, hashtagList}) => {
             <ul>
                 {hashtagList.map((hashtag) =>
                     <li key={hashtag.id}>
-                        <C_Tag text={hashtag.hashtag}/>
+                        <C_Tag text={hashtag.name}/>
                     </li>    
                 )}
             </ul>

@@ -37,6 +37,13 @@
   margin-top: 25px;
 }
 
+.footer_ontop_btn {
+  position: fixed;
+  z-index: 100;
+  right: 10px;
+  bottom: 24px;
+}
+
 @media (min-width: $width-tablet-md) {
   .root {
     width: 100%;
@@ -67,7 +74,8 @@
   }
 
   .logo_wrapper {
-    margin-left: 74px;
+    margin-right: 107px;
+    margin-left: auto;
   }
 
   .logo_footer {
@@ -84,6 +92,11 @@
     width: 230px;
     height: 35px;
     background-size: 230px 35px;
+  }
+
+  .footer_ontop_btn {
+    right: 52px;
+    bottom: 52px;
   }
 }
 
@@ -112,6 +125,7 @@
     display: flex;
     flex-direction: row-reverse;
     margin-left: 272px;
+    margin-right: 0;
     align-items: flex-end;
   }
 
@@ -134,5 +148,10 @@
     width: 260px;
     height: 55px;
     background-size: 260px 55px;
+  }
+
+  .footer_ontop_btn {
+    right: 37px;
+    bottom: 58px;
   }
 }
