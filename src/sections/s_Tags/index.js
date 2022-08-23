@@ -6,13 +6,13 @@ import classNames from 'classnames';
 export const S_Tags = ({className, hashtagList}) => {
     
     const cls = classNames(classes.root, {[className]: className});
-    
+
     return (
         <div className={cls}>
-            <C_BackButton />
+            <C_BackButton />   
             <ul>
                 {hashtagList.map((hashtag) =>
-                    <li key={hashtag.id}>
+                    <li key={hashtag.id} >
                         <C_Tag text={hashtag.name}/>
                     </li>    
                 )}

@@ -77,59 +77,59 @@ export default function News() {
         hashtagList: [
             {
                 id: 1,
-                hashtag: 'премия'
+                name: 'премия'
             },
             {
                 id: 2,
-                hashtag: 'вручение'
+                name: 'вручение'
             },
             {
                 id: 3,
-                hashtag: 'отчет'
+                name: 'отчет'
             },
             {
                 id: 4,
-                hashtag: 'премия'
+                name: 'премия'
             },
             {
                 id: 5,
-                hashtag: 'вручение'
+                name: 'вручение'
             },
             {
                 id: 6,
-                hashtag: 'отчет'
+                name: 'отчет'
             },
             {
                 id: 7,
-                hashtag: 'отчет'
+                name: 'отчет'
             },
             {
                 id: 8,
-                hashtag: 'премия'
+                name: 'премия'
             },
             {
                 id: 9,
-                hashtag: 'вручение'
+                name: 'вручение'
             },
             {
                 id: 10,
-                hashtag: 'отчет'
+                name: 'отчет'
             },
             {
                 id: 11,
-                hashtag: 'отчет'
+                name: 'отчет'
             },
             {
                 id: 12,
-                hashtag: 'премия'
+                name: 'премия'
             },
             {
                 id: 13,
-                hashtag: 'вручение'
+                name: 'вручение'
             },
             {
                 id: 14,
-                hashtag: 'отчет'
+                name: 'отчет'
             },
         ],
         textList: [
