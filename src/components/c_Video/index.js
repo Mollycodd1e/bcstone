@@ -7,7 +7,7 @@ export const C_Video = ({className, url}) => {
 
   return (
     <div className={cls}>
-      <iframe src={url} />
+      <iframe src={url} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
     </div>
   )
 }

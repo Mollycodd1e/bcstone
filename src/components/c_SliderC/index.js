@@ -27,6 +27,7 @@ export const C_SliderC = ({className, isBtnClose, items, initialSlide, onBtnClos
                 onInit={(evt) => {
                     set_my_swiper(evt)
                 }}
+                
                 slidesPerView={1}
                 spaceBetween={slidersSpaceBetween}
                 centeredSlides={true}                

@@ -48,7 +48,6 @@ export const C_Form = ({className, header, description, ready}) => {
 
   const onInputCheck = (evt) => {
     if (evt) {
-      console.log(evt.target.value);
       (evt.target.value.length > 0) && (validName.test(evt.target.value)) ? (onInputValid(evt))
       : (evt.target.value.length > 0) && (!validName.test(evt.target.value)) ? (onInputInvalid(evt))
       : (onInputDefault(evt))
@@ -56,7 +55,6 @@ export const C_Form = ({className, header, description, ready}) => {
   }
 
   const onEmailCheck = (evt) => {
-    console.log(evt.target.value);
     evt.target.value.length === 0 ? (onInputDefault(evt))
     : EMAIL_REGEXP.test(evt.target.value) ? (onInputValid(evt))
     : !EMAIL_REGEXP.test(evt.target.value) ? (onInputInvalid(evt))
@@ -68,6 +66,7 @@ export const C_Form = ({className, header, description, ready}) => {
       let inputName = document.querySelector('#id-name');
 
       console.log(input.value.length);
+      console.log(input.value);
       (input.value.length < 1) ? (onInputNeed(e)) : 
       (!EMAIL_REGEXP.test(input.value)) ? (e.preventDefault()) : 
       ((!validName.test(inputName.value)) && (inputName.value.length > 0)) ? (e.preventDefault()) :

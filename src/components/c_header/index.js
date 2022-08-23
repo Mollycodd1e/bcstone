@@ -6,7 +6,7 @@ export const C_Header = ({className, header}) => {
   const cls = classNames(classes.root, {[className]: className});
   
   return (
-      <div id="top" className={cls}>
+      <div className={cls}>
         <h1>{header}</h1>
       </div>
   )

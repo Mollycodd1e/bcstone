@@ -194,7 +194,7 @@ export default function News() {
     }
 
     const {header, video, slider, author, image, contacts, copyright, form} = mocks;
-    //console.log(data.data[1].data[0].content.list)
+    //console.log(data.data[1].data[2].content.url)
     return (
             <Context.Provider value={[width, height]}>
                 <Head>
@@ -205,7 +205,7 @@ export default function News() {
                 <div className={"page-wrapper"}>                                  
                     {data.length !== 0 ? (
                             <>
-                                <div className={`common_top_bg + ${classes.common_top_bg_news}`}  ref={topMenuEl}>
+                                <div className={`common_top_bg + ${classes.common_top_bg_news}`}  ref={topMenuEl} id="top">
                                     <S_MenuC menuOnTop={menuOnTop} data={mainPageData[0]} />
                                 </div>
                                 <S_Tags hashtagList={data.data[1].data[0].content.list}/>
@@ -214,7 +214,7 @@ export default function News() {
                                     text={header.description}
                                     data={header.data}
                                 />
-                                <S_Video url={video.url} 
+                                <S_Video url={data.data[1].data[2].content.url} 
                                     description={video.description}
                                 />
                                 <S_Text text={mocks.textList[0].text}
