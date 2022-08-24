@@ -1,21 +1,21 @@
 import {useEffect, useRef, useState} from "react";
-import {useWindowSize, Context} from "../../src/library";
+import {useWindowSize, Context} from "../src/library";
 import Script from 'next/script'
 import axios from "axios";
 import Head from 'next/head';
-import classes from  './style.module.scss';
-import { S_Tags } from "../../src/sections/s_Tags";
-import { S_Header } from "../../src/sections/s_Header";
+import classes from  './styleNews.module.scss';
+import { S_Tags } from "../src/sections/s_Tags";
+import { S_Header } from "../src/sections/s_Header";
 import { isNoSubstitutionTemplateLiteral } from "typescript";
-import { S_Video } from "../../src/sections/s_Video";
-import { S_Text } from "../../src/sections/s_Text";
-import { S_Slider } from "../../src/sections/s_Slider";
-import { S_Quote } from "../../src/sections/s_Quote";
-import { S_Picture } from "../../src/sections/s_Picture";
-import { S_MoreInfoBtn } from "../../src/sections/s_MoreInfoBtn";
-import { S_Form } from "../../src/sections/s_Form";
-import { S_Footer } from "../../src/sections/s_Footer";
-import { S_MenuC } from "../../src/sections/s_MenuC";
+import { S_Video } from "../src/sections/s_Video";
+import { S_Text } from "../src/sections/s_Text";
+import { S_Slider } from "../src/sections/s_Slider";
+import { S_Quote } from "../src/sections/s_Quote";
+import { S_Picture } from "../src/sections/s_Picture";
+import { S_MoreInfoBtn } from "../src/sections/s_MoreInfoBtn";
+import { S_Form } from "../src/sections/s_Form";
+import { S_Footer } from "../src/sections/s_Footer";
+import { S_MenuC } from "../src/sections/s_MenuC";
 
 export default function News() {
     const [width, height] = useWindowSize();

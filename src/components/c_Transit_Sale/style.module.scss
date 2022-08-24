@@ -1,0 +1,155 @@
+@import '../../styles/style';
+
+.root {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2, auto);
+  grid-template-areas:  "picture link"
+                        "title link";
+  align-items: center;
+  justify-items: center;
+
+
+  &.reverse {
+    grid-template-areas:  "link picture"
+                          "link title";
+
+    & .picture {
+      margin: 0 0 0 7px;
+      justify-self: flex-start;
+    }
+
+    & .title {
+      justify-self: flex-start;
+    }
+
+    & .link {
+      justify-self: flex-end;
+    }
+  }
+}
+
+.picture {
+  grid-area: picture;
+  width: 164px;
+  height: 215px;
+  background-size: 164px 215px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 0 0 17px;
+  justify-self: flex-end;
+}
+
+.link {
+  grid-area: link;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: flex-start;
+}
+
+.title {
+  grid-area: title;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 800;
+  margin: -10px 0 0;
+  justify-self: flex-end;
+}
+
+.roundButton {
+  margin: 0 2px 7px 0;
+}
+
+.arrowButton {
+  display: none;
+  grid-area: arrowButton;
+}
+
+.buttonText {
+  grid-area: buttonText;
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 300;
+  color: #C4C4C4;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    padding: 28px 0 25px;
+
+    &.reverse {
+      & .picture {
+        margin: 0;
+      }
+
+      & .title {
+        justify-self: center;
+      }
+    }
+  }
+
+  .picture {
+    width: 212px;
+    height: 276px;
+    background-size: 212px 276px;
+    margin: 0;
+  }
+
+  .title {
+    justify-self: center;
+    font-size: 62px;
+    line-height: 62px;
+  }
+
+  .buttonText {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .roundButton {
+    width: 69px;
+    height: 69px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas:  "picture title"
+                          "picture link";
+
+    &.reverse {
+      grid-template-areas:  "title picture"
+                            "link picture";
+    }
+  }
+
+  .roundButton {
+    display: none;
+  }
+
+  .arrowButton {
+    display: block;
+    margin-right: 12px;
+  }
+
+  .link {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .buttonText {
+    font-size: 31px;
+    line-height: 31px;
+  }
+
+  .picture {
+    opacity: .25;
+    width: 233px;
+    height: 303px;
+    background-size: 233px 303px;
+  }
+}

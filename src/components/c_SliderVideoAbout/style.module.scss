@@ -1,0 +1,47 @@
+@import '../../styles/style';
+
+.root {
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.С_Slider {
+  height: 100%;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    width: 369px;
+    //border-radius: 10px;
+    margin-bottom: unset;
+    overflow: unset;
+  }
+
+  .С_Slider {
+    width: 100%;
+
+    & div[class*="swiper-container"] {
+      padding-bottom: unset;
+      border-radius: 15px;
+    }
+
+    & div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
+      display: none;
+    }
+
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    width: 694px;
+  }
+
+  .С_Slider {
+    height: unset;
+  }
+}
