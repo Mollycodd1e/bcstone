@@ -155,7 +155,7 @@ export default function News() {
     const {contacts, copyright} = mocks;
 
     const NewsPageData = data.length !==0 ? data.data[1].data : '';
-    //console.log(NewsPageData)
+    //console.log(NewsPageData[1].content)
 
     return (
             <Context.Provider value={[width, height]}>
@@ -174,7 +174,7 @@ export default function News() {
                                 <S_Header 
                                     header={NewsPageData[1].content.title} 
                                     text={NewsPageData[1].content.description}
-                                    data={NewsPageData[1].content.data}
+                                    data={NewsPageData[1].content.date}
                                 />
                                 <S_Video url={NewsPageData[2].content.url} 
                                     description={NewsPageData[2].content.description}

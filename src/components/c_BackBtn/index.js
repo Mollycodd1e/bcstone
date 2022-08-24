@@ -9,7 +9,7 @@ export const C_BackButton = ({className}) => {
 
     return (
         <React.Fragment>
-            <Link href={'/'}>
+            <Link href={"/"}>
                 <a className={cls} />
             </Link>
         </React.Fragment>
