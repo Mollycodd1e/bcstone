@@ -47,6 +47,28 @@
   .wrapper {
     column-gap: unset;
     grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    //justify-content: space-between;
+
+    & div {
+      transition: all .5s;
+    }
+
+    & div:first-child {
+      flex-grow: 1;
+
+      &:hover {
+        flex-grow: 4;
+      }
+    }
+
+    & div:last-child {
+      flex-grow: 1;
+
+      &:hover {
+        flex-grow: 4;
+      }
+    }
 
     &:after {
       content: none;
