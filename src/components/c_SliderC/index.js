@@ -31,7 +31,13 @@ export const C_SliderC = ({className, isBtnClose, items, initialSlide, onBtnClos
                 slidesPerView={1}
                 spaceBetween={slidersSpaceBetween}
                 centeredSlides={true}                
-                pagination={{"clickable": true}}
+                pagination={{
+                    //el:'.swiper_pagination',
+                    "clickable": true,
+                    // renderBullet: (index, className) => {
+                    //     return '<span class="' + className + '">' + (index + 1) + "</span>";
+                    //    },
+                    }}
                 className={classNames(classes.swiper, {[classes.swiperMode]: isBtnClose})}
                 initialSlide={Number(initialSlide) || 0}
             >     
@@ -48,6 +54,8 @@ export const C_SliderC = ({className, isBtnClose, items, initialSlide, onBtnClos
             </Swiper>
             <div className={classes.swiper_button_next} onClick={() => (my_swiper.slideNext(), slide < items.length -1 ? setSlide(slide + 1) : setSlide(slide))}
             disabled={(slide === (items.length-1)) ? true : false}></div>
+            <div className={classes.swiper_pagination}>               
+            </div>
         </div>
     )
 }

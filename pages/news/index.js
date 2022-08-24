@@ -65,15 +65,6 @@ export default function News() {
     });
 
     const mocks = {
-        header: {
-            name: `Максим Гейзер в${'\u00A0'}рейтинге CRE 100`,
-            description: '100 самых влиятельных персон рынка коммерческой недвижимости 2022/23',
-            data: '20/04/2022'
-        },
-        video: {
-            //url: 'https://www.youtube.com/embed/Onn38VeEAC8',
-            description: 'Видео с вручения премии, которая, несомненно, внесла большой вклад.'
-        },
         hashtagList: [
             {
                 id: 1,
@@ -146,33 +137,6 @@ export default function News() {
                 text: 'Не следует, однако забывать, что начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям. Таким образом сложившаяся структура организации играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. Таким образом Сложившаяся структура организации способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий требуют определения и уточнения позиций, занимаемых участниками в отношении поставленных задач. Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям.',
             }
         ],
-        image: {
-            url: 'https://via.placeholder.com/260x176',
-            description : 'Снимок с вручения премии, которая внесла большой вклад.'
-        },
-        author: {
-            photo: 'https://via.placeholder.com/76x76',
-            name: 'Кристина Недря',
-            description: `Руководитель департамента оценки и${'\u00A0'}аналитики STONE${'\u00A0'}HEDGE`,
-            quote: '«Генеральный директор STONE HEDGE Максим Гейзер второй год подряд вошёл в число самых влиятельных персон рынка коммерческой недвижимости рейтинга CRE 100. В списке CRE 100 генеральный директор STONE HEDGE был высоко отмечен в числе лидеров отрасли и занял 16 позицию в категории Девелопмент»'
-        },
-        slider: {
-            images: [
-                {
-                    id: 1,
-                    url: 'https://via.placeholder.com/260x176'
-                },
-                {
-                    id: 2,
-                    url: 'https://via.placeholder.com/260x176'
-                },
-                {
-                    id: 3,
-                    url: 'https://via.placeholder.com/260x176'
-                }
-            ],
-            description : 'Фотографии с вручения премии, которая, несомненно,внесла вклад.'
-        },
         contacts: {
             phone: '+7 (495) 124-45-67',
             mail: 'sales@bc-stone.ru',
@@ -186,15 +150,13 @@ export default function News() {
             author: '© АО «СТОУНХЕДЖ»',
             description: `Содержимое данного сайта (включая размещенную информацию и материалы) охраняется авторским${'\u00A0'}правом (ст. 1271 ГК РФ). Запрещено копирование дизайна настоящего сайта, его структуры и отдельных элементов без предварительного письменного согласия АО «СТОУНХЕДЖ»`
         },
-        form: {
-            header: `Новости рынка и${'\u00A0'}проектов`,
-            ready: 'Готово!',
-            description: `Одним из первых узнавайте о${'\u00A0'}новостях рынка коммерческой недвижимости`       
-        }
     }
 
-    const {header, video, slider, author, image, contacts, copyright, form} = mocks;
-    //console.log(data.data[1].data[2].content.url)
+    const {contacts, copyright} = mocks;
+
+    const NewsPageData = data.length !==0 ? data.data[1].data : '';
+    //console.log(NewsPageData)
+
     return (
             <Context.Provider value={[width, height]}>
                 <Head>
@@ -208,29 +170,30 @@ export default function News() {
                                 <div className={`common_top_bg + ${classes.common_top_bg_news}`}  ref={topMenuEl} id="top">
                                     <S_MenuC menuOnTop={menuOnTop} data={mainPageData[0]} />
                                 </div>
-                                <S_Tags hashtagList={data.data[1].data[0].content.list}/>
+                                <S_Tags hashtagList={NewsPageData[0].content.list}/>
                                 <S_Header 
-                                    header={header.name} 
-                                    text={header.description}
-                                    data={header.data}
+                                    header={NewsPageData[1].content.title} 
+                                    text={NewsPageData[1].content.description}
+                                    data={NewsPageData[1].content.data}
                                 />
-                                <S_Video url={data.data[1].data[2].content.url} 
-                                    description={video.description}
+                                <S_Video url={NewsPageData[2].content.url} 
+                                    description={NewsPageData[2].content.description}
                                 />
-                                <S_Text text={mocks.textList[0].text}
+                                <S_Text text={NewsPageData[3].content.text}
                                 />
-                                <S_Slider items={data.data[1].data[5].content.gallery} 
-                                    description={slider.description} />
-                                <S_Text text={mocks.textList[1].text}
+                                <S_Slider items={NewsPageData[5].content.gallery} 
+                                    description={NewsPageData[5].content.description} />
+                                <S_Text text={NewsPageData[3].content.text}
                                 />
-                                <S_Quote photo={author.photo} name={author.name} description={author.description}
-                                    text={author.quote}
+                                <S_Quote photo={NewsPageData[6].content.photo.src} name={NewsPageData[6].content.name} 
+                                    description={NewsPageData[6].content.description}
+                                    text={NewsPageData[6].content.text}
                                 />
-                                <S_Picture src={data.data[1].data[4].content.image.src} description={data.data[1].data[4].content.description}/>
-                                <S_Text text={mocks.textList[2].text}
+                                <S_Picture src={NewsPageData[4].content.image.src} description={NewsPageData[4].content.description}/>
+                                <S_Text text={NewsPageData[3].content.text}
                                 />
                                 <S_MoreInfoBtn />
-                                <S_Form header={form.header} description={form.description} ready={form.ready}/>
+                                <S_Form header={NewsPageData[8].content.title} description={NewsPageData[8].content.description} ready={NewsPageData[8].content.success}/>
                                 <S_Footer phone_number={contacts.phone} mail={contacts.mail} address={contacts.address} 
                                     sales_number={contacts.sales} telegram={contacts.telegram} copyright={copyright}/>
                             </>
