@@ -15,10 +15,11 @@ export const S_Top_Commercial = ({className, data}) => {
     cuttedElements.sort(function (a, b) {
         return a.order - b.order;
     })
+
     const elements = cuttedElements.length !== 0 && cuttedElements.map((el, i) => {
         return <C_Element_Top_Commertial element={el} key={i} />
     })
-
+    
     return (
         <>
             {isTablet

@@ -1,0 +1,36 @@
+@import '../../styles/style';
+
+.root {
+
+}
+
+.C_SliderVideoAbout {
+  grid-area: C_SliderVideoAbout;
+}
+
+.C_TextContentAbout {
+  grid-area: C_TextContentAbout;
+}
+
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 218px;
+    width: 100%;
+    grid-template-areas: "C_SliderVideoAbout C_TextContentAbout";
+    padding-left: 85px;
+    //justify-items: center;
+    justify-content: center;
+    grid-column-gap: 80px;
+  }
+}
+
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    grid-column-gap: 95px;
+    grid-template-rows: 573px;
+  }
+}

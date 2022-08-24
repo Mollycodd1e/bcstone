@@ -1,0 +1,39 @@
+@import '../../styles/style';
+
+.root {
+  width: auto;
+  height: 20px;
+  border-radius: 20px;
+  padding: 5px 10px 8px 12px;
+  color: #ffffff;
+  background: #515DAC;
+  cursor: pointer;
+}
+
+.root:nth-child(n + 3) {
+  margin-left: 4px;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    height: 30px;
+    margin-top: 7px;
+    font-size: 14px;
+    line-height: 15px;
+    padding: 7px 19px 8px 20px;
+  }
+  
+  .root:nth-child(n + 3) {
+    margin-left: 8px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    height: 35px;
+    margin-top: 4px;
+    font-size: 18px;
+    line-height: 19px;
+    padding: 9px 20px 10px 20px;
+  }
+}

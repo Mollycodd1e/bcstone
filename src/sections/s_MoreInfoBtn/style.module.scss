@@ -1,0 +1,21 @@
+@import '../../styles/style';
+
+.root {
+  margin-right: auto;
+  margin-top: 6px;
+  padding: 0 19px 45px 30px;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    margin-top: 34px;
+    padding: 0 130px 45px 130px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    margin-top: 45px;
+    padding: 0 418px 45px 418px;
+  }
+}

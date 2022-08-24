@@ -1,0 +1,29 @@
+@import '../../styles/style';
+
+.root a {
+  width: 194px;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 8px 0;
+  display: block;
+  text-align: center;
+  border-radius: 16px;
+  background-color: #515dac;
+  color: $color-white;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root a {
+    width: 235px;
+    font-size: 18px;
+    line-height: 19px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root a {
+    width: 254px;
+    padding: 12px 0;
+    border-radius: 20px;
+  }
+}

@@ -1,0 +1,70 @@
+@import '../../styles/style';
+
+.root {
+  width: 100%;
+  padding: 2px 30px 26px 30px;
+  margin-top: 8px;
+  background-image: url('../../img/quotes.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 90px 81px;
+}
+
+.root .quote_text {
+  position: relative;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.1px;
+  margin-top: 10px;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #E2E2E2;
+  }
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    padding: 40px 124px 5px 130px;
+    margin-top: 3px;
+    background-size: 200px 179px;
+    background-position: bottom right 300px;
+  }
+
+  .root .quote_text {
+    font-size: 16px;
+    line-height: 19px;
+    padding-left: 204px;
+    margin-top: -59px;
+    letter-spacing: -0.3px;
+
+    &::after {
+      bottom: -47px;
+    }
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    margin-top: 52px;
+    padding: 47px 415px 5px 416px;
+  }
+
+  .root .quote_text {
+    font-size: 18px;
+    line-height: 21px;
+    padding-left: 320px;
+    padding-right: 150px;
+    margin-top: -128px;
+    letter-spacing: -0.5px;
+
+    &::after {
+      bottom: -58px;
+    }
+  }
+}
