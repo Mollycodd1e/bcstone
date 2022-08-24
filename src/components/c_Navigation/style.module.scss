@@ -69,7 +69,8 @@ $menuTransition: .4s;
     height: 25px;
     background-size: 47px 20px;
     top: 0;
-    transition: left $menuTransition, top $menuTransition;
+    //transition: left $menuTransition, top $menuTransition;
+    transition: unset;
   }
 
   .openBurger {
