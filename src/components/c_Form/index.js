@@ -87,7 +87,7 @@ export const C_Form = ({className, header, description, ready}) => {
               <input placeholder='E-mail*' name="email" id="id-email" onFocus={(e) => (mail.style.borderColor = formColor.default, mail.nextElementSibling.style.color = formColor.error, mail.nextElementSibling.classList.add('visually-hidden'), mail.nextElementSibling.innerHTML='Адрес введен неверно')} onBlur={(evt) => onEmailCheck(evt)}/>
               <label className={'visually-hidden'} htmlFor="id-email">Адрес введен неверно</label>
             </div>
-            <button onClick={(e) => isCheck && (!validName.test(document.querySelector('#id-name').value) ||(validName.test(document.querySelector('#id-name').value === 0))) ? onFormSubmit(e) : ''} type="submit">
+            <button onClick={(e) => isCheck && (validName.test(document.querySelector('#id-name').value) ||(document.querySelector('#id-name').value.length === 0)) ? onFormSubmit(e) : ''} type="submit">
               <span >Хочу быть в курсе</span>
             </button>
             <div className={classes.input__checkbox_wrapper}>
