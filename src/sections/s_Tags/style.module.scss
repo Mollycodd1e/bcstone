@@ -1,0 +1,64 @@
+@import '../../styles/style';
+
+.root {
+  width: 100%;
+  display: flex;
+  padding: 20px 21px 5px 30px;
+}
+
+.root ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  max-height: 25px;
+  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  align-self: center;
+  justify-content: flex-start;
+  cursor: grab;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+}
+
+.root li {
+  margin-bottom: 5px;
+  margin-left: 6px;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    padding: 20px 62px 5px 52px;
+    margin-top: 20px;
+  }
+
+  .root ul {
+    max-height: 45px;
+    align-items: center;
+  }
+
+  .root li {
+    margin-left: 7px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    padding: 20px 508px 5px 306px;
+  }
+
+  .root ul {
+    max-height: 45px;
+    align-items: center;
+  }
+
+  .root li {
+    margin-left: 9px;
+  }
+}

@@ -1,0 +1,40 @@
+@import '../../styles/style';
+
+.root {
+  margin-top: 2px;
+}
+
+.root p {
+  margin: 0;
+  padding-right: 50px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+  letter-spacing: -0.2px;
+  color: #a0a0a0;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    margin-top: 4px;
+  }
+
+  .root p {
+    font-size: 22px;
+    line-height: 25px;
+    letter-spacing: -0.2px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    margin-top: 5px;
+  }
+
+  .root p {
+    max-width: 800px;
+    line-height: 26px;
+
+    letter-spacing: 0.9px;
+  }
+}

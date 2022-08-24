@@ -1,0 +1,22 @@
+@import '../../styles/style';
+
+.root {
+  width: 100%;
+  height: 100%;
+  padding: 0 30px 10px 30px;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    padding: 0 130px 10px 130px;
+    margin-top: 18px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    display: flex;
+    padding: 0 413px 10px 418px;
+    margin-top: 28px;
+  }
+}

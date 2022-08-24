@@ -1,0 +1,26 @@
+@import '../../styles/style';
+
+.root h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 27px;
+  font-family: 800;
+  letter-spacing: -0.7px;
+  $color-dark-primary: #2c2d2d;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root h1 {
+    font-size: 46px;
+    line-height: 49px;
+    letter-spacing: -1.3px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root h1 {
+    font-size: 57px;
+    line-height: 62px;
+    letter-spacing: -1.4px;
+  }
+}

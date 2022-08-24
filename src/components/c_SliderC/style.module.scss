@@ -1,0 +1,251 @@
+@import '../../styles/style';
+
+.root {
+  min-height: 162px;
+  display: flex;
+  flex-direction: row;
+}
+
+.image_wrapper {
+  display: block;
+  min-height: 175px;
+  height: 51.04167vw;
+  max-height: 439px;
+}
+
+.root .image_wrapper img {
+    display: block;
+    width: 100%;
+    min-height: 175px;
+    min-width: 258px;
+    height: auto;
+    max-height: 439px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.root .swiper {
+  display: block;
+  min-width: 250px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-items: center;
+  min-height: 192px;
+  margin: 0;
+  position: relative;
+  padding-bottom: 1.5rem;
+
+  div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
+    bottom: 0 !important;
+
+    span[class="swiper-pagination-bullet"] {
+      width: 6px !important;
+      height: 6px !important;
+      background: $color-gray-two !important;
+      border: 1px solid $color-gray-two !important;
+      opacity: 1 !important;
+    }
+
+    span[class="swiper-pagination-bullet swiper-pagination-bullet-active"] {
+      width: 6px !important;
+      height: 6px !important;
+      background: #2b2c2d !important;
+      border: 1px solid #2b2c2d !important;
+    }
+  }
+}
+
+.swiperSlide {
+  min-height: 175px;
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+}
+
+.swiper_button_next,
+.swiper_button_prev,
+.swiper_button_prev .swiper-button-disabled,
+.swiper_button_next .swiper-button-disabled {
+  display: none;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    position: relative;
+    min-height: 439px;
+  }
+
+  .image_wrapper {
+    display: block;
+    min-height: 439px;
+    max-height: 560px;
+    height: 43.9vw;
+    max-width: 1200px !important;
+    margin: 0 auto;
+  }
+
+  .root .image_wrapper img {
+    margin: 0 auto;
+    width: 100% !important;
+    min-width: 742px !important;
+    max-width: 1200px !important;
+    min-height: 439px;
+    border-radius: 16px;
+  }
+
+  .root .swiper {
+    margin-left: 47px;
+    min-height: 439px;
+    padding-bottom: 2.8rem;
+    max-width: 1200px;
+  }
+
+  .root .swiper .swiper-container {
+    max-width: 1200px;
+  }
+
+  .swiper_button_next,
+  .swiper_button_prev {
+    position: relative;
+    display: block;
+    min-width: 52px;
+    width: 52px;
+    height: 52px;
+    left: 21px;
+    top: 193px;
+    border-radius: 50%;
+    border: 1px solid #B7B7B7;
+    background: transparent;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 14px;
+      height: 1px;
+      left: 15px;
+      background-color: #B7B7B7;
+    }
+  
+    &::before {
+      top: 21px;
+      transform: rotate(-45deg);
+    }
+  
+    &::after {
+      top: 30px;
+      transform: rotate(45deg);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .swiper_button_next {
+    position: relative;
+    
+    &::before,
+    &::after {
+      left: 20px;
+    }
+  
+    &::before {
+      transform: rotate(45deg);
+    }
+  
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:disabled {
+     opacity: 0.5;
+   }
+  }
+
+  .swiperSlide {
+    min-height: 439px;
+    min-width: 740px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    width: 100%;
+    min-height: 560px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .root .image_wrapper img {
+    height: 100% !important;
+    display: initial !important;
+    max-height: 630px !important;
+    max-width: 790px !important;
+  }
+
+  .image_wrapper {
+    min-height: 560px;
+    max-height: 560px;
+  }
+
+  .swiper_button_prev {
+    order: 2;
+    left: 44px;
+    top: 289px;
+  }
+
+  .swiper_button_next {
+    order: 3;
+    left: -8px;
+    top: 217px;
+  }
+
+  .swiper {
+    order: 1;
+    min-width: 788px;
+    min-height: 570px;
+    margin-left: 65px;
+
+    div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
+      display: flex;
+      flex-direction: column;
+      top: 255px !important;
+      left: 0 !important;
+      width: 30px !important;
+      align-items: center;
+
+      span[class="swiper-pagination-bullet"] {
+        margin: 5px !important;
+      }
+
+      span[class="swiper-pagination-bullet swiper-pagination-bullet-active"] {
+        margin: 5px !important;
+      }
+    }
+  }
+
+  .root .swiper {
+    min-height: 439px;
+    padding-left: 5.5rem;
+    padding-bottom: 0;
+    margin-left: 0;
+    max-width: 863px;
+  }
+
+  .swiperSlide {
+    min-height: 561px;
+    min-width: 740px;
+    margin-left: 65px;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100% !important;
+  }
+}

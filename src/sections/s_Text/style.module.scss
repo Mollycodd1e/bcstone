@@ -1,0 +1,20 @@
+@import '../../styles/style';
+
+.root {
+  margin-top: 0;
+  padding: 0 33px 5px 30px;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    margin-top: 10px;
+    padding: 0 165px 5px 130px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    margin-top: 6px;
+    padding: 0 713px 5px 418px;
+  }
+}

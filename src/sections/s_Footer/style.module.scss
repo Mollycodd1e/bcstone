@@ -1,0 +1,157 @@
+@import '../../styles/style';
+
+.root {
+  background: radial-gradient(#fff 0%, #808080 300%);
+}
+
+.footer_wrapper {
+  display: flex;
+  flex-direction: column;
+  background-image: url('../../img/bgstone.png');
+  background-repeat: no-repeat;
+  background-position: left top 47px;
+  padding: 47px 21px 18px 17px;
+}
+
+.root h2 {
+  order: 2;
+  margin: 0;
+  margin-left: 3px;
+  margin-top: 30px;
+  font-size: 28px;
+  line-height: 31px;
+  text-transform: uppercase;
+  color: $color-dark-primary;
+}
+
+.logo_footer {
+  order: 3;
+}
+
+.copyright_wrapper {
+  margin-top: 60px;
+  order: 4;
+}
+
+.logoSH_footer {
+  margin-top: 25px;
+}
+
+.footer_ontop_btn {
+  position: fixed;
+  z-index: 100;
+  right: 10px;
+  bottom: 24px;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    width: 100%;
+    margin-top: 40px;
+    min-height: 971px;
+  }
+
+  .footer_wrapper {
+    background-image: url('../../img/bgstone-tablet.png');
+    background-repeat: no-repeat;
+    background-position: center bottom 210px;
+    padding: 64px 118px 18px 50px;
+  }
+
+  .root h2 {  
+    font-size: 46px;
+    line-height: 55px;
+    margin-top: 75px;
+    margin-left: 57px;
+    letter-spacing: 0.3px;
+  }
+
+  .copyright_wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-top: 119px;
+  }
+
+  .logo_wrapper {
+    margin-right: 107px;
+    margin-left: auto;
+  }
+
+  .logo_footer {
+    margin-top: 0;
+    margin-left: 0;
+    width: 120px;
+    height: 40px;
+    background-size: 120px 40px;
+  }
+
+  .logoSH_footer {
+    margin-left: 0;
+    margin-top: 35px;
+    width: 230px;
+    height: 35px;
+    background-size: 230px 35px;
+  }
+
+  .footer_ontop_btn {
+    right: 52px;
+    bottom: 52px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    min-height: 1310px;
+    margin-top: 65px;
+    padding: 62px 118px 18px 124px;
+  }
+
+  .footer_wrapper {
+    background-image: url('../../img/bgstone-desktop.png');
+    background-position: left 52px bottom 212px;
+    padding: 64px 118px 18px 50px;
+  }
+
+  .root h2 {  
+    font-size: 80px;
+    line-height: 95px;
+    margin-top: 120px;
+    margin-left: 80px;
+    letter-spacing: 0.6px;
+  }
+
+  .logo_wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 272px;
+    margin-right: 0;
+    align-items: flex-end;
+  }
+
+  .copyright_wrapper {
+    margin-top: 104px;
+  }
+
+  .logo_footer {
+    margin: 0;
+    margin-bottom: 6px;
+    width: 160px;
+    height: 50px;
+    background-size: 160px 50px;
+  }
+
+  .logoSH_footer {
+    margin-left: 35px;
+    margin-top: 35px;
+    margin-bottom: 9px;
+    width: 260px;
+    height: 55px;
+    background-size: 260px 55px;
+  }
+
+  .footer_ontop_btn {
+    right: 37px;
+    bottom: 58px;
+  }
+}

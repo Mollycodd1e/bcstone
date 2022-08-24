@@ -1,0 +1,65 @@
+@import '../../styles/style';
+
+.root {
+  position: relative;
+  display: block;
+  width: 10px;
+  height: 18px;
+  margin-right: 39px;
+  background: transparent;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    width: 14px;
+    height: 1px;
+    left: 0;
+    background-color: $color-black;
+  }
+
+  &::before {
+    top: 3px;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    top: 12px;
+    transform: rotate(45deg);
+  }
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    min-width: 52px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    margin-right: 34px;
+    border: 1px solid #B7B7B7;
+  
+    &::before,
+    &::after {
+      width: 14px;
+      height: 1px;
+      left: 15px;
+      background-color: #B7B7B7;
+    }
+  
+    &::before {
+      top: 21px;
+      transform: rotate(-45deg);
+    }
+  
+    &::after {
+      top: 30px;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    margin-right: 51px;
+  }
+}
