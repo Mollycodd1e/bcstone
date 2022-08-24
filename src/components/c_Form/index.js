@@ -87,11 +87,11 @@ export const C_Form = ({className, header, description, ready}) => {
               <input placeholder='E-mail*' name="email" id="id-email" onFocus={(e) => (mail.style.borderColor = formColor.default, mail.nextElementSibling.style.color = formColor.error, mail.nextElementSibling.classList.add('visually-hidden'), mail.nextElementSibling.innerHTML='Адрес введен неверно')} onBlur={(evt) => onEmailCheck(evt)}/>
               <label className={'visually-hidden'} htmlFor="id-email">Адрес введен неверно</label>
             </div>
-            <button onClick={(e) => isCheck && (validName.test(document.querySelector('#id-name').value) ||(document.querySelector('#id-name').value.length === 0)) ? onFormSubmit(e) : ''} type="submit">
+            <button onClick={(e) => isCheck && (validName.test(document.querySelector('#id-name').value) ||(document.querySelector('#id-name').value.length === 0)) ? onFormSubmit(e) : ''} type="submit" disabled={isSubmit ? true : false}>
               <span >Хочу быть в курсе</span>
             </button>
             <div className={classes.input__checkbox_wrapper}>
-              <input className={'visually-hidden'} type="checkbox" name="data" id="id-data" onClick={() => setCheck(!isCheck)} required/>
+              <input className={'visually-hidden'} type="checkbox" name="data" id="id-data" onClick={() => isSubmit ? '' : setCheck(!isCheck)} required/>
               <label htmlFor="id-data">Я согласен с обработкой персональных данных</label>
             </div>
           </fieldset>
