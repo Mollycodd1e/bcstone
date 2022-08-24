@@ -151,5 +151,13 @@
     width: 233px;
     height: 303px;
     background-size: 233px 303px;
+    transition: all .5s;
+  }
+
+  .title {
+    font-size: 100px;
+    line-height: 100px;
+    color: #EFEFEF;
+    transition: all .5s;
   }
 }
