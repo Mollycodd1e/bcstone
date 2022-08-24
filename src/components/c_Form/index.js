@@ -14,6 +14,7 @@ export const C_Form = ({className, header, description, ready}) => {
   }
 
   const [isSubmit, setSubmit] = useState(false);
+  const [isCheck, setCheck] = useState(false);
 
   let mail = document.querySelector('#id-email');
 
@@ -65,19 +66,18 @@ export const C_Form = ({className, header, description, ready}) => {
       let input = document.querySelector('#id-email');
       let inputName = document.querySelector('#id-name');
 
-      console.log(input.value.length);
-      console.log(input.value);
       (input.value.length < 1) ? (onInputNeed(e)) : 
       (!EMAIL_REGEXP.test(input.value)) ? (e.preventDefault()) : 
-      ((!validName.test(inputName.value)) && (inputName.value.length > 0)) ? (e.preventDefault()) :
-      (setSubmit(true), input.style.borderColor = formColor.default, input.nextElementSibling.classList.add('visually-hidden'), input.nextElementSibling.style.color= formColor.invalid)
+      ((!validName.test(inputName.value)) && (inputName.value.length > 0) && isCheck) ? (e.preventDefault()) :
+      (setSubmit(true), input.style.borderColor = formColor.default, input.nextElementSibling.classList.add('visually-hidden'), input.nextElementSibling.style.color= formColor.invalid,
+      console.log(inputName.value), console.log(input.value))
   };
   
   return (
       <div className={cls}>
         <form onSubmit={(e) => e.preventDefault()}>
           <fieldset>
-            <legend>{isSubmit ? ready : header}</legend>
+            <legend>{(isSubmit && isCheck) ? ready : header}</legend>
             <p>{description}</p>
             <div className={classes.input__name_wrapper}>
               <input placeholder="Как к вам обращаться" name="name" id="id-name" onInput={(evt) => onInputCheck(evt)}/>
@@ -87,11 +87,11 @@ export const C_Form = ({className, header, description, ready}) => {
               <input placeholder='E-mail*' name="email" id="id-email" onFocus={(e) => (mail.style.borderColor = formColor.default, mail.nextElementSibling.style.color = formColor.error, mail.nextElementSibling.classList.add('visually-hidden'), mail.nextElementSibling.innerHTML='Адрес введен неверно')} onBlur={(evt) => onEmailCheck(evt)}/>
               <label className={'visually-hidden'} htmlFor="id-email">Адрес введен неверно</label>
             </div>
-            <button onClick={(e) => onFormSubmit(e)} type="submit">
+            <button onClick={(e) => isCheck && (!validName.test(document.querySelector('#id-name').value) ||(validName.test(document.querySelector('#id-name').value === 0))) ? onFormSubmit(e) : ''} type="submit">
               <span >Хочу быть в курсе</span>
             </button>
             <div className={classes.input__checkbox_wrapper}>
-              <input className={'visually-hidden'} type="checkbox" name="data" id="id-data" />
+              <input className={'visually-hidden'} type="checkbox" name="data" id="id-data" onClick={() => setCheck(!isCheck)} required/>
               <label htmlFor="id-data">Я согласен с обработкой персональных данных</label>
             </div>
           </fieldset>
