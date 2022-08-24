@@ -1,5 +1,6 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
+import {log} from "util";
 
 export const C_Element_Top_Commertial = ({className, element}) => {
     const cls = classNames(classes.root, {[className]: className});
@@ -19,7 +20,7 @@ export const C_Element_Top_Commertial = ({className, element}) => {
                     {content}
                 </span>
                 <a  className={classes.link}
-                    href={`/news`}>
+                    href={window.location.hostname === 'localhost' ? `/news` : `/news.html`}>
                     Подробнее
                 </a>
             </div>
