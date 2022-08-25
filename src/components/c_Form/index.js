@@ -9,6 +9,7 @@ export const C_Form = ({className, header, description, ready}) => {
   const formColor = {
     valid: '#A2D3AA',
     invalid: '#E0A8A8',
+    textInvalid: '#C98080',
     need: '#E5BF5B',
     default: '#cccccc'
   }
@@ -69,7 +70,7 @@ export const C_Form = ({className, header, description, ready}) => {
       (input.value.length < 1) ? (onInputNeed(e)) : 
       (!EMAIL_REGEXP.test(input.value)) ? (e.preventDefault()) : 
       ((!validName.test(inputName.value)) && (inputName.value.length > 0) && isCheck) ? (e.preventDefault()) :
-      (setSubmit(true), input.style.borderColor = formColor.default, input.nextElementSibling.classList.add('visually-hidden'), input.nextElementSibling.style.color= formColor.invalid,
+      (setSubmit(true), input.style.borderColor = formColor.default, input.nextElementSibling.classList.add('visually-hidden'), input.nextElementSibling.style.color= formColor.textInvalid,
       console.log(inputName.value), console.log(input.value))
   };
   

@@ -3,7 +3,7 @@
 .root {
   width: 100%;
   padding: 2px 30px 26px 30px;
-  margin-top: 8px;
+  margin-top: 21px;
   background-image: url('../../img/quotes.png');
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -14,8 +14,9 @@
   position: relative;
   font-size: 12px;
   line-height: 16px;
+  font-family: "Codec Cold News", "Arial", sans-serif;
   letter-spacing: -0.1px;
-  margin-top: 10px;
+  margin-top: 7px;
   
   &::after {
     content: '';
@@ -51,17 +52,17 @@
 
 @media (min-width: $width-desktop-lg) {
   .root {
-    margin-top: 52px;
+    margin-top: 50px;
     padding: 47px 415px 5px 416px;
   }
 
   .root .quote_text {
     font-size: 18px;
     line-height: 21px;
-    padding-left: 320px;
+    padding-left: 318px;
     padding-right: 150px;
-    margin-top: -128px;
-    letter-spacing: -0.5px;
+    margin-top: -127px;
+    letter-spacing: -0.4px;
 
     &::after {
       bottom: -58px;

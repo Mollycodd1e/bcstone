@@ -22,7 +22,7 @@
     height: auto;
     max-height: 439px;
     margin: 0 auto;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .root .swiper {
@@ -195,6 +195,7 @@
 
   .swiper_button_next {
     position: relative;
+    left: 24px;
     
     &::before,
     &::after {

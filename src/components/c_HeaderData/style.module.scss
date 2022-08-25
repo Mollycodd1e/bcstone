@@ -1,14 +1,14 @@
 @import '../../styles/style';
 
 .root {
-  margin-top: 6px;
+  margin-top: 8px;
   padding: 0;
 }
 
 .root p {
   margin: 0;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 18px;
   font-style: italic;
   letter-spacing: -0.07px;
   color: #515dac;
@@ -23,15 +23,19 @@
   .root p {
     font-size: 22px;
     line-height: 23px;
+    letter-spacing: 0.1px;
+
   }
 }
 
 @media (min-width: $width-desktop-lg) {
   .root {
-    margin-top: 22px;
+    margin-top: 20px;
   }
 
   .root p {
-    letter-spacing: 1.4px;
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: 0.1px;
   }
 }
