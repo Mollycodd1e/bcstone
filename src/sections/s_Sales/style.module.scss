@@ -48,6 +48,7 @@
     column-gap: unset;
     grid-template-columns: repeat(2, 1fr);
     display: flex;
+    padding: 0 53px;
     //justify-content: space-between;
 
     & * {
@@ -59,9 +60,13 @@
       flex-grow: 1;
 
       &:hover {
-        flex-grow: 6;
+        //flex-grow: 6;
 
         & > div[class*="picture"] {
+          opacity: 1;
+        }
+
+        & > a[class*="link"] {
           opacity: 1;
         }
 

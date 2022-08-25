@@ -5,11 +5,13 @@ import Link from "next/link";
 export const C_Transit_Sale = ({className, url, name, type, picture }) => {
     const cls = classNames(classes.root, {[classes.reverse]: type === "retail", [className]: className });
     return (
-        <div className={cls}>
+        <div
+            className={cls}
+            onMouseOver={() => {console.log('type', type)}}
+        >
             <div className={classes.picture}
                  style={{backgroundImage:  `url("${picture.src}")`}}/>
             <Link href={url}>
-
 
                 <a className={classes.link}>
                     <svg className={classes.roundButton} xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52">

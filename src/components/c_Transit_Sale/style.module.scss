@@ -123,6 +123,14 @@
     &.reverse {
       grid-template-areas:  "title picture"
                             "link picture";
+
+      & .link {
+        justify-self: center;
+      }
+
+      & .picture {
+        justify-self: flex-end;
+      }
     }
   }
 
@@ -139,6 +147,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-self: center;
+    opacity: 0;
+    transition: .5s;
+    align-self: flex-start;
   }
 
   .buttonText {
@@ -152,6 +164,7 @@
     height: 303px;
     background-size: 233px 303px;
     transition: all .5s;
+    justify-self: flex-start;
   }
 
   .title {
@@ -159,5 +172,6 @@
     line-height: 100px;
     color: #EFEFEF;
     transition: all .5s;
+    align-self: flex-end;
   }
 }
