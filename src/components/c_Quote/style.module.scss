@@ -36,8 +36,9 @@
 
 .root p {
   margin: 0;
+  margin-bottom: 3px;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 18px;
   font-weight: 800;
   letter-spacing: -0.1px;
   color: #2B2C2C;
@@ -46,6 +47,7 @@
 .root span {
   font-size: 11px;
   line-height: 13px;
+  font-family: "Codec Cold News", "Arial", sans-serif;
   letter-spacing: -0.1px;
   padding-right: 100px;  
   color: #A0A0A0;
@@ -85,6 +87,7 @@
     display: block;
     font-size: 16px;
     line-height: 19px;
+    letter-spacing: 0;
     width: 450px;
     margin-top: 4px;
   }
@@ -102,7 +105,7 @@
   }
 
   .root .author_name_wrapper {
-    margin-top: 24px;
+    margin-top: 25px;
     margin-left: 77px;
   }
 
@@ -110,5 +113,6 @@
     font-size: 18px;
     line-height: 20px;
     width: 450px;
+    margin-top: 3px;
   }
 }

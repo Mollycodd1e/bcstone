@@ -2,8 +2,9 @@
 
 .root {
   width: 100%;
-  margin-top: 18px;
+  margin-top: 20px;
   padding: 0 29px 10px 30px;
+  margin-bottom: 20px;
 }
 
 .root img {
@@ -30,7 +31,7 @@
 
 @media (min-width: $width-tablet-md) {
   .root {
-    margin-top: 89px;
+    margin-top: 88px;
     padding: 0 130px 10px 130px;
   }
 
@@ -73,10 +74,10 @@
     max-width: 225px;
     padding-right: 1px;
     margin-right: 0;
-    letter-spacing: -1px;
+    letter-spacing: -0.4px;
   }
 
   .root div:nth-child(2) {
-    margin-bottom: 55px;
+    margin-bottom: 57px;
   }
 }

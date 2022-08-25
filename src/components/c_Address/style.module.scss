@@ -5,7 +5,7 @@
   padding-left: 7px;
   margin-top: 14px;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 13px;
   color: $color-dark-rare;
 }
 
@@ -22,12 +22,14 @@
 @media (min-width: $width-tablet-md) {
   .root {
     font-size: 20px;
-    line-height: 21px;
-    margin-top: 32px;
+    line-height: 15px;
+    margin-top: 35px;
     padding-left: 67px;
   }
   
   .root p:nth-child(2) {
+    font-size: 20px;
+    line-height: 22px;
     width: 300px;
     margin-top: 15px;
   }
@@ -36,8 +38,9 @@
 @media (min-width: $width-desktop-lg) {
   .root {
     font-size: 20px;
-    line-height: 21px;
-    margin-top: 32px;
+    line-height: 15px;
+    margin-top: 37px;
+    padding-left: 65px;
   }
   
   .root p:nth-child(2) {

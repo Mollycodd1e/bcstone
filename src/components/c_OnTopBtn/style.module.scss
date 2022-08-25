@@ -39,13 +39,17 @@
 
 @media (min-width: $width-tablet-md) {
   .root {
-    width: 59px;
-    height: 59px;
+    width: 60px;
+    height: 60px;
+
+    &:hover {
+     transform: scale(1.15);
+    }
   }
 
   .root a {
-    width: 59px;
-    height: 59px;
+    width: 60px;
+    height: 60px;
 
     &::before,
     &::after {
