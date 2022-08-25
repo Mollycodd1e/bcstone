@@ -47,7 +47,7 @@
   position: absolute;
   font-size: 12px;
   letter-spacing: -0.4px;
-  bottom: -15px;
+  bottom: -17px;
   left: 0;
   margin-top: 5px;
   margin-left: 23px;
@@ -153,6 +153,13 @@
   display: none;
 }
 
+.root div[id='id-error'] {
+  position: absolute;
+  left: 18px;
+  bottom: -10px;
+  color: #E5BF5B;
+}
+
 @media (min-width: $width-tablet-md) {
   .root {
     padding: 40px 115px 38px 80px;
@@ -185,8 +192,7 @@
     font-size: 14px;
     line-height: 18px;
     bottom: 5px;
-    left: unset;
-    right: -37px;
+    left: 410px;
     width: 174px;
     margin-left: 0;
   }
@@ -246,6 +252,11 @@
     margin-top: 26px;
     border-radius: 20px;
     letter-spacing: -0.15px;
+  }
+
+  .root div[id='id-error'] {
+    left: 408px;
+    bottom: 4px;
   }
 }
 

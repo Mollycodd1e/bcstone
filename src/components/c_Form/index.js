@@ -16,6 +16,7 @@ export const C_Form = ({className, header, description, ready}) => {
 
   const [isSubmit, setSubmit] = useState(false);
   const [isCheck, setCheck] = useState(false);
+  const [isError, setError] = useState(false);
 
   let mail = document.querySelector('#id-email');
 
@@ -63,10 +64,21 @@ export const C_Form = ({className, header, description, ready}) => {
     : (onInputDefault(evt))
   }
 
+  const createError = () => {
+    setError(!isError);
+    let err = document.createElement('div');
+    //err.style=`position: absolute; left: 18px; bottom: -10px; color: ${formColor.need}`;
+    err.innerHTML="Обязательно поле";
+    err.id = "id-error";
+    return err;
+  }
+
   const onFormSubmit = (e) => {
       let input = document.querySelector('#id-email');
       let inputName = document.querySelector('#id-name');
-
+      let checkboxWrapper = document.querySelector('#id-data').parentNode;
+      
+      (isCheck ? '' : (!isCheck && isError) ? '' : (isCheck && isError) ? checkboxWrapper.appendChild(createError()) : checkboxWrapper.appendChild(createError()));
       (input.value.length < 1) ? (onInputNeed(e)) : 
       (!EMAIL_REGEXP.test(input.value)) ? (e.preventDefault()) : 
       ((!validName.test(inputName.value)) && (inputName.value.length > 0) && isCheck) ? (e.preventDefault()) :
@@ -78,8 +90,8 @@ export const C_Form = ({className, header, description, ready}) => {
       <div className={cls}>
         <form onSubmit={(e) => e.preventDefault()}>
           <fieldset>
-            <legend>{(isSubmit && isCheck) ? ready : header}</legend>
-            <p>{description}</p>
+            <legend>{(isSubmit && isCheck) ? ready.title : header}</legend>
+            <p>{(isSubmit && isCheck) ? ready.description : description}</p>
             <div className={classes.input__name_wrapper}>
               <input placeholder="Как к вам обращаться" name="name" id="id-name" onInput={(evt) => onInputCheck(evt)}/>
               <label className={'visually-hidden'} htmlFor="id-name">Имя должно содержать только буквы</label>
@@ -88,11 +100,11 @@ export const C_Form = ({className, header, description, ready}) => {
               <input placeholder='E-mail*' name="email" id="id-email" onFocus={(e) => (mail.style.borderColor = formColor.default, mail.nextElementSibling.style.color = formColor.error, mail.nextElementSibling.classList.add('visually-hidden'), mail.nextElementSibling.innerHTML='Адрес введен неверно')} onBlur={(evt) => onEmailCheck(evt)}/>
               <label className={'visually-hidden'} htmlFor="id-email">Адрес введен неверно</label>
             </div>
-            <button onClick={(e) => isCheck && (validName.test(document.querySelector('#id-name').value) ||(document.querySelector('#id-name').value.length === 0)) ? onFormSubmit(e) : ''} type="submit" disabled={isSubmit ? true : false}>
+            <button onClick={(e) => (isCheck && (validName.test(document.querySelector('#id-name').value)) ||(document.querySelector('#id-name').value.length === 0)) ? onFormSubmit(e) : ''} type="submit" disabled={isSubmit ? true : false}>
               <span >Хочу быть в курсе</span>
             </button>
             <div className={classes.input__checkbox_wrapper}>
-              <input className={'visually-hidden'} type="checkbox" name="data" id="id-data" onClick={() => isSubmit ? '' : setCheck(!isCheck)} required/>
+              <input className={'visually-hidden'} type="checkbox" name="data" id="id-data" onClick={() => isSubmit ? '' : (setCheck(!isCheck), (isError ? document.querySelector('#id-error').remove() : ''), isError ? setError(!isError) : '')}/>
               <label htmlFor="id-data">Я согласен с обработкой персональных данных</label>
             </div>
           </fieldset>

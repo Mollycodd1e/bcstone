@@ -155,7 +155,6 @@ export default function News() {
     const {contacts, copyright} = mocks;
 
     const NewsPageData = data.length !==0 ? data.data[1].data : '';
-    //console.log(NewsPageData[1].content)
 
     return (
             <Context.Provider value={[width, height]}>
