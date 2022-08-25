@@ -56,3 +56,19 @@
   font-weight: 700;
   font-display: fallback;
 }
+
+@font-face {
+  font-family: "Codec Cold News";
+  src: url("/fonts/codecColdNews.woff2") format("woff2"), url("/fonts/codecColdNews.woff") format("woff");
+  font-weight: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Codec Cold News";
+  src: url("/fonts/codecColdNews-italic.woff2") format("woff2"), url("/fonts/codecColdNews-italic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: fallback;
+}
+

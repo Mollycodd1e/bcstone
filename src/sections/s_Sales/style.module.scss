@@ -48,27 +48,51 @@
     column-gap: unset;
     grid-template-columns: repeat(2, 1fr);
     display: flex;
+    padding: 0 53px;
     //justify-content: space-between;
 
-    & div {
-      transition: all .5s;
+    & * {
+      //transition: all .5s;
     }
 
-    & div:first-child {
+    & > div {
+      transition: all .6s;
       flex-grow: 1;
 
       &:hover {
-        flex-grow: 4;
+        //flex-grow: 6;
+
+        & > div[class*="picture"] {
+          opacity: 1;
+        }
+
+        & > a[class*="link"] {
+          opacity: 1;
+        }
+
+        & > h2 {
+          font-size: 155px;
+          line-height: 155px;
+          color: #2C2D2D;
+        }
       }
     }
-
-    & div:last-child {
-      flex-grow: 1;
-
-      &:hover {
-        flex-grow: 4;
-      }
-    }
+    //
+    //& div:first-child {
+    //  flex-grow: 1;
+    //
+    //  &:hover {
+    //    flex-grow: 4;
+    //  }
+    //}
+    //
+    //& div:last-child {
+    //  flex-grow: 1;
+    //
+    //  &:hover {
+    //    flex-grow: 4;
+    //  }
+    //}
 
     &:after {
       content: none;

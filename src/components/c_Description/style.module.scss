@@ -1,7 +1,7 @@
 @import '../../styles/style';
 
 .root {
-  margin-top: 5px;
+  margin-top: 8px;
   padding: 3px 3px 0 11px;
   border-left: 8px solid #515dac;
 }
@@ -11,13 +11,15 @@
   margin: 0;
   font-size: 12px;
   line-height: 14px;
+  font-style: italic;
+  font-family: "Codec Cold News", "Arial", sans-serif;
   letter-spacing: -0.1px;
   padding-right: 49px;
 }
 
 @media (min-width: $width-tablet-md) {
   .root {
-    margin-top: 16px;
+    margin-top: 18px;
     padding: 3px 3px 0 11px;
     border-left: 11px solid #515dac;
   }
@@ -46,8 +48,8 @@
   .root p {
     padding-right: 0;
     padding-bottom: 5px;
-    font-size: 19px;
+    font-size: 18px;
     line-height: 21px;
-    letter-spacing: -0.9px;
+    letter-spacing: -0.4px;
   }
 }
