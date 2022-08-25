@@ -150,7 +150,6 @@
     max-width: 1200px;
   }
 
-  .swiper_button_next,
   .swiper_button_prev {
     position: relative;
     display: block;
@@ -160,59 +159,48 @@
     left: 21px;
     top: 193px;
     border-radius: 50%;
-    border: 1px solid #B7B7B7;
-    background: transparent;
+    border: none;
+    background-image: url('../../img/backBtnTablet.svg');
+    background-repeat: no-repeat;
+    background-size: 52px 52px;
+    background-position: center center;
+    background-color: transparent !important;
     cursor: pointer;
-
-    &::before,
-    &::after {
-      position: absolute;
-      content: '';
-      width: 14px;
-      height: 1px;
-      left: 15px;
-      background-color: #B7B7B7;
-    }
-  
-    &::before {
-      top: 21px;
-      transform: rotate(-45deg);
-    }
-  
-    &::after {
-      top: 30px;
-      transform: rotate(45deg);
-    }
 
     &:disabled {
       opacity: 0.5;
     }
 
     &:hover {
-      opacity: 0.7;
+      background-image: url('../../img/backBtnHover.svg');
+      transition: 0.4s;
     }
   }
 
   .swiper_button_next {
     position: relative;
+    display: block;
+    min-width: 52px;
+    width: 52px;
+    height: 52px;
     left: 24px;
+    top: 193px;
+    border-radius: 50%;
+    border: none;
+    background-image: url('../../img/forwardBtnTablet.svg');
+    background-repeat: no-repeat;
+    background-size: 52px 52px;
+    background-position: center center;
+    cursor: pointer;
     
-    &::before,
-    &::after {
-      left: 20px;
-    }
-  
-    &::before {
-      transform: rotate(45deg);
-    }
-  
-    &::after {
-      transform: rotate(-45deg);
-    }
-
     &:disabled {
      opacity: 0.5;
-   }
+    }
+
+    &:hover {
+      background-image: url('../../img/forwardBtnHover.svg');
+      transition: 0.4s;
+    }
   }
 
   .swiperSlide {

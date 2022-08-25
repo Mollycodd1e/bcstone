@@ -6,27 +6,10 @@
   width: 10px;
   height: 18px;
   margin-right: 39px;
-  background: transparent;
-
-  &::before,
-  &::after {
-    position: absolute;
-    content: '';
-    width: 14px;
-    height: 1px;
-    left: 0;
-    background-color: $color-black;
-  }
-
-  &::before {
-    top: 3px;
-    transform: rotate(-45deg);
-  }
-
-  &::after {
-    top: 12px;
-    transform: rotate(45deg);
-  }
+  background-image: url('../../img/backBtnMobile.svg');
+  background-repeat: no-repeat;
+  background-size: 8px 18px;
+  background-position: center center;
 }
 
 @media (min-width: $width-tablet-md) {
@@ -36,24 +19,12 @@
     height: 52px;
     border-radius: 50%;
     margin-right: 34px;
-    border: 1px solid #B7B7B7;
-  
-    &::before,
-    &::after {
-      width: 14px;
-      height: 1px;
-      left: 16px;
-      background-color: #B7B7B7;
-    }
-  
-    &::before {
-      top: 20px;
-      transform: rotate(-45deg);
-    }
-  
-    &::after {
-      top: 29px;
-      transform: rotate(45deg);
+    background-image: url('../../img/backBtnTablet.svg');
+    background-size: 52px 52px;
+
+    &:hover {
+      background-image: url('../../img/backBtnHover.svg');
+      transition: 0.4s;
     }
   }
 }
