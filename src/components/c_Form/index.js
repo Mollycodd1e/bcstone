@@ -67,7 +67,6 @@ export const C_Form = ({className, header, description, ready}) => {
   const createError = () => {
     setError(!isError);
     let err = document.createElement('div');
-    //err.style=`position: absolute; left: 18px; bottom: -10px; color: ${formColor.need}`;
     err.innerHTML="Обязательно поле";
     err.id = "id-error";
     return err;
