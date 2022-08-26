@@ -6,7 +6,7 @@
   margin-top: 21px;
   background-image: url('../../img/quotes.png');
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: bottom 30px right 30px;
   background-size: 90px 81px;
 }
 
@@ -17,6 +17,7 @@
   font-family: "Codec Cold News", "Arial", sans-serif;
   letter-spacing: -0.1px;
   margin-top: 7px;
+  color: $color-gray-seven;
   
   &::after {
     content: '';
@@ -34,7 +35,7 @@
     padding: 40px 124px 5px 130px;
     margin-top: 3px;
     background-size: 200px 179px;
-    background-position: bottom right 300px;
+    background-position: bottom -5px right 30px;
   }
 
   .root .quote_text {
@@ -54,6 +55,7 @@
   .root {
     margin-top: 50px;
     padding: 47px 415px 5px 416px;
+    background-position: bottom 3px right 415px;
   }
 
   .root .quote_text {

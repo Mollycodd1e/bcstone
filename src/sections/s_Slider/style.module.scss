@@ -34,7 +34,12 @@
   }
 
   .root .description {
-    margin-left: -45px;
+    width: 276px;
+    margin-left: -42px;
     margin-top: 9px;
+  }
+
+  .root .description p {
+    width: 276px;
   }
 }
