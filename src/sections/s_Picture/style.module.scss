@@ -57,7 +57,7 @@
   .root {
     display: flex;
     margin-top: 152px;
-    padding: 0 393px 10px 418px;
+    padding: 0 399px 10px 418px;
   }
 
   .root img {
@@ -71,6 +71,7 @@
   }
 
   .root p {
+    width: 220px;
     max-width: 225px;
     padding-right: 1px;
     margin-right: 0;
@@ -78,6 +79,8 @@
   }
 
   .root div:nth-child(2) {
+    width: 216px;
+    margin-left: 99px;
     margin-bottom: 57px;
   }
 }

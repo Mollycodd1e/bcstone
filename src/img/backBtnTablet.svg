@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52">
+  <g id="Кнопка_Назад" data-name="Кнопка / Назад" transform="translate(-223 -235)">
+    <g id="Эллипс_798" data-name="Эллипс 798" transform="translate(223 235)" fill="none" stroke="#b7b7b7" stroke-width="1">
+      <circle cx="26" cy="26" r="26" stroke="none"/>
+      <circle cx="26" cy="26" r="25.5" fill="none"/>
+    </g>
+    <path id="Контур_16277" data-name="Контур 16277" d="M0,11,11,0,22,11" transform="translate(242 272) rotate(-90)" fill="none" stroke="#b7b7b7" stroke-width="1"/>
+  </g>
+</svg>
