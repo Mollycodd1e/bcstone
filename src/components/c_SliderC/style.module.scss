@@ -166,6 +166,7 @@
     background-position: center center;
     background-color: transparent !important;
     cursor: pointer;
+    transition: 0.4s;
 
     &:disabled {
       opacity: 0.5;
@@ -173,7 +174,6 @@
 
     &:hover {
       background-image: url('../../img/backBtnHover.svg');
-      transition: 0.4s;
     }
   }
 
@@ -192,6 +192,7 @@
     background-size: 52px 52px;
     background-position: center center;
     cursor: pointer;
+    transition: 0.4s;
     
     &:disabled {
      opacity: 0.5;
@@ -199,7 +200,6 @@
 
     &:hover {
       background-image: url('../../img/forwardBtnHover.svg');
-      transition: 0.4s;
     }
   }
 

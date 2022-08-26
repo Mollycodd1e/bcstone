@@ -21,10 +21,10 @@
     margin-right: 34px;
     background-image: url('../../img/backBtnTablet.svg');
     background-size: 52px 52px;
+    transition: 0.4s;
 
     &:hover {
       background-image: url('../../img/backBtnHover.svg');
-      transition: 0.4s;
     }
   }
 }
