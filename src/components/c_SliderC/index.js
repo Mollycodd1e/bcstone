@@ -18,7 +18,7 @@ export const C_SliderC = ({className, isBtnClose, items, initialSlide, onBtnClos
     return (
         <div className={cls}>
             <button className={classes.swiper_button_prev} onClick={() => (my_swiper.slidePrev(), slide > 0 ? setSlide(slide - 1) : setSlide(slide))}
-            disabled={slide === 0 ? true : false}></button>
+            disabled={slide === 0}></button>
             <Swiper
                 navigation={{
                     prevEl: '.swiper_button_prev',
@@ -53,7 +53,7 @@ export const C_SliderC = ({className, isBtnClose, items, initialSlide, onBtnClos
                 }
             </Swiper>
             <div className={classes.swiper_button_next} onClick={() => (my_swiper.slideNext(), slide < items.length -1 ? setSlide(slide + 1) : setSlide(slide))}
-            disabled={(slide === (items.length-1)) ? true : false}></div>
+            disabled={(slide === (items.length-1))}></div>
             <div className={`swiper-pagination + ${classes.swiper_pagination_custom}`}>
             </div>
         </div>
