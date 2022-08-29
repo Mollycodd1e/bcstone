@@ -3,6 +3,7 @@
 .root {
   height: 49vw;
   max-height: 439px;
+  max-width: 781px;
 }
 
 .root iframe {
@@ -17,6 +18,7 @@
   .root {
     height: 44vw;
     max-height: 470px;
+    max-width: unset;
   }
 
   .root iframe {
