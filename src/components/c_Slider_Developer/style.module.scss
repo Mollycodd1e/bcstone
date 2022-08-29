@@ -57,16 +57,71 @@
   //width: 242px !important;
 }
 
+.numbersWrapper {
+
+}
+
+.regular {
+
+}
+
 @media (min-width: $width-tablet-md) {
 
   .root {
     width: 100%;
     height: 100%;
+    position: relative;
   }
 
   .swiper {
     min-width: 320px;
     width: 100%;
     height: 100%;
+  }
+
+  .numbersWrapper {
+    position: absolute;
+    top: calc(50% - 86px);
+    right: -110px;
+    display: flex;
+    flex-direction: column;
+    min-width: 57px;
+  }
+
+  .regular {
+    font-family: "Bebas Neue Pro", "Arial", sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.03em;
+    color: #9b9b9b;
+    position: relative;
+    margin-bottom: 22px;
+
+    &:before {
+      content: '';
+      width: 22px;
+      height: 1px;
+      background-color: #9b9b9b;
+      position: absolute;
+      left: -31px;
+      top: 50%;
+    }
+
+    &__selected {
+      font-family: "Bebas Neue Pro", "Arial", sans-serif;
+      font-size: 30px;
+      letter-spacing: 0.03em;
+      position: relative;
+      margin-bottom: 22px;
+
+      &:before {
+        content: '';
+        width: 22px;
+        height: 1px;
+        background-color: #2b2c2d;
+        position: absolute;
+        left: -31px;
+        top: 50%;
+      }
+    }
   }
 }
