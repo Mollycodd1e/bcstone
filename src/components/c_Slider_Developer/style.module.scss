@@ -16,6 +16,7 @@
 
   div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
     bottom: 0 !important;
+    display: none;
 
     span[class="swiper-pagination-bullet"] {
       width: 8px !important;

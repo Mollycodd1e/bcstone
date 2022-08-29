@@ -8,7 +8,7 @@ import {Swiper, SwiperSlide} from "swiper/swiper-react.cjs.js";
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
-export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = -225, slidesPerView = 3}) => {
+export const C_Slider_Developer = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = 100, slidesPerView = 1}) => {
     const cls = classNames(classes.root, { [className]: className });
     // autoplay={{
     //     delay: 10000,
@@ -40,7 +40,7 @@ export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnClose
                     })
                 }
             </Swiper>
-            <div className={`swiper-pagination + ${classes.swiper_pagination_custom}`}>
+            <div className={`swiper-pagination + ${classes.swiper_pagination_custom}`}/>
         </div>
     )
 }
