@@ -8,7 +8,7 @@ import {Swiper, SwiperSlide} from "swiper/swiper-react.cjs.js";
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
-export const C_Slider_Developer = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween, slidesPerView}) => {
+export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = -225, slidesPerView = 3}) => {
     const cls = classNames(classes.root, { [className]: className });
     // autoplay={{
     //     delay: 10000,
@@ -21,26 +21,19 @@ export const C_Slider_Developer = ({className, isBtnClose, items, initialSlide, 
                 spaceBetween={slidersSpaceBetween}
                 centeredSlides={true}
                 loop
-                pagination={{
-                    el:'.swiper-pagination',
-                    "clickable": true,
-                    renderBullet: (index, className) => {
-                        return '<span class="' + className + '">' + (index + 1) + "</span>";
-                    },
-                }}
+                pagination={{"clickable": true}}
                 className={classNames(classes.swiper, {[classes.swiperMode]: isBtnClose})}
                 initialSlide={Number(initialSlide) || 0}
             >
                 {items.map((item, i) => {
-                        return (
-                            <SwiperSlide className = {classes.swiperSlide} key={i}>
-                                {item}
-                            </SwiperSlide>
-                        )
-                    })
+                    return (
+                        <SwiperSlide className = {classes.swiperSlide} key={i}>
+                            {item}
+                        </SwiperSlide>
+                    )
+                })
                 }
             </Swiper>
-            <div className={`swiper-pagination + ${classes.swiper_pagination_custom}`}/>
         </div>
     )
 }

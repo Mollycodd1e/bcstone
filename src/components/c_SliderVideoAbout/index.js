@@ -5,7 +5,8 @@ import {C_Slider} from "../c_Slider";
 import {C_SliderElementAbout} from "../c_SliderElementAbout";
 import {Context} from "../../library";
 import {sizes} from "../../data/sizes";
-import {C_Slider_Developer} from "../c_Slider_Developer";
+import {C_SliderDeveloper} from "../c_Slider_Developer";
+import {C_SliderC} from "../c_SliderC";
 
 export const C_SliderVideoAbout = ({className, data}) => {
     const cls = classNames(classes.root, {[className]: className});
@@ -38,7 +39,7 @@ export const C_SliderVideoAbout = ({className, data}) => {
              // style={{ height:  `${width < sizes.widthTabletMd ? 190 : heightBlock}px`}}
         >
             {slider.isVisible && !video.isVisible
-                ? <C_Slider_Developer
+                ? <C_SliderDeveloper
                     className={classes.С_Slider}
                     isBtnClose={false}
                     items={elements}
