@@ -11,6 +11,8 @@ SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = -225, slidesPerView = 3}) => {
     const cls = classNames(classes.root, { [className]: className });
     const [selectedSlide, setSelectedSlide] = useState(0);
+    const [my_swiper, set_my_swiper] = useState({});
+    const [slide, setSlide] = useState(0);
 
     const numSlider = (selected, nums) => {
         return (
@@ -29,11 +31,12 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
     // }}
     return (
         <div className={cls}>
+            <button className={classes.swiper_button_prev} onClick={() => (my_swiper.slidePrev(), slide > 0 ? setSlide(slide - 1) : setSlide(slide))}
+                    disabled={slide === 0}></button>
             <Swiper
                 slidesPerView={slidesPerView}
                 spaceBetween={slidersSpaceBetween}
                 centeredSlides={true}
-                loop
                 pagination={{"clickable": true}}
                 className={classNames(classes.swiper, {[classes.swiperMode]: isBtnClose})}
                 initialSlide={Number(initialSlide) || 0}
@@ -42,6 +45,13 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
                         setSelectedSlide(data.realIndex);
                     }
                 }
+                navigation={{
+                    prevEl: '.swiper_button_prev',
+                    nextEl: '.swiper_button_next',
+                }}
+                onInit={(evt) => {
+                    set_my_swiper(evt)
+                }}
             >
                 {items.map((item, i) => {
                     return (
@@ -52,6 +62,8 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
                 })
                 }
             </Swiper>
+            <div className={classes.swiper_button_next} onClick={() => (my_swiper.slideNext(), slide < items.length -1 ? setSlide(slide + 1) : setSlide(slide))}
+                 disabled={(slide === (items.length-1))}></div>
             {numSlider(selectedSlide, items)}
         </div>
     )
