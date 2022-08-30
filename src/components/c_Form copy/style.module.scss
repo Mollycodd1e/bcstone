@@ -180,7 +180,7 @@
   display: none;
 }
 
-.root div[id='id-error'] {
+.agreement_error {
   position: absolute;
   left: 18px;
   bottom: -10px;
@@ -281,9 +281,10 @@
     letter-spacing: -0.15px;
   }
 
-  .root div[id='id-error'] {
+  .agreement_error {
     left: 408px;
     bottom: 4px;
+    width: 146px;
   }
 }
 

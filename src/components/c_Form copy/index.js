@@ -52,20 +52,20 @@ export const C_FormCopy = ({className, header, description, ready}) => {
     }    
   }
 
-  const createError = () => {
-    const checkboxWrapper = document.querySelector('#id-data').parentNode;
-    console.log(checkboxWrapper);
-    let err = document.createElement('div');
-    err.innerHTML="Обязательно поле";
-    err.id = "id-error";
-    checkboxWrapper.appendChild(err);
-  }
+  // const createError = () => {
+  //   const checkboxWrapper = document.querySelector('#id-data').parentNode;
+  //   console.log(checkboxWrapper);
+  //   let err = document.createElement('div');
+  //   err.innerHTML="Обязательно поле";
+  //   err.id = "id-error";
+  //   checkboxWrapper.appendChild(err);
+  // }
 
-  const deleteError = () => {
-    const err = document.querySelector('#id-error');
-    console.log(err);
-    err.remove();
-  }
+  // const deleteError = () => {
+  //   const err = document.querySelector('#id-error');
+  //   console.log(err);
+  //   err.remove();
+  // }
 
   const onFormSubmitCheck = () => {
     if (isNameValid && isMailValid && isMailLength && isCheck) {
@@ -75,7 +75,7 @@ export const C_FormCopy = ({className, header, description, ready}) => {
     } 
     
     if (!isCheck && !isError) {
-        createError();
+        //createError();
         setIsError(true)
     }
   }
@@ -84,7 +84,7 @@ export const C_FormCopy = ({className, header, description, ready}) => {
     if (isError && !isCheck) {
         setIsCheck(true);
         setIsError(false);
-        deleteError();
+        //deleteError();
     } else if (isCheck) {
         setIsCheck(false);
     }
@@ -115,6 +115,7 @@ export const C_FormCopy = ({className, header, description, ready}) => {
               <input className={'visually-hidden'} type="checkbox" name="data" id="id-data" 
                  onChange={() => onAgreementCheck()}/>
               <label htmlFor="id-data">Я согласен с обработкой персональных данных</label>
+              {isError ? <div className={classes.agreement_error}>Обязательное поле</div> : null}
             </div>
           </fieldset>
         </form>
