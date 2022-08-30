@@ -10,6 +10,7 @@ import {S_Top_Commercial} from "../src/sections/s_Top_Сommercial";
 import {S_Projects} from "../src/sections/s_Projects";
 import {S_About} from "../src/sections/s_About";
 import {S_Sales} from "../src/sections/s_Sales";
+import {S_FullForm} from "../src/sections/s_FullForm";
 
 export default function Home() {
     const [width, height] = useWindowSize();
@@ -88,6 +89,7 @@ export default function Home() {
                                 <S_Projects data={mainPageData[0]} />
                                 <S_About data={mainPageData[0]} width={width} />
                                 <S_Sales data={mainPageData[0]} />
+                                <S_FullForm />
                             </>
                         ) : (
                             <div className="lds-grid-wrapper">

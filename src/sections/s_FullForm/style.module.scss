@@ -1,5 +1,52 @@
 @import '../../styles/style';
 
 .root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+}
 
+.frame {
+  width: 100%;
+  background-image: radial-gradient(rgb(74, 74, 74) 0%, rgb(43, 44, 45) 70%);
+  //height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 61px 32px 38px 25px;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputCommon {
+
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    padding: 0 50px;
+  }
+
+  .frame {
+    border-radius: 20px;
+  }
+}
+
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    padding: 0 65px;
+  }
 }
