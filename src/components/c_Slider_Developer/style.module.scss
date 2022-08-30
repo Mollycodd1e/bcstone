@@ -115,24 +115,37 @@
 
 @media (min-width: $width-desktop-lg) {
 
-  .swiper_button_prev {
+  .numbersWrapper {
+    position: absolute;
+    top: calc(50% - 52px);
+    left: 10px;
+  }
+
+  @mixin swiperButton {
     position: relative;
     display: block;
     min-width: 52px;
     width: 52px;
     height: 52px;
-    left: 21px;
     margin: auto 0;
-    top: -15px;
+    //top: -15px;
+    bottom: -300px;
     border-radius: 50%;
     border: none;
-    background-image: url('../../img/backBtnTablet.svg');
     background-repeat: no-repeat;
     background-size: 52px 52px;
     background-position: center center;
     background-color: transparent !important;
     cursor: pointer;
     transition: 0.4s;
+
+  }
+
+  .swiper_button_prev {
+    @include swiperButton;
+
+    left: calc( 50% - 74px );
+    background-image: url('../../img/backBtnTablet.svg');
 
     &:disabled {
       opacity: 0.5;
@@ -144,22 +157,10 @@
   }
 
   .swiper_button_next {
-    position: relative;
-    display: block;
-    min-width: 52px;
-    width: 52px;
-    height: 52px;
-    left: 24px;
-    margin: auto 0;
-    top: -15px;
-    border-radius: 50%;
-    border: none;
+    @include swiperButton;
+
+    right: calc( 50% - 74px );
     background-image: url('../../img/forwardBtnTablet.svg');
-    background-repeat: no-repeat;
-    background-size: 52px 52px;
-    background-position: center center;
-    cursor: pointer;
-    transition: 0.4s;
 
     &:disabled {
       opacity: 0.5;
