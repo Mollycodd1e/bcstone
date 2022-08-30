@@ -15,7 +15,7 @@ export const C_SliderVideoAbout = ({className, data}) => {
 
     const divBlock = useRef(null);
     const showDivWidth = () => {
-        console.log(divBlock.current.getBoundingClientRect().width);
+        // console.log(divBlock.current.getBoundingClientRect().width);
         // console.log(divBlock.current.getBoundingClientRect());
         // console.log(divBlock.current.getBoundingClientRect());
     }
@@ -46,7 +46,7 @@ export const C_SliderVideoAbout = ({className, data}) => {
                     initialSlide={0}
                     slidesPerView={width < sizes.widthTabletMd ? 3 : 1}
                     slidersSpaceBetween={0}
-                    loop={width < sizes.widthTabletMd}
+                    loop={width < sizes.widthDesktopLg}
                     />
                 : <div>video</div>
             }

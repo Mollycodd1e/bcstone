@@ -19,7 +19,7 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
             <div className={classes.numbersWrapper} >
                 {nums.map((el, i) => {
                     const paginationClass = selected === i ? 'regular__selected' : 'regular';
-                    return <div key={i} className={classes[`${paginationClass}`]} >{i + 1}</div>
+                    return <div key={i} className={classes[`${paginationClass}`]} />
                 })}
             </div>
         )

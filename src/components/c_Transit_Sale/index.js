@@ -7,7 +7,7 @@ export const C_Transit_Sale = ({className, url, name, type, picture }) => {
     return (
         <div
             className={cls}
-            onMouseOver={() => {console.log('type', type)}}
+            onMouseOver={() => {}}
         >
             <div className={classes.picture}
                  style={{backgroundImage:  `url("${picture.src}")`}}/>

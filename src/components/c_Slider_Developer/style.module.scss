@@ -87,49 +87,33 @@
 
   .numbersWrapper {
     position: absolute;
-    top: calc(50% - 86px);
-    right: -110px;
+    top: calc(50% - 52px);
+    left: -31px;
     display: flex;
     flex-direction: column;
-    min-width: 57px;
+    //min-width: 57px;
+  }
+
+  @mixin pinParams{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-bottom: 9px;
   }
 
   .regular {
-    font-family: "Bebas Neue Pro", "Arial", sans-serif;
-    font-size: 22px;
-    letter-spacing: 0.03em;
-    color: #9b9b9b;
-    position: relative;
-    margin-bottom: 22px;
-
-    &:before {
-      content: '';
-      width: 22px;
-      height: 1px;
-      background-color: #9b9b9b;
-      position: absolute;
-      left: -31px;
-      top: 50%;
-    }
+    @include pinParams;
+    background-color: rgba(0, 0, 0, 0.17);
 
     &__selected {
-      font-family: "Bebas Neue Pro", "Arial", sans-serif;
-      font-size: 30px;
-      letter-spacing: 0.03em;
-      position: relative;
-      margin-bottom: 22px;
-
-      &:before {
-        content: '';
-        width: 22px;
-        height: 1px;
-        background-color: #2b2c2d;
-        position: absolute;
-        left: -31px;
-        top: 50%;
-      }
+      @include pinParams;
+      background-color: rgb(0, 0, 0);
     }
   }
+
+}
+
+@media (min-width: $width-desktop-lg) {
 
   .swiper_button_prev {
     position: relative;
