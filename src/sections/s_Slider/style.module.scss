@@ -1,7 +1,9 @@
 @import '../../styles/style';
 
 .root {
+  max-width: 861px;
   width: 100%;
+  margin-right: auto;
   margin-top: 10px;
   padding: 0 25px 10px 30px;
   margin-bottom: 20px;
@@ -13,6 +15,7 @@
 
 @media (min-width: $width-tablet-md) {
   .root {
+    max-width: 1276px;
     margin-top: 24px;
     margin-bottom: 5px;
     padding: 0 77px 5px 30px;
@@ -29,6 +32,7 @@
     display: flex;
     max-width: 1260px;
     padding: 0 20px;
+    margin-right: unset;
     margin-top: 24px;
     margin-bottom: 30px;
   }

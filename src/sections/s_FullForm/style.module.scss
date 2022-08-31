@@ -1,5 +1,135 @@
 @import '../../styles/style';
 
 .root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+}
 
+.frame {
+  width: 100%;
+  background-image: radial-gradient(rgb(74, 74, 74) 0%, rgb(43, 44, 45) 70%);
+  //height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 61px 32px 38px 25px;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 350px;
+}
+
+.inputCommon {
+  width: 100%;
+  border-radius: 16px;
+  background: #36373b;
+  border: 1px solid #525252;
+  color: #E6E6E6;
+  padding: 8px 10px 7px 23px;
+  font-family: "Codec Cold News", "Arial", sans-serif;
+
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+  &:last-of-type {
+    margin-bottom: 47px;
+  }
+
+  &::placeholder {
+    font-size: 12px;
+    line-height: 13px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    color: #7b7b7b;
+    font-family: "Codec Cold News", "Arial", sans-serif;
+
+    //color: #A3A3A3;
+    //font-size: 14px;
+  }
+}
+
+.title {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 23px;
+  letter-spacing: -0.01em;
+  margin: 0 0 28px;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 15px;
+  margin: 0 0 18px;
+}
+
+.button {
+  font-size: 12px;
+  line-height: 13px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #000;
+  border-radius: 16px;
+  background: #fff;
+  border-width: 0;
+  padding: 8px 23px 7px 23px;
+  font-family: "Codec Cold News", "Arial", sans-serif;
+  margin-bottom: 26px;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    padding: 0 50px;
+  }
+
+  .frame {
+    border-radius: 20px;
+  }
+
+  .titles {
+    flex-direction: column-reverse;
+  }
+
+  .title {
+    font-size: 40px;
+    line-height: 42px;
+    letter-spacing: unset;
+    margin: 0;
+  }
+
+  .description {
+    font-size: 25px;
+    line-height: 27px;
+    margin-bottom: 34.5px;
+  }
+}
+
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    padding: 0 65px;
+  }
+
+  .title {
+    font-size: 50px;
+    line-height: 54px;
+  }
+
+  .description {
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 19px;
+  }
 }

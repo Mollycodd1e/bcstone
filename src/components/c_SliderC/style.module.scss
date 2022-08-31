@@ -98,7 +98,7 @@
     min-height: 439px;
     max-height: 560px;
     height: 43.9vw;
-    max-width: 1200px !important;
+    max-width: 940px !important;
     margin: 0 auto;
   }
 
@@ -106,7 +106,7 @@
     margin: 0 auto;
     width: 100% !important;
     min-width: 742px !important;
-    max-width: 1200px !important;
+    max-width: 940px !important;
     min-height: 439px;
     border-radius: 16px;
   }
@@ -115,7 +115,7 @@
     margin-left: 47px;
     min-height: 439px;
     padding-bottom: 2.8rem;
-    max-width: 1200px;
+    max-width: 940px;
   }
 
   .swiper_pagination_custom {
@@ -157,7 +157,8 @@
     width: 52px;
     height: 52px;
     left: 21px;
-    top: 193px;
+    margin: auto 0;
+    top: -15px;
     border-radius: 50%;
     border: none;
     background-image: url('../../img/backBtnTablet.svg');
@@ -184,7 +185,8 @@
     width: 52px;
     height: 52px;
     left: 24px;
-    top: 193px;
+    margin: auto 0;
+    top: -15px;
     border-radius: 50%;
     border: none;
     background-image: url('../../img/forwardBtnTablet.svg');
@@ -234,12 +236,14 @@
     order: 2;
     left: 12px;
     top: 289px;
+    margin: unset;
   }
 
   .swiper_button_next {
     order: 3;
     left: -40px;
     top: 217px;
+    margin: unset;
   }
 
   .swiper {

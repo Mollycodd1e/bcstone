@@ -9,7 +9,7 @@ export const S_Sales = ({className, data}) => {
 
     return (
         <div className={cls}>
-            <div className={classes.wrapper} onMouseOver={() => {console.log('Not_out')}}>
+            <div className={classes.wrapper} >
                 {data.sales.map((el, i) => {
                     const {type, name, url, picture} = el;
                     return (<C_Transit_Sale type={type} name={name} url={url} picture={picture} key={i} />)
