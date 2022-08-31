@@ -60,13 +60,19 @@ export const C_FormCopy = ({className, header, description, ready}) => {
         setIsSubmit(true);
         console.log(nameInput);
         console.log(mailInput);
-    } else if (!isMailLength) {
+    } 
+    if (!isMailLength) {
         setIsMailNeed(true);
     } 
     
     if (!isCheck && !isError) {
-        setIsError(true)
-    }
+        setIsError(true);
+    } 
+    // else if (!isCheck && isError) {
+    //     setIsError(true);
+    // } else {
+    //     setIsError(false);
+    // }
   }
  
   const onAgreementCheck = () => {
@@ -75,6 +81,8 @@ export const C_FormCopy = ({className, header, description, ready}) => {
         setIsError(false);
     } else if (isCheck) {
         setIsCheck(false);
+    } else if (!isError && !isCheck) {
+        setIsCheck(true);
     }
   }
   
@@ -82,8 +90,8 @@ export const C_FormCopy = ({className, header, description, ready}) => {
       <div className={cls}>
         <form onSubmit={(e) => e.preventDefault()}>
           <fieldset>
-            <legend>{(isSubmit && isCheck) ? ready.title : header}</legend>
-            <p>{(isSubmit && isCheck) ? ready.description : description}</p>
+            <legend>{(isSubmit) ? ready.title : header}</legend>
+            <p>{(isSubmit) ? ready.description : description}</p>
             <div className={classNames(classes.input__name_wrapper , {[classes.input__name_wrapper_valid]: isNameValid && isNameLength},
               {[classes.input__name_wrapper_invalid]: !isNameValid})}>
               <input placeholder="Как к вам обращаться" name="name" id="id-name" onInput={(evt) => onInputCheck(evt)}/>
