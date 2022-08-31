@@ -15,6 +15,8 @@ export const C_FormCopy = ({className, header, description, ready}) => {
   const [isSubmit, setIsSubmit] = useState(false);
   const [isCheck, setIsCheck] = useState(false);
   const [isError, setIsError] = useState(false);
+  const [nameInput, setNameInput] = useState('');
+  const [mailInput, setMailInput] = useState('');
 
   const validName = /^(([a-zA-Zа-яА-ЯЁё-]{1,30}))$/u;
 
@@ -25,6 +27,7 @@ export const C_FormCopy = ({className, header, description, ready}) => {
         if ((evt.target.value.length > 0) && (validName.test(evt.target.value))) {
             setIsNameValid(true);
             setIsNameLength(true);
+            setNameInput(evt.target.value);
         } else if ((evt.target.value.length > 0) && (!validName.test(evt.target.value))) {
             setIsNameValid(false);
         } else {
@@ -36,11 +39,11 @@ export const C_FormCopy = ({className, header, description, ready}) => {
 
   const onMailCheck = (evt) => {
     if (evt) {
-        console.log(evt)
         if ((evt.target.value.length > 0) && (EMAIL_REGEXP.test(evt.target.value))) {
             setIsMailValid(true);
             setIsMailLength(true);
             setIsMailNeed(false);
+            setMailInput(evt.target.value);
         } else if ((evt.target.value.length > 0) && (!EMAIL_REGEXP.test(evt.target.value))) {
             setIsMailValid(false);
             setIsMailNeed(false);
@@ -52,30 +55,16 @@ export const C_FormCopy = ({className, header, description, ready}) => {
     }    
   }
 
-  // const createError = () => {
-  //   const checkboxWrapper = document.querySelector('#id-data').parentNode;
-  //   console.log(checkboxWrapper);
-  //   let err = document.createElement('div');
-  //   err.innerHTML="Обязательно поле";
-  //   err.id = "id-error";
-  //   checkboxWrapper.appendChild(err);
-  // }
-
-  // const deleteError = () => {
-  //   const err = document.querySelector('#id-error');
-  //   console.log(err);
-  //   err.remove();
-  // }
-
   const onFormSubmitCheck = () => {
     if (isNameValid && isMailValid && isMailLength && isCheck) {
         setIsSubmit(true);
+        console.log(nameInput);
+        console.log(mailInput);
     } else if (!isMailLength) {
         setIsMailNeed(true);
     } 
     
     if (!isCheck && !isError) {
-        //createError();
         setIsError(true)
     }
   }
@@ -84,7 +73,6 @@ export const C_FormCopy = ({className, header, description, ready}) => {
     if (isError && !isCheck) {
         setIsCheck(true);
         setIsError(false);
-        //deleteError();
     } else if (isCheck) {
         setIsCheck(false);
     }
