@@ -3,8 +3,9 @@ import classNames from 'classnames';
 import classes from './style.module.scss';
 import {useState} from "react";
 
-export const S_FullForm = ({className}) => {
+export const S_FullForm = ({className, data}) => {
     const cls = classNames(classes.root, {[className]: className});
+    const {description, descriptionSuccess, title, titleSuccess} = data.main_form;
 
     const [isConfirmed, setIsConfirmed] = useState(false);
     const [isProcessing, setIsProcessing] = useState(false);
@@ -75,13 +76,13 @@ export const S_FullForm = ({className}) => {
                 <div className={classes.titles}>
                     {!isConfirmed ? (
                             <>
-                                <h3>Не подобрали подходящее предложение?</h3>
-                                <span>Наш менеджер ответит на ваши вопросы</span>
+                                <h3 dangerouslySetInnerHTML={{ __html: title}} className={classes.title}/>
+                                <span dangerouslySetInnerHTML={{ __html: description}} className={classes.description}/>
                             </>
                         ) : (
                             <>
-                                <h3>Готово!</h3>
-                                <span>Менеджер свяжется с вами в ближайшее время</span>
+                                <h3 dangerouslySetInnerHTML={{ __html: titleSuccess}} className={classes.title}/>
+                                <span dangerouslySetInnerHTML={{ __html: descriptionSuccess}} className={classes.description}/>
                             </>
                     )}
 
@@ -143,6 +144,12 @@ export const S_FullForm = ({className}) => {
                         }}
                     />
 
+                    <button
+                        onClick={(e) => onButtonClick(e)}
+                        className={classes.button}
+                        // disabled={isProcessing}
+                    >Получить предложение</button>
+
                     <div
                         className={classNames(classes.radio)}
 
@@ -162,11 +169,6 @@ export const S_FullForm = ({className}) => {
                         <label htmlFor="private_broker">Я согласен с обработкой персональных данных</label>
                     </div>
 
-                    <button
-                        onClick={(e) => onButtonClick(e)}
-                        buttonWrapperClassName={classes.buttonWrapperClassName}
-                        // disabled={isProcessing}
-                    />
                 </div>
             </div>
         </form>
