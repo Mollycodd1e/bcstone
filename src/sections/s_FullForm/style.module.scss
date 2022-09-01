@@ -161,6 +161,29 @@
     font-size: 14px;
     line-height: 14px;
     color: #707070;
+
+    &:before {
+      content: "";
+      left: -30px;
+      top: -2px;
+      width: 17.02px;
+      height: 17.02px;
+
+    }
+  }
+
+  .checkboxInput {
+    &:checked {
+      & + .checkboxLabel {
+        &:after {
+          top: 1px;
+          left: -27px;
+          width: 11px;
+          height: 11px;
+
+        }
+      }
+    }
   }
 }
 
