@@ -44,6 +44,7 @@
   &:not(:last-of-type) {
     margin-bottom: 20px;
   }
+
   &:last-of-type {
     margin-bottom: 47px;
   }
@@ -55,9 +56,6 @@
     text-align: left;
     color: #7b7b7b;
     font-family: "Codec Cold News", "Arial", sans-serif;
-
-    //color: #A3A3A3;
-    //font-size: 14px;
   }
 }
 
@@ -89,6 +87,16 @@
   margin-bottom: 26px;
 }
 
+.checkboxWrapper {
+  padding-left: 19px;
+  position: relative;
+}
+
+.checkboxLabel {
+  font-size: 10px;
+  line-height: 10px;
+}
+
 @media (min-width: $width-tablet-md) {
   .root {
     padding: 0 50px;
@@ -113,6 +121,16 @@
     font-size: 25px;
     line-height: 27px;
     margin-bottom: 34.5px;
+  }
+
+  .checkboxWrapper {
+
+  }
+
+  .checkboxLabel {
+    font-size: 14px;
+    line-height: 14px;
+    color: #707070;
   }
 }
 

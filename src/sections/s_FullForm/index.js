@@ -151,24 +151,23 @@ export const S_FullForm = ({className, data}) => {
                     >Получить предложение</button>
 
                     <div
-                        className={classNames(classes.radio)}
+                        className={classNames(classes.checkboxWrapper)}
 
                     >
                         <input
                             className={'visually-hidden'}
-                            id={"private_broker"}
-                            type="radio"
-                            value={"agreed"}
+                            id={"agreed"}
+                            type="checkbox"
                             checked={isCheckValid}
-                            onClick={(e) => {
-                                console.log('125', e.target.value)
-                                console.log('dddf',isCheckValid)
+                            onChange={() => {
                                 setIsCheckValid(prev => !prev)
                             }}
                         />
-                        <label htmlFor="private_broker">Я согласен с обработкой персональных данных</label>
+                        <label
+                            className={classes.checkboxLabel}
+                            htmlFor="agreed"
+                        >Я согласен с обработкой персональных данных</label>
                     </div>
-
                 </div>
             </div>
         </form>
