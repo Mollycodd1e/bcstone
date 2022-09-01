@@ -11,7 +11,6 @@
 .frame {
   width: 100%;
   background-image: radial-gradient(rgb(74, 74, 74) 0%, rgb(43, 44, 45) 70%);
-  //height: 500px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -89,7 +88,6 @@
 
 .checkboxWrapper {
   padding-left: 19px;
-
 }
 
 .checkboxLabel {
@@ -126,7 +124,6 @@
   }
 }
 
-
 @media (min-width: $width-tablet-md) {
   .root {
     padding: 0 50px;
@@ -134,10 +131,16 @@
 
   .frame {
     border-radius: 20px;
+    flex-direction: row;
+    justify-content: center;
   }
 
   .titles {
     flex-direction: column-reverse;
+  }
+
+  .fields {
+
   }
 
   .title {
@@ -168,7 +171,6 @@
       top: -2px;
       width: 17.02px;
       height: 17.02px;
-
     }
   }
 
@@ -180,7 +182,6 @@
           left: -27px;
           width: 11px;
           height: 11px;
-
         }
       }
     }
