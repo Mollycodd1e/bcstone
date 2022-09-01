@@ -135,26 +135,35 @@
 
   .frame {
     border-radius: 20px;
-    padding: 86.2px 0;
-    flex-direction: row;
+    padding: 86.2px 48px;
+    //flex-direction: row;
+    //justify-content: center;
+    display: grid;
+    grid-template-columns: minmax(322px, 465px) 390px;
+    grid-template-rows: 1fr;
+    grid-template-areas: "titles fields";
+    grid-column-gap: 94px;
     justify-content: center;
   }
 
   .titles {
+    grid-area: titles;
     flex-direction: column-reverse;
-    margin-right: 94px;
   }
 
   .fields {
+    grid-area: fields;
     padding: 88px 0 0;
-    max-width: 390px;
+    //width: 388px;
+    width: 100%;
+    max-width: unset;
   }
 
   .title {
     font-size: 40px;
     line-height: 42px;
     letter-spacing: unset;
-    margin: 0;
+    margin: 0 5px 0 auto;
   }
 
   .description {
@@ -169,6 +178,7 @@
     margin-bottom: 26px !important;
     font-size: 18px;
     line-height: 19px;
+    width: 100%;
 
     &::placeholder {
       font-size: 18px;
