@@ -136,8 +136,6 @@
   .frame {
     border-radius: 20px;
     padding: 86.2px 48px;
-    //flex-direction: row;
-    //justify-content: center;
     display: grid;
     grid-template-columns: minmax(322px, 465px) 390px;
     grid-template-rows: 1fr;
@@ -153,7 +151,8 @@
 
   .fields {
     grid-area: fields;
-    padding: 88px 0 0;
+    //padding: 88px 0 0;
+    padding: calc(1089px - 100vw) 0 0;
     //width: 388px;
     width: 100%;
     max-width: unset;
@@ -241,5 +240,19 @@
     font-size: 18px;
     line-height: 18px;
     margin-bottom: 19px;
+  }
+
+
+  .frame {
+    //border-radius: 20px;
+    padding: 134px 394px 125px 203px;
+    display: grid;
+    grid-template-columns: 691px 390px;
+    grid-column-gap: 112px;
+    justify-content: center;
+  }
+
+  .fields {
+    padding: 0;
   }
 }
