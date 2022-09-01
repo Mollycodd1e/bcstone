@@ -155,7 +155,7 @@ export const S_FullForm = ({className, data}) => {
 
                     >
                         <input
-                            className={'visually-hidden'}
+                            className={classNames('visually-hidden', classes.checkboxInput)}
                             id={"agreed"}
                             type="checkbox"
                             checked={isCheckValid}
