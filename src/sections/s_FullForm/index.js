@@ -105,13 +105,17 @@ export const S_FullForm = ({className, data}) => {
 
                 </div>
                 <div className={classes.fields}>
-                    <div className={
-                        classNames(
-                            classes.wrapperInputCommon,
-                            {
-                                [classes.inputRequire]: errorNameCode === errorType.orange,
-                                [classes.inputError]: errorNameCode === errorType.red,
-                            })}>
+                    <div
+                        className={
+                            classNames(
+                                classes.wrapperInputCommon,
+                                {
+                                    [classes.inputRequire]: errorNameCode === errorType.orange,
+                                    [classes.inputError]: errorNameCode === errorType.red,
+                                }
+                            )
+                        }
+                    >
                         <input
                             required={true}
                             className={classNames(classes.inputCommon)}
@@ -137,7 +141,16 @@ export const S_FullForm = ({className, data}) => {
                         />
                         <span className={classes.errorMessage}>{errorNameText}</span>
                     </div>
-                    <div className={classNames(classes.wrapperInputCommon)}>
+                    <div
+                        className={
+                            classNames(
+                                classes.wrapperInputCommon,
+                                {
+                                    [classes.inputRequire]: errorNameCode === errorType.orange,
+                                    [classes.inputError]: errorNameCode === errorType.red,
+                                }
+                            )
+                        }>
                         <InputMask mask="+7-999-999-99-99" value={phone}
                                    onChange={(e) => {
                                        setPhone(prev => e.target.value);
@@ -158,8 +171,18 @@ export const S_FullForm = ({className, data}) => {
                                 />
                             )}
                         </InputMask>
+                        <span className={classes.errorMessage}>{errorNameText}</span>
                     </div>
-                    <div className={classNames(classes.wrapperInputCommon)}>
+                    <div
+                        className={
+                            classNames(
+                                classes.wrapperInputCommon,
+                                {
+                                    [classes.inputRequire]: errorNameCode === errorType.orange,
+                                    [classes.inputError]: errorNameCode === errorType.red,
+                                }
+                            )
+                        }>
                         <input
                             className={classNames(classes.inputCommon, classes.inputMail, {[classes.inputError]: !isEmailValid})}
                             type="text"
@@ -180,6 +203,7 @@ export const S_FullForm = ({className, data}) => {
                                 }
                             }}
                         />
+                        <span className={classes.errorMessage}>{errorNameText}</span>
                     </div>
 
                     <button

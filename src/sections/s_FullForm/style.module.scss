@@ -46,21 +46,21 @@
 
 .inputRequire {
   & .inputCommon {
-    border-color: $color-require;
+    border-color: $color-require-border;
   }
 
   & .errorMessage {
-    color: $color-require;
+    color: $color-require-text;
     opacity: 1;
   }
 }
 .inputError {
   & .inputCommon {
-    border-color: $color-require;
+    border-color: $color-error-border;
   }
 
   & .errorMessage {
-    color: $color-require;
+    color: $color-error-text;
     opacity: 1;
   }
 }
@@ -69,6 +69,11 @@
   position: absolute;
   opacity: 0;
   transition: opacity .5s;
+  bottom: -18px;
+  left: 24px;
+  font-size: 12px;
+  line-height: 12px;
+  font-family: "Codec Cold News", "Arial", sans-serif;
 }
 
 .inputCommon {
