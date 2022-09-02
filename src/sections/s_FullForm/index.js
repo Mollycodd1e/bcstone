@@ -19,6 +19,23 @@ export const S_FullForm = ({className, data}) => {
     const [isEmailValid, setIEmailValid] = useState(true);
     const [isCheckValid, setIsCheckValid] = useState(false);
 
+    const validName = /^(([a-zA-Zа-яА-ЯЁё-]{1,30}))$/u;
+
+    const fieldText = {
+        require: "Обязательное поле",
+        error: {
+            name: "Имя должно содержать только буквы",
+            email: "Адрес введен неверно",
+        }
+    }
+    const errorType = {
+        red: "red",
+        orange: "orange",
+    }
+
+    const [errorNameText, setErrorNameText] = useState('');
+    const [errorNameCode, setErrorNameCode] = useState('');
+
     const onButtonClick = (e) => {
         e.preventDefault();
 
@@ -88,61 +105,82 @@ export const S_FullForm = ({className, data}) => {
 
                 </div>
                 <div className={classes.fields}>
-                    <input
-                        required={true}
-                        className={classNames(classes.inputCommon, classes.inputUser, {[classes.inputError]: !isNameValid})}
-                        type="text"
-                        placeholder={'Как к вам обращаться *'}
-                        value={name}
-                        onChange={(e) => {
-                            setName(prev => e.target.value);
-                            if (!e.target.value) {
-                                setIsNameValid(false);
-                            } else {
-                                setIsNameValid(true);
-                            }
-                        }}
-                    />
-                    <InputMask mask="+7-999-999-99-99" value={phone}
-                               onChange={(e) => {
-                                   setPhone(prev => e.target.value);
+                    <div className={
+                        classNames(
+                            classes.wrapperInputCommon,
+                            {
+                                [classes.inputRequire]: errorNameCode === errorType.orange,
+                                [classes.inputError]: errorNameCode === errorType.red,
+                            })}>
+                        <input
+                            required={true}
+                            className={classNames(classes.inputCommon)}
+                            type="text"
+                            placeholder={'Как к вам обращаться *'}
+                            value={name}
+                            onChange={(e) => {
+                                setName(prev => e.target.value);
+                                if (!e.target.value) {
+                                    setIsNameValid(false);
+                                    setErrorNameText(`${fieldText.require}`);
+                                    setErrorNameCode(`${errorType.orange}`);
+                                } else if (e.target.value && (!validName.test(e.target.value))) {
+                                    setIsNameValid(false);
+                                    setErrorNameText(`${fieldText.error.name}`);
+                                    setErrorNameCode(`${errorType.red}`);
+                                } else {
+                                    setIsNameValid(true);
+                                    setErrorNameText(``);
+                                    setErrorNameCode(``);
+                                }
+                            }}
+                        />
+                        <span className={classes.errorMessage}>{errorNameText}</span>
+                    </div>
+                    <div className={classNames(classes.wrapperInputCommon)}>
+                        <InputMask mask="+7-999-999-99-99" value={phone}
+                                   onChange={(e) => {
+                                       setPhone(prev => e.target.value);
 
-                                   if (!e.target.value.length || e.target.value.length > 15 && e.target.value.slice(-1) === '_') {
-                                       setIsPhoneValid(false)
-                                   } else {
-                                       setIsPhoneValid(true)
-                                   }
-                               }}>
-                        {(inputProps) => (
-                            <input
-                                {...inputProps}
-                                required={true}
-                                className={classNames(classes.inputCommon, classes.inputPhone, {[classes.inputError]: !isPhoneValid})}
-                                type="text"
-                                placeholder={'Номер телефона *'}
-                            />
-                        )}
-                    </InputMask>
-                    <input
-                        className={classNames(classes.inputCommon, classes.inputMail, {[classes.inputError]: !isEmailValid})}
-                        type="text"
-                        placeholder={'E-mail'}
-                        value={email}
-                        onChange={(e) => {
-                            setEmail(prev => e.target.value);
+                                       if (!e.target.value.length || e.target.value.length > 15 && e.target.value.slice(-1) === '_') {
+                                           setIsPhoneValid(false)
+                                       } else {
+                                           setIsPhoneValid(true)
+                                       }
+                                   }}>
+                            {(inputProps) => (
+                                <input
+                                    {...inputProps}
+                                    required={true}
+                                    className={classNames(classes.inputCommon, classes.inputPhone, {[classes.inputError]: !isPhoneValid})}
+                                    type="text"
+                                    placeholder={'Номер телефона *'}
+                                />
+                            )}
+                        </InputMask>
+                    </div>
+                    <div className={classNames(classes.wrapperInputCommon)}>
+                        <input
+                            className={classNames(classes.inputCommon, classes.inputMail, {[classes.inputError]: !isEmailValid})}
+                            type="text"
+                            placeholder={'E-mail'}
+                            value={email}
+                            onChange={(e) => {
+                                setEmail(prev => e.target.value);
 
-                            const validString = /^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-                            const isValid = new RegExp(validString);
+                                const validString = /^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                                const isValid = new RegExp(validString);
 
-                            if (e.target.value.length === 0) {
-                                setIEmailValid(true)
-                            } else if (!isValid.test(e.target.value)) {
-                                setIEmailValid(false)
-                            } else {
-                                setIEmailValid(true)
-                            }
-                        }}
-                    />
+                                if (e.target.value.length === 0) {
+                                    setIEmailValid(true)
+                                } else if (!isValid.test(e.target.value)) {
+                                    setIEmailValid(false)
+                                } else {
+                                    setIEmailValid(true)
+                                }
+                            }}
+                        />
+                    </div>
 
                     <button
                         onClick={(e) => onButtonClick(e)}
