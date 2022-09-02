@@ -14,8 +14,8 @@ export const S_FullForm = ({className, data}) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
 
-    const [isPhoneValid, setIsPhoneValid] = useState(true);
-    const [isNameValid, setIsNameValid] = useState(true);
+    const [isPhoneValid, setIsPhoneValid] = useState(false);
+    const [isNameValid, setIsNameValid] = useState(false);
     const [isEmailValid, setIEmailValid] = useState(true);
     const [isCheckValid, setIsCheckValid] = useState(false);
 
@@ -28,6 +28,7 @@ export const S_FullForm = ({className, data}) => {
             email: "Адрес введен неверно",
         }
     }
+
     const errorType = {
         red: "red",
         orange: "orange",
@@ -35,11 +36,20 @@ export const S_FullForm = ({className, data}) => {
 
     const [errorNameText, setErrorNameText] = useState('');
     const [errorNameCode, setErrorNameCode] = useState('');
+    const [errorPhoneText, setErrorPhoneText] = useState('');
+    const [errorPhoneCode, setErrorPhoneCode] = useState('');
+    const [errorEmailText, setErrorEmailText] = useState('');
+    const [errorEmailCode, setErrorEmailCode] = useState('');
 
     const onButtonClick = (e) => {
         e.preventDefault();
 
-        // if (isPhoneValid && isNameValid && isEmailValid && name.length !== 0 && phone.length !== 0) {
+        if (isPhoneValid && isNameValid && isEmailValid && isCheckValid) {
+            console.log("phone ", phone)
+            console.log("name", name)
+            console.log("email", email)
+            console.log("isCheckValid", isCheckValid)
+            setIsConfirmed(true);
         //     setIsProcessing(true);
         //
         //     // отправляем данные в comagic
@@ -84,25 +94,15 @@ export const S_FullForm = ({className, data}) => {
         //     setIsNameValid(false);
         // } else if (phone.length === 0) {
         //     setIsPhoneValid(false);
-        // }
+        }
     }
 
     return (
         <form className={cls}>
             <div className={classes.frame}>
                 <div className={classes.titles}>
-                    {!isConfirmed ? (
-                            <>
-                                <h3 dangerouslySetInnerHTML={{ __html: title}} className={classes.title}/>
-                                <span dangerouslySetInnerHTML={{ __html: description}} className={classes.description}/>
-                            </>
-                        ) : (
-                            <>
-                                <h3 dangerouslySetInnerHTML={{ __html: titleSuccess}} className={classes.title}/>
-                                <span dangerouslySetInnerHTML={{ __html: descriptionSuccess}} className={classes.description}/>
-                            </>
-                    )}
-
+                    <h3 dangerouslySetInnerHTML={{ __html: !isConfirmed ? title : titleSuccess}} className={classes.title}/>
+                    <span dangerouslySetInnerHTML={{ __html: !isConfirmed ? description : descriptionSuccess}} className={classes.description}/>
                 </div>
                 <div className={classes.fields}>
                     <div
@@ -117,7 +117,6 @@ export const S_FullForm = ({className, data}) => {
                         }
                     >
                         <input
-                            required={true}
                             className={classNames(classes.inputCommon)}
                             type="text"
                             placeholder={'Как к вам обращаться *'}
@@ -146,40 +145,44 @@ export const S_FullForm = ({className, data}) => {
                             classNames(
                                 classes.wrapperInputCommon,
                                 {
-                                    [classes.inputRequire]: errorNameCode === errorType.orange,
-                                    [classes.inputError]: errorNameCode === errorType.red,
+                                    [classes.inputRequire]: errorPhoneCode === errorType.orange,
+                                    [classes.inputError]: errorPhoneCode === errorType.red,
                                 }
                             )
                         }>
                         <InputMask mask="+7-999-999-99-99" value={phone}
                                    onChange={(e) => {
-                                       setPhone(prev => e.target.value);
+                                       const phoneNumber = e.target.value.replace(/[^0-9]/g,"");
+                                       setPhone(prev => phoneNumber);
 
-                                       if (!e.target.value.length || e.target.value.length > 15 && e.target.value.slice(-1) === '_') {
-                                           setIsPhoneValid(false)
+                                       if (phoneNumber.toString().length > 0 && phoneNumber.toString().length < 11) {
+                                           setIsPhoneValid(false);
+                                           setErrorPhoneText(`${fieldText.require}`);
+                                           setErrorPhoneCode(`${errorType.orange}`);
                                        } else {
-                                           setIsPhoneValid(true)
+                                           setIsPhoneValid(true);
+                                           setErrorPhoneText(``);
+                                           setErrorPhoneCode(``);
                                        }
                                    }}>
                             {(inputProps) => (
                                 <input
                                     {...inputProps}
-                                    required={true}
                                     className={classNames(classes.inputCommon, classes.inputPhone, {[classes.inputError]: !isPhoneValid})}
                                     type="text"
                                     placeholder={'Номер телефона *'}
                                 />
                             )}
                         </InputMask>
-                        <span className={classes.errorMessage}>{errorNameText}</span>
+                        <span className={classes.errorMessage}>{errorPhoneText}</span>
                     </div>
                     <div
                         className={
                             classNames(
                                 classes.wrapperInputCommon,
                                 {
-                                    [classes.inputRequire]: errorNameCode === errorType.orange,
-                                    [classes.inputError]: errorNameCode === errorType.red,
+                                    [classes.inputRequire]: errorEmailCode === errorType.orange,
+                                    [classes.inputError]: errorEmailCode === errorType.red,
                                 }
                             )
                         }>
@@ -194,16 +197,18 @@ export const S_FullForm = ({className, data}) => {
                                 const validString = /^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
                                 const isValid = new RegExp(validString);
 
-                                if (e.target.value.length === 0) {
-                                    setIEmailValid(true)
-                                } else if (!isValid.test(e.target.value)) {
-                                    setIEmailValid(false)
+                                if (!isValid.test(e.target.value) && e.target.value.length !== 0) {
+                                    setIEmailValid(false);
+                                    setErrorEmailText(`${fieldText.error.email}`);
+                                    setErrorEmailCode(`${errorType.red}`);
                                 } else {
-                                    setIEmailValid(true)
+                                    setIEmailValid(true);
+                                    setErrorEmailText(``);
+                                    setErrorEmailCode(``);
                                 }
                             }}
                         />
-                        <span className={classes.errorMessage}>{errorNameText}</span>
+                        <span className={classes.errorMessage}>{errorEmailText}</span>
                     </div>
 
                     <button
