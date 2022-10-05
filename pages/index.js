@@ -10,6 +10,8 @@ import {S_Top_Commercial} from "../src/sections/s_Top_Сommercial";
 import {S_Projects} from "../src/sections/s_Projects";
 import {S_About} from "../src/sections/s_About";
 import {S_Sales} from "../src/sections/s_Sales";
+import { S_Footer } from "../src/sections/s_Footer";
+import { S_Saving} from '../src/sections/s_Saving';
 
 export default function Home() {
     const [width, height] = useWindowSize();
@@ -58,6 +60,23 @@ export default function Home() {
         }
     });
 
+    const mocks = {
+        image: ['https://via.placeholder.com/250x200', 'https://via.placeholder.com/250x200'],
+        contacts: {
+            phone: '+7 (495) 124-45-67',
+            mail: 'sales@bc-stone.ru',
+            address: 'г. Москва, Бумажный проезд, вл. 19',
+            sales: `Отдел продаж по телефону: пн.${'\u00A0'}- пт.: с${'\u00A0'}9:00 до${'\u00A0'}21:00 сб.${'\u00A0'}-${'\u00A0'}вс.:${'\u00A0'}c${'\u00A0'}9:30 до${'\u00A0'}20:00`,
+            telegram: '@stone_by_stonehedge'
+        },
+        copyright: {
+            header: `Инвестируйте Выгодно В${'\u00A0'}ликвидную недвижимость`,
+            name: 'Политика конфиденциальности',
+            author: '© АО «СТОУНХЕДЖ»',
+            description: `Содержимое данного сайта (включая размещенную информацию и материалы) охраняется авторским${'\u00A0'}правом (ст. 1271 ГК РФ). Запрещено копирование дизайна настоящего сайта, его структуры и отдельных элементов без предварительного письменного согласия АО «СТОУНХЕДЖ»`
+        },
+    }
+
     return (
         // <Context.Provider value={data}>
             <Context.Provider value={[width, height]}>
@@ -88,6 +107,9 @@ export default function Home() {
                                 <S_Projects data={mainPageData[0]} />
                                 {/*<S_About data={mainPageData[0]} width={width} />*/}
                                 {/*<S_Sales data={mainPageData[0]} />*/}
+                                <S_Saving items={mocks.image}/>
+                                <S_Footer phone_number={mocks.contacts.phone} mail={mocks.contacts.mail} address={mocks.contacts.address} 
+                                    sales_number={mocks.contacts.sales} telegram={mocks.contacts.telegram} copyright={mocks.copyright}/>
                             </>
                         ) : (
                             <div className="lds-grid-wrapper">
