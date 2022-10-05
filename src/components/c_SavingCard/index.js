@@ -10,7 +10,7 @@ export const C_SavingCard = ({className, url, description}) => {
         <div className={cls}>
             <div className={classes.card_wrapper}>      
                 <Image src={url} layout='fill'/>
-                <button></button>
+                <a href='#'>Подробнее</a>
             </div>
             <p>{description}</p>
         </div>

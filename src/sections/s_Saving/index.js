@@ -11,7 +11,7 @@ export const S_Saving = ({className, items}) => {
     const allCards = [];
 
     items.forEach(item => {
-      allCards.push(<C_SavingCard url={item} description={'Привет'}/>)
+      allCards.push(<C_SavingCard url={item} description={'Бизнес-центры и офисные кварталы  будут реализованы в Белорусском  деловом районе и других  перспективных Бизнес-районах  Москвы'}/>)
     });
 
     console.log(allCards)
@@ -19,8 +19,7 @@ export const S_Saving = ({className, items}) => {
     return (
         <div className={cls}>          
             <h2>Сохраните сбережения в недвижимости</h2>
-            <C_Slider className={classes.saving} items={allCards} initialSlide={0} slidersSpaceBetween = {225} slidesPerView = {1}/>
-            {/* <C_SliderSave items={items}/> */}
+            <C_Slider className={classes.saving} items={allCards} initialSlide={0} slidersSpaceBetween = {-103} slidesPerView = {1} saving={true}/>
         </div>
     )
 }
