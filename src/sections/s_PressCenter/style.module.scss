@@ -1,0 +1,51 @@
+@import '../../styles/style';
+
+.root {
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 600px;
+}
+
+.PressCenterTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 10px -30px;
+
+  & .bg_text {
+    display: block;
+    margin: 0 0 -15px -15px;
+    color: #F6F6F6;
+  }
+
+  & .wrap_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 0 -20px;
+
+
+    & span:last-child {
+      margin: 0 0 0 85px;
+    }
+  }
+
+  & .bg_text,
+  & .wrap_title {
+    font-size: 49px;
+    line-height: 42px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+}
+
+.sliderWrapper {
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

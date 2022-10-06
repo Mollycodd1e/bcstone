@@ -12,6 +12,7 @@ import {S_About} from "../src/sections/s_About";
 import {S_Sales} from "../src/sections/s_Sales";
 import { S_Footer } from "../src/sections/s_Footer";
 import { S_Saving} from '../src/sections/s_Saving';
+import { S_PressCenter } from '../src/sections/s_PressCenter';
 
 export default function Home() {
     const [width, height] = useWindowSize();
@@ -61,6 +62,26 @@ export default function Home() {
     });
 
     const mocks = {
+        pressCenter: [
+            {
+                data: '20/04',
+                image: 'https://via.placeholder.com/224x134',
+                title: 'Выйграли конкурс',
+                description: 'Бизнес-центры и офисные кварталы  будут реализованы в Белорусском  деловом районе и других  перспективных Бизнес-районах  Москвы'
+            },
+            {
+                data: '20/04',
+                image: 'https://via.placeholder.com/224x134',
+                title: 'Выйграли конкурс',
+                description: 'Бизнес-центры и офисные кварталы  будут реализованы в Белорусском  деловом районе и других  перспективных Бизнес-районах  Москвы'
+            },
+            {
+                data: '20/04',
+                image: 'https://via.placeholder.com/224x134',
+                title: 'Выйграли конкурс',
+                description: 'Бизнес-центры и офисные кварталы  будут реализованы в Белорусском  деловом районе и других  перспективных Бизнес-районах  Москвы'
+            },
+        ],
         image: ['https://via.placeholder.com/250x200', 'https://via.placeholder.com/250x200'],
         contacts: {
             phone: '+7 (495) 124-45-67',
@@ -108,6 +129,7 @@ export default function Home() {
                                 {/*<S_About data={mainPageData[0]} width={width} />*/}
                                 {/*<S_Sales data={mainPageData[0]} />*/}
                                 <S_Saving items={mocks.image}/>
+                                <S_PressCenter items={mocks.pressCenter}/>
                                 <S_Footer phone_number={mocks.contacts.phone} mail={mocks.contacts.mail} address={mocks.contacts.address} 
                                     sales_number={mocks.contacts.sales} telegram={mocks.contacts.telegram} copyright={mocks.copyright}/>
                             </>

@@ -1,7 +1,11 @@
 .root {
   height: 100%;
   width: 242px;
-  min-height: 141px;
+  min-height: 134px;
+}
+
+.data {
+
 }
 
 .card_wrapper {
@@ -19,6 +23,7 @@
   border-radius: 8px;
   top: 20px;
   z-index: 10;
+  max-height: 134px;
 }
 
 .card_wrapper a {
@@ -27,7 +32,7 @@
   justify-content: center;
   align-items: flex-end;
   position: absolute;
-  min-height: 141px;
+  min-height: 152px;
   border: none;
   padding: 0;
   padding-bottom: 4px;
@@ -44,12 +49,13 @@
   cursor: pointer;
 }
 
-.root p {
+.description_wrapper {
+  display: block;
   font-size: 12px;
   line-height: 13px;
   font-weight: 400;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 180px;
   letter-spacing: 0;
   padding: 4px 0 5px 8px;
   font-family: "Codec Cold News", "Arial", sans-serif;
