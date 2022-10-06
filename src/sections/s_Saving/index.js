@@ -19,7 +19,9 @@ export const S_Saving = ({className, items}) => {
     return (
         <div className={cls}>          
             <h2>Сохраните сбережения в недвижимости</h2>
-            <C_Slider className={classes.saving} items={allCards} initialSlide={0} slidersSpaceBetween = {-103} slidesPerView = {1} saving={true}/>
+            <div className={classes.slider_wrapper}>
+                <C_Slider className={classes.saving} items={allCards} initialSlide={0}  slidersSpaceBetween = {-103} slidesPerView = {1} saving={true}/>
+            </div>
         </div>
     )
 }
