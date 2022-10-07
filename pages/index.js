@@ -59,7 +59,7 @@ export default function Home() {
         if (el && el.id) {
             return el.id === 2
         }
-    });
+     });
 
     const mocks = {
         pressCenter: [

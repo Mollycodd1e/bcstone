@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React from "react";
 
 import classes from './style.module.scss';
 import classNames from "classnames";
@@ -6,9 +6,8 @@ import { C_Slider } from "../../components/c_Slider";
 import { C_PressCard } from "../../components/c_PressCard";
 
 export const S_PressCenter = ({className, items}) => {
-    const [isListView, setIsListView] = useState(true);
 
-    const cls = classNames(classes.root, { [classes.mapView]: !isListView, [className]: className });
+    const cls = classNames(classes.root, {[className]: className });
 
     const allCards = [];
 
@@ -26,7 +25,7 @@ export const S_PressCenter = ({className, items}) => {
                 </div>
             </div>
             <div className={classes.sliderWrapper}>
-              <C_Slider items={allCards} initialSlide={0}  slidersSpaceBetween = {-183} slidesPerView = {1}/>
+              <C_Slider items={allCards} initialSlide={0}  slidesPerView = {3} press={true}/>
             </div>
         </div>
     )

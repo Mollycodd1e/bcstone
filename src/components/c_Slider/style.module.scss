@@ -46,9 +46,10 @@
   }
 }
 
-.swiperSaving {
+.swiperSaving,
+.swiperPress {
+  height: 100%;
   min-width: unset;
-  padding-bottom: 12.2rem;
 }
 
 .swiperMode {

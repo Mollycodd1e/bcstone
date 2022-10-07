@@ -14,8 +14,6 @@ export const S_Saving = ({className, items}) => {
       allCards.push(<C_SavingCard url={item} description={'Бизнес-центры и офисные кварталы  будут реализованы в Белорусском  деловом районе и других  перспективных Бизнес-районах  Москвы'}/>)
     });
 
-    console.log(allCards)
-    console.log(items)
     return (
         <div className={cls}>          
             <h2>Сохраните сбережения в&nbsp;недвижимости</h2>

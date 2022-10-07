@@ -5,7 +5,7 @@
 }
 
 .data {
-
+  color: black;
 }
 
 .card_wrapper {
@@ -15,15 +15,16 @@
   border-radius: 8px;
   z-index: 2;
   text-align: center;
+  min-height: 134px;
+  margin-bottom: 30px;
 }
 
 .card_wrapper img {
-  position: absolute;
   margin-top: -20px;
   border-radius: 8px;
   top: 20px;
   z-index: 10;
-  max-height: 134px;
+  min-height: 134px;
 }
 
 .card_wrapper a {
@@ -32,7 +33,7 @@
   justify-content: center;
   align-items: flex-end;
   position: absolute;
-  min-height: 152px;
+  min-height: 134px;
   border: none;
   padding: 0;
   padding-bottom: 4px;
@@ -55,7 +56,6 @@
   line-height: 13px;
   font-weight: 400;
   margin: 0;
-  margin-top: 180px;
   letter-spacing: 0;
   padding: 4px 0 5px 8px;
   font-family: "Codec Cold News", "Arial", sans-serif;
