@@ -1,3 +1,5 @@
+@import '../../styles/style';
+
 .root {
   height: 100%;
   width: 242px;
@@ -5,7 +7,12 @@
 }
 
 .data {
-  color: black;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 300;
+  font-style: italic;
+  font-family: "Codec Cold", "Arial", sans-serif;
+  color: #2B2C2C;
 }
 
 .card_wrapper {
@@ -16,6 +23,7 @@
   z-index: 2;
   text-align: center;
   min-height: 134px;
+  margin-top: 12px;
   margin-bottom: 30px;
 }
 
@@ -25,6 +33,12 @@
   top: 20px;
   z-index: 10;
   min-height: 134px;
+  max-width: 224px;
+}
+
+.card_wrapper span {
+  width: 224px !important;
+  margin: 0 auto !important;
 }
 
 .card_wrapper a {
@@ -33,32 +47,213 @@
   justify-content: center;
   align-items: flex-end;
   position: absolute;
-  min-height: 134px;
-  border: none;
+  top: 23px;
+  width: 224px;
+  min-height: 106px;
+  font-size: 12px;
+  line-height: 13px;
+  font-family: "Codec Cold News", "Arial", sans-serif;
   padding: 0;
-  padding-bottom: 4px;
-  width: 100%;
+  padding-bottom: 2px;
+  margin-left: 9px;
   z-index: 0;
   border-radius: 8px;
-  top: 23px;
   text-align: center;
-  font-size: 13px;
-  line-height: 14px;
-  font-family: "Codec Cold News", "Arial", sans-serif;
+  border: none;
   color: #070707;
   background-color: #EFEFEF;
   cursor: pointer;
 }
 
+.description_wrapper h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 19px;
+  font-weight: 700;
+  font-family: "Codec Cold", "Arial", sans-serif;
+  letter-spacing: -0.15px;
+}
+
 .description_wrapper {
-  display: block;
+  padding: 4px 0 5px 8px;
+}
+
+.description_wrapper p {
   font-size: 12px;
   line-height: 13px;
   font-weight: 400;
   margin: 0;
+  margin-top: 7px;
   letter-spacing: 0;
-  padding: 4px 0 5px 8px;
   font-family: "Codec Cold News", "Arial", sans-serif;
   text-align: left;
   color: #2B2C2C;
+}
+
+@media (min-width: $width-tablet-sm) {
+  .root {
+    width: 241px;
+    min-height: 141px;
+  }
+  
+  .data {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  
+  .card_wrapper {
+    min-height: 144px;
+    margin-top: 14px;
+    margin-bottom: 30px;
+  }
+  
+  .card_wrapper img {
+    margin-top: -20px;
+    top: 20px;
+    min-height: 144px;
+    max-width: 241px;
+  }
+  
+  .card_wrapper span {
+    width: 241px !important;
+  }
+  
+  .card_wrapper a {
+    width: 241px;
+    min-height: 118px;
+    max-height: 118px;
+    padding-bottom: 2px;
+    margin-left: 0px;
+    margin-top: 23px;
+    z-index: 0;
+  }
+  
+  .description_wrapper h3 {
+    font-size: 22px;
+    line-height: 23px;
+    letter-spacing: -0.35px;
+  }
+  
+  .description_wrapper {
+    padding: 0;
+    margin-top: 36px;
+    padding-bottom: 35px;
+  }
+  
+  .description_wrapper p {
+    font-size: 13px;
+    line-height: 14px;
+  }
+}
+
+@media (min-width: $width-notebook) {
+  .root {
+    width: 292px;
+    min-height: 152px;
+  }
+  
+  .data {
+    font-size: 26px;
+    line-height: 28px;
+  }
+  
+  .card_wrapper {
+    min-height: 174px;
+    margin-top: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .card_wrapper img {
+    min-height: 141px;
+    max-width: 292px;
+  }
+  
+  .card_wrapper span {
+    width: 292px !important;
+  }
+  
+  .card_wrapper a {
+    width: 292px;
+    min-height: 150px;
+    max-height: 150px;
+    padding-bottom: 3px;
+    font-size: 12px;
+    line-height: 13px;
+  }
+  
+  .description_wrapper h3 {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  
+  .description_wrapper {
+    margin-top: 38px;
+    padding-bottom: 39px;
+  }
+  
+  .description_wrapper p {
+    font-size: 13px;
+    line-height: 14px;
+    margin-top: 13px;
+  }
+}
+
+@media (min-width: $width-desktop-sm) {
+  .root {
+    width: 292px;
+    min-height: 154px;
+  }
+  
+  .data {
+    font-size: 26px;
+    line-height: 28px;
+    //margin-top: -20px;
+  }
+  
+  .card_wrapper {
+    min-height: 172px;
+    margin-top: 17px;
+    margin-bottom: 20px;
+  }
+  
+  .card_wrapper img {
+    min-height: 154px;
+    max-width: 292px;
+  }
+  
+  .card_wrapper span {
+    width: 292px !important;
+    overflow: visible !important;
+  }
+  
+  .cardWrapperHover img {
+    //margin-top: -20px !important;
+  }
+
+  .card_wrapper a {
+    width: 292px;
+    min-height: 136px;
+    max-height: 136px;
+    padding-bottom: 5px;
+    font-size: 17px;
+    line-height: 18px;
+  }
+  
+  .description_wrapper h3 {
+    font-size: 32px;
+    line-height: 34px;
+  }
+  
+  .description_wrapper {
+    width: 340px;
+    margin-top: 25px;
+    padding-bottom: 39px;
+    padding-left: 1px;
+  }
+  
+  .description_wrapper p {
+    font-size: 17px;
+    line-height: 18px;
+    margin-top: 9px;
+  }
 }

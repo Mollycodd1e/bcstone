@@ -5,6 +5,7 @@ import classNames from "classnames";
 
 import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper';
 import {Swiper, SwiperSlide} from "swiper/swiper-react.cjs.js";
+import { useState } from "react";
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
@@ -14,9 +15,22 @@ export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnClose
     //     delay: 10000,
     //         disableOnInteraction: false,
     // }}
+
+    const [my_swiper, set_my_swiper] = useState({});
+    const [slide, setSlide] = useState(0);
+
     return (
         <div className={cls}>
+            {press ? <div className={classes.swiper_button_prev} onClick={() => (my_swiper.slidePrev(), slide > 0 ? setSlide(slide - 1) : setSlide(slide))}
+            disabled={slide === 0}></div> : null}
             <Swiper
+                navigation={{
+                    prevEl: '.swiper_button_prev',
+                    nextEl: '.swiper_button_next',
+                }}
+                onInit={(evt) => {
+                    set_my_swiper(evt)
+                }}
                 slidesPerView={slidesPerView}
                 spaceBetween={slidersSpaceBetween}
                 centeredSlides={true}
@@ -34,6 +48,8 @@ export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnClose
                     })
                 }
             </Swiper>
+            {press ? <div className={classes.swiper_button_next} onClick={() => (my_swiper.slideNext(), slide < items.length -1 ? setSlide(slide + 1) : setSlide(slide))}
+            disabled={(slide === (items.length-1))}></div> : null}
         </div>
     )
 }
