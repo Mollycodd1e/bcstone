@@ -1,25 +1,25 @@
 import classes from './style.module.scss';
 import classNames from 'classnames';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export const C_PressCard = ({className, data, image, title, description}) => {
     
     const cls = classNames(classes.root, {[className]: className});
 
-    const onHover = () => {
-        const el = document.querySelector('img');
-        console.log(el.closest('div'));
-        el.closest('div').classList.add('cardWrapperHover')
+    const [isHover, setHover] = useState(false);
+
+    const onHover = function() {
+        setHover(true);
     }
-    const onLeave = () => {
-        const el = document.querySelector('img');
-        console.log(el.closest('div'));
-        el.closest('div').classList.remove('cardWrapperHover')
+    const onLeave = function() {
+        setHover(false)
     }
+
     return (
         <div className={cls}>
-            <div className={classes.data}>{data}</div>
-            <div className={classes.card_wrapper}>      
+            <div className={classNames(classes.data, {[classes.data_hover]: isHover})}>{data}</div>
+            <div className={classNames(classes.card_wrapper, {[classes.card_wrapper_hover]: isHover})}>      
                 <Image src={image} layout='fill'/>
                 <a href='#' onMouseEnter={() => onHover()} onMouseLeave={() => onLeave()}>Читать</a>
             </div>  
