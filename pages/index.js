@@ -11,6 +11,9 @@ import {S_Projects} from "../src/sections/s_Projects";
 import {S_About} from "../src/sections/s_About";
 import {S_Sales} from "../src/sections/s_Sales";
 import {S_FullForm} from "../src/sections/s_FullForm";
+import {S_Popup} from "../src/sections/s_Popup";
+import classes from "../src/sections/s_Popup/style.module.scss";
+import {C_FullForm} from "../src/components/c_FullForm";
 
 export default function Home() {
     const [width, height] = useWindowSize();
@@ -83,6 +86,9 @@ export default function Home() {
                             <>
                                 <div className={"common_top_bg"}  ref={topMenuEl}>
                                     <S_Menu menuOnTop={menuOnTop} data={mainPageData[0]} />
+                                    <S_Popup>
+                                        <C_FullForm data={mainPageData[0]} className={classes.fullFormIndexSection} />
+                                    </S_Popup>
                                     <S_Hero data={mainPageData[0]} />
                                     <S_Top_Commercial data={mainPageData[0]} />
                                 </div>

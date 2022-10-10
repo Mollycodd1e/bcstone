@@ -1,0 +1,43 @@
+@import '../../styles/style';
+
+.root {
+  display: flex;
+  //display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 25;
+  overflow: hidden;
+  //opacity: 0.5;
+
+  /* Note: currently only Safari supports backdrop-filter */
+  backdrop-filter: blur(30px);
+  --webkit-backdrop-filter: blur(30px);
+  background-color: rgba(77, 77, 77, 0.85);
+  /* (plus shape's fill blended on top as a separate layer with 66.06% opacity) */
+
+}
+
+.fullFormIndexSection {
+  & > div {
+    border-radius: 15px;
+  }
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+
+  }
+
+  .fullFormIndexSection {
+    & > div {
+      border-radius: 20px;
+    }
+  }
+}
