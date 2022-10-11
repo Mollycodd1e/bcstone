@@ -62,6 +62,8 @@ export default function Home() {
         }
     });
 
+    const [isPopupClose, setIsPopupClose] = useState(true);
+
     return (
         // <Context.Provider value={data}>
             <Context.Provider value={[width, height]}>
@@ -85,8 +87,8 @@ export default function Home() {
                     {data.length !== 0 ? (
                             <>
                                 <div className={"common_top_bg"}  ref={topMenuEl}>
-                                    <S_Menu menuOnTop={menuOnTop} data={mainPageData[0]} />
-                                    <S_Popup>
+                                    <S_Menu menuOnTop={menuOnTop} data={mainPageData[0]} setIsPopupClose={setIsPopupClose} />
+                                    <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
                                         <C_FullForm data={mainPageData[0]} className={classes.fullFormIndexSection} />
                                     </S_Popup>
                                     <S_Hero data={mainPageData[0]} />
