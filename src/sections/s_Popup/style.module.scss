@@ -2,7 +2,6 @@
 
 .root {
   display: flex;
-  //display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -23,6 +22,22 @@
   /* (plus shape's fill blended on top as a separate layer with 66.06% opacity) */
 }
 
+.closeIcon {
+  width: 30px;
+  height: 30px;
+  background-image: url("../../img/s_close_icon.svg");
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 215px);
+  cursor: pointer;
+}
+
 .closePopup {
   display: none;
 }
@@ -38,9 +53,30 @@
 
   }
 
+  .closeIcon {
+    width: 52px;
+    height: 52px;
+    background-size: 52px 52px;
+    right: 74px;
+    top: calc(50% - 230px);
+  }
+
   .fullFormIndexSection {
     & > div {
       border-radius: 20px;
     }
+  }
+}
+
+@media (min-width: 1055px) {
+  .closeIcon {
+    top: calc(50% - 215px);
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .closeIcon {
+    right: 113px;
+    top: calc(50% - 235px);
   }
 }

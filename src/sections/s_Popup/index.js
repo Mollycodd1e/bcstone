@@ -7,7 +7,7 @@ export const S_Popup = ({className, data, isPopupClose, setIsPopupClose, childre
 
     return (
         <div className={cls}>
-            <button onClick={() => setIsPopupClose(true)}/>
+            <button className={classes.closeIcon} onClick={() => setIsPopupClose(true)}/>
             {children}
         </div>
     )
