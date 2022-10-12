@@ -64,7 +64,7 @@
     align-items: center;
   }
   
-  .root a {
+  .root .C_MainButton {
     display: block;
     margin-top: 21px;
     width: 138px;
@@ -76,7 +76,6 @@
     font-family: "Codec Cold News", "Arial", sans-serif;
     text-align: center;
     color: #FFFFFF;
-    background-color: #2B2C2C;
   }
 
 @media (min-width: 360px) {
@@ -98,7 +97,7 @@
     }
   }
 
-  .root a {
+  .root .C_MainButton {
     margin-top: 23px;
   }
 }
@@ -153,7 +152,7 @@
     margin-top: 26px;
   }
 
-  .root a {
+  .root .C_MainButton {
     margin-top: 16px;
     width: 263px;
     margin-left: -1px;
@@ -161,30 +160,6 @@
     font-size: 18px;
     line-height: 19px;
     border-radius: 22px;
-  }
-
-  .btnWrapper a {
-    position: relative;
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      width: 154px;
-      height: 16px;
-      top: 9px;
-      background-repeat: no-repeat;
-    }
-
-    &::before {
-      left: -182px;
-      background-image: url('../../img/left-ellipse.png');
-    }
-
-    &::after {
-      right: -182px;
-      background-image: url('../../img/right-ellipse.png');
-    }
   }
 }
 
@@ -223,7 +198,7 @@
     margin-top: 37px;
   }
 
-  .root a {
+  .root .C_MainButton {
     margin-top: 17px;
     margin-left: 0;
     padding: 8px 0 9px 0;
@@ -233,27 +208,6 @@
   .pressing {
     width: 1500px;
   }
-
-  .btnWrapper a {
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      width: 250px;
-      height: 16px;
-      top: 14px;
-    }
-
-    &::before {
-      left: -369px;
-      background-image: url('../../img/left-ellipse-note.png');
-    }
-
-    &::after {
-      right: -369px;
-      background-image: url('../../img/right-ellipse-note.png');
-    }
-  }
 }
 
 @media (min-width: $width-notebook) {
@@ -261,7 +215,7 @@
     padding-bottom: 69px;
   }
 
-  .root a {
+  .root .C_MainButton {
     margin-top: 26px;
     margin-left: 0;
     padding: 8px 0 9px 0;
@@ -323,42 +277,15 @@
     margin-top: 65px;
   }
 
-  .root a {
+  .root .C_MainButton {
     margin-top: 0;
     margin-left: 0;
     padding: 11px 0 13px 0;
     width: 185px;
   }
-
-  .btnWrapper a {
-    margin-top: 34px;
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      width: 250px;
-      height: 16px;
-      top: 14px;
-    }
-
-    &::before {
-      left: -369px;
-      background-image: url('../../img/left-ellipse-note.png');
-    }
-
-    &::after {
-      right: -369px;
-      background-image: url('../../img/right-ellipse-note.png');
-    }
-  }
 }
 
 @media (min-width: $width-desktop-md) {
-  // .pressing {
-  //   width: 1140px;
-  //   min-height: 440px;
-  // }
   .wrapper {
     padding-top: 53px;
     padding-bottom: 87px;
@@ -395,28 +322,7 @@
     margin-top: 43px;
   }
 
-  .root a {
+  .root .C_MainButton {
     margin-top: 18px;
-  }
-
-  .btnWrapper a {
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      width: 250px;
-      height: 16px;
-      top: 14px;
-    }
-
-    &::before {
-      left: -369px;
-      background-image: url('../../img/left-ellipse-note.png');
-    }
-
-    &::after {
-      right: -369px;
-      background-image: url('../../img/right-ellipse-note.png');
-    }
   }
 }

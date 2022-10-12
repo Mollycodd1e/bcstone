@@ -1,3 +1,5 @@
+@import '../../styles/style';
+
 .root {
   height: 100%;
   width: 242px;
@@ -13,6 +15,10 @@
   text-align: center;
   min-height: 141px;
   margin-bottom: 30px;
+}
+
+.card_wrapper h3 {
+  display: none;
 }
 
 .card_wrapper img {
@@ -56,4 +62,14 @@
   font-family: "Codec Cold News", "Arial", sans-serif;
   text-align: left;
   color: #2B2C2C;
+}
+
+@media (min-width: 360px) {
+
+}
+
+@media (min-width: $width-tablet-sm) {
+  .card_wrapper h3 {
+    display: block;
+  }  
 }

@@ -109,17 +109,28 @@
       }
     }
   }
+
+  .swiperSaving {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  .swiperSaving  {
+    div[class="swiper-wrapper"] {
+      margin-left: -175px;
+    }
+  }
 }
 
 @media (min-width: $width-tablet-md) {
-  // .root {
-  //   width: calc(100vw - 104px);
-  // }
+  .root {
+    width: calc(100vw - 104px);
+  }
 
-  // .swiper {
-  //   min-width: 320px;
-  //   width: calc(100vw - 104px);
-  // }
+  .swiper {
+    min-width: 320px;
+    width: calc(100vw - 104px);
+  }
   .swiperPress {
     width: 1500px;
   }
@@ -169,11 +180,11 @@
 
 @media (min-width: $width-desktop-md) {
   .swiper_button_prev {
-    margin-top: -174px;
+    margin-top: -123px;
   }
 
   .swiper_button_next {
-    margin-top: -174px;
+    margin-top: -123px;
   }
 
 }

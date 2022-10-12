@@ -24,7 +24,7 @@
 }
 
 .saving{
-  padding: 0 0 35px 0;
+  padding: 0 0 25px 0;
 }
 
 .sliderWrapper {
@@ -36,6 +36,37 @@
   align-items: center;
 }
 
+@media (min-width: 360px) {
+
+}
+
 @media (min-width: $width-tablet-sm) {
+  .root {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    padding: 41px 0 1px 0px;
+    letter-spacing: -0.35px;
+    background-image: url('../../img/bcstone-saving.png');
+    background-repeat: no-repeat;
+    background-size: 433px 143px;
+    background-position: -10px 58px;
+  }
   
+  .root h2 {
+    display: none;
+  }
+  
+  .saving {
+    padding: 0 0 25px 0;
+  }
+  
+  .sliderWrapper {
+    width: 100vw;
+    overflow: hidden;
+    margin-top: 27px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
