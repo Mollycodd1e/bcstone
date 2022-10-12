@@ -26,7 +26,13 @@ export const S_PressCenter = ({className, items}) => {
                 </div>
             </div>
             <div className={classes.sliderWrapper}>
-              <C_Slider className={classes.pressing} items={allCards} initialSlide={0} slidersSpaceBetween={window.innerWidth < 768 ? -255 : (window.innerWidth >= 1000 && window.innerWidth < 1200) ? -670 : window.innerWidth >= 1200 && window.innerWidth < 1440 ? -520 : window.innerWidth >= 1440 ? 23 : -170} slidesPerView = {3} press={true}/>
+              <C_Slider className={classes.pressing} items={allCards} initialSlide={0} slidersSpaceBetween={
+                    window.innerWidth < 768 ? -255 :
+                    (window.innerWidth >= 1000 && window.innerWidth < 1200) ? -513 : 
+                    window.innerWidth >= 1200 && window.innerWidth < 1440 ? -520 : 
+                    window.innerWidth >= 1440 && window.innerWidth < 1600 ? 15 : 
+                    window.innerWidth >= 1600 ? -30 : -170} 
+                    slidesPerView = {3} press={true}/>
             </div>
             <div className={classes.btnWrapper}>
                 <a href="#">Подробнее</a>

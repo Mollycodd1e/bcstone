@@ -103,7 +103,7 @@
   
   .card_wrapper {
     min-height: 144px;
-    margin-top: 14px;
+    margin-top: 13px;
     margin-bottom: 30px;
   }
   
@@ -143,6 +143,60 @@
   .description_wrapper p {
     font-size: 13px;
     line-height: 14px;
+  }
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    width: 292px;
+    min-height: 152px;
+  }
+  
+  .data {
+    font-size: 26px;
+    line-height: 28px;
+  }
+  
+  .card_wrapper {
+    min-height: 174px;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  
+  .card_wrapper img {
+    min-height: 141px;
+    max-width: 292px;
+    border-radius: 10px;
+  }
+  
+  .card_wrapper span {
+    width: 292px !important;
+  }
+  
+  .card_wrapper a {
+    width: 292px;
+    min-height: 150px;
+    max-height: 150px;
+    padding-bottom: 3px;
+    font-size: 12px;
+    line-height: 13px;
+  }
+  
+  .description_wrapper h3 {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  
+  .description_wrapper {
+    margin-top: 38px;
+    padding-bottom: 26px;
+  }
+  
+  .description_wrapper p {
+    font-size: 13px;
+    line-height: 14px;
+    margin-top: 13px;
   }
 }
 
@@ -210,7 +264,10 @@
   }
   
   .data_hover {
+    position: absolute;
     margin-top: -20px;
+    
+    transition: 0.5s;
   }
 
   .card_wrapper {
@@ -231,21 +288,28 @@
   }
   
   .card_wrapper_hover {
-    margin-bottom: 45px;
+    //margin-bottom: 45px;
+  }
+  .card_wrapper_hover img {
+    margin-top: -20px !important;
+    transition: 1s;
   }
 
   .card_wrapper a {
+    position: absolute;
     width: 292px;
-    min-height: 136px;
-    max-height: 136px;
+    min-height: 156px;
+    max-height: 156px;
     padding-bottom: 5px;
     font-size: 17px;
     line-height: 18px;
+    margin-top: 3px;
   }
   
   .card_wrapper_hover a {
-    min-height: 156px;
-    max-height: 156px;
+    // min-height: 156px;
+    // max-height: 156px;
+    // //transition: 0.1s;
   }
 
   .description_wrapper h3 {
@@ -254,15 +318,80 @@
   }
   
   .description_wrapper {
+    position: absolute;
     width: 340px;
     margin-top: 25px;
     padding-bottom: 39px;
     padding-left: 1px;
+    top: 218px;
   }
   
   .description_wrapper p {
     font-size: 17px;
     line-height: 18px;
     margin-top: 9px;
+  }
+}
+
+@media (min-width: $width-desktop-md) {
+  .root {
+    width: 324px;
+    min-height: 154px;
+  }
+    
+  .data_hover {
+    margin-top: -20px;
+  }
+
+  .card_wrapper {
+    width: 324px;
+    min-height: 194px;
+    margin-top: 11px;
+    margin-bottom: 10px;
+  }
+  
+  .card_wrapper img {
+    min-height: 154px;
+    max-width: 324px;
+    margin-top: -20px;
+  }
+  
+  .card_wrapper span {
+    width: 324px !important;
+    overflow: visible !important;
+  }
+  
+  .card_wrapper_hover {
+    margin-bottom: 45px;
+  }
+
+  .card_wrapper a {
+    width: 324px;
+    min-height: 158px;
+    max-height: 158px;
+    padding-bottom: 6px;
+  }
+  
+  .card_wrapper_hover a {
+    min-height: 156px;
+    max-height: 156px;
+  }
+
+  .description_wrapper h3 {
+    font-size: 34px;
+    line-height: 37px;
+    margin-top: 38px;
+  }
+  
+  .description_wrapper {
+    width: 345px;
+    margin-top: 21px;
+    padding-bottom: 39px;
+    padding-left: 0;
+  }
+  
+  .description_wrapper p {
+    font-size: 18px;
+    line-height: 19px;
   }
 }
