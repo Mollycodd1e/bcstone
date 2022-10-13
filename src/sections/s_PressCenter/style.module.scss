@@ -326,3 +326,14 @@
     margin-top: 18px;
   }
 }
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  .sliderWrapper {
+    max-width: 100%;
+  }
+}
