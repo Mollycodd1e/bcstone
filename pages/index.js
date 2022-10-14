@@ -11,6 +11,9 @@ import {S_Projects} from "../src/sections/s_Projects";
 import {S_About} from "../src/sections/s_About";
 import {S_Sales} from "../src/sections/s_Sales";
 import {S_FullForm} from "../src/sections/s_FullForm";
+import {S_Popup} from "../src/sections/s_Popup";
+import classes from "../src/sections/s_Popup/style.module.scss";
+import {C_FullForm} from "../src/components/c_FullForm";
 
 export default function Home() {
     const [width, height] = useWindowSize();
@@ -59,6 +62,8 @@ export default function Home() {
         }
     });
 
+    const [isPopupClose, setIsPopupClose] = useState(true);
+
     return (
         // <Context.Provider value={data}>
             <Context.Provider value={[width, height]}>
@@ -82,14 +87,17 @@ export default function Home() {
                     {data.length !== 0 ? (
                             <>
                                 <div className={"common_top_bg"}  ref={topMenuEl}>
-                                    <S_Menu menuOnTop={menuOnTop} data={mainPageData[0]} />
+                                    <S_Menu menuOnTop={menuOnTop} data={mainPageData[0]} setIsPopupClose={setIsPopupClose} />
+                                    <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
+                                        <C_FullForm data={mainPageData[0]} className={classes.fullFormIndexSection} />
+                                    </S_Popup>
                                     <S_Hero data={mainPageData[0]} />
                                     <S_Top_Commercial data={mainPageData[0]} />
+                                    <S_Projects data={mainPageData[0]} className={"projects-bg"} />
+                                    <S_About data={mainPageData[0]} width={width} />
+                                    <S_Sales data={mainPageData[0]} />
+                                    <S_FullForm data={mainPageData[0]} />
                                 </div>
-                                <S_Projects data={mainPageData[0]} />
-                                <S_About data={mainPageData[0]} width={width} />
-                                <S_Sales data={mainPageData[0]} />
-                                <S_FullForm data={mainPageData[0]} />
                             </>
                         ) : (
                             <div className="lds-grid-wrapper">

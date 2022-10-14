@@ -15,44 +15,46 @@ export const S_Projects = ({className, setIsPopUpVisible, data}) => {
     const [width, height] = useContext(Context);
     const cls = classNames(classes.root, { [classes.mapView]: !isListView, [className]: className });
     return (
-        <div className={cls}>
-            <div className={classes.ProjectTitle}>
-                <div className={classes.bg_text}>Проекты</div>
-                <div className={classes.wrap_title}>
-                    <span>Бизнес</span>
-                    <span>-центры</span>
-                </div>
+        <div className={classes.wrapRoot}>
+            <div className={cls}>
+                <div className={classes.ProjectTitle}>
+                    <div className={classes.bg_text}>Проекты</div>
+                    <div className={classes.wrap_title}>
+                        <span>Бизнес</span>
+                        <span>-центры</span>
+                    </div>
 
-            </div>
-            <div className={classes.sub_title}>
-                <span>Продажа и аренда</span>
-                <span>Офисы и ритейл</span>
-            </div>
-            <C_Switcher
-                className={classes.Switcher}
-                isListView={isListView}
-                setIsListView={() => setIsListView(prev => !prev)}
-            />
-            {isListView
-                ?
-                    <C_CombineRegularCards
-                        className={classes.CombineRegularCards}
-                        isBtnClose={false}
+                </div>
+                <div className={classes.sub_title}>
+                    <span>Продажа и аренда</span>
+                    <span>Офисы и ритейл</span>
+                </div>
+                <C_Switcher
+                    className={classes.Switcher}
+                    isListView={isListView}
+                    setIsListView={() => setIsListView(prev => !prev)}
+                />
+                {isListView
+                    ?
+                        <C_CombineRegularCards
+                            className={classes.CombineRegularCards}
+                            isBtnClose={false}
+                            onBtnCloseClick={() => {}}
+                            setIsPopUpVisible={setIsPopUpVisible}
+                            isMapMode={false}
+                            data={data}
+                        />
+                    : <C_RegularMap
+                        className={classes.RegularMap}
+                        isBtnClose={true}
                         onBtnCloseClick={() => {}}
                         setIsPopUpVisible={setIsPopUpVisible}
-                        isMapMode={false}
+                        isMapMode={true}
                         data={data}
                     />
-                : <C_RegularMap
-                    className={classes.RegularMap}
-                    isBtnClose={true}
-                    onBtnCloseClick={() => {}}
-                    setIsPopUpVisible={setIsPopUpVisible}
-                    isMapMode={true}
-                    data={data}
-                />
-            }
-            <C_MainButton text={"Получить предложение"} onClick={() => console.log('click from project')} className={classes.C_MainButton} />
+                }
+                <C_MainButton text={"Получить предложение"} onClick={() => console.log('click from project')} className={classes.C_MainButton} />
+            </div>
         </div>
     )
 }
