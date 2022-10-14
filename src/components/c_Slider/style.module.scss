@@ -131,8 +131,27 @@
     min-width: 320px;
     width: calc(100vw - 104px);
   }
+
   .swiperPress {
     width: 1500px;
+  }
+
+  .swiperSaving {
+    width: 1000px;
+  }
+
+  .swiperSaving  {
+    div[class="swiper-wrapper"] {
+      margin-left: -218px;
+    }
+  }
+}
+
+@media (min-width: $width-tablet-md) {
+  .swiperSaving  {
+    div[class="swiper-wrapper"] {
+      margin-left: -269px;
+    }
   }
 }
 

@@ -20,7 +20,9 @@ export const S_Saving = ({className, items}) => {
             <div className={classes.sliderWrapper}>
                 <C_Slider className={classes.saving} items={allCards} initialSlide={0} slidesPerView = {window.innerWidth >= 768 ? 2 : 3} 
                 slidersSpaceBetween={
-                    window.innerWidth >= 768 ? 15:
+                    (window.innerWidth >= 768 && window.innerWidth < 1000) ? 15 :
+                    (window.innerWidth >= 1000 && window.innerWidth < 1200) ? -130 :
+                    window.innerWidth >=1200 ? 0 :
                     -225} 
                 saving={true}/>
             </div>

@@ -65,3 +65,37 @@
     margin-top: 10px;
   }
 }
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    min-height: 400px;
+    padding-top: 5px;
+    padding-bottom: 54px;
+  }
+
+  .saving {
+    width: 1000px;
+  }
+
+  .sliderWrapper {
+    width: 896px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: $width-notebook) {
+  .root {
+    min-height: 400px;
+    padding-top: 5px;
+    padding-bottom: 54px;
+  }
+
+  .saving {
+    width: 1000px;
+  }
+
+  .sliderWrapper {
+    width: 1098px;
+  }
+}
