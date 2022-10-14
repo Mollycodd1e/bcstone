@@ -45,7 +45,7 @@
     padding: 0;
     margin: 0;
     width: 100%;
-    padding: 41px 0 1px 0px;
+    padding: 16px 0 21px 0px;
     letter-spacing: -0.35px;
     background-image: url('../../img/bcstone-saving.png');
     background-repeat: no-repeat;
@@ -62,11 +62,6 @@
   }
   
   .sliderWrapper {
-    width: 100vw;
-    overflow: hidden;
-    margin-top: 27px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-top: 10px;
   }
 }

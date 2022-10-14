@@ -1,6 +1,7 @@
 import classes from './style.module.scss';
 import classNames from 'classnames';
 import Image from 'next/image';
+import savePic from '../../img/save.png';
 
 export const C_SavingCard = ({className, url, description}) => {
     
@@ -9,8 +10,8 @@ export const C_SavingCard = ({className, url, description}) => {
     return (
         <div className={cls}>
             <div className={classes.card_wrapper}> 
-                <h3>Сохраните сбережения в недвижимости</h3>     
-                <Image src={url} layout='fill'/>
+                <h3>Сохраните сбережения в&nbsp;недвижимости</h3>     
+                <Image src={savePic} layout='fill'/>
                 <a href='#'>Подробнее</a>
             </div>
             <p>{description}</p>

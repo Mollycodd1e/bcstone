@@ -117,7 +117,7 @@
 
   .swiperSaving  {
     div[class="swiper-wrapper"] {
-      margin-left: -175px;
+      margin-left: -154px;
     }
   }
 }
@@ -189,5 +189,24 @@
 }
 
 @media (min-width: $width-desktop-lg) {
+  .swiper_button_prev {
+    margin-top: -203px;
+    margin-left: -42px;
+  }
 
+  .swiperPress {
+    margin: 0;
+    width: 1580px;
+  }
+
+  .swiperPress  {
+    div[class="swiper-wrapper"] {
+      margin-left: -30px;
+    }
+  }
+
+  .swiper_button_next {
+    margin-top: -203px;
+    margin-right: -106px;
+  }
 }

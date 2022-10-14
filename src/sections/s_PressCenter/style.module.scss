@@ -331,9 +331,36 @@
   .root {
     max-width: 1920px;
     margin: 0 auto;
+    padding-bottom: 5px;
+  }
+
+  .pressing {
+    width: 1600px;
+    min-height: 440px;
+  }
+
+  .wrapper {
+    padding-top: 55px;
+  }
+
+  .PressCenterTitle {  
+    & .bg_text {
+      margin: 0 780px -72px 0;
+    }
+  
+    & .wrap_title {
+      & span:first-child {
+        letter-spacing: -1.5px;
+        margin-left: 13px;
+      }
+    }  
   }
 
   .sliderWrapper {
-    max-width: 100%;
+    margin-top: 82px;
+  }
+
+  .root .C_MainButton {
+    margin-top: 27px;
   }
 }
