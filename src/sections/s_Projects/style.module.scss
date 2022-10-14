@@ -5,6 +5,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   background-color: white;
+  max-width: $width-desktop-lg;
 }
 
 .root {
