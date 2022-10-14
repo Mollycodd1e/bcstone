@@ -93,10 +93,10 @@ export default function Home() {
                                     </S_Popup>
                                     <S_Hero data={mainPageData[0]} />
                                     <S_Top_Commercial data={mainPageData[0]} />
-                                <S_Projects data={mainPageData[0]} className={"projects-bg"} />
-                                <S_About data={mainPageData[0]} width={width} />
-                                <S_Sales data={mainPageData[0]} />
-                                <S_FullForm data={mainPageData[0]} />
+                                    <S_Projects data={mainPageData[0]} className={"projects-bg"} />
+                                    <S_About data={mainPageData[0]} width={width} />
+                                    <S_Sales data={mainPageData[0]} />
+                                    <S_FullForm data={mainPageData[0]} />
                                 </div>
                             </>
                         ) : (

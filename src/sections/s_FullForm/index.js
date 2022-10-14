@@ -6,8 +6,8 @@ export const S_FullForm = ({className, data}) => {
     const cls = classNames(classes.root, {[className]: className});
 
     return (
-        <>
+        <div className={classes.wrapRoot}>
             <C_FullForm data={data} className={classes.fullFormIndexSection} />
-        </>
+        </div>
     )
 }
