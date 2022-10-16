@@ -13,6 +13,7 @@ export const C_PressCard = ({className, data, image, title, description}) => {
     const onHover = function() {
         setHover(true);
     }
+    
     const onLeave = function() {
         setHover(false)
     }

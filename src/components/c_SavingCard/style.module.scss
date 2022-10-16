@@ -138,6 +138,7 @@
     min-height: 220px;
     padding-bottom: 2px;
     padding-left: 1px;
+    border-radius: 10px;
   }
   
   .root p {
@@ -150,36 +151,109 @@
 
 @media (min-width: $width-notebook) {
   .card_wrapper h3 {
-    margin: 24px 0 0 33px;
-    font-size: 18px;
-    line-height: 19px;
+    margin: 39px 0 0 35px;
+    font-size: 25px;
+    line-height: 27px;
     letter-spacing: -0.1px;
   }
   
   .root { 
-    width: 440px;
+    width: 435px;
   }
   
   .card_wrapper {
-    min-height: 225px;
-    border-radius: 10px;
+    min-height: 289px;
   }
     
   .card_wrapper img {
-    min-height: 225px;
-    border-radius: 10px;
+    min-height: 289px;
   }
   
   .card_wrapper a {
-    min-height: 220px;
-    padding-bottom: 2px;
-    padding-left: 1px;
+    min-height: 299px;
+    padding-bottom: 6px;
+    padding-left: 2px;
+    font-size: 17px;
+    line-height: 18px;
   }
   
   .root p {
-    font-size: 13px;
-    line-height: 14px;
-    width: 353px;
-    padding: 2px 0 1px 14px;
+    font-size: 17px;
+    line-height: 18px;
+    width: 402px;
+    padding: 21px 0 1px 21px;
+  }
+}
+
+@media (min-width: $width-desktop-sm) {
+  .card_wrapper h3 {
+    margin: 31px 0 0 42px;
+    letter-spacing: -1px;
+    transition: 0.5s;
+  }
+  
+  .card_wrapper_hover h3 {
+    transform: translateY(-20px);
+    transition: 0.5s;
+  }
+
+  .card_wrapper span {
+    overflow: visible !important;
+  }
+  
+  .root { 
+    width: 485px;
+  }
+
+  .card_wrapper_hover img {
+    transform: translateY(-20px);
+    transition: 0.5s;
+  }
+
+  .card_wrapper a {
+    min-height: 283px;
+    padding-bottom: 15px;
+    border-radius: 15px;
+  }
+  
+  .root p {
+    width: 402px;
+    padding: 10px 0 1px 20px;
+  }
+}
+
+@media (min-width: $width-desktop-md) {
+  .card_wrapper h3 {
+    font-size: 29px;
+    line-height: 31px;
+    margin: 36px 0 0 50px;
+    letter-spacing: -0.3px;
+  }
+  
+  .root { 
+    width: 559px;
+  }
+  
+  .card_wrapper {
+    min-height: 333px;
+    transition: 0.5s;
+  }
+
+  .card_wrapper img {
+    min-height: 333px;
+    transition: 0.5s;
+
+  }
+
+  .card_wrapper a {
+    min-height: 330px;
+    padding-bottom: 18px;
+  }
+  
+  .root p {
+    font-size: 19px;
+    line-height: 21px;
+    width: 500px;
+    padding: 12px 0 1px 21px;
   }
 }
