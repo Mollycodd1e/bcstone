@@ -205,6 +205,10 @@
     width: 485px;
   }
 
+  .card_wrapper img {
+    transition: 0.5s;
+  }
+
   .card_wrapper_hover img {
     transform: translateY(-20px);
     transition: 0.5s;
@@ -241,8 +245,6 @@
 
   .card_wrapper img {
     min-height: 333px;
-    transition: 0.5s;
-
   }
 
   .card_wrapper a {

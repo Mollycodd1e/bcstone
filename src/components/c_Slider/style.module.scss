@@ -72,12 +72,6 @@
   }
 }
 
-.swiperPress {
-  div[class="swiper-wrapper"] {
-    margin-left: -3px;
-  }
-}
-
 .swiperSaving  {    
   div[class="swiper-wrapper"] {
     margin-left: -6px;
@@ -193,6 +187,7 @@
     background-image: url('../../img/sliderLeft.png');
     background-repeat: no-repeat;
     background-size: 52px 52px;
+    cursor: pointer;
   }
 
   .swiper_button_next {
@@ -205,6 +200,7 @@
     background-image: url('../../img/sliderRight.png');
     background-repeat: no-repeat;
     background-size: 52px 52px;
+    cursor: pointer;
   }
 
   .swiperPress {
