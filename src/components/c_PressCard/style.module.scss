@@ -262,13 +262,13 @@
   .data {
     font-size: 26px;
     line-height: 28px;
-    transition: 0.5s;
+    transition: 0.4s;
   }
   
   .data_hover {
     position: absolute;
-    transform: translateY(-15px);
-    transition: 0.3s;
+    transform: translateY(-10px);
+    transition: 0.5s;
   }
 
   .card_wrapper {
