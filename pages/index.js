@@ -82,7 +82,16 @@ export default function Home() {
                 description: 'Бизнес-центры и офисные кварталы  будут реализованы в Белорусском  деловом районе и других  перспективных Бизнес-районах  Москвы'
             },
         ],
-        image: ['https://via.placeholder.com/250x200', 'https://via.placeholder.com/250x200'],
+        saving: [
+            {
+                url: '',
+                description: 'Бизнес-центры и офисные кварталы будут реализованы в Белорусском деловом районе и других перспективных Бизнес-районах Москвы'
+            },
+            {
+                url: '',
+                description: 'Бизнес-центры и офисные кварталы будут реализованы в Белорусском деловом районе и других перспективных Бизнес-районах Москвы'
+            }
+        ],
         contacts: {
             phone: '+7 (495) 124-45-67',
             mail: 'sales@bc-stone.ru',
@@ -128,7 +137,7 @@ export default function Home() {
                                 <S_Projects data={mainPageData[0]} />
                                 {/*<S_About data={mainPageData[0]} width={width} />*/}
                                 {/*<S_Sales data={mainPageData[0]} />*/}
-                                <S_Saving items={mocks.image}/>
+                                <S_Saving items={mocks.saving}/>
                                 <S_PressCenter items={mocks.pressCenter}/>
                                 <S_Footer phone_number={mocks.contacts.phone} mail={mocks.contacts.mail} address={mocks.contacts.address} 
                                     sales_number={mocks.contacts.sales} telegram={mocks.contacts.telegram} copyright={mocks.copyright}/>

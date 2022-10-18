@@ -11,7 +11,7 @@ export const S_Saving = ({className, items}) => {
     const allCards = [];
 
     items.forEach(item => {
-      allCards.push(<C_SavingCard url={item} description={'Бизнес-центры и офисные кварталы  будут реализованы в Белорусском  деловом районе и других  перспективных Бизнес-районах  Москвы'}/>)
+      allCards.push(<C_SavingCard url={item.url} description={item.description}/>)
     });
 
     return (
