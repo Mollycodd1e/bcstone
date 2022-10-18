@@ -1,5 +1,14 @@
 @import '../../styles/style';
 
+.wrapRoot {
+  width: 100vw;
+  max-width: $width-desktop-lg;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  background-color: white;
+}
+
 .root {
   padding: 0;
   margin: 0;
