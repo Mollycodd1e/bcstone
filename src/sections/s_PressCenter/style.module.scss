@@ -1,0 +1,434 @@
+@import '../../styles/style';
+
+
+  .root {
+    margin: 0 auto;
+    width: 100vw;
+    padding-top: 10px;
+  }
+  
+  .wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 47px;
+  }
+  
+  .PressCenterTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 10px -30px;
+  
+    & .bg_text {
+      display: block;
+      margin: 0 -10px -15px 0px;
+      letter-spacing: -1px;
+      color: #F6F6F6;
+    }
+  
+    & .wrap_title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 0 0 -20px;
+  
+      & span:first-child {
+        letter-spacing: -1px;
+        margin-left: 10px;
+      }
+  
+      & span:last-child {
+        margin: 0 0 0 80px;
+        letter-spacing: -1px;
+      }
+    }
+  
+    & .bg_text,
+    & .wrap_title {
+      font-size: 49px;
+      line-height: 42px;
+      font-weight: 800;
+      font-family: "Codec Cold", "Arial", sans-serif;
+      text-transform: uppercase;
+    }
+  }
+  
+  .sliderWrapper {
+    width: 100vw;
+    margin-top: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .root .C_MainButton {
+    display: block;
+    margin-top: 20px;
+    margin-left: -1px;
+    width: 138px;
+    padding: 9px 0 10px 0;
+    font-weight: 400;
+    border-radius: 16px;
+    font-family: "Codec Cold News", "Arial", sans-serif;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .root .C_MainButton span {
+    font-size: 12px;
+    line-height: 13px;
+  }
+
+@media (min-width: 360px) {
+  .wrapper {
+    padding-bottom: 50px;
+  }
+
+  .PressCenterTitle {
+    margin: 5px 0 0 -30px;
+
+    & .bg_text {
+      display: block;
+      margin: 0 -3px -20px 0px;
+      letter-spacing: -1px;
+      color: #F6F6F6;
+    }
+  
+
+    & .wrap_title {
+      & span:first-child {
+        margin-left: 0;
+      }
+    }
+
+    & .bg_text,
+    & .wrap_title {
+      font-size: 55px;
+      line-height: 47px;
+    }
+  }
+
+  .root .C_MainButton {
+    margin-top: 23px;
+    margin-left: 0;
+  }
+
+  .sliderWrapper {
+    margin-top: 17px;
+  }
+}
+
+@media (min-width: $width-tablet-sm) {
+  .root {
+    padding: 0 30px;
+    padding-bottom: 40px;
+  }
+
+  .wrapper {
+    min-width: 708px;
+    border: 1px solid #707070;
+    padding-top: 39px;
+    border-radius: 20px;
+    padding-bottom: 49px;
+  }
+
+  .PressCenterTitle {
+    margin: 0;
+    
+    & .bg_text {
+      margin: 0 151px -38px 0;
+      letter-spacing: -2px;
+    }
+  
+    & .wrap_title {
+      width: 100%;
+      margin: 0;
+      margin-left: -96px;
+      display: flex;
+      flex-direction: row;
+
+      & span:first-child {
+        letter-spacing: -0.3px;
+      }
+
+      & span:last-child {
+        margin: 0;
+        letter-spacing: -1px;
+      }
+    }
+
+    & .bg_text,
+    & .wrap_title {
+      font-size: 69px;
+      line-height: 74px;
+    }
+  }
+
+  .sliderWrapper {
+    margin-top: 28px;
+  }
+
+  .root .C_MainButton {
+    position: relative;
+    margin-top: 16px;
+    width: 263px;
+    margin-left: -1px;
+    padding: 9px 0 8px 0;
+    border-radius: 22px;
+    overflow: visible;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 627px;
+      margin-left: -367px;
+      height: 56px;
+      background-image: url('../../img/press-line-768.png');
+      background-repeat: no-repeat;
+      background-size: 627px 16px;
+      background-position: 0 0;
+      z-index: 20;
+      pointer-events: none;
+    }
+  }
+
+  .root .C_MainButton span {
+    font-size: 18px;
+    line-height: 19px;
+  }
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    padding: 0 52px;
+    padding-bottom: 0;
+  }
+
+  .wrapper {
+    padding-top: 40px;
+    padding-bottom: 39px;
+    max-width: 1787px;
+    margin: 0 auto;
+  }
+
+  .PressCenterTitle {  
+    & .bg_text {
+      margin: 0 502px -45px 0;
+      letter-spacing: -2.5px;
+    }
+  
+    & .wrap_title {
+      margin-left: 320px;
+      letter-spacing: -2px;
+    }
+
+    & .bg_text,
+    & .wrap_title {
+      font-size: 82px;
+      line-height: 88px;
+    }
+  }
+
+  .sliderWrapper {
+    margin-top: 37px;
+  }
+
+  .root .C_MainButton {
+    margin-top: 17px;
+    margin-left: 0;
+    padding: 8px 0 9px 0;
+    width: 263px;
+
+    &::after {
+      width: 801px;
+      margin-left: -454px;
+      margin-top: 1px;
+      background-image: url('../../img/press-line-1000.png');
+      background-size: 801px 16px;
+    }
+  }
+
+  .pressing {
+    width: 1500px;
+  }
+}
+
+@media (min-width: $width-notebook) {
+  .wrapper {
+    padding-bottom: 69px;
+  }
+
+  .root .C_MainButton {
+    margin-top: 26px;
+    margin-left: 0;
+    padding: 8px 0 9px 0;
+    width: 264px;
+
+    &::after {
+      width: 1001px;
+      margin-left: -554px;
+      background-image: url('../../img/press-line-1200.png');
+      background-size: 1001px 16px;
+    }
+  }
+}
+
+@media (min-width: $width-desktop-sm) {
+  .sliderWrapper {
+    margin-top: 65px;
+    overflow: visible;
+  }
+
+  .pressing {
+    min-width: 1140px;
+    width: calc(100% - 300px);
+    min-height: 440px;
+  }
+
+  .root {
+    padding: 0 66px;
+    padding-bottom: 30px;
+  }
+
+  .wrapper {
+    padding-top: 53px;
+    padding-bottom: 87px;
+    min-width: 1307px;
+    margin: 0 auto;
+  }
+
+  .PressCenterTitle {  
+    & .bg_text {
+      margin: 0 446px -61px 0;
+      letter-spacing: -3.5px;
+    }
+  
+    & .wrap_title {
+      margin-left: 166px;
+      letter-spacing: -2px;
+
+      & span:first-child {
+        letter-spacing: -1px;
+      }
+
+      & span:last-child {
+        letter-spacing: -1px;
+      }
+    }
+
+    & .bg_text,
+    & .wrap_title {
+      font-size: 113px;
+      line-height: 121px;
+    }
+  }
+
+  .sliderWrapper {
+    margin-top: 65px;
+  }
+
+  .root .C_MainButton {
+    margin-top: 34px;
+    margin-left: 0;
+    padding: 11px 0 13px 0;
+    width: 185px;
+
+    &::after {
+      width: 1081px;
+      margin-left: -594px;
+      margin-top: 3px;
+      background-image: url('../../img/press-line-1440.png');
+      background-size: 1081px 16px;
+    }
+  }
+}
+
+@media (min-width: $width-desktop-md) {
+  .wrapper {
+    padding-top: 53px;
+    padding-bottom: 87px;
+    margin: 0 auto;
+  }
+
+  .PressCenterTitle {  
+    & .bg_text {
+      margin: 0 460px -72px 0;
+      letter-spacing: -4px;
+    }
+  
+    & .wrap_title {
+      letter-spacing: -2px;
+
+      & span:first-child {
+        letter-spacing: -1px;
+        margin-left: 31px;
+      }
+
+      & span:last-child {
+        letter-spacing: -1px;
+      }
+    }
+
+    & .bg_text,
+    & .wrap_title {
+      font-size: 133px;
+      line-height: 143px;
+    }
+  }
+
+  .sliderWrapper {
+    margin-top: 43px;
+  }
+
+  .root .C_MainButton {
+    margin-top: 68px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-bottom: 5px;
+  }
+
+  .pressing {
+    width: 1600px;
+    min-height: 440px;
+  }
+
+  .wrapper {
+    padding-top: 55px;
+  }
+
+  .PressCenterTitle {  
+    & .bg_text {
+      margin: 0 780px -72px 0;
+    }
+  
+    & .wrap_title {
+      & span:first-child {
+        letter-spacing: -1.5px;
+        margin-left: 13px;
+      }
+    }  
+  }
+
+  .sliderWrapper {
+    margin-top: 82px;
+  }
+
+  .root .C_MainButton {
+    margin-top: 27px;
+
+    &::after {
+      width: 1381px;
+      margin-left: -744px;
+      background-image: url('../../img/press-line-1920.png');
+      background-size: 1381px 16px;
+    }
+  }
+}
