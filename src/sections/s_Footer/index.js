@@ -11,20 +11,21 @@ export const S_Footer = ({className, phone_number, mail, address, sales_number, 
   const cls = classNames(classes.root, {[className]: className});
 
   return (
-      <div className={cls}>
-        <div className={classes.footer_wrapper}>
-          <h2>{copyright.header}</h2>
-          <C_FooterContacts phone_number={phone_number} mail={mail} address={address} 
-            sales_number={sales_number} telegram={telegram}/>
-          <div className={classes.copyright_wrapper}>
-            <div className={classes.logo_wrapper}>
-              <C_Logo className={classes.logo_footer}/>
-              <C_LogoSH className={classes.logoSH_footer}/>
-            </div>
-            <C_Copyright copyright={copyright}/>
+      <div className={classes.wrapRoot}>
+          <div className={cls}>
+                <div className={classes.footer_wrapper}>
+                      <h2>{copyright.header}</h2>
+                      <C_FooterContacts phone_number={phone_number} mail={mail} address={address} sales_number={sales_number} telegram={telegram}/>
+                      <div className={classes.copyright_wrapper}>
+                            <div className={classes.logo_wrapper}>
+                                  <C_Logo className={classes.logo_footer}/>
+                                  <C_LogoSH className={classes.logoSH_footer}/>
+                            </div>
+                            <C_Copyright copyright={copyright}/>
+                      </div>
+                </div>
+                <C_OnTopBtn className={classes.footer_ontop_btn}/>
           </div>
-        </div>
-        <C_OnTopBtn className={classes.footer_ontop_btn}/>
       </div>
   )
 }

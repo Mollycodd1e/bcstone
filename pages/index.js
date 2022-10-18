@@ -14,6 +14,9 @@ import {S_FullForm} from "../src/sections/s_FullForm";
 import {S_Popup} from "../src/sections/s_Popup";
 import classes from "../src/sections/s_Popup/style.module.scss";
 import {C_FullForm} from "../src/components/c_FullForm";
+import { S_Footer } from "../src/sections/s_Footer";
+import { S_Saving} from '../src/sections/s_Saving';
+import { S_PressCenter } from '../src/sections/s_PressCenter';
 
 export default function Home() {
     const [width, height] = useWindowSize();
@@ -64,6 +67,52 @@ export default function Home() {
 
     const [isPopupClose, setIsPopupClose] = useState(true);
 
+    const mocks = {
+        pressCenter: [
+            {
+                data: '21/04',
+                image: 'https://via.placeholder.com/224x134',
+                title: 'Выйграли конкурс',
+                description: 'Бизнес-центры и офисные кварталы  будут реализованы в Белорусском  деловом районе и других  перспективных Бизнес-районах  Москвы'
+            },
+            {
+                data: '22/04',
+                image: 'https://via.placeholder.com/224x134',
+                title: 'Выйграли конкурс',
+                description: 'Бизнес-центры и офисные кварталы  будут реализованы в Белорусском  деловом районе и других  перспективных Бизнес-районах  Москвы'
+            },
+            {
+                data: '20/04',
+                image: 'https://via.placeholder.com/224x134',
+                title: 'Выйграли конкурс',
+                description: 'Бизнес-центры и офисные кварталы  будут реализованы в Белорусском  деловом районе и других  перспективных Бизнес-районах  Москвы'
+            },
+        ],
+        saving: [
+            {
+                url: '',
+                description: 'Бизнес-центры и офисные кварталы будут реализованы в Белорусском деловом районе и других перспективных Бизнес-районах Москвы'
+            },
+            {
+                url: '',
+                description: 'Бизнес-центры и офисные кварталы будут реализованы в Белорусском деловом районе и других перспективных Бизнес-районах Москвы'
+            }
+        ],
+        contacts: {
+            phone: '+7 (495) 124-45-67',
+            mail: 'sales@bc-stone.ru',
+            address: 'г. Москва, Бумажный проезд, вл. 19',
+            sales: `Отдел продаж по телефону: пн.${'\u00A0'}- пт.: с${'\u00A0'}9:00 до${'\u00A0'}21:00 сб.${'\u00A0'}-${'\u00A0'}вс.:${'\u00A0'}c${'\u00A0'}9:30 до${'\u00A0'}20:00`,
+            telegram: '@stone_by_stonehedge'
+        },
+        copyright: {
+            header: `Инвестируйте Выгодно В${'\u00A0'}ликвидную недвижимость`,
+            name: 'Политика конфиденциальности',
+            author: '© АО «СТОУНХЕДЖ»',
+            description: `Содержимое данного сайта (включая размещенную информацию и материалы) охраняется авторским${'\u00A0'}правом (ст. 1271 ГК РФ). Запрещено копирование дизайна настоящего сайта, его структуры и отдельных элементов без предварительного письменного согласия АО «СТОУНХЕДЖ»`
+        },
+    }
+
     return (
         // <Context.Provider value={data}>
             <Context.Provider value={[width, height]}>
@@ -97,6 +146,9 @@ export default function Home() {
                                     <S_About data={mainPageData[0]} width={width} />
                                     <S_Sales data={mainPageData[0]} />
                                     <S_FullForm data={mainPageData[0]} />
+                                    <S_Saving items={mocks.saving}/>
+                                    <S_PressCenter items={mocks.pressCenter}/>
+                                    <S_Footer phone_number={mocks.contacts.phone} mail={mocks.contacts.mail} address={mocks.contacts.address} sales_number={mocks.contacts.sales} telegram={mocks.contacts.telegram} copyright={mocks.copyright} />
                                 </div>
                             </>
                         ) : (

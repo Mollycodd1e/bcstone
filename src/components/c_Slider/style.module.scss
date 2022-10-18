@@ -6,6 +6,11 @@
   justify-items: center;
 }
 
+.swiper_button_prev,
+.swiper_button_next {
+  display: none;
+}
+
 .swiper {
   min-width: 320px;
   width: 1000px;
@@ -46,6 +51,37 @@
   }
 }
 
+.swiperSaving,
+.swiperPress {
+  height: 100%;
+  padding-bottom: 1.7rem;
+  min-width: unset;
+
+  div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
+    
+    span[class="swiper-pagination-bullet"] {
+      width: 4px !important;
+      height: 4px !important;
+      border: 3px solid #707070 !important;
+    }
+
+    span[class="swiper-pagination-bullet swiper-pagination-bullet-active"] {
+      width: 6px !important;
+      height: 6px !important;
+    }
+  }
+}
+
+.swiperSaving  {    
+  div[class="swiper-wrapper"] {
+    margin-left: -6px;
+  }
+}
+
+.swiperPress {
+  padding-bottom: 2.1rem;
+}
+
 .swiperMode {
   padding-top: 1.8rem;
 }
@@ -57,8 +93,56 @@
   //width: 242px !important;
 }
 
-@media (min-width: $width-tablet-md) {
+@media (min-width: 360px) {
+  .swiperSaving  {    
+    div[class="swiper-wrapper"] {
+      margin-left: 0;
+    }
+  }
 
+  .swiperPress {
+    div[class="swiper-wrapper"] {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (min-width: $width-tablet-sm) {
+  .swiperSaving,
+  .swiperPress {
+    height: 100%;
+    padding-bottom: 1.7rem;
+    min-width: unset;
+  
+    div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
+      
+      span[class="swiper-pagination-bullet"] {
+        width: 7px !important;
+        height: 7px !important;
+        border: 1px solid #D3D3D3 !important;
+        background-color: #D3D3D3 !important;
+      }
+  
+      span[class="swiper-pagination-bullet swiper-pagination-bullet-active"] {
+        width: 7px !important;
+        height: 7px !important;
+      }
+    }
+  }
+
+  .swiperSaving {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  .swiperSaving  {
+    div[class="swiper-wrapper"] {
+      margin-left: -154px;
+    }
+  }
+}
+
+@media (min-width: $width-tablet-md) {
   .root {
     width: calc(100vw - 104px);
   }
@@ -66,5 +150,126 @@
   .swiper {
     min-width: 320px;
     width: calc(100vw - 104px);
+  }
+
+  .swiperPress {
+    width: 1500px;
+  }
+
+  .swiperSaving {
+    width: 1000px;
+  }
+
+  .swiperSaving  {
+    div[class="swiper-wrapper"] {
+      margin-left: -218px;
+    }
+  }
+}
+
+@media (min-width: $width-notebook) {
+  .swiperSaving  {
+    div[class="swiper-wrapper"] {
+      margin-left: -273px;
+    }
+  }
+}
+
+@media (min-width: $width-desktop-sm) {
+  .swiper_button_prev {
+    display: block;
+    width: 54px;
+    height: 52px;
+    align-self: center;
+    margin-left: -33px;
+    margin-top: -101px;
+
+    background-image: url('../../img/sliderLeft.png');
+    background-repeat: no-repeat;
+    background-size: 52px 52px;
+    cursor: pointer;
+  }
+
+  .swiper_button_next {
+    display: block;
+    width: 54px;
+    height: 52px;
+    align-self: center;
+    margin-right: -34px;
+    margin-top: -101px;
+    background-image: url('../../img/sliderRight.png');
+    background-repeat: no-repeat;
+    background-size: 52px 52px;
+    cursor: pointer;
+  }
+
+  .swiperPress {
+    width: 100%;
+    min-height: 440px;
+    margin-left: 0px;
+    margin: 0 auto;
+    padding-top: 20px;
+
+    div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
+      display: none;
+    }
+  }
+
+  .swiperPress .swiper-slider {
+    min-height: 414px;
+  }
+
+  .swiperSaving  {
+    width: 1500px;
+    padding-top: 20px;
+
+    div[class="swiper-wrapper"] {
+      margin-left: -303px;
+    }
+  }
+}
+
+@media (min-width: $width-desktop-md) {
+  .swiper_button_prev {
+    margin-top: -123px;
+  }
+
+  .swiper_button_next {
+    margin-top: -123px;
+  }
+
+  .swiperSaving  {    
+    div[class="swiper-wrapper"] {
+      margin-left: -346px;
+    }
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .swiper_button_prev {
+    margin-top: -203px;
+    margin-left: -42px;
+  }
+
+  .swiperPress {
+    margin: 0;
+    width: 1580px;
+  }
+
+  .swiperPress  {
+    div[class="swiper-wrapper"] {
+      margin-left: -30px;
+    }
+  }
+
+  .swiperSaving  {    
+    div[class="swiper-wrapper"] {
+      margin-left: -341px;
+    }
+  }
+
+  .swiper_button_next {
+    margin-top: -203px;
+    margin-right: -106px;
   }
 }
