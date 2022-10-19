@@ -6,7 +6,7 @@ import {C_Transit_Sale} from "../../components/c_Transit_Sale";
 export const S_Sales = ({className, data}) => {
     const cls = classNames(classes.root, {[className]: className});
     const [selectedType, setSelectedType] = useState('')
-
+    
     return (
         <div className={classes.wrapRoot}>
             <div className={cls}>
