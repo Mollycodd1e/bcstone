@@ -4,14 +4,19 @@ import classNames from 'classnames';
 import { C_Slider } from '../../components/c_Slider';
 import { C_SavingCard } from '../../components/c_SavingCard';
 
-export const S_Saving = ({className, items}) => {
-    
+export const S_Bottom_Commercial = ({className, data}) => {
+
     const cls = classNames(classes.root, {[className]: className});
+    const data_3 = data.bottom_commercial;
 
     const allCards = [];
+    let cuttedElements = data_3 && data_3.list.length !==0 && data_3.list.slice(0, data_3.config.shownElements);
+    cuttedElements.sort(function (a, b) {
+        return a.order - b.order;
+    })
 
-    items.forEach(item => {
-      allCards.push(<C_SavingCard url={item.url} description={item.description}/>)
+    cuttedElements.forEach(item => {
+        allCards.push(<C_SavingCard  image={item.pic.src} title={item.title} description={item.content}/>)
     });
 
     return (

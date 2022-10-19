@@ -6,14 +6,20 @@ import { C_Slider } from "../../components/c_Slider";
 import { C_PressCard } from "../../components/c_PressCard";
 import { C_MainButton } from "../../components/c_MainButton";
 
-export const S_PressCenter = ({className, items}) => {
-
+export const S_PressCenter = ({className, data}) => {
+    
     const cls = classNames(classes.root, {[className]: className });
-
+    const data_4 = data.news;
+    
     const allCards = [];
 
-    items.forEach(item => {
-      allCards.push(<C_PressCard data={item.data} image={item.image} title={item.title} description={item.description}/>)
+    let cuttedElements = data_4 && data_4.list.length !==0 && data_4.list.slice(0, data_4.config.shownElements);
+    cuttedElements.sort(function (a, b) {
+        return a.order - b.order;
+    })
+
+    cuttedElements.forEach(item => {
+      allCards.push(<C_PressCard date={item.date} image={item.pic.src} title={item.title} description={item.content}/>)
     });
 
     return (
