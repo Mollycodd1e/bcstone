@@ -25,6 +25,7 @@
   min-height: 134px;
   margin-top: 12px;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .card_wrapper img {
@@ -296,7 +297,7 @@
 
   .card_wrapper_hover img {
     transform: translateY(-21px);
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
     transition: 0.5s;
   }
 
