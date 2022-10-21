@@ -15,6 +15,7 @@
   text-align: center;
   min-height: 141px;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .card_wrapper h3 {
@@ -225,16 +226,18 @@
 
   .card_wrapper img {
     transition: 0.5s;
+    border-radius: 15px;
   }
 
   .card_wrapper_hover img {
     transform: translateY(-20px);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
     transition: 0.5s;
   }
 
   .card_wrapper a {
     min-height: 283px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     border-radius: 15px;
   }
   
@@ -267,7 +270,8 @@
 
   .card_wrapper a {
     min-height: 330px;
-    padding-bottom: 18px;
+    padding-bottom: 10px;
+    padding-left: 0;
   }
   
   .root p {
