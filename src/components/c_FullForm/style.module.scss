@@ -8,19 +8,30 @@
   color: #fff;
 }
 
-.frame {
+.wrapper_frame {
   width: 100%;
   background-image: radial-gradient(rgb(74, 74, 74) 0%, rgb(43, 44, 45) 70%);
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.frame {
+  width: 100%;
+  //background-image: radial-gradient(rgb(74, 74, 74) 0%, rgb(43, 44, 45) 70%);
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
   padding: 61px 32px 38px 25px;
+  position: relative;
 }
 
 .titles {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
+  left: calc(50% - 132px);
 }
 
 .fields {
@@ -28,7 +39,9 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  max-width: 350px;
+  max-width: 263px;
+  position: relative;
+  left: calc(50% - 132px);
 }
 
 .wrapperInputCommon {
@@ -171,8 +184,11 @@
     padding: 0 50px;
   }
 
-  .frame {
+  .wrapper_frame {
     border-radius: 20px;
+  }
+
+  .frame {
     padding: 86.2px 48px;
     display: grid;
     grid-template-columns: minmax(322px, 465px) 390px;
@@ -180,11 +196,13 @@
     grid-template-areas: "titles fields";
     grid-column-gap: 94px;
     justify-content: center;
+    position: unset;
   }
 
   .titles {
     grid-area: titles;
     flex-direction: column-reverse;
+    position: unset;
   }
 
   .fields {
@@ -194,6 +212,7 @@
     //width: 388px;
     width: 100%;
     max-width: unset;
+    position: unset;
   }
 
   .title {

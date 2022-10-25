@@ -99,141 +99,143 @@ export const C_FullForm = ({className, data}) => {
 
     return (
         <form className={cls}>
-            <div className={classes.frame}>
-                <div className={classes.titles}>
-                    <h3 dangerouslySetInnerHTML={{ __html: !isConfirmed ? title : titleSuccess}} className={classes.title}/>
-                    <span dangerouslySetInnerHTML={{ __html: !isConfirmed ? description : descriptionSuccess}} className={classes.description}/>
-                </div>
-                <div className={classes.fields}>
-                    <div
-                        className={
-                            classNames(
-                                classes.wrapperInputCommon,
-                                {
-                                    [classes.inputRequire]: errorNameCode === errorType.orange,
-                                    [classes.inputError]: errorNameCode === errorType.red,
-                                }
-                            )
-                        }
-                    >
-                        <input
-                            className={classNames(classes.inputCommon)}
-                            type="text"
-                            placeholder={'Как к вам обращаться *'}
-                            value={name}
-                            onChange={(e) => {
-                                setName(prev => e.target.value);
-                                if (!e.target.value) {
-                                    setIsNameValid(false);
-                                    setErrorNameText(`${fieldText.require}`);
-                                    setErrorNameCode(`${errorType.orange}`);
-                                } else if (e.target.value && (!validName.test(e.target.value))) {
-                                    setIsNameValid(false);
-                                    setErrorNameText(`${fieldText.error.name}`);
-                                    setErrorNameCode(`${errorType.red}`);
-                                } else {
-                                    setIsNameValid(true);
-                                    setErrorNameText(``);
-                                    setErrorNameCode(``);
-                                }
-                            }}
-                        />
-                        <span className={classes.errorMessage}>{errorNameText}</span>
+            <div className={classes.wrapper_frame}>
+                <div className={classes.frame}>
+                    <div className={classes.titles}>
+                        <h3 dangerouslySetInnerHTML={{ __html: !isConfirmed ? title : titleSuccess}} className={classes.title}/>
+                        <span dangerouslySetInnerHTML={{ __html: !isConfirmed ? description : descriptionSuccess}} className={classes.description}/>
                     </div>
-                    <div
-                        className={
-                            classNames(
-                                classes.wrapperInputCommon,
-                                {
-                                    [classes.inputRequire]: errorPhoneCode === errorType.orange,
-                                    [classes.inputError]: errorPhoneCode === errorType.red,
-                                }
-                            )
-                        }>
-                        <InputMask mask="+7-999-999-99-99" value={phone}
-                                   onChange={(e) => {
-                                       const phoneNumber = e.target.value.replace(/[^0-9]/g,"");
-                                       setPhone(prev => phoneNumber);
+                    <div className={classes.fields}>
+                        <div
+                            className={
+                                classNames(
+                                    classes.wrapperInputCommon,
+                                    {
+                                        [classes.inputRequire]: errorNameCode === errorType.orange,
+                                        [classes.inputError]: errorNameCode === errorType.red,
+                                    }
+                                )
+                            }
+                        >
+                            <input
+                                className={classNames(classes.inputCommon)}
+                                type="text"
+                                placeholder={'Как к вам обращаться *'}
+                                value={name}
+                                onChange={(e) => {
+                                    setName(prev => e.target.value);
+                                    if (!e.target.value) {
+                                        setIsNameValid(false);
+                                        setErrorNameText(`${fieldText.require}`);
+                                        setErrorNameCode(`${errorType.orange}`);
+                                    } else if (e.target.value && (!validName.test(e.target.value))) {
+                                        setIsNameValid(false);
+                                        setErrorNameText(`${fieldText.error.name}`);
+                                        setErrorNameCode(`${errorType.red}`);
+                                    } else {
+                                        setIsNameValid(true);
+                                        setErrorNameText(``);
+                                        setErrorNameCode(``);
+                                    }
+                                }}
+                            />
+                            <span className={classes.errorMessage}>{errorNameText}</span>
+                        </div>
+                        <div
+                            className={
+                                classNames(
+                                    classes.wrapperInputCommon,
+                                    {
+                                        [classes.inputRequire]: errorPhoneCode === errorType.orange,
+                                        [classes.inputError]: errorPhoneCode === errorType.red,
+                                    }
+                                )
+                            }>
+                            <InputMask mask="+7-999-999-99-99" value={phone}
+                                       onChange={(e) => {
+                                           const phoneNumber = e.target.value.replace(/[^0-9]/g,"");
+                                           setPhone(prev => phoneNumber);
 
-                                       if (phoneNumber.toString().length > 0 && phoneNumber.toString().length < 11) {
-                                           setIsPhoneValid(false);
-                                           setErrorPhoneText(`${fieldText.require}`);
-                                           setErrorPhoneCode(`${errorType.orange}`);
-                                       } else {
-                                           setIsPhoneValid(true);
-                                           setErrorPhoneText(``);
-                                           setErrorPhoneCode(``);
-                                       }
-                                   }}>
-                            {(inputProps) => (
-                                <input
-                                    {...inputProps}
-                                    className={classNames(classes.inputCommon, classes.inputPhone, {[classes.inputError]: !isPhoneValid})}
-                                    type="text"
-                                    placeholder={'Номер телефона *'}
-                                />
-                            )}
-                        </InputMask>
-                        <span className={classes.errorMessage}>{errorPhoneText}</span>
-                    </div>
-                    <div
-                        className={
-                            classNames(
-                                classes.wrapperInputCommon,
-                                {
-                                    [classes.inputRequire]: errorEmailCode === errorType.orange,
-                                    [classes.inputError]: errorEmailCode === errorType.red,
-                                }
-                            )
-                        }>
-                        <input
-                            className={classNames(classes.inputCommon, classes.inputMail, {[classes.inputError]: !isEmailValid})}
-                            type="text"
-                            placeholder={'E-mail'}
-                            value={email}
-                            onChange={(e) => {
-                                setEmail(prev => e.target.value);
+                                           if (phoneNumber.toString().length > 0 && phoneNumber.toString().length < 11) {
+                                               setIsPhoneValid(false);
+                                               setErrorPhoneText(`${fieldText.require}`);
+                                               setErrorPhoneCode(`${errorType.orange}`);
+                                           } else {
+                                               setIsPhoneValid(true);
+                                               setErrorPhoneText(``);
+                                               setErrorPhoneCode(``);
+                                           }
+                                       }}>
+                                {(inputProps) => (
+                                    <input
+                                        {...inputProps}
+                                        className={classNames(classes.inputCommon, classes.inputPhone, {[classes.inputError]: !isPhoneValid})}
+                                        type="text"
+                                        placeholder={'Номер телефона *'}
+                                    />
+                                )}
+                            </InputMask>
+                            <span className={classes.errorMessage}>{errorPhoneText}</span>
+                        </div>
+                        <div
+                            className={
+                                classNames(
+                                    classes.wrapperInputCommon,
+                                    {
+                                        [classes.inputRequire]: errorEmailCode === errorType.orange,
+                                        [classes.inputError]: errorEmailCode === errorType.red,
+                                    }
+                                )
+                            }>
+                            <input
+                                className={classNames(classes.inputCommon, classes.inputMail, {[classes.inputError]: !isEmailValid})}
+                                type="text"
+                                placeholder={'E-mail'}
+                                value={email}
+                                onChange={(e) => {
+                                    setEmail(prev => e.target.value);
 
-                                const validString = /^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-                                const isValid = new RegExp(validString);
+                                    const validString = /^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                                    const isValid = new RegExp(validString);
 
-                                if (!isValid.test(e.target.value) && e.target.value.length !== 0) {
-                                    setIEmailValid(false);
-                                    setErrorEmailText(`${fieldText.error.email}`);
-                                    setErrorEmailCode(`${errorType.red}`);
-                                } else {
-                                    setIEmailValid(true);
-                                    setErrorEmailText(``);
-                                    setErrorEmailCode(``);
-                                }
-                            }}
-                        />
-                        <span className={classes.errorMessage}>{errorEmailText}</span>
-                    </div>
+                                    if (!isValid.test(e.target.value) && e.target.value.length !== 0) {
+                                        setIEmailValid(false);
+                                        setErrorEmailText(`${fieldText.error.email}`);
+                                        setErrorEmailCode(`${errorType.red}`);
+                                    } else {
+                                        setIEmailValid(true);
+                                        setErrorEmailText(``);
+                                        setErrorEmailCode(``);
+                                    }
+                                }}
+                            />
+                            <span className={classes.errorMessage}>{errorEmailText}</span>
+                        </div>
 
-                    <button
-                        onClick={(e) => onButtonClick(e)}
-                        className={classes.button}
-                        // disabled={isProcessing}
-                    >Получить предложение</button>
+                        <button
+                            onClick={(e) => onButtonClick(e)}
+                            className={classes.button}
+                            // disabled={isProcessing}
+                        >Получить предложение</button>
 
-                    <div
-                        className={classNames(classes.checkboxWrapper)}
+                        <div
+                            className={classNames(classes.checkboxWrapper)}
 
-                    >
-                        <input
-                            className={classNames('visually-hidden', classes.checkboxInput)}
-                            id={"agreed"}
-                            type="checkbox"
-                            checked={isCheckValid}
-                            onChange={() => {
-                                setIsCheckValid(prev => !prev)
-                            }}
-                        />
-                        <label
-                            className={classes.checkboxLabel}
-                            htmlFor="agreed"
-                        >Я согласен с обработкой персональных данных</label>
+                        >
+                            <input
+                                className={classNames('visually-hidden', classes.checkboxInput)}
+                                id={"agreed"}
+                                type="checkbox"
+                                checked={isCheckValid}
+                                onChange={() => {
+                                    setIsCheckValid(prev => !prev)
+                                }}
+                            />
+                            <label
+                                className={classes.checkboxLabel}
+                                htmlFor="agreed"
+                            >Я согласен с обработкой персональных данных</label>
+                        </div>
                     </div>
                 </div>
             </div>
