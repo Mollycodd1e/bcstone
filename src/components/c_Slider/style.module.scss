@@ -79,12 +79,31 @@
 }
 
 .swiperPress {
+  opacity: 0;
   padding-bottom: 2.1rem;
 }
 
 .swiperMode {
   padding-top: 1.8rem;
 }
+
+.swiperShow {
+  opacity: 1;
+  transition: 3s;
+}
+
+@keyframes Jumpin {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+ }
+
+ // Sass loop code
+ @for $i from 0 through 10 {
+  .swiperShow div[class="swiper-wrapper"] div:nth-child(#{$i}) {
+   animation: Jumpin #{$i * 0.75}s cubic-bezier(.9,.03,.69,.22);
+  }
+ }
 
 .swiperSlide {
   display: flex;
