@@ -17,20 +17,25 @@
   height: auto;
   margin: 0;
   position: relative;
-  padding-bottom: 2.6rem;
+  padding-bottom: 2.1rem;
 
   div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
     bottom: 0 !important;
 
     span[class="swiper-pagination-bullet"] {
-      width: 8px !important;
-      height: 8px !important;
+      // width: 8px !important;
+      // height: 8px !important;
+      width: 4px !important;
+      height: 4px !important;
+      border: 3px solid #707070 !important;
       background: transparent !important;
-      border: 1px solid #2b2c2d !important;
+      // border: 1px solid #2b2c2d !important;
       opacity: 1 !important;
     }
 
     span[class="swiper-pagination-bullet swiper-pagination-bullet-active"] {
+      width: 6px !important;
+      height: 6px !important;
       background: #2b2c2d !important;
     }
   }
@@ -56,20 +61,6 @@
   height: 100%;
   padding-bottom: 1.7rem;
   min-width: unset;
-
-  div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
-    
-    span[class="swiper-pagination-bullet"] {
-      width: 4px !important;
-      height: 4px !important;
-      border: 3px solid #707070 !important;
-    }
-
-    span[class="swiper-pagination-bullet swiper-pagination-bullet-active"] {
-      width: 6px !important;
-      height: 6px !important;
-    }
-  }
 }
 
 .swiperSaving  {    
@@ -79,12 +70,31 @@
 }
 
 .swiperPress {
+  opacity: 1;
   padding-bottom: 2.1rem;
 }
 
 .swiperMode {
   padding-top: 1.8rem;
 }
+
+.swiperShow {
+  opacity: 1;
+  transition: 3s;
+}
+
+@keyframes Jumpin {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+ }
+
+ // Sass loop code
+ @for $i from 0 through 10 {
+  .swiperShow div[class="swiper-wrapper"] div:nth-child(#{$i}) {
+   animation: Jumpin #{$i * 0.75}s cubic-bezier(.9,.03,.69,.22);
+  }
+ }
 
 .swiperSlide {
   display: flex;
@@ -93,7 +103,7 @@
   //width: 242px !important;
 }
 
-@media (min-width: 360px) {
+@media (min-width: $width-mobile-pre-md) {
   .swiperSaving  {    
     div[class="swiper-wrapper"] {
       margin-left: 0;
@@ -209,6 +219,7 @@
     margin-left: 0px;
     margin: 0 auto;
     padding-top: 20px;
+    opacity: 0;
 
     div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
       display: none;

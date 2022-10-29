@@ -1,10 +1,19 @@
 @import '../../styles/style';
 
+.wrapRoot {
+  width: 100vw;
+  max-width: $width-desktop-lg;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  background-color: white;
+}
+
 .root {
   padding: 0;
   margin: 0;
   width: 100%;
-  padding: 41px 0 14px 0px;
+  padding: 53px 0 14px 0;
   letter-spacing: -0.35px;
   background-image: url('../../img/bcstone-saving-mobile.png');
   background-repeat: no-repeat;
@@ -16,8 +25,7 @@
   margin: 0;
   font-size: 22px;
   line-height: 23px;
-  padding-right: 20px;
-  padding-left: 25px;
+  padding: 0 20px 0 28px;
   font-weight: bold;
   font-family: "Codec Cold","Arial", sans-serif;
   text-align: left;
@@ -36,14 +44,15 @@
   align-items: center;
 }
 
-@media (min-width: 360px) {
+@media (min-width: $width-mobile-pre-md) {
   .root {
+    padding: 41px 0 13px 0;
     padding-bottom: 0;
     background-position: -10px 58px;
   }
 
   .root h2 {
-    padding-right: 50px;
+    padding: 0 50px 0 25px;
   }
 
   .sliderWrapper {

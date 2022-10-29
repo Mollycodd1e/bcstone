@@ -5,6 +5,8 @@ import {C_Slider} from "../c_Slider";
 import {C_SliderElementAbout} from "../c_SliderElementAbout";
 import {Context} from "../../library";
 import {sizes} from "../../data/sizes";
+import {C_SliderDeveloper} from "../c_Slider_Developer";
+import {C_SliderC} from "../c_SliderC";
 
 export const C_SliderVideoAbout = ({className, data}) => {
     const cls = classNames(classes.root, {[className]: className});
@@ -13,7 +15,7 @@ export const C_SliderVideoAbout = ({className, data}) => {
 
     const divBlock = useRef(null);
     const showDivWidth = () => {
-        console.log(divBlock.current.getBoundingClientRect().width);
+        // console.log(divBlock.current.getBoundingClientRect().width);
         // console.log(divBlock.current.getBoundingClientRect());
         // console.log(divBlock.current.getBoundingClientRect());
     }
@@ -37,14 +39,14 @@ export const C_SliderVideoAbout = ({className, data}) => {
              // style={{ height:  `${width < sizes.widthTabletMd ? 190 : heightBlock}px`}}
         >
             {slider.isVisible && !video.isVisible
-                ? <C_Slider
+                ? <C_SliderDeveloper
                     className={classes.С_Slider}
                     isBtnClose={false}
                     items={elements}
                     initialSlide={0}
                     slidesPerView={width < sizes.widthTabletMd ? 3 : 1}
                     slidersSpaceBetween={0}
-
+                    loop={width < sizes.widthDesktopLg}
                     />
                 : <div>video</div>
             }

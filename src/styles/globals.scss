@@ -164,6 +164,10 @@ input[type="radio"].visually-hidden {
   }
 }
 
+.projects-bg {
+  background-color: #fff;
+}
+
 @media (min-width: $width-tablet-md) {
   .brMobile {
     display: none;

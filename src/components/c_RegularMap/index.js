@@ -22,7 +22,7 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
     const [shownSliders, setShownSliders] = useState([0]);
 
     useEffect(() => {
-        console.log('clustersProjects', clustersProjects)
+        // console.log('clustersProjects', clustersProjects)
         const orderList = clustersProjects.map(project => {
             // project.properties.order - 1
             return parseFloat(project.properties.order - 1);

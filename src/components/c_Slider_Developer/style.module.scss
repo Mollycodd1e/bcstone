@@ -1,0 +1,184 @@
+@import '../../styles/style';
+
+.root {
+  width: 1000px;
+  display: flex;
+  justify-items: center;
+}
+
+.swiper {
+  min-width: 320px;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  position: relative;
+  padding-bottom: 2.1rem;
+
+  div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
+    bottom: 0 !important;
+
+    span[class="swiper-pagination-bullet"] {
+      // width: 8px !important;
+      // height: 8px !important;
+      width: 4px !important;
+      height: 4px !important;
+      border: 3px solid #707070 !important;
+      background: transparent !important;
+      // border: 1px solid #2b2c2d !important;
+      opacity: 1 !important;
+    }
+
+    span[class="swiper-pagination-bullet swiper-pagination-bullet-active"] {
+      width: 6px !important;
+      height: 6px !important;
+      background: #2b2c2d !important;
+    }
+  }
+
+  & div[aria-label="Next slide"],
+  & div[aria-label="Previous slide"] {
+    height: calc(100% - 65px);
+    top: 60px;
+    position: absolute;
+    cursor: unset !important;
+
+    &:after {
+      opacity: 0;
+      height: 100%;
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
+.swiperMode {
+  padding-top: 1.8rem;
+}
+
+.swiperSlide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //width: 242px !important;
+}
+
+.numbersWrapper {
+
+}
+
+.regular {
+
+}
+
+.swiper_button_next,
+.swiper_button_prev,
+.swiper_button_prev .swiper-button-disabled,
+.swiper_button_next .swiper-button-disabled {
+  display: none;
+}
+
+@media (min-width: $width-mobile-pre-md) {
+  .swiper {
+    padding-bottom: 2.8rem;
+  }  
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .swiper {
+    min-width: 320px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .numbersWrapper {
+    position: absolute;
+    top: calc(50% - 52px);
+    left: -31px;
+    display: flex;
+    flex-direction: column;
+    //min-width: 57px;
+  }
+
+  @mixin pinParams{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-bottom: 9px;
+  }
+
+  .regular {
+    @include pinParams;
+    background-color: rgba(0, 0, 0, 0.17);
+
+    &__selected {
+      @include pinParams;
+      background-color: rgb(0, 0, 0);
+    }
+  }
+
+}
+
+@media (min-width: $width-desktop-lg) {
+
+  .numbersWrapper {
+    position: absolute;
+    top: calc(50% - 52px);
+    left: 10px;
+  }
+
+  @mixin swiperButton {
+    position: relative;
+    display: block;
+    min-width: 52px;
+    width: 52px;
+    height: 52px;
+    margin: auto 0;
+    //top: -15px;
+    bottom: -300px;
+    border-radius: 50%;
+    border: none;
+    background-repeat: no-repeat;
+    background-size: 52px 52px;
+    background-position: center center;
+    background-color: transparent !important;
+    cursor: pointer;
+    transition: 0.4s;
+
+  }
+
+  .swiper_button_prev {
+    @include swiperButton;
+
+    left: calc( 50% - 74px );
+    background-image: url('../../img/backBtnTablet.svg');
+
+    &:disabled {
+      opacity: 0.5;
+    }
+
+    &:hover {
+      background-image: url('../../img/backBtnHover.svg');
+    }
+  }
+
+  .swiper_button_next {
+    @include swiperButton;
+
+    right: calc( 50% - 74px );
+    background-image: url('../../img/forwardBtnTablet.svg');
+
+    &:disabled {
+      opacity: 0.5;
+    }
+
+    &:hover {
+      background-image: url('../../img/forwardBtnHover.svg');
+    }
+  }
+}

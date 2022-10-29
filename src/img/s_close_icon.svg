@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+    <g id="кнопка_Закрыть" data-name="кнопка Закрыть" transform="translate(-276 -95)">
+        <g id="Эллипс_527" data-name="Эллипс 527" transform="translate(276 95)" fill="none" stroke="#6e6e6e" stroke-width="1">
+            <circle cx="15" cy="15" r="15" stroke="none"/>
+            <circle cx="15" cy="15" r="14.5" fill="none"/>
+        </g>
+        <line id="Линия_99" data-name="Линия 99" x1="9.938" y2="9.938" transform="translate(286.031 105.031)" fill="none" stroke="#6e6e6e" stroke-width="1"/>
+        <line id="Линия_100" data-name="Линия 100" x2="9.938" y2="9.938" transform="translate(286.031 105.031)" fill="none" stroke="#6e6e6e" stroke-width="1"/>
+    </g>
+</svg>

@@ -10,17 +10,17 @@ export const S_About = ({className, menuOnTop, data, width}) => {
 
 
     return (
-        <div className={cls}>
-            <div className={classes.frame}>
-                <div className={classes.bg_text}>
-                    О нас
+        <div className={classes.wrapRoot}>
+            <div className={cls}>
+                <div className={classes.frame}>
+                    <div className={classes.bg_text}>
+                        О нас
+                    </div>
+                    <div className={classes.title}>
+                        Девелопер
+                    </div>
+                    <C_ContentAbout data={data} />
                 </div>
-                <div className={classes.title}>
-                    Девелопер
-                </div>
-
-                <C_ContentAbout data={data} />
-
             </div>
         </div>
     )

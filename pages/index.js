@@ -10,9 +10,14 @@ import {S_Top_Commercial} from "../src/sections/s_Top_Сommercial";
 import {S_Projects} from "../src/sections/s_Projects";
 import {S_About} from "../src/sections/s_About";
 import {S_Sales} from "../src/sections/s_Sales";
+import {S_FullForm} from "../src/sections/s_FullForm";
+import {S_Popup} from "../src/sections/s_Popup";
+import classes from "../src/sections/s_Popup/style.module.scss";
+import {C_FullForm} from "../src/components/c_FullForm";
 import { S_Footer } from "../src/sections/s_Footer";
-import { S_Saving} from '../src/sections/s_Saving';
+import { S_Bottom_Commercial} from '../src/sections/s_Bottom_Commercial';
 import { S_PressCenter } from '../src/sections/s_PressCenter';
+import { convertCompilerOptionsFromJson } from 'typescript';
 
 export default function Home() {
     const [width, height] = useWindowSize();
@@ -59,7 +64,9 @@ export default function Home() {
         if (el && el.id) {
             return el.id === 2
         }
-     });
+    });
+    
+    const [isPopupClose, setIsPopupClose] = useState(true);
 
     const mocks = {
         pressCenter: [
@@ -126,21 +133,24 @@ export default function Home() {
                     </Head>
                     {/*TODO: googletagmanager 2 ? */}
                     {/*<noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7GL33F";height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>*/}
-
+                    
                     {data.length !== 0 ? (
                             <>
                                 <div className={"common_top_bg"}  ref={topMenuEl}>
-                                    <S_Menu menuOnTop={menuOnTop} data={mainPageData[0]} />
+                                    <S_Menu menuOnTop={menuOnTop} data={mainPageData[0]} setIsPopupClose={setIsPopupClose} />
+                                    <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
+                                        <C_FullForm data={mainPageData[0]} className={classes.fullFormIndexSection} />
+                                    </S_Popup>
                                     <S_Hero data={mainPageData[0]} />
                                     <S_Top_Commercial data={mainPageData[0]} />
+                                    <S_Projects data={mainPageData[0]} className={"projects-bg"} />
+                                    <S_About data={mainPageData[0]} width={width} />
+                                    <S_Sales data={mainPageData[0]} />
+                                    <S_FullForm data={mainPageData[0]} />
+                                    <S_Bottom_Commercial data={mainPageData[0]}/>
+                                    <S_PressCenter data={mainPageData[0]}/>
+                                    <S_Footer phone_number={mocks.contacts.phone} mail={mocks.contacts.mail} address={mocks.contacts.address} sales_number={mocks.contacts.sales} telegram={mocks.contacts.telegram} copyright={mocks.copyright} />
                                 </div>
-                                <S_Projects data={mainPageData[0]} />
-                                {/*<S_About data={mainPageData[0]} width={width} />*/}
-                                {/*<S_Sales data={mainPageData[0]} />*/}
-                                <S_Saving items={mocks.saving}/>
-                                <S_PressCenter items={mocks.pressCenter}/>
-                                <S_Footer phone_number={mocks.contacts.phone} mail={mocks.contacts.mail} address={mocks.contacts.address} 
-                                    sales_number={mocks.contacts.sales} telegram={mocks.contacts.telegram} copyright={mocks.copyright}/>
                             </>
                         ) : (
                             <div className="lds-grid-wrapper">

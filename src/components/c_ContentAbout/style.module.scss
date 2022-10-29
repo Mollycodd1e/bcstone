@@ -17,7 +17,7 @@
   .root {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 218px;
+    grid-template-rows: auto;
     width: 100%;
     grid-template-areas: "C_SliderVideoAbout C_TextContentAbout";
     padding-left: 85px;
