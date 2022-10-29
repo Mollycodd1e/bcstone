@@ -7,7 +7,7 @@
     display: inline-block;
     width: 100px;
     text-align: right;
-    padding: 0 10px 15px 0;
+    padding: 0 10px 10px 0;
     font-size: 12px;
     line-height: 12px;
     color: #BABABA;
@@ -65,6 +65,12 @@
     &:before {
       background-image: url("../../img/s_map_icon_active.png");
     }
+  }
+}
+
+@media (min-width: $width-mobile-pre-md) {
+  .root {
+    margin-bottom: 25px;
   }
 }
 

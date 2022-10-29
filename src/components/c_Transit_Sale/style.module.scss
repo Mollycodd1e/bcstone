@@ -26,6 +26,14 @@
     & .link {
       justify-self: flex-end;
     }
+
+    & .roundButton {
+      margin: 28px 0px 7px 33px;
+    }
+
+    .buttonText {
+      margin-left: 35px;
+    }
   }
 }
 
@@ -36,8 +44,9 @@
   background-size: 164px 215px;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 0 0 0 17px;
-  justify-self: flex-end;
+  margin: 0 0 0 44px;
+  justify-self: flex-start;
+  // justify-self: flex-end;
 }
 
 .link {
@@ -53,12 +62,13 @@
   font-size: 48px;
   line-height: 48px;
   font-weight: 800;
-  margin: -10px 0 0;
+  margin: -10px 20px 0 0;
+  letter-spacing: -1px;
   justify-self: flex-end;
 }
 
 .roundButton {
-  margin: 0 2px 7px 0;
+  margin: 39px 27px 7px 0;
 }
 
 .arrowButton {
@@ -71,7 +81,57 @@
   font-size: 15px;
   line-height: 15px;
   font-weight: 300;
+  margin-left: -20px;
   color: #C4C4C4;
+}
+
+@media (min-width: $width-mobile-pre-md) {
+  .root {
+    &.reverse {
+      & .picture {
+        margin: 0 0 0 2px;
+      }
+
+      & .roundButton {
+        margin: 26px 0 7px -5px;
+      }
+
+      & .title {
+        margin: -7px 0 0 3px;
+      }
+  
+      .buttonText {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .picture {
+    width: 191px;
+    height: 255px;
+    background-size: 191px 255px;
+    margin: 3px 0 0 39px;
+  }
+
+  .title {
+    justify-self: center;
+    font-size: 55px;
+    line-height: 59px;
+    margin: -14px 0px 0 29px;
+    letter-spacing: -0.03em;
+  }
+
+  .roundButton {
+    width: 60px;
+    height: 60px;
+    margin: 39px 25px 7px 0;
+  }
+
+  .buttonText {
+    font-size: 17px;
+    line-height: 18px;
+    margin-left: -30px;
+  }
 }
 
 @media (min-width: $width-tablet-md) {

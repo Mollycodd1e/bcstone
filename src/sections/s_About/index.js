@@ -19,9 +19,7 @@ export const S_About = ({className, menuOnTop, data, width}) => {
                     <div className={classes.title}>
                         Девелопер
                     </div>
-
                     <C_ContentAbout data={data} />
-
                 </div>
             </div>
         </div>

@@ -297,12 +297,12 @@ $existTimer: 2.5s;
   font-weight: bold;
   font-size: 14px;
   line-height: 15px;
-  margin: 0 0 13px 25px;
+  margin: 0 0 10px 25px;
 }
 
 .listInfo {
   grid-area: listInfo;
-  padding: 0 0 24px 13px;
+  padding: 0 0 23px 13px;
   margin: 0 0 0 25px;
 }
 
@@ -314,6 +314,55 @@ $existTimer: 2.5s;
 .mainButton {
   grid-area: mainButton;
   margin: 0 0 0 25px;
+}
+
+@media (min-width: $width-mobile-pre-md) {
+  .root {
+    padding: 13px 0 30px;
+  }
+
+  .titleHelper {
+    font-size: 13px;
+    line-height: 14px;
+    margin: 0 0 9px 25px;
+  }
+
+  .mainTitle {
+    width: 227px;
+    height: 49.5px;
+    background-size: 227px 49.5px;
+    margin: 0 0 22px 25px;
+  }
+
+  .listName {
+    font-size: 15px;
+    line-height: 16px;
+    margin: 0 0 11px 25px;
+  }
+
+  .listInfo {
+    padding: 0 0 17px 13px;
+  }
+
+  .item {
+    font-size: 13px;
+    line-height: 14px;
+    margin-bottom: 4px;
+  }
+
+  .interactiveBlock {
+    height: calc(67.1875vw);
+    margin-bottom: 0;
+  
+    &:before {
+      width: 86%;
+    }
+  
+    &:after {
+      bottom: 14px;
+      width: 86%;
+    }
+  }
 }
 
 @media (min-width: $width-tablet-md) {

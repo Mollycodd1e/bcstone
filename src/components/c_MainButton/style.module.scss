@@ -10,7 +10,7 @@ $time: 0.7s;
   cursor: pointer;
   border-width: 0;
   font-weight: normal;
-  padding: 10px 23px;
+  padding: 9px 22px;
   background-color: $color-dark-primary;
   border-radius: 21px;
   overflow: hidden;
@@ -78,6 +78,10 @@ $time: 0.7s;
   & .text {
     color: $color-dark-primary;
   }
+}
+
+@media (min-width: $width-mobile-pre-md) {
+
 }
 
 @media (min-width: $width-tablet-md) {

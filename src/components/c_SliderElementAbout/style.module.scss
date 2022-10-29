@@ -10,6 +10,13 @@
   background-size: cover;
 }
 
+@media (min-width: $width-mobile-pre-md) {
+  .root {
+    width: 274px;
+    height: 185px;
+  }
+}
+
 @media (min-width: $width-tablet-md) {
   .root {
     //min-width: 100%;

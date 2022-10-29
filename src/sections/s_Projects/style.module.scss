@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 0 10px -30px;
+  margin: 0 0 17px -30px;
 
   & span {
     //font-size: 49px;
@@ -84,7 +84,7 @@
   font-weight: 300;
   color: $color-card-text;
   grid-area: sub_title;
-  margin: 0 0 32px;
+  margin: 0 0 35px;
 
   & span {
     display: block;
@@ -101,11 +101,57 @@
 
 .CombineRegularCards {
   grid-area: SliderRegularCard;
-  margin-bottom: 23px;
+  margin-bottom: 19px;
 }
 
 .C_MainButton {
   grid-area: C_MainButton;
+}
+
+@media (min-width: $width-mobile-pre-md) {
+  .root {
+    padding-bottom: 40px;
+  }
+
+  .ProjectTitle {
+    margin: 0 0 14px -30px;
+
+    & .bg_text {
+      margin: 0 0 -15px -25px;
+    }
+  
+    & .wrap_title {
+      margin: 0 0 0 -35px;
+
+      & span:last-child {
+        margin: 0 0 0 100px;
+      }
+    }
+  
+    & .bg_text,
+    & .wrap_title {
+      font-size: 55px;
+      line-height: 48px;
+      letter-spacing: -1px;
+    }
+  }
+
+  .sub_title {
+    font-size: 18px;
+    line-height: 19px;
+    margin: 0 0 37px -5px;
+  
+    & span {
+      &:not(:last-of-type) {
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  .CombineRegularCards {
+    grid-area: SliderRegularCard;
+    margin-bottom: 19px;
+  }
 }
 
 @media (min-width: $width-mobile-md) {
