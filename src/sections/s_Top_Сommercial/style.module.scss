@@ -24,6 +24,17 @@
   }
 }
 
+@media (min-width: $width-tablet-sm) {
+  .root {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1250px;
+    margin: 6px 0 59px 0;
+    padding: 0 30px;
+  }
+}
+
 @media (min-width: $width-tablet-md) {
   .root {
     width: 100%;

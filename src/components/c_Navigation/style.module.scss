@@ -59,6 +59,55 @@ $menuTransition: .4s;
 
 }
 
+@media (min-width: $width-tablet-sm) {
+  .root {
+    min-height: unset !important;
+  }
+
+  .burger {
+    width: 38px;
+    height: 25px;
+    background-size: 38px 20px;
+    top: 0;
+    left: 13px;
+    //transition: left $menuTransition, top $menuTransition;
+    transition: unset;
+  }
+
+  .openBurger {
+    background-size: 12px 25px;
+    left: -136px;
+    top: -25px;
+  }
+
+  .elements {
+    top: -46px;
+    left: -533px;
+    width: 376px;
+    min-height: 100vh;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+    transition: left .5s ease-in-out;
+    padding: 83px 0 0 33px;
+  }
+
+  .showElements {
+    left: -154px;
+  }
+
+  .C_Logo {
+    width: 92px !important;
+    height: 39px !important;
+    background-size: 92px 39px !important;
+  }
+
+  .C_MainButton {
+    //padding: 0;
+    font-size: 21px;
+    line-height: 22px;
+  }
+}
+
 @media (min-width: $width-tablet-md) {
   .root {
     min-height: unset !important;

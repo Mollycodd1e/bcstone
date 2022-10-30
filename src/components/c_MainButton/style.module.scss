@@ -84,6 +84,35 @@ $time: 0.7s;
 
 }
 
+@media (min-width: $width-tablet-sm) {
+  .root {
+    padding: 10px 37px;
+
+    & .text {
+     font-size: 15px;
+     line-height: 16px;
+    }
+
+    & .span {
+      display: none;
+    }
+  }
+
+  .mode {
+    font-size: 15px;
+    line-height: 16px;
+    text-decoration: underline;
+    background-color: unset;
+    padding: 0;
+
+
+    & .text {
+      font-size: 15px;
+      line-height: 16px;
+    }
+  }
+}
+
 @media (min-width: $width-tablet-md) {
   .root {
     padding: 12px 40px;

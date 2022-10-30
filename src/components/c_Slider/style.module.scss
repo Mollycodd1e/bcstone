@@ -83,19 +83,6 @@
   transition: 3s;
 }
 
-@keyframes Jumpin {
-  0% { opacity: 0; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
- }
-
- // Sass loop code
- @for $i from 0 through 10 {
-  .swiperShow div[class="swiper-wrapper"] div:nth-child(#{$i}) {
-   animation: Jumpin #{$i * 0.75}s cubic-bezier(.9,.03,.69,.22);
-  }
- }
-
 .swiperSlide {
   display: flex;
   align-items: center;
@@ -236,6 +223,18 @@
 
     div[class="swiper-wrapper"] {
       margin-left: -303px;
+    }
+  }
+
+  @keyframes Jumpin {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @for $i from 0 through 10 {
+    .swiperShow div[class="swiper-wrapper"] div:nth-child(#{$i}) {
+      animation: Jumpin #{$i * 0.75}s cubic-bezier(.9,.03,.69,.22);
     }
   }
 }

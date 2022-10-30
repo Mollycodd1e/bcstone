@@ -365,11 +365,11 @@ $existTimer: 2.5s;
   }
 }
 
-@media (min-width: $width-tablet-md) {
+@media (min-width: $width-tablet-sm) {
   .root {
-    padding: 33px 23px 0 100px;
-    grid-template-rows: 12px 114px 67px 121px 1fr;
-    grid-template-columns: 345px 1fr;
+    padding: 50px 23px 0 80px;
+    grid-template-rows: 12px 114px 67px 121px 103px;
+    grid-template-columns: 310px 1fr;
     grid-template-areas:  'titleHelper interactiveBlock'
                           'mainTitle interactiveBlock'
                           'listName interactiveBlock'
@@ -382,8 +382,8 @@ $existTimer: 2.5s;
   }
 
   .titleHelper {
-    font-size: 11px;
-    line-height: 12px;
+    font-size: 13px;
+    line-height: 14px;
     margin: 0;
 
     animation-duration: $animationDurationHero;
@@ -393,32 +393,33 @@ $existTimer: 2.5s;
 
   .mainTitle {
     position: relative;
-    top: 0;
+    top: -4px;
+    left: -3px;
     margin: 0;
-    width: 345px;
-    height: 106px;
-    background-size: 345px 106px;
+    width: 288px;
+    height: 98px;
+    background-size: 288px 98px;
     animation-duration: $animationDurationHero;
     animation-name: helperAnimaTitle;
   }
 
   .listName {
-    margin: 0;
-    font-size: 17px;
-    line-height: 23px;
+    margin: -4px 0 0 0;
+    font-size: 15px;
+    line-height: 21px;
     position: relative;
 
     &:after {
       position: absolute;
-      right: 46px;
-      top: -126px;
+      right: 71px;
+      top: -123px;
       content: '';
-      width: 98px;
+      width: 70px;
       height: 10px;
       background-image: url('../../img/s_hero_decor_2.svg');
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 98px 10px;
+      background-size: 70px 10px;
       display: block;
       animation-duration: $animationDurationHero;
       animation-name: helperAnimaAfter;
@@ -426,20 +427,22 @@ $existTimer: 2.5s;
   }
 
   .listInfo {
-    margin: 0 0 30px 0;
+    margin: -3px 0 30px 0;
+    padding: 0 0 0 17px;
   }
 
   .item {
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 15px;
+    line-height: 16px;
+    padding-left: 5px;
 
     &:not(:last-child) {
-      margin-bottom: 8px;
+      margin-bottom: 9px;
     }
   }
 
   .mainButton {
-    margin: 0 0 60px 0;
+    margin: 0 0 60px 2px;
     align-self: end;
   }
 
@@ -447,6 +450,8 @@ $existTimer: 2.5s;
     width: 100%;
     height: calc(37.5vw);
     margin: 0;
+    top: 36px;
+    left: 6px;
 
     &:before {
       content: none;
@@ -458,12 +463,13 @@ $existTimer: 2.5s;
   }
 
   @mixin tabletPicStyles {
-    background-position: 50% 100%;
+    background-position: 93% 100%;
     background-size: auto 100%;
   }
 
   .btmPic {
     @include tabletPicStyles;
+    margin-bottom: -30px;
   }
 
   .topPic {
@@ -486,6 +492,113 @@ $existTimer: 2.5s;
       height: 100px;
     }
   }
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    padding: 33px 23px 0 100px;
+    grid-template-columns: 345px 1fr;
+  }
+
+  .titleHelper {
+    font-size: 11px;
+    line-height: 12px;
+    margin: 0;
+  }
+
+  .mainTitle {
+    // position: relative;
+    top: 0;
+    margin: 0;
+    width: 345px;
+    height: 106px;
+    background-size: 345px 106px;
+  }
+
+  .listName {
+    margin: 0;
+    font-size: 17px;
+    line-height: 23px;
+    // position: relative;
+
+    &:after {
+      // position: absolute;
+      right: 46px;
+      top: -126px;
+      // content: '';
+      width: 98px;
+      height: 10px;
+      // background-image: url('../../img/s_hero_decor_2.svg');
+      // background-repeat: no-repeat;
+      // background-position: center;
+      background-size: 98px 10px;
+      // display: block;
+      // animation-duration: $animationDurationHero;
+      // animation-name: helperAnimaAfter;
+    }
+  }
+
+  // .listInfo {
+  //   margin: 0 0 30px 0;
+  // }
+
+  .item {
+    font-size: 16px;
+    line-height: 18px;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  .mainButton {
+    margin: 0 0 60px 0;
+    align-self: end;
+  }
+
+  // .interactiveBlock {
+  //   width: 100%;
+  //   // height: calc(37.5vw);
+  //   // margin: 0;
+
+  //   &:before {
+  //     content: none;
+  //   }
+
+  //   &:after {
+  //     content: none;
+  //   }
+  // }
+
+  // @mixin tabletPicStyles {
+  //   background-position: 50% 100%;
+  //   background-size: auto 100%;
+  // }
+
+  // .btmPic {
+  //   @include tabletPicStyles;
+  // }
+
+  // .topPic {
+  //   @include tabletPicStyles;
+  // }
+
+  // .hover {
+  //   &:before {
+  //     width: 86px;
+  //     height: 86px;
+  //     background-size: 42px 42px;
+  //     animation: pulseTablet $existTimer linear infinite;
+  //   }
+
+  //   &:after {
+  //     transform: translate(-21%, -20%);
+  //     animation: moveTablet $existTimer ease-out;
+  //     background-size: 111px 121px;
+  //     width: 100px;
+  //     height: 100px;
+  //   }
+  // }
 }
 
 @media (min-width: $width-desktop-lg) {

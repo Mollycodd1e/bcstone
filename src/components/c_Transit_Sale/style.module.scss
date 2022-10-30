@@ -45,8 +45,7 @@
   background-position: center;
   background-repeat: no-repeat;
   margin: 0 0 0 44px;
-  justify-self: flex-start;
-  // justify-self: flex-end;
+  justify-self: flex-end;
 }
 
 .link {
@@ -89,48 +88,49 @@
   .root {
     &.reverse {
       & .picture {
-        margin: 0 0 0 2px;
+        margin: 0 0 0 19px;
       }
 
       & .roundButton {
-        margin: 26px 0 7px -5px;
+        margin: 27px 0 0 14px;
       }
 
       & .title {
-        margin: -7px 0 0 3px;
+        margin: -7px 0 0 23px;
       }
   
       .buttonText {
-        margin-left: 20px;
+        margin-left: 0;
+        margin-right: -12px;
       }
     }
   }
 
   .picture {
+
     width: 191px;
     height: 255px;
     background-size: 191px 255px;
-    margin: 3px 0 0 39px;
+    margin: 4px 23px 0 -20px;
   }
 
   .title {
-    justify-self: center;
     font-size: 55px;
     line-height: 59px;
-    margin: -14px 0px 0 29px;
+    margin: -16px 10px 0 -30px;
     letter-spacing: -0.03em;
   }
 
   .roundButton {
     width: 60px;
     height: 60px;
-    margin: 39px 25px 7px 0;
+    margin: 39px -9px 0 0;
   }
 
   .buttonText {
     font-size: 17px;
     line-height: 18px;
-    margin-left: -30px;
+    margin: 5px -40px 0 -30px;
   }
 }
 

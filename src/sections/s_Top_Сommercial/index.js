@@ -10,7 +10,7 @@ export const S_Top_Commercial = ({className, data}) => {
     const data_2 = data.top_commercial;
     const cls = classNames(classes.root, {[className]: className });
     const [width, height] = useContext(Context);
-    const isTablet = width >= sizes.widthTabletMd;
+    const isTablet = width >= sizes.widthTabletSm;
     let cuttedElements = data_2 && data_2.list.length !==0 && data_2.list.slice(0, data_2.config.shownElements);
     cuttedElements.sort(function (a, b) {
         return a.order - b.order;
