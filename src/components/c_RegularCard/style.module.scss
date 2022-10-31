@@ -22,6 +22,7 @@ $widthPic_desk: 439px;
 $widthPic_desk_map: 324px;
 
 $heightPic_tab: 201px;
+$heightPic_tabSm: 210px;
 $heightPic_desk: 262px;
 $heightPic_desk_map: 193px;
 
@@ -106,6 +107,21 @@ $pos: -12px;
     $paddingCard: $paddingCard_tab_desk,
     $widthPic: $widthPic_tab,
     $heightPic: $heightPic_tab,
+    $heightLogo: $heightLogo_tab,
+    $listTemplateColumns: $listTemplateColumns_tab_desk,
+    $listTemplateColumnsGap: $listTemplateColumnsGap_tab_desk,
+    $listTemplateRows: $listTemplateRows_tab_desk,
+    $listTemplateAreas: $listTemplateAreas_threeRows,
+  );
+}
+
+@mixin tabSm_card {
+  @include card($widthCard: $widthCard_tab,
+    $heightCard: $heightCard_tab,
+    $borderRadius: $borderRadius_tab,
+    $paddingCard: $paddingCard_tab_desk,
+    $widthPic: $widthPic_tab,
+    $heightPic: $heightPic_tabSm,
     $heightLogo: $heightLogo_tab,
     $listTemplateColumns: $listTemplateColumns_tab_desk,
     $listTemplateColumnsGap: $listTemplateColumnsGap_tab_desk,
@@ -199,6 +215,11 @@ $pos: -12px;
   align-self: flex-start;
 }
 
+@media (min-width: $width-tablet-sm) {
+  .root{
+    @include tabSm_card;
+  }
+}
 
 @media (min-width: $width-tablet-md) {
   .root{

@@ -5,6 +5,7 @@ import classNames from "classnames";
 import { C_Slider } from "../../components/c_Slider";
 import { C_PressCard } from "../../components/c_PressCard";
 import { C_MainButton } from "../../components/c_MainButton";
+import {sizes} from "../../data/sizes";
 
 export const S_PressCenter = ({className, data}) => {
     
@@ -35,12 +36,12 @@ export const S_PressCenter = ({className, data}) => {
                 </div>
                 <div className={classes.sliderWrapper}>
                   <C_Slider className={classes.pressing} items={allCards} initialSlide={0} slidersSpaceBetween={
-                        window.innerWidth < 768 ? -255 :
-                        (window.innerWidth >= 1000 && window.innerWidth < 1200) ? -513 :
-                        (window.innerWidth >= 1200 && window.innerWidth < 1440) ? -520 :
-                        (window.innerWidth >= 1440 && window.innerWidth < 1600) ? 15 :
-                        (window.innerWidth >= 1600 && window.innerWidth < 1920) ? -30 :
-                         window.innerWidth >= 1920 ? 0 : -170}
+                        window.innerWidth < sizes.widthTabletSm ? -255 :
+                        (window.innerWidth >= sizes.widthTabletMd && window.innerWidth < sizes.widthNotebook) ? -513 :
+                        (window.innerWidth >= sizes.widthNotebook && window.innerWidth < sizes.widthDesktopSm) ? -520 :
+                        (window.innerWidth >= sizes.widthDesktopSm && window.innerWidth < sizes.widthDesktopMd) ? 15 :
+                        (window.innerWidth >= sizes.widthDesktopMd && window.innerWidth < sizes.widthDesktopLg) ? -30 :
+                         window.innerWidth >= sizes.widthDesktopLg ? 0 : -170}
                         slidesPerView = {3} press={true}/>
                 </div>
                 {/* <div className={classes.btnWrapper}>

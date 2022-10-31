@@ -199,7 +199,69 @@
     }
   }
 }
+@media (min-width: $width-tablet-sm) {
+  .root {
+    border: 1px solid #707070;
+    border-radius: 20px;
+    margin: 40px 30px 40px;
+    padding-bottom: 39px !important;
+  }
 
+  .ProjectTitle {
+    margin: 52px -22px 8px 0;
+
+    & .bg_text,
+    & .wrap_title {
+      font-size: 65px;
+      line-height: 65px;
+      letter-spacing: -0.03em;
+    }
+
+    & .wrap_title {
+      margin: 0 !important;
+    }
+
+    & .bg_text {
+      margin: 0 0 -29px -318px !important;
+    }
+  }
+
+  .sub_title {
+    & span {
+      font-size: 20px;
+      line-height: 21px;
+      margin: 0 0 26px -3px;
+      letter-spacing: -0.1px;
+    }
+  }
+
+  .mapView {
+    width: calc(100vw - 60px);
+    //padding: 0 48px 0;
+  }
+
+  .RegularMap {
+    margin-bottom: 50px;
+  }
+  .root .C_MainButton {
+    position: relative;
+    overflow: visible;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 601px;
+      margin-left: -394px;
+      height: 56px;
+      background-image: url('../../img/business-line-768.png');
+      background-repeat: no-repeat;
+      background-size: 601px 17px;
+      background-position: 0 0;
+      z-index: 20;
+      pointer-events: none;
+    }
+  }
+}
 
 @media (min-width: $width-tablet-md) {
   .root {
@@ -208,7 +270,6 @@
     margin: 88px 66px 40px;
     padding-bottom: 40px !important;
   }
-
 
   .ProjectTitle {
     margin: 50px 0 43px -30px;

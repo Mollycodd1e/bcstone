@@ -89,6 +89,21 @@
   }
 }
 
+@media(min-width: $width-tablet-sm) {
+  .root {
+    margin: 35px 0 0 0;
+    padding: 0 0 0 25.5px;
+  }
+
+  .list {
+    margin: 14px 0 0 0;
+    padding: 0 0 0 27px;
+  }
+
+  .item {
+    padding: 4.7px 11px 2px;
+  }
+}
 //
 //.title, .list {
 //  padding-left: 3.1rem;
