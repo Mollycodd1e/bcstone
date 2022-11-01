@@ -139,7 +139,7 @@ export default function Home() {
                                 <div className={"common_top_bg"}  ref={topMenuEl}>
                                     <S_Menu menuOnTop={menuOnTop} data={mainPageData[0]} setIsPopupClose={setIsPopupClose} />
                                     <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
-                                        <C_FullForm data={mainPageData[0]} className={classes.fullFormIndexSection} />
+                                        <C_FullForm data={mainPageData[0]} className={classes.fullFormIndexSection} popup={true}/>
                                     </S_Popup>
                                     <S_Hero data={mainPageData[0]} />
                                     <S_Top_Commercial data={mainPageData[0]} />

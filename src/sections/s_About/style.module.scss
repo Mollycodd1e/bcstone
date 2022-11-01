@@ -102,6 +102,7 @@
   }
 
   .frame {
+    position: relative;
     border-radius: 20px;
     padding-bottom: 89px;
     padding-top: 53px;
@@ -120,6 +121,32 @@
     & .bg_text {
       margin: 0 0 -27px -399px;
       letter-spacing: -0.03em;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 171px;
+      height: 78px;
+      background-image: url('../../img/develop-arrow-768.png');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 171px 78px;
+      right: -8px;
+      top: 107px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 432px;
+      height: 16px;
+      background-image: url('../../img/develop-line-768.png');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 432px 16px;
+      right: -110px;
+      bottom: 34px;
     }
   }
 }

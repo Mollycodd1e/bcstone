@@ -36,6 +36,7 @@
   right: 20px;
   top: calc(50% - 215px);
   cursor: pointer;
+  z-index: 10;
 }
 
 .closePopup {
@@ -45,6 +46,26 @@
 .fullFormIndexSection {
   & > div {
     border-radius: 15px;
+  }
+}
+
+@media (min-width: $width-tablet-sm) {
+  .root {
+
+  }
+
+  .closeIcon {
+    width: 30px;
+    height: 30px;
+    background-size: 52px 52px;
+    right: 54px;
+    top: calc(50% - 200px);
+  }
+
+  .fullFormIndexSection {
+    & > div {
+      border-radius: 20px;
+    }
   }
 }
 

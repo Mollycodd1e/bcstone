@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import classes from './style.module.scss';
 import {useState} from "react";
 
-export const C_FullForm = ({className, data}) => {
+export const C_FullForm = ({className, data, popup}) => {
     const cls = classNames(classes.root, {[className]: className});
     const {description, descriptionSuccess, title, titleSuccess} = data.main_form;
 
@@ -224,7 +224,7 @@ export const C_FullForm = ({className, data}) => {
                         >
                             <input
                                 className={classNames('visually-hidden', classes.checkboxInput)}
-                                id={"agreed"}
+                                id={popup ? "agreed" : "agreed1"}
                                 type="checkbox"
                                 checked={isCheckValid}
                                 onChange={() => {
@@ -233,7 +233,7 @@ export const C_FullForm = ({className, data}) => {
                             />
                             <label
                                 className={classes.checkboxLabel}
-                                htmlFor="agreed"
+                                htmlFor={popup ? "agreed" : "agreed1"}
                             >Я согласен с обработкой персональных данных</label>
                         </div>
                     </div>

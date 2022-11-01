@@ -17,7 +17,7 @@
   height: auto;
   margin: 0;
   position: relative;
-  padding-bottom: 5.7rem;
+  padding-bottom: 2.1rem;
 
   div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
     bottom: 0 !important;
@@ -105,6 +105,10 @@
 }
 
 @media (min-width: $width-tablet-sm) {
+  .swiper {
+    padding-bottom: 5.7rem;
+  }
+
   .swiperSaving,
   .swiperPress {
     height: 100%;

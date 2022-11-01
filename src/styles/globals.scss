@@ -45,6 +45,7 @@ img {
   align-items: center;
   width: 100%;
   background: radial-gradient(#fff 0%, #808080 300%);
+  overflow: hidden;
 }
 
 .visually-hidden:not(:focus):not(:active),
