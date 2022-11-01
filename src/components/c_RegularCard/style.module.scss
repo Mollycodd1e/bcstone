@@ -39,6 +39,7 @@ $listTemplateRows_tab_desk: repeat(3, auto);
 $listTemplateAreas_threeRows: "cardInfoEl1 cardInfoEl2" "cardInfoEl3 cardInfoEl3" "cardInfoEl4 cardInfoEl4";
 
 $faceBtm: -22px;
+$faceBtmTabletSm: -21px;
 $pos: -12px;
 
 @mixin card($widthCard: 242px,
@@ -200,7 +201,7 @@ $pos: -12px;
 
 .CardBtn {
   position: absolute;
-  bottom: $faceBtm;
+  bottom: $faceBtmTabletSm;
   height: 100px !important;
 }
 
@@ -218,6 +219,14 @@ $pos: -12px;
 @media (min-width: $width-tablet-sm) {
   .root{
     @include tabSm_card;
+  }
+
+  .С_CardFace div {
+    border-radius: 15px;
+  }
+
+  .CardBtn {
+    bottom: -21px;
   }
 }
 

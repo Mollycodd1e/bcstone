@@ -107,7 +107,6 @@
   }
 
   .picture {
-
     width: 191px;
     height: 255px;
     background-size: 191px 255px;
@@ -131,6 +130,73 @@
     font-size: 17px;
     line-height: 18px;
     margin: 5px -40px 0 -30px;
+  }
+}
+
+@media (min-width: $width-tablet-sm) {
+  .root {
+    padding: 35px 0 37px;
+    
+    &.reverse {
+      & .picture {
+        margin: 0;
+      }
+
+      & .roundButton {
+        position: relative;
+        left: -15px;
+        margin: 0 -50px 0 -50px ;
+      }
+
+      & .buttonText {
+        position: relative;
+        left: -15px;
+        bottom: -3px;
+        margin: 0;
+      }
+
+      & .title {
+        justify-self: center;
+        margin: 0;
+      }
+
+      & .link {
+        margin: 0 0 0 -30px;
+      }
+    }
+  }
+
+  .picture {
+    width: 168px;
+    height: 219px;
+    background-size: 168px 219px;
+    margin: 0 0 0 -20px;
+  }
+
+  .title {
+    justify-self: center;
+    font-size: 45px;
+    line-height: 48px;
+    margin: 0;
+  }
+
+  .link {
+    margin: 5px 15px 0 15px;
+  }
+
+  .buttonText {
+    position: relative;
+    font-size: 15px;
+    line-height: 16px;
+    margin: 0;
+    left: 2px;
+    bottom: -5px;
+  }
+
+  .roundButton {
+    width: 52px;
+    height: 52px;
+    margin: -10px 0 0 0;
   }
 }
 

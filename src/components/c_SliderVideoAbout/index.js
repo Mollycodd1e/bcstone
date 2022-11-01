@@ -44,7 +44,7 @@ export const C_SliderVideoAbout = ({className, data}) => {
                     isBtnClose={false}
                     items={elements}
                     initialSlide={0}
-                    slidesPerView={width < sizes.widthTabletMd ? 3 : 1}
+                    slidesPerView={width < sizes.widthTabletSm ? 3 : 1}
                     slidersSpaceBetween={0}
                     loop={width < sizes.widthDesktopLg}
                     />

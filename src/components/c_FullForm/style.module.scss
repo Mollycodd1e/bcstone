@@ -225,6 +225,119 @@
   }
 }
 
+@media (min-width: $width-tablet-sm) {
+  .root {
+    padding: 10px 30px 14px 30px;
+  }
+
+  .wrapper_frame {
+    border-radius: 20px;
+  }
+
+  .frame {
+    padding: 57px 62px 57px 53px;
+    display: grid;
+    //grid-template-columns: minmax(322px, 465px) 390px;
+    grid-template-rows: 1fr;
+    grid-template-areas: "titles fields";
+    grid-column-gap: 58px;
+    justify-content: center;
+    position: unset;
+  }
+
+  .titles {
+    grid-area: titles;
+    flex-direction: column-reverse;
+    position: unset;
+  }
+
+  .fields {
+    grid-area: fields;
+    padding: 64px 0 0;
+    //padding: calc(1089px - 100vw) 0 0;
+    //width: 388px;
+    width: 100%;
+    max-width: unset;
+    position: unset;
+  }
+
+  .title {
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: unset;
+    margin: 0 5px 0 auto;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+
+  .wrapperInputCommon {
+    margin-bottom: 21px !important;
+  }
+
+  .inputCommon {
+    border-radius: 21.5px;
+    padding: 9px 10px 8px 38px;
+    font-size: 15px;
+    line-height: 16px;
+    width: 100%;
+
+    &::placeholder {
+      font-size: 15px;
+      line-height: 16px;
+    }
+  }
+
+  .checkboxWrapper {
+    padding-left: 25px;
+  }
+
+  .checkboxLabel {
+    font-size: 12px;
+    line-height: 12px;
+    color: #707070;
+
+    &:before {
+      content: "";
+      left: -25px;
+      top: -2px;
+      width: 17.02px;
+      height: 17.02px;
+    }
+  }
+
+  .checkboxInput {
+    &:checked {
+      & + .checkboxLabel {
+        &:after {
+          top: 1px;
+          left: -22px;
+          width: 11px;
+          height: 11px;
+        }
+      }
+    }
+  }
+
+  .button {
+    font-size: 15px;
+    line-height: 16px;
+    border-radius: 21.5px;
+    padding: 10px 38px 10px 38px;
+    margin: 0 0 28px 0;
+  }
+
+  .errorMessage {
+    bottom: -21px;
+    left: 46px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
 @media (min-width: $width-tablet-md) {
   .root {
     padding: 0 50px;

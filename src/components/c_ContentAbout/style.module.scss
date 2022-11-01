@@ -12,17 +12,23 @@
   grid-area: C_TextContentAbout;
 }
 
-
-@media (min-width: $width-tablet-md) {
+@media (min-width: $width-tablet-sm) {
   .root {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto;
     width: 100%;
     grid-template-areas: "C_SliderVideoAbout C_TextContentAbout";
+    padding-left: 9px;
+    justify-content: center;
+    grid-column-gap: 25px;
+  }
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
     padding-left: 85px;
     //justify-items: center;
-    justify-content: center;
     grid-column-gap: 80px;
   }
 }

@@ -59,9 +59,36 @@
   }
 }
 
-@media (min-width: $width-tablet-md) {
+@media (min-width: $width-tablet-sm) {
   .root {
     align-items: flex-start;
+    padding: 10px 0 0 12px;
+  }
+
+  .stoneHedgeLogo {
+    width: 219px;
+    height: 22px;
+    background-size: 219px 22px;
+    margin-bottom: 13px;
+  }
+
+  .description {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 14px;
+    text-align: left;
+    margin-bottom: 23px;
+  }
+
+  .plans {
+    font-size: 13px;
+    line-height: 14px;
+    text-align: left;
+  }
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
     padding: 0;
   }
 
@@ -72,16 +99,8 @@
   }
 
   .description {
-    font-weight: normal;
     font-size: 12px;
     line-height: 13px;
-    text-align: left;
-  }
-
-  .plans {
-    font-size: 13px;
-    line-height: 14px;
-    text-align: left;
   }
 }
 

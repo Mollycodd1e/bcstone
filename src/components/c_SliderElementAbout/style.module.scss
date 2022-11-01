@@ -17,7 +17,7 @@
   }
 }
 
-@media (min-width: $width-tablet-md) {
+@media (min-width: $width-tablet-sm) {
   .root {
     //min-width: 100%;
     //min-height: 218px;
@@ -26,6 +26,9 @@
     height: 100%;
     border-radius: unset;
   }
+}
+
+@media (min-width: $width-tablet-md) {
 }
 
 @media (min-width: $width-desktop-lg) {

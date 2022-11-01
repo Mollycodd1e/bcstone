@@ -28,6 +28,33 @@
   }
 }
 
+@media (min-width: $width-tablet-sm) {
+  .root {
+    padding: 30px 30px;
+  }
+
+  .wrapper {
+    border-radius: 20px;
+    border: 1px solid #707070;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 133px;
+    justify-content: center;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 78.3%;
+      width: 1px;
+      background-color: #2C2D2D;
+      top: 10%;
+      left: 50%;
+    }
+  }
+}
+
 @media (min-width: $width-tablet-md) {
   .root {
     padding: 40px 50px;
