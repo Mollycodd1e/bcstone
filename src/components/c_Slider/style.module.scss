@@ -90,6 +90,11 @@
   //width: 242px !important;
 }
 
+.swiperSlide button {
+  display: none;
+}
+
+
 @media (min-width: $width-mobile-pre-md) {
   .swiperSaving  {    
     div[class="swiper-wrapper"] {

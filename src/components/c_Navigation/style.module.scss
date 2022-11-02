@@ -23,6 +23,7 @@ $menuTransition: .4s;
 }
 
 .openBurger {
+  left: 25px;
   background-size: 9px 18px;
   background-image: url("../../img/s_burger_open.svg");
 }
@@ -55,8 +56,10 @@ $menuTransition: .4s;
 .C_Nav_List {
 
 }
-.C_MainButton {
 
+.C_MainButton span {
+  font-size: 16px;
+  line-height: 18px;
 }
 
 @media (min-width: $width-tablet-sm) {

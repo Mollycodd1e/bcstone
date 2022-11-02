@@ -11,6 +11,7 @@ import {C_SliderC} from "../c_SliderC";
 export const C_SliderVideoAbout = ({className, data}) => {
     const cls = classNames(classes.root, {[className]: className});
     const [width, height] = useContext(Context);
+
     const {slider, video} = data.about_company.variableContent;
 
     const divBlock = useRef(null);
@@ -45,7 +46,7 @@ export const C_SliderVideoAbout = ({className, data}) => {
                     items={elements}
                     initialSlide={0}
                     slidesPerView={width < sizes.widthTabletSm ? 3 : 1}
-                    slidersSpaceBetween={0}
+                    slidersSpaceBetween={width < sizes.widthMobilePreMd ? -215 : 0}
                     loop={width < sizes.widthDesktopLg}
                     />
                 : <div>video</div>
