@@ -118,9 +118,10 @@ $menuTransition: .4s;
 
   .burger {
     width: 47px;
-    height: 25px;
-    background-size: 47px 20px;
-    top: 0;
+    height: 24px;
+    background-size: 47px 24px;
+    top: -3px;
+    left: 36px;
     //transition: left $menuTransition, top $menuTransition;
     transition: unset;
   }

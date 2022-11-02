@@ -496,29 +496,30 @@ $existTimer: 2.5s;
 
 @media (min-width: $width-tablet-md) {
   .root {
-    padding: 33px 23px 0 100px;
+    padding: 39px 23px 0 100px;
     grid-template-columns: 345px 1fr;
   }
 
   .titleHelper {
     font-size: 11px;
     line-height: 12px;
-    margin: 0;
+    margin: 0 0 0 8px;
   }
 
   .mainTitle {
     // position: relative;
     top: 0;
-    margin: 0;
-    width: 345px;
+    margin: -5px 0 0 7px;
+    width: 335px;
     height: 106px;
-    background-size: 345px 106px;
+    background-size: 335px 106px;
   }
 
   .listName {
     margin: 0;
     font-size: 17px;
     line-height: 23px;
+    margin-top: 2px;
     // position: relative;
 
     &:after {
@@ -541,34 +542,40 @@ $existTimer: 2.5s;
   // .listInfo {
   //   margin: 0 0 30px 0;
   // }
+  .listInfo {
+    margin: 3px 0 0 0;
+    padding: 0 0 0 22px;
+  }
 
   .item {
     font-size: 16px;
     line-height: 18px;
 
     &:not(:last-child) {
-      margin-bottom: 8px;
+      margin-bottom: 7px;
     }
   }
 
   .mainButton {
-    margin: 0 0 60px 0;
-    align-self: end;
+    margin: 4px 0 60px 0;
+    align-self: unset;
   }
 
-  // .interactiveBlock {
-  //   width: 100%;
-  //   // height: calc(37.5vw);
-  //   // margin: 0;
+  .interactiveBlock {
+    width: 100%;
+    height: calc(39.5vw);
+    margin: 0;
+    top: unset;
+    left: unset;
 
-  //   &:before {
-  //     content: none;
-  //   }
+    &:before {
+      content: none;
+    }
 
-  //   &:after {
-  //     content: none;
-  //   }
-  // }
+    &:after {
+      content: none;
+    }
+  }
 
   // @mixin tabletPicStyles {
   //   background-position: 50% 100%;

@@ -99,13 +99,15 @@
 @media (min-width: $width-tablet-sm) {
   .root {
     padding: 0 30px;
+    overflow: hidden;
   }
 
   .frame {
     position: relative;
     border-radius: 20px;
-    padding-bottom: 89px;
-    padding-top: 53px;
+    padding: 53px 0 89px 0;
+    // padding-bottom: 89px;
+    // padding-top: 53px;
 
     & .bg_text,
     & .title {
@@ -154,13 +156,14 @@
 @media (min-width: $width-tablet-md) {
   .root {
     //padding-top: 40px;
-    padding: 0 50px;
+    padding: 0 52px;
   }
 
   .frame {
     //margin: 50px 0 43px -30px;
     //margin: 0 66px;
-    padding-bottom: 101px;
+    padding: 43px 0 101px 0;
+    // padding-bottom: 101px;
 
     & .bg_text,
     & .title {
@@ -169,11 +172,11 @@
     }
 
     & .title {
-      margin: 0 0 57px 0 !important;
+      margin: 11px 0 59px -90px !important;
     }
 
     & .bg_text {
-      margin: 0 0 -50px -340px;
+      margin: 0 0 -50px -435px;
     }
   }
 }

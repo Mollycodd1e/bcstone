@@ -15,6 +15,7 @@
   position: relative;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 
   &::before {
     position: absolute;
@@ -261,7 +262,6 @@
     grid-area: fields;
     padding: 64px 0 0;
     //padding: calc(1089px - 100vw) 0 0;
-    //width: 388px;
     width: 100%;
     max-width: unset;
     position: unset;
@@ -362,45 +362,28 @@
 
 @media (min-width: $width-tablet-md) {
   .root {
-    padding: 0 50px;
-  }
-
-  .wrapper_frame {
-    border-radius: 20px;
+    padding: 0 52px;
   }
 
   .frame {
-    padding: 86.2px 48px;
-    display: grid;
-    grid-template-columns: minmax(322px, 465px) 390px;
-    grid-template-rows: 1fr;
-    grid-template-areas: "titles fields";
-    grid-column-gap: 94px;
-    justify-content: center;
-    position: unset;
-  }
-
-  .titles {
-    grid-area: titles;
-    flex-direction: column-reverse;
-    position: unset;
+    padding: 86.2px 48px 87.2px;
+    grid-column-gap: 85px;
   }
 
   .fields {
-    grid-area: fields;
     //padding: 88px 0 0;
     padding: calc(1089px - 100vw) 0 0;
     //width: 388px;
-    width: 100%;
-    max-width: unset;
-    position: unset;
   }
 
   .title {
     font-size: 40px;
-    line-height: 42px;
-    letter-spacing: unset;
-    margin: 0 5px 0 auto;
+    line-height: 44px;
+
+    &::before {
+      bottom: -167px;
+      left: 120px;
+    }
   }
 
   .description {
@@ -437,7 +420,7 @@
 
     &:before {
       content: "";
-      left: -30px;
+      left: -28px;
       top: -2px;
       width: 17.02px;
       height: 17.02px;
@@ -449,7 +432,7 @@
       & + .checkboxLabel {
         &:after {
           top: 1px;
-          left: -27px;
+          left: -25px;
           width: 11px;
           height: 11px;
         }
@@ -461,8 +444,9 @@
     font-size: 18px;
     line-height: 19px;
     border-radius: 21.5px;
-    padding: 11px 46px 11px 46px;
-    margin-bottom: 26px;
+    padding: 12px 45px 11px 45px;
+    margin-bottom: 29px;
+    margin-left: 2px;
   }
 
   .errorMessage {

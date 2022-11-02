@@ -234,6 +234,10 @@ $pos: -12px;
   .root{
     @include tab_card;
   }
+
+  .CardBtn {
+    bottom: -17px;
+  }
 }
 
 @media (min-width: $width-desktop-lg) {

@@ -265,14 +265,12 @@
 
 @media (min-width: $width-tablet-md) {
   .root {
-    border: 1px solid #707070;
-    border-radius: 20px;
-    margin: 88px 66px 40px;
+    margin: 40px 52px 40px;
     padding-bottom: 40px !important;
   }
 
   .ProjectTitle {
-    margin: 50px 0 43px -30px;
+    margin: 42px 0 18px -2px;
 
     & .bg_text,
     & .wrap_title {
@@ -290,9 +288,11 @@
   }
 
   .sub_title {
+    margin: 0 0 35px -5px;
+
     & span {
-      font-size: 20px;
       line-height: 20px;
+      margin: 0;
     }
   }
 

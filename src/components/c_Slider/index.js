@@ -19,7 +19,7 @@ export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnClose
 
     const [my_swiper, set_my_swiper] = useState({});
     const [slide, setSlide] = useState(0);
-
+    const [activeSlide, setActiveSlide] = useState(0);
     const [isVisible, setVisible] = useState(false);
     const ref = useRef();
 
@@ -68,11 +68,12 @@ export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnClose
                 pagination={saving && window.innerWidth >= 768 ? false : {"clickable": true}}
                 className={classNames(classes.swiper, {[classes.swiperSaving]: saving}, {[classes.swiperMode]: isBtnClose},{[classes.swiperPress]: press}, {[classes.swiperShow]: isVisible && press})}
                 initialSlide={Number(initialSlide) || 0}
+                onSlideChange={(swiper) => setActiveSlide(swiper.realIndex)}
             >
                 {items.map((item, i) => {
                     return (
-                        <SwiperSlide className = {classes.swiperSlide} key={i}>
-                        {item}
+                        <SwiperSlide className = {classNames(classes.swiperSlide,{[classes.swiperSlideActive]: activeSlide === i})} key={i}>
+                            {item}
                         </SwiperSlide>    
                     )                         
                        

@@ -57,7 +57,8 @@
 
 @media (min-width: $width-tablet-md) {
   .root {
-    padding: 40px 50px;
+    padding: 30px 52px;
+    margin-bottom: 9px;
   }
 
   .wrapper {
@@ -66,7 +67,7 @@
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: repeat(2, auto);
-    column-gap: 153px;
+    column-gap: 180px;
     justify-content: center;
     position: relative;
 

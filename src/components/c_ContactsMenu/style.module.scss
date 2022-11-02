@@ -105,16 +105,32 @@
 }
 
 @media (min-width: $width-tablet-md) {
+  .root {
+    margin-top: 0px;
+  }
+
   @mixin icon {
     width: 39px;
     height: 39px;
     background-size: 39px;
-    margin-right: 16px;
+    margin-right: 17px;
+    margin-top: -3px;
+  }
+
+  .whatsapp {
+    @include icon;
+    
+  }
+
+  .callMe {
+    @include icon;
   }
 
   .phone {
     font-size: 20px;
     line-height: 22px;
+    margin: -1px 0 0 0;
+    letter-spacing: -0.03em;
   }
 }
 

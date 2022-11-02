@@ -206,11 +206,24 @@
 
     &.reverse {
       & .picture {
+        margin: 0 0 0 20px;
+      }
+
+      & .roundButton {
+        top: -2px;
+        left: -14px;
+      }
+
+      & .buttonText {
+        left: -15px;
+        bottom: -5px;
         margin: 0;
       }
 
       & .title {
         justify-self: center;
+        margin-top: -45px;
+        margin-right: -7px;
       }
     }
   }
@@ -226,16 +239,22 @@
     justify-self: center;
     font-size: 62px;
     line-height: 62px;
+    margin-top: -10px;
   }
 
   .buttonText {
     font-size: 18px;
     line-height: 18px;
+    left: 7px;
+    bottom: -8px;
   }
 
   .roundButton {
+    position: relative;
     width: 69px;
     height: 69px;
+    top: 1px;
+    left: 8px;
   }
 }
 

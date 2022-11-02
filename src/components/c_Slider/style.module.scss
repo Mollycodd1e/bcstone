@@ -90,10 +90,13 @@
   //width: 242px !important;
 }
 
-.swiperSlide button {
+.swiperSlide button:nth-child(1) {
   display: none;
 }
 
+.swiperSlideActive button:nth-child(1) {
+  display: block;
+}
 
 @media (min-width: $width-mobile-pre-md) {
   .swiperSaving  {    
@@ -156,14 +159,17 @@
   .swiper {
     min-width: 320px;
     width: calc(100vw - 104px);
+    padding-bottom: 4.5rem;
   }
 
   .swiperPress {
     width: 1500px;
+    padding-bottom: 1.7rem;
   }
 
   .swiperSaving {
     width: 1000px;
+    padding-bottom: 1.7rem;
   }
 
   .swiperSaving  {
