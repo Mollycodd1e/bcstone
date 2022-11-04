@@ -3,11 +3,13 @@
 $width-sm: 242px;
 $width-pre-md: 209px;
 $width-md: 270px;
+$width-notebook: 297px;
 $width-lg: 398px;
 
 $height-sm: 95px;
 $height-pre-md: 106px;
 $height-md: 141px;
+$height-notebook: 136px;
 $height-lg: 164px;
 
 $box-shadow-sm: none;
@@ -24,6 +26,7 @@ $size-lg: 27px;
 $common-padding-sm: 11px 11px 8px 12px;
 $common-padding-pre-md: 14px 11px 13px 17px;
 $common-padding-md: 20px 18px 16px 26px;
+$common-padding-notebook: 19px 18px 16px 22px;
 $common-padding-lg: 24px 36px 18px 28px;
 
 $border-radius-sm: 8px;
@@ -32,31 +35,37 @@ $border-radius-md-lg: 12px;
 $title-font-size-sm: 14px;
 $title-font-size-pre-md: 13px;
 $title-font-size-md: 15px;
+$title-font-size-notebook: 17px;
 $title-font-size-lg: 21px;
 
 $title-line-height-sm: 14px;
 $title-line-height-pre-md: 16px;
 $title-line-height-md: 22px;
+$title-line-height-notebook: 21px;
 $title-line-height-lg: 23px;
 
 $title-margin-sm: 0 0 3px 0;
 $title-margin-pre-md: 0 0 4px 0;
 $title-margin-md: 0 0 7px 0;
+$title-margin-notebook: 0 0 5px 0;
 $title-margin-lg: 3px 0 7px 0;
 
 $content-font-size-sm: 12px;
 $content-font-size-pre-md: 11px;
 $content-font-size-md: 13px;
+$content-font-size-notebook: 14px;
 $content-font-size-lg: 18px;
 
 $content-line-height-sm: 13px;
 $content-line-height-pre-md: 12px;
 $content-line-height-md: 14px;
+$content-line-height-notebook: 15px;
 $content-line-height-lg: 19px;
 
 $decor-margin-sm: -1px 9px 0 0;
 $decor-margin-pre-md: 0 7px 0 0;
 $decor-margin-md: 0 14px 0 0;
+$decor-margin-notebook: 0 12px 0 0;
 $decor-margin-lg: 0 14px 0 0;
 
 @mixin card(
@@ -171,6 +180,10 @@ $decor-margin-lg: 0 14px 0 0;
   $box-shadow: $box-shadow-md-lg,
   $title-margin: $title-margin-pre-md,
   $height: $height-pre-md);
+
+  .title {
+    letter-spacing: -0.01em;
+  }
 }
 
 @media (min-width: $width-tablet-md) {
@@ -187,6 +200,22 @@ $decor-margin-lg: 0 14px 0 0;
   $box-shadow: $box-shadow-md-lg,
   $title-margin: $title-margin-md,
   $height: $height-md);
+}
+
+@media (min-width: $width-notebook) {
+  @include card(  $width: $width-notebook,
+  $border: $border-md-lg,
+  $border-radius: $border-radius-md-lg,
+  $common-padding: $common-padding-notebook,
+  $size: $size-md,
+  $title-font-size: $title-font-size-notebook,
+  $title-line-height: $title-line-height-notebook,
+  $content-font-size: $content-font-size-notebook,
+  $content-line-height: $content-line-height-notebook,
+  $decor-margin: $decor-margin-notebook,
+  $box-shadow: $box-shadow-md-lg,
+  $title-margin: $title-margin-notebook,
+  $height: $height-notebook);
 }
 
 @media (min-width: $width-desktop-lg) {

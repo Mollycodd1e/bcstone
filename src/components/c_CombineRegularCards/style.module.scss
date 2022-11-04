@@ -64,3 +64,9 @@
     justify-content: center;
   }
 }
+
+@media (min-width: $width-notebook) {
+  .root {
+    margin-bottom: 27px;
+  }
+}

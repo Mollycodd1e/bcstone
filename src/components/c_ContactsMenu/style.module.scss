@@ -134,6 +134,25 @@
   }
 }
 
+@media (min-width: $width-notebook) {
+  @mixin icon {
+    width: 44px;
+    height: 44px;
+    background-size: 44px;
+    margin-right: 23px;
+    margin-top: -6px;
+  }
+
+  .whatsapp {
+    @include icon;
+    
+  }
+
+  .callMe {
+    @include icon;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     display: flex;

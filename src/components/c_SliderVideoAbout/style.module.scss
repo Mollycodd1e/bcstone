@@ -26,10 +26,10 @@
     //height: 218px;
     min-width: 295px;
     width: calc(100vw - 631px);
-    max-width: 694px;
+    max-width: 441px;
     min-height: 174px;
     height: calc(100vw - 782px);
-    max-height: 492px;
+    max-height: 261px;
     //border-radius: 10px;
     margin-bottom: unset;
     overflow: unset;
@@ -51,17 +51,18 @@
 
 @media (min-width: $width-tablet-md) {
   .root {
-    //width: 369px;
-    //height: 218px;
     min-width: 369px;
-    // width: calc(100vw - 631px);
-    // max-width: 694px;
-    // min-height: 218px;
-    // height: calc(100vw - 782px);
-    // max-height: 492px;
-    // border-radius: 10px;
-    // margin-bottom: unset;
-    // overflow: unset;
+  }
+}
+
+@media (min-width: $width-notebook) {
+  .root {
+    min-width: 441px;
+    width: calc(100vw - 759px);
+    max-width: 493px;
+    min-height: 261px;
+    height: calc(100vw - 952px);
+    max-height: 349px;
   }
 
   .С_Slider {

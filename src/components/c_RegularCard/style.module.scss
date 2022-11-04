@@ -131,6 +131,21 @@ $pos: -12px;
   );
 }
 
+@mixin notebook_card {
+  @include card($widthCard: $widthCard_tab,
+    $heightCard: $heightCard_tab,
+    $borderRadius: $borderRadius_tab,
+    $paddingCard: $paddingCard_tab_desk,
+    $widthPic: $widthPic_tab,
+    $heightPic: $heightPic_tabSm,
+    $heightLogo: $heightLogo_tab,
+    $listTemplateColumns: $listTemplateColumns_tab_desk,
+    $listTemplateColumnsGap: $listTemplateColumnsGap_tab_desk,
+    $listTemplateRows: $listTemplateRows_tab_desk,
+    $listTemplateAreas: $listTemplateAreas_threeRows,
+  );
+}
+
 @mixin mob_tab_map_card {
   @include card($boxShadow: $boxShadow_map);
 }
@@ -237,6 +252,16 @@ $pos: -12px;
 
   .CardBtn {
     bottom: -17px;
+  }
+}
+
+@media (min-width: $width-notebook) {
+  .root{
+    @include tabSm_card;
+  }
+
+  .CardBtn {
+    bottom: -19px;
   }
 }
 

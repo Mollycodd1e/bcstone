@@ -258,6 +258,66 @@
   }
 }
 
+@media (min-width: $width-notebook) {
+  .root {
+    padding: 8px 0 40px;
+
+    &.reverse {
+      & .picture {
+        margin: 0 0 0 -40px;
+      }
+
+      & .roundButton {
+        top: -12px;
+        left: -68px;
+      }
+
+      & .buttonText {
+        left: -69px;
+        bottom: 5px;
+        margin: 0;
+      }
+
+      & .title {
+        justify-self: center;
+        margin-top: -5px;
+        margin-right: 0;
+        margin: -5px -10px 0 -68px;
+      }
+    }
+  }
+
+  .picture {
+    width: 231px;
+    height: 300px;
+    background-size: 231px 300px;
+    margin: 0 15px 0 0;
+  }
+
+  .title {
+    justify-self: center;
+    font-size: 74px;
+    line-height: 80px;
+    margin-top: -5px;
+    margin-left: -20px;
+  }
+
+  .buttonText {
+    font-size: 18px;
+    line-height: 18px;
+    left: -4px;
+    bottom: 3px;
+  }
+
+  .roundButton {
+    position: relative;
+    width: 69px;
+    height: 69px;
+    top: -10px;
+    left: -3px;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
 

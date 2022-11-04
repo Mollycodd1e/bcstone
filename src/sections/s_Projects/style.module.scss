@@ -243,6 +243,7 @@
   .RegularMap {
     margin-bottom: 50px;
   }
+
   .root .C_MainButton {
     position: relative;
     overflow: visible;
@@ -309,6 +310,73 @@
 
   .RegularMap {
     margin-bottom: 50px;
+  }
+}
+
+@media (min-width: $width-notebook) {
+  .root {
+    margin: 49px 51px 40px;
+    padding-bottom: 69px !important;
+  }
+
+  .ProjectTitle {
+    margin: 39px 0 28px 6px;
+
+    & .bg_text,
+    & .wrap_title {
+      font-size: 93px;
+      line-height: 100px;
+    }
+
+    & .wrap_title {
+      margin: 0 !important;
+    }
+
+    & .bg_text {
+      margin: 0 0 -50px -454px !important;
+    }
+  }
+
+  .sub_title {
+    margin: 0 0 35px -6px;
+
+    & span {
+      font-size: 24px;
+      line-height: 26px;
+      margin: 0;
+      letter-spacing: 0;
+
+      &:first-child {
+        margin-right: 72px;
+
+        &:after {
+          right: -59px;
+          top: 6px;
+          width: 40px;
+          height: 16px;
+          background-size: 40px 16px;
+        }
+      }
+    }
+  }
+
+  .mapView {
+    width: calc(100vw - 102px);
+    padding: 0 48px 0;
+  }
+
+  .RegularMap {
+    margin-bottom: 50px;
+  }
+
+  .root .C_MainButton {
+
+    &::after {
+      width: 832px;
+      margin-left: -510px;
+      background-image: url('../../img/business-line-1200.png');
+      background-size: 832px 16px;
+    }
   }
 }
 

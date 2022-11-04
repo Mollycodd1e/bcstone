@@ -110,6 +110,12 @@
     margin: 31px 0 0 0;
   }
 }
+
+@media(min-width: $width-notebook) {
+  .root {
+    margin: 34px 0 0 0;
+  }
+}
 //
 //.title, .list {
 //  padding-left: 3.1rem;
