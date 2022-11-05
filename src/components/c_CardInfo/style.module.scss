@@ -60,6 +60,7 @@
     &:before {
       @include pseudo;
       background-image: url("../../img/s_metro_icon.svg");
+      background-size: 15px 12px;
     }
   }
   &:nth-child(2) {
@@ -114,6 +115,38 @@
 @media(min-width: $width-notebook) {
   .root {
     margin: 34px 0 0 0;
+  }
+}
+
+@media(min-width: $width-desktop-sm) {
+  .root {
+    margin: 43px 0 0 0;
+    padding: 0 0 0 23px;
+  }
+  
+  .list {
+    padding: 0 0 0 28px;
+    margin: 20px 0 0 0;
+    column-gap: 40px !important;
+  }
+  
+  .item {
+    font-size: 14px;
+    line-height: 15px;
+    padding: 2.7px 0 5px 17px;
+
+    &:before {
+      @include pseudo;
+      background-size: 14px 18px;
+    }
+
+    &:nth-child(4) {
+      margin-top: 5px;
+      &:before {
+        @include pseudo;
+        background-size: 23px 21px;
+      }
+    }
   }
 }
 //

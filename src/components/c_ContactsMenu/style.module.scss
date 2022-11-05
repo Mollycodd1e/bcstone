@@ -153,6 +153,34 @@
   }
 }
 
+@media (min-width: $width-desktop-sm) {
+  .root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 252px;
+  }
+
+  @mixin bigIcon {
+    width: 49px;
+    height: 49px;
+    background-size: 49px;
+    margin: 0 23px 0 0;
+  }
+
+  .whatsapp {
+    @include bigIcon;
+  }
+
+  .callMe {
+    display: none;
+  }
+
+  .phone {
+    margin: 0;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     display: flex;

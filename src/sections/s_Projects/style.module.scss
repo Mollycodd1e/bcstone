@@ -380,6 +380,64 @@
   }
 }
 
+@media (min-width: $width-desktop-sm) {
+  .root {
+    padding: 0;
+    padding-bottom: 94px !important;
+    margin: 89px 66px 40px;
+  }
+
+  .sub_title {
+    margin: 0 0 57px 0;
+
+    & span {
+      font-size: 28px;
+      line-height: 30px;
+
+      &:first-child {
+        margin-right: 32px;
+        margin: 0 55px 0 0;
+
+        &:after {
+          right: -46px;
+          top: 10px;
+          width: 34px;
+          height: 13px;
+          background-size: 34px 13px;
+        }
+      }
+    }
+  }
+
+  .ProjectTitle {
+    margin: 61px 0 16px 100px;
+
+    & .bg_text,
+    & .wrap_title {
+      font-size: 113px;
+      line-height: 121px;
+    }
+
+    & .wrap_title {
+      margin: 0 !important;
+    }
+
+    & .bg_text {
+      margin: 0 0 -60px -576px !important;
+    }
+  }
+
+  .C_MainButton {
+    margin-top: 87px;
+    padding: 11px 39px 10px;
+  }
+
+  .mapView {
+    padding: 0 28px 0;
+    width: calc(100vw - 132px);
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     padding-bottom: 95px;

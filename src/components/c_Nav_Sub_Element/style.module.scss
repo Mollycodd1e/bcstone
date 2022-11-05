@@ -48,6 +48,13 @@
   }
 }
 
+@media (min-width: $width-desktop-sm) {
+  .projectName {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .projectName {
     font-size: 20px;

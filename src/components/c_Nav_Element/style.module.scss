@@ -64,6 +64,25 @@
   }
 }
 
+@media (min-width: $width-desktop-sm) {
+  .root {
+    margin: 0 24px 0 0 !important;
+    padding: 0;
+    position: relative;
+
+    &:not(:last-child) {
+      margin: 0 0 24px 0;
+    }
+  }
+
+  .firstLvlMenuName {
+    font-size: 18px;
+    line-height: 19px;
+    letter-spacing: -0.015em;
+  }
+
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     margin: 0 35px 0 0 !important;

@@ -142,6 +142,33 @@ $time: 0.7s;
   }
 }
 
+@media (min-width: $width-desktop-sm) {
+  .root {
+    & .text {
+      font-size: 17px;
+      line-height: 18px;
+    }
+
+    & .span {
+      display: block;
+    }
+  }
+
+  .mode {
+    text-decoration: unset;
+    margin: 0 0 0 5px;
+    padding: 11px 35px 10px;
+    background-color: $color-dark-primary;
+
+    & .text {
+      color: white;
+      font-size: 17px;
+      line-height: 18px;
+      letter-spacing: -0.03em;
+    }
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     & .text {

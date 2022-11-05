@@ -70,13 +70,25 @@
   }
 }
 
-@media (min-width: $width-notebook) {
+@media (min-width: $width-desktop-sm) {
+  .root {
+    padding: 33px 88px 30px 129px;
+    max-width: 1920px;
+    grid-template-columns: auto 1fr auto;
+  }
 
+  .C_Logo_Menu {
+    display: none !important;
+  }
+
+  .C_Navigation {
+    top: 0;
+  }
 }
 
 @media (min-width: $width-desktop-lg) {
   .root {
-    padding: 30px 83px 30px 133px;
+    padding: 30px 83px 30px 125px;
     max-width: 1920px;
   }
 

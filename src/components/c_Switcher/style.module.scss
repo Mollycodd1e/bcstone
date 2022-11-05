@@ -107,14 +107,6 @@
       }
     }
   }
-
-  // .listViewActive {
-  //   & .list {
-  //     &:before {
-  //       background-image: url("../../img/s_list_icon_active.png");
-  //     }
-  //   }
-  // }
 }
 
 @media (min-width: $width-tablet-md) {
@@ -145,6 +137,65 @@
         left: 26px;
       }
     }
+  }
+}
+
+@media (min-width: $width-desktop-sm) {
+  .root {
+    margin: 0 0 29px -3px;
+
+    & span {
+      width: 152px;
+      padding: 0 27px 12px 0;
+      font-size: 17px;
+      line-height: 18px;
+
+      &:last-of-type {
+        padding: 0 21px 12px 0;
+      }
+    }
+
+    & .list {
+      &:before {
+        width: 17px;
+        height: 12px;
+        background-size: 17px 12px;
+        left: 19px;
+        top: 4px;
+        background-image: url("../../img/s_list_icon.png");
+      }
+    }
+
+    & .map {
+      &:before {
+        top: 2px;
+        left: 30px;
+      }
+    }
+  }
+
+  .listViewActive {
+    & .list {
+      color: #2B2C2D;
+      border-bottom: 3px solid #2B2C2D;
+  
+      &:before {
+        background-image: url("../../img/s_list_icon_active.png");
+      }
+    }
+  }
+  
+  .mapViewActive {
+    & .map {
+      color: #2B2C2D;
+      border-bottom: 3px solid #2B2C2D;
+  
+      &:before {
+        background-image: url("../../img/s_map_icon_active.png");
+      }
+    }
+  }
+} 
     // & .list {
     //   &:before {
     //     background-image: url("../../img/s_list_icon.png");
@@ -162,7 +213,6 @@
     //     left: 20px;
     //   }
     // }
-  }
 
   // .listViewActive {
   //   & .list {
@@ -171,9 +221,6 @@
   //     }
   //   }
   // }
-}
-
-
 
 //
 //$hoverSize: 3rem;

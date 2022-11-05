@@ -23,10 +23,12 @@ $widthPic_desk_map: 324px;
 
 $heightPic_tab: 201px;
 $heightPic_tabSm: 210px;
+$heightPic_deskSm: 208px;
 $heightPic_desk: 262px;
 $heightPic_desk_map: 193px;
 
 $heightLogo_tab: 22px;
+$heightLogo_deskSm: 27px;
 $heightLogo_desk: 24px;
 $heightLogo_desk_map: 22px;
 
@@ -150,6 +152,21 @@ $pos: -12px;
   @include card($boxShadow: $boxShadow_map);
 }
 
+@mixin deskSm_card {
+  @include card($widthCard: $widthCard_tab,
+    $heightCard: $heightCard_tab,
+    $borderRadius: $borderRadius_tab,
+    $paddingCard: $paddingCard_tab_desk,
+    $widthPic: $widthPic_tab,
+    $heightPic: $heightPic_deskSm,
+    $heightLogo: $heightLogo_deskSm,
+    $listTemplateColumns: $listTemplateColumns_tab_desk,
+    $listTemplateColumnsGap: $listTemplateColumnsGap_tab_desk,
+    $listTemplateRows: $listTemplateRows_tab_desk,
+    $listTemplateAreas: $listTemplateAreas_threeRows,
+  );
+}
+
 @mixin desk_card {
   @include card($widthCard: $widthCard_desk,
     $heightCard: $heightCard_desk,
@@ -157,7 +174,7 @@ $pos: -12px;
     $paddingCard: $paddingCard_tab_desk,
     $widthPic: $widthPic_desk,
     $heightPic: $heightPic_desk,
-    $heightLogo: $heightLogo_desk,
+    $heightLogo: $heightLogo_deskSm,
     $listTemplateColumns: $listTemplateColumns_tab_desk,
     $listTemplateColumnsGap: $listTemplateColumnsGap_tab_desk,
     $listTemplateRows: $listTemplateRows_tab_desk,
@@ -262,6 +279,58 @@ $pos: -12px;
 
   .CardBtn {
     bottom: -19px;
+  }
+}
+
+@media (min-width: $width-desktop-sm) {
+  .С_CardFace {
+    position: relative;
+    bottom: calc(#{$faceBtm} + 10px);
+    transition: bottom .5s ease-out;
+  }
+
+  .faceWrap {
+    &:hover {
+      & .С_CardFace {
+        bottom: calc(#{$faceBtm} + 40px);
+      }
+    }
+  }
+
+  .root {
+    @include deskSm_card;
+
+    & a[class*='mainCardBtn'],
+    & a[class*='CardBtn'],
+    & button[class*='mainCardBtn'],
+    & button[class*='CardBtn'] {
+     padding-bottom: 12px;
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    &.map_mod {
+
+      & a[class*='mainCardBtn'],
+      & a[class*='CardBtn'],
+      & button[class*='mainCardBtn'],
+      & button[class*='CardBtn'] {
+        padding-bottom: 4px;
+        font-size: 12px;
+        line-height: 13px;
+      }
+
+      @include desk_map_card;
+      padding-top: 22px;
+
+      & .С_CardFace {
+        bottom: unset !important;
+      }
+    }
+  }
+
+  .CardBtn {
+    bottom: -20px;
   }
 }
 
