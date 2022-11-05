@@ -70,6 +70,16 @@
   }
 }
 
+@media (min-width: $width-desktop-sm) {
+  .root {
+    width: 694px;
+  }
+
+  .С_Slider {
+    //height: unset;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     width: 694px;

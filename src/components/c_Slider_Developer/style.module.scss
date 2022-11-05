@@ -141,6 +141,68 @@
   }
 }
 
+@media (min-width: $width-desktop-sm) {
+
+  .numbersWrapper {
+    position: absolute;
+    top: calc(50% - 12px);
+    left: -44px;
+  }
+
+  @mixin swiperButton {
+     position: absolute;
+     display: block;
+     min-width: 52px;
+     width: 52px;
+     height: 52px;
+     margin: auto 0;
+     //top: 175px;
+     bottom: -88px;
+     right: 40px;
+     border-radius: 50%;
+     border: none;
+     background-repeat: no-repeat;
+     background-size: 52px 52px;
+     background-position: center center;
+     background-color: transparent !important;
+     cursor: pointer;
+     transition: 0.4s;
+     z-index: 10;
+  }
+
+  .swiper_button_prev {
+    @include swiperButton;
+
+    left: calc( 50% - 74px );
+    background-image: url('../../img/backBtnTablet.svg');
+    margin-left: -10px;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+
+    &:hover {
+      background-image: url('../../img/backBtnHover.svg');
+    }
+  }
+
+  .swiper_button_next {
+    @include swiperButton;
+
+    right: calc( 50% - 74px );
+    background-image: url('../../img/forwardBtnTablet.svg');
+    left: 260px;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+
+    &:hover {
+      background-image: url('../../img/forwardBtnHover.svg');
+    }
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
 
   .numbersWrapper {

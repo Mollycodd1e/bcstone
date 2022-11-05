@@ -427,9 +427,16 @@
     }
   }
 
-  .C_MainButton {
+  .root .C_MainButton {
     margin-top: 87px;
     padding: 11px 39px 10px;
+
+    &::after {
+      width: 1017px;
+      margin-left: -615px;
+      background-image: url('../../img/business-line-1440.png');
+      background-size: 1017px 16px;
+    }
   }
 
   .mapView {

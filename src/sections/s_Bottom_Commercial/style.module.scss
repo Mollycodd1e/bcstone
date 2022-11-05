@@ -152,12 +152,13 @@
 
 @media (min-width: $width-desktop-sm) {
   .root {
+    margin-top: 0;
     min-height: 500px;
     padding-top: 10px;
     padding-bottom: 66px;
     background-image: url('../../img/bcstone-saving-1440.png');
     background-size: 1259px 415px;
-    background-position: 30px 53px;
+    background-position: 30px 33px;
 
     &::after {
       margin-top: -149px;
@@ -172,7 +173,7 @@
   }
 
   .sliderWrapper {
-    margin-top: 119px;
+    margin-top: 99px;
   }
 }
 

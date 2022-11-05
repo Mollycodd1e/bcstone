@@ -214,6 +214,40 @@
   }
 }
 
+@media (min-width: $width-desktop-sm) {
+  .root {
+    padding: 67px 66px;
+  }
+
+  .frame {
+    padding: 81px 0 218px 0;
+
+    & .bg_text,
+    & .title {
+      font-size: 113px;
+      line-height: 121px;
+    }
+
+    & .title {
+      margin: -2px 0 133px -169px !important;
+    }
+
+    & .bg_text {
+      margin: 0 0 -60px -655px !important;
+    }
+
+    &::before {
+      right: 158px;
+      top: 225px;
+    }
+
+    &::after {
+      right: 0;
+      bottom: 70px;
+    }
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     padding: 0 65px;
@@ -236,5 +270,4 @@
       margin: 0 0 -60px -1155px !important;
     }
   }
-
 }
