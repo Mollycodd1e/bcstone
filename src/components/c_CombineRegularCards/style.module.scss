@@ -88,6 +88,19 @@
   }
 }
 
+@media (min-width: $width-desktop-md) {
+  .root {
+    margin-bottom: 27px;
+    margin-left: 0;
+  }
+
+  .cards {
+    width: 1400px;
+    grid-column-gap: 28px;
+    grid-row-gap: 35px;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .cards {
     //width: 100%;

@@ -80,6 +80,19 @@
   }
 }
 
+@media (min-width: $width-desktop-md) {
+  .root {
+    width: 598px;
+    min-width: 598px;
+    max-width: 694px;
+    max-height: 424px;
+  }
+
+  .С_Slider {
+    //height: unset;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     width: 694px;

@@ -248,6 +248,39 @@
   }
 }
 
+@media (min-width: $width-desktop-md) {
+  .root {
+    padding: 57px 66px;
+  }
+
+  .frame {
+    padding: 65px 0 175px 0;
+
+    & .bg_text,
+    & .title {
+      font-size: 133px;
+      line-height: 143px;
+    }
+
+    & .title {
+      margin: -11px 0 114px -130px !important;
+    }
+
+    & .bg_text {
+      margin: 0 0 -60px -702px !important;
+    }
+
+    &::before {
+      right: 186px;
+    }
+
+    &::after {
+      right: 0;
+      bottom: 77px;
+    }
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     padding: 0 65px;

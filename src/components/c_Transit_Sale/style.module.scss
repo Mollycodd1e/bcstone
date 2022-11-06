@@ -389,6 +389,40 @@
   }
 }
 
+@media (min-width: $width-desktop-md) {
+  .root {
+    padding: 60px 0 71px 0;
+
+    &.reverse {      
+      & .picture {
+        margin: 15px 30px 0 0px;
+      }
+
+      & .title {
+        margin: 25px -60px 0 0;
+      }
+    }
+  }
+
+  .arrowButton {
+    margin-right: 12px;
+  }
+
+  .picture {
+    width: 215px;
+    height: 285px;
+    background-size: 215px 285px;
+    margin: 0 -15px -15px 30px;
+  }
+
+  .title {
+    font-size: 80px;
+    line-height: 86px;
+    margin-top: 35px;
+    margin-left: -87px;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
 

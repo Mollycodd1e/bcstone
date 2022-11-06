@@ -149,6 +149,42 @@
     }
   }
 }
+
+@media(min-width: $width-desktop-md) {
+  .root {
+    margin: 43px 0 0 0;
+    padding: 0 0 0 53px;
+  }
+  
+  .list {
+    padding: 0 0 0 28px;
+    margin: 20px 0 0 0;
+    column-gap: 40px !important;
+  }
+  
+  .item {
+    font-size: 14px;
+    line-height: 15px;
+    padding: 2.7px 0 5px 17px;
+
+    &:before {
+      @include pseudo;
+      background-size: 14px 18px;
+    }
+
+    &:nth-child(2) {
+      margin-left: 10px;
+    }
+
+    &:nth-child(3) {
+      margin-top: 2px;
+    }
+
+    &:nth-child(4) {
+      margin-top: 3px;
+    }
+  }
+}
 //
 //.title, .list {
 //  padding-left: 3.1rem;

@@ -169,6 +169,32 @@ $time: 0.7s;
   }
 }
 
+@media (min-width: $width-desktop-md) {
+  .root {
+    border-radius: 22px;
+    
+    & .text {
+      font-size: 18px;
+      line-height: 19px;
+    }
+
+    & .span {
+      display: block;
+    }
+  }
+
+  .mode {
+    border-radius: 22px;
+    margin: -3px 0 0 8px;
+    padding: 12px 43px 12px 41px;
+
+    & .text {
+      font-size: 18px;
+      line-height: 19px;
+    }
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     & .text {

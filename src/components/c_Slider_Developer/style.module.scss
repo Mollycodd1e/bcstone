@@ -203,6 +203,27 @@
   }
 }
 
+@media (min-width: $width-desktop-md) {
+  .numbersWrapper {
+    top: calc(50% - 18px);
+  }
+
+  @mixin swiperButton {
+     bottom: -78px;
+     right: 20px;
+  }
+
+  .swiper_button_prev {
+    @include swiperButton;
+    margin-left: -10px;
+  }
+
+  .swiper_button_next {
+    @include swiperButton;
+    left: 311px;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
 
   .numbersWrapper {

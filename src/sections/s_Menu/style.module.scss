@@ -86,6 +86,12 @@
   }
 }
 
+@media (min-width: $width-desktop-md) {
+  .root {
+    padding: 33px 85px 30px 132px;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     padding: 30px 83px 30px 125px;

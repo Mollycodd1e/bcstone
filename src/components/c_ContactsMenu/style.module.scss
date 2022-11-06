@@ -181,6 +181,31 @@
   }
 }
 
+@media (min-width: $width-desktop-sm) {
+  .root {
+    min-width: 260px;
+  }
+
+  @mixin bigIcon {
+    width: 52px;
+    height: 52px;
+    background-size: 52px;
+    margin: -2px 23px 0 0;
+  }
+
+  .whatsapp {
+    @include bigIcon;
+    margin: -2px 0 0 8px;
+  }
+
+  .phone {
+    margin: -3px 0 0 auto;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     display: flex;

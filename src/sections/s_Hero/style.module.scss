@@ -771,6 +771,110 @@ $existTimer: 2.5s;
   }
 }
 
+@media (min-width: $width-desktop-md) {
+  .root {
+    padding: 95px 0 91px 5px;
+    grid-template-rows: 69px 192px 103px 144px 91px;
+    grid-template-columns: 657px 1fr;
+    width: 1360px;
+  }
+
+  .interactiveBlock {
+    width: 879px;
+    height: 639px;
+    margin: 0px 0 0 -57px;
+    justify-self: right;
+  }
+
+  .btmPic {
+    top: 22px;
+    right: 84px;
+    width: 100%;
+    height: 100%;
+    background-size: 879px 639px;
+    background-position: right top;
+  }
+
+  .topPic {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 803px 584px;
+    background-position: right top;
+    clip-path: circle(0 at 0 0);
+    transition: 0.1s;
+  }
+
+  .hover {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    cursor: none !important;
+
+    &:before {
+      content: none;
+    }
+
+    &:after {
+      content: none;
+    }
+  }
+
+  .titleHelper {
+    font-size: 22px;
+    line-height: 23px;
+    margin: 27px 0 0 6px;
+  }
+
+  .mainTitle {
+    width: 540px;
+    height: 182px;
+    background-size: 540px 182px;
+    margin: -28px 0 0 -1px;
+    z-index: 10;
+  }
+
+  .listName {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 35px;
+    margin: 0 0 0 6px;
+
+    &:after {
+      right: -9px;
+      top: -260px;
+      width: 220px;
+      height: 16px;
+      background-image: url('../../img/s_hero_decor_1.svg');
+      background-size: 220px 16px;
+      animation-name: helperAnimaAfterDesktop;
+    }
+  }
+
+  .listInfo {
+    margin: 0 0 54px 0;
+    padding: 0 0 0 24px;
+  }
+
+  .item {
+    font-size: 20px;
+    line-height: 22px;
+    padding: 0 0 0 8px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .mainButton {
+    margin: auto 0 0 8px;
+    padding: 12px 46px 12px 46px;
+    letter-spacing: -0.03em;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     padding: 92px 0 142px 5px;

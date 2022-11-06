@@ -134,8 +134,8 @@
 
           & svg {
             margin-top: -7px;
-              margin-right: 100px;
-            }
+            margin-right: 100px;
+          }
 
           & span {
             left: -90px;
@@ -195,7 +195,109 @@
       }
     }
   }
-  
+}
+
+@media (min-width: $width-desktop-md) {
+  .root {
+    padding: 0 213px;
+  }
+
+  .wrapRoot {
+    padding-top: 39px;
+  }
+
+  .wrapper {
+    column-gap: unset;
+    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    padding: 0 10px;
+
+    & div {
+      transition: all .6s;
+      flex-grow: 1;
+      &:hover {
+        
+        & div[class*="picture"] {
+          opacity: 1;
+          transform: scale(1.1) translateX(20px);
+        }
+
+        & > a[class*="link"] {
+          opacity: 1;
+
+          & svg {
+            margin-top: -7px;
+            margin-right: 45px;
+          }
+
+          & span {
+            left: -30px;
+          }  
+        }
+
+        & > h2 {
+          font-size: 110px;
+          line-height: 118px;
+          color: #2C2D2D;
+          transform: translateX(110px);
+        }
+
+        & + div {
+          transition: all .6s;
+          flex-grow: 1;
+
+          transform: translateX(180px);
+          & div[class*="picture"] {
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .wrapper:has(:not(:first-of-type):hover) {
+    & div:first-child {
+
+        & > h2 {
+          transform: translateX(-120px);
+        }
+
+        & div[class*="picture"] {
+          opacity: 0;
+        }
+
+        
+    }
+
+    & div:last-child {
+      & > h2 {
+        font-size: 110px;
+        line-height: 118px;
+        transform: translateX(-90px);
+      }
+
+      & div[class*="picture"] {
+        transform: translateX(-10px);
+      }
+
+      & > a[class*="link"] {
+        opacity: 1;
+
+        & svg {
+          margin-top: -7px;
+          margin-right: -100px;
+        }
+
+        & span {
+          left: 115px;
+        }  
+      }
+    }
+  }
 }
 
 @media (min-width: $width-desktop-lg) {

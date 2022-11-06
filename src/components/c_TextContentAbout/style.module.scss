@@ -168,6 +168,37 @@
   }
 }
 
+
+@media (min-width: $width-desktop-md) {
+  .root {
+    padding: 22px 0 0 0;
+  }
+
+  .stoneHedgeLogo {
+    width: 389px;
+    height: 38px;
+    background-size: 389px 38px;
+    margin: 29px 0 14px 0;
+  }
+
+  .description {
+    font-size: 23px;
+    line-height: 27px;
+    margin:0 0 28px 0;
+  }
+
+  .plans {
+    font-size: 18px;
+    line-height: 19px;
+  }
+
+  .C_MainButton {
+    margin: auto 0 74px 0px;
+    padding: 13px 47px 11px 46px;
+    letter-spacing: -0.03em;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     align-items: flex-start;

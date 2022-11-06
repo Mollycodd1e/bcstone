@@ -571,6 +571,62 @@
   }
 }
 
+@media (min-width: $width-desktop-md) {
+  .root {
+    margin-top: 55px;
+    padding: 0 66px;
+  }
+
+  .title {
+    font-size: 44px;
+    line-height: 54px;
+
+    &::before {
+      content: '';
+      width: 146px;
+      background-image: url('../../img/form-line-1600.png');
+      background-size: 146px 16px;
+      left: -178px;
+    }
+  }
+
+  .description {
+    font-size: 18px;
+    line-height: 18px;
+    margin: 0 0 24px -177px;
+  }
+
+  .wrapperInputCommon {
+    margin-bottom: 27px !important;
+  }
+
+  .inputCommon {
+    padding: 10px 10px 11px 43px;
+    font-size: 18px;
+    line-height: 19px;
+
+    &::placeholder {
+      font-size: 18px;
+      line-height: 19px;
+    }
+  }
+
+  .frame {
+    padding: 136px 73px 126px 80px;
+    grid-column-gap: 180px;
+  }
+
+  .fields {
+    padding: 0;
+  }
+
+  .button {
+    padding: 10px 46px 13px 47px;
+    margin: 0 0 29px 0;
+    letter-spacing: -0.015em;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     padding: 0 65px;

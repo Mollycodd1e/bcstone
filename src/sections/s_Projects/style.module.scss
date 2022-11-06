@@ -445,6 +445,67 @@
   }
 }
 
+@media (min-width: $width-desktop-md) {
+  .root {
+    padding-bottom: 94px !important;
+    margin: 89px 66px 40px;
+  }
+
+  .sub_title {
+    margin: 0 0 57px 0;
+
+    & span {
+      font-size: 31px;
+      line-height: 33px;
+
+      &:first-child {
+        margin-right: 32px;
+        margin: 0 70px 0 0;
+
+        &:after {
+          right: -58px;
+          top: 10px;
+          width: 40px;
+          height: 15px;
+          background-size: 40px 15px;
+        }
+      }
+    }
+  }
+
+  .ProjectTitle {
+    margin: 54px 0 8px 110px;
+
+    & .bg_text,
+    & .wrap_title {
+      font-size: 133px;
+      line-height: 143px;
+    }
+
+    & .bg_text {
+      margin: 0 0 -72px -676px !important;
+    }
+  }
+
+  .root .C_MainButton {
+    margin-top: 33px;
+    padding: 12px 47px 12px 47px;
+    letter-spacing: -0.03em;
+
+    &::after {
+      width: 1178px;
+      margin-left: -699px;
+      background-image: url('../../img/business-line-1600.png');
+      background-size: 1178px 16px;
+    }
+  }
+
+  .mapView {
+    padding: 0 28px 0;
+    width: calc(100vw - 132px);
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     padding-bottom: 95px;

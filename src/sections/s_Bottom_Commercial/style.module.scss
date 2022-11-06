@@ -181,7 +181,7 @@
   .root {
     min-height: 658px;
     padding-bottom: 104px;
-    background-position: 30px 49px;
+    background-position: 30px 33px;
 
     &::after {
       margin-top: -105px;
@@ -191,10 +191,11 @@
 
   .sliderWrapper {
     width: 1300px;
+    margin-top: 102px;
   }
 }
 
-@media (min-width: $width-desktop-md) {
+@media (min-width: $width-desktop-lg) {
   .root {
     background-position: 155px 49px;
 

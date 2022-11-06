@@ -5,6 +5,7 @@ $width-pre-md: 209px;
 $width-md: 270px;
 $width-notebook: 297px;
 $width-desk-sm: 360px;
+$width-desk-md: 398px;
 $width-lg: 398px;
 
 $height-sm: 95px;
@@ -53,7 +54,7 @@ $title-margin-pre-md: 0 0 4px 0;
 $title-margin-md: 0 0 7px 0;
 $title-margin-notebook: 0 0 5px 0;
 $title-margin-desk-sm: 3px 0 9px 0;
-$title-margin-lg: 3px 0 7px 0;
+$title-margin-lg: 3px 0 6px 0;
 
 $content-font-size-sm: 12px;
 $content-font-size-pre-md: 11px;
@@ -239,6 +240,22 @@ $decor-margin-lg: 0 14px 0 0;
   $decor-margin: $decor-margin-desk-sm,
   $box-shadow: $box-shadow-md-lg,
   $title-margin: $title-margin-desk-sm,
+  $height: $height-lg);
+}
+
+@media (min-width: $width-desktop-md) {
+  @include card(  $width: $width-lg,
+  $border: $border-md-lg,
+  $border-radius: $border-radius-md-lg,
+  $common-padding: $common-padding-lg,
+  $size: $size-lg,
+  $title-font-size: $title-font-size-lg,
+  $title-line-height: $title-line-height-lg,
+  $content-font-size: $content-font-size-lg,
+  $content-line-height: $content-line-height-lg,
+  $decor-margin: $decor-margin-lg,
+  $box-shadow: $box-shadow-md-lg,
+  $title-margin: $title-margin-lg,
   $height: $height-lg);
 }
 

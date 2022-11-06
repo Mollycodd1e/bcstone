@@ -292,7 +292,7 @@
   }
   
   .card_wrapper_hover {
-    margin-bottom: 45px;
+    margin-bottom: 25px;
   }
 
   .card_wrapper_hover img {
@@ -325,7 +325,7 @@
   }
   
   .description_wrapper {
-    position: absolute;
+    //position: absolute;
     width: 340px;
     margin-top: 25px;
     padding-bottom: 39px;
@@ -365,7 +365,7 @@
   }
   
   .card_wrapper_hover {
-    margin-bottom: 45px;
+    margin-bottom: 25px;
   }
 
   .card_wrapper a {
@@ -383,7 +383,8 @@
   .description_wrapper h3 {
     font-size: 34px;
     line-height: 37px;
-    margin-top: 34px;
+    margin-top: 38px;
+    min-width: 348px;
   }
   
   .description_wrapper {

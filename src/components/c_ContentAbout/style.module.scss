@@ -47,6 +47,13 @@
   }
 }
 
+@media (min-width: $width-desktop-md) {
+  .root {
+    grid-column-gap: 70px;
+    padding-left: 40px;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     grid-column-gap: 95px;

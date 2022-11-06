@@ -31,6 +31,14 @@
 @media (min-width: $width-tablet-md) {
 }
 
+
+@media (min-width: $width-desktop-md) {
+  .root {
+    width: 694px;
+    height: 492px;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     width: 694px;
