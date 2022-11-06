@@ -195,26 +195,8 @@ $menuTransition: .4s;
     margin: 0 360px 0 0;
   }
 
-  .burger {
-    display: none;
-  }
-
-  .elements {
-    flex-direction: row;
-    position: static;
-    background-color: unset;
-    border-radius: unset;
-    box-shadow: unset;
-    width: unset;
-    min-height: unset;
-    padding: unset;
-    align-items: unset;
-  }
-
-  .C_Nav_List {
-  }
-
   .C_MainButton {
+    margin-left: 0;
     padding: 12px 40px 11px;
   }
 }

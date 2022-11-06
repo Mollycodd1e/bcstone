@@ -181,7 +181,7 @@
   }
 }
 
-@media (min-width: $width-desktop-sm) {
+@media (min-width: $width-desktop-md) {
   .root {
     min-width: 260px;
   }
@@ -207,29 +207,15 @@
 }
 
 @media (min-width: $width-desktop-lg) {
-  .root {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 252px;
-  }
-
   @mixin bigIcon {
     width: 52px;
     height: 52px;
     background-size: 52px;
+    margin: -2px 0 0 -5px;
   }
 
   .whatsapp {
     @include bigIcon;
-  }
-
-  .callMe {
-    display: none;
-  }
-
-
-  .phone {
-    margin: 0;
+    margin: -2px 0 0 8px;
   }
 }
