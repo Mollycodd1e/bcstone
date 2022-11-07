@@ -4,11 +4,11 @@ import React from "react";
 import {C_SliderVideoAbout} from "../c_SliderVideoAbout";
 import {C_TextContentAbout} from "../c_TextContentAbout";
 
-export const C_ContentAbout = ({className, data}) => {
+export const C_ContentAbout = ({className, data, setIsAboutPopupClose}) => {
     const cls = classNames(classes.root, {[className]: className});
     return (
         <div className={cls}>
-            <C_SliderVideoAbout data={data} className={classes.C_SliderVideoAbout} />
+            <C_SliderVideoAbout data={data} className={classes.C_SliderVideoAbout} setIsAboutPopupClose={setIsAboutPopupClose}/>
             <C_TextContentAbout data={data} className={classes.C_TextContentAbout} />
         </div>
     )

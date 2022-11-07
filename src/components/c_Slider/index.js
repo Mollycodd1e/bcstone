@@ -10,7 +10,7 @@ import { useState, useRef } from "react";
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
-export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = -225, slidesPerView = 3, saving, press}) => {
+export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = -225, slidesPerView = 3, saving, press, map}) => {
     const cls = classNames(classes.root, { [className]: className });
     // autoplay={{
     //     delay: 10000,
@@ -65,7 +65,7 @@ export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnClose
                 centeredSlides={true}
                 //loop={saving && window.innerWidth < 768? false : true}
                 loop
-                pagination={saving && window.innerWidth >= 768 ? false : {"clickable": true}}
+                pagination={(saving && window.innerWidth) >= 768 || map ? false : {"clickable": true}}
                 className={classNames(classes.swiper, {[classes.swiperSaving]: saving}, {[classes.swiperMode]: isBtnClose},{[classes.swiperPress]: press}, {[classes.swiperShow]: isVisible && press})}
                 initialSlide={Number(initialSlide) || 0}
                 onSlideChange={(swiper) => setActiveSlide(swiper.realIndex)}

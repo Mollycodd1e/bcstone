@@ -5,7 +5,7 @@ import {C_ContentAbout} from "../../components/c_ContentAbout";
 import {C_MainButton} from "../../components/c_MainButton";
 import {sizes} from "../../data/sizes";
 
-export const S_About = ({className, menuOnTop, data, width}) => {
+export const S_About = ({className, menuOnTop, data, width, setIsAboutPopupClose}) => {
     const cls = classNames(classes.root, {[classes.menuOnTop]:menuOnTop, [className]: className});
 
 
@@ -19,7 +19,7 @@ export const S_About = ({className, menuOnTop, data, width}) => {
                     <div className={classes.title}>
                         Девелопер
                     </div>
-                    <C_ContentAbout data={data}/>
+                    <C_ContentAbout data={data} setIsAboutPopupClose={setIsAboutPopupClose}/>
                 </div>
             </div>
         </div>

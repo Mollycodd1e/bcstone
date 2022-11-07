@@ -1,0 +1,103 @@
+@import '../../styles/style';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 25;
+  overflow: hidden;
+  //opacity: 0.5;
+
+  /* Note: currently only Safari supports backdrop-filter */
+  backdrop-filter: blur(30px);
+  --webkit-backdrop-filter: blur(30px);
+  background-color: rgba(77, 77, 77, 0.85);
+  /* (plus shape's fill blended on top as a separate layer with 66.06% opacity) */
+}
+
+.closeIcon {
+  width: 30px;
+  height: 30px;
+  background-image: url("../../img/s_close_icon.svg");
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 230px);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.closePopup {
+  display: none;
+}
+
+.fullFormIndexSection {
+  & > div {
+    border-radius: 15px;
+  }
+}
+
+@media (min-width: $width-tablet-sm) {
+  .root {
+
+  }
+
+  .closeIcon {
+    width: 30px;
+    height: 30px;
+    background-size: 52px 52px;
+    right: 54px;
+    top: calc(50% - 200px);
+  }
+
+  .fullFormIndexSection {
+    & > div {
+      border-radius: 20px;
+    }
+  }
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+
+  }
+
+  .closeIcon {
+    width: 52px;
+    height: 52px;
+    background-size: 52px 52px;
+    right: 74px;
+    top: calc(50% - 230px);
+  }
+
+  .fullFormIndexSection {
+    & > div {
+      border-radius: 20px;
+    }
+  }
+}
+
+@media (min-width: 1055px) {
+  .closeIcon {
+    top: calc(50% - 215px);
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .closeIcon {
+    right: 113px;
+    top: calc(50% - 235px);
+  }
+}

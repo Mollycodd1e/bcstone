@@ -19,7 +19,7 @@ $menuTransition: .4s;
   z-index: 10;
   position: absolute;
   top: 12px;
-  left: 30px;
+  left: 25px;
 }
 
 .openBurger {
@@ -60,6 +60,7 @@ $menuTransition: .4s;
 .C_MainButton span {
   font-size: 16px;
   line-height: 18px;
+  letter-spacing: -0.015em;
 }
 
 @media (min-width: $width-tablet-sm) {

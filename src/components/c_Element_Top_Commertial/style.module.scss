@@ -3,7 +3,7 @@
 $width-sm: 242px;
 $width-pre-md: 209px;
 $width-md: 270px;
-$width-notebook: 297px;
+$width-tablet-lg: 297px;
 $width-desk-sm: 360px;
 $width-desk-md: 398px;
 $width-lg: 398px;
@@ -11,7 +11,7 @@ $width-lg: 398px;
 $height-sm: 95px;
 $height-pre-md: 106px;
 $height-md: 141px;
-$height-notebook: 136px;
+$height-tablet-lg: 136px;
 $height-lg: 164px;
 
 $box-shadow-sm: none;
@@ -29,7 +29,7 @@ $size-lg: 27px;
 $common-padding-sm: 11px 11px 8px 12px;
 $common-padding-pre-md: 14px 11px 13px 17px;
 $common-padding-md: 20px 18px 16px 26px;
-$common-padding-notebook: 19px 18px 16px 22px;
+$common-padding-tablet-lg: 19px 18px 16px 22px;
 $common-padding-desk-sm: 23px 36px 18px 26px;
 $common-padding-lg: 24px 36px 18px 28px;
 
@@ -39,43 +39,44 @@ $border-radius-md-lg: 12px;
 $title-font-size-sm: 14px;
 $title-font-size-pre-md: 13px;
 $title-font-size-md: 15px;
-$title-font-size-notebook: 17px;
+$title-font-size-tablet-lg: 17px;
 $title-font-size-desk-sm: 20px;
 $title-font-size-lg: 21px;
 
 $title-line-height-sm: 14px;
 $title-line-height-pre-md: 16px;
 $title-line-height-md: 22px;
-$title-line-height-notebook: 21px;
+$title-line-height-tablet-lg: 21px;
 $title-line-height-lg: 23px;
 
 $title-margin-sm: 0 0 3px 0;
 $title-margin-pre-md: 0 0 4px 0;
 $title-margin-md: 0 0 7px 0;
-$title-margin-notebook: 0 0 5px 0;
+$title-margin-tablet-lg: 0 0 5px 0;
 $title-margin-desk-sm: 3px 0 9px 0;
 $title-margin-lg: 3px 0 6px 0;
 
 $content-font-size-sm: 12px;
 $content-font-size-pre-md: 11px;
 $content-font-size-md: 13px;
-$content-font-size-notebook: 14px;
+$content-font-size-tablet-lg: 14px;
 $content-font-size-desk-sm: 17px;
 $content-font-size-lg: 18px;
 
 $content-line-height-sm: 13px;
 $content-line-height-pre-md: 12px;
 $content-line-height-md: 14px;
-$content-line-height-notebook: 15px;
+$content-line-height-tablet-lg: 15px;
 $content-line-height-desk-sm: 18px;
 $content-line-height-lg: 19px;
 
 $decor-margin-sm: -1px 9px 0 0;
 $decor-margin-pre-md: 0 7px 0 0;
 $decor-margin-md: 0 14px 0 0;
-$decor-margin-notebook: 0 12px 0 0;
+$decor-margin-tablet-lg: 0 12px 0 0;
 $decor-margin-desk-sm: 0 17px 0 0;
 $decor-margin-lg: 0 14px 0 0;
+
 
 @mixin card(
   $width,
@@ -130,8 +131,19 @@ $decor-margin-lg: 0 14px 0 0;
 }
 
 
-
-
+@include card(  $width: $width-sm,
+              $border: $border-sm,
+              $border-radius: $border-radius-sm,
+              $common-padding: $common-padding-sm,
+              $size: $size-sm,
+              $title-font-size: $title-font-size-sm,
+              $title-line-height: $title-line-height-sm,
+              $content-font-size: $content-font-size-sm,
+              $content-line-height: $content-line-height-sm,
+              $decor-margin: $decor-margin-sm,
+              $box-shadow: $box-shadow-sm,
+              $title-margin: $title-margin-sm,
+              $height: $height-sm);
 
 .root {
   display: flex;
@@ -212,19 +224,19 @@ $decor-margin-lg: 0 14px 0 0;
 }
 
 @media (min-width: $width-notebook) {
-  @include card(  $width: $width-notebook,
+  @include card(  $width: $width-tablet-lg,
   $border: $border-md-lg,
   $border-radius: $border-radius-md-lg,
-  $common-padding: $common-padding-notebook,
+  $common-padding: $common-padding-tablet-lg,
   $size: $size-md,
-  $title-font-size: $title-font-size-notebook,
-  $title-line-height: $title-line-height-notebook,
-  $content-font-size: $content-font-size-notebook,
-  $content-line-height: $content-line-height-notebook,
-  $decor-margin: $decor-margin-notebook,
+  $title-font-size: $title-font-size-tablet-lg,
+  $title-line-height: $title-line-height-tablet-lg,
+  $content-font-size: $content-font-size-tablet-lg,
+  $content-line-height: $content-line-height-tablet-lg,
+  $decor-margin: $decor-margin-tablet-lg,
   $box-shadow: $box-shadow-md-lg,
-  $title-margin: $title-margin-notebook,
-  $height: $height-notebook);
+  $title-margin: $title-margin-tablet-lg,
+  $height: $height-tablet-lg);
 }
 
 @media (min-width: $width-desktop-sm) {

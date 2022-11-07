@@ -10,11 +10,12 @@ $time: 0.7s;
   cursor: pointer;
   border-width: 0;
   font-weight: normal;
-  padding: 9px 22px;
+  padding: 9px 23px 9px 23px;
   background-color: $color-dark-primary;
   border-radius: 21px;
   overflow: hidden;
   transition: background-color 1.3s;
+  letter-spacing: -0.075em;
 
   &:hover {
     background-color: white;

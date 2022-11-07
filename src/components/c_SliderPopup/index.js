@@ -1,14 +1,13 @@
 import React, {useContext, useEffect, useRef, useState} from "react";
 import classes from './style.module.scss';
 import classNames from "classnames";
-import {C_Slider} from "../c_Slider";
 import {C_SliderElementAbout} from "../c_SliderElementAbout";
 import {Context} from "../../library";
 import {sizes} from "../../data/sizes";
 import {C_SliderDeveloper} from "../c_Slider_Developer";
-import {C_SliderC} from "../c_SliderC";
+// import {C_Slider} from "../c_Slider";
 
-export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, popup}) => {
+export const C_SliderPopup = ({className, data, setIsAboutPopupClose, popup}) => {
     const cls = classNames(classes.root, {[className]: className});
     const [width, height] = useContext(Context);
 

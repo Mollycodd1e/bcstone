@@ -12,12 +12,14 @@ import {S_About} from "../src/sections/s_About";
 import {S_Sales} from "../src/sections/s_Sales";
 import {S_FullForm} from "../src/sections/s_FullForm";
 import {S_Popup} from "../src/sections/s_Popup";
+import {S_PopupC} from "../src/sections/s_PopupC";
 import classes from "../src/sections/s_Popup/style.module.scss";
 import {C_FullForm} from "../src/components/c_FullForm";
 import { S_Footer } from "../src/sections/s_Footer";
 import { S_Bottom_Commercial} from '../src/sections/s_Bottom_Commercial';
 import { S_PressCenter } from '../src/sections/s_PressCenter';
 import { convertCompilerOptionsFromJson } from 'typescript';
+import { C_SliderVideoAbout } from '../src/components/c_SliderVideoAbout';
 
 export default function Home() {
     const [width, height] = useWindowSize();
@@ -67,6 +69,7 @@ export default function Home() {
     });
     
     const [isPopupClose, setIsPopupClose] = useState(true);
+    const [isAboutPopupClose, setIsAboutPopupClose] = useState(true);
 
     const mocks = {
         pressCenter: [
@@ -144,7 +147,10 @@ export default function Home() {
                                     <S_Hero data={mainPageData[0]} />
                                     <S_Top_Commercial data={mainPageData[0]} />
                                     <S_Projects data={mainPageData[0]} className={"projects-bg"} />
-                                    <S_About data={mainPageData[0]} width={width} />
+                                    <S_About data={mainPageData[0]} width={width} setIsAboutPopupClose={setIsAboutPopupClose}/>
+                                    {/* <S_PopupC isAboutPopupClose={isAboutPopupClose} setIsAboutPopupClose={setIsAboutPopupClose}> */}
+                                        <C_SliderVideoAbout data={mainPageData[0]} popup={true}/>
+                                    {/* </S_PopupC> */}
                                     <S_Sales data={mainPageData[0]} />
                                     <S_FullForm data={mainPageData[0]} />
                                     <S_Bottom_Commercial data={mainPageData[0]}/>
