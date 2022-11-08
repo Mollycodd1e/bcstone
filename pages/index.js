@@ -12,7 +12,6 @@ import {S_About} from "../src/sections/s_About";
 import {S_Sales} from "../src/sections/s_Sales";
 import {S_FullForm} from "../src/sections/s_FullForm";
 import {S_Popup} from "../src/sections/s_Popup";
-import {S_PopupC} from "../src/sections/s_PopupC";
 import classes from "../src/sections/s_Popup/style.module.scss";
 import {C_FullForm} from "../src/components/c_FullForm";
 import { S_Footer } from "../src/sections/s_Footer";
@@ -148,9 +147,9 @@ export default function Home() {
                                     <S_Top_Commercial data={mainPageData[0]} />
                                     <S_Projects data={mainPageData[0]} className={"projects-bg"} />
                                     <S_About data={mainPageData[0]} width={width} setIsAboutPopupClose={setIsAboutPopupClose}/>
-                                    {/* <S_PopupC isAboutPopupClose={isAboutPopupClose} setIsAboutPopupClose={setIsAboutPopupClose}> */}
+                                    <S_Popup isPopupClose={isAboutPopupClose} setIsPopupClose={setIsAboutPopupClose}>
                                         <C_SliderVideoAbout data={mainPageData[0]} popup={true}/>
-                                    {/* </S_PopupC> */}
+                                    </S_Popup>
                                     <S_Sales data={mainPageData[0]} />
                                     <S_FullForm data={mainPageData[0]} />
                                     <S_Bottom_Commercial data={mainPageData[0]}/>

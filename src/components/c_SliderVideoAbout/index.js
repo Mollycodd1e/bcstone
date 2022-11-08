@@ -28,7 +28,7 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, popup
     }, [width])
 
     const elements = slider.gallery.map((el, i) => {
-        return <C_SliderElementAbout key={i} img={el.src}/>
+        return <C_SliderElementAbout key={i} img={el.src} popup={popup}/>
     })
 
     return (

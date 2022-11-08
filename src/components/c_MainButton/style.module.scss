@@ -87,11 +87,13 @@ $time: 0.7s;
 
 @media (min-width: $width-tablet-sm) {
   .root {
-    padding: 10px 37px;
+    padding: 10px 39px 10px 40px;
+    
 
     & .text {
      font-size: 15px;
      line-height: 16px;
+     letter-spacing: -0.015em;
     }
 
     & .span {

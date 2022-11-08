@@ -10,6 +10,10 @@
   background-size: cover;
 }
 
+.popup {
+  width: 100%;
+}
+
 @media (min-width: $width-mobile-pre-md) {
   .root {
     width: 274px;

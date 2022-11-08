@@ -1,6 +1,7 @@
 @import '../../styles/style';
 
 $widthCard_tab: 352px;
+$widthCard_tab_map: 271px;
 $widthCard_deskMd: 400px;
 $widthCard_desk: 439px;
 $widthCard_desk_map: 348px;
@@ -269,6 +270,23 @@ $pos: -12px;
 @media (min-width: $width-tablet-sm) {
   .root{
     @include tabSm_card;
+
+    // &.map_mod {
+    //   @include card($widthCard: 271px,
+    //   $heightCard: 373px,
+    //   $boxShadow: none,
+    //   $borderRadius: 8px,
+    //   $border: none,
+    //   $paddingCard: 9px 0 0 0,
+    //   $widthPic: 224px,
+    //   $heightPic: 130px,
+    //   $heightLogo: 16px,
+    //   $listTemplateColumns: 1fr,
+    //   $listTemplateColumnsGap: none,
+    //   $listTemplateRows: repeat(4, auto),
+    //   $listTemplateAreas: "cardInfoEl1" "cardInfoEl2" "cardInfoEl3" "cardInfoEl4",
+    // );
+    // }
   }
 
   .С_CardFace div {
