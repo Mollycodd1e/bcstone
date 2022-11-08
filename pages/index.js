@@ -18,7 +18,7 @@ import { S_Footer } from "../src/sections/s_Footer";
 import { S_Bottom_Commercial} from '../src/sections/s_Bottom_Commercial';
 import { S_PressCenter } from '../src/sections/s_PressCenter';
 import { convertCompilerOptionsFromJson } from 'typescript';
-import { C_SliderVideoAbout } from '../src/components/c_SliderVideoAbout';
+import { C_SliderVideoPopup } from '../src/components/c_SliderVideoPopup';
 
 export default function Home() {
     const [width, height] = useWindowSize();
@@ -147,9 +147,11 @@ export default function Home() {
                                     <S_Top_Commercial data={mainPageData[0]} />
                                     <S_Projects data={mainPageData[0]} className={"projects-bg"} />
                                     <S_About data={mainPageData[0]} width={width} setIsAboutPopupClose={setIsAboutPopupClose}/>
-                                    <S_Popup isPopupClose={isAboutPopupClose} setIsPopupClose={setIsAboutPopupClose}>
-                                        <C_SliderVideoAbout data={mainPageData[0]} popup={true}/>
-                                    </S_Popup>
+                                    {/* <S_Popup isPopupClose={isAboutPopupClose} setIsPopupClose={setIsAboutPopupClose}>
+                                        
+                                        <C_SliderPopup data={mainPageData[0]}/>
+                                    </S_Popup> */}
+                                    <C_SliderVideoPopup data={mainPageData[0]} setIsPopupClose={setIsAboutPopupClose} isPopupClose={isAboutPopupClose} popup={true}/>
                                     <S_Sales data={mainPageData[0]} />
                                     <S_FullForm data={mainPageData[0]} />
                                     <S_Bottom_Commercial data={mainPageData[0]}/>

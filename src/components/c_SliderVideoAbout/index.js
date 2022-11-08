@@ -5,8 +5,7 @@ import {C_Slider} from "../c_Slider";
 import {C_SliderElementAbout} from "../c_SliderElementAbout";
 import {Context} from "../../library";
 import {sizes} from "../../data/sizes";
-import {C_SliderDeveloper} from "../c_Slider_Developer";
-import {C_SliderC} from "../c_SliderC";
+import { C_SliderPopup } from "../c_Slider_Popup";
 
 export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, popup}) => {
     const cls = classNames(classes.root, {[className]: className});
@@ -36,14 +35,14 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, popup
              // style={{ height:  `${width < sizes.widthTabletMd ? 190 : heightBlock}px`}}
         >
             {slider.isVisible && !video.isVisible
-                ? <C_SliderDeveloper
+                ? <C_SliderPopup
                     className={classes.С_Slider}
                     isBtnClose={false}
                     items={elements}
                     initialSlide={0}
-                    slidesPerView={width < sizes.widthTabletSm ? 3 : 1}
-                    slidersSpaceBetween={width < sizes.widthMobilePreMd ? -215 : 0}
-                    loop={width < sizes.widthDesktopLg}
+                    slidesPerView={3}
+                    slidersSpaceBetween={-215}
+                    loop={true}
                     />
                 : <div>video</div>
             }

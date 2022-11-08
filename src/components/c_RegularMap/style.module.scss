@@ -67,10 +67,18 @@
 //  align-items: center;
 //}
 
-@media(min-width: 768px) {
+@media(min-width: $width-tablet-sm) {
+  .root {
+    border-radius: 15px;
+    padding: 0 19px 40px 19px;
+    overflow: unset;
+    overflow-x: hidden;
+    margin-bottom: 26px;
+  }
+
   .wrapperSlider {
     position: absolute;
-    top: -39px;
+    top: 0;
     left: -30px;
     right: 0;
     bottom: 0;
@@ -82,5 +90,9 @@
     width: 100vw;
     flex-direction: column;
     overflow: hidden;
+  }
+
+  .mapSlider {
+    overflow: visible;
   }
 }

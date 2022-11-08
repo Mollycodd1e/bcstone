@@ -1,16 +1,58 @@
 @import '../../styles/style';
 
+.popupWrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  backdrop-filter: blur(30px);
+  --webkit-backdrop-filter: blur(30px);
+  background-color: rgba(77, 77, 77, 0.85);
+}
+
 .root {
+  position: relative;
   width: 100vw;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 18px;
+  top: calc(26% - 3px);
+  left: 50%;
+  margin-left: -50vw;
 }
 
-.С_Slider {
-  //height: 100%;
+.shownPopup {
+  z-index: 100;
+}
+
+.closeIcon {
+  width: 30px;
+  height: 30px;
+  background-image: url("../../img/s_close_icon.svg");
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  right: 10px;
+  top: calc(20% - 13px);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.Popup_Slider {
+  width: 100%;
+  .swiperSlide {
+    width: 100%;
+  }
+
+  & > div {
+    padding-bottom: 3.2rem;
+  }
 }
 
 @media (min-width: $width-mobile-pre-md) {
