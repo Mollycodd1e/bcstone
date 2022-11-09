@@ -3,10 +3,21 @@
 .root {
   min-width: 320px;
   min-height: 215px;
+  height: 67.2vw;
   width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  // max-width: 600px;
+  max-height: 400px;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+}
+
+.root span {
+  //margin: 0 auto !important;
+  //max-width: 600px;
+}
+
+.root img {
 }
 
 @media (min-width: $width-mobile-pre-md) {
@@ -18,12 +29,16 @@
 
 @media (min-width: $width-tablet-sm) {
   .root {
-    //min-width: 100%;
-    //min-height: 218px;
-    //height: 100%;
-    width: 100%;
-    height: 100%;
-    border-radius: unset;
+    min-width: 580px;
+    //min-height: 427px;
+    height: 55.6vw;
+    // max-width: 600px;
+    max-height: 500px;
+    border-radius: 20px;
+  }
+
+  .root img {
+    border-radius: 20px;
   }
 }
 

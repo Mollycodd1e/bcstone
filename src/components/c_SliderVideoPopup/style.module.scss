@@ -46,8 +46,11 @@
 
 .Popup_Slider {
   width: 100%;
+  height: 100%;
+  max-width: 100vw;
+
   .swiperSlide {
-    width: 100%;
+    //width: 100%;
   }
 
   & > div {
@@ -66,28 +69,30 @@
   .root {
     //width: 369px;
     //height: 218px;
-    min-width: 295px;
-    width: calc(100vw - 631px);
-    max-width: 441px;
-    min-height: 174px;
-    height: calc(100vw - 782px);
-    max-height: 261px;
-    //border-radius: 10px;
+    min-width: 500px;
+    width: calc(100vw - 168px);
+    // max-width: 441px;
+    // min-height: 174px;
+    // height: calc(100vw - 782px);
+    // max-height: 261px;
+    left: unset;
+    margin: 0 auto;
     margin-bottom: unset;
     overflow: unset;
+    border-radius: 20px;
   }
 
-  .С_Slider {
-    //width: 50vw;
+  .Popup_Slider {
+    margin-right: 16px;
+  }
 
-    & div[class*="swiper-container"] {
-      padding-bottom: unset;
-      border-radius: 15px;
-    }
-
-    & div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
-      display: none;
-    }
+  .closeIcon {
+    width: 46px;
+    height: 46px;
+    background-image: url("../../img/m_close_icon.svg");
+    background-size: 46px 46px;
+    right: 28px;
+    top: calc(26% - 3px);
   }
 }
 

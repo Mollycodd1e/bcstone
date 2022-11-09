@@ -5,7 +5,7 @@ import {C_Slider} from "../c_Slider";
 import {C_SliderElementAbout} from "../c_SliderElementAbout";
 import {Context} from "../../library";
 import {sizes} from "../../data/sizes";
-import { C_SliderPopup } from "../c_Slider_Popup";
+import { C_SliderDeveloper } from "../c_Slider_Developer";
 
 export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, popup}) => {
     const cls = classNames(classes.root, {[className]: className});
@@ -35,7 +35,7 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, popup
              // style={{ height:  `${width < sizes.widthTabletMd ? 190 : heightBlock}px`}}
         >
             {slider.isVisible && !video.isVisible
-                ? <C_SliderPopup
+                ? <C_SliderDeveloper
                     className={classes.С_Slider}
                     isBtnClose={false}
                     items={elements}

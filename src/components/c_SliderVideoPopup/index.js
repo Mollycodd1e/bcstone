@@ -3,7 +3,7 @@ import classes from './style.module.scss';
 import classNames from "classnames";
 import {Context} from "../../library";
 import {sizes} from "../../data/sizes";
-import {C_SliderDeveloper} from "../c_Slider_Developer";
+import {C_SliderPopup} from "../c_Slider_Popup";
 import { C_SliderPopupElement } from "../c_SliderPopupElement";
 
 export const C_SliderVideoPopup = ({className, data, isPopupClose, setIsPopupClose, popup}) => {
@@ -36,12 +36,13 @@ export const C_SliderVideoPopup = ({className, data, isPopupClose, setIsPopupClo
                  // style={{ height:  `${width < sizes.widthTabletMd ? 190 : heightBlock}px`}}
             >
                 {slider.isVisible && !video.isVisible
-                    ? <C_SliderDeveloper
+                    ? <C_SliderPopup
                         className={classes.Popup_Slider}
                         isBtnClose={false}
                         items={elements}
                         initialSlide={0}
                         slidesPerView={1}
+                        pagination={width < sizes.widthTabletSm ? {"clickable": true} : false}
                         slidersSpaceBetween={0}
                         loop={width < sizes.widthDesktopLg}
                         />

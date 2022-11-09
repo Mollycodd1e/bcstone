@@ -5,10 +5,11 @@ import classNames from "classnames";
 
 import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper';
 import {Swiper, SwiperSlide} from "swiper/swiper-react.cjs.js";
+import { sizes } from "../../data/sizes";
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
-export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = -225, slidesPerView = 1, loop}) => {
+export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, pagination, slidersSpaceBetween = -225, slidesPerView = 1, loop}) => {
     const cls = classNames(classes.root, { [className]: className });
     const [selectedSlide, setSelectedSlide] = useState(0);
     const [my_swiper, set_my_swiper] = useState({});
@@ -25,10 +26,6 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, onBtn
         )
     }
 
-    // autoplay={{
-    //     delay: 10000,
-    //         disableOnInteraction: false,
-    // }}
     return (
         <div className={cls}>
             <button className={classes.swiper_button_prev} onClick={() => (my_swiper.slidePrev(), slide > 0 ? setSlide(slide - 1) : setSlide(slide))}
@@ -37,7 +34,7 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, onBtn
                 slidesPerView={slidesPerView}
                 spaceBetween={slidersSpaceBetween}
                 centeredSlides={true}
-                pagination={{"clickable": true}}
+                pagination={pagination}
                 className={classNames(classes.swiper, {[classes.swiperMode]: isBtnClose})}
                 initialSlide={Number(initialSlide) || 0}
                 onSlideChange={
