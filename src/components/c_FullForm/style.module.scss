@@ -268,12 +268,12 @@
   }
 
   .frame {
-    padding: 57px 62px 57px 53px;
+    padding: 57px 65px 69px 50px;
     display: grid;
-    //grid-template-columns: minmax(322px, 465px) 390px;
+    grid-template-columns: 250px 290px;
     grid-template-rows: 1fr;
     grid-template-areas: "titles fields";
-    grid-column-gap: 58px;
+    grid-column-gap: 52px;
     align-items: flex-start;
     justify-content: center;
     position: unset;
@@ -298,7 +298,7 @@
     font-size: 30px;
     line-height: 34px;
     letter-spacing: unset;
-    margin: 0 5px 0 auto;
+    margin: 0 10px 0 auto;
     position: relative;
 
     &::before {
@@ -321,6 +321,8 @@
     font-size: 16px;
     line-height: 22px;
     margin-bottom: 20px;
+    max-width: 220px;
+    margin-left: 3px;
   }
 
   .wrapperInputCommon {
@@ -342,6 +344,9 @@
 
   .checkboxWrapper {
     padding-left: 25px;
+    width: 100%;
+    min-width: 340px;
+    // max-width: 340px;
   }
 
   .checkboxLabel {

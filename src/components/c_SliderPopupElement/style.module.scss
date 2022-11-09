@@ -2,12 +2,11 @@
 
 .root {
   min-width: 320px;
-  height: 215px;
+  min-height: 215px;
   width: 100%;
-  max-width: 500px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 @media (min-width: $width-mobile-pre-md) {

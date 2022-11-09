@@ -40,7 +40,7 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, popup
                     isBtnClose={false}
                     items={elements}
                     initialSlide={0}
-                    slidesPerView={3}
+                    slidesPerView={width < sizes.widthTabletSm ? 3 : 1}
                     slidersSpaceBetween={width < sizes.widthMobilePreMd ? -215 : width < sizes.widthTabletSm ? -120 : 0}
                     loop={true}
                     />
