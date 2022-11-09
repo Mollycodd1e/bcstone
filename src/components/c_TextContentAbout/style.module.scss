@@ -22,6 +22,8 @@
   line-height: 17px;
   text-align: center;
   margin-bottom: 16px;
+  width: 100%;
+  max-width: 240px;
 }
 
 .plans {
@@ -29,6 +31,8 @@
   line-height: 13px;
   text-align: center;
   margin-bottom: 24px;
+  width: 100%;
+  max-width: 240px;
 }
 
 .C_MainButton {
@@ -37,7 +41,7 @@
 
 @media (min-width: $width-mobile-pre-md) {
   .root {
-    padding: 0 0 10px 0;
+    padding: 0 0 24px 0;
   }
 
   .stoneHedgeLogo {
@@ -56,6 +60,7 @@
     font-size: 13px;
     line-height: 14px;
     margin-bottom: 24px;
+    max-width: 300px;
   }
 }
 

@@ -41,7 +41,7 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, popup
                     items={elements}
                     initialSlide={0}
                     slidesPerView={3}
-                    slidersSpaceBetween={-215}
+                    slidersSpaceBetween={width < sizes.widthMobilePreMd ? -215 : width < sizes.widthTabletSm ? -120 : 0}
                     loop={true}
                     />
                 : <div>video</div>
