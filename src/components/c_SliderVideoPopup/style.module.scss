@@ -75,6 +75,7 @@
     // min-height: 174px;
     // height: calc(100vw - 782px);
     // max-height: 261px;
+    max-width: 720px;
     left: unset;
     margin: 0 auto;
     margin-bottom: unset;
@@ -91,7 +92,7 @@
     height: 46px;
     background-image: url("../../img/m_close_icon.svg");
     background-size: 46px 46px;
-    right: 28px;
+    right: calc(4% - 6px);
     top: calc(26% - 3px);
   }
 }
@@ -99,6 +100,13 @@
 @media (min-width: $width-tablet-md) {
   .root {
     min-width: 369px;
+  }
+
+  .closeIcon {
+    width: 52px;
+    height: 52px;
+    background-size: 52px 52px;
+    right: calc(7% - 13px);
   }
 }
 
