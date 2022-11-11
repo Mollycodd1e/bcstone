@@ -50,14 +50,13 @@
 
 @media (min-width: $width-desktop-md) {
   .root {
-    width: 694px;
-    height: 492px;
+    max-height: 707px;
   }
 }
 
 @media (min-width: $width-desktop-lg) {
-  .root {
-    width: 694px;
-    height: 492px;
-  }
+  // .root {
+  //   width: 694px;
+  //   height: 492px;
+  // }
 }

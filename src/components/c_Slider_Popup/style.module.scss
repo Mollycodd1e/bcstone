@@ -244,16 +244,17 @@
   }
 
   @mixin swiperButton {
+    right: calc( 6% - 165px );
   }
 
   .swiper_button_prev {
     @include swiperButton;
-    top: calc(90% - 18px);
+    top: calc(88% - 18px);
   }
  
   .swiper_button_next {
     @include swiperButton;
-    top: calc(80% - 17px);
+    top: calc(73% - 17px);
   }
 }
 
@@ -279,80 +280,81 @@
 
 @media (min-width: $width-desktop-md) {
   .numbersWrapper {
-    top: calc(50% - 18px);
+    position: absolute;
+    top: calc(50% - 35px) !important;
+    left: -72px !important;
   }
 
   @mixin swiperButton {
-     bottom: -78px;
-     right: 20px;
+    right: calc( 6% - 172px );
   }
 
   .swiper_button_prev {
     @include swiperButton;
-    margin-left: -10px;
+    top: calc(90% - 11px);
   }
-
+ 
   .swiper_button_next {
     @include swiperButton;
-    left: 311px;
+    top: calc(80% - 19px);
   }
 }
 
 @media (min-width: $width-desktop-lg) {
 
-  .numbersWrapper {
-    position: absolute;
-    top: calc(50% - 52px);
-    left: 10px;
-  }
+  // .numbersWrapper {
+  //   position: absolute;
+  //   top: calc(50% - 52px);
+  //   left: 10px;
+  // }
 
-  @mixin swiperButton {
-    position: relative;
-    display: block;
-    min-width: 52px;
-    width: 52px;
-    height: 52px;
-    margin: auto 0;
-    //top: -15px;
-    bottom: -300px;
-    border-radius: 50%;
-    border: none;
-    background-repeat: no-repeat;
-    background-size: 52px 52px;
-    background-position: center center;
-    background-color: transparent !important;
-    cursor: pointer;
-    transition: 0.4s;
+  // @mixin swiperButton {
+  //   position: relative;
+  //   display: block;
+  //   min-width: 52px;
+  //   width: 52px;
+  //   height: 52px;
+  //   margin: auto 0;
+  //   //top: -15px;
+  //   bottom: -300px;
+  //   border-radius: 50%;
+  //   border: none;
+  //   background-repeat: no-repeat;
+  //   background-size: 52px 52px;
+  //   background-position: center center;
+  //   background-color: transparent !important;
+  //   cursor: pointer;
+  //   transition: 0.4s;
 
-  }
+  // }
 
-  .swiper_button_prev {
-    @include swiperButton;
+  // .swiper_button_prev {
+  //   @include swiperButton;
 
-    left: calc( 50% - 74px );
-    background-image: url('../../img/backBtnTablet.svg');
+  //   left: calc( 50% - 74px );
+  //   background-image: url('../../img/backBtnTablet.svg');
 
-    &:disabled {
-      opacity: 0.5;
-    }
+  //   &:disabled {
+  //     opacity: 0.5;
+  //   }
 
-    &:hover {
-      background-image: url('../../img/backBtnHover.svg');
-    }
-  }
+  //   &:hover {
+  //     background-image: url('../../img/backBtnHover.svg');
+  //   }
+  // }
 
-  .swiper_button_next {
-    @include swiperButton;
+  // .swiper_button_next {
+  //   @include swiperButton;
 
-    right: calc( 50% - 74px );
-    background-image: url('../../img/forwardBtnTablet.svg');
+  //   right: calc( 50% - 74px );
+  //   background-image: url('../../img/forwardBtnTablet.svg');
 
-    &:disabled {
-      opacity: 0.5;
-    }
+  //   &:disabled {
+  //     opacity: 0.5;
+  //   }
 
-    &:hover {
-      background-image: url('../../img/forwardBtnHover.svg');
-    }
-  }
+  //   &:hover {
+  //     background-image: url('../../img/forwardBtnHover.svg');
+  //   }
+  // }
 }

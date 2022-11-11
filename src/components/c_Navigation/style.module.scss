@@ -191,6 +191,12 @@ $menuTransition: .4s;
   }
 }
 
+@media (min-width: $width-desktop-md) {
+  .C_Logo {
+    margin: 0 150px 0 0;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .C_Logo {
     margin: 0 360px 0 0;

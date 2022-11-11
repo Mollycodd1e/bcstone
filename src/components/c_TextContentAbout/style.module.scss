@@ -90,6 +90,10 @@
     line-height: 14px;
     text-align: left;
   }
+
+  .C_MainButton {
+    display: none;
+  }
 }
 
 @media (min-width: $width-tablet-md) {
@@ -108,9 +112,11 @@
     font-size: 12px;
     line-height: 13px;
     margin-bottom: 19px;
+    max-width: 290px;
   }
 
   .C_MainButton {
+    display: block;
     margin-top: auto;
   }
 }

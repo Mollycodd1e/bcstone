@@ -30,6 +30,8 @@
     // padding-left: 85px;
     //justify-items: center;
     grid-column-gap: 80px;
+    padding-left: 9px;
+    padding-right: 53px;
   }
 }
 
@@ -38,12 +40,13 @@
     grid-template-columns: auto minmax(auto, 480px);
     grid-column-gap: 55px;
     padding-left: 50px;
+    padding-right: 0;
   }
 }
 
 @media (min-width: $width-desktop-sm) {
   .root {
-    grid-template-columns: auto minmax(auto, 520px);
+    grid-template-columns: auto minmax(auto, 560px);
     grid-column-gap: 65px;
     padding-left: 58px;
   }
@@ -52,7 +55,7 @@
 @media (min-width: $width-desktop-md) {
   .root {
     grid-column-gap: 70px;
-    padding-left: 40px;
+    padding-left: 48px;
   }
 }
 
