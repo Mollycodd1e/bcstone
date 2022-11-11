@@ -35,8 +35,9 @@
 
 @media (min-width: $width-notebook) {
   .root {
-    grid-column-gap: 56px;
-    padding-left: 47px;
+    grid-template-columns: auto minmax(auto, 480px);
+    grid-column-gap: 55px;
+    padding-left: 50px;
   }
 }
 

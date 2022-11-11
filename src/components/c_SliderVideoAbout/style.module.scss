@@ -58,12 +58,13 @@
 
 @media (min-width: $width-notebook) {
   .root {
-    min-width: 441px;
+    min-width: 440px;
     width: calc(100vw - 759px);
-    max-width: 493px;
+    //max-width: 473px;
     min-height: 261px;
     height: calc(100vw - 952px);
     max-height: 349px;
+    padding-left: 0px;
   }
 
   .С_Slider {
