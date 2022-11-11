@@ -36,6 +36,17 @@
   }
 }
 
+@media (min-width: $width-notebook) {
+  .root {
+    max-height: 510px;
+  }
+}
+
+@media (min-width: $width-desktop-sm) {
+  .root {
+    max-height: 617px;
+  }
+}
 
 @media (min-width: $width-desktop-md) {
   .root {

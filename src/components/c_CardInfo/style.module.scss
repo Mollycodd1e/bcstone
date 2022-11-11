@@ -114,6 +114,7 @@
 
 @media(min-width: $width-notebook) {
   .root {
+    width: inherit;
     margin: 34px 0 0 0;
   }
 }
@@ -127,7 +128,8 @@
   .list {
     padding: 0 0 0 28px;
     margin: 20px 0 0 0;
-    column-gap: 40px !important;
+    column-gap: 46px !important;
+    width: fit-content;
   }
   
   .item {

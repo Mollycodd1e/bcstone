@@ -149,6 +149,11 @@
     left: -44px;
   }
 
+  .swiperSlide {
+    width: 100% !important;
+    max-width: unset;
+  }
+
   @mixin swiperButton {
      position: absolute;
      display: block;

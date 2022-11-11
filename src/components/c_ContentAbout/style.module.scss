@@ -43,8 +43,9 @@
 
 @media (min-width: $width-desktop-sm) {
   .root {
-    grid-column-gap: 66px;
-    padding-left: 44px;
+    grid-template-columns: auto minmax(auto, 520px);
+    grid-column-gap: 65px;
+    padding-left: 58px;
   }
 }
 

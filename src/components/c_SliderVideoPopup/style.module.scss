@@ -71,7 +71,7 @@
     //height: 218px;
     min-width: 500px;
     width: calc(100vw - 168px);
-    // max-width: 441px;
+    max-width: 441px;
     // min-height: 174px;
     // height: calc(100vw - 782px);
     // max-height: 261px;
@@ -112,26 +112,51 @@
 
 @media (min-width: $width-notebook) {
   .root {
-    min-width: 441px;
-    width: calc(100vw - 759px);
-    max-width: 493px;
-    min-height: 261px;
-    height: calc(100vw - 952px);
-    max-height: 349px;
+    min-width: 902px;
+    //width: calc(100vw - 159px);
+    max-width: 1092px;
+    min-height: 650px;
+    height: unset;
+    max-height: 650px;
   }
 
   .С_Slider {
     //width: 50vw;
   }
+
+  .Popup_Slider {
+    margin-right: 39px;
+  }
+
+  .closeIcon {
+    width: 52px;
+    height: 52px;
+    background-size: 52px 52px;
+    right: calc(6% - 15px);
+  }
 }
 
 @media (min-width: $width-desktop-sm) {
   .root {
-    width: 694px;
+    min-width: 1092px;
+    //width: calc(100vw - 159px);
+    max-width: 1092px;
+    min-height: 617px;
+    height: unset;
+    max-height: 650px;
+    top: calc(20% - 3px);
   }
 
-  .С_Slider {
-    //height: unset;
+  .Popup_Slider {
+    margin-right: 24px;
+  }
+
+  .closeIcon {
+    width: 52px;
+    height: 52px;
+    background-size: 52px 52px;
+    right: calc(7% - 12px);
+    top: calc(21% - 13px);   
   }
 }
 

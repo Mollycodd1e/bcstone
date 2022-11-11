@@ -162,16 +162,18 @@
     font-size: 21px;
     line-height: 24px;
     margin:0 0 30px 0;
+    max-width: 100%;
   }
 
   .plans {
     font-size: 17px;
     line-height: 18px;
+    max-width: 100%;
   }
 
   .C_MainButton {
-    margin: auto 0 -1px 3px;
-    padding: 11px 37px 10px;
+    margin: auto 0 -1px 1px;
+    padding: 11px 42px 10px;
   }
 }
 
