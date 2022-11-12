@@ -31,11 +31,12 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, popup
     })
 
     return (
-        <div className={cls} ref={divBlock} onClick={() => popup ? null : setIsAboutPopupClose(false)}
+        <div className={cls} ref={divBlock}
              // style={{ height:  `${width < sizes.widthTabletMd ? 190 : heightBlock}px`}}
         >
             {slider.isVisible && !video.isVisible
                 ? <C_SliderDeveloper
+                    onClick={() => popup ? null : setIsAboutPopupClose(false)}
                     className={classes.С_Slider}
                     isBtnClose={false}
                     items={elements}

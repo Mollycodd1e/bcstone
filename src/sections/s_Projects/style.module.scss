@@ -509,10 +509,12 @@
 
 @media (min-width: $width-desktop-lg) {
   .root {
-    padding-bottom: 95px;
+    margin: 89px 66px 70px;
   }
 
   .sub_title {
+    margin: 0 0 58px -50px;
+
     & span {
       font-size: 31px;
       line-height: 31px;
@@ -532,7 +534,7 @@
   }
 
   .ProjectTitle {
-    margin: 75px 0 50px -30px;
+    margin: 57px 0 13px -55px;
 
     & .bg_text,
     & .wrap_title {
@@ -545,12 +547,14 @@
     }
 
     & .bg_text {
-      margin: 0 0 -60px -721px !important;
+      margin: 0 0 -60px -681px !important;
     }
   }
 
-  .C_MainButton {
-    margin-top: 15px;
+  .root .C_MainButton {
+    margin-top: 40px;
+    padding: 12px 45px 12px 45px;
+    margin-left: -2px;
   }
 
   .mapView {

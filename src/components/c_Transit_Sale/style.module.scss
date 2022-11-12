@@ -425,7 +425,7 @@
 
 @media (min-width: $width-desktop-lg) {
   .root {
-
+    padding: 60px 0 53px 0;
     grid-template-columns: repeat(2, auto);
     grid-template-areas:  "picture title"
                           "picture link";

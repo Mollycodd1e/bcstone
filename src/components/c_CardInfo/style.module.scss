@@ -187,6 +187,13 @@
     }
   }
 }
+
+@media(min-width: $width-desktop-lg) {
+  .root {
+    margin: 39px 0 0 0;
+    padding: 0 0 0 33px;
+  }
+}  
 //
 //.title, .list {
 //  padding-left: 3.1rem;

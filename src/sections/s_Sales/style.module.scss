@@ -306,7 +306,12 @@
 
 @media (min-width: $width-desktop-lg) {
   .root {
-    padding: 40px 65px;
+    padding: 40px 212px;
+    margin-bottom: 10px;
+  }
+
+  .wrapRoot {
+    padding-top: 56px;
   }
 
   .wrapper {

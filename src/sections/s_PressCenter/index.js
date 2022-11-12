@@ -41,7 +41,7 @@ export const S_PressCenter = ({className, data}) => {
                         (window.innerWidth >= sizes.widthNotebook && window.innerWidth < sizes.widthDesktopSm) ? -520 :
                         (window.innerWidth >= sizes.widthDesktopSm && window.innerWidth < sizes.widthDesktopMd) ? 15 :
                         (window.innerWidth >= sizes.widthDesktopMd && window.innerWidth < sizes.widthDesktopLg) ? -30 :
-                         window.innerWidth >= sizes.widthDesktopLg ? 0 : -170}
+                         window.innerWidth >= sizes.widthDesktopLg ? -15 : -170}
                         slidesPerView = {3} press={true}/>
                 </div>
                 {/* <div className={classes.btnWrapper}>

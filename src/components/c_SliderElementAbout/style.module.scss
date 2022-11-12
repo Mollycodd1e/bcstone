@@ -45,7 +45,7 @@
 
 @media (min-width: $width-desktop-lg) {
   .root {
-    width: 694px;
+    width: 694px !important;
     height: 492px;
   }
 }

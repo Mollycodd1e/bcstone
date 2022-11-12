@@ -283,11 +283,11 @@
 
 @media (min-width: $width-desktop-lg) {
   .root {
-    padding: 0 65px;
+    padding: 27px 66px 0 66px;
   }
 
   .frame {
-    //margin: 75px 0 50px -30px;
+    padding: 69px 0 141px 0;
 
     & .bg_text,
     & .title {
@@ -296,11 +296,15 @@
     }
 
     & .title {
-      margin: 0 0 80px -583px !important;
+      margin: 0 0 85px -450px !important;
     }
 
     & .bg_text {
-      margin: 0 0 -60px -1155px !important;
+      margin: 0 0 -60px -1025px !important;
+    }
+
+    &::before {
+      right: 243px;
     }
   }
 }

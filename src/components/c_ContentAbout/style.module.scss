@@ -61,7 +61,8 @@
 
 @media (min-width: $width-desktop-lg) {
   .root {
-    grid-column-gap: 95px;
-    grid-template-rows: 573px;
+    padding: 0 260px 0 100px;
+    grid-column-gap: 94px;
+    grid-template-columns: auto auto;
   }
 }

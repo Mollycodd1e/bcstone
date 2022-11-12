@@ -927,9 +927,9 @@ $existTimer: 2.5s;
   }
 
   .mainTitle {
-    width: 650px;
+    width: 640px;
     height: 149px;
-    background-size: 650px 149px;
+    background-size: 640px 149px;
     margin: 0;
     z-index: 10;
   }
@@ -942,12 +942,7 @@ $existTimer: 2.5s;
 
     &:after {
       right: -9px;
-      top: -260px;
-      width: 220px;
-      height: 16px;
-      background-image: url('../../img/s_hero_decor_1.svg');
-      background-size: 220px 16px;
-      animation-name: helperAnimaAfterDesktop;
+      top: -252px;
     }
   }
 
@@ -967,7 +962,7 @@ $existTimer: 2.5s;
 
   .mainButton {
     margin: auto 0 0 5px;
-    padding: 12px 47px 12px 47px;
+    padding: 12px 45px 12px 46px;
     letter-spacing: -0.03em;
   }
 }

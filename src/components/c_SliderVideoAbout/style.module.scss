@@ -97,9 +97,7 @@
 @media (min-width: $width-desktop-lg) {
   .root {
     width: 694px;
-  }
-
-  .С_Slider {
-    //height: unset;
+    min-width: 694px;
+    max-height: 492px;
   }
 }

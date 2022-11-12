@@ -173,14 +173,24 @@
   }
 
   .closeIcon {
-    width: 52px;
-    height: 52px;
-    background-size: 52px 52px;
     right: calc(7% - 23px);
     top: calc(13% - 12px);   
   }
 }
 
 @media (min-width: $width-desktop-lg) {
+  .root {
+    min-width: 1253px;
+    max-height: 887px;
+    top: calc(1% - 2px);
+  }
 
+  .Popup_Slider {
+    margin-right: 46px;
+  }
+
+  .closeIcon {
+    right: calc(6% - 26px);
+    top: calc(2% - 11px);   
+  }
 }

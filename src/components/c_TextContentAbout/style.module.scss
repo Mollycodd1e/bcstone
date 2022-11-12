@@ -216,8 +216,7 @@
 
 @media (min-width: $width-desktop-lg) {
   .root {
-    align-items: flex-start;
-    padding: 84px 0 0;
+    padding: 55px 0 0;
   }
 
   .stoneHedgeLogo {
@@ -229,10 +228,16 @@
   .description {
     font-size: 23px;
     line-height: 24px;
+    margin:0 0 32px 0;
   }
 
   .plans {
     font-size: 18px;
     line-height: 19px;
+  }
+
+  .C_MainButton {
+    margin: auto 0 108px 0px;
+    padding: 12px 47px 12px 46px;
   }
 }

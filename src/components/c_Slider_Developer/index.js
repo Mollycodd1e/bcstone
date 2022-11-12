@@ -8,7 +8,7 @@ import {Swiper, SwiperSlide} from "swiper/swiper-react.cjs.js";
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
-export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = -225, slidesPerView = 3, loop}) => {
+export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = -225, slidesPerView = 3, loop, onClick}) => {
     const cls = classNames(classes.root, { [className]: className });
     const [selectedSlide, setSelectedSlide] = useState(0);
     const [my_swiper, set_my_swiper] = useState({});
@@ -53,7 +53,8 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
                     set_my_swiper(evt)
                 }}
                 loop={loop}
-            >
+                onClick={onClick}
+            >   
                 {items.map((item, i) => {
                     return (
                         <SwiperSlide className = {classes.swiperSlide} key={i}>

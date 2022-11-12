@@ -685,25 +685,33 @@
 
 @media (min-width: $width-desktop-lg) {
   .root {
-    padding: 0 65px;
+    padding: 0 66px;
+    margin-top: 46px;
   }
 
   .title {
     font-size: 50px;
     line-height: 54px;
+
+    &::before {
+      width: 195px;
+      background-image: url('../../img/form-line-1920.png');
+      background-size: 195px 16px;
+      left: -222px;
+      bottom: 38px;
+    }
   }
 
   .description {
     font-size: 18px;
     line-height: 18px;
-    margin-bottom: 19px;
+    margin: 0 0 19px -293px;
   }
 
   .frame {
     //border-radius: 20px;
-    padding: 134px 394px 125px 203px;
-    display: grid;
-    grid-template-columns: 691px 390px;
+    padding: 136px 185px 127px 285px;
+    //grid-template-columns: 691px 390px;
     grid-column-gap: 112px;
     justify-content: center;
   }
