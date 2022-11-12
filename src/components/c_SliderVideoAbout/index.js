@@ -7,7 +7,7 @@ import {Context} from "../../library";
 import {sizes} from "../../data/sizes";
 import { C_SliderDeveloper } from "../c_Slider_Developer";
 
-export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, popup}) => {
+export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, popup, setIsVideo}) => {
     const cls = classNames(classes.root, {[className]: className});
     const [width, height] = useContext(Context);
 
@@ -30,9 +30,12 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, popup
         return <C_SliderElementAbout key={i} img={el.src} popup={popup}/>
     })
 
+    video.isVisible ? setIsVideo(true) : setIsVideo(false);
+
     return (
-        <div className={cls} ref={divBlock}
-             // style={{ height:  `${width < sizes.widthTabletMd ? 190 : heightBlock}px`}}
+        // <div className={cls} ref={divBlock}
+        <div className={classNames(classes.root, {[classes.videoWrapper]: !slider.isVisible && video.isVisible})} ref={divBlock}
+        onClick={() => popup ? null : setIsAboutPopupClose(false)} // style={{ height:  `${width < sizes.widthTabletMd ? 190 : heightBlock}px`}}
         >
             {slider.isVisible && !video.isVisible
                 ? <C_SliderDeveloper
@@ -45,7 +48,9 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, popup
                     slidersSpaceBetween={width < sizes.widthMobilePreMd ? -215 : width < sizes.widthTabletSm ? -120 : 0}
                     loop={true}
                     />
-                : <div>video</div>
+                :  (video.isVisible ? setIsVideo(true) : setIsVideo(false),
+                        <iframe  src={'https://www.youtube.com/embed/watch?v=t7BmHgAsodU&list=RDuL68nVQkbL4&index=3'} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>)
+
             }
         </div>
     )

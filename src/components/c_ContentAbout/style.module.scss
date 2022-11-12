@@ -23,6 +23,10 @@
     justify-content: center;
     grid-column-gap: 75px;
   }
+
+  .video {
+    grid-column-gap: 24px;
+  }
 }
 
 @media (min-width: $width-tablet-md) {
@@ -32,6 +36,12 @@
     grid-column-gap: 80px;
     padding-left: 9px;
     padding-right: 53px;
+  }
+
+  .video {
+    grid-column-gap: 80px;
+    padding-left: 13px;
+    grid-template-rows: minmax(218px, auto);
   }
 }
 
@@ -49,6 +59,10 @@
     grid-template-columns: auto minmax(auto, 560px);
     grid-column-gap: 65px;
     padding-left: 58px;
+  }
+
+  .video {
+    padding-left: 100px;
   }
 }
 
