@@ -2,12 +2,13 @@ import classes from './style.module.scss';
 import classNames from "classnames";
 import Link from "next/link";
 
-export const C_Transit_Sale = ({className, url, name, type, picture }) => {
+export const C_Transit_Sale = ({className, url, name, type, picture ,setIsHover, number, setIsHoveredItem}) => {
     const cls = classNames(classes.root, {[classes.reverse]: type === "retail", [className]: className });
     return (
         <div
             className={cls}
-            onMouseOver={() => {}}
+            // onMouseOver={() => {}}
+            onMouseOver={() => (setIsHover(true), setIsHoveredItem(number))} onMouseOut={() => setIsHover(false)}
         >
             <div className={classes.picture}
                  style={{backgroundImage:  `url("${picture.src}")`}}/>

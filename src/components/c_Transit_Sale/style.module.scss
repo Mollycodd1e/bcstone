@@ -332,6 +332,15 @@
 
       & .link {
         justify-self: center;
+
+        & svg {
+          opacity: 0;
+        }
+
+        & span {
+          opacity: 0;
+          left: -90px;
+        }
       }
 
       & .picture {
@@ -344,19 +353,9 @@
         margin-right: -18px;
       }
 
-      &:before {
+      &::before {
         display: none;
       }
-    }
-
-    &:before {
-      content: '';
-      position: absolute;
-      width: 1px;
-      height: 267px;
-      background-color: #E8E8E8;
-      left: 559px;
-      top: 64px;
     }
   }
 
@@ -377,6 +376,15 @@
     opacity: 0;
     transition: .5s;
     align-self: flex-start;
+
+    & svg {
+      opacity: 0;
+    }
+
+    & span {
+      opacity: 0;
+      left: -90px;
+    }
   }
 
   .buttonText {
