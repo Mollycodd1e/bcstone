@@ -124,13 +124,19 @@
       flex-grow: 1;
       &:hover {
         
+        &::before {
+          display: none;
+        }
+
         & div[class*="picture"] {
           opacity: 1;
-          transform: scale(1.1) translateX(70px);
+          transform: scale(1.2) translateX(50px) translateY(8px);
         }
 
         & > a[class*="link"] {
           opacity: 1;
+          margin-right: -360px;
+          margin-bottom: -8px;
 
           & svg {
             margin-top: -7px;
@@ -146,14 +152,14 @@
           font-size: 110px;
           line-height: 118px;
           color: #2C2D2D;
-          transform: translateX(140px);
+          transform: translateX(195px);
         }
 
         & + div {
           transition: all .6s;
           flex-grow: 1;
 
-          transform: translateX(180px);
+          transform: translateX(202px) translateY(18px);
           & div[class*="picture"] {
             opacity: 0;
           }
@@ -171,8 +177,12 @@
       transition: all .6s;
       flex-grow: 1;
 
+        &::before {
+          display: none;
+        }
+
         & > h2 {
-          transform: translateX(-140px);
+          transform: translateX(-135px) translateY(15px);
         }
 
         & div[class*="picture"] {
@@ -183,15 +193,30 @@
     & div:last-child {
       transition: all .6s;
       flex-grow: 1;
+      
+      & > a[class*="link"] {
+        margin-left: -390px;
+        // margin-bottom: -8px;
+
+        & svg {
+          margin-top: -7px;
+          margin-right: 100px;
+        }
+
+        & span {
+          left: -90px;
+        }  
+      }
+
       & > h2 {
         font-size: 110px;
         line-height: 118px;
         color: #2C2D2D;
-        transform: translateX(-140px);
+        transform: translateX(-120px) translateY(7px);
       }
 
       & div[class*="picture"] {
-        transform: translateX(-70px);
+        transform: scale(1.2 ) translateX(-50px) translateY(8px);
       }
     }
   }
@@ -219,7 +244,7 @@
     & div {
       transition: all .6s;
       flex-grow: 1;
-      &:hover {
+      // &:hover {
         
         & div[class*="picture"] {
           opacity: 1;
@@ -255,7 +280,7 @@
             opacity: 0;
           }
         }
-      }
+      // }
     }
 
     &:after {
