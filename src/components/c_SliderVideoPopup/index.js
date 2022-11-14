@@ -32,7 +32,7 @@ export const C_SliderVideoPopup = ({className, data, isPopupClose, setIsPopupClo
     return (
         <div className={classNames(classes.popupWrapper, {[classes.shownPopup]: popup && !isPopupClose})}>
             <button className={classes.closeIcon} onClick={() => setIsPopupClose(true)}/>
-            <div className={cls} ref={divBlock}
+            <div className={classNames(classes.root, {[classes.popupVideoWrapper]: video.isVisible})} ref={divBlock} 
                  // style={{ height:  `${width < sizes.widthTabletMd ? 190 : heightBlock}px`}}
             >
                 {slider.isVisible && !video.isVisible
@@ -46,7 +46,7 @@ export const C_SliderVideoPopup = ({className, data, isPopupClose, setIsPopupClo
                         slidersSpaceBetween={0}
                         loop={width < sizes.widthDesktopLg}
                         />
-                    : <div>video</div>
+                    : <iframe  src={'https://www.youtube.com/embed/watch?v=t7BmHgAsodU&list=RDuL68nVQkbL4&index=3'} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
                 }
             </div>
         </div>
