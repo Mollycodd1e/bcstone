@@ -17,6 +17,7 @@
   width: 75.63vw;
   height: 51.25vw;
   max-height: 185px;
+  position: relative;
 }
 
 .root iframe {
@@ -25,6 +26,15 @@
   min-height: 164px;
   // max-height: 185px;
   border-radius: 8px;
+}
+
+.iframeWrapper {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @media (min-width: $width-mobile-pre-md) {
