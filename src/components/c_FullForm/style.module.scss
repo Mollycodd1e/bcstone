@@ -146,19 +146,38 @@
 }
 
 .button {
-  font-size: 12px;
-  line-height: 13px;
-  letter-spacing: -0.01em;
-  text-align: center;
-  color: #000;
-  border-radius: 16px;
-  background: #fff;
-  border-width: 0;
-  padding: 10px 23px 9px 23px;
-  font-family: "Codec Cold News", "Arial", sans-serif;
-  margin-top: 30px;
-  margin-bottom: 26px;
-  cursor: pointer;
+  // font-size: 12px;
+  // line-height: 13px;
+  // letter-spacing: -0.01em;
+  // text-align: center;
+  color: #000000;
+  // border-radius: 16px;
+  background: #ffffff;
+  // border-width: 0;
+  // padding: 10px 23px 9px 23px;
+  // font-family: "Codec Cold News", "Arial", sans-serif;
+  // margin-top: 30px;
+  // margin-bottom: 26px;
+  // cursor: pointer;
+  // overflow: hidden;
+  // transition: background-color 1.3s;
+
+  &:hover {
+    background-color: black !important;
+
+    & span:last-child {
+      color: white !important;
+    }
+  }
+
+  & span:last-child {
+    color: black;
+  }
+
+  & span:first-child {
+    display: unset;
+    background: rgb(0, 0, 0) !important;
+  }
 }
 
 .checkboxWrapper {

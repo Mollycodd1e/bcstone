@@ -36,6 +36,18 @@
   }
 }
 
+@media (min-width: $width-notebook) {
+  .wrapMap {
+    height: 427px;
+  }
+}
+
+@media (min-width: $width-desktop-sm) {
+  .wrapMap {
+    height: 899px;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .wrapMap {
     height: 900px;

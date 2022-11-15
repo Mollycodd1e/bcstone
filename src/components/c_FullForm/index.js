@@ -2,11 +2,20 @@ import InputMask from 'react-input-mask';
 import classNames from 'classnames';
 import classes from './style.module.scss';
 import {useState} from "react";
+import {Context} from "../../library";
+import { useContext } from 'react';
+import {sizes} from "../../data/sizes";
+import { useRef } from 'react';
+import { C_MainButton } from '../c_MainButton';
 
 export const C_FullForm = ({className, data, popup}) => {
     const cls = classNames(classes.root, {[className]: className});
     const {description, descriptionSuccess, title, titleSuccess} = data.main_form;
 
+    const [width, height] = useContext(Context);
+    const btnEl = useRef(null);
+    const spanEl = useRef(null);
+    
     const [isConfirmed, setIsConfirmed] = useState(false);
     const [isProcessing, setIsProcessing] = useState(false);
 
@@ -211,12 +220,46 @@ export const C_FullForm = ({className, data, popup}) => {
                             />
                             <span className={classes.errorMessage}>{errorEmailText}</span>
                         </div>
-
-                        <button
+                        
+                        <C_MainButton text={"Получить предложение"} onClick={() => console.log('click from project')}
+                                      className={classes.button}/>
+                        {/* <button
+                            ref={btnEl}
                             onClick={(e) => onButtonClick(e)}
                             className={classes.button}
+                            onMouseOver={(e) => {
+                                if (width <= sizes.widthDesktopLg) {
+                                    e.preventDefault()
+                                } else {
+                                    let rect = btnEl.current.getBoundingClientRect();
+                                    let xBlockPercent = 0;
+                                    let yBlockPercent = 0;
+                                    xBlockPercent = Math.abs((e.pageX - (rect.x + pageXOffset))/(btnEl.current.clientWidth / 100))
+                                    yBlockPercent = Math.abs((e.pageY - (rect.y + pageYOffset))/(btnEl.current.clientHeight / 100))
+                
+                                    spanEl.current.style.left = xBlockPercent + "%";
+                                    spanEl.current.style.top = yBlockPercent + "%";
+            
+                                }
+                            }}
+                            onMouseOut={(e) => {
+                                if (width <= sizes.widthDesktopLg) {
+                                    e.preventDefault()
+                                } else {
+                
+                                    let rect = btnEl.current.getBoundingClientRect();
+                                    let xBlockPercent = 0;
+                                    let yBlockPercent = 0;
+                                    xBlockPercent = Math.abs((e.pageX - (rect.x + pageXOffset))/(btnEl.current.clientWidth / 100))
+                                    yBlockPercent = Math.abs((e.pageY - (rect.y + pageYOffset))/(btnEl.current.clientHeight / 100))
+                
+                                    spanEl.current.style.left = xBlockPercent + "%";
+                                    spanEl.current.style.top = yBlockPercent + "%";
+                                }
+                            }}
                             // disabled={isProcessing}
-                        >Получить предложение</button>
+                        ><span ref={spanEl} className={classes.span}/>
+                        <span className={classes.text}>Получить предложение</span></button> */}
 
                         <div
                             className={classNames(classes.checkboxWrapper)}

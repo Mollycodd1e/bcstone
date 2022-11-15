@@ -26,6 +26,12 @@
   font-size: 1.4rem;
   line-height: 1.5rem;
 }
+
+@media(min-width: $width-desktop-sm) {
+  .root {
+    border-radius: 15px;
+  }
+}
 //
 //@media (min-width: $width-notebook) {
 //  .mainCardBtn {

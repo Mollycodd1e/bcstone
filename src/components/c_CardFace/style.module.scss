@@ -49,6 +49,26 @@
   z-index: 3;
 }
 
+@media(min-width: $width-desktop-sm) {
+  .extraInfo {
+    top: 18px;
+    left: 29px;
+    font-size: 14px;
+    line-height: 15px;
+    border-radius: 20px;
+    padding: 7px 23px 6px;
+  }
+}
+
+@media(min-width: $width-desktop-sm) {
+  .extraInfo {
+    top: 18px;
+    left: 31px;
+    font-size: 17px;
+    line-height: 18px;
+    padding: 8px 23px 7px 28px;
+  }
+}
 //@media (min-width: $width-notebook) {
 //  .logo {
 //    svg {

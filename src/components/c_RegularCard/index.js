@@ -25,7 +25,7 @@ export const C_RegularCard = ({
     link,
     setIsPopUpVisible,
 }) => {
-    const cls = classNames(classes.root, { [className]: className, [classes.map_mod]: isMapMode });
+    const cls = classNames(classes.root, { [className]: className});
     return (
         <div className={cls}>
             { isBtnClose ?

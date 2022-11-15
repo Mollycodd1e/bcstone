@@ -429,7 +429,7 @@
   }
 
   .root .C_MainButton {
-    margin-top: 87px;
+    margin-top: 0;
     padding: 11px 42px 10px;
 
     &::after {
@@ -489,7 +489,7 @@
   }
 
   .root .C_MainButton {
-    margin-top: 33px;
+    // margin-top: 33px;
     padding: 12px 47px 12px 47px;
     letter-spacing: -0.03em;
 
@@ -534,7 +534,7 @@
   }
 
   .ProjectTitle {
-    margin: 57px 0 13px -55px;
+    margin: 57px 0 13px -53px;
 
     & .bg_text,
     & .wrap_title {
@@ -558,7 +558,7 @@
   }
 
   .mapView {
-    padding: 0 28px 0;
+    padding: 0 29px 0 29px;
   }
 }
 
