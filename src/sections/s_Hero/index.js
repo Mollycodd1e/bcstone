@@ -51,7 +51,8 @@ export const S_Hero = ({className, data}) => {
     const topPic = useRef(null);
     const cls = classNames(classes.root, {[className]: className });
     const [width, height] = useContext(Context);
-    const isDesktop = width >= sizes.widthDesktopLg;
+    // const isDesktop = width >= sizes.widthDesktopLg;
+    const isDesktop = width >= sizes.widthDesktopSm;
     const [isAnimation, setIsAnimation] = useState(false);
     const [isAnimationOff, setIsAnimationOff] = useState(false);
     const updateCursor = (e, topPic, interactiveBlock, customCircleSize = undefined, isTouchEvent = false) => {
@@ -73,7 +74,7 @@ export const S_Hero = ({className, data}) => {
             const limitCircle = maxCircle * 50;
             const borderX = 40; // 0 - 50
             const borderY = 20; // 0 - 50
-            const specialYCorrection = ((100 / 2) / borderY)
+            const specialYCorrection = ((100 / 5) / borderY)
             const specialXCorrection = ((100 / 2) / borderX)
             const grownSpeed = 1.7;
             const totalGrownSpeed = maxCircle * grownSpeed;
