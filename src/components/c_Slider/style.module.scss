@@ -17,20 +17,25 @@
   height: auto;
   margin: 0;
   position: relative;
-  padding-bottom: 2.6rem;
+  padding-bottom: 2.1rem;
 
   div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
     bottom: 0 !important;
 
     span[class="swiper-pagination-bullet"] {
-      width: 8px !important;
-      height: 8px !important;
+      // width: 8px !important;
+      // height: 8px !important;
+      width: 4px !important;
+      height: 4px !important;
+      border: 3px solid #707070 !important;
       background: transparent !important;
-      border: 1px solid #2b2c2d !important;
+      // border: 1px solid #2b2c2d !important;
       opacity: 1 !important;
     }
 
     span[class="swiper-pagination-bullet swiper-pagination-bullet-active"] {
+      width: 6px !important;
+      height: 6px !important;
       background: #2b2c2d !important;
     }
   }
@@ -56,20 +61,6 @@
   height: 100%;
   padding-bottom: 1.7rem;
   min-width: unset;
-
-  div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
-    
-    span[class="swiper-pagination-bullet"] {
-      width: 4px !important;
-      height: 4px !important;
-      border: 3px solid #707070 !important;
-    }
-
-    span[class="swiper-pagination-bullet swiper-pagination-bullet-active"] {
-      width: 6px !important;
-      height: 6px !important;
-    }
-  }
 }
 
 .swiperSaving  {    
@@ -79,11 +70,17 @@
 }
 
 .swiperPress {
+  opacity: 1;
   padding-bottom: 2.1rem;
 }
 
 .swiperMode {
   padding-top: 1.8rem;
+}
+
+.swiperShow {
+  opacity: 1;
+  transition: 3s;
 }
 
 .swiperSlide {
@@ -93,7 +90,15 @@
   //width: 242px !important;
 }
 
-@media (min-width: 360px) {
+.swiperSlide button:nth-child(1) {
+  display: none;
+}
+
+.swiperSlideActive button:nth-child(1) {
+  display: block;
+}
+
+@media (min-width: $width-mobile-pre-md) {
   .swiperSaving  {    
     div[class="swiper-wrapper"] {
       margin-left: 0;
@@ -108,6 +113,14 @@
 }
 
 @media (min-width: $width-tablet-sm) {
+  .swiper {
+    padding-bottom: 5.7rem;
+  }
+
+  .mapShow {
+    padding-bottom: 10.7rem;
+  }
+
   .swiperSaving,
   .swiperPress {
     height: 100%;
@@ -150,14 +163,17 @@
   .swiper {
     min-width: 320px;
     width: calc(100vw - 104px);
+    padding-bottom: 4.5rem;
   }
 
   .swiperPress {
     width: 1500px;
+    padding-bottom: 1.7rem;
   }
 
   .swiperSaving {
     width: 1000px;
+    padding-bottom: 1.7rem;
   }
 
   .swiperSaving  {
@@ -168,10 +184,19 @@
 }
 
 @media (min-width: $width-notebook) {
+  .swiper {
+    padding-bottom: 5.6rem;
+  }
+
   .swiperSaving  {
     div[class="swiper-wrapper"] {
       margin-left: -273px;
     }
+  }
+
+  .swiperPress,
+  .swiperSaving {
+    padding-bottom: 1.7rem;
   }
 }
 
@@ -227,15 +252,27 @@
       margin-left: -303px;
     }
   }
+
+  @keyframes Jumpin {
+    0% { opacity: 0; scale: 0.9; }
+    50% { opacity: 1; scale: 1}
+    100% { opacity: 1; scale: 1}
+  }
+  
+  @for $i from 0 through 10 {
+    .swiperShow div[class="swiper-wrapper"] div:nth-child(#{$i}) div {
+      animation: Jumpin #{$i * 0.5}s cubic-bezier(.9,.03,.69,.22);
+    }
+  }
 }
 
 @media (min-width: $width-desktop-md) {
   .swiper_button_prev {
-    margin-top: -123px;
+    margin-top: -171px;
   }
 
   .swiper_button_next {
-    margin-top: -123px;
+    margin-top: -171px;
   }
 
   .swiperSaving  {    
@@ -269,7 +306,11 @@
   }
 
   .swiper_button_next {
-    margin-top: -203px;
+    margin-top: -214px;
     margin-right: -106px;
+  }
+
+  .swiper_button_prev {
+    margin-top: -211px;
   }
 }

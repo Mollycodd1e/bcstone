@@ -10,11 +10,12 @@ $time: 0.7s;
   cursor: pointer;
   border-width: 0;
   font-weight: normal;
-  padding: 10px 23px;
+  padding: 9px 23px 9px 23px;
   background-color: $color-dark-primary;
   border-radius: 21px;
   overflow: hidden;
   transition: background-color 1.3s;
+  letter-spacing: -0.075em;
 
   &:hover {
     background-color: white;
@@ -35,8 +36,8 @@ $time: 0.7s;
     position: relative;
     z-index: 5;
     transition: color $time;
-    font-size: 12px;
-    line-height: 12px;
+    // font-size: 12px;
+    // line-height: 12px;
     white-space: nowrap;
   }
 
@@ -80,9 +81,44 @@ $time: 0.7s;
   }
 }
 
+@media (min-width: $width-mobile-pre-md) {
+
+}
+
+@media (min-width: $width-tablet-sm) {
+  .root {
+    padding: 10px 39px 10px 40px;
+    
+
+    & .text {
+     font-size: 15px;
+     line-height: 16px;
+     letter-spacing: -0.015em;
+    }
+
+    & .span {
+      display: none;
+    }
+  }
+
+  .mode {
+    font-size: 15px;
+    line-height: 16px;
+    text-decoration: underline;
+    background-color: unset;
+    padding: 0;
+
+
+    & .text {
+      font-size: 15px;
+      line-height: 16px;
+    }
+  }
+}
+
 @media (min-width: $width-tablet-md) {
   .root {
-    padding: 12px 40px;
+    padding: 11px 40px 10px 39px;
 
     & .text {
      font-size: 15px;
@@ -109,6 +145,59 @@ $time: 0.7s;
   }
 }
 
+@media (min-width: $width-desktop-sm) {
+  .root {
+    & .text {
+      font-size: 17px;
+      line-height: 18px;
+    }
+
+    & .span {
+      display: block;
+    }
+  }
+
+  .mode {
+    text-decoration: unset;
+    margin: 0 0 0 5px;
+    padding: 11px 35px 10px;
+    background-color: $color-dark-primary;
+
+    & .text {
+      color: white;
+      font-size: 17px;
+      line-height: 18px;
+      letter-spacing: -0.03em;
+    }
+  }
+}
+
+@media (min-width: $width-desktop-md) {
+  .root {
+    border-radius: 22px;
+    
+    & .text {
+      font-size: 18px;
+      line-height: 19px;
+    }
+
+    & .span {
+      display: block;
+    }
+  }
+
+  .mode {
+    border-radius: 22px;
+    margin: -3px 0 0 8px;
+    padding: 12px 43px 12px 41px;
+
+    & .text {
+      font-size: 18px;
+      line-height: 19px;
+    }
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     & .text {
@@ -122,14 +211,7 @@ $time: 0.7s;
   }
 
   .mode {
-    text-decoration: unset;
-    padding: 12px 40px 11px;
-    background-color: $color-dark-primary;
-
-    & .text {
-      color: white;
-      font-size: 18px;
-      line-height: 19px;
-    }
+    margin: -4px 0 0 -6px;
+    padding: 12px 43px 12px 41px;
   }
 }

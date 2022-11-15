@@ -15,6 +15,14 @@
   }
 }
 
+@media (min-width: $width-desktop-sm) {
+  .root {
+    margin: 0;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     margin: 0;

@@ -1,0 +1,248 @@
+@import '../../styles/style';
+
+.popupWrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  backdrop-filter: blur(30px);
+  --webkit-backdrop-filter: blur(30px);
+  background-color: rgba(77, 77, 77, 0.85);
+}
+
+.root {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 18px;
+  top: calc(26% - 3px);
+  left: 50%;
+  margin-left: -50vw;
+}
+
+.popupVideoWrapper {
+  align-items: unset;
+
+  & iframe {
+    min-height: 217px;
+    height: 67.82vw;
+    max-height: 426px;
+  }
+}
+
+.shownPopup {
+  z-index: 100;
+}
+
+.closeIcon {
+  width: 30px;
+  height: 30px;
+  background-image: url("../../img/s_close_icon.svg");
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  right: 10px;
+  top: calc(20% - 13px);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.Popup_Slider {
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+
+  .swiperSlide {
+    //width: 100%;
+  }
+
+  & > div {
+    padding-bottom: 3.2rem;
+  }
+}
+
+@media (min-width: $width-mobile-pre-md) {
+  .root {
+    min-height: 218px;
+    margin-bottom: 13px
+  }
+}
+
+@media (min-width: $width-tablet-sm) {
+  .root {
+    min-width: 500px;
+    width: calc(100vw - 168px);
+    max-width: 720px;
+    left: unset;
+    margin: 0 auto;
+    margin-bottom: unset;
+    overflow: unset;
+    border-radius: 20px;
+  }
+
+  .Popup_Slider {
+    margin-right: 16px;
+  }
+
+  .popupVideoWrapper {
+    border-radius: 20px;
+  
+    & iframe {
+      min-height: 426px;
+      height: 67.82vw;
+      border-radius: 20px;
+    }
+  }
+
+  
+  .closeIcon {
+    width: 46px;
+    height: 46px;
+    background-image: url("../../img/m_close_icon.svg");
+    background-size: 46px 46px;
+    right: calc(4% - 6px);
+    top: calc(26% - 3px);
+  }
+}
+
+@media (min-width: 888px) {
+  .closeIcon {
+    right: 50%;
+    margin-right: -410px;
+  }
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    min-width: 720px;
+    width: calc(100vw - 280px);
+    max-width: 903px;
+  }
+
+  .popupVideoWrapper {  
+    & iframe {
+      height: 67.82vw;
+    }
+  }
+
+  .closeIcon {
+    width: 52px;
+    height: 52px;
+    background-size: 52px 52px;
+    right: calc(7% - 13px);
+    // margin-right: -443px;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: $width-notebook) {
+  .root {
+    min-width: 902px;
+    max-width: 1092px;
+    width: calc(100vw - 308px);
+    min-height: 650px;
+    height: unset;
+    max-height: 650px;
+  }
+
+  .popupVideoWrapper {  
+    & iframe {
+      min-height: 510px;
+    }
+  }
+
+  .Popup_Slider {
+    margin-right: 39px;
+  }
+
+  .closeIcon {
+    width: 52px;
+    height: 52px;
+    background-size: 52px 52px;
+    right: calc(6% - 15px);
+    margin-right: 0;
+  }
+}
+
+@media (min-width: $width-desktop-sm) {
+  .root {
+    min-width: 1092px;
+    //width: calc(100vw - 159px);
+    max-width: 1092px;
+    min-height: 617px;
+    height: unset;
+    max-height: 650px;
+    top: calc(20% - 3px);
+  }
+
+  .popupVideoWrapper {  
+    & iframe {
+      min-height: 615px;
+    }
+  }
+
+  .Popup_Slider {
+    margin-right: 24px;
+  }
+
+  .closeIcon {
+    width: 52px;
+    height: 52px;
+    background-size: 52px 52px;
+    right: calc(7% - 12px);
+    top: calc(21% - 13px);   
+  }
+}
+
+@media (min-width: $width-desktop-md) {
+  .root {
+    min-width: 1253px;
+    max-width: 1092px;
+    // min-height: 717px;
+    height: unset;
+    max-height: 707px;
+    top: calc(12% - 3px);
+  }
+
+  .popupVideoWrapper {  
+    & iframe {
+      min-height: 707px;
+    }
+  }
+
+  .closeIcon {
+    right: calc(7% - 23px);
+    top: calc(13% - 12px);   
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    min-width: 1253px;
+    max-height: 887px;
+    top: calc(1% - 2px);
+  }
+
+  .Popup_Slider {
+    margin-right: 46px;
+  }
+
+  .popupVideoWrapper {  
+    & iframe {
+      min-height: 887px;
+      max-height: 887px;
+    }
+  }
+
+  .closeIcon {
+    right: calc(6% - 26px);
+    top: calc(2% - 11px);   
+  }
+}

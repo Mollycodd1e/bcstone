@@ -69,17 +69,18 @@
   }
 }
 
-@media (min-width: $width-tablet-md) {
+@media (min-width: $width-tablet-sm) {
   .root {
     display: flex;
     align-items: center;
+    margin-top: 4px;
   }
 
   @mixin icon {
-    width: 39px;
-    height: 39px;
-    background-size: 39px;
-    margin-right: 16px;
+    width: 40px;
+    height: 40px;
+    background-size: 40px;
+    margin-right: 18px;
     right: unset;
     bottom: unset;
     position: static;
@@ -89,6 +90,36 @@
 
   .whatsapp {
     @include icon;
+    
+  }
+
+  .callMe {
+    @include icon;
+  }
+
+  .phone {
+    font-size: 18px;
+    line-height: 19px;
+    color: $color-dark-primary;
+  }
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    margin-top: 0px;
+  }
+
+  @mixin icon {
+    width: 39px;
+    height: 39px;
+    background-size: 39px;
+    margin-right: 17px;
+    margin-top: -3px;
+  }
+
+  .whatsapp {
+    @include icon;
+    
   }
 
   .callMe {
@@ -98,11 +129,31 @@
   .phone {
     font-size: 20px;
     line-height: 22px;
-    color: $color-dark-primary;
+    margin: -1px 0 0 0;
+    letter-spacing: -0.03em;
   }
 }
 
-@media (min-width: $width-desktop-lg) {
+@media (min-width: $width-notebook) {
+  @mixin icon {
+    width: 44px;
+    height: 44px;
+    background-size: 44px;
+    margin-right: 23px;
+    margin-top: -6px;
+  }
+
+  .whatsapp {
+    @include icon;
+    
+  }
+
+  .callMe {
+    @include icon;
+  }
+}
+
+@media (min-width: $width-desktop-sm) {
   .root {
     display: flex;
     justify-content: center;
@@ -111,9 +162,10 @@
   }
 
   @mixin bigIcon {
-    width: 52px;
-    height: 52px;
-    background-size: 52px;
+    width: 49px;
+    height: 49px;
+    background-size: 49px;
+    margin: 0 23px 0 0;
   }
 
   .whatsapp {
@@ -124,8 +176,46 @@
     display: none;
   }
 
-
   .phone {
     margin: 0;
+  }
+}
+
+@media (min-width: $width-desktop-md) {
+  .root {
+    min-width: 260px;
+  }
+
+  @mixin bigIcon {
+    width: 52px;
+    height: 52px;
+    background-size: 52px;
+    margin: -2px 23px 0 0;
+  }
+
+  .whatsapp {
+    @include bigIcon;
+    margin: -2px 0 0 8px;
+  }
+
+  .phone {
+    margin: -3px 0 0 auto;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  @mixin bigIcon {
+    width: 52px;
+    height: 52px;
+    background-size: 52px;
+    margin: -2px 0 0 -5px;
+  }
+
+  .whatsapp {
+    @include bigIcon;
+    margin: -2px 0 0 8px;
   }
 }

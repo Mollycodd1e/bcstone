@@ -9,5 +9,6 @@ export const sizes = {
     widthTabletSm: 768,
 
     widthMobileMd: 576,
+    widthMobilePreMd: 360,
     widthMobileSm: 320,
 }

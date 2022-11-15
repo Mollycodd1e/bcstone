@@ -89,6 +89,7 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                             // mapRef.current.panTo({ lat: latitude, lng: longitude });
 
                                             // получает данные карточек нажатого кластера
+                                           
                                             setClustersProjects(supercluster.getLeaves(project.id));
                                             setIsCardVisible(prev => true);
 

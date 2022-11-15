@@ -26,6 +26,14 @@
     & .link {
       justify-self: flex-end;
     }
+
+    & .roundButton {
+      margin: 28px 0px 7px 33px;
+    }
+
+    .buttonText {
+      margin-left: 35px;
+    }
   }
 }
 
@@ -36,7 +44,7 @@
   background-size: 164px 215px;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 0 0 0 17px;
+  margin: 0 13px 0 35px;
   justify-self: flex-end;
 }
 
@@ -53,12 +61,13 @@
   font-size: 48px;
   line-height: 48px;
   font-weight: 800;
-  margin: -10px 0 0;
+  margin: -10px 20px 0 0;
+  letter-spacing: -1px;
   justify-self: flex-end;
 }
 
 .roundButton {
-  margin: 0 2px 7px 0;
+  margin: 39px 27px 7px 0;
 }
 
 .arrowButton {
@@ -71,7 +80,124 @@
   font-size: 15px;
   line-height: 15px;
   font-weight: 300;
+  margin-left: -20px;
   color: #C4C4C4;
+}
+
+@media (min-width: $width-mobile-pre-md) {
+  .root {
+    &.reverse {
+      & .picture {
+        margin: 0 0 0 19px;
+      }
+
+      & .roundButton {
+        margin: 27px 0 0 14px;
+      }
+
+      & .title {
+        margin: -7px 0 0 23px;
+      }
+  
+      .buttonText {
+        margin-left: 0;
+        margin-right: -12px;
+      }
+    }
+  }
+
+  .picture {
+    width: 191px;
+    height: 255px;
+    background-size: 191px 255px;
+    margin: 4px 23px 0 -20px;
+  }
+
+  .title {
+    font-size: 55px;
+    line-height: 59px;
+    margin: -16px 10px 0 -30px;
+    letter-spacing: -0.03em;
+  }
+
+  .roundButton {
+    width: 60px;
+    height: 60px;
+    margin: 39px -9px 0 0;
+  }
+
+  .buttonText {
+    font-size: 17px;
+    line-height: 18px;
+    margin: 5px -40px 0 -30px;
+  }
+}
+
+@media (min-width: $width-tablet-sm) {
+  .root {
+    padding: 35px 0 37px;
+    
+    &.reverse {
+      & .picture {
+        margin: 0;
+      }
+
+      & .roundButton {
+        position: relative;
+        left: -15px;
+        margin: 0 -50px 0 -50px ;
+      }
+
+      & .buttonText {
+        position: relative;
+        left: -15px;
+        bottom: -3px;
+        margin: 0;
+      }
+
+      & .title {
+        justify-self: center;
+        margin: 0;
+      }
+
+      & .link {
+        margin: 0 0 0 -30px;
+      }
+    }
+  }
+
+  .picture {
+    width: 168px;
+    height: 219px;
+    background-size: 168px 219px;
+    margin: 0 0 0 -20px;
+  }
+
+  .title {
+    justify-self: center;
+    font-size: 45px;
+    line-height: 48px;
+    margin: 0;
+  }
+
+  .link {
+    margin: 5px 15px 0 15px;
+  }
+
+  .buttonText {
+    position: relative;
+    font-size: 15px;
+    line-height: 16px;
+    margin: 0;
+    left: 2px;
+    bottom: -5px;
+  }
+
+  .roundButton {
+    width: 52px;
+    height: 52px;
+    margin: -10px 0 0 0;
+  }
 }
 
 @media (min-width: $width-tablet-md) {
@@ -80,11 +206,24 @@
 
     &.reverse {
       & .picture {
+        margin: 0 0 0 20px;
+      }
+
+      & .roundButton {
+        top: -2px;
+        left: -14px;
+      }
+
+      & .buttonText {
+        left: -15px;
+        bottom: -5px;
         margin: 0;
       }
 
       & .title {
         justify-self: center;
+        margin-top: -45px;
+        margin-right: -7px;
       }
     }
   }
@@ -100,22 +239,216 @@
     justify-self: center;
     font-size: 62px;
     line-height: 62px;
+    margin-top: -10px;
   }
 
   .buttonText {
     font-size: 18px;
     line-height: 18px;
+    left: 7px;
+    bottom: -8px;
   }
 
   .roundButton {
+    position: relative;
     width: 69px;
     height: 69px;
+    top: 1px;
+    left: 8px;
+  }
+}
+
+@media (min-width: $width-notebook) {
+  .root {
+    padding: 8px 0 40px;
+
+    &.reverse {
+      & .picture {
+        margin: 0 0 0 -40px;
+      }
+
+      & .roundButton {
+        top: -12px;
+        left: -68px;
+      }
+
+      & .buttonText {
+        left: -69px;
+        bottom: 5px;
+        margin: 0;
+      }
+
+      & .title {
+        justify-self: center;
+        margin-top: -5px;
+        margin-right: 0;
+        margin: -5px -10px 0 -68px;
+      }
+    }
+  }
+
+  .picture {
+    width: 231px;
+    height: 300px;
+    background-size: 231px 300px;
+    margin: 0 15px 0 0;
+  }
+
+  .title {
+    justify-self: center;
+    font-size: 74px;
+    line-height: 80px;
+    margin-top: -5px;
+    margin-left: -20px;
+  }
+
+  .buttonText {
+    font-size: 18px;
+    line-height: 18px;
+    left: -4px;
+    bottom: 3px;
+  }
+
+  .roundButton {
+    position: relative;
+    width: 69px;
+    height: 69px;
+    top: -10px;
+    left: -3px;
+  }
+}
+
+@media (min-width: $width-desktop-sm) {
+  .root {
+    position: relative;
+    padding: 60px 0 76px 0;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas:  "picture title"
+                          "picture link";
+
+    &.reverse {
+      grid-template-areas:  "title picture"
+                            "link picture";
+
+      & .link {
+        justify-self: center;
+
+        & svg {
+          opacity: 0;
+        }
+
+        & span {
+          opacity: 0;
+          left: -90px;
+        }
+      }
+
+      & .picture {
+        justify-self: flex-end;
+      }
+
+      & .title {
+        justify-self: flex-end;
+        margin-top: 5px;
+        margin-right: -18px;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .roundButton {
+    display: none;
+  }
+
+  .arrowButton {
+    display: block;
+    margin-right: 12px;
+  }
+
+  .link {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-self: center;
+    opacity: 0;
+    transition: .5s;
+    align-self: flex-start;
+
+    & svg {
+      opacity: 0;
+    }
+
+    & span {
+      opacity: 0;
+      left: -90px;
+    }
+  }
+
+  .buttonText {
+    font-size: 31px;
+    line-height: 31px;
+  }
+
+  .picture {
+    opacity: .25;
+    width: 226px;
+    height: 295px;
+    background-size: 226px 295px;
+    transition: all .5s;
+    justify-self: flex-start;
+  }
+
+  .title {
+    font-size: 70px;
+    line-height: 76px;
+    margin-top: 15px;
+    margin-left: -180px;
+    color: #EFEFEF;
+    transition: all .5s;
+    align-self: flex-end;
+  }
+}
+
+@media (min-width: $width-desktop-md) {
+  .root {
+    padding: 60px 0 71px 0;
+
+    &.reverse {      
+      & .picture {
+        margin: 15px 30px 0 0px;
+      }
+
+      & .title {
+        margin: 25px -60px 0 0;
+      }
+    }
+  }
+
+  .arrowButton {
+    margin-right: 12px;
+  }
+
+  .picture {
+    width: 215px;
+    height: 285px;
+    background-size: 215px 285px;
+    margin: 0 -15px -15px 30px;
+  }
+
+  .title {
+    font-size: 80px;
+    line-height: 86px;
+    margin-top: 35px;
+    margin-left: -87px;
   }
 }
 
 @media (min-width: $width-desktop-lg) {
   .root {
-
+    padding: 60px 0 53px 0;
     grid-template-columns: repeat(2, auto);
     grid-template-areas:  "picture title"
                           "picture link";

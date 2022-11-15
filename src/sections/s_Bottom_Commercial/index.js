@@ -3,6 +3,7 @@ import classNames from 'classnames';
 
 import { C_Slider } from '../../components/c_Slider';
 import { C_SavingCard } from '../../components/c_SavingCard';
+import {sizes} from "../../data/sizes";
 
 export const S_Bottom_Commercial = ({className, data}) => {
 
@@ -26,13 +27,13 @@ export const S_Bottom_Commercial = ({className, data}) => {
                 <div className={classes.sliderWrapper}>
                     <C_Slider className={classes.saving} items={allCards} initialSlide={0} slidesPerView = {window.innerWidth >= 768 ? 2 : 3}
                     slidersSpaceBetween={
-                        (window.innerWidth >= 360 && window.innerWidth < 768) ? -225 :
-                        (window.innerWidth >= 768 && window.innerWidth < 1000) ? 15 :
-                        (window.innerWidth >= 1000 && window.innerWidth < 1200) ? -130 :
-                        (window.innerWidth >= 1200 && window.innerWidth < 1440) ? 89 :
-                        (window.innerWidth >= 1440 && window.innerWidth < 1600) ? -288 :
-                        (window.innerWidth >= 1600 && window.innerWidth < 1920) ? -137 :
-                        window.innerWidth >= 1920 ? -137 :
+                        (window.innerWidth >= sizes.widthMobilePreMd && window.innerWidth < sizes.widthTabletSm) ? -225 :
+                        (window.innerWidth >= sizes.widthTabletSm && window.innerWidth < sizes.widthTabletMd) ? 15 :
+                        (window.innerWidth >= sizes.widthTabletMd && window.innerWidth < sizes.widthNotebook) ? -130 :
+                        (window.innerWidth >= sizes.widthNotebook && window.innerWidth < sizes.widthDesktopSm) ? 89 :
+                        (window.innerWidth >= sizes.widthDesktopSm && window.innerWidth < sizes.widthDesktopMd) ? -288 :
+                        (window.innerWidth >= sizes.widthDesktopMd && window.innerWidth < sizes.widthDesktopLg) ? -137 :
+                        window.innerWidth >= sizes.widthDesktopLg ? -137 :
                         -215}
                     saving={true}/>
                 </div>

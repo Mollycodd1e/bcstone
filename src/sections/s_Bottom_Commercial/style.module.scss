@@ -13,7 +13,7 @@
   padding: 0;
   margin: 0;
   width: 100%;
-  padding: 41px 0 14px 0px;
+  padding: 53px 0 14px 0;
   letter-spacing: -0.35px;
   background-image: url('../../img/bcstone-saving-mobile.png');
   background-repeat: no-repeat;
@@ -25,8 +25,7 @@
   margin: 0;
   font-size: 22px;
   line-height: 23px;
-  padding-right: 20px;
-  padding-left: 25px;
+  padding: 0 20px 0 28px;
   font-weight: bold;
   font-family: "Codec Cold","Arial", sans-serif;
   text-align: left;
@@ -45,14 +44,15 @@
   align-items: center;
 }
 
-@media (min-width: 360px) {
+@media (min-width: $width-mobile-pre-md) {
   .root {
+    padding: 41px 0 13px 0;
     padding-bottom: 0;
     background-position: -10px 58px;
   }
 
   .root h2 {
-    padding-right: 50px;
+    padding: 0 50px 0 25px;
   }
 
   .sliderWrapper {
@@ -100,6 +100,7 @@
 
 @media (min-width: $width-tablet-md) {
   .root {
+    margin-top: 21px;
     padding-top: 67px;
     padding-bottom: 54px;
     min-height: 500px;
@@ -129,6 +130,7 @@
 
 @media (min-width: $width-notebook) {
   .root {
+    margin-top: 73px;
     min-height: 580px;
     padding-bottom: 118px;
     background-position: 79px -10px;
@@ -150,12 +152,13 @@
 
 @media (min-width: $width-desktop-sm) {
   .root {
+    margin-top: 0;
     min-height: 500px;
     padding-top: 10px;
     padding-bottom: 66px;
     background-image: url('../../img/bcstone-saving-1440.png');
     background-size: 1259px 415px;
-    background-position: 30px 53px;
+    background-position: 30px 33px;
 
     &::after {
       margin-top: -149px;
@@ -170,7 +173,7 @@
   }
 
   .sliderWrapper {
-    margin-top: 119px;
+    margin-top: 99px;
   }
 }
 
@@ -178,7 +181,7 @@
   .root {
     min-height: 658px;
     padding-bottom: 104px;
-    background-position: 30px 49px;
+    background-position: 30px 33px;
 
     &::after {
       margin-top: -105px;
@@ -188,10 +191,11 @@
 
   .sliderWrapper {
     width: 1300px;
+    margin-top: 102px;
   }
 }
 
-@media (min-width: $width-desktop-md) {
+@media (min-width: $width-desktop-lg) {
   .root {
     background-position: 155px 49px;
 

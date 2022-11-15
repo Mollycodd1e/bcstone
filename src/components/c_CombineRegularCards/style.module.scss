@@ -21,21 +21,35 @@
   align-items: center;
 }
 
-.cards {
-  //width: 100%;
-  width: 1788px;
-  //overflow: hidden;
-  //display: flex;
-  //flex-wrap: wrap;
-  //flex-direction: row;
-  //align-items: center;
-  justify-content: center;
+// .cards {
+//   //width: 100%;
+//   width: 1788px;
+//   //overflow: hidden;
+//   //display: flex;
+//   //flex-wrap: wrap;
+//   //flex-direction: row;
+//   //align-items: center;
+//   justify-content: center;
 
-  display: grid;
-  grid-template-rows: repeat(2, auto);
-  grid-template-columns: repeat(3, auto);
-  grid-column-gap: 90px;
-  grid-row-gap: 48px;
+//   display: grid;
+//   grid-template-rows: repeat(2, auto);
+//   grid-template-columns: repeat(3, auto);
+//   grid-column-gap: 90px;
+//   grid-row-gap: 48px;
+// }
+
+@media (min-width: $width-tablet-sm) {
+  .root {
+    //display: flex;
+    // overflow: unset;
+    margin-bottom: 18px;
+    width: 100%;
+    flex-direction: row;
+    align-items: unset;
+    //justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 @media (min-width: $width-tablet-md) {
@@ -48,5 +62,60 @@
     //justify-content: space-between;
     flex-wrap: wrap;
     justify-content: center;
+  }
+}
+
+@media (min-width: $width-notebook) {
+  .root {
+    margin-bottom: 27px;
+  }
+}
+
+@media (min-width: $width-desktop-sm) {
+  .root {
+    margin-bottom: 27px;
+    margin-left: -46px;
+  }
+
+  .cards {
+    width: 1308px;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 35px;
+    grid-row-gap: 89px;
+  }
+}
+
+@media (min-width: $width-desktop-md) {
+  .root {
+    margin-bottom: 27px;
+    margin-left: 0;
+  }
+
+  .cards {
+    width: 1400px;
+    grid-column-gap: 28px;
+    grid-row-gap: 35px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .cards {
+    //width: 100%;
+    width: 1788px;
+    //overflow: hidden;
+    //display: flex;
+    //flex-wrap: wrap;
+    //flex-direction: row;
+    //align-items: center;
+    justify-content: center;
+  
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 90px;
+    grid-row-gap: 48px;
   }
 }

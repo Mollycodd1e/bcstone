@@ -1,0 +1,61 @@
+@import '../../styles/style';
+
+.root {
+  min-width: 320px;
+  min-height: 215px;
+  height: 67.2vw;
+  width: 100%;
+  max-height: 400px;
+}
+
+
+.root img {
+}
+
+@media (min-width: $width-mobile-pre-md) {
+  .root {
+  }
+}
+
+@media (min-width: $width-tablet-sm) {
+  .root {
+    min-width: 580px;
+    height: 55.6vw;
+    max-height: 500px;
+    border-radius: 20px;
+  }
+
+  .root img {
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    max-height: 510px;
+  }
+}
+
+@media (min-width: $width-notebook) {
+  .root {
+    max-height: 510px;
+  }
+}
+
+@media (min-width: $width-desktop-sm) {
+  .root {
+    max-height: 617px;
+  }
+}
+
+@media (min-width: $width-desktop-md) {
+  .root {
+    max-height: 707px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    max-height: 887px;
+  }
+}

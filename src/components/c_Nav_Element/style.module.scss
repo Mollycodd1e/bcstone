@@ -34,7 +34,7 @@
 }
 
 .chevron {
-  margin-left: 10px;
+  margin-left: 6px;
   display: inline-block;
   width: 13px;
   height: 7.5px;
@@ -64,9 +64,38 @@
   }
 }
 
+@media (min-width: $width-desktop-sm) {
+  .root {
+    margin: 0 24px 0 0 !important;
+    padding: 0;
+    position: relative;
+
+    &:not(:last-child) {
+      margin: 0 0 24px 0;
+    }
+  }
+
+  .firstLvlMenuName {
+    font-size: 18px;
+    line-height: 19px;
+    letter-spacing: -0.015em;
+  }
+}
+
+@media (min-width: $width-desktop-md) {
+  .root {
+    margin: 0 33px 0 0 !important;
+  }
+
+  .firstLvlMenuName {
+    font-size: 19px;
+    line-height: 21px;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
-    margin: 0 35px 0 0 !important;
+    margin: 0 40px 0 0 !important;
     padding: 0;
     position: relative;
   }

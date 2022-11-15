@@ -14,8 +14,25 @@
 
 .С_Slider {
   background-color: white;
-  padding: 0 0 35px 0;
+  padding: 4px 0 36px 0;
   //overflow: hidden;
+}
+
+@media (min-width: $width-mobile-pre-md) {
+  .С_Slider {
+    padding: 12px 0 36px 0;
+  }
+}
+
+@media (min-width: $width-tablet-sm) {
+  .root {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1250px;
+    margin: 6px 0 59px 0;
+    padding: 0 30px;
+  }
 }
 
 @media (min-width: $width-tablet-md) {
@@ -24,12 +41,37 @@
     display: flex;
     justify-content: space-evenly;
     max-width: 1250px;
-    margin: 60px 0 45px 0;
+    margin: 17px 0 45px 0;
+    padding: 0 9px;
+  }
+}
+
+@media (min-width: $width-notebook) {
+  .root {
+    margin: 94px 0 55px 0;
+    padding: 0 69px;
+  }
+}
+
+@media (min-width: $width-desktop-sm) {
+  .root {
+    margin: 5px 0 5px 0;
+    padding: 0 41px 60px;
+    max-width: 1364px;
+  }
+}
+
+@media (min-width: $width-desktop-md) {
+  .root {
+    margin: 31px 0 5px 0;
+    padding: 0 41px 60px;
+    max-width: 1556px;
   }
 }
 
 @media (min-width: $width-desktop-lg) {
   .root {
-    max-width: 1364px;
+    margin: 22px 0 5px 0;
+    max-width: 1615px;
   }
 }

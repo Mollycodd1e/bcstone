@@ -10,7 +10,18 @@
   background-size: cover;
 }
 
-@media (min-width: $width-tablet-md) {
+.popup {
+  width: 100%;
+}
+
+@media (min-width: $width-mobile-pre-md) {
+  .root {
+    width: 274px;
+    height: 185px;
+  }
+}
+
+@media (min-width: $width-tablet-sm) {
   .root {
     //min-width: 100%;
     //min-height: 218px;
@@ -21,9 +32,20 @@
   }
 }
 
-@media (min-width: $width-desktop-lg) {
+@media (min-width: $width-tablet-md) {
+}
+
+
+@media (min-width: $width-desktop-md) {
   .root {
     width: 694px;
+    height: 492px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    width: 694px !important;
     height: 492px;
   }
 }

@@ -1,6 +1,8 @@
 @import '../../styles/style';
 
 $widthCard_tab: 352px;
+$widthCard_tab_map: 271px;
+$widthCard_deskMd: 400px;
 $widthCard_desk: 439px;
 $widthCard_desk_map: 348px;
 
@@ -18,14 +20,19 @@ $border_mob: 1px solid #d9d9d9;
 $paddingCard_tab_desk: 0;
 
 $widthPic_tab: 352px;
+$widthPic_deskMd: 400px;
 $widthPic_desk: 439px;
 $widthPic_desk_map: 324px;
 
 $heightPic_tab: 201px;
+$heightPic_tabSm: 210px;
+$heightPic_deskSm: 208px;
 $heightPic_desk: 262px;
+$heightPic_deskMd: 237px;
 $heightPic_desk_map: 193px;
 
 $heightLogo_tab: 22px;
+$heightLogo_deskSm: 27px;
 $heightLogo_desk: 24px;
 $heightLogo_desk_map: 22px;
 
@@ -38,6 +45,7 @@ $listTemplateRows_tab_desk: repeat(3, auto);
 $listTemplateAreas_threeRows: "cardInfoEl1 cardInfoEl2" "cardInfoEl3 cardInfoEl3" "cardInfoEl4 cardInfoEl4";
 
 $faceBtm: -22px;
+$faceBtmTabletSm: -21px;
 $pos: -12px;
 
 @mixin card($widthCard: 242px,
@@ -114,8 +122,68 @@ $pos: -12px;
   );
 }
 
+@mixin tabSm_card {
+  @include card($widthCard: $widthCard_tab,
+    $heightCard: $heightCard_tab,
+    $borderRadius: $borderRadius_tab,
+    $paddingCard: $paddingCard_tab_desk,
+    $widthPic: $widthPic_tab,
+    $heightPic: $heightPic_tabSm,
+    $heightLogo: $heightLogo_tab,
+    $listTemplateColumns: $listTemplateColumns_tab_desk,
+    $listTemplateColumnsGap: $listTemplateColumnsGap_tab_desk,
+    $listTemplateRows: $listTemplateRows_tab_desk,
+    $listTemplateAreas: $listTemplateAreas_threeRows,
+  );
+}
+
+@mixin notebook_card {
+  @include card($widthCard: $widthCard_tab,
+    $heightCard: $heightCard_tab,
+    $borderRadius: $borderRadius_tab,
+    $paddingCard: $paddingCard_tab_desk,
+    $widthPic: $widthPic_tab,
+    $heightPic: $heightPic_tabSm,
+    $heightLogo: $heightLogo_tab,
+    $listTemplateColumns: $listTemplateColumns_tab_desk,
+    $listTemplateColumnsGap: $listTemplateColumnsGap_tab_desk,
+    $listTemplateRows: $listTemplateRows_tab_desk,
+    $listTemplateAreas: $listTemplateAreas_threeRows,
+  );
+}
+
 @mixin mob_tab_map_card {
   @include card($boxShadow: $boxShadow_map);
+}
+
+@mixin deskSm_card {
+  @include card($widthCard: $widthCard_tab,
+    $heightCard: $heightCard_tab,
+    $borderRadius: $borderRadius_tab,
+    $paddingCard: $paddingCard_tab_desk,
+    $widthPic: $widthPic_tab,
+    $heightPic: $heightPic_deskSm,
+    $heightLogo: $heightLogo_deskSm,
+    $listTemplateColumns: $listTemplateColumns_tab_desk,
+    $listTemplateColumnsGap: $listTemplateColumnsGap_tab_desk,
+    $listTemplateRows: $listTemplateRows_tab_desk,
+    $listTemplateAreas: $listTemplateAreas_threeRows,
+  );
+}
+
+@mixin deskMd_card {
+  @include card($widthCard: $widthCard_desk,
+    $heightCard: $heightCard_desk,
+    $borderRadius: $borderRadius_desk,
+    $paddingCard: $paddingCard_tab_desk,
+    $widthPic: $widthPic_deskMd,
+    $heightPic: $heightPic_deskMd,
+    $heightLogo: $heightLogo_deskSm,
+    $listTemplateColumns: $listTemplateColumns_tab_desk,
+    $listTemplateColumnsGap: $listTemplateColumnsGap_tab_desk,
+    $listTemplateRows: $listTemplateRows_tab_desk,
+    $listTemplateAreas: $listTemplateAreas_threeRows,
+  );
 }
 
 @mixin desk_card {
@@ -125,7 +193,7 @@ $pos: -12px;
     $paddingCard: $paddingCard_tab_desk,
     $widthPic: $widthPic_desk,
     $heightPic: $heightPic_desk,
-    $heightLogo: $heightLogo_desk,
+    $heightLogo: $heightLogo_deskSm,
     $listTemplateColumns: $listTemplateColumns_tab_desk,
     $listTemplateColumnsGap: $listTemplateColumnsGap_tab_desk,
     $listTemplateRows: $listTemplateRows_tab_desk,
@@ -184,7 +252,7 @@ $pos: -12px;
 
 .CardBtn {
   position: absolute;
-  bottom: $faceBtm;
+  bottom: $faceBtmTabletSm;
   height: 100px !important;
 }
 
@@ -199,10 +267,158 @@ $pos: -12px;
   align-self: flex-start;
 }
 
+@media (min-width: $width-tablet-sm) {
+  .root{
+    @include tabSm_card;
+
+    // &.map_mod {
+    //   @include card($widthCard: 271px,
+    //   $heightCard: 373px,
+    //   $boxShadow: none,
+    //   $borderRadius: 8px,
+    //   $border: none,
+    //   $paddingCard: 9px 0 0 0,
+    //   $widthPic: 224px,
+    //   $heightPic: 130px,
+    //   $heightLogo: 16px,
+    //   $listTemplateColumns: 1fr,
+    //   $listTemplateColumnsGap: none,
+    //   $listTemplateRows: repeat(4, auto),
+    //   $listTemplateAreas: "cardInfoEl1" "cardInfoEl2" "cardInfoEl3" "cardInfoEl4",
+    // );
+    // }
+  }
+
+  .С_CardFace div {
+    border-radius: 15px;
+  }
+
+  .CardBtn {
+    bottom: -21px;
+  }
+}
 
 @media (min-width: $width-tablet-md) {
   .root{
     @include tab_card;
+  }
+
+  .CardBtn {
+    bottom: -17px;
+  }
+}
+
+@media (min-width: $width-notebook) {
+  .root{
+    @include tabSm_card;
+  }
+
+  .CardBtn {
+    bottom: -19px;
+  }
+}
+
+@media (min-width: $width-desktop-sm) {
+  .С_CardFace {
+    position: relative;
+    bottom: calc(#{$faceBtm} + 10px);
+    transition: bottom .5s ease-out;
+  }
+
+  .faceWrap {
+    &:hover {
+      & .С_CardFace {
+        bottom: calc(#{$faceBtm} + 40px);
+      }
+    }
+  }
+
+  .root {
+    @include deskSm_card;
+
+    & a[class*='mainCardBtn'],
+    & a[class*='CardBtn'],
+    & button[class*='mainCardBtn'],
+    & button[class*='CardBtn'] {
+     padding-bottom: 12px;
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    &.map_mod {
+
+      & a[class*='mainCardBtn'],
+      & a[class*='CardBtn'],
+      & button[class*='mainCardBtn'],
+      & button[class*='CardBtn'] {
+        padding-bottom: 4px;
+        font-size: 12px;
+        line-height: 13px;
+      }
+
+      @include desk_map_card;
+      padding-top: 22px;
+
+      & .С_CardFace {
+        bottom: unset !important;
+      }
+    }
+  }
+
+  .CardBtn {
+    bottom: -20px;
+  }
+}
+
+@media (min-width: $width-desktop-md) {
+  .С_CardFace {
+    position: relative;
+    bottom: calc(#{$faceBtm} + 10px);
+    transition: bottom .5s ease-out;
+  }
+
+  .faceWrap {
+    &:hover {
+      & .С_CardFace {
+        bottom: calc(#{$faceBtm} + 40px);
+      }
+    }
+  }
+
+  .root {
+    @include deskMd_card;
+
+    & a[class*='mainCardBtn'],
+    & a[class*='CardBtn'],
+    & button[class*='mainCardBtn'],
+    & button[class*='CardBtn'] {
+     padding-bottom: 12px;
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    &.map_mod {
+
+      & a[class*='mainCardBtn'],
+      & a[class*='CardBtn'],
+      & button[class*='mainCardBtn'],
+      & button[class*='CardBtn'] {
+        padding-bottom: 4px;
+        font-size: 12px;
+        line-height: 13px;
+      }
+
+      @include desk_map_card;
+      padding-top: 22px;
+
+      & .С_CardFace {
+        bottom: unset !important;
+      }
+    }
+  }
+
+  .CardBtn {
+    bottom: -21px;
   }
 }
 

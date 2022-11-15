@@ -20,7 +20,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 47px;
+    padding-bottom: 45px;
   }
   
   .PressCenterTitle {
@@ -90,7 +90,7 @@
     line-height: 13px;
   }
 
-@media (min-width: 360px) {
+@media (min-width: $width-mobile-pre-md) {
   .wrapper {
     padding-bottom: 50px;
   }
@@ -339,7 +339,7 @@
   }
 
   .root .C_MainButton {
-    margin-top: 34px;
+    margin-top: 22px;
     margin-left: 0;
     padding: 12px 0 12px 0;
     width: 185px;
@@ -392,7 +392,7 @@
   }
 
   .root .C_MainButton {
-    margin-top: 68px;
+    margin-top: 19px;
   }
 }
 
@@ -430,7 +430,7 @@
   }
 
   .root .C_MainButton {
-    margin-top: 27px;
+    margin-top: 18px;
 
     &::after {
       width: 1381px;

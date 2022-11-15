@@ -19,10 +19,11 @@ $menuTransition: .4s;
   z-index: 10;
   position: absolute;
   top: 12px;
-  left: 30px;
+  left: 25px;
 }
 
 .openBurger {
+  left: 25px;
   background-size: 9px 18px;
   background-image: url("../../img/s_burger_open.svg");
 }
@@ -55,20 +56,24 @@ $menuTransition: .4s;
 .C_Nav_List {
 
 }
-.C_MainButton {
 
+.C_MainButton span {
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: -0.015em;
 }
 
-@media (min-width: $width-tablet-md) {
+@media (min-width: $width-tablet-sm) {
   .root {
     min-height: unset !important;
   }
 
   .burger {
-    width: 47px;
+    width: 38px;
     height: 25px;
-    background-size: 47px 20px;
+    background-size: 38px 20px;
     top: 0;
+    left: 13px;
     //transition: left $menuTransition, top $menuTransition;
     transition: unset;
   }
@@ -107,9 +112,58 @@ $menuTransition: .4s;
   }
 }
 
-@media (min-width: $width-desktop-lg) {
+@media (min-width: $width-tablet-md) {
+  .root {
+    min-height: unset !important;
+  }
+
+  .burger {
+    width: 47px;
+    height: 24px;
+    background-size: 47px 24px;
+    top: -3px;
+    left: 36px;
+    //transition: left $menuTransition, top $menuTransition;
+    transition: unset;
+  }
+
+  .openBurger {
+    background-size: 12px 25px;
+    left: -136px;
+    top: -25px;
+  }
+
+  .elements {
+    top: -46px;
+    left: -533px;
+    width: 376px;
+    min-height: 100vh;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+    transition: left .5s ease-in-out;
+    padding: 83px 0 0 33px;
+  }
+
+  .showElements {
+    left: -154px;
+  }
+
   .C_Logo {
-    margin: 0 360px 0 0;
+    width: 92px !important;
+    height: 39px !important;
+    background-size: 92px 39px !important;
+  }
+
+  .C_MainButton {
+    //padding: 0;
+    font-size: 21px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: $width-desktop-sm) {
+  .C_Logo {
+    margin: 0 113px 0 0;
   }
 
   .burger {
@@ -132,6 +186,24 @@ $menuTransition: .4s;
   }
 
   .C_MainButton {
+    margin-left: auto;
+    padding: 12px 40px 11px;
+  }
+}
+
+@media (min-width: $width-desktop-md) {
+  .C_Logo {
+    margin: 0 150px 0 0;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .C_Logo {
+    margin: 0 360px 0 0;
+  }
+
+  .C_MainButton {
+    margin-left: 0;
     padding: 12px 40px 11px;
   }
 }
