@@ -42,6 +42,7 @@
     top: 0;
     left: 0;
   }
+
   & div:nth-child(2) {
     top: 0;
     right: 13rem;
@@ -94,5 +95,27 @@
 
   .mapSlider {
     overflow: visible;
+  }
+}
+
+@media(min-width: $width-desktop-sm) {
+  .fourCards {
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 3rem;
+    left: 5rem;
+    
+    & div[class*="CardInfo"] {
+      overflow: hidden;
+    }
+    
+    & > div {
+      position: absolute;
+
+      & button {
+        bottom: -30px;
+      }
+    }
   }
 }

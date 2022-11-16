@@ -109,7 +109,7 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                     lat={latitude}
                                     lng={longitude}
                                     onClick={() => {
-                                        // setInitialSlide(prev => project.properties.order - 1);
+                                        setInitialSlide(prev => project.properties.order - 1);
                                         setShownSliders([project.properties.order - 1]);
                                         setIsCardVisible(prev => true);
                                     }}

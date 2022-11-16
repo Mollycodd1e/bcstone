@@ -137,6 +137,21 @@ $pos: -12px;
   );
 }
 
+@mixin tabSm_map_card {
+  @include card($widthCard: $widthCard_tab,
+    $heightCard: $heightCard_tab,
+    $borderRadius: $borderRadius_tab,
+    $paddingCard: $paddingCard_tab_desk,
+    $widthPic: $widthPic_tab,
+    $heightPic: $heightPic_tabSm,
+    $heightLogo: $heightLogo_tab,
+    $listTemplateColumns: $listTemplateColumns_tab_desk,
+    $listTemplateColumnsGap: $listTemplateColumnsGap_tab_desk,
+    $listTemplateRows: $listTemplateRows_tab_desk,
+    $listTemplateAreas: $listTemplateAreas_threeRows,
+  );
+}
+
 @mixin notebook_card {
   @include card($widthCard: $widthCard_tab,
     $heightCard: $heightCard_tab,
@@ -158,6 +173,7 @@ $pos: -12px;
 
 @mixin deskSm_card {
   @include card($widthCard: $widthCard_tab,
+    // $heightCard: $heightCard_desk_map,
     $heightCard: $heightCard_tab,
     $borderRadius: $borderRadius_tab,
     $paddingCard: $paddingCard_tab_desk,
@@ -439,7 +455,6 @@ $pos: -12px;
 
   .root {
     @include desk_card;
-
     & a[class*='mainCardBtn'],
     & a[class*='CardBtn'],
     & button[class*='mainCardBtn'],
@@ -450,7 +465,7 @@ $pos: -12px;
     }
 
     &.map_mod {
-
+      height: 459px;
       & a[class*='mainCardBtn'],
       & a[class*='CardBtn'],
       & button[class*='mainCardBtn'],

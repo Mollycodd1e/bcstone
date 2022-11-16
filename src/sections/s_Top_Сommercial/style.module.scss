@@ -2,7 +2,7 @@
 
 @keyframes deskElementsToTop {
   0% {
-    transform: translateY(200px);
+    transform: translateY(100px);
   }
   100% {
     transform: translateY(0px);
@@ -10,12 +10,21 @@
 }
 
 .root {
+  animation: deskElementsToTop;
+  animation-duration: 1s;
+  transition: 3s;
 }
 
-.root {
-  animation: deskElementsToTop;
-  animation-duration: 3s;
-  // transition: 3s;
+.root > div:nth-child(1) {
+    animation: deskElementsToTop 1.5s;
+}
+
+.root > div:nth-child(2) {
+  animation: deskElementsToTop 1s;
+}
+
+.root > div:nth-child(3) {
+  animation: deskElementsToTop 0.5s;
 }
 
 .sliderWrapper {

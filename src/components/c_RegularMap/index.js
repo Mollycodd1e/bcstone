@@ -33,6 +33,7 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
     // useEffect(() => {
     //     console.log('initialSlide', initialSlide)
     // }, [initialSlide]);
+    console.log(rCards);
     
     return (
         <div className={cls}>
@@ -51,7 +52,7 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
                 isCardVisible && width < sizes.widthTabletMd
                 ?
                     <div className={classNames(classes.wrapperSlider, { [classes.mapSlider]: width === sizes.widthTabletSm })}>
-                        <C_Slider map={true} isBtnClose={isBtnClose} items={rCards} initialSlide={rCards[shownSliders[0]]} setIsPopUpVisible={setIsPopUpVisible} slidersSpaceBetween={width >= 768 ? -185 : -215}/>
+                        <C_Slider map={true} isBtnClose={isBtnClose} items={rCards} initialSlide={shownSliders[0]} setIsPopUpVisible={setIsPopUpVisible} slidersSpaceBetween={width >= 768 ? 165 : -215}/>
                     </div>
                 : isCardVisible && width >= sizes.widthTabletMd ?
                     <div className={classes.fourCards}>

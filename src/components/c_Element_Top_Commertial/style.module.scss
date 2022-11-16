@@ -205,6 +205,16 @@ $decor-margin-lg: 0 14px 0 0;
   .title {
     letter-spacing: -0.01em;
   }
+
+  .wrap {
+    overflow: hidden;
+  }
+
+  .content {
+    max-height: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 @media (min-width: $width-tablet-md) {
@@ -221,6 +231,10 @@ $decor-margin-lg: 0 14px 0 0;
   $box-shadow: $box-shadow-md-lg,
   $title-margin: $title-margin-md,
   $height: $height-md);
+
+  .content {
+    max-height: unset;
+  }
 }
 
 @media (min-width: $width-notebook) {

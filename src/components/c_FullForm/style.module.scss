@@ -156,8 +156,8 @@
   // border-width: 0;
   // padding: 10px 23px 9px 23px;
   // font-family: "Codec Cold News", "Arial", sans-serif;
-  // margin-top: 30px;
-  // margin-bottom: 26px;
+  margin-top: 30px;
+  margin-bottom: 26px;
   // cursor: pointer;
   // overflow: hidden;
   // transition: background-color 1.3s;
@@ -398,7 +398,7 @@
     font-size: 15px;
     line-height: 16px;
     border-radius: 21.5px;
-    padding: 10px 38px 10px 38px;
+    //padding: 10px 39px 10px 39px;
     margin: 0 0 28px 0;
   }
 
@@ -506,11 +506,14 @@
   }
 
   .button {
-    font-size: 18px;
-    line-height: 19px;
     border-radius: 21.5px;
     padding: 12px 45px 11px 45px;
     margin: 0 0 29px 0;
+
+    & span[class*="text"] {
+      font-size: 18px;
+      line-height: 19px;
+    }
   }
 
   .errorMessage {
