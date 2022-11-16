@@ -37,7 +37,7 @@
   }
 }
 
-@media (min-width: $width-tablet-md) {
+@media (min-width: $width-tablet-sm) {
   .root {
     width: 60px;
     height: 60px;
@@ -65,4 +65,7 @@
       transform: rotate(45deg);
     }
   }  
+}
+
+@media (min-width: $width-tablet-md) {
 }

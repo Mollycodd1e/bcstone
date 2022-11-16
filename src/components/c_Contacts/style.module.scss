@@ -39,6 +39,23 @@
   }
 }
 
+@media (min-width: $width-tablet-sm) {
+  .root {
+    padding-left: 24px;
+  }
+
+  .root a:first-child {
+    font-size: 34px;
+    line-height: 40px;  
+  }
+  
+  .root a:nth-child(2) {
+    font-size: 34px;
+    line-height: 40px;  
+    margin-top: 8px;
+  }
+}
+
 @media (min-width: $width-tablet-md) {
   .root {
     padding-left: 64px;
@@ -46,12 +63,10 @@
 
   .root a:first-child {
     font-size: 38px;
-    line-height: 40px;  
   }
   
   .root a:nth-child(2) {
     font-size: 38px;
-    line-height: 40px;  
     margin-top: 13px;
   }
 }

@@ -52,7 +52,7 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
                 isCardVisible && width < sizes.widthTabletMd
                 ?
                     <div className={classNames(classes.wrapperSlider, { [classes.mapSlider]: width === sizes.widthTabletSm })}>
-                        <C_Slider map={true} isBtnClose={isBtnClose} items={rCards} initialSlide={shownSliders[0]} setIsPopUpVisible={setIsPopUpVisible} slidersSpaceBetween={width >= 768 ? 165 : -215}/>
+                        <C_Slider map={true} isBtnClose={isBtnClose} items={rCards} initialSlide={shownSliders[0]} setIsPopUpVisible={setIsPopUpVisible} slidersSpaceBetween={width >= 768 ? -200 : -215}/>
                     </div>
                 : isCardVisible && width >= sizes.widthTabletMd ?
                     <div className={classes.fourCards}>

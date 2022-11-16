@@ -238,6 +238,11 @@
   .mapView {
     width: calc(100vw - 60px);
     //padding: 0 48px 0;
+
+    & div[class*="CardInfo"] {
+      padding-left: 13px;
+      margin-top: 40px;
+    }
   }
  
   .RegularMap {

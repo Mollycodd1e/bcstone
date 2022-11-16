@@ -47,10 +47,10 @@
   display: none;
 }
 
-@media (min-width: $width-tablet-md) {
+@media (min-width: $width-tablet-sm) {
   .root {
-    margin-top: 44px;
-    padding-left: 80px;
+    margin-top: 50px;
+    padding-left: 40px;
     display: flex;
   }
 
@@ -89,6 +89,13 @@
     background-size: 106px 144px;
     border-radius: 0;
     cursor: pointer;
+  }
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    margin-top: 44px;
+    padding-left: 80px;
   }
 }
 
