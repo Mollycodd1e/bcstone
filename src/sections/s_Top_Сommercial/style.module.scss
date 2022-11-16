@@ -1,7 +1,21 @@
 @import '../../styles/style';
 
+@keyframes deskElementsToTop {
+  0% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 
 .root {
+}
+
+.root {
+  animation: deskElementsToTop;
+  animation-duration: 3s;
+  // transition: 3s;
 }
 
 .sliderWrapper {
@@ -58,6 +72,8 @@
     margin: 5px 0 5px 0;
     padding: 0 41px 60px;
     max-width: 1364px;
+    animation: deskElementsToTop;
+    animation-duration: 1s;
   }
 }
 
