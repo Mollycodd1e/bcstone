@@ -67,7 +67,7 @@
   .footer_wrapper {
     background-image: url('../../img/bgstone-tablet-sm.png');
     background-repeat: no-repeat;
-    background-position: center bottom 210px;
+    background-position: left 36px bottom 210px;
     padding: 64px 80px 18px 53px;
   }
 
@@ -137,6 +137,34 @@
   .logo_wrapper {
     margin-right: 118px;
     margin-left: auto;
+  }
+
+  .footer_ontop_btn {
+    bottom: 70px;
+  }
+}
+
+@media (min-width: $width-notebook) {
+  .footer_wrapper {
+    background-image: url('../../img/bgstone-notebook.png');
+    background-position: left 52px bottom 190px;
+    padding: 64px 118px 18px 50px;
+  }
+
+  .root h2 {  
+    font-size: 48px;
+    line-height: 57px;
+    margin-top: 98px;
+    margin-left: 60px;
+    letter-spacing: 0.007em;
+  }
+
+  .copyright_wrapper {
+    margin-top: 89px;
+  }
+
+  .logo_wrapper {
+    margin: 3px 190px 0 auto;
   }
 
   .footer_ontop_btn {
