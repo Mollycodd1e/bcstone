@@ -91,7 +91,7 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                             // получает данные карточек нажатого кластера
                                            
                                             setClustersProjects(supercluster.getLeaves(project.id));
-                                            setIsCardVisible(prev => true);
+                                            setIsCardVisible(prev => !prev);
 
 
                                         }}
@@ -108,10 +108,10 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                     key={i}
                                     lat={latitude}
                                     lng={longitude}
-                                    onClick={() => {
+                                    onClick={(evt) => {
                                         setInitialSlide(prev => project.properties.order - 1);
                                         setShownSliders([project.properties.order - 1]);
-                                        setIsCardVisible(prev => true);
+                                        evt.target != [project.properties.order - 1] ? setIsCardVisible(prev => !prev) : null;
                                     }}
                                     imgDefault={project.properties.defaultPin}
                                     imgActive={project.properties.activePin}

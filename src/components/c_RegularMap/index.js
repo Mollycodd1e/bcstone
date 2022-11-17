@@ -33,7 +33,6 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
     // useEffect(() => {
     //     console.log('initialSlide', initialSlide)
     // }, [initialSlide]);
-    console.log(rCards);
     
     return (
         <div className={cls}>
@@ -56,7 +55,7 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
                     </div>
                 : isCardVisible && width >= sizes.widthTabletMd ?
                     <div className={classes.fourCards}>
-                        {
+                        {    
                             shownSliders.slice(0, 4).map((slide, i) => {
                                 return (<div key={i}>
                                     {rCards[slide]}

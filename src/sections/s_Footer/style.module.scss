@@ -172,6 +172,95 @@
   }
 }
 
+@media (min-width: $width-desktop-sm) {
+  .root {
+    min-height: 1310px;
+    padding: 62px 30px 18px 47px;
+  }
+
+  .footer_wrapper {
+    background-image: url('../../img/bgstone-desktop-sm.png');
+    background-position: left 52px bottom 219px;
+  }
+
+  .root h2 {  
+    font-size: 59px;
+    line-height: 69px;
+    margin-top: 155px;
+    margin-left: 60px;
+  }
+
+  .logo_wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 0;
+    align-items: flex-end;
+  }
+
+  .copyright_wrapper {
+    margin-top: 117px;
+  }
+
+  .logo_footer {
+    margin: 0;
+    width: 118px !important;
+    height: 49px !important;
+    background-size: 118px 49px !important;
+  }
+
+  .logoSH_footer {
+    margin-left: 37px;
+    margin-top: 67px;
+    margin-bottom: 0;
+    width: 260px;
+    height: 55px;
+    background-size: 260px 55px;
+  }
+
+  .footer_ontop_btn {
+    right: 36px;
+    bottom: 99px;
+  }
+}
+
+
+@media (min-width: $width-desktop-md) {
+  .root {
+    padding: 62px 30px 18px 47px;
+  }
+
+  .footer_wrapper {
+    background-position: left 51px bottom 227px;
+    background-size: 1243px 272px;
+  }
+
+  .root h2 {  
+    font-size: 66px;
+    line-height: 78px;
+    margin-top: 132px;
+    margin-left: 66px;
+  }
+
+  .copyright_wrapper {
+    margin-top: 121px;
+  }
+
+  .logo_footer {
+    margin: 0 0 5px 0;
+  }
+
+  .logoSH_footer {
+    margin: 0 0 5px 55px;
+    width: 260px;
+    height: 55px;
+    background-size: 260px 55px;
+  }
+
+  .footer_ontop_btn {
+    bottom: 34px;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     min-height: 1310px;
@@ -181,8 +270,9 @@
 
   .footer_wrapper {
     background-image: url('../../img/bgstone-desktop.png');
-    background-position: left 52px bottom 212px;
-    padding: 64px 118px 18px 50px;
+    background-position: left 52px bottom 208px;
+    background-size: unset;
+    padding: 64px 62px 18px 53px;
   }
 
   .root h2 {  
@@ -197,7 +287,6 @@
   .logo_wrapper {
     display: flex;
     flex-direction: row-reverse;
-    margin-left: 272px;
     margin-right: 0;
     align-items: flex-end;
   }
@@ -207,20 +296,14 @@
   }
 
   .logo_footer {
-    margin: 0;
-    margin-bottom: 3px;
+    margin: 0 0 3px 0;
     width: 160px;
     height: 50px;
     background-size: 160px 50px;
   }
 
   .logoSH_footer {
-    margin-left: 35px;
-    margin-top: 35px;
-    margin-bottom: 6px;
-    width: 260px;
-    height: 55px;
-    background-size: 260px 55px;
+    margin: 35px 0 6px 53px;
   }
 
   .footer_ontop_btn {

@@ -395,6 +395,14 @@
     padding: 0;
     padding-bottom: 94px !important;
     margin: 89px 66px 40px;
+
+    &::after {
+      width: 1017px;
+      bottom: 66px;
+      margin-left: -508px;
+      background-image: url('../../img/business-line-1440.png');
+      background-size: 1017px 16px;
+    }
   }
 
   .sub_title {
@@ -440,13 +448,6 @@
   .root .C_MainButton {
     margin-top: 0;
     padding: 11px 42px 10px;
-
-    &::after {
-      width: 1017px;
-      margin-left: -615px;
-      background-image: url('../../img/business-line-1440.png');
-      background-size: 1017px 16px;
-    }
   }
 
   .mapView {
@@ -459,6 +460,14 @@
   .root {
     padding-bottom: 94px !important;
     margin: 89px 66px 40px;
+
+    &::after {
+      width: 1178px;
+      bottom: 68px;
+      margin-left: -589px;
+      background-image: url('../../img/business-line-1600.png');
+      background-size: 1178px 16px;
+    }
   }
 
   .sub_title {
@@ -498,16 +507,9 @@
   }
 
   .root .C_MainButton {
-    // margin-top: 33px;
-    padding: 12px 47px 12px 47px;
+    margin-top: 33px;
+    padding: 12px 45px 12px 45px;
     letter-spacing: -0.03em;
-
-    &::after {
-      width: 1178px;
-      margin-left: -699px;
-      background-image: url('../../img/business-line-1600.png');
-      background-size: 1178px 16px;
-    }
   }
 
   .mapView {
@@ -519,6 +521,14 @@
 @media (min-width: $width-desktop-lg) {
   .root {
     margin: 89px 66px 70px;
+
+    &::after {
+      width: 1498px;
+      bottom: 68px;
+      margin-left: -749px;
+      background-image: url('../../img/business-line-1920.png');
+      background-size: 1498px 16px;
+    }
   }
 
   .sub_title {

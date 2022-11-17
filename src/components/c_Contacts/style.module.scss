@@ -71,7 +71,11 @@
   }
 }
 
-@media (min-width: $width-desktop-md) {
+@media (min-width: $width-desktop-sm) {
+  .root {
+    padding-left: 50px;
+  }
+
   .root a:first-child {
     font-size: 50px;
     line-height: 51px;  
@@ -81,5 +85,11 @@
     font-size: 50px;
     line-height: 51px;   
     margin-top: 25px;
+  }
+}
+
+@media (min-width: $width-desktop-md) {
+  .root {
+    padding-left: 0;
   }
 }
