@@ -191,8 +191,7 @@ $pos: -12px;
 
 @mixin deskSm_card {
   @include card($widthCard: $widthCard_tab,
-    // $heightCard: $heightCard_desk_map,
-    $heightCard: $heightCard_tab,
+    $heightCard: $heightCard_desk_map,
     $borderRadius: $borderRadius_tab,
     $paddingCard: $paddingCard_tab_desk,
     $widthPic: $widthPic_tab,
