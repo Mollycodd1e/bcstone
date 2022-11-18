@@ -348,9 +348,10 @@ $pos: -12px;
     bottom: calc(#{$faceBtm} + 10px);
     transition: bottom .5s ease-out;
   }
-
+  
   .faceWrap {
     &:hover {
+      cursor: pointer;
       & .С_CardFace {
         bottom: calc(#{$faceBtm} + 40px);
       }

@@ -4,6 +4,7 @@ import {С_CardFace} from "../c_CardFace";
 import {С_CardInfo} from "../c_CardInfo";
 import {С_CloseBtn} from "../c_CloseBtn";
 import {С_CardBtn} from "../c_CardBtn";
+import { useState } from 'react';
 
 export const C_RegularCard = ({
     isMapMode,
@@ -25,7 +26,7 @@ export const C_RegularCard = ({
     link,
     setIsPopUpVisible,
 }) => {
-
+    const [isCardHovered, setIsCardHovered] = useState(false);
     const cls = classNames(classes.root, { [classes.map_mod]: isMapMode});
     return (
         <div className={cls}>
@@ -37,8 +38,9 @@ export const C_RegularCard = ({
                 />
                 : null
             }
-            <div className={classes.wrapper}>
-                <div className={classes.faceWrap}>
+            {/* add button link */}
+            <div className={classes.wrapper} onClick={() => isCardHovered ? '' : null}> 
+                <div className={classes.faceWrap} onMouseEnter={() => setIsCardHovered(true)} onMouseOut={() => setIsCardHovered(false)}>
                     <С_CardFace
                         className={classes.С_CardFace}
                         logo={logo}
