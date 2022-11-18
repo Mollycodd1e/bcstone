@@ -11,7 +11,6 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
     const mapRef = useRef();
     const [bounds, setBounds] = useState(null);
     const [zoom, setZoom] = useState(map_settings.defaultZoom);
-
     const points = data.projects.filter(el => el.isShownOnMap).map(project => {
         return ({
             type: "Feature",
@@ -89,9 +88,9 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                             // mapRef.current.panTo({ lat: latitude, lng: longitude });
 
                                             // получает данные карточек нажатого кластера
-                                           
                                             setClustersProjects(supercluster.getLeaves(project.id));
-                                            setIsCardVisible(false ? prev => !prev : true);
+                                            setIsCardVisible(prev => !prev);
+
                                         }}
                                         imgDefault={map_settings.defaultPin.src}
                                         imgActive={map_settings.activePin.src}
@@ -106,12 +105,11 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                     key={i}
                                     lat={latitude}
                                     lng={longitude}
-                                    onClick={(evt) => {
-                                        setInitialSlide(prev => project.properties.order - 1);
+                                    onClick={() => {
+                                        setInitialSlide(project.properties.order - 1);
                                         setShownSliders([project.properties.order - 1]);
-                                        // setIsCardVisible(prev => !prev);
-                                        setIsCardVisible(prev => !prev);
-                                        console.log(project.properties.order)
+                                        (initialSlide === project.properties.order -1) ? setIsCardVisible(prev => !prev) : null;
+
                                     }}
                                     imgDefault={project.properties.defaultPin}
                                     imgActive={project.properties.activePin}

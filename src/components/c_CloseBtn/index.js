@@ -2,6 +2,7 @@ import classes from './style.module.scss';
 import classNames from "classnames";
 
 export const С_CloseBtn = ({className, mode, onClick}) => {
+    console.log(onClick)
     const cls = classNames(
         classes.root,
         {

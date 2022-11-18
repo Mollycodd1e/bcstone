@@ -25,6 +25,7 @@ export const C_RegularCard = ({
     link,
     setIsPopUpVisible,
 }) => {
+
     const cls = classNames(classes.root, { [classes.map_mod]: isMapMode});
     return (
         <div className={cls}>
