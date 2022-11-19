@@ -4,7 +4,7 @@ import React from "react";
 
 export const CC_regularCards = (className, isBtnClose, onBtnCloseClick, setIsPopUpVisible, isMapMode, data) => {
     const {projects} = data;
-
+    console.log(projects)
     const rCards = projects.map((card, i) => <C_RegularCard
             isMapMode={isMapMode}
             key={card.name + i}
@@ -28,7 +28,7 @@ export const CC_regularCards = (className, isBtnClose, onBtnCloseClick, setIsPop
         />
     // const rCards = cards.map((card, i) => <C_RegularCard
     //         isMapMode={isMapMode}
-    //         key={card.alt + i}
+    //         key={card.alt + i}\shenty
     //         logo={card.logo}
     //         alt={card.alt}
     //         img={card.img}

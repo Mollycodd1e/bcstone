@@ -1,16 +1,18 @@
 @import '../../styles/style';
 
 .popupWrapper {
+  max-width: 1920px;
   width: 100vw;
   height: 100vh;
   position: fixed;
-  display: none;
+  z-index: -1;
   backdrop-filter: blur(30px);
   --webkit-backdrop-filter: blur(30px);
   background-color: rgba(77, 77, 77, 0.85);
 }
 
 .root {
+  position: relative;
   max-width: 1920px;
   width: 100vw;
   overflow: hidden;
@@ -34,7 +36,8 @@
 }
 
 .shownPopup {
-  display: block;
+  max-width: unset;
+  // display: block;
   z-index: 100;
 }
 

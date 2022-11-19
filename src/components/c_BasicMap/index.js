@@ -108,6 +108,7 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                     onClick={() => {
                                         setInitialSlide(project.properties.order - 1);
                                         setShownSliders([project.properties.order - 1]);
+                                        //setIsCardVisible(prev => !prev);
                                         (initialSlide === project.properties.order -1) ? setIsCardVisible(prev => !prev) : null;
 
                                     }}

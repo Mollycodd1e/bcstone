@@ -106,6 +106,61 @@
   }
 }
 
+@media(min-width: $width-tablet-md) {
+  .root {
+    padding: 0 0 40px 0;
+  }
+
+  .fourCards {
+    width: 100%; 
+    height: 0;
+    position: absolute;
+    top: 3rem;
+    left: 5rem;
+  
+    & > div {
+      position: absolute;
+
+      & div button:nth-child(1) {
+        display: none;
+      }
+    }
+    
+    // & div div button:nth-child(1) {
+    //   display: none;
+    // }
+    // & div {
+    //   position: absolute;
+    // }
+  
+    
+    & > div:nth-child(1) {
+      top: -1rem;
+      right: 7rem;
+
+      & div button:nth-child(1) {
+        display: block;
+      }
+    }
+  
+    & div:nth-child(2) {
+      top: -1rem;
+      right: 33rem;
+    }
+  
+    & div:nth-child(3) {
+      top: -1rem;
+      left: unset;
+      right: 59rem;
+    }
+    
+    & div:nth-child(4) {
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
 @media(min-width: $width-desktop-sm) {
   .fourCards {
     width: 100%;
@@ -114,10 +169,38 @@
     top: 3rem;
     left: 5rem;
     
+    & > div {
+      position: absolute;
+
+      & div button:nth-child(1) {
+        display: block;
+      }
+    }
+
     & div[class*="CardInfo"] {
       overflow: hidden;
     }
     
+    & > div:nth-child(1) {
+      top: 0;
+      right: 13rem;
+    }
+  
+    & div:nth-child(2) {
+      top: 45rem;
+      right: 13rem;
+    }
+  
+    & div:nth-child(3) {
+      top: 45rem;
+      left: 0;
+    }
+    
+    & div:nth-child(4) {
+      top: 0;
+      left: 0;
+    }
+
     & > div {
       position: absolute;
 
