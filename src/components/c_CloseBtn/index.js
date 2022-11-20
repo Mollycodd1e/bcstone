@@ -1,7 +1,7 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
 
-export const С_CloseBtn = ({className, mode, onClick, setIsCloseAllBtn}) => {
+export const С_CloseBtn = ({className, mode, onClick, setIsCloseAllBtn, i}) => {
     
     const cls = classNames(
         classes.root,
@@ -13,7 +13,7 @@ export const С_CloseBtn = ({className, mode, onClick, setIsCloseAllBtn}) => {
         }
     );
     return (
-        <button className={cls} onClick={(e) => onClick === null ? (e.target.parentNode.style='display: none;') : onClick()} onMouseEnter={() => setIsCloseAllBtn(true)}/>
+        <button className={cls} onClick={() => onClick === null ? console.log('привет') : onClick()} onMouseEnter={() => setIsCloseAllBtn(true)}/>
         // <button className={cls} onClick={(e) => e.target.parentNode.style='display: none;'} />
     )
 }

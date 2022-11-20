@@ -4,7 +4,7 @@ import {С_CardFace} from "../c_CardFace";
 import {С_CardInfo} from "../c_CardInfo";
 import {С_CloseBtn} from "../c_CloseBtn";
 import {С_CardBtn} from "../c_CardBtn";
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import {sizes} from "../../data/sizes";
 import {Context} from "../../library";
 
@@ -27,6 +27,8 @@ export const C_RegularCard = ({
     isBtnClose,
     link,
     setIsPopUpVisible,
+    i,
+    onCardCloseClick
 }) => {
     const [isCardHovered, setIsCardHovered] = useState(false);
     const cls = classNames(classes.root, { [classes.map_mod]: isMapMode});
@@ -42,11 +44,12 @@ export const C_RegularCard = ({
                     mode={'light'}
                     onClick={onBtnCloseClick}
                     setIsCloseAllBtn={setIsCloseAllBtn}
+                    i={i}
                 />
                 : null
             }
             {width >= sizes.widthDesktopSm ?
-                <button className={classNames(classes.closeAllBtn,{[classes.closeAllBtnShown]: isCloseAllBtn})} onClick={() => (setIsCloseAllBtn(false), onBtnCloseClick())}>Закрыть все</button>
+                <button className={classNames(classes.closeAllBtn,{[classes.closeAllBtnShown]: isCloseAllBtn})} onClick={() => (setIsCloseAllBtn(false), (onCardCloseClick()))}>Закрыть все</button>
                 : null
             }
             {/* add button link */}
