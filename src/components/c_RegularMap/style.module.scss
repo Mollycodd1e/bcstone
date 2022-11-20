@@ -192,12 +192,13 @@
     }
   
     & div:nth-child(3) {
-      top: 45rem;
+      max-width: 348px;
+      top: 0;
       left: 0;
     }
     
     & div:nth-child(4) {
-      top: 0;
+      top: 45rem;
       left: 0;
     }
 

@@ -11,6 +11,7 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
     const mapRef = useRef();
     const [bounds, setBounds] = useState(null);
     const [zoom, setZoom] = useState(map_settings.defaultZoom);
+    const [isClusterClick, setIsClusterClick] = useState(false);
     const points = data.projects.filter(el => el.isShownOnMap).map(project => {
         return ({
             type: "Feature",
@@ -88,8 +89,10 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                             // mapRef.current.panTo({ lat: latitude, lng: longitude });
 
                                             // получает данные карточек нажатого кластера
+                                            
                                             setClustersProjects(supercluster.getLeaves(project.id));
-                                            setIsCardVisible(prev => !prev);
+                                            !isClusterClick && isCardVisible ? null : setIsCardVisible(prev => !prev);
+                                            setIsClusterClick(prev => !prev);
 
                                         }}
                                         imgDefault={map_settings.defaultPin.src}
@@ -108,8 +111,8 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                     onClick={() => {
                                         setInitialSlide(project.properties.order - 1);
                                         setShownSliders([project.properties.order - 1]);
-                                        //setIsCardVisible(prev => !prev);
-                                        (initialSlide === project.properties.order -1) ? setIsCardVisible(prev => !prev) : null;
+                                        (initialSlide === project.properties.order - 1) && !isClusterClick || !isCardVisible ? setIsCardVisible(prev => !prev) : null;
+                                        setIsClusterClick(false);
 
                                     }}
                                     imgDefault={project.properties.defaultPin}
