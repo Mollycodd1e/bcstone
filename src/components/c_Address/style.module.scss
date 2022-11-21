@@ -19,6 +19,22 @@
   margin-top: 12px;
 }
 
+@media (min-width: $width-tablet-sm) {
+  .root {
+    font-size: 16px;
+    line-height: 15px;
+    margin-top: 19px;
+    padding-left: 27px;
+  }
+  
+  .root p:nth-child(2) {
+    font-size: 16px;
+    line-height: 18px;
+    width: 250px;
+    margin-top: 15px;
+  }
+}
+
 @media (min-width: $width-tablet-md) {
   .root {
     font-size: 20px;
@@ -31,20 +47,25 @@
     font-size: 20px;
     line-height: 22px;
     width: 300px;
-    margin-top: 15px;
   }
 }
 
-@media (min-width: $width-desktop-lg) {
+@media (min-width: $width-desktop-sm) {
   .root {
     font-size: 20px;
     line-height: 15px;
-    margin-top: 37px;
-    padding-left: 65px;
+    margin-top: 35px;
+    padding-left: 50px;
   }
   
   .root p:nth-child(2) {
     width: 300px;
     margin-top: 24px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    padding-left: 0;
   }
 }

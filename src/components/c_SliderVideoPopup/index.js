@@ -9,7 +9,6 @@ import { C_SliderPopupElement } from "../c_SliderPopupElement";
 export const C_SliderVideoPopup = ({className, data, isPopupClose, setIsPopupClose, popup}) => {
     const cls = classNames(classes.root, {[className]: className});
     const [width, height] = useContext(Context);
-
     const {slider, video} = data.about_company.variableContent;
 
     const divBlock = useRef(null);
@@ -29,10 +28,31 @@ export const C_SliderVideoPopup = ({className, data, isPopupClose, setIsPopupClo
         return <C_SliderPopupElement key={i} img={el.src} popup={popup}/>
     })
 
+    function useOutsideClick (elementRef, handler, attached = true) {
+        useEffect(() => {
+            if (!attached) return;
+
+            const handleClick = (evt) => {
+                if (!elementRef.current) return;
+                if (!elementRef.current.contains(evt.target)) {
+                    setIsPopupClose(true);
+                }
+            }
+            
+            document.addEventListener("click", handleClick);
+
+            return () => {
+                document.removeEventListener("click", handleClick)
+            };
+        },[elementRef, handler, attached])
+    }
+
+    useOutsideClick(divBlock);
+
     return (
-        <div className={classNames(classes.popupWrapper, {[classes.shownPopup]: popup && !isPopupClose})}>
+        <div className={classNames(classes.popupWrapper, {[classes.shownPopup]: popup && !isPopupClose})} >
             <button className={classes.closeIcon} onClick={() => setIsPopupClose(true)}/>
-            <div className={classNames(classes.root, {[classes.popupVideoWrapper]: video.isVisible})} ref={divBlock} 
+            <div className={classNames(classes.root, {[classes.popupVideoWrapper]: video.isVisible})} ref={divBlock}
                  // style={{ height:  `${width < sizes.widthTabletMd ? 190 : heightBlock}px`}}
             >
                 {slider.isVisible && !video.isVisible

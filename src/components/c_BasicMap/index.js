@@ -11,7 +11,7 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
     const mapRef = useRef();
     const [bounds, setBounds] = useState(null);
     const [zoom, setZoom] = useState(map_settings.defaultZoom);
-
+    const [isClusterClick, setIsClusterClick] = useState(false);
     const points = data.projects.filter(el => el.isShownOnMap).map(project => {
         return ({
             type: "Feature",
@@ -89,10 +89,10 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                             // mapRef.current.panTo({ lat: latitude, lng: longitude });
 
                                             // получает данные карточек нажатого кластера
-                                           
+                                            
                                             setClustersProjects(supercluster.getLeaves(project.id));
-                                            setIsCardVisible(prev => true);
-
+                                            !isClusterClick && isCardVisible ? null : setIsCardVisible(prev => !prev);
+                                            setIsClusterClick(prev => !prev);
 
                                         }}
                                         imgDefault={map_settings.defaultPin.src}
@@ -109,9 +109,11 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                     lat={latitude}
                                     lng={longitude}
                                     onClick={() => {
-                                        // setInitialSlide(prev => project.properties.order - 1);
+                                        setInitialSlide(project.properties.order - 1);
                                         setShownSliders([project.properties.order - 1]);
-                                        setIsCardVisible(prev => true);
+                                        (initialSlide === project.properties.order - 1) && !isClusterClick || !isCardVisible ? setIsCardVisible(prev => !prev) : null;
+                                        setIsClusterClick(false);
+
                                     }}
                                     imgDefault={project.properties.defaultPin}
                                     imgActive={project.properties.activePin}

@@ -22,9 +22,10 @@
   margin-top: 10px;
 }
 
-@media (min-width: $width-tablet-md) {
+@media (min-width: $width-tablet-sm) {
   .root {
     margin-top: 0;
+    margin-left: 0;
   }
 
   .root div {
@@ -44,6 +45,72 @@
     line-height: 10px;
     max-width: 420px;
     letter-spacing: 0;
+  }
+}
+
+@media (min-width: $width-tablet-md) {
+}
+
+@media (min-width: $width-notebook) {
+  .root div {
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  .root div:nth-child(n + 2) {
+    font-size: 14px;
+    line-height: 15px;
+    margin-top: 7px;
+  }
+
+  .root div:nth-child(n + 3) {
+    margin-top: 39px;
+    font-size: 12px;
+    line-height: 13px;
+    max-width: 520px;
+  }
+}
+
+@media (min-width: $width-desktop-sm) {
+  .root {
+    margin-top: 1px;
+  }
+
+  .root div:nth-child(n + 2) {
+    margin-top: 22px;
+  }
+
+  .root div:nth-child(n + 3) {
+    margin-top: 25px;
+    font-size: 14px;
+    line-height: 15px;
+    max-width: 740px;
+    letter-spacing: 0px;
+  }
+}
+
+@media (min-width: $width-desktop-md) {
+  .root {
+    margin-top: 1px;
+  }
+
+  .root div {
+    font-size: 16px;
+    line-height: 15px;
+  }
+
+  .root div:nth-child(n + 2) {
+    font-size: 16px;
+    line-height: 15px;
+    margin-top: 22px;
+  }
+
+  .root div:nth-child(n + 3) {
+    margin-top: 25px;
+    font-size: 16px;
+    line-height: 18px;
+    max-width: 840px;
+    letter-spacing: 0px;
   }
 }
 

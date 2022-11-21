@@ -47,6 +47,10 @@ img {
   background: radial-gradient(#fff 0%, #808080 300%);
 }
 
+.common_top_bg_aboutPopup {
+  overflow: hidden
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {

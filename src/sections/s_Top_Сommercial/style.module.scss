@@ -1,7 +1,30 @@
 @import '../../styles/style';
 
+@keyframes deskElementsToTop {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 
 .root {
+  animation: deskElementsToTop;
+  animation-duration: 1s;
+  transition: 3s;
+}
+
+.root > div:nth-child(1) {
+    animation: deskElementsToTop 1.5s;
+}
+
+.root > div:nth-child(2) {
+  animation: deskElementsToTop 1s;
+}
+
+.root > div:nth-child(3) {
+  animation: deskElementsToTop 0.5s;
 }
 
 .sliderWrapper {
@@ -58,6 +81,8 @@
     margin: 5px 0 5px 0;
     padding: 0 41px 60px;
     max-width: 1364px;
+    animation: deskElementsToTop;
+    animation-duration: 1s;
   }
 }
 

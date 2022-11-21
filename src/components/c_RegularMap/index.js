@@ -8,19 +8,18 @@ import {C_BasicMap} from "../c_BasicMap";
 import {C_Slider} from "../c_Slider";
 import {CC_regularCards} from "../../complexComponents/cc_regularCards";
 
-
 export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUpVisible, isMapMode, data}) => {
     const cls = classNames(classes.root, { [className]: className });
     const [isCardVisible, setIsCardVisible] = useState(false);
     const close = () => setIsCardVisible(false);
-
-    const rCards = CC_regularCards(classes.RegularCard, isBtnClose, () => close(), setIsPopUpVisible, isMapMode, data);
+    const [shownSliders, setShownSliders] = useState([]);
     const [width, height] = useContext(Context);
-
+    const rCards = CC_regularCards(classes.RegularCard, isBtnClose, shownSliders.length > 1 && width >= sizes.widthDesktopSm ? null : () => close(), () => close(), setIsPopUpVisible, isMapMode, data);
+    
     const [initialSlide, setInitialSlide] = useState(0);
     const [clustersProjects, setClustersProjects] = useState([]);
-    const [shownSliders, setShownSliders] = useState([0]);
-
+    
+   
     useEffect(() => {
         // console.log('clustersProjects', clustersProjects)
         const orderList = clustersProjects.map(project => {
@@ -33,7 +32,7 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
     // useEffect(() => {
     //     console.log('initialSlide', initialSlide)
     // }, [initialSlide]);
-    
+
     return (
         <div className={cls}>
             <C_BasicMap
@@ -51,7 +50,7 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
                 isCardVisible && width < sizes.widthTabletMd
                 ?
                     <div className={classNames(classes.wrapperSlider, { [classes.mapSlider]: width === sizes.widthTabletSm })}>
-                        <C_Slider map={true} isBtnClose={isBtnClose} items={rCards} initialSlide={rCards[shownSliders[0]]} setIsPopUpVisible={setIsPopUpVisible} slidersSpaceBetween={width >= 768 ? -185 : -215}/>
+                        <C_Slider map={true} isBtnClose={isBtnClose} items={rCards} initialSlide={shownSliders[0]} setIsPopUpVisible={setIsPopUpVisible} slidersSpaceBetween={width >= 768 ? -200 : -215}/>
                     </div>
                 : isCardVisible && width >= sizes.widthTabletMd ?
                     <div className={classes.fourCards}>

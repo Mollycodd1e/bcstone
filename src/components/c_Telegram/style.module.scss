@@ -47,10 +47,10 @@
   display: none;
 }
 
-@media (min-width: $width-tablet-md) {
+@media (min-width: $width-tablet-sm) {
   .root {
-    margin-top: 44px;
-    padding-left: 80px;
+    margin-top: 50px;
+    padding-left: 40px;
     display: flex;
   }
 
@@ -92,11 +92,20 @@
   }
 }
 
-@media (min-width: $width-desktop-lg) {
+@media (min-width: $width-tablet-md) {
+  .root {
+    margin-top: 44px;
+    padding-left: 80px;
+  }
+}
+
+
+@media (min-width: $width-desktop-sm) {
   .root {
     margin-top: 60px;
     margin-right: 10px;
     display: flex;
+    padding-left: 68px;
   }
 
   .root .telegram_wrapper {
@@ -133,5 +142,11 @@
     height: 204px;
     padding-right: 0;
     background-size: 150px 204px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    padding-left: 20px;
   }
 }

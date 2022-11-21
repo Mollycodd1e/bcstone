@@ -58,25 +58,24 @@
   bottom: 24px;
 }
 
-@media (min-width: $width-tablet-md) {
+@media (min-width: $width-tablet-sm) {
   .root {
     width: 100%;
-    margin-top: 41px;
-    min-height: 971px;
+    min-height: 877px;
   }
 
   .footer_wrapper {
-    background-image: url('../../img/bgstone-tablet.png');
+    background-image: url('../../img/bgstone-tablet-sm.png');
     background-repeat: no-repeat;
-    background-position: center bottom 210px;
-    padding: 64px 118px 18px 50px;
+    background-position: left 36px bottom 210px;
+    padding: 64px 80px 18px 53px;
   }
 
   .root h2 {  
-    font-size: 46px;
-    line-height: 55px;
-    margin-top: 75px;
-    margin-left: 57px;
+    font-size: 34px;
+    line-height: 40px;
+    margin-top: 66px;
+    margin-left: 22px;
     letter-spacing: 0.3px;
   }
 
@@ -84,11 +83,10 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
-    margin-top: 119px;
+    margin-top: 110px;
   }
 
   .logo_wrapper {
-    margin-right: 118px;
     margin-left: auto;
   }
 
@@ -110,7 +108,156 @@
 
   .footer_ontop_btn {
     right: 52px;
+    bottom: 99px;
+  }
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+    margin-top: 41px;
+    min-height: 971px;
+  }
+
+  .footer_wrapper {
+    background-image: url('../../img/bgstone-tablet.png');
+    padding: 64px 118px 18px 50px;
+  }
+
+  .root h2 {  
+    font-size: 46px;
+    line-height: 55px;
+    margin-top: 75px;
+    margin-left: 57px;
+  }
+
+  .copyright_wrapper {
+    margin-top: 119px;
+  }
+
+  .logo_wrapper {
+    margin-right: 118px;
+    margin-left: auto;
+  }
+
+  .footer_ontop_btn {
     bottom: 70px;
+  }
+}
+
+@media (min-width: $width-notebook) {
+  .footer_wrapper {
+    background-image: url('../../img/bgstone-notebook.png');
+    background-position: left 52px bottom 190px;
+    padding: 64px 118px 18px 50px;
+  }
+
+  .root h2 {  
+    font-size: 48px;
+    line-height: 57px;
+    margin-top: 98px;
+    margin-left: 60px;
+    letter-spacing: 0.007em;
+  }
+
+  .copyright_wrapper {
+    margin-top: 89px;
+  }
+
+  .logo_wrapper {
+    margin: 3px 190px 0 auto;
+  }
+
+  .footer_ontop_btn {
+    bottom: 70px;
+  }
+}
+
+@media (min-width: $width-desktop-sm) {
+  .root {
+    min-height: 1310px;
+    padding: 62px 30px 18px 47px;
+  }
+
+  .footer_wrapper {
+    background-image: url('../../img/bgstone-desktop-sm.png');
+    background-position: left 52px bottom 219px;
+  }
+
+  .root h2 {  
+    font-size: 59px;
+    line-height: 69px;
+    margin-top: 155px;
+    margin-left: 60px;
+  }
+
+  .logo_wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 0;
+    align-items: flex-end;
+  }
+
+  .copyright_wrapper {
+    margin-top: 117px;
+  }
+
+  .logo_footer {
+    margin: 0;
+    width: 118px !important;
+    height: 49px !important;
+    background-size: 118px 49px !important;
+  }
+
+  .logoSH_footer {
+    margin-left: 37px;
+    margin-top: 67px;
+    margin-bottom: 0;
+    width: 260px;
+    height: 55px;
+    background-size: 260px 55px;
+  }
+
+  .footer_ontop_btn {
+    right: 36px;
+    bottom: 99px;
+  }
+}
+
+
+@media (min-width: $width-desktop-md) {
+  .root {
+    padding: 62px 30px 18px 47px;
+  }
+
+  .footer_wrapper {
+    background-position: left 51px bottom 227px;
+    background-size: 1243px 272px;
+  }
+
+  .root h2 {  
+    font-size: 66px;
+    line-height: 78px;
+    margin-top: 132px;
+    margin-left: 66px;
+  }
+
+  .copyright_wrapper {
+    margin-top: 121px;
+  }
+
+  .logo_footer {
+    margin: 0 0 5px 0;
+  }
+
+  .logoSH_footer {
+    margin: 0 0 5px 55px;
+    width: 260px;
+    height: 55px;
+    background-size: 260px 55px;
+  }
+
+  .footer_ontop_btn {
+    bottom: 34px;
   }
 }
 
@@ -123,8 +270,9 @@
 
   .footer_wrapper {
     background-image: url('../../img/bgstone-desktop.png');
-    background-position: left 52px bottom 212px;
-    padding: 64px 118px 18px 50px;
+    background-position: left 52px bottom 208px;
+    background-size: unset;
+    padding: 64px 62px 18px 53px;
   }
 
   .root h2 {  
@@ -139,7 +287,6 @@
   .logo_wrapper {
     display: flex;
     flex-direction: row-reverse;
-    margin-left: 272px;
     margin-right: 0;
     align-items: flex-end;
   }
@@ -149,20 +296,14 @@
   }
 
   .logo_footer {
-    margin: 0;
-    margin-bottom: 3px;
+    margin: 0 0 3px 0;
     width: 160px;
     height: 50px;
     background-size: 160px 50px;
   }
 
   .logoSH_footer {
-    margin-left: 35px;
-    margin-top: 35px;
-    margin-bottom: 6px;
-    width: 260px;
-    height: 55px;
-    background-size: 260px 55px;
+    margin: 35px 0 6px 53px;
   }
 
   .footer_ontop_btn {

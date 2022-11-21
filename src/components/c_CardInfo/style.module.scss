@@ -63,6 +63,7 @@
       background-size: 15px 12px;
     }
   }
+
   &:nth-child(2) {
     grid-area: cardInfoEl2;
 
@@ -71,6 +72,7 @@
       background-image: url("../../img/s_clock_icon.svg");
     }
   }
+
   &:nth-child(3) {
     grid-area: cardInfoEl3;
 
@@ -79,6 +81,7 @@
       background-image: url("../../img/s_calendar_icon.svg");
     }
   }
+
   &:nth-child(4) {
     grid-area: cardInfoEl4;
 
@@ -94,6 +97,7 @@
   .root {
     margin: 35px 0 0 0;
     padding: 0 0 0 25.5px;
+    width: 100%;
   }
 
   .list {
@@ -102,6 +106,7 @@
   }
 
   .item {
+    font-size: 11px;
     padding: 4.7px 11px 2px;
   }
 }
@@ -127,28 +132,61 @@
   
   .list {
     padding: 0 0 0 28px;
-    margin: 20px 0 0 0;
-    column-gap: 46px !important;
+    margin: 18px 0 0 0;
+    column-gap: 16px !important;
     width: fit-content;
   }
   
   .item {
     font-size: 14px;
     line-height: 15px;
-    padding: 2.7px 0 5px 17px;
+    padding: 3px 15px 5px 17px;
+
+    &:not(:last-child) {
+      margin: 0 0 8px 0;
+    }
 
     &:before {
       @include pseudo;
-      background-size: 14px 18px;
+      background-size: 14px 16px;
+    }
+
+    &:nth-child(2) {
+      margin-left: auto;
+      right: -18px;
+      &:before {
+        @include pseudo;
+        background-size: 15px 18px;
+      }
+    }
+
+    &:nth-child(3) {
+      padding: 4px 15px 5px 17px;
+      &:before {
+        @include pseudo;
+        top: 2px;
+        background-size: 16px 18px;
+      }
     }
 
     &:nth-child(4) {
-      margin-top: 5px;
+      margin-top: 1px;
+
       &:before {
         @include pseudo;
+        top: 1px;
+        left: -26px;
         background-size: 23px 21px;
       }
     }
+
+    // &:nth-child(4) {
+    //   margin-top: 5px;
+    //   &:before {
+    //     @include pseudo;
+    //     background-size: 23px 21px;
+    //   }
+    // }
   }
 }
 
@@ -161,30 +199,30 @@
   .list {
     padding: 0 0 0 28px;
     margin: 20px 0 0 0;
-    column-gap: 40px !important;
+    column-gap: 18px !important;
   }
   
   .item {
     font-size: 14px;
     line-height: 15px;
-    padding: 2.7px 0 5px 17px;
+    // padding: 2.7px 0 5px 17px;
+  
+    // &:before {
+    //   @include pseudo;
+    //   background-size: 14px 18px;
+    // }
 
-    &:before {
-      @include pseudo;
-      background-size: 14px 18px;
-    }
+    // &:nth-child(2) {
+    //   margin-left: 10px;
+    // }
 
-    &:nth-child(2) {
-      margin-left: 10px;
-    }
+    // &:nth-child(3) {
+    //   margin-top: 2px;
+    // }
 
-    &:nth-child(3) {
-      margin-top: 2px;
-    }
-
-    &:nth-child(4) {
-      margin-top: 3px;
-    }
+    // &:nth-child(4) {
+    //   margin-top: 3px;
+    // }
   }
 }
 

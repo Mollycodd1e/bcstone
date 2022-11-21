@@ -146,19 +146,38 @@
 }
 
 .button {
-  font-size: 12px;
-  line-height: 13px;
-  letter-spacing: -0.01em;
-  text-align: center;
-  color: #000;
-  border-radius: 16px;
-  background: #fff;
-  border-width: 0;
-  padding: 10px 23px 9px 23px;
-  font-family: "Codec Cold News", "Arial", sans-serif;
+  // font-size: 12px;
+  // line-height: 13px;
+  // letter-spacing: -0.01em;
+  // text-align: center;
+  color: #000000;
+  // border-radius: 16px;
+  background: #ffffff;
+  // border-width: 0;
+  // padding: 10px 23px 9px 23px;
+  // font-family: "Codec Cold News", "Arial", sans-serif;
   margin-top: 30px;
   margin-bottom: 26px;
-  cursor: pointer;
+  // cursor: pointer;
+  // overflow: hidden;
+  // transition: background-color 1.3s;
+
+  &:hover {
+    background-color: black !important;
+
+    & span:last-child {
+      color: white !important;
+    }
+  }
+
+  & span:last-child {
+    color: black;
+  }
+
+  & span:first-child {
+    display: unset;
+    background: rgb(0, 0, 0) !important;
+  }
 }
 
 .checkboxWrapper {
@@ -379,7 +398,7 @@
     font-size: 15px;
     line-height: 16px;
     border-radius: 21.5px;
-    padding: 10px 38px 10px 38px;
+    //padding: 10px 39px 10px 39px;
     margin: 0 0 28px 0;
   }
 
@@ -487,11 +506,14 @@
   }
 
   .button {
-    font-size: 18px;
-    line-height: 19px;
     border-radius: 21.5px;
     padding: 12px 45px 11px 45px;
     margin: 0 0 29px 0;
+
+    & span[class*="text"] {
+      font-size: 18px;
+      line-height: 19px;
+    }
   }
 
   .errorMessage {

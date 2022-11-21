@@ -73,7 +73,7 @@
 
 @media (min-width: $width-desktop-sm) {
   .root {
-    margin-bottom: 27px;
+    margin-bottom: 48px;
     margin-left: -46px;
   }
 
@@ -84,7 +84,7 @@
     grid-template-rows: repeat(2, auto);
     grid-template-columns: repeat(3, auto);
     grid-column-gap: 35px;
-    grid-row-gap: 89px;
+    grid-row-gap: 23px;
   }
 }
 
@@ -104,7 +104,7 @@
 @media (min-width: $width-desktop-lg) {
   .cards {
     //width: 100%;
-    width: 1788px;
+    width: 1786px;
     //overflow: hidden;
     //display: flex;
     //flex-wrap: wrap;

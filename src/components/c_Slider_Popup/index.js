@@ -9,7 +9,7 @@ import { sizes } from "../../data/sizes";
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
-export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, pagination, slidersSpaceBetween = -225, slidesPerView = 1, loop}) => {
+export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, pagination, slidersSpaceBetween, slidesPerView = 1, loop}) => {
     const cls = classNames(classes.root, { [className]: className });
     const [selectedSlide, setSelectedSlide] = useState(0);
     const [my_swiper, set_my_swiper] = useState({});
