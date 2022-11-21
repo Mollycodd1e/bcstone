@@ -5,6 +5,7 @@
   width: 100vw;
   height: 100vh;
   position: fixed;
+  z-index: 100;
   // z-index: -1;
   display: none;
   backdrop-filter: blur(30px);
@@ -39,7 +40,6 @@
 .shownPopup {
   max-width: unset;
   display: block;
-  z-index: 100;
 }
 
 .closeIcon {

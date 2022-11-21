@@ -34,6 +34,7 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
             <button className={classes.swiper_button_prev} onClick={() => (my_swiper.slidePrev(), slide > 0 ? setSlide(slide - 1) : setSlide(slide))}
                     disabled={slide === 0}/>
             <Swiper
+                onClick={onClick}
                 slidesPerView={slidesPerView}
                 spaceBetween={slidersSpaceBetween}
                 centeredSlides={true}
@@ -53,7 +54,6 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
                     set_my_swiper(evt)
                 }}
                 loop={loop}
-                onClick={onClick}
             >   
                 {items.map((item, i) => {
                     return (
