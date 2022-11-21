@@ -21,6 +21,7 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIs
     }
 
     const [heightBlock, setHeightBlock] = useState(0);
+
     useEffect(() => {
         showDivWidth()
         setHeightBlock(divBlock.current.getBoundingClientRect().width / 1.4756)
@@ -29,8 +30,12 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIs
     const elements = slider.gallery.map((el, i) => {
         return <C_SliderElementAbout key={i} img={el.src}/>
     })
-    // console.log(popup)
-    video.isVisible ? setIsVideo(true) : setIsVideo(false);
+    
+    useEffect(() => {
+        video.isVisible ? setIsVideo(true) : setIsVideo(false);
+    },[video, popup]);
+
+    console.log(popup)
     return (
         // <div className={cls} ref={divBlock}
         <div className={classNames(cls, {[classes.videoWrapper]: !slider.isVisible && video.isVisible})} ref={divBlock}

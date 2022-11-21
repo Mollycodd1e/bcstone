@@ -47,10 +47,8 @@ export const C_SliderVideoPopup = ({className, data, isAboutPopupClose, setIsAbo
         },[elementRef, handler, attached])
     }
 
-    useOutsideClick(divBlock, popup);
-
     return (
-        <div className={classNames(classes.popupWrapper, {[classes.shownPopup]: !popup && !isAboutPopupClose})} >
+        <div className={classNames(classes.popupWrapper, {[classes.shownPopup]: !popup && !isAboutPopupClose})} onClick={useOutsideClick(divBlock)}>
             <button className={classes.closeIcon} onClick={() => setIsAboutPopupClose(true)}/>
             <div className={classNames(classes.root, {[classes.popupVideoWrapper]: video.isVisible})} ref={divBlock}
                  // style={{ height:  `${width < sizes.widthTabletMd ? 190 : heightBlock}px`}}
