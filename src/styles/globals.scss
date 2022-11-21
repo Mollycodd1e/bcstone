@@ -40,12 +40,15 @@ img {
 }
 
 .common_top_bg {
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   background: radial-gradient(#fff 0%, #808080 300%);
+}
+
+.common_top_bg_aboutPopup {
+  overflow: hidden
 }
 
 .visually-hidden:not(:focus):not(:active),
