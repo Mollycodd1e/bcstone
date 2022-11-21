@@ -12,7 +12,7 @@ export const C_CombineRegularCards = ({className, isBtnClose, onBtnCloseClick, s
     const cls = classNames(classes.root, {[className]: className });
     const [width, height] = useContext(Context);
     // const setIsPopUpVisible = useContext(Context);
-    const rCards = CC_regularCards(classes.RegularCard, isBtnClose, onBtnCloseClick, setIsPopUpVisible, isMapMode, data);
+    const rCards = CC_regularCards(classes.RegularCard, isBtnClose, onBtnCloseClick, null, setIsPopUpVisible, isMapMode, data);
     return (
         <div className={cls}>
             {width < sizes.widthDesktopSm

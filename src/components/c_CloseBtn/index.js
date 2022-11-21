@@ -13,7 +13,7 @@ export const С_CloseBtn = ({className, mode, onClick, setIsCloseAllBtn, i}) => 
         }
     );
     return (
-        <button className={cls} onClick={() => onClick === null ? console.log('привет') : onClick()} onMouseEnter={() => setIsCloseAllBtn(true)}/>
+        <button className={cls} onClick={(evt) => onClick === null ?  evt.target.parentNode.style='display: none;' : onClick()} onMouseEnter={() => setIsCloseAllBtn(true)}/>
         // <button className={cls} onClick={(e) => e.target.parentNode.style='display: none;'} />
     )
 }
