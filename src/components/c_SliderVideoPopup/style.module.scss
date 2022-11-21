@@ -201,7 +201,9 @@
     width: 52px;
     height: 52px;
     background-size: 52px 52px;
-    right: calc(7% - 12px);
+    // right: calc(7% - 12px);
+    right: 50%;
+    margin-right: -631px;
     top: calc(21% - 13px);   
   }
 }
@@ -223,7 +225,8 @@
   }
 
   .closeIcon {
-    right: calc(7% - 23px);
+    // right: calc(7% - 23px);
+    margin-right: -711px;
     top: calc(13% - 12px);   
   }
 }
@@ -247,7 +250,8 @@
   }
 
   .closeIcon {
-    right: calc(6% - 26px);
+    // right: calc(6% - 26px);
+    margin-right: -871px;
     top: calc(6% - 11px);   
   }
 }

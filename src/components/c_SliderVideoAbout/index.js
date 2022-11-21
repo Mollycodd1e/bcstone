@@ -33,9 +33,8 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIs
     
     useEffect(() => {
         video.isVisible ? setIsVideo(true) : setIsVideo(false);
-    },[video, popup]);
+    },[video]);
 
-    console.log(popup)
     return (
         // <div className={cls} ref={divBlock}
         <div className={classNames(cls, {[classes.videoWrapper]: !slider.isVisible && video.isVisible})} ref={divBlock}
