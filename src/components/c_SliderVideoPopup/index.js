@@ -6,7 +6,7 @@ import {sizes} from "../../data/sizes";
 import {C_SliderPopup} from "../c_Slider_Popup";
 import { C_SliderPopupElement } from "../c_SliderPopupElement";
 
-export const C_SliderVideoPopup = ({className, data, isPopupClose, setIsPopupClose, popup}) => {
+export const C_SliderVideoPopup = ({className, data, isAboutPopupClose, setIsAboutPopupClose, popup}) => {
     const cls = classNames(classes.root, {[className]: className});
     const [width, height] = useContext(Context);
     const {slider, video} = data.about_company.variableContent;
@@ -35,7 +35,7 @@ export const C_SliderVideoPopup = ({className, data, isPopupClose, setIsPopupClo
             const handleClick = (evt) => {
                 if (!elementRef.current) return;
                 if (!elementRef.current.contains(evt.target)) {
-                    setIsPopupClose(true);
+                    !popup ? setIsAboutPopupClose(true) : null;
                 }
             }
             
@@ -47,11 +47,11 @@ export const C_SliderVideoPopup = ({className, data, isPopupClose, setIsPopupClo
         },[elementRef, handler, attached])
     }
 
-    useOutsideClick(divBlock);
+    useOutsideClick(divBlock, popup);
 
     return (
-        <div className={classNames(classes.popupWrapper, {[classes.shownPopup]: popup && !isPopupClose})} >
-            <button className={classes.closeIcon} onClick={() => setIsPopupClose(true)}/>
+        <div className={classNames(classes.popupWrapper, {[classes.shownPopup]: !popup && !isAboutPopupClose})} >
+            <button className={classes.closeIcon} onClick={() => setIsAboutPopupClose(true)}/>
             <div className={classNames(classes.root, {[classes.popupVideoWrapper]: video.isVisible})} ref={divBlock}
                  // style={{ height:  `${width < sizes.widthTabletMd ? 190 : heightBlock}px`}}
             >

@@ -146,8 +146,8 @@ export default function Home() {
                                     <S_Hero data={mainPageData[0]} />
                                     <S_Top_Commercial data={mainPageData[0]} />
                                     <S_Projects data={mainPageData[0]} className={"projects-bg"} />
-                                    <S_About data={mainPageData[0]} width={width} setIsAboutPopupClose={setIsAboutPopupClose}/>
-                                    <C_SliderVideoPopup data={mainPageData[0]} setIsPopupClose={setIsAboutPopupClose} isPopupClose={isAboutPopupClose} popup={true}/>
+                                    <S_About data={mainPageData[0]} width={width} setIsAboutPopupClose={setIsAboutPopupClose} popup={isAboutPopupClose}/>
+                                    <C_SliderVideoPopup data={mainPageData[0]} setIsAboutPopupClose={setIsAboutPopupClose} isAboutPopupClose={isAboutPopupClose} popup={isAboutPopupClose}/>
                                     <S_Sales data={mainPageData[0]} />
                                     <S_FullForm data={mainPageData[0]} />
                                     <S_Bottom_Commercial data={mainPageData[0]}/>

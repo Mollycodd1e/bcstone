@@ -7,7 +7,7 @@ import {Context} from "../../library";
 import {sizes} from "../../data/sizes";
 import { C_SliderDeveloper } from "../c_Slider_Developer";
 
-export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, popup, setIsVideo}) => {
+export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIsVideo, popup}) => {
     const cls = classNames(classes.root, {[className]: className});
     const [width, height] = useContext(Context);
 
@@ -27,18 +27,18 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, popup
     }, [width])
 
     const elements = slider.gallery.map((el, i) => {
-        return <C_SliderElementAbout key={i} img={el.src} popup={popup}/>
+        return <C_SliderElementAbout key={i} img={el.src}/>
     })
-
+    // console.log(popup)
     video.isVisible ? setIsVideo(true) : setIsVideo(false);
     return (
         // <div className={cls} ref={divBlock}
-        <div className={classNames(classes.root, {[classes.videoWrapper]: !slider.isVisible && video.isVisible})} ref={divBlock}
+        <div className={classNames(cls, {[classes.videoWrapper]: !slider.isVisible && video.isVisible})} ref={divBlock}
         // style={{ height:  `${width < sizes.widthTabletMd ? 190 : heightBlock}px`}}
         >
             {slider.isVisible && !video.isVisible
                 ? <C_SliderDeveloper
-                    onClick={() => popup ? null : setIsAboutPopupClose(false)}
+                    onClick={() => !popup ? null : setIsAboutPopupClose(false)}
                     className={classes.С_Slider}
                     isBtnClose={false}
                     items={elements}
