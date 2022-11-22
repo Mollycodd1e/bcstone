@@ -30,11 +30,12 @@
   .form_logo {
     display: block;
     margin: 0 auto;
-    margin-top: 28px;
-    margin-left: 58px;
+    margin-top: 37px;
+    margin-left: 70px;
     background-color: #f6f6f6;
-    width: 250px;
-    height: 80px;
-    background-size: 155px 80px;
+    min-width: 156px !important;
+    width: 156px !important;
+    height: 58px !important;
+    //background-size: 155px 80px;
   }
 }

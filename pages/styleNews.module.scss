@@ -6,6 +6,12 @@
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.161);
 }
 
+@media (min-width: $width-tablet-sm) {
+  .common_top_bg_news {
+    height: 92px;
+  }
+}
+
 @media (min-width: $width-tablet-md) {
   .common_top_bg_news {
     height: 100px;

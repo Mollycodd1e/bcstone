@@ -171,6 +171,12 @@ $menuTransition: .4s;
     display: none;
   }
 
+  .C_Logo {
+    width: 102px !important;
+    height: 39px !important;
+    background-size: 102px 39px !important;
+  }
+
   .elements {
     flex-direction: row;
     position: static;

@@ -38,6 +38,26 @@
   grid-area: C_ContactsMenu;
 }
 
+@media (min-width: $width-tablet-sm) {
+  .root {
+    grid-template-areas: 'C_Logo_Menu C_Navigation C_ContactsMenu';
+    grid-template-columns: 102px 1fr auto;
+    justify-content: end;
+    padding: 29px 36px 22px 52px;
+  }
+
+  .C_Logo_Menu {
+    display: block !important;
+    width: 82px !important;;
+    height: 34px !important;;
+    background-size: 82px 34px !important;;
+  }
+
+  .C_Navigation {
+    top: -12.5px;
+  }
+}
+
 @media (min-width: $width-tablet-md) {
   .root {
     grid-template-areas: 'C_Logo_Menu C_Navigation C_ContactsMenu';
@@ -55,6 +75,28 @@
 
   .C_Navigation {
     top: -12.5px;
+  }
+}
+
+@media (min-width: $width-desktop-sm) {
+  .root {
+    padding: 33px 88px 30px 129px;
+    max-width: 1920px;
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .C_Logo_Menu {
+    display: none !important;
+  }
+
+  .C_Navigation {
+    top: 0;
+  }
+}
+
+@media (min-width: $width-desktop-md) {
+  .root {
+    padding: 33px 85px 30px 132px;
   }
 }
 
