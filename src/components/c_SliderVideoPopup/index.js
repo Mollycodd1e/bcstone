@@ -28,29 +28,12 @@ export const C_SliderVideoPopup = ({className, data, isAboutPopupClose, setIsAbo
         return <C_SliderPopupElement key={i} img={el.src} popup={popup}/>
     })
 
-    function useOutsideClick (elementRef, handler, attached = true) {
-        useEffect(() => {
-            if (!attached) return;
-
-            const handleClick = (evt) => {
-                if (!elementRef.current) return;
-                if (!elementRef.current.contains(evt.target)) {
-                    !popup ? setIsAboutPopupClose(true) : null;
-                }
-            }
-            
-            document.addEventListener("click", handleClick);
-
-            return () => {
-                document.removeEventListener("click", handleClick)
-            };
-        },[elementRef, handler, attached])
+    const closePopup = (evt) => {
+        divBlock.current.contains(evt.target) ? null : setIsAboutPopupClose(true);
     }
 
-    useOutsideClick(divBlock, popup);
-
     return (
-        <div className={classNames(classes.popupWrapper, {[classes.shownPopup]: !popup && !isAboutPopupClose})} >
+        <div className={classNames(classes.popupWrapper, {[classes.shownPopup]: !popup && !isAboutPopupClose})} onClick={(e) => closePopup(e)}>
             <button className={classes.closeIcon} onClick={() => setIsAboutPopupClose(true)}/>
             <div className={classNames(classes.root, {[classes.popupVideoWrapper]: video.isVisible})} ref={divBlock}
                  // style={{ height:  `${width < sizes.widthTabletMd ? 190 : heightBlock}px`}}

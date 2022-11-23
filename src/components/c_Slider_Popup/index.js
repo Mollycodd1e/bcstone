@@ -31,6 +31,8 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, onBtn
             <button className={classes.swiper_button_prev} onClick={() => (my_swiper.slidePrev(), slide > 0 ? setSlide(slide - 1) : setSlide(slide))}
                     disabled={slide === 0}/>
             <Swiper
+                observer={true}
+                observeParents={true}
                 slidesPerView={slidesPerView}
                 spaceBetween={slidersSpaceBetween}
                 centeredSlides={true}

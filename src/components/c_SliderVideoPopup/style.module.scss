@@ -5,7 +5,7 @@
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   // z-index: -1;
   display: none;
   backdrop-filter: blur(30px);
@@ -201,7 +201,9 @@
     width: 52px;
     height: 52px;
     background-size: 52px 52px;
-    right: calc(7% - 12px);
+    // right: calc(7% - 12px);
+    right: 50%;
+    margin-right: -631px;
     top: calc(21% - 13px);   
   }
 }
@@ -223,7 +225,8 @@
   }
 
   .closeIcon {
-    right: calc(7% - 23px);
+    // right: calc(7% - 23px);
+    margin-right: -711px;
     top: calc(13% - 12px);   
   }
 }
@@ -232,7 +235,7 @@
   .root {
     min-width: 1253px;
     max-height: 887px;
-    top: calc(1% - 2px);
+    top: calc(5% - 2px);
   }
 
   .Popup_Slider {
@@ -247,7 +250,8 @@
   }
 
   .closeIcon {
-    right: calc(6% - 26px);
-    top: calc(2% - 11px);   
+    // right: calc(6% - 26px);
+    margin-right: -871px;
+    top: calc(6% - 11px);   
   }
 }

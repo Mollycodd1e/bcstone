@@ -12,7 +12,7 @@ export const C_ContentAbout = ({className, data, setIsAboutPopupClose, popup}) =
 
     return (
         <div className={classNames(cls, {[classes.video]: isVideo})}>
-            <C_SliderVideoAbout data={data} className={classes.C_SliderVideoAbout} setIsAboutPopupClose={setIsAboutPopupClose} setIsVideo={setIsVideo} popup={popup}/>
+            <C_SliderVideoAbout className={classes.C_SliderVideoAbout} data={data} setIsAboutPopupClose={setIsAboutPopupClose} setIsVideo={setIsVideo} popup={popup}/>
             <C_TextContentAbout data={data} className={classes.C_TextContentAbout} />
         </div>
     )
