@@ -71,24 +71,26 @@ export const S_Hero = ({className, data}) => {
         if (customCircleSize === undefined) {
             let size = 0;
             const maxCircle = 4.1;
+            const maxCircleX = 3.1;
+            const limitCircleX = maxCircleX * 50;
             const limitCircle = maxCircle * 50;
             const borderX = 40; // 0 - 50
-            const borderY = 20; // 0 - 50
+            const borderY = width >= sizes.widthDesktopLg ? 20 : 30; // 0 - 50
             const specialYCorrection = ((100 / 5) / borderY)
             const specialXCorrection = ((100 / 2) / borderX)
-            const grownSpeed = 1.7;
+            const grownSpeed = width >= sizes.widthDesktopLg ? 1.7 : 1.2;
             const totalGrownSpeed = maxCircle * grownSpeed;
+            const totalGrownSpeedX = maxCircleX * grownSpeed;
 
             if (xBlockPercent <= borderX && yBlockPercent <= borderY) {
                 size = Math.min((totalGrownSpeed * Math.min((xBlockPercent * specialXCorrection), (yBlockPercent * specialYCorrection))), limitCircle)
             } else if (xBlockPercent <= borderX && yBlockPercent > borderY) {
                 size = Math.min((totalGrownSpeed * Math.min((xBlockPercent * specialXCorrection), (100 - yBlockPercent))), limitCircle)
             } else if (xBlockPercent > borderX && yBlockPercent > borderY) {
-                size = Math.min((totalGrownSpeed * Math.min((100 - xBlockPercent), (100 - yBlockPercent))), limitCircle)
+                size = Math.min((totalGrownSpeedX * Math.min((100 - xBlockPercent), (100 - yBlockPercent))), limitCircleX )
             } else {
                 size = Math.min((totalGrownSpeed * Math.min((100 - xBlockPercent), (yBlockPercent * specialYCorrection))), limitCircle)
             }
-
             topPic.current.style['clip-path'] = `circle(${size}px at ${xBlockPercent}% ${yBlockPercent}%)`
         } else {
             topPic.current.style['clip-path'] = `circle(${customCircleSize}px at ${xBlockPercent}% ${yBlockPercent}%)`
