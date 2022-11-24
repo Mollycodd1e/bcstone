@@ -16,6 +16,7 @@ $boxShadow_map: 0 3px 6px rgba(0, 0, 0, 0.16);
 $borderRadius_tab: 15px;
 $borderRadius_tab: 15px;
 $borderRadius_desk: 15px;
+$borderRadius_desk_map: 10px;
 
 $border_mob: 1px solid #d9d9d9;
 
@@ -39,7 +40,7 @@ $heightLogo_tabSm_map: 16px;
 $heightLogo_tab: 22px;
 $heightLogo_deskSm: 27px;
 $heightLogo_desk: 24px;
-$heightLogo_desk_map: 22px;
+$heightLogo_desk_map: 23px;
 
 $listTemplateRows_tabSm_map: repeat(4, auto);
 $listTemplateColumns_tab_desk: repeat(2, auto);
@@ -237,7 +238,7 @@ $pos: -12px;
 @mixin desk_map_card {
   @include card($widthCard: $widthCard_desk_map,
     $heightCard: $heightCard_desk_map,
-    $borderRadius: $borderRadius_desk,
+    $borderRadius: $borderRadius_desk_map,
     $paddingCard: $paddingCard_tab_desk,
     $widthPic: $widthPic_desk_map,
     $heightPic: $heightPic_desk_map,
@@ -280,7 +281,7 @@ $pos: -12px;
   font-size: 14px;
   line-height: 15px;
   border-radius: 15px;
-  letter-spacing: 1px;
+  font-family: 'Codec Cold', Arial, sans-serif;
   border: none;
   width: 132px;
   background-color: #F6F6F6;
@@ -377,7 +378,7 @@ $pos: -12px;
     &:hover {
       cursor: pointer;
       & .С_CardFace {
-        bottom: calc(#{$faceBtm} + 40px);
+        bottom: calc(20px);
       }
     }
   }
@@ -395,14 +396,50 @@ $pos: -12px;
     }
 
     &.map_mod {
+      height: 100% !important;
+      min-height: 405px;
+      padding-bottom: 20px !important;
 
       & a[class*='mainCardBtn'],
       & a[class*='CardBtn'],
       & button[class*='mainCardBtn'],
       & button[class*='CardBtn'] {
         padding-bottom: 4px;
-        font-size: 12px;
-        line-height: 13px;
+        font-size: 16px;
+        line-height: 18px;
+        padding-bottom: 8px;
+        z-index: 0;
+        font-family: 'Codec Cold', Arial, sans-serif;
+      }
+
+      @include desk_map_card;
+      padding-top: 22px;
+
+      & .С_CardFace {
+        transition: 0.6s;
+        z-index: 1;
+        bottom: unset !important;
+      }
+
+      .faceWrap {
+        &:hover {
+          & .С_CardFace {
+            transform: translateY(-20px);
+            transition: 0.6s;
+            z-index: 2;
+            
+          }
+    
+          & button[class*='CardBtn'] {
+            font-size: 16px;
+            line-height: 18px;
+            padding-bottom: 8px;
+           }
+        }
+      }
+      
+      & div[class*='pic'] {
+        border-radius: 10px;
       }
 
       @include desk_map_card;
@@ -410,6 +447,39 @@ $pos: -12px;
 
       & .С_CardFace {
         bottom: unset !important;
+      }
+
+      & div[class*='logo'] {
+        margin-left: 0px;
+        background-size: 271px 23px;
+      }
+
+      & .С_CardInfo {
+        margin-top: 37px;
+        padding: 0 0 0 33px !important;
+      }
+
+      & ul[class*='list'] {
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 18px;
+        padding-left: 28px;
+
+        & li:first-child {
+          margin-right: 15px;
+        }
+
+        & li:nth-child(2) {
+          margin: 0 10px 8px 0;
+          align-self: flex-start;
+          justify-self: flex-start;
+          left: 0;
+        }
+
+        & li:nth-child(3) {
+          margin-right: 55px;
+        }
       }
     }
   }
@@ -492,7 +562,7 @@ $pos: -12px;
     & a[class*='CardBtn'],
     & button[class*='mainCardBtn'],
     & button[class*='CardBtn'] {
-     padding-bottom: 12px;
+      padding-bottom: 12px;
       font-size: 18px;
       line-height: 18px;
     }
@@ -504,8 +574,9 @@ $pos: -12px;
       & button[class*='mainCardBtn'],
       & button[class*='CardBtn'] {
         padding-bottom: 4px;
-        font-size: 12px;
-        line-height: 13px;
+        font-size: 18px;
+        line-height: 19px;
+        padding-bottom: 8px;
       }
 
       @include desk_map_card;
@@ -513,6 +584,15 @@ $pos: -12px;
 
       & .С_CardFace {
         bottom: unset !important;
+      }
+      
+      .faceWrap {
+        &:hover {  
+          & button[class*='CardBtn'] {
+            font-size: 18px;
+            line-height: 19px;
+           }
+        }
       }
     }
   }
