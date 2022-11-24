@@ -69,6 +69,12 @@
     padding: 8px 23px 7px 28px;
   }
 }
+
+@media(min-width: $width-desktop-lg) {
+  .pic {
+    border-radius: 10px;
+  }
+}
 //@media (min-width: $width-notebook) {
 //  .logo {
 //    svg {
