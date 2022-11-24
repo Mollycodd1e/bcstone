@@ -205,6 +205,10 @@
     transition: 0.5s;
   }
   
+  .card_wrapper {
+    margin-bottom: 21px;
+  }
+
   .card_wrapper_hover h3 {
     transform: translateY(-20px);
     transition: 0.5s;
@@ -240,8 +244,9 @@
 
   .card_wrapper a {
     min-height: 283px;
-    padding-bottom: 10px;
+    padding-bottom: 7px;
     border-radius: 15px;
+    top: 14px;
   }
   
   .root p {

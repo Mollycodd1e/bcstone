@@ -33,6 +33,18 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
     //     console.log('initialSlide', initialSlide)
     // }, [initialSlide]);
 
+    if (document.getElementById('map_canvas')) {
+        document.getElementById('map_canvas').firstChild.appendChild(<div className={classes.fourCards}>
+            {
+                shownSliders.slice(0, 4).map((slide, i) => {
+                    return (<div key={i}>
+                        {rCards[slide]}
+                    </div>)
+                })
+            }
+        </div>);
+    }
+
     return (
         <div className={cls}>
             <C_BasicMap

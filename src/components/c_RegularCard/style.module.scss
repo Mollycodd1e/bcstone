@@ -396,6 +396,7 @@ $pos: -12px;
     }
 
     &.map_mod {
+      z-index: 10 !important;
       height: 100% !important;
       min-height: 405px;
       padding-bottom: 20px !important;

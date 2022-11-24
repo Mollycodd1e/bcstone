@@ -23,7 +23,8 @@ export const C_SavingCard = ({className, image, description, title}) => {
                 <h3>{title}</h3>     
                 <Image src={image} layout='fill'/>
                 {/* <a href='#' onMouseEnter={() => onHover()} onMouseLeave={() => onLeave()}>Подробнее</a> */}
-                <a href='#'>{isHover === false && window.innerWidth >=1440 ? null : 'Подробнее'}</a>
+                {/* <a href='#'>{isHover === false && window.innerWidth >=1440 ? null : 'Подробнее'}</a> */}
+                <a href='#'>Подробнее</a>
                 <div className={classes.card_shadow}></div>
             </div>
             <p>{description}</p>
