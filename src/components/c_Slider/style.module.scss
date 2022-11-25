@@ -213,6 +213,11 @@
     background-repeat: no-repeat;
     background-size: 52px 52px;
     cursor: pointer;
+    transition: 0.4s;
+
+    &:hover {
+      background-image: url('../../img/backBtnHover.svg');
+    }
   }
 
   .swiper_button_next {
@@ -226,6 +231,11 @@
     background-repeat: no-repeat;
     background-size: 52px 52px;
     cursor: pointer;
+    transition: 0.4s;
+
+    &:hover {
+      background-image: url('../../img/forwardBtnHover.svg');
+    }
   }
 
   .swiperPress {
@@ -255,13 +265,31 @@
 
   @keyframes Jumpin {
     0% { opacity: 0; scale: 0.9; }
-    50% { opacity: 1; scale: 1}
+    30% { opacity: 1; scale: 1}
     100% { opacity: 1; scale: 1}
   }
   
+  @keyframes fromBottomText {
+    0% {
+      transform: translateY(100px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
   @for $i from 0 through 10 {
-    .swiperShow div[class="swiper-wrapper"] div:nth-child(#{$i}) div {
+    .swiperShow div[class="swiper-wrapper"] div:nth-child(#{$i}) {
       animation: Jumpin #{$i * 0.5}s cubic-bezier(.9,.03,.69,.22);
+
+      & div:nth-child(1),
+      & div:nth-child(2) {
+        animation: Jumpin #{$i * 1}s cubic-bezier(.9,.03,.69,.22);
+      }
+
+      & div:nth-child(3) {
+        animation: fromBottomText #{$i * 0.4}s ease-in-out;
+      }
     }
   }
 }

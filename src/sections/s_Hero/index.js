@@ -79,8 +79,6 @@ export const S_Hero = ({className, data}) => {
             const grownSpeed = width >= sizes.widthDesktopLg ? 1.7 : 1.2;
             const totalGrownSpeed = maxCircle * grownSpeed;
 
-            console.log(xBlockPercent)
-            console.log(yBlockPercent)
             if (xBlockPercent <= borderX && yBlockPercent <= borderY) {
                 size = Math.min((totalGrownSpeed * Math.min((xBlockPercent * specialXCorrection), (yBlockPercent * specialYCorrection))), limitCircle)
             } else if (xBlockPercent <= borderX && yBlockPercent > borderY) {

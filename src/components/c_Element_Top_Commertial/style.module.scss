@@ -152,6 +152,7 @@ $decor-margin-lg: 0 14px 0 0;
 
 .wrap {
   display: flex;
+  overflow: hidden;
   flex-direction: column;
 }
 
@@ -162,9 +163,18 @@ $decor-margin-lg: 0 14px 0 0;
 
 .title {
   font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 38px;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 .link {
