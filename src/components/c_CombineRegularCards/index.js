@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect, useRef, useState} from "react";
 
 import classes from './style.module.scss';
 import classNames from "classnames";
@@ -11,6 +11,29 @@ import { C_Slider } from "../c_Slider";
 export const C_CombineRegularCards = ({className, isBtnClose, onBtnCloseClick, setIsPopUpVisible, isMapMode, data}) => {
     const cls = classNames(classes.root, {[className]: className });
     const [width, height] = useContext(Context);
+    const [isCards, setIsCards] = useState(false);
+    const cards = useRef();
+
+    useEffect(() => {
+        function onEntryCards(entry) {
+            entry.forEach(change => {
+              if (change.isIntersecting) {
+                setIsCards(true);
+              } else {
+                // setIsCards(false);
+              }
+            });
+        }
+    
+        let options = { rootMargin: '100px', threshold: [0.5] };
+    
+        let observer = new IntersectionObserver( onEntryCards, options);
+    
+        if (cards.current) {
+            observer.observe(cards.current);
+        } 
+    })
+    
     // const setIsPopUpVisible = useContext(Context);
     const rCards = CC_regularCards(classes.RegularCard, isBtnClose, onBtnCloseClick, null, setIsPopUpVisible, isMapMode, data);
     return (
@@ -19,7 +42,7 @@ export const C_CombineRegularCards = ({className, isBtnClose, onBtnCloseClick, s
                 ?
                     <C_Slider isBtnClose={isBtnClose} items={rCards} initialSlide={0} slidersSpaceBetween={width < sizes.widthTabletSm ? -225 : width < sizes.widthTabletMd ? 180 : width < sizes.widthNotebook ? 280 : width < sizes.widthDesktopSm ? 80 : -150}/>
                 :
-                    <div className={classes.cards}>
+                    <div className={classNames(classes.cards,{[classes.cardsShown]: isCards})} ref={cards}>
                         {rCards.map((card, i) => {
                                 return (
                                     <React.Fragment key={i}>

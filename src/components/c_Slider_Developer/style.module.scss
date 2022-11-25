@@ -111,13 +111,57 @@
     margin-bottom: 9px;
   }
 
+  // @keyframes SlideToRight {
+  //   0% {height: 14px; position: absolute; background-color: rgb(0, 0, 0);}
+  //   10% {height: 16px; background-color: rgb(0, 0, 0);}
+  //   20% {height: 18px;}
+  //   30% {height: 20px;}
+  //   30% {height: 22px;}
+  //   50% {height: 6px;}
+  //   60% {height: 6px;}
+  //   70% {height: 6px;}
+  //   80% {height: 6px;}
+  //   90% {height: 6px;}
+  //   100% {height: 6px; position: absolute; background-color: rgb(0, 0, 0, 0.17);}
+  // }
+
+  @keyframes SlideToLeft {
+    0% {background-color: rgb(0, 0, 0, 0.17);}
+    100% {height: 6px; background-color: rgb(0, 0, 0);}
+  }
+
+  // @for $i from 0 through 10 {
+  //   .numbersWrapper div:nth-child(#{$i}) {
+  //     position: absolute;
+  //     top: #{$i * 16}px;
+  //   }
+  // }
+  .slideDot {
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+  }
+
+  .govno {
+    width: 6px;
+    height: 6px;
+    transform: translateY(14px);
+    transition: 1s ease;
+  }
+
   .regular {
     @include pinParams;
+    animation: SlideToRight ease 2s;
+    animation-fill-mode: forwards;
     background-color: rgba(0, 0, 0, 0.17);
 
     &__selected {
       @include pinParams;
-      background-color: rgb(0, 0, 0);
+      // animation: SlideToLeft ease 10s;
+      animation-fill-mode: forwards;
+      background-color: rgba(0, 0, 0, 0.17);
     }
   }
 }

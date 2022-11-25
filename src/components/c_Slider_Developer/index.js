@@ -17,8 +17,9 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
     const numSlider = (selected, nums) => {
         return (
             <div className={classes.numbersWrapper} >
+                <div className={classNames(classes.slideDot, {[classes.govno]: slide > selected})}></div>
                 {nums.map((el, i) => {
-                    const paginationClass = selected === i ? 'regular__selected' : 'regular';
+                    const paginationClass = selected === i ? 'regular__selected' : selected === i && slide < i ? 'gg' : 'regular';
                     return <div key={i} className={classes[`${paginationClass}`]} />
                 })}
             </div>
@@ -31,7 +32,7 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
     // }}
     return (
         <div className={cls}>
-            <button className={classes.swiper_button_prev} onClick={() => (my_swiper.slidePrev(), slide > 0 ? setSlide(slide - 1) : setSlide(slide))}
+            <button className={classes.swiper_button_prev} onClick={() => (my_swiper.slidePrev(), slide > 0 ? (setSlide(slide - 1)) : setSlide(slide))}
                     disabled={slide === 0}/>
             <Swiper
                 onClick={onClick}
@@ -66,7 +67,7 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
             </Swiper>
             <div className={classes.swiper_button_next} onClick={() => (my_swiper.slideNext(), slide < items.length -1 ? setSlide(slide + 1) : setSlide(slide))}
                  disabled={(slide === (items.length-1))}/>
-            {numSlider(selectedSlide, items)}
+            {/* {numSlider(selectedSlide, items)} */}
         </div>
     )
 }

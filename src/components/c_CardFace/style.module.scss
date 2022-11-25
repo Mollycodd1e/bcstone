@@ -50,6 +50,10 @@
 }
 
 @media(min-width: $width-desktop-sm) {
+  .root {
+    z-index: 2;
+  }
+
   .extraInfo {
     top: 18px;
     left: 29px;

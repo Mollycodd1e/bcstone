@@ -226,6 +226,8 @@
     & .title {
       font-size: 113px;
       line-height: 121px;
+      opacity: 0;
+      transform: translateY(180px);
     }
 
     & .title {
@@ -237,13 +239,30 @@
     }
 
     &::before {
-      right: 158px;
+      right: 0;
       top: 225px;
+      opacity: 0;
     }
 
     &::after {
       right: 0;
       bottom: 70px;
+    }
+  }
+
+  .titleShown {
+    & .bg_text,
+    & .title {
+      opacity: 1;
+      transform: translateY(0);
+      transition: 1.1s ease;
+    }
+
+    &::before {
+      right: 158px;
+      top: 225px;
+      opacity: 1;
+      transition: 1.1s ease;
     }
   }
 }

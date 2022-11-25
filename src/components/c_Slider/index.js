@@ -27,14 +27,13 @@ export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnClose
         entry.forEach(change => {
           if (change.isIntersecting) {
                 setVisible(true);
-            
           } else {
-            setVisible(false);
+            // setVisible(false);
           }
         });
     }
     
-    let options = { threshold: [0.5] };
+    let options = {threshold: [0.5] };
     let observer = new IntersectionObserver( onEntry, options);
 
     if (ref.current) {
