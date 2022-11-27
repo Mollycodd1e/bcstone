@@ -10,12 +10,14 @@ $time: 0.7s;
   cursor: pointer;
   border-width: 0;
   font-weight: normal;
-  padding: 9px 23px 9px 23px;
+  padding: 9px 23px 10px 23px;
   background-color: $color-dark-primary;
+  font-size: 12px;
+  line-height: 13px;
   border-radius: 21px;
   overflow: hidden;
   transition: background-color 1.3s;
-  letter-spacing: -0.075em;
+  letter-spacing: -0.015em;
 
   &:hover {
     background-color: white;
@@ -35,8 +37,6 @@ $time: 0.7s;
     position: relative;
     z-index: 5;
     transition: color $time;
-    // font-size: 12px;
-    // line-height: 12px;
     white-space: nowrap;
   }
 

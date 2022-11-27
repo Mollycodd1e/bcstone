@@ -119,6 +119,18 @@ $existTimer: 2.5s;
   }
 }
 
+@keyframes lineSlide {
+  0% {
+    opacity: 0;
+    right: -200px;
+  }
+
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+
 @keyframes helperAnimaAfter {
   0% {
     opacity: 0;
@@ -659,6 +671,7 @@ $existTimer: 2.5s;
       height: 16px;
       background-image: url('../../img/s_hero_decor_3.svg');
       background-size: 123px 16px;
+      animation: lineSlide 1.1s;
     }
   }
 

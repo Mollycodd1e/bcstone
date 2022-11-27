@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext, useRef, useState} from "react";
 
 import classes from './style.module.scss';
 import classNames from "classnames";
@@ -13,11 +13,69 @@ import {C_MainButton} from "../../components/c_MainButton";
 export const S_Projects = ({className, setIsPopUpVisible, data}) => {
     const [isListView, setIsListView] = useState(true);
     const [width, height] = useContext(Context);
+    const ref = useRef();
+    const subRef = useRef();
+    const linesRef = useRef();
+    const [isLine, setIsLine] = useState(false);
     const cls = classNames(classes.root, { [classes.mapView]: !isListView, [className]: className });
+    const [isTitle, setIsTitle] = useState(false);
+    const [isSubTitle, setSubIsTitle] = useState(false);
+    const [isSwitcher, setIsSwitcher] = useState(false);
+
+    function onEntry(entry) {
+        entry.forEach(change => {
+          if (change.isIntersecting) {
+            setIsTitle(true);
+          } else {
+            // setIsTitle(false);
+          }
+        });
+    }
+
+    function onEntrySub(entry) {
+        entry.forEach(change => {
+          if (change.isIntersecting) {
+            setTimeout(setSubIsTitle(true),0);
+          } else {
+            // setSubIsTitle(false);
+          }
+        });
+    }
+
+    function onEntryLine(entry) {
+        entry.forEach(change => {
+          if (change.isIntersecting) {
+            setIsLine(true);
+          } else {
+            // setIsLine(false);
+          }
+        });
+    }
+
+    let options = { rootMargin: '-140px', threshold: [0.5] };
+    let optionsSub = { rootMargin: '-200px', threshold: [0.5] };
+    let optionsLine = {rootMargin: '100% 0px 0px 0px', threshold: [1.0] };
+
+    let observer = new IntersectionObserver( onEntry, options);
+    let observerSub = new IntersectionObserver( onEntrySub, optionsSub);
+    let observerLine = new IntersectionObserver( onEntryLine, optionsLine);
+
+    if (ref.current) {
+        observer.observe(ref.current);
+    }
+
+    if (subRef.current) {
+        observerSub.observe(subRef.current);
+    }
+
+    if (linesRef.current) {
+        observerLine.observe(linesRef.current);
+    }
+
     return (
         <div className={classes.wrapRoot}>
-            <div className={cls}>
-                <div className={classes.ProjectTitle}>
+            <div className={classNames(cls,{[classes.lineDecor] : isLine})} ref={linesRef} id={'Проекты'}>
+                <div className={classNames(classes.ProjectTitle,{[classes.titleShown] : isTitle})} ref={ref}>
                     <div className={classes.bg_text}>Проекты</div>
                     <div className={classes.wrap_title}>
                         <span>Бизнес</span>
@@ -25,12 +83,12 @@ export const S_Projects = ({className, setIsPopUpVisible, data}) => {
                     </div>
 
                 </div>
-                <div className={classes.sub_title}>
+                <div className={classNames(classes.sub_title,{[classes.subTitleShown]: isSubTitle})} ref={subRef}>
                     <span>Продажа и аренда</span>
                     <span>Офисы и ритейл</span>
                 </div>
                 <C_Switcher
-                    className={classes.Switcher}
+                    className={classNames(classes.Switcher,{[classes.SwitcherShown]: isSwitcher})} setIsSwitcher={setIsSwitcher}
                     isListView={isListView}
                     setIsListView={() => setIsListView(prev => !prev)}
                 />
@@ -53,7 +111,7 @@ export const S_Projects = ({className, setIsPopUpVisible, data}) => {
                         data={data}
                     />
                 }
-                <C_MainButton text={"Получить предложение"} onClick={() => console.log('click from project')} className={classes.C_MainButton} />
+                <C_MainButton text={"Получить предложение"} onClick={() => console.log('click from project')} className={classes.C_MainButton}/>
             </div>
         </div>
     )

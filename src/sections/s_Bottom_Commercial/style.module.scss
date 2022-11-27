@@ -164,6 +164,16 @@
       margin-top: -149px;
       background-image: url('../../img/saving-line-1000.png');
       background-position: -287px 24px;
+      opacity: 0;
+      transform: translateX(-180px);
+    }
+  }
+
+  .lineShown {
+    &:after {
+      opacity: 1;
+      transform: translateX(0);
+      transition: 1.1s ease;
     }
   }
 

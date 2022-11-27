@@ -198,7 +198,7 @@
       background-repeat: no-repeat;
       background-size: 627px 16px;
       background-position: 0 0;
-      z-index: 20;
+      z-index: 10;
       pointer-events: none;
     }
   }
@@ -309,6 +309,9 @@
   }
 
   .PressCenterTitle {  
+    opacity: 0;
+    transform: translateY(140px);
+
     & .bg_text {
       margin: 0 446px -61px 0;
       letter-spacing: -3.5px;
@@ -334,6 +337,12 @@
     }
   }
 
+  .titleShown {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1.1s ease;
+  }
+
   .sliderWrapper {
     margin-top: 65px;
   }
@@ -345,11 +354,44 @@
     width: 185px;
 
     &::after {
-      width: 1081px;
+      width: 398px;
       margin-left: -594px;
-      margin-top: 3px;
-      background-image: url('../../img/press-line-1440.png');
-      background-size: 1081px 16px;
+      margin-top: 2px;
+      background-image: url('../../img/press-left-decor-1440.png');
+      background-size: 398px 16px;
+      transform: translateX(-180px);
+      opacity: 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 398px;
+      margin-left: 196px;
+      height: 56px;
+      margin-top: 2px;
+      background-image: url('../../img/press-right-decor-1440.png');
+      background-repeat: no-repeat;
+      background-size: 398px 16px;
+      background-position: 0 0;
+      z-index: 10;
+      pointer-events: none;
+      transform: translateX(180px);
+      opacity: 0;
+    }
+  }
+
+  .lineShown .C_MainButton {
+    &::after {
+      transform: translateX(0);
+      opacity: 1;
+      transition: 1.1s ease;
+    }
+
+    &::before {
+      transform: translateX(0);
+      opacity: 1;
+      transition: 1.1s ease;
     }
   }
 }
@@ -433,10 +475,21 @@
     margin-top: 18px;
 
     &::after {
-      width: 1381px;
-      margin-left: -744px;
-      background-image: url('../../img/press-line-1920.png');
-      background-size: 1381px 16px;
+      width: 548px;
+      margin-left: -562px;
+      margin-top: 2px;
+      background-image: url('../../img/project-left-decor-1920.png');
+      background-size: 548px 16px;
+      transform: translateX(-180px);
+    }
+
+    &::before {
+      width: 548px;
+      margin-left: 16px;
+      background-image: url('../../img/project-right-decor-1920.png');
+      background-size: 548px 16px;
+      background-position: 0 0;
+      transform: translateX(180px);
     }
   }
 }
