@@ -226,7 +226,7 @@
       background-repeat: no-repeat;
       background-size: 601px 17px;
       background-position: 0 0;
-      z-index: 20;
+      z-index: 10;
       pointer-events: none;
     }
   }
@@ -404,11 +404,39 @@
     margin: 89px 66px 40px;
 
     &::after {
-      width: 1017px;
+      width: 312px;
       bottom: 66px;
       margin-left: -508px;
-      background-image: url('../../img/business-line-1440.png');
-      background-size: 1017px 16px;
+      background-image: url('../../img/project-left-decor-1440.png');
+      background-size: 312px 16px;
+      transform: translateX(-200px);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 312px;
+      height: 56px;
+      bottom: 66px;
+      left: 50%;
+      margin-left: 197px;
+      background-image: url('../../img/project-right-decor-1440.png');
+      background-repeat: no-repeat;
+      background-size: 312px 16px;
+      transform: translateX(200px);
+      z-index: 10;
+    }
+  }
+
+  .lineDecor {
+    &::after {
+      transform: translateX(0);
+      transition: 1.1s ease;
+    }
+
+    &::before {
+      transform: translateX(0);
+      transition: 1.1s ease;
     }
   }
 
@@ -493,11 +521,21 @@
     margin: 89px 66px 40px;
 
     &::after {
-      width: 1178px;
+      width: 383px;
       bottom: 68px;
-      margin-left: -589px;
-      background-image: url('../../img/business-line-1600.png');
-      background-size: 1178px 16px;
+      margin-left: -590px;
+      background-image: url('../../img/project-left-decor-1600.png');
+      background-size: 383px 16px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 383px;
+      bottom: 68px;
+      margin-left: 206px;
+      background-image: url('../../img/project-right-decor-1600.png');
+      background-size: 383px 16px;
     }
   }
 
@@ -554,11 +592,19 @@
     margin: 89px 66px 70px;
 
     &::after {
-      width: 1498px;
+      width: 548px;
       bottom: 68px;
       margin-left: -749px;
-      background-image: url('../../img/business-line-1920.png');
-      background-size: 1498px 16px;
+      background-image: url('../../img/project-left-decor-1920.png');
+      background-size: 548px 16px;
+    }
+
+    &::before {
+      width: 548px;
+      bottom: 68px;
+      margin-left: 200px;
+      background-image: url('../../img/project-right-decor-1920.png');
+      background-size: 548px 16px;
     }
   }
 

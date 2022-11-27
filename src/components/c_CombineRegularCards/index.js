@@ -25,7 +25,7 @@ export const C_CombineRegularCards = ({className, isBtnClose, onBtnCloseClick, s
             });
         }
     
-        let options = { rootMargin: '100px', threshold: [0.5] };
+        let options = { rootMargin: '50px', threshold: [0.5] };
     
         let observer = new IntersectionObserver( onEntryCards, options);
     

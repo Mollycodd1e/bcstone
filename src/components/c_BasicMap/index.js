@@ -45,12 +45,14 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                     defaultCenter={{lat: parseFloat(map_settings.lat), lng: parseFloat(map_settings.lng)}}
                     defaultZoom={parseFloat(map_settings.defaultZoom)}
                     options={
-                        {
+                        {   fullscreenControl: false,
+                            fullscreenControlOptions: {position: -1},
                             styles: mapStyles.styles,
                             minZoom: parseFloat(map_settings.minZoom),
                             maxZoom: parseFloat(map_settings.maxZoom),
                         }
                     }
+                    
                     yesIWantToUseGoogleMapApiInternals
                     onGoogleApiLoaded={({ map }) => {
                         mapRef.current = map;
@@ -122,7 +124,6 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                             )
                         })
                     }
-
                 </GoogleMapReact> : null}
             </div>
         );

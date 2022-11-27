@@ -171,6 +171,12 @@
 
   .whatsapp {
     @include bigIcon;
+    transition: 0.5s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: 0.5s ease;
+    }
   }
 
   .callMe {
@@ -197,12 +203,7 @@
   .whatsapp {
     @include bigIcon;
     margin: -2px 0 0 8px;
-    transition: 0.5s;
-
-    &:hover {
-      transform: scale(1.05);
-      transition: 0.5s;
-    }
+    transition: 0.5s ease;
   }
 
   .phone {

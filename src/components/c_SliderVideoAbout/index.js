@@ -54,7 +54,7 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIs
                 :  (video.isVisible ? setIsVideo(true) : setIsVideo(false),
                         <div className={classes.iframeWrapper}>
                             <div className={classes.popupLink} onClick={() => popup ? null : setIsAboutPopupClose(false)}></div>
-                            <iframe  src={'https://www.youtube.com/embed/watch?v=t7BmHgAsodU&list=RDuL68nVQkbL4&index=3'} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
+                            <iframe  src={video.src} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
                         </div>)
             }
         </div>

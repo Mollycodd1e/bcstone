@@ -409,6 +409,29 @@
     color: #EFEFEF;
     transition: all .5s;
     align-self: flex-end;
+    transform: translateY(50px);
+  }
+
+  .root {
+    &.reverse {
+      & .title {
+        transform: translateY(-50px);
+      }
+    }
+  }
+
+  .titleShown .title {
+    transform: translate(0);
+    transition: 1.1s ease;
+  }
+
+  .titleShown {
+    &.reverse {
+      & .title {
+        transform: translateY(0);
+        transition: 1.1s ease;
+      }
+    }
   }
 }
 

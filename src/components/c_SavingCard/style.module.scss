@@ -207,6 +207,8 @@
   
   .card_wrapper {
     margin-bottom: 21px;
+    opacity: 0;
+    transform: scale(0.9);
   }
 
   .card_wrapper_hover h3 {
@@ -252,6 +254,20 @@
   .root p {
     width: 402px;
     padding: 10px 0 1px 20px;
+    transform: translateY(180px);
+  }
+
+  .cardShown {
+    .card_wrapper {
+      opacity: 1;
+      transform: scale(1);
+      transition: 1.1s ease;
+    }
+
+    p {
+      transform: translateY(0);
+      transition: 1.1s ease;
+    }
   }
 }
 

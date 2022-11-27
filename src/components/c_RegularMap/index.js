@@ -15,7 +15,6 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
     const [shownSliders, setShownSliders] = useState([]);
     const [width, height] = useContext(Context);
     const rCards = CC_regularCards(classes.RegularCard, isBtnClose, shownSliders.length > 1 && width >= sizes.widthDesktopSm ? null : () => close(), () => close(), setIsPopUpVisible, isMapMode, data);
-    
     const [initialSlide, setInitialSlide] = useState(0);
     const [clustersProjects, setClustersProjects] = useState([]);
     
@@ -33,53 +32,41 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
     //     console.log('initialSlide', initialSlide)
     // }, [initialSlide]);
 
-    if (document.getElementById('map_canvas')) {
-        document.getElementById('map_canvas').firstChild.appendChild(<div className={classes.fourCards}>
-            {
-                shownSliders.slice(0, 4).map((slide, i) => {
-                    return (<div key={i}>
-                        {rCards[slide]}
-                    </div>)
-                })
-            }
-        </div>);
-    }
-
     return (
-        <div className={cls}>
-            <C_BasicMap
-                initialSlide={initialSlide}
-                setInitialSlide={setInitialSlide}
-                setIsCardVisible={setIsCardVisible}
-                isCardVisible={isCardVisible}
-                data={data}
-                clustersProjects={clustersProjects}
-                setClustersProjects={setClustersProjects}
-                shownSliders={shownSliders}
-                setShownSliders={setShownSliders}
-            />
-            {
-                isCardVisible && width < sizes.widthTabletMd
-                ?
-                    <div className={classNames(classes.wrapperSlider, { [classes.mapSlider]: width === sizes.widthTabletSm })}>
-                        <C_Slider map={true} isBtnClose={isBtnClose} items={rCards} initialSlide={shownSliders[0]} setIsPopUpVisible={setIsPopUpVisible} slidersSpaceBetween={width >= 768 ? -200 : -215}/>
-                    </div>
-                : isCardVisible && width >= sizes.widthTabletMd ?
-                    <div className={classes.fourCards}>
-                        {
-                            shownSliders.slice(0, 4).map((slide, i) => {
-                                return (<div key={i}>
-                                    {rCards[slide]}
-                                </div>)
-                            })
-                        }
-                    </div>
-                    // <div className={classes.oneCard}>
-                    //     {/*{rCards[initialSlide]}*/}
-                    //     {rCards[shownSliders[0]]}
-                    // </div>
-                : null
-            }
+        <div className={cls} >
+                    <C_BasicMap
+                        initialSlide={initialSlide}
+                        setInitialSlide={setInitialSlide}
+                        setIsCardVisible={setIsCardVisible}
+                        isCardVisible={isCardVisible}
+                        data={data}
+                        clustersProjects={clustersProjects}
+                        setClustersProjects={setClustersProjects}
+                        shownSliders={shownSliders}
+                        setShownSliders={setShownSliders}
+                    />
+                    {
+                        isCardVisible && width < sizes.widthTabletMd
+                        ?
+                            <div className={classNames(classes.wrapperSlider, { [classes.mapSlider]: width === sizes.widthTabletSm })}>
+                                <C_Slider map={true} isBtnClose={isBtnClose} items={rCards} initialSlide={shownSliders[0]} setIsPopUpVisible={setIsPopUpVisible} slidersSpaceBetween={width >= 768 ? -200 : -215}/>
+                            </div>
+                        : isCardVisible && width >= sizes.widthTabletMd ?
+                            <div className={classes.fourCards}>
+                                {
+                                    shownSliders.slice(0, 4).map((slide, i) => {
+                                        return (<div key={i}>
+                                            {rCards[slide]}
+                                        </div>)
+                                    })
+                                }
+                            </div>
+                            // <div className={classes.oneCard}>
+                            //     {/*{rCards[initialSlide]}*/}
+                            //     {rCards[shownSliders[0]]}
+                            // </div>
+                        : null
+                    }
         </div>
     )
 }

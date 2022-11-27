@@ -39,14 +39,14 @@ export const C_TextContentAbout = ({className, data}) => {
     function onEntryDescription(entry) {
         entry.forEach(change => {
           if (change.isIntersecting) {
-            setIsDescription(true);
+            setTimeout(setIsDescription(true),0);
           } else {
             // setIsDescription(false);
           }
         });
     }
 
-    let optionsDescription = { rootMargin: '-30px', threshold: [0.5] };
+    let optionsDescription = { rootMargin: '-100px', threshold: [0.5] };
 
     let observerDescription = new IntersectionObserver( onEntryDescription, optionsDescription);
 
@@ -64,7 +64,7 @@ export const C_TextContentAbout = ({className, data}) => {
         });
     }
 
-    let optionsPlans = { rootMargin: '250px', threshold: [0.5] };
+    let optionsPlans = { rootMargin: '90px', threshold: [0.5] };
 
     let observerPlans = new IntersectionObserver( onEntryPlans, optionsPlans);
 

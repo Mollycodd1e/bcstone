@@ -109,6 +109,35 @@
 @media(min-width: $width-tablet-md) {
   .root {
     padding: 0 0 40px 0;
+    position: relative;
+  }
+
+  .blackLayer {
+    //background-color: #2B2C2C;
+    width: 100%;
+    height: 899px;
+    // opacity: 10%;
+  }  
+
+  .bottomLayer {
+    width: 100%;
+    height: 100%;
+    background-color: #2B2C2C;
+    opacity: 0.1;
+  }
+
+  .map {
+    position: absolute;
+  }
+
+  .hover {
+    position: absolute;
+    top: 100%;
+    right: 100%;
+    width: 0;
+    height: 0;
+    z-index: 15;
+    cursor: pointer;
   }
 
   .fourCards {
@@ -162,6 +191,26 @@
 }
 
 @media(min-width: $width-desktop-sm) {
+  // .hover {
+  //   width: 100%;
+  //   height: 100%;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   opacity: 0;
+  // }
+
+  // .bottomLayer {
+  //   width: 100%;
+  //   height: 100%;
+  //   top: 0;
+  //   left: 0;
+  //   position: absolute;
+  //   background-color: aqua;
+  //   opacity: 0;
+  
+  // }
+
   .fourCards {
     width: 100%;
     height: 0;

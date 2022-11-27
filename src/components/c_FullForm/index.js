@@ -22,11 +22,30 @@ export const C_FullForm = ({className, data, popup}) => {
     const [phone, setPhone] = useState('');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-
+    const titleRef = useRef();
+    const [isTitle, setIsTitle] = useState(false);
     const [isPhoneValid, setIsPhoneValid] = useState(false);
     const [isNameValid, setIsNameValid] = useState(false);
     const [isEmailValid, setIEmailValid] = useState(true);
     const [isCheckValid, setIsCheckValid] = useState(false);
+
+    function onEntryTitle(entry) {
+        entry.forEach(change => {
+          if (change.isIntersecting) {
+            setIsTitle(true);
+          } else {
+            // setIsTitle(false);
+          }
+        });
+    }
+
+    let options = { rootMargin: '0px', threshold: [0.5] };
+
+    let observer = new IntersectionObserver( onEntryTitle, options);
+
+    if (titleRef.current) {
+        observer.observe(titleRef.current);
+    }
 
     const validName = /^(([a-zA-Zа-яА-ЯЁё-]{1,30}))$/u;
 
@@ -110,7 +129,7 @@ export const C_FullForm = ({className, data, popup}) => {
         <form className={cls}>
             <div className={classes.wrapper_frame}>
                 <div className={classes.frame}>
-                    <div className={classes.titles}>
+                    <div className={classNames(classes.titles,{[classes.textShown] : isTitle})} ref={titleRef}>
                         <h3 dangerouslySetInnerHTML={{ __html: !isConfirmed ? title : titleSuccess}} className={classes.title}/>
                         <span dangerouslySetInnerHTML={{ __html: !isConfirmed ? description : descriptionSuccess}} className={classes.description}/>
                     </div>

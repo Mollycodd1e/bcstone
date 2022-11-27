@@ -95,7 +95,7 @@
   }
 
   @keyframes Jumpin {
-    0% { opacity: 0; scale: 0.9; }
+    0% { opacity: 0; scale: 1; }
     30% { opacity: 1; scale: 1}
     100% { opacity: 1; scale: 1}
   }
@@ -121,7 +121,7 @@
 
       & div[class*='CardInfo'] {
         transform: translateY(0);
-        transition: #{$i * 0.45}s;
+        transition: #{$i * 0.45}s ease 0s;
       }
       }
     }
