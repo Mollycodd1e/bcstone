@@ -211,6 +211,7 @@
         & div[class*="picture"] {
           opacity: 1;
           transform: scale(1.2) translateX(50px) translateY(8px);
+          transition: all 0.5s;
         }
 
         & > a[class*="link"] {
@@ -276,6 +277,7 @@
 
         & div[class*="picture"] {
           opacity: 0;
+          transform: translateX(-100px);
         }
     }
 

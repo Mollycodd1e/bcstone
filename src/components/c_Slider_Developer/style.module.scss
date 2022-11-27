@@ -160,17 +160,17 @@
   // }
 
   // @keyframes toNextDot {
-  //   0% {height: 7px;}
+  //   0% {height: 7px; background-color: rgba(0, 0, 0)}
   //   10% {height: 8px;}
   //   20% {height: 10px;}
   //   30% {height: 12px;}
   //   40% {height: 14px;}
-  //   50% {height: 16px; background-color: rgba(0, 0, 0, 0.17)}
+  //   50% {height: 16px;}
   //   60% {height: 18px;}
   //   70% {height: 14px;}
   //   80% {height: 10px;}
   //   90% {height: 8px;}
-  //   100% {height: 7px; transform: translateY(15px)}
+  //   100% {height: 7px; background-color: rgba(0, 0, 0);transform: translateY(15px)}
   // }
 
   // @keyframes toPrevDot {
@@ -194,20 +194,18 @@
   // }
 
   // @mixin pinParams{
-  //   width: 6px;
-  //   height: 6px;
-  //   border-radius: 50%;
-  //   margin-bottom: 9px;
   // }
 
   // .regular {
+  //   animation: toNextDot 1.1s ease;
+  //   background-color: rgba(0, 0, 0, 0.17);
   //   &__selected {
   //     @include pinParams;
   //     animation: toNextDot 1.1s ease;
   //   // transition: 1.1s ease;
   //     animation-fill-mode: forwards;
   //     background-color: unset;
-  //     background-color: rgba(0, 0, 0, 0.17);
+  //     background-color: rgba(0, 0, 0);
   //   }
   // }
 
