@@ -286,6 +286,10 @@ $decor-margin-lg: 0 14px 0 0;
       transition: 0.6s;
     }
   }
+
+  .content {
+    max-height: 75px;
+  }
 }
 
 @media (min-width: $width-desktop-md) {
