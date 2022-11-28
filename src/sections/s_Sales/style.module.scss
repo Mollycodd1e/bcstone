@@ -202,6 +202,7 @@
     & div {
       transition: all .6s;
       flex-grow: 1;
+      cursor: pointer;
       &:hover {
 
         &::before {
@@ -224,6 +225,7 @@
             margin-top: -7px;
             margin-right: 100px;
             opacity: 1;
+            pointer-events: none;
           }
 
           & span {

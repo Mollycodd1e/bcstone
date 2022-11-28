@@ -18,12 +18,12 @@ export const S_Footer = ({className, phone_number, mail, address, sales_number, 
         if (change.isIntersecting) {
           setIsFooter(true);
         } else {
-          setIsFooter(false);
+          // setIsFooter(false);
         }
       });
   }
 
-  let options = { rootMargin: '0px 0px -100px 0px', threshold: [0.5] };
+  let options = {rootMargin: '0px 0px 150px 0px', threshold:[0.5]};
 
   let observer = new IntersectionObserver( onEntry, options);
 
@@ -34,8 +34,8 @@ export const S_Footer = ({className, phone_number, mail, address, sales_number, 
   return (
       <div className={classes.wrapRoot}>
           <div className={cls} id={'Контакты'}>
-                <div className={classNames(classes.footer_wrapper, {[classes.footerShown]: isFooter})} ref={footerRef}>
-                      <h2>{copyright.header}</h2>
+                <div className={classNames(classes.footer_wrapper, {[classes.footerShown]: isFooter})} >
+                      <h2 ref={footerRef}>{copyright.header}</h2>
                       <C_FooterContacts phone_number={phone_number} mail={mail} address={address} sales_number={sales_number} telegram={telegram}/>
                       <div className={classes.copyright_wrapper}>
                             <div className={classes.logo_wrapper}>
