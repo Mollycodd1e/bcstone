@@ -23,7 +23,7 @@ export const S_Footer = ({className, phone_number, mail, address, sales_number, 
       });
   }
 
-  let options = { rootMargin: '0px 0px -210px 0px', threshold: [0.5] };
+  let options = { rootMargin: '0px 0px -100px 0px', threshold: [0.5] };
 
   let observer = new IntersectionObserver( onEntry, options);
 
