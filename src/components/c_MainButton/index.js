@@ -20,7 +20,7 @@ export const C_MainButton = ({className, text, onClick, mode = false}) => {
             className={cls}
             onClick={() => onClick()}
             onMouseOver={(e) => {
-                if (width <= sizes.widthDesktopLg) {
+                if (width <= sizes.widthDesktopSm) {
                     e.preventDefault()
                 } else {
                     let rect = btnEl.current.getBoundingClientRect();
@@ -43,7 +43,7 @@ export const C_MainButton = ({className, text, onClick, mode = false}) => {
                 }
             }}
             onMouseOut={(e) => {
-                if (width <= sizes.widthDesktopLg) {
+                if (width <= sizes.widthDesktopSm) {
                     e.preventDefault()
                 } else {
                     // spanEl.current.style.left = e.pageX - btnEl.current.offsetLeft + "px";
