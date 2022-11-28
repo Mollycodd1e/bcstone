@@ -66,7 +66,10 @@ export default function Home() {
             return el.id === 2
         }
     });
-    
+    let sliderVideoPopupContent;
+    if (mainPageData) {
+        sliderVideoPopupContent = mainPageData[0].about_company.variableContent;
+    }
     const [isPopupClose, setIsPopupClose] = useState(true);
     const [isAboutPopupClose, setIsAboutPopupClose] = useState(true);
 
@@ -147,7 +150,7 @@ export default function Home() {
                                     <S_Top_Commercial data={mainPageData[0]} />
                                     <S_Projects data={mainPageData[0]} className={"projects-bg"} />
                                     <S_About data={mainPageData[0]} width={width} setIsAboutPopupClose={setIsAboutPopupClose} popup={isAboutPopupClose}/>
-                                    <C_SliderVideoPopup data={mainPageData[0]} setIsAboutPopupClose={setIsAboutPopupClose} isAboutPopupClose={isAboutPopupClose} popup={isAboutPopupClose}/>
+                                    <C_SliderVideoPopup data={mainPageData[0]} sliderVideoPopupContent={sliderVideoPopupContent} setIsAboutPopupClose={setIsAboutPopupClose} isAboutPopupClose={isAboutPopupClose} popup={isAboutPopupClose}/>
                                     <S_Sales data={mainPageData[0]} />
                                     <S_FullForm data={mainPageData[0]} />
                                     <S_Bottom_Commercial data={mainPageData[0]}/>

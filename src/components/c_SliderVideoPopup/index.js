@@ -6,7 +6,7 @@ import {sizes} from "../../data/sizes";
 import {C_SliderPopup} from "../c_Slider_Popup";
 import { C_SliderPopupElement } from "../c_SliderPopupElement";
 
-export const C_SliderVideoPopup = ({className, data, isAboutPopupClose, setIsAboutPopupClose, popup}) => {
+export const C_SliderVideoPopup = ({className, data, isAboutPopupClose, setIsAboutPopupClose, popup, sliderVideoPopupContent}) => {
     const cls = classNames(classes.root, {[className]: className});
     const [width, height] = useContext(Context);
     const {slider, video} = data.about_company.variableContent;
@@ -24,7 +24,7 @@ export const C_SliderVideoPopup = ({className, data, isAboutPopupClose, setIsAbo
         setHeightBlock(divBlock.current.getBoundingClientRect().width / 1.4756)
     }, [width])
 
-    const elements = slider.gallery.map((el, i) => {
+    const elements = sliderVideoPopupContent.slider.gallery.map((el, i) => {
         return <C_SliderPopupElement key={i} img={el.src} popup={popup}/>
     })
 
@@ -49,7 +49,7 @@ export const C_SliderVideoPopup = ({className, data, isAboutPopupClose, setIsAbo
                         slidersSpaceBetween={0}
                         loop={width < sizes.widthDesktopLg}
                         />
-                    : <iframe  src={'https://www.youtube.com/embed/watch?v=t7BmHgAsodU&list=RDuL68nVQkbL4&index=3'} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
+                    : <iframe  src={!popup ? sliderVideoPopupContent.video.src : ''} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
                 }
             </div>
         </div>
