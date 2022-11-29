@@ -28,7 +28,7 @@ export const C_Transit_Sale = ({className, url, name, type, picture ,setIsHover,
     }
 
     return (
-        <Link href={url}>
+        <Link href={window.location.hostname === 'localhost' ? `/${url}` : `/${url}.html`}>
             <div
                 className={classNames(cls,{[classes.titleShown]: isSales})} ref={salesRef}
                 // onMouseOver={() => {}}
