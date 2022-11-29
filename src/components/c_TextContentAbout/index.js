@@ -39,7 +39,7 @@ export const C_TextContentAbout = ({className, data}) => {
     function onEntryDescription(entry) {
         entry.forEach(change => {
           if (change.isIntersecting) {
-            setTimeout(setIsDescription(true),0);
+            setIsDescription(true);
           } else {
             // setIsDescription(false);
           }
@@ -64,7 +64,7 @@ export const C_TextContentAbout = ({className, data}) => {
         });
     }
 
-    let optionsPlans = { rootMargin: '90px', threshold: [0.5] };
+    let optionsPlans = { rootMargin: '-10px', threshold: [0.5] };
 
     let observerPlans = new IntersectionObserver( onEntryPlans, optionsPlans);
 

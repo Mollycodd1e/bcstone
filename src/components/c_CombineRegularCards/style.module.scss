@@ -112,16 +112,16 @@
   @for $i from 0 through 10 {
     .cardsShown {
       opacity: 1;
+      transition: 1s ease-out;
 
       & div:nth-child(#{$i}) {
-      animation: Jumpin #{$i * 0.9}s cubic-bezier(.9,.03,.69,.22);
-      // opacity: 1;
-      // transition: 1.1s ease;
+      animation: Jumpin #{$i * 1}s cubic-bezier(.9,.03,.69,.22);
+      transition: 1s ease-out;
       animation-fill-mode: forwards; 
 
       & div[class*='CardInfo'] {
         transform: translateY(0);
-        transition: #{$i * 0.45}s ease 0s;
+        transition: #{$i * 0.40}s ease-out;
       }
       }
     }

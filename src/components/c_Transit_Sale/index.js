@@ -14,7 +14,7 @@ export const C_Transit_Sale = ({className, url, name, type, picture ,setIsHover,
           if (change.isIntersecting) {
             setIsSales(true);
           } else {
-            //setIsSales(false);
+            // setIsSales(false);
           }
         });
     }
@@ -31,7 +31,6 @@ export const C_Transit_Sale = ({className, url, name, type, picture ,setIsHover,
         <Link href={url}>
             <div
                 className={classNames(cls,{[classes.titleShown]: isSales})} ref={salesRef}
-                // onMouseOver={() => {}}
                 onMouseOver={() => (setIsHover(true), setIsHoveredItem(number))} onMouseOut={() => setIsHover(false)}
             >   
                     <div className={classes.picture}

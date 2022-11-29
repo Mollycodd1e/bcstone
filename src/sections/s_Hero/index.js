@@ -75,14 +75,14 @@ export const S_Hero = ({className, data}) => {
             const borderX = 40; // 0 - 50
             const borderY = width >= sizes.widthDesktopLg ? 25 : 30; // 0 - 50
             const specialYCorrection = ((100 / 4) / borderY)
-            const specialXCorrection = ((100 / 2) / borderX)
+            const specialXCorrection = ((95 / 2) / borderX)
             const grownSpeed = width >= sizes.widthDesktopLg ? 1.7 : 1.2;
             const totalGrownSpeed = maxCircle * grownSpeed;
 
             if (xBlockPercent <= borderX && yBlockPercent <= borderY) {
                 size = Math.min((totalGrownSpeed * Math.min((xBlockPercent * specialXCorrection), (yBlockPercent * specialYCorrection))), limitCircle)
             } else if (xBlockPercent <= borderX && yBlockPercent > borderY) {
-                size = Math.min((totalGrownSpeed * Math.min((xBlockPercent * specialXCorrection), (100 - yBlockPercent))), limitCircle)
+                size = Math.min((totalGrownSpeed * Math.min((xBlockPercent * specialXCorrection), (95 - yBlockPercent))), limitCircle)
             } else if (xBlockPercent > borderX && yBlockPercent > borderY) {
                 size = Math.min((totalGrownSpeed * Math.min((100 - xBlockPercent), (95 - yBlockPercent))), limitCircle)
             } else {

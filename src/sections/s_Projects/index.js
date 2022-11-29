@@ -35,7 +35,7 @@ export const S_Projects = ({className, setIsPopUpVisible, data}) => {
     function onEntrySub(entry) {
         entry.forEach(change => {
           if (change.isIntersecting) {
-            setTimeout(setSubIsTitle(true),0);
+            setSubIsTitle(true);
           } else {
             // setSubIsTitle(false);
           }
@@ -91,6 +91,7 @@ export const S_Projects = ({className, setIsPopUpVisible, data}) => {
                     className={classNames(classes.Switcher,{[classes.SwitcherShown]: isSwitcher})} setIsSwitcher={setIsSwitcher}
                     isListView={isListView}
                     setIsListView={() => setIsListView(prev => !prev)}
+                    isSubTitle={isSubTitle}
                 />
                 {isListView
                     ?

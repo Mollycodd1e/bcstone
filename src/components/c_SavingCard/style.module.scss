@@ -202,7 +202,7 @@
   .card_wrapper h3 {
     margin: 31px 0 0 42px;
     letter-spacing: -1px;
-    transition: 0.5s;
+    transition: 0.5s ease-out;
   }
   
   .card_wrapper {
@@ -212,8 +212,8 @@
   }
 
   .card_wrapper_hover h3 {
-    transform: translateY(-20px);
-    transition: 0.5s;
+    transform: translateY(-25px);
+    transition: 0.5s ease-out;
   }
 
   .card_shadow {
@@ -221,8 +221,8 @@
   }
 
   .card_wrapper_hover .card_shadow {
-    transform: translateY(-20px);
-    transition: 0.5s;
+    transform: translateY(-25px);
+    transition: 0.5s ease-out;
   }
 
   .card_wrapper span {
@@ -234,14 +234,14 @@
   }
 
   .card_wrapper img {
-    transition: 0.5s;
+    transition: 0.5s ease-out;
     border-radius: 15px;
   }
 
   .card_wrapper_hover img {
-    transform: translateY(-20px);
+    transform: translateY(-25px);
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
-    transition: 0.5s;
+    transition: 0.5s ease-out;
   }
 
   .card_wrapper a {
@@ -254,19 +254,19 @@
   .root p {
     width: 402px;
     padding: 10px 0 1px 20px;
-    transform: translateY(180px);
+    transform: translateY(137px);
   }
 
   .cardShown {
     .card_wrapper {
       opacity: 1;
       transform: scale(1);
-      transition: 1.1s ease;
+      transition: 1s ease-out;
     }
 
     p {
       transform: translateY(0);
-      transition: 1.1s ease;
+      transition: 1s ease-out;
     }
   }
 }

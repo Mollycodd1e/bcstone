@@ -51,6 +51,7 @@ export default function Home() {
                     }
                 });
                 const { data } = res;
+                console.log(data)
                 setData(data);
                 return { data };
             } catch (error) {
@@ -67,6 +68,7 @@ export default function Home() {
         }
     });
     let sliderVideoPopupContent;
+
     if (mainPageData) {
         sliderVideoPopupContent = mainPageData[0].about_company.variableContent;
     }

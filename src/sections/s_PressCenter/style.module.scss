@@ -309,17 +309,20 @@
   }
 
   .PressCenterTitle {  
-    opacity: 0;
-    transform: translateY(140px);
+    overflow: hidden;
 
     & .bg_text {
       margin: 0 446px -61px 0;
       letter-spacing: -3.5px;
+      transform: translateY(197px);
+      opacity: 0;
     }
   
     & .wrap_title {
       margin-left: 166px;
       letter-spacing: -2px;
+      transform: translateY(197px);
+      opacity: 0;
 
       & span:first-child {
         letter-spacing: -1px;
@@ -338,9 +341,18 @@
   }
 
   .titleShown {
-    opacity: 1;
-    transform: translateY(0);
-    transition: 1.1s ease;
+    
+    & .bg_text {
+      opacity: 1;
+      transform: translateY(0);
+      transition: 1.5s ease-out;
+    }
+  
+    & .wrap_title {
+      opacity: 1;
+      transform: translateY(0);
+      transition: 1.5s ease-out;
+    }
   }
 
   .sliderWrapper {
@@ -359,7 +371,7 @@
       margin-top: 2px;
       background-image: url('../../img/press-left-decor-1440.png');
       background-size: 398px 16px;
-      transform: translateX(-180px);
+      transform: translateX(-269px);
       opacity: 0;
     }
 
@@ -376,7 +388,7 @@
       background-position: 0 0;
       z-index: 10;
       pointer-events: none;
-      transform: translateX(180px);
+      transform: translateX(269px);
       opacity: 0;
     }
   }
@@ -385,13 +397,13 @@
     &::after {
       transform: translateX(0);
       opacity: 1;
-      transition: 1.1s ease;
+      transition: 1s ease-out;
     }
 
     &::before {
       transform: translateX(0);
       opacity: 1;
-      transition: 1.1s ease;
+      transition: 1s ease-out;
     }
   }
 }

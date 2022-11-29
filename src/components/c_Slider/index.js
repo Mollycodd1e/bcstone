@@ -26,7 +26,7 @@ export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnClose
     function onEntry(entry) {
         entry.forEach(change => {
           if (change.isIntersecting) {
-                setVisible(true);
+              setVisible(true);
           } else {
             // setVisible(false);
           }

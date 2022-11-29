@@ -3,7 +3,7 @@ import classNames from "classnames";
 import {list, map} from "../../img/svgInlineImg";
 import { useRef } from 'react';
 
-export const C_Switcher = ({className, isListView, setIsListView, setIsSwitcher}) => {
+export const C_Switcher = ({className, isListView, setIsListView, setIsSwitcher, isSubTitle}) => {
     const cls = classNames(classes.root, {[classes.listViewActive]: isListView, [classes.mapViewActive]: !isListView, [className]: className });
 
     const switcherRef = useRef();
@@ -11,9 +11,9 @@ export const C_Switcher = ({className, isListView, setIsListView, setIsSwitcher}
     function onEntrySwitcher(entry) {
         entry.forEach(change => {
           if (change.isIntersecting) {
-            setIsSwitcher(true);
+            isSubTitle ? setIsSwitcher(true) : null;
           } else {
-            // setSubIsTitle(false);
+            // setIsSwitcher(false);
           }
         });
     }

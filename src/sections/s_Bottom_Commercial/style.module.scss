@@ -165,7 +165,7 @@
       background-image: url('../../img/saving-line-1000.png');
       background-position: -287px 24px;
       opacity: 0;
-      transform: translateX(-180px);
+      transform: translateX(-139px);
     }
   }
 
@@ -173,13 +173,13 @@
     &:after {
       opacity: 1;
       transform: translateX(0);
-      transition: 1.1s ease;
+      transition: 1s ease-out;
     }
   }
 
   .saving {
     min-height: 540px;
-    padding: 20px 0;
+    padding: 25px 0 20px 0;
   }
 
   .sliderWrapper {

@@ -18,7 +18,7 @@ export const S_Footer = ({className, phone_number, mail, address, sales_number, 
         if (change.isIntersecting) {
           setIsFooter(true);
         } else {
-          // setIsFooter(false);
+          setIsFooter(false);
         }
       });
   }
@@ -35,7 +35,7 @@ export const S_Footer = ({className, phone_number, mail, address, sales_number, 
       <div className={classes.wrapRoot}>
           <div className={cls} id={'Контакты'}>
                 <div className={classNames(classes.footer_wrapper, {[classes.footerShown]: isFooter})} >
-                      <h2 ref={footerRef}>{copyright.header}</h2>
+                      <h2 ref={footerRef}><span>{copyright.header}</span></h2>
                       <C_FooterContacts phone_number={phone_number} mail={mail} address={address} sales_number={sales_number} telegram={telegram}/>
                       <div className={classes.copyright_wrapper}>
                             <div className={classes.logo_wrapper}>
