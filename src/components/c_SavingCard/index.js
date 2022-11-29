@@ -4,8 +4,8 @@ import Image from 'next/image';
 import {useState} from 'react';
 import { useRef } from 'react';
 
-export const C_SavingCard = ({className, image, description, title}) => {
-    
+export const C_SavingCard = ({className, image, description, title, item}) => {
+    const {link} = item;
     const cls = classNames(classes.root, {[className]: className});
 
     const [isHover, setHover] = useState(false);
@@ -45,7 +45,7 @@ export const C_SavingCard = ({className, image, description, title}) => {
                 <Image src={image} layout='fill'/>
                 {/* <a href='#' onMouseEnter={() => onHover()} onMouseLeave={() => onLeave()}>Подробнее</a> */}
                 {/* <a href='#'>{isHover === false && window.innerWidth >=1440 ? null : 'Подробнее'}</a> */}
-                <a href='#'>Подробнее</a>
+                <a href={window.location.hostname === 'localhost' ? `/${link}` : `/${link}.html`}>Подробнее</a>
                 <div className={classes.card_shadow}></div>
             </div>
             <p>{description}</p>
