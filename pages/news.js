@@ -16,6 +16,18 @@ import { S_MoreInfoBtn } from "../src/sections/s_MoreInfoBtn";
 import { S_Form } from "../src/sections/s_Form";
 import { S_Footer } from "../src/sections/s_Footer";
 import { S_MenuC } from "../src/sections/s_MenuC";
+import {Cc_ComponentGenerator} from "../src/complexComponents/cc_ComponentGenerator";
+
+// const GenerateComponent = (pageData) => {
+//     const componentCreatorObj = {
+//         "hashtags": () => <S_Tags hashtagList={pageData[0].content.list}/>,
+//     }
+//     if (pageData) {
+//         // console.log("pageData.type", pageData[0].type)
+//         return componentCreatorObj[pageData[0].type]
+//     }
+//     return null;
+// }
 
 export default function News() {
     const [width, height] = useWindowSize();
@@ -169,30 +181,30 @@ export default function News() {
                                 <div className={`common_top_bg + ${classes.common_top_bg_news}`}  ref={topMenuEl} id="top">
                                     <S_MenuC menuOnTop={menuOnTop} data={mainPageData[0]} />
                                 </div>
-                                <S_Tags hashtagList={NewsPageData[0].content.list}/>
-                                <S_Header 
-                                    header={NewsPageData[1].content.title} 
-                                    text={NewsPageData[1].content.description}
-                                    data={NewsPageData[1].content.date}
-                                />
-                                <S_Video url={NewsPageData[2].content.url} 
-                                    description={NewsPageData[2].content.description}
-                                />
-                                <S_Text text={NewsPageData[3].content.text}
-                                />
-                                <S_Slider items={NewsPageData[5].content.gallery} 
-                                    description={NewsPageData[5].content.description} />
-                                <S_Text text={NewsPageData[3].content.text}
-                                />
-                                <S_Quote photo={NewsPageData[6].content.photo.src} name={NewsPageData[6].content.name} 
-                                    description={NewsPageData[6].content.description}
-                                    text={NewsPageData[6].content.text}
-                                />
-                                <S_Picture src={NewsPageData[4].content.image.src} description={NewsPageData[4].content.description}/>
-                                <S_Text text={NewsPageData[3].content.text}
-                                />
-                                <S_MoreInfoBtn />
-                                <S_Form header={NewsPageData[8].content.title} description={NewsPageData[8].content.description} ready={NewsPageData[8].content.success}/>
+                                {/*<S_Tags hashtagList={NewsPageData[0].content.list}/>*/}
+                                <Cc_ComponentGenerator pageData={NewsPageData} />
+                                {/*<S_Header */}
+                                {/*    header={NewsPageData[1].content.title} */}
+                                {/*    text={NewsPageData[1].content.description}*/}
+                                {/*    data={NewsPageData[1].content.date}*/}
+                                {/*/>*/}
+                                {/*<S_Video url={NewsPageData[2].content.url}*/}
+                                {/*    description={NewsPageData[2].content.description}*/}
+                                {/*/>*/}
+                                {/*<S_Text text={NewsPageData[3].content.text}/>*/}
+                                {/*<S_Slider items={NewsPageData[5].content.gallery} */}
+                                {/*    description={NewsPageData[5].content.description} />*/}
+                                {/*<S_Text text={NewsPageData[3].content.text}*/}
+                                {/*/>*/}
+                                {/*<S_Quote photo={NewsPageData[6].content.photo.src} name={NewsPageData[6].content.name} */}
+                                {/*    description={NewsPageData[6].content.description}*/}
+                                {/*    text={NewsPageData[6].content.text}*/}
+                                {/*/>*/}
+                                {/*<S_Picture src={NewsPageData[4].content.image.src} description={NewsPageData[4].content.description}/>*/}
+                                {/*<S_Text text={NewsPageData[3].content.text}*/}
+                                {/*/>*/}
+                                {/*<S_MoreInfoBtn />*/}
+                                {/*<S_Form header={NewsPageData[8].content.title} description={NewsPageData[8].content.description} ready={NewsPageData[8].content.success}/>*/}
                                 <S_Footer phone_number={contacts.phone} mail={contacts.mail} address={contacts.address} 
                                     sales_number={contacts.sales} telegram={contacts.telegram} copyright={copyright}/>
                             </>
