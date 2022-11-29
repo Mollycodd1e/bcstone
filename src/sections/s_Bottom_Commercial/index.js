@@ -20,7 +20,7 @@ export const S_Bottom_Commercial = ({className, data}) => {
     })
 
     cuttedElements.forEach(item => {
-        allCards.push(<C_SavingCard  image={item.pic.src} title={item.title} description={item.content}/>)
+        allCards.push(<C_SavingCard item={item}  image={item.pic.src} title={item.title} description={item.content}/>)
     });
 
     function onEntry(entry) {

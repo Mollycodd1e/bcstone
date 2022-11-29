@@ -20,7 +20,7 @@ export const C_Element_Top_Commertial = ({className, element}) => {
                     {content}
                 </span>
                 <a  className={classes.link}
-                    href={window.location.hostname === 'localhost' ? `/news` : `/news.html`}>
+                    href={window.location.hostname === 'localhost' ? `/${link}` : `/${link}.html`}>
                     Подробнее
                 </a>
             </div>
