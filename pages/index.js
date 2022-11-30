@@ -120,7 +120,7 @@ export default function Home() {
             description: `Содержимое данного сайта (включая размещенную информацию и материалы) охраняется авторским${'\u00A0'}правом (ст. 1271 ГК РФ). Запрещено копирование дизайна настоящего сайта, его структуры и отдельных элементов без предварительного письменного согласия АО «СТОУНХЕДЖ»`
         },
     }
-
+    
     return (
         // <Context.Provider value={data}>
             <Context.Provider value={[width, height]}>
@@ -150,7 +150,7 @@ export default function Home() {
                                     </S_Popup>
                                     <S_Hero data={mainPageData[0]} />
                                     <S_Top_Commercial data={mainPageData[0]} />
-                                    <S_Projects data={mainPageData[0]} className={"projects-bg"} />
+                                    <S_Projects data={mainPageData[0]} className={"projects-bg"} setIsPopupClose={setIsPopupClose}/>
                                     <S_About data={mainPageData[0]} width={width} setIsAboutPopupClose={setIsAboutPopupClose} popup={isAboutPopupClose}/>
                                     <C_SliderVideoPopup data={mainPageData[0]} sliderVideoPopupContent={sliderVideoPopupContent} setIsAboutPopupClose={setIsAboutPopupClose} isAboutPopupClose={isAboutPopupClose} popup={isAboutPopupClose}/>
                                     <S_Sales data={mainPageData[0]} />

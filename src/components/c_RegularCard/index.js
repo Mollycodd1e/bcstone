@@ -26,7 +26,7 @@ export const C_RegularCard = ({
     onBtnCloseClick,
     isBtnClose,
     link,
-    setIsPopUpVisible,
+    setIsPopupClose,
     onCardCloseClick,
     i
 }) => {
@@ -34,7 +34,7 @@ export const C_RegularCard = ({
     const cls = classNames(classes.root, { [classes.map_mod]: isMapMode});
     const [isCloseAllBtn, setIsCloseAllBtn] = useState(false);
     const [width, height] = useContext(Context);
-    
+
     return (
         <div className={cls}>
             { isBtnClose ?
@@ -72,7 +72,7 @@ export const C_RegularCard = ({
                         isMainCardBtn={true}
                         className={classes.CardBtn}
                         link={link}
-                        setIsPopUpVisible={setIsPopUpVisible}
+                        setIsPopupClose={setIsPopupClose}
                     />
                 </div>
                 <С_CardInfo
