@@ -12,20 +12,28 @@ import { useRef } from "react";
 export const S_PressCenter = ({className, data}) => {
     
     const cls = classNames(classes.root, {[className]: className });
-    const data_4 = data.news;
-    
+    // const data_4 = data.news;
+    const data_4 = data;
     const allCards = [];
     const [isCenter, setIsCenter] = useState(false);
     const [isTitle, setIsTitle] = useState(false);
     const centerRef = useRef();
     const titleRef = useRef();
-    let cuttedElements = data_4 && data_4.list.length !==0 && data_4.list.slice(0, data_4.config.shownElements);
-    cuttedElements.sort(function (a, b) {
-        return a.order - b.order;
-    })
+    // let cuttedElements = data_4 && data_4.list.length !==0 && data_4.list.slice(0, data_4.config.shownElements);
+    // cuttedElements.sort(function (a, b) {
+    //     return a.order - b.order;
+    // })
 
+    // cuttedElements.forEach(item => {
+    //   allCards.push(<C_PressCard date={item.date} image={item.pic.src} title={item.title} description={item.content}/>)
+    // });
+
+    let cuttedElements = data_4.sort(function (a, b) {
+      return new Date(b.date) - new Date(a.date);
+    }).slice(0, 6);
+    
     cuttedElements.forEach(item => {
-      allCards.push(<C_PressCard date={item.date} image={item.pic.src} title={item.title} description={item.content}/>)
+      allCards.push(<C_PressCard date={item.date} image={item.image} title={item.title} description={item.fullTextWithoutImg}/>)
     });
 
     function onEntry(entry) {
@@ -47,7 +55,7 @@ export const S_PressCenter = ({className, data}) => {
         });
     }
     let options = { rootMargin: '50px', threshold: [0.5] };
-    let optionsCenter = { rootMargin: '0px 0px -350px 0px', threshold: [0.5] };
+    let optionsCenter = { threshold: [0.5] };
 
     let observer = new IntersectionObserver( onEntry, options);
     let observerCenter = new IntersectionObserver( onEntryCenter, optionsCenter);
@@ -62,7 +70,7 @@ export const S_PressCenter = ({className, data}) => {
 
     return (
         <div className={classes.wrapRoot}>
-            <div className={classNames(cls,{[classes.lineShown]: isCenter})} ref={centerRef} id={'Пресс-центр'}>
+            <div className={classNames(cls,{[classes.lineShown]: isCenter})} id={'Пресс-центр'}>
                 <div className={classes.wrapper}>
                 <div className={classNames(classes.PressCenterTitle,{[classes.titleShown]: isTitle})} ref={titleRef}>
                     <div className={classes.bg_text}>Новости</div>
@@ -84,7 +92,9 @@ export const S_PressCenter = ({className, data}) => {
                 {/* <div className={classes.btnWrapper}>
                     <a href="#">Подробнее</a>
                 </div> */}
-                <C_MainButton className={classes.C_MainButton} text={'Подробнее'}/>
+                <div ref={centerRef}>
+                  <C_MainButton className={classes.C_MainButton} text={'Подробнее'}/>
+                </div>
                 </div>
             </div>
         </div>

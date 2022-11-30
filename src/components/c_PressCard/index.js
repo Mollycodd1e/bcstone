@@ -18,34 +18,13 @@ export const C_PressCard = ({className, date, image, title, description}) => {
     }
 
     const [isVisible, setVisible] = useState(false);
-    // const ref = useRef();
 
-    // useEffect(() => {
-    //   if (ref.current) {
-    //     observer.observe(ref.current)
-    //   }
-    // },[])
-
-    // function onEntry(entry) {
-    //     entry.forEach(change => {
-    //       if (change.isIntersecting) {
-    //         setVisible(true)
-    //       } else {
-    //         setVisible(false);
-    //       }
-    //     });
-    // }
-    
-    // let options = { threshold: [0.5] };
-    // let observer = new IntersectionObserver( onEntry, options);
-
-    // if (ref.current) {
-    //   observer.observe(ref.current)
-    // }
+    const dayOfNews = new Date(date).getDate();
+    const monthOfNews = new Date(date).getMonth() + 1;
 
     return (
         <div className={classNames(cls, {[classes.element_show]: isVisible})}>
-            <div className={classNames(classes.data, {[classes.data_hover]: isHover})}>{date}</div>
+            <div className={classNames(classes.data, {[classes.data_hover]: isHover})}>{dayOfNews}/{monthOfNews}</div>
             <div className={classNames(classes.card_wrapper, {[classes.card_wrapper_hover]: isHover})} onMouseEnter={() => onHover()} onMouseLeave={() => onLeave()}>      
                 <Image src={image} layout='fill'/>
                 {/* <a href='#' onMouseEnter={() => onHover()} onMouseLeave={() => onLeave()}>Читать</a> */}
@@ -53,7 +32,7 @@ export const C_PressCard = ({className, date, image, title, description}) => {
             </div>  
             <div className={classes.description_wrapper}>
               <h3>{title}</h3>
-              <p>{description}</p>
+              <p dangerouslySetInnerHTML={{ __html: description}}></p>
             </div>
         </div>
     )

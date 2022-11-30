@@ -488,20 +488,34 @@
 
     &::after {
       width: 548px;
-      margin-left: -562px;
+      margin-left: -762px;
       margin-top: 2px;
       background-image: url('../../img/project-left-decor-1920.png');
       background-size: 548px 16px;
-      transform: translateX(-180px);
+      // transform: translateX(-269px);
     }
 
     &::before {
       width: 548px;
-      margin-left: 16px;
+      margin-left: 216px;
       background-image: url('../../img/project-right-decor-1920.png');
       background-size: 548px 16px;
       background-position: 0 0;
-      transform: translateX(180px);
+      // transform: translateX(269px);
+    }
+  }
+
+  .lineShown .C_MainButton {
+    &::after {
+      transform: translateX(0);
+      opacity: 1;
+      transition: 1s ease-out;
+    }
+
+    &::before {
+      transform: translateX(0);
+      opacity: 1;
+      transition: 1s ease-out;
     }
   }
 }

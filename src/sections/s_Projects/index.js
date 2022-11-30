@@ -15,13 +15,13 @@ export const S_Projects = ({className, data, setIsPopupClose}) => {
     const [width, height] = useContext(Context);
     const ref = useRef();
     const subRef = useRef();
-    const linesRef = useRef();
+    const linesRef = useRef(null);
     const [isLine, setIsLine] = useState(false);
     const cls = classNames(classes.root, { [classes.mapView]: !isListView, [className]: className });
     const [isTitle, setIsTitle] = useState(false);
     const [isSubTitle, setSubIsTitle] = useState(false);
     const [isSwitcher, setIsSwitcher] = useState(false);
-  
+
     function onEntry(entry) {
         entry.forEach(change => {
           if (change.isIntersecting) {
@@ -54,7 +54,7 @@ export const S_Projects = ({className, data, setIsPopupClose}) => {
 
     let options = { rootMargin: '-140px', threshold: [0.5] };
     let optionsSub = { rootMargin: '-200px', threshold: [0.5] };
-    let optionsLine = {rootMargin: '100% 0px 0px 0px', threshold: [1.0] };
+    let optionsLine = {threshold: [1] };
 
     let observer = new IntersectionObserver( onEntry, options);
     let observerSub = new IntersectionObserver( onEntrySub, optionsSub);
@@ -74,7 +74,7 @@ export const S_Projects = ({className, data, setIsPopupClose}) => {
     
     return (
         <div className={classes.wrapRoot}>
-            <div className={classNames(cls,{[classes.lineDecor] : isLine})} ref={linesRef} id={'Проекты'}>
+            <div className={classNames(cls,{[classes.lineDecor] : isLine})}  id={'Проекты'}>
                 <div className={classNames(classes.ProjectTitle,{[classes.titleShown] : isTitle})} ref={ref}>
                     <div className={classes.bg_text}>Проекты</div>
                     <div className={classes.wrap_title}>
@@ -112,7 +112,9 @@ export const S_Projects = ({className, data, setIsPopupClose}) => {
                         data={data}
                     />
                 }
+                <div ref={linesRef}>
                 <C_MainButton text={"Получить предложение"} onClick={() => console.log('click from project')} className={classes.C_MainButton}/>
+                </div>
             </div>
         </div>
     )
