@@ -180,7 +180,7 @@
 
   .footer_wrapper {
     background-image: url('../../img/bgstone-desktop-sm.png');
-    background-position: left -1200px bottom 219px;
+    background-position: left -1300px bottom 219px;
   }
 
   .root h2 {  
@@ -188,12 +188,13 @@
     line-height: 69px;
     margin-top: 155px;
     margin-left: 60px;
-    transform: translateY(300px);
+    opacity: 0;
+    transform: translateY(160px);
   }
 
   .footerShown {
     background-position: left 52px bottom 219px;
-    transition: 1.1s ease;
+    transition: 1s ease-out;
   }
 
   .root .footerShown h2 {  
@@ -201,8 +202,9 @@
     line-height: 69px;
     margin-top: 155px;
     margin-left: 60px;
+    opacity: 1;
     transform: translateY(0);
-    transition: 1.1s ease;
+    transition: 1s ease-out;
   }
 
   .logo_wrapper {
@@ -245,7 +247,7 @@
   }
 
   .footer_wrapper {
-    background-position: left -1300px bottom 219px;
+    background-position: left -1400px bottom 219px;
     background-size: 1243px 272px;
   }
 
@@ -299,7 +301,7 @@
 
   .footer_wrapper {
     background-image: url('../../img/bgstone-desktop.png');
-    background-position: left -1500px bottom 208px;
+    background-position: left -1600px bottom 208px;
     background-size: unset;
     padding: 64px 62px 18px 53px;
   }

@@ -52,6 +52,7 @@
 @media(min-width: $width-desktop-sm) {
   .root {
     z-index: 2;
+    border-radius: 15px;
   }
 
   .extraInfo {

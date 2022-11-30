@@ -604,20 +604,20 @@
 
     & .title {
       transform: translateY(0);
-      transition: 1.1s ease 0s;
+      transition: 1s ease-out;
       opacity: 1;
 
       &::before {
         transform: translateX(0);
         transform: translateY(0);
-        transition: 1.1s ease;
+        transition: 1s ease-out;
       }
     }
 
     & .description {
       transform: translateX(0);
       opacity: 1;
-      transition: 1.1s ease;
+      transition: 1s ease-out;
     }
   }
 
@@ -625,7 +625,7 @@
     font-size: 18px;
     line-height: 18px;
     margin: 0 0 24px -98px;
-    transform: translateX(180px);
+    transform: translateX(154px);
     opacity: 0;
   }
 

@@ -5,10 +5,11 @@ import {Context} from "../../library";
 import {useContext} from "react";
 import React from "react";
 
-export const С_CardBtn = ({className, bgColorFirst, bgColorSecond, textColor, isMainCardBtn, link, setIsPopUpVisible}) => {
+export const С_CardBtn = ({className, bgColorFirst, bgColorSecond, textColor, isMainCardBtn, link, setIsPopupClose}) => {
     const cls = classNames(classes.root, {[classes.mainCardBtn]: isMainCardBtn, [classes.secondaryCardBtn]: !isMainCardBtn, [className]: className });
     const [width, height] = useContext(Context);
     // const {setIsPopUpVisible} = useContext(Context);
+    
     return (
         <React.Fragment>
             {
@@ -18,7 +19,7 @@ export const С_CardBtn = ({className, bgColorFirst, bgColorSecond, textColor, i
                         backgroundColor: !isMainCardBtn && width < sizes.widthTabletMd ? bgColorSecond : bgColorFirst,
                         color: textColor,
                     }}
-                    onClick={() => setIsPopUpVisible(true)}
+                    onClick={() => setIsPopupClose(false)}
                 >
                         Оставить заявку
                 </button> :

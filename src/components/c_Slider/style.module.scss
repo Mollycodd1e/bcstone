@@ -243,7 +243,7 @@
     min-height: 440px;
     margin-left: 0px;
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 25px;
 
     & div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
       display: none;
@@ -254,9 +254,9 @@
     min-height: 414px;
   }
 
-  .swiperSaving  {
+  .swiperSaving {
     width: 1500px;
-    padding-top: 20px;
+    padding-top: 25px;
 
     div[class="swiper-wrapper"] {
       margin-left: -303px;
@@ -271,7 +271,7 @@
   
   @keyframes fromBottomText {
     0% {
-      transform: translateY(100px);
+      transform: translateY(40px);
     }
     100% {
       transform: translateY(0px);
@@ -282,7 +282,7 @@
     opacity: 0;
 
     & div div:nth-child(3) {
-      transform: translateY(180px);
+      transform: translateY(40px);
     }
   }
 
@@ -309,7 +309,7 @@
 
       & div div:nth-child(3) {
         transform: translateY(0);
-        transition: #{$i * 0.22}s ease 0.03s;
+        transition: #{$i * 0.25}s ease-out;
       }
 
     }

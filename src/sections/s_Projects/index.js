@@ -10,7 +10,7 @@ import {C_RegularMap} from "../../components/c_RegularMap";
 import {C_CombineRegularCards} from "../../components/c_CombineRegularCards";
 import {C_MainButton} from "../../components/c_MainButton";
 
-export const S_Projects = ({className, setIsPopUpVisible, data}) => {
+export const S_Projects = ({className, data, setIsPopupClose}) => {
     const [isListView, setIsListView] = useState(true);
     const [width, height] = useContext(Context);
     const ref = useRef();
@@ -21,7 +21,7 @@ export const S_Projects = ({className, setIsPopUpVisible, data}) => {
     const [isTitle, setIsTitle] = useState(false);
     const [isSubTitle, setSubIsTitle] = useState(false);
     const [isSwitcher, setIsSwitcher] = useState(false);
-
+  
     function onEntry(entry) {
         entry.forEach(change => {
           if (change.isIntersecting) {
@@ -35,7 +35,7 @@ export const S_Projects = ({className, setIsPopUpVisible, data}) => {
     function onEntrySub(entry) {
         entry.forEach(change => {
           if (change.isIntersecting) {
-            setTimeout(setSubIsTitle(true),0);
+            setSubIsTitle(true);
           } else {
             // setSubIsTitle(false);
           }
@@ -71,7 +71,7 @@ export const S_Projects = ({className, setIsPopUpVisible, data}) => {
     if (linesRef.current) {
         observerLine.observe(linesRef.current);
     }
-
+    
     return (
         <div className={classes.wrapRoot}>
             <div className={classNames(cls,{[classes.lineDecor] : isLine})} ref={linesRef} id={'Проекты'}>
@@ -91,6 +91,7 @@ export const S_Projects = ({className, setIsPopUpVisible, data}) => {
                     className={classNames(classes.Switcher,{[classes.SwitcherShown]: isSwitcher})} setIsSwitcher={setIsSwitcher}
                     isListView={isListView}
                     setIsListView={() => setIsListView(prev => !prev)}
+                    isSubTitle={isSubTitle}
                 />
                 {isListView
                     ?
@@ -98,7 +99,7 @@ export const S_Projects = ({className, setIsPopUpVisible, data}) => {
                             className={classes.CombineRegularCards}
                             isBtnClose={false}
                             onBtnCloseClick={() => {}}
-                            setIsPopUpVisible={setIsPopUpVisible}
+                            setIsPopupClose={setIsPopupClose}
                             isMapMode={false}
                             data={data}
                         />
