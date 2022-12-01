@@ -27,7 +27,7 @@ export const S_Projects = ({className, data, setIsPopupClose}) => {
           if (change.isIntersecting) {
             setIsTitle(true);
           } else {
-            // setIsTitle(false);
+            setIsTitle(false);
           }
         });
     }
@@ -107,13 +107,13 @@ export const S_Projects = ({className, data, setIsPopupClose}) => {
                         className={classes.RegularMap}
                         isBtnClose={true}
                         onBtnCloseClick={() => {}}
-                        setIsPopUpVisible={setIsPopUpVisible}
+                        setIsPopUpVisible={setIsPopupClose}
                         isMapMode={true}
                         data={data}
                     />
                 }
-                <div ref={linesRef}>
-                <C_MainButton text={"Получить предложение"} onClick={() => console.log('click from project')} className={classes.C_MainButton}/>
+                <div className={classes.btnWrapper} ref={linesRef}>
+                  <C_MainButton text={"Получить предложение"} onClick={() => console.log('click from project')} className={classes.C_MainButton}/>
                 </div>
             </div>
         </div>

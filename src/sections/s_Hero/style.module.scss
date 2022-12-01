@@ -1,6 +1,6 @@
 @import '../../styles/style';
 
-$animationDurationHero: 1.1s;
+$animationDurationHero: 1s;
 $existTimer: 2.5s;
 
 @mixin middleAnimationSpeed {
@@ -148,7 +148,7 @@ $existTimer: 2.5s;
 @keyframes helperAnimaAfterDesktop {
   0% {
     opacity: 0;
-    right: -209px;
+    right: -172px;
   }
 
   @include middleAnimationSpeed;
@@ -162,7 +162,7 @@ $existTimer: 2.5s;
 @keyframes helperAnimaTitle {
   0% {
     opacity: 0;
-    top: 150px;
+    top: 66px;
   }
 
   @include middleAnimationSpeed;
@@ -414,6 +414,7 @@ $existTimer: 2.5s;
     margin: 0;
 
     animation-duration: $animationDurationHero;
+    animation-timing-function: ease-out;
     animation-name: helperAnima;
     position: relative;
   }
@@ -427,6 +428,7 @@ $existTimer: 2.5s;
     height: 98px;
     background-size: 288px 98px;
     animation-duration: $animationDurationHero;
+    animation-timing-function: ease-out;
     animation-name: helperAnimaTitle;
   }
 
