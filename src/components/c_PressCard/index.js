@@ -1,13 +1,17 @@
 import classes from './style.module.scss';
 import classNames from 'classnames';
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import {useRef, useState } from 'react';
+import { useContext} from 'react';
+import { sizes } from '../../data/sizes';
+import {Context} from "../../library";
 
 export const C_PressCard = ({className, date, image, title, description}) => {
     
     const cls = classNames(classes.root, {[className]: className});
     const textRef = useRef();
     const [isHover, setHover] = useState(false);
+    const [width, height] = useContext(Context);
 
     const onHover = function() {
         setHover(true);
@@ -17,9 +21,36 @@ export const C_PressCard = ({className, date, image, title, description}) => {
         setHover(false)
     }
 
-    const newText = description.slice(0, 100);
-    const spaceNumber = newText.lastIndexOf(' ');
-    const cropText = newText.slice(0, spaceNumber) + '...';
+    let newTitle = title;
+    let spaceNumberTitle;
+    let cropTitle;
+    let newContent = description;
+    let spaceNumberContent;
+    let cropContent;
+    console.log(newTitle.length)
+    console.log(newContent.length)
+    if ((newTitle.length < 22) && (newContent.length >= 75)) {
+        cropTitle = title;
+        spaceNumberContent = newContent.slice(0, 150).lastIndexOf(' ');
+        cropContent = newContent.slice(0, spaceNumberContent) + '...';
+    } else if ((newTitle.length < 22) && (newContent.length < 75)) {
+        cropTitle = title;
+        cropContent = description;
+    } else if ((newTitle.length >= 22) && (newTitle.length < 50) && (newContent.length >= 50)) {
+        spaceNumberTitle = newTitle.slice(0, 50).lastIndexOf(' ');
+        cropTitle = newTitle.slice(0, spaceNumberTitle);
+        spaceNumberContent = newContent.slice(0, width < sizes.widthTabletMd ? 95 : width >= sizes.widthDesktopSm ? 86 : 150).lastIndexOf(' ');
+        cropContent = newContent.slice(0, spaceNumberContent) + '...';
+    } else if ((newTitle.length >= 22) && (newContent.length >= 50)) {
+        spaceNumberTitle = newTitle.slice(0, 28).lastIndexOf(' ');
+        cropTitle = newTitle.slice(0, spaceNumberTitle) + '...';
+        spaceNumberContent = newContent.slice(0, width < sizes.widthTabletMd ? 95 : width >= sizes.widthDesktopSm ? 96 : 150).lastIndexOf(' ');
+        cropContent = newContent.slice(0, spaceNumberContent) + '...';
+    } else if ((newTitle.length >= 22) && (newContent.length <= 50)) {
+        spaceNumberTitle = newTitle.slice(0, 40).lastIndexOf(' ');
+        cropTitle = newTitle.slice(0, spaceNumberTitle) + '...';
+        cropContent = description;
+    }
 
     const [isVisible, setVisible] = useState(false);
 
@@ -35,8 +66,8 @@ export const C_PressCard = ({className, date, image, title, description}) => {
                 <a href='#'>Читать</a>
             </div>  
             <div className={classes.description_wrapper}>
-              <h3>{title}</h3>
-              <p ref={textRef} dangerouslySetInnerHTML={{ __html: cropText}}></p>
+              <h3>{cropTitle}</h3>
+              <p ref={textRef} dangerouslySetInnerHTML={{ __html: cropContent}}></p>
             </div>
         </div>
     )

@@ -45,6 +45,7 @@ $title-font-size-lg: 21px;
 
 $title-line-height-sm: 14px;
 $title-line-height-pre-md: 16px;
+$title-line-height-tablet-md: 17px;
 $title-line-height-md: 22px;
 $title-line-height-tablet-lg: 21px;
 $title-line-height-lg: 23px;
@@ -163,18 +164,19 @@ $decor-margin-lg: 0 14px 0 0;
 
 .title {
   font-weight: 800;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  max-height: 28px;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+  // white-space: nowrap;
 }
 
 .content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-height: 38px;
-  -ms-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+  max-height: 42px;
+  // -ms-hyphens: auto;
+  // -webkit-hyphens: auto;
+  // hyphens: auto;
 }
 
 .link {
@@ -234,13 +236,17 @@ $decor-margin-lg: 0 14px 0 0;
   $common-padding: $common-padding-md,
   $size: $size-md,
   $title-font-size: $title-font-size-md,
-  $title-line-height: $title-line-height-md,
+  $title-line-height: $title-line-height-tablet-md,
   $content-font-size: $content-font-size-md,
   $content-line-height: $content-line-height-md,
   $decor-margin: $decor-margin-md,
   $box-shadow: $box-shadow-md-lg,
   $title-margin: $title-margin-md,
   $height: $height-md);
+
+  .title {
+    max-height: 34px;
+  }
 
   .content {
     max-height: unset;
@@ -254,7 +260,7 @@ $decor-margin-lg: 0 14px 0 0;
   $common-padding: $common-padding-tablet-lg,
   $size: $size-md,
   $title-font-size: $title-font-size-tablet-lg,
-  $title-line-height: $title-line-height-tablet-lg,
+  $title-line-height: $title-line-height-tablet-md,
   $content-font-size: $content-font-size-tablet-lg,
   $content-line-height: $content-line-height-tablet-lg,
   $decor-margin: $decor-margin-tablet-lg,
@@ -285,6 +291,10 @@ $decor-margin-lg: 0 14px 0 0;
       transform: translateY(-20px);
       transition: 0.6s;
     }
+  }
+
+  .title {
+    max-height: 46px;
   }
 
   .content {

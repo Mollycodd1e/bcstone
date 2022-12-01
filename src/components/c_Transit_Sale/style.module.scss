@@ -332,19 +332,23 @@
 
       & .link {
         justify-self: center;
+        top: 13px;
+        left: 48px;
 
         & svg {
-          opacity: 0;
+          opacity: 1;
         }
 
         & span {
-          opacity: 0;
-          left: -90px;
+          opacity: 1;
+          left: 0;
         }
       }
 
       & .picture {
         justify-self: flex-end;
+        position: relative;
+        left: -10px;
       }
 
       & .title {
@@ -374,16 +378,20 @@
     flex-wrap: nowrap;
     justify-self: center;
     opacity: 0;
-    transition: .5s;
     align-self: flex-start;
+    position: relative;
+    top: 5px;
+    left: -53px;
 
     & svg {
-      opacity: 0;
+      opacity: 1;
+      position: relative;
+      top: -3px;
     }
 
     & span {
-      opacity: 0;
-      left: -90px;
+      opacity: 1;
+      left: 0;
     }
   }
 
@@ -397,8 +405,10 @@
     width: 226px;
     height: 295px;
     background-size: 226px 295px;
-    transition: all .5s;
+    transition: 1s ease-out;
     justify-self: flex-start;
+    position: relative;
+    left: 10px;
   }
 
   .title {
@@ -407,7 +417,7 @@
     margin-top: 15px;
     margin-left: -180px;
     color: #EFEFEF;
-    transition: all .5s;
+    transition: 1s ease-out;
     align-self: flex-end;
     opacity: 0;
     transform: translateY(40px);
@@ -444,9 +454,15 @@
   .root {
     padding: 60px 0 71px 0;
 
-    &.reverse {      
+    &.reverse {    
+      & .link {
+        top: -3px;
+        left: -15px;
+      } 
+
       & .picture {
         margin: 15px 30px 0 0px;
+        left: 5px;
       }
 
       & .title {
@@ -459,11 +475,28 @@
     margin-right: 12px;
   }
 
+  .link {
+    top: -11px;
+    left: 6px;
+
+    & svg {
+      opacity: 1;
+      position: relative;
+      top: -3px;
+    }
+
+    & span {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
   .picture {
     width: 215px;
     height: 285px;
     background-size: 215px 285px;
     margin: 0 -15px -15px 30px;
+    left: 0;
   }
 
   .title {
@@ -487,9 +520,28 @@
 
       & .link {
         justify-self: center;
+        opacity: 0;
+        top: -30px;
+        left: -34px;
+
+        & svg {
+          opacity: 1;
+          left: 0;
+        }
+
+        & span {
+          opacity: 1;
+          left: 0;
+        }
+      }
+
+      & .title {
+        top: -12px;
+        left: 4px;
       }
 
       & .picture {
+        left: 31px;
         justify-self: flex-end;
       }
     }
@@ -510,8 +562,22 @@
     flex-wrap: nowrap;
     justify-self: center;
     opacity: 0;
-    transition: .5s;
+    position: relative;
+    left: 81px;
+    top: -39px;
+    transition: 1s ease-out;
     align-self: flex-start;
+
+    & svg {
+      opacity: 1;
+      position: relative;
+      top: -3px;
+      left: -90px;
+    }
+
+    & span {
+      opacity: 1;
+    }
   }
 
   .buttonText {
@@ -526,13 +592,19 @@
     background-size: 233px 303px;
     transition: all .5s;
     justify-self: flex-start;
+    position: relative;
+    top: -11px;
+    left: -30px;
   }
 
   .title {
     font-size: 100px;
     line-height: 100px;
     color: #EFEFEF;
-    transition: all .5s;
+    transition: 1s ease-out;
     align-self: flex-end;
+    position: relative;
+    top: -15px;
+    left: -12px;
   }
 }

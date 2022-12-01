@@ -92,26 +92,6 @@ export default function Home() {
     const [isAboutPopupClose, setIsAboutPopupClose] = useState(true);
 
     const mocks = {
-        pressCenter: [
-            {
-                data: '21/04',
-                image: 'https://via.placeholder.com/224x134',
-                title: 'Выйграли конкурс',
-                description: 'Бизнес-центры и офисные кварталы  будут реализованы в Белорусском  деловом районе и других  перспективных Бизнес-районах  Москвы'
-            },
-            {
-                data: '22/04',
-                image: 'https://via.placeholder.com/224x134',
-                title: 'Выйграли конкурс',
-                description: 'Бизнес-центры и офисные кварталы  будут реализованы в Белорусском  деловом районе и других  перспективных Бизнес-районах  Москвы'
-            },
-            {
-                data: '20/04',
-                image: 'https://via.placeholder.com/224x134',
-                title: 'Выйграли конкурс',
-                description: 'Бизнес-центры и офисные кварталы  будут реализованы в Белорусском  деловом районе и других  перспективных Бизнес-районах  Москвы'
-            },
-        ],
         saving: [
             {
                 url: '',
