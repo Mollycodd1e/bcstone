@@ -171,10 +171,21 @@ export default function News() {
     return (
             <Context.Provider value={[width, height]}>
                 <Head>
-                    <title>Максим Гейзер</title>
-                    <meta name="description" content="Максим Гейзер" />
+                    <title>STONE HEDGE</title>
+                    <meta name="description" content="STONE HEDGE" />
+                    {/*TODO: facebook-domain-verification ? */}
+                    {/*<meta name="facebook-domain-verification" content="9z0sixxjkzgui2ay20ckf44xvhjnhk" />*/}
                     <link rel="icon" href="/favicon.ico" />
-                </Head>    
+                    {/*TODO: googletagmanager 1 ? */}
+                    {/*                    <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':*/}
+                    {/*new Date().getTime(),event:'gtm.js'});var f=d.getByTagName(s)[0],*/}
+                    {/*j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=*/}
+                    {/*'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);*/}
+                    {/*})(window,document,'script','dataLayer','GTM-N7GL33F')`}}></script>*/}
+                </Head>
+                {/*TODO: googletagmanager 2 ? */}
+                {/*<noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7GL33F";height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>*/}
+
                 <div className={"page-wrapper"}>                                  
                     {data.length !== 0 ? (
                             <>
@@ -226,7 +237,7 @@ export default function News() {
                     }
 
                 </div>
-                <Script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3xsHwkwIhhfEFp3og9dunH0Jw39tsxi0" strategy="beforeInteractive"/>
+                {/*<Script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3xsHwkwIhhfEFp3og9dunH0Jw39tsxi0" strategy="beforeInteractive"/>*/}
             </Context.Provider>
     )
 }
