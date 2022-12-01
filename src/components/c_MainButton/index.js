@@ -4,7 +4,7 @@ import {useContext, useRef} from "react";
 import {Context} from "../../library";
 import {sizes} from "../../data/sizes";
 
-export const C_MainButton = ({className, text, onClick, mode = false}) => {
+export const C_MainButton = ({className, text, onClick, mode = false, link}) => {
     const btnEl = useRef(null);
     const spanEl = useRef(null);
     const cls = classNames(
@@ -74,10 +74,9 @@ export const C_MainButton = ({className, text, onClick, mode = false}) => {
                 </button>
                 :
                 <a
-                    {/*todo: доделать для ссылки*/}
                     ref={btnEl}
                     className={cls}
-                    href={''}
+                    href={link}
                     onMouseOver={(e) => {
                         if (width <= sizes.widthDesktopSm) {
                             e.preventDefault()

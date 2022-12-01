@@ -93,7 +93,7 @@ export const S_PressCenter = ({className, data}) => {
                     <a href="#">Подробнее</a>
                 </div> */}
                 <div ref={centerRef}>
-                  <C_MainButton className={classes.C_MainButton} text={'Подробнее'}/>
+                  <C_MainButton className={classes.C_MainButton} text={'Подробнее'} link={"https://bc-stone.ru/news.html"}/>
                 </div>
                 </div>
             </div>
