@@ -136,11 +136,27 @@
   }
 
   .wrapper {
+    position: relative;
     min-width: 708px;
     border: 1px solid #707070;
     padding-top: 39px;
     border-radius: 20px;
     padding-bottom: 49px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 627px;
+      //margin-left: -367px;
+      height: 56px;
+      bottom: 19px;
+      background-image: url('../../img/press-line-768.png');
+      background-repeat: no-repeat;
+      background-size: 627px 16px;
+      background-position: 0 0;
+      z-index: 10;
+      pointer-events: none;
+    }
   }
 
   .PressCenterTitle {
@@ -186,21 +202,6 @@
     margin-left: -1px;
     padding: 9px 0 8px 0;
     border-radius: 22px;
-    overflow: visible;
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: 627px;
-      margin-left: -367px;
-      height: 56px;
-      background-image: url('../../img/press-line-768.png');
-      background-repeat: no-repeat;
-      background-size: 627px 16px;
-      background-position: 0 0;
-      z-index: 10;
-      pointer-events: none;
-    }
   }
 
   .root .C_MainButton span {
@@ -220,6 +221,13 @@
     padding-bottom: 39px;
     max-width: 1787px;
     margin: 0 auto;
+
+    &::after {
+      width: 801px;
+      bottom: 10px;
+      background-image: url('../../img/press-line-1000.png');
+      background-size: 801px 16px;
+    }
   }
 
   .PressCenterTitle {  
@@ -249,14 +257,6 @@
     margin-left: 0;
     padding: 8px 0 9px 0;
     width: 263px;
-
-    &::after {
-      width: 801px;
-      margin-left: -454px;
-      margin-top: 1px;
-      background-image: url('../../img/press-line-1000.png');
-      background-size: 801px 16px;
-    }
   }
 
   .pressing {
@@ -274,13 +274,6 @@
     margin-left: 0;
     padding: 8px 0 9px 0;
     width: 264px;
-
-    &::after {
-      width: 1001px;
-      margin-left: -554px;
-      background-image: url('../../img/press-line-1200.png');
-      background-size: 1001px 16px;
-    }
   }
 }
 
@@ -306,6 +299,49 @@
     padding-bottom: 87px;
     min-width: 1307px;
     margin: 0 auto;
+
+    &::after {
+      width: 398px;
+      margin-left: -684px;
+      margin-top: 2px;
+      background-image: url('../../img/press-left-decor-1440.png');
+      background-size: 398px 16px;
+      transform: translateX(-269px);
+      opacity: 0;
+      bottom: 61px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 398px;
+      margin-left: 684px;
+      height: 56px;
+      margin-top: 2px;
+      background-image: url('../../img/press-right-decor-1440.png');
+      background-repeat: no-repeat;
+      background-size: 398px 16px;
+      background-position: 0 0;
+      z-index: 10;
+      pointer-events: none;
+      transform: translateX(269px);
+      opacity: 0;
+      bottom: 61px;
+    }
+  }
+
+  .lineShown .wrapper {
+    &::after {
+      transform: translateX(0);
+      opacity: 1;
+      transition: 2s ease-out;
+    }
+
+    &::before {
+      transform: translateX(0);
+      opacity: 1;
+      transition: 2s ease-out;
+    }
   }
 
   .PressCenterTitle {  
@@ -345,13 +381,13 @@
     & .bg_text {
       opacity: 1;
       transform: translateY(0);
-      transition: 1.5s ease-out;
+      transition: 0.8s ease-out;
     }
   
     & .wrap_title {
       opacity: 1;
       transform: translateY(0);
-      transition: 1.5s ease-out;
+      transition: 0.8s ease-out;
     }
   }
 
@@ -364,47 +400,6 @@
     margin-left: 0;
     padding: 12px 0 12px 0;
     width: 185px;
-
-    &::after {
-      width: 398px;
-      margin-left: -594px;
-      margin-top: 2px;
-      background-image: url('../../img/press-left-decor-1440.png');
-      background-size: 398px 16px;
-      transform: translateX(-269px);
-      opacity: 0;
-    }
-
-    &::before {
-      position: absolute;
-      content: "";
-      width: 398px;
-      margin-left: 196px;
-      height: 56px;
-      margin-top: 2px;
-      background-image: url('../../img/press-right-decor-1440.png');
-      background-repeat: no-repeat;
-      background-size: 398px 16px;
-      background-position: 0 0;
-      z-index: 10;
-      pointer-events: none;
-      transform: translateX(269px);
-      opacity: 0;
-    }
-  }
-
-  .lineShown .C_MainButton {
-    &::after {
-      transform: translateX(0);
-      opacity: 1;
-      transition: 1s ease-out;
-    }
-
-    &::before {
-      transform: translateX(0);
-      opacity: 1;
-      transition: 1s ease-out;
-    }
   }
 }
 
@@ -464,6 +459,35 @@
 
   .wrapper {
     padding-top: 55px;
+
+    &::after {
+      width: 548px;
+      margin-left: -831px;
+      margin-top: 2px;
+      background-image: url('../../img/project-left-decor-1920.png');
+      background-size: 548px 16px;
+    }
+
+    &::before {
+      width: 548px;
+      margin-left: 831px;
+      background-image: url('../../img/project-right-decor-1920.png');
+      background-size: 548px 16px;
+    }
+  }
+
+  .lineShown .wrapper {
+    &::after {
+      transform: translateX(0);
+      opacity: 1;
+      transition: 2s ease-out;
+    }
+
+    &::before {
+      transform: translateX(0);
+      opacity: 1;
+      transition: 2s ease-out;
+    }
   }
 
   .PressCenterTitle {  
@@ -485,37 +509,5 @@
 
   .root .C_MainButton {
     margin-top: 18px;
-
-    &::after {
-      width: 548px;
-      margin-left: -762px;
-      margin-top: 2px;
-      background-image: url('../../img/project-left-decor-1920.png');
-      background-size: 548px 16px;
-      // transform: translateX(-269px);
-    }
-
-    &::before {
-      width: 548px;
-      margin-left: 216px;
-      background-image: url('../../img/project-right-decor-1920.png');
-      background-size: 548px 16px;
-      background-position: 0 0;
-      // transform: translateX(269px);
-    }
-  }
-
-  .lineShown .C_MainButton {
-    &::after {
-      transform: translateX(0);
-      opacity: 1;
-      transition: 1s ease-out;
-    }
-
-    &::before {
-      transform: translateX(0);
-      opacity: 1;
-      transition: 1s ease-out;
-    }
   }
 }

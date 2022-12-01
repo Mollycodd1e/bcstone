@@ -62,7 +62,7 @@ export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnClose
                 slidesPerView={slidesPerView}
                 spaceBetween={slidersSpaceBetween}
                 centeredSlides={true}
-                //loop={saving && window.innerWidth < 768? false : true}
+                allowTouchMove={saving && window.innerWidth >= 768 ? false : true}
                 loop
                 pagination={(saving && window.innerWidth) >= 768 || map && (window.innerWidth < 768) ? false : {"clickable": true}}
                 className={classNames(classes.swiper, {[classes.swiperSaving]: saving}, {[classes.swiperMode]: isBtnClose},{[classes.swiperPress]: press}, {[classes.swiperShow]: isVisible && press},{[classes.mapShow]: isVisible && map})}

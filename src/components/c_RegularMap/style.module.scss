@@ -165,7 +165,7 @@
     
     & > div:nth-child(1) {
       top: -1rem;
-      right: 7rem;
+      right: 8rem;
 
       & div button:nth-child(1) {
         display: block;
@@ -256,6 +256,37 @@
 
       & button {
         bottom: -10px;
+      }
+    }
+  }
+}
+
+@media(min-width: $width-desktop-md) {
+
+
+  .fourCards {
+  
+    & > div {
+
+      & > div:nth-child(1) {
+        top: 0px;
+        right: 2.1rem;
+      }
+    
+      & div:nth-child(2) {
+        top: 44rem;
+        right: 6.5rem;
+      }
+    
+      & div:nth-child(3) {
+        max-width: 348px;
+        top: 6px;
+        left: -3.7rem;
+      }
+      
+      & div:nth-child(4) {
+        top: 44rem;
+        left: -3.7rem;
       }
     }
   }

@@ -435,7 +435,7 @@
   .titleShown .title {
     transform: translate(0);
     opacity: 1;
-    transition: 1s ease-out;
+    transition: 3s ease-out;
 
   }
 
@@ -444,7 +444,7 @@
       & .title {
         opacity: 1;
         transform: translateY(0);
-        transition: 1s ease-out;
+        transition: 3s ease-out;
       }
     }
   }

@@ -10,7 +10,7 @@ $time: 0.7s;
   cursor: pointer;
   border-width: 0;
   font-weight: normal;
-  padding: 9px 23px 10px 23px;
+  padding: 8px 22px 9px 22px;
   background-color: $color-dark-primary;
   font-size: 12px;
   line-height: 13px;
@@ -18,9 +18,11 @@ $time: 0.7s;
   overflow: hidden;
   transition: background-color 1.3s;
   letter-spacing: -0.015em;
+  border: 1px solid #707070;
 
   &:hover {
     background-color: white;
+    border-color:#DDDDDD;
 
     & .text {
       color: $color-dark-primary;
@@ -86,7 +88,7 @@ $time: 0.7s;
 
 @media (min-width: $width-tablet-sm) {
   .root {
-    padding: 10px 39px 10px 40px;
+    padding: 9px 39px 9px 38px;
     
 
     & .text {
@@ -117,7 +119,7 @@ $time: 0.7s;
 
 @media (min-width: $width-tablet-md) {
   .root {
-    padding: 11px 40px 10px 39px;
+    padding: 10px 38px 9px 39px;
 
     & .text {
      font-size: 15px;
@@ -146,6 +148,8 @@ $time: 0.7s;
 
 @media (min-width: $width-desktop-sm) {
   .root {
+    padding: 10px 41px 10px 41px;
+
     & .text {
       font-size: 17px;
       line-height: 18px;
@@ -173,6 +177,7 @@ $time: 0.7s;
 
 @media (min-width: $width-desktop-md) {
   .root {
+    padding: 11px 45px 11px 44px;
     border-radius: 22px;
     
     & .text {

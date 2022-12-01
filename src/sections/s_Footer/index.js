@@ -18,7 +18,7 @@ export const S_Footer = ({className, phone_number, mail, address, sales_number, 
         if (change.isIntersecting) {
           setIsFooter(true);
         } else {
-          setIsFooter(false);
+          // setIsFooter(false);
         }
       });
   }

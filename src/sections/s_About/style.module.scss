@@ -242,6 +242,7 @@
       right: 0;
       top: 225px;
       opacity: 0;
+      transform: translateX(165px);
     }
 
     &::after {
@@ -257,7 +258,7 @@
       &::after {
         transform: translateX(0);
         opacity: 1;
-        transition: 1s ease-out;
+        transition: 2s ease-out;
       }
     }
   }
@@ -267,14 +268,15 @@
     & .title {
       opacity: 1;
       transform: translateY(0);
-      transition: 1s ease-out;
+      transition: 2s ease-out;
     }
 
     &::before {
       right: 158px;
       top: 225px;
+      transform: translateX(0);
       opacity: 1;
-      transition: 1s ease-out;
+      transition: 2s ease-out;
     }
   }
 }

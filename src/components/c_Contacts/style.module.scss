@@ -90,6 +90,12 @@
 
 @media (min-width: $width-desktop-md) {
   .root {
+    padding-left: 50px;
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
     padding-left: 0;
   }
 }

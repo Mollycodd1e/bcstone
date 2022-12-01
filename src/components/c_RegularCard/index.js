@@ -7,6 +7,7 @@ import {С_CardBtn} from "../c_CardBtn";
 import { useState, useContext } from 'react';
 import {sizes} from "../../data/sizes";
 import {Context} from "../../library";
+import Link from 'next/link';
 
 export const C_RegularCard = ({
     isMapMode,
@@ -41,7 +42,7 @@ export const C_RegularCard = ({
                 
                 <С_CloseBtn
                     className={classes.CloseBtn}
-                    mode={'light'}
+                    mode={isMapMode ? 'dark' : 'light'}
                     onClick={onBtnCloseClick}
                     setIsCloseAllBtn={setIsCloseAllBtn}
                     i={i}
@@ -53,28 +54,30 @@ export const C_RegularCard = ({
                 : null
             }
             {/* add button link */}
-            <div className={classes.wrapper} onClick={() => isCardHovered ? '' : null}> 
-                <div className={classes.faceWrap} onMouseEnter={() => setIsCardHovered(true)} onMouseOut={() => setIsCardHovered(false)}>
-                    <С_CardFace
-                        className={classes.С_CardFace}
-                        logo={logo}
-                        alt={alt}
-                        img={img}
-                        img2x={img2x}
-                        imgMob={imgMob}
-                        img2xMob={img2xMob}
-                        extraInfo={extraInfo}
-                    />
-                    <С_CardBtn
-                        bgColorFirst={bgColorFirst}
-                        bgColorSecond={bgColorSecond}
-                        textColor={textColor}
-                        isMainCardBtn={true}
-                        className={classes.CardBtn}
-                        link={link}
-                        setIsPopupClose={setIsPopupClose}
-                    />
-                </div>
+            <div className={classes.wrapper} onClick={() => isCardHovered ? '' : null}>
+                    <div className={classes.faceWrap} onMouseEnter={() => setIsCardHovered(true)} onMouseOut={() => setIsCardHovered(false)}>
+                        <С_CardFace
+                            className={classes.С_CardFace}
+                            logo={logo}
+                            alt={alt}
+                            img={img}
+                            img2x={img2x}
+                            imgMob={imgMob}
+                            img2xMob={img2xMob}
+                            extraInfo={extraInfo}
+                            link={link}
+                            setIsPopupClose={setIsPopupClose}
+                        />
+                        <С_CardBtn
+                            bgColorFirst={bgColorFirst}
+                            bgColorSecond={bgColorSecond}
+                            textColor={textColor}
+                            isMainCardBtn={true}
+                            className={classes.CardBtn}
+                            link={link}
+                            setIsPopupClose={setIsPopupClose}
+                        />
+                    </div>
                 <С_CardInfo
                     className={classes.С_CardInfo}
                     title={title}

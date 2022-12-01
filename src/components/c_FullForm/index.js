@@ -133,7 +133,7 @@ export const C_FullForm = ({className, data, popup}) => {
                         <h3 dangerouslySetInnerHTML={{ __html: !isConfirmed ? title : titleSuccess}} className={classes.title}/>
                         <span dangerouslySetInnerHTML={{ __html: !isConfirmed ? description : descriptionSuccess}} className={classes.description}/>
                     </div>
-                    <div className={classes.fields}>
+                    <div className={classNames(classes.fields,{[classes.popupFields] : popup})}>
                         <div
                             className={
                                 classNames(
