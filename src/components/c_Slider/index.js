@@ -28,12 +28,12 @@ export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnClose
           if (change.isIntersecting) {
               setVisible(true);
           } else {
-            // setVisible(false);
+            setVisible(false);
           }
         });
     }
     
-    let options = {threshold: [0.5] };
+    let options = {threshold: [0] };
     let observer = new IntersectionObserver( onEntry, options);
 
     if (ref.current) {

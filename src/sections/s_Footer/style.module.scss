@@ -189,7 +189,7 @@
     margin-top: 155px;
     margin-left: 60px;
     opacity: 0;
-    transform: translateY(160px);
+    transform: translateY(300px);
   }
 
   .footerShown {
@@ -197,14 +197,13 @@
     transition: 1s ease-out;
   }
 
-  .root .footerShown h2 {  
+  .footerShown h2 {  
     font-size: 59px;
     line-height: 69px;
     margin-top: 155px;
     margin-left: 60px;
     opacity: 1;
     transform: translateY(0);
-    transition: 1s ease-out;
   }
 
   .logo_wrapper {
@@ -326,6 +325,7 @@
     margin-top: 115px;
     margin-left: 80px;
     letter-spacing: 0;
+    transition: 1s ease-out;
   }
 
   .logo_wrapper {

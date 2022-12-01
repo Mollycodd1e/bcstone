@@ -41,6 +41,7 @@ export default function Home() {
     }, []);
 
     const [data, setData] = useState([]);
+    const [newsData, setNewsData] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -51,7 +52,6 @@ export default function Home() {
                     }
                 });
                 const { data } = res;
-                console.log(data)
                 setData(data);
                 return { data };
             } catch (error) {
@@ -62,6 +62,22 @@ export default function Home() {
 
     }, []);
 
+    useEffect(() => {
+        const fetchNewsData = async () => {
+                try {
+                    const res = await axios.get(`https://stonehedge.ru/api/landing-news/bcstone`, {
+
+                    });
+                    const { data } = res;
+                    setNewsData(data);
+                    return { data };
+                } catch (error) {
+                    return { error };
+                }
+            };
+            fetchNewsData();
+    }, []);
+     
     const mainPageData = data && data.data && data.data.length !== 0 && data.data.filter(el => {
         if (el && el.id) {
             return el.id === 2
@@ -76,26 +92,6 @@ export default function Home() {
     const [isAboutPopupClose, setIsAboutPopupClose] = useState(true);
 
     const mocks = {
-        pressCenter: [
-            {
-                data: '21/04',
-                image: 'https://via.placeholder.com/224x134',
-                title: 'Выйграли конкурс',
-                description: 'Бизнес-центры и офисные кварталы  будут реализованы в Белорусском  деловом районе и других  перспективных Бизнес-районах  Москвы'
-            },
-            {
-                data: '22/04',
-                image: 'https://via.placeholder.com/224x134',
-                title: 'Выйграли конкурс',
-                description: 'Бизнес-центры и офисные кварталы  будут реализованы в Белорусском  деловом районе и других  перспективных Бизнес-районах  Москвы'
-            },
-            {
-                data: '20/04',
-                image: 'https://via.placeholder.com/224x134',
-                title: 'Выйграли конкурс',
-                description: 'Бизнес-центры и офисные кварталы  будут реализованы в Белорусском  деловом районе и других  перспективных Бизнес-районах  Москвы'
-            },
-        ],
         saving: [
             {
                 url: '',
@@ -156,7 +152,8 @@ export default function Home() {
                                     <S_Sales data={mainPageData[0]} />
                                     <S_FullForm data={mainPageData[0]} />
                                     <S_Bottom_Commercial data={mainPageData[0]}/>
-                                    <S_PressCenter data={mainPageData[0]}/>
+                                    {/* <S_PressCenter data={mainPageData[0]}/> */}
+                                    <S_PressCenter data={newsData}/>
                                     <S_Footer phone_number={mocks.contacts.phone} mail={mocks.contacts.mail} address={mocks.contacts.address} sales_number={mocks.contacts.sales} telegram={mocks.contacts.telegram} copyright={mocks.copyright} />
                                 </div>
                             </>
