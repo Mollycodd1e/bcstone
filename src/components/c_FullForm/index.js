@@ -240,7 +240,7 @@ export const C_FullForm = ({className, data, popup}) => {
                             <span className={classes.errorMessage}>{errorEmailText}</span>
                         </div>
                         
-                        <C_MainButton text={"Получить предложение"} onClick={() => console.log('click from project')}
+                        <C_MainButton text={"Получить предложение"} onClick={(e) => onButtonClick(e)}
                                       className={classes.button}/>
                         {/* <button
                             ref={btnEl}
