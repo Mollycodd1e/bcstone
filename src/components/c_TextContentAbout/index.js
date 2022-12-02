@@ -6,7 +6,7 @@ import {C_MainButton} from "../c_MainButton";
 import {sizes} from "../../data/sizes";
 import {Context} from "../../library";
 
-export const C_TextContentAbout = ({className, data}) => {
+export const C_TextContentAbout = ({className, data, setIsPopupClose}) => {
     const [width, height] = useContext(Context);
     const cls = classNames(classes.root, {[className]: className});
     const isTablet = width >= sizes.widthTabletMd;
@@ -77,7 +77,7 @@ export const C_TextContentAbout = ({className, data}) => {
             <div className={classNames(classes.stoneHedgeLogo,{[classes.stoneHedgeLogoShown]: isLogo})} ref={logo}/>
             <div className={classNames(classes.description,{[classes.descriptionShown]: isDescription})} dangerouslySetInnerHTML={{ __html: description}} ref={subDescription}/>
             <div className={classNames(classes.plans,{[classes.plansShown]: isPlans})} dangerouslySetInnerHTML={{ __html: plans}} ref={text}/>
-            {isTablet ? <C_MainButton text={"Получить предложение"} onClick={() => console.log('click from project')}
+            {isTablet ? <C_MainButton text={"Получить предложение"} onClick={() => setIsPopupClose(false)}
                                       className={classes.C_MainButton}/> : null}
         </div>
     )

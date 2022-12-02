@@ -113,7 +113,7 @@ export const S_Projects = ({className, data, setIsPopupClose}) => {
                     />
                 }
                 <div className={classes.btnWrapper} ref={linesRef}>
-                  <C_MainButton text={"Получить предложение"} onClick={() => console.log('click from project')} className={classes.C_MainButton}/>
+                  <C_MainButton text={"Получить предложение"} onClick={() => setIsPopupClose(false)} className={classes.C_MainButton}/>
                 </div>
             </div>
         </div>
