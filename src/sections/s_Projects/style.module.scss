@@ -438,13 +438,13 @@
     &::after {
       transform: translateX(0);
       opacity: 1;
-      transition: 2s ease-out;
+      transition: 1.5s ease-out;
     }
 
     &::before {
       transform: translateX(0);
       opacity: 1;
-      transition: 2s ease-out;
+      transition: 1.5s ease-out;
     }
   }
 
@@ -485,15 +485,16 @@
     & .wrap_title {
       font-size: 113px;
       line-height: 121px;
-      transform: translateY(182px);
     }
 
     & .wrap_title {
       margin: 0 !important;
+      transform: translateY(256px);
     }
 
     & .bg_text {
       margin: 0 0 -60px -576px !important;
+      transform: translateY(197px);
     }
   }
 
@@ -501,7 +502,7 @@
     & .bg_text,
     & .wrap_title {
       transform: translateY(0);
-      transition: 2s ease-out;
+      transition: 1.5s ease-out;
     }
   }
 

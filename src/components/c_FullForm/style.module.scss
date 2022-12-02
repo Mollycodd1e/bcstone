@@ -588,7 +588,7 @@
     line-height: 46px;
     margin: 0;
     opacity: 0;
-    transform: translateY(180px);
+    transform: translateY(144px);
 
     &::before {
       position: absolute;
@@ -602,13 +602,12 @@
       z-index: 10;
       bottom: 42px;
       left: -243px;
-      transform: translateX(-180px) translateY(-180px);
+      transform: translateX(-154px) translateY(-144px);
       //margin-right: 298px;
     }
   }
 
   .textShown {
-
     & .title {
       transform: translateY(0);
       transition: 1.5s ease-out;

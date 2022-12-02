@@ -270,7 +270,7 @@
   
   .data_hover {
     transform: translateY(-21px);
-    transition: 0.5s;
+    transition: 0.5s ease-out;
   }
 
   .card_wrapper {
@@ -299,7 +299,7 @@
   .card_wrapper_hover img {
     transform: translateY(-21px);
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
-    transition: 0.5s;
+    transition: 0.5s ease-out;
   }
 
   .card_wrapper a {
@@ -391,7 +391,7 @@
   
   .description_wrapper {
     width: 345px;
-    margin-top: 24px;
+    margin-top: 25px;
     padding-bottom: 39px;
     padding-left: 0;
   }
@@ -442,7 +442,7 @@
   .card_wrapper_hover img {
     margin-top: 0 !important;
     transform: translateY(-16px);
-    transition: 0.5s;
+    transition: 0.5s ease-out;
   }
 
   .card_wrapper a {

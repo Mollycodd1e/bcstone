@@ -23,7 +23,7 @@ export const C_TextContentAbout = ({className, data, setIsPopupClose}) => {
           if (change.isIntersecting) {
             setIsLogo(true);
           } else {
-            // setIsLogo(false);
+            // setIsLogo(false)
           }
         });
     }

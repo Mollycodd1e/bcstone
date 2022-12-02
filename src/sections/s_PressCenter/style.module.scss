@@ -334,13 +334,13 @@
     &::after {
       transform: translateX(0);
       opacity: 1;
-      transition: 2s ease-out;
+      transition: 1.5s ease-out;
     }
 
     &::before {
       transform: translateX(0);
       opacity: 1;
-      transition: 2s ease-out;
+      transition: 1.5s ease-out;
     }
   }
 
@@ -350,14 +350,14 @@
     & .bg_text {
       margin: 0 446px -61px 0;
       letter-spacing: -3.5px;
-      transform: translateY(197px);
+      transform: translateY(196.9px);
       opacity: 0;
     }
   
     & .wrap_title {
       margin-left: 166px;
       letter-spacing: -2px;
-      transform: translateY(197px);
+      transform: translateY(253.9px);
       opacity: 0;
 
       & span:first-child {
@@ -377,17 +377,16 @@
   }
 
   .titleShown {
-    
     & .bg_text {
       opacity: 1;
       transform: translateY(0);
-      transition: 0.8s ease-out;
+      transition: 1.5s ease-out;
     }
   
     & .wrap_title {
       opacity: 1;
       transform: translateY(0);
-      transition: 0.8s ease-out;
+      transition: 1.5s ease-out;
     }
   }
 
@@ -480,13 +479,13 @@
     &::after {
       transform: translateX(0);
       opacity: 1;
-      transition: 2s ease-out;
+      transition: 1.5s ease-out;
     }
 
     &::before {
       transform: translateX(0);
       opacity: 1;
-      transition: 2s ease-out;
+      transition: 1.5s ease-out;
     }
   }
 

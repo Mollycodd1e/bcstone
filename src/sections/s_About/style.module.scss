@@ -227,15 +227,16 @@
       font-size: 113px;
       line-height: 121px;
       opacity: 0;
-      transform: translateY(215px);
     }
 
     & .title {
       margin: -2px 0 133px -169px !important;
+      transform: translateY(296px);
     }
 
     & .bg_text {
       margin: 0 0 -60px -655px !important;
+      transform: translateY(216px);
     }
 
     &::before {
