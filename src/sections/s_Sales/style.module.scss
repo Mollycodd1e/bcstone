@@ -666,7 +666,7 @@
     padding: 0 53px;
 
     & > div {
-      transition: 1s ease-out;
+      transition: unset;
 
       &:hover {
         & > div[class*="picture"] {
@@ -691,7 +691,6 @@
 
         & + div {
           transition: 1s ease-out;
-          flex-grow: 1;
           transform: translateX(170px);
 
           &::before,

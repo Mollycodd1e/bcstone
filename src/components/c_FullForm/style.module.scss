@@ -611,20 +611,20 @@
 
     & .title {
       transform: translateY(0);
-      transition: 2s ease-out;
+      transition: 1.5s ease-out;
       opacity: 1;
 
       &::before {
         transform: translateX(0);
         transform: translateY(0);
-        transition: 2s ease-out;
+        transition: 1.5s ease-out;
       }
     }
 
     & .description {
       transform: translateX(0);
       opacity: 1;
-      transition: 2s ease-out;
+      transition: 1.5s ease-out;
     }
   }
 

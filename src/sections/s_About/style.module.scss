@@ -258,7 +258,7 @@
       &::after {
         transform: translateX(0);
         opacity: 1;
-        transition: 2s ease-out;
+        transition: 1.5s ease-out;
       }
     }
   }
@@ -268,7 +268,7 @@
     & .title {
       opacity: 1;
       transform: translateY(0);
-      transition: 2s ease-out;
+      transition: 1.5s ease-out;
     }
 
     &::before {
@@ -276,7 +276,7 @@
       top: 225px;
       transform: translateX(0);
       opacity: 1;
-      transition: 2s ease-out;
+      transition: 1.5s ease-out;
     }
   }
 }
