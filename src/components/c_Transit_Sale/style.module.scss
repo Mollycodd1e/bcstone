@@ -420,31 +420,47 @@
     transition: 1s ease-out;
     align-self: flex-end;
     opacity: 0;
-    transform: translateY(40px);
+    // transform: translateY(40px);
   }
 
   .root {
     &.reverse {
       & .title {
         opacity: 0;
-        transform: translateY(-40px);
+        // transform: translateY(-40px);
       }
     }
   }
 
-  .titleShown .title {
-    transform: translate(0);
-    opacity: 1;
-    transition: 3s ease-out;
+  @keyframes fromTop {
+    0% {transform: translateY(40px);opacity: 0;}
+    100% {transform: translate(0);opacity: 1;}
+  }
 
+  @keyframes fromBottom {
+    0% {transform: translateY(-40px);opacity: 0;}
+    100% {transform: translate(0);opacity: 1;}
+  }
+
+  .titleShown .title {
+    animation: fromTop;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    // opacity: 1;
+    // transition: 1s ease-out;
   }
 
   .titleShown {
     &.reverse {
       & .title {
-        opacity: 1;
-        transform: translateY(0);
-        transition: 3s ease-out;
+        animation: fromBottom;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        // opacity: 1;
+        // transform: translateY(0);
+        // transition: 1s ease-out;
       }
     }
   }
@@ -563,7 +579,7 @@
     justify-self: center;
     opacity: 0;
     position: relative;
-    left: 81px;
+    left: 0;
     top: -39px;
     transition: 1s ease-out;
     align-self: flex-start;
@@ -572,7 +588,7 @@
       opacity: 1;
       position: relative;
       top: -3px;
-      left: -90px;
+      left: 0;
     }
 
     & span {
@@ -590,7 +606,6 @@
     width: 233px;
     height: 303px;
     background-size: 233px 303px;
-    transition: all .5s;
     justify-self: flex-start;
     position: relative;
     top: -11px;
