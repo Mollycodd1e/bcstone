@@ -2,6 +2,7 @@
 
 $animationDurationHero: 1s;
 $existTimer: 2.5s;
+$animationTimingHero: ease-out;
 
 @mixin middleAnimationSpeed {
   10% {
@@ -162,7 +163,7 @@ $existTimer: 2.5s;
 @keyframes helperAnimaTitle {
   0% {
     opacity: 0;
-    top: 66px;
+    top: 65px;
   }
 
   @include middleAnimationSpeed;
@@ -414,7 +415,7 @@ $existTimer: 2.5s;
     margin: 0;
 
     animation-duration: $animationDurationHero;
-    animation-timing-function: ease-out;
+    animation-timing-function: $animationTimingHero;
     animation-name: helperAnima;
     position: relative;
   }
@@ -428,7 +429,7 @@ $existTimer: 2.5s;
     height: 98px;
     background-size: 288px 98px;
     animation-duration: $animationDurationHero;
-    animation-timing-function: ease-out;
+    animation-timing-function: $animationTimingHero;
     animation-name: helperAnimaTitle;
   }
 
@@ -451,6 +452,7 @@ $existTimer: 2.5s;
       background-size: 70px 10px;
       display: block;
       animation-duration: $animationDurationHero;
+      animation-timing-function: $animationTimingHero;
       animation-name: helperAnimaAfter;
     }
   }
@@ -589,7 +591,7 @@ $existTimer: 2.5s;
 
   .mainButton {
     margin: 4px 0 60px 0;
-    padding: 11px 40px 10px 39px;
+    // padding: 11px 40px 10px 39px;
     align-self: unset;
   }
 
@@ -803,8 +805,8 @@ $existTimer: 2.5s;
   }
 
   .mainButton {
-    margin: auto 0 0 8px;
-    padding: 11px 43px 10px 43px;
+    margin: auto 0 -1px 7px;
+    // padding: 11px 43px 10px 43px;
     letter-spacing: -0.03em;
   }
 }
@@ -908,7 +910,7 @@ $existTimer: 2.5s;
 
   .mainButton {
     margin: auto 0 0 8px;
-    padding: 12px 46px 12px 46px;
+    // padding: 12px 46px 12px 46px;
     letter-spacing: -0.03em;
   }
 }
@@ -999,7 +1001,7 @@ $existTimer: 2.5s;
 
   .mainButton {
     margin: auto 0 0 5px;
-    padding: 12px 45px 12px 46px;
+    // padding: 12px 45px 12px 46px;
     letter-spacing: -0.03em;
   }
 }

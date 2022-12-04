@@ -201,57 +201,94 @@
     column-gap: unset;
     grid-template-columns: repeat(2, 1fr);
     display: flex;
+    justify-content: space-between;
     padding: 0 10px;
 
     & > div {
-      cursor: pointer;
-      transition: 1s ease-out;
+      & h2 {
+        opacity: 0;
+        transform: translateY(40px);
+      }
 
-      &:hover {
-        & > div[class*="picture"] {
-          opacity: 1;
-          transform: scale(1.2) translateX(40px) translateY(10px);
-          transition: 1s ease-out;
+      & + div {
+        & h2 {
+          transform: translateY(-40px);
+          opacity: 0;
         }
+      }    
+    }
 
-        & > a[class*="link"] {
-          opacity: 1;
-          transform: translateX(143px);
-          transition: 1s ease-out;
-            
-            & svg {
-              pointer-events: none;
-            }
-        }
+    &::before {
+      background-color: #E8E8E8;
+      opacity: 1;
+      transition-delay: 1s;
+      pointer-events: none;
+    }
 
-        & > h2 {
-          font-size: 110px;
-          line-height: 118px;
-          transform: translateX(143px) translateY(5px);
-          transition: 1s ease-out;
-          color: #2C2D2D;
-        }
+    &::after {
+      background-color: #E8E8E8;
+      opacity: 1;
+      transition-delay: 1s;
+      pointer-events: none;
+    }
 
-        & + div {
-          transition: 1s ease-out;
-          transform: translateX(185px) translateY(18px);
-
-          &::before,
-          &::after {
-            transition: 1s ease-out;
-            opacity: 1;
-          }
-
-          & div[class*="picture"] {
-            opacity: 0;
-            transition: 0.3 ease-out;
-          }
-        } 
+    &:hover {
+      &::before {
+        opacity: 0;
+        transition-delay: 0s;
+      }
+      &::after {
+        opacity: 0;
+        transition-delay: 0s;
       }
     }
 
-    &:after {
-      display: none;
+    & > div {   
+      &:hover {
+        & > div[class*="picture"] {
+          opacity: 1;
+          transform: scale(1.1) translateX(50px);
+          transition: 1s ease-out;
+        }
+        
+        &::before {
+          display: none;
+        }
+        &::after {
+          display: none;
+        }
+
+        & + div {
+          & h2 {
+            transform: translateX(168px) translateY(17px);
+            transition: 1s ease-out;
+          }
+          
+          & div[class*="picture"] {
+            opacity: 0;
+            transform: translateX(268.6px);
+            transition: 0.3s ease-out;
+          }
+        }        
+      }
+    }
+  }
+
+  .titleSlides {
+    & > div {
+      & h2 {
+        opacity: 1;
+        transform: translateY(0px);
+        transition: 1s ease-out;
+      }
+
+      & + div {
+        & h2 {
+          transform: translateY(0px);
+          opacity: 1;
+          transition: 1s ease-out;
+        }
+      }    
     }
   }
 
@@ -259,175 +296,16 @@
     & div:first-child {
 
         & > h2 {
-          transform: translateX(-135px) translateY(17px);
+          transform: translateX(-132px) translateY(18px);
           transition: 1s ease-out;
         }
 
         & div[class*="picture"] {
-          opacity: 0;
-          transform: translateX(-100px);
+          transform: translateX(-268.6px);
           transition: 0.3s ease-out;
         }
-
-        & a[class*="link"] {
-          transform: translateX(-100px);
-          transition: 1s ease-out;
-          & svg {
-            pointer-events: none;
-          }
-        }
-    }   
-
-    & div:last-child {
-      & > h2 {
-        font-size: 110px;
-        line-height: 118px;
-        transform: translateX(-120px) translateY(7px);
-        transition: 1s ease-out;
-      }
-
-      & div[class*="picture"] {
-        transform: scale(1.2) translateX(-45px);
-        transition: 0.3s ease-out;
-      }
-
-      & > a[class*="link"] {
-        opacity: 1;
-        transform: translateX(-88px);
-        transition: 1s ease-out;
-        & svg {
-          pointer-events: none;
-        }
-      }
-    }
+    } 
   }
-
-  .wrapper {
-    column-gap: unset;
-    grid-template-columns: repeat(2, 1fr);
-    display: flex;
-    padding: 0 10px;
-
-    & div {
-      transition: 1s ease-out;
-      flex-grow: 1;
-      cursor: pointer;
-      // &:hover {
-
-      //   &::before {
-      //     display: none;
-      //   }
-
-      //   & div[class*="picture"] {
-      //     opacity: 1;
-      //     transform: scale(2) translateX(50px) translateY(8px);
-      //     transition: 1s ease-out;
-      //   }
-
-      //   & > a[class*="link"] {
-      //     opacity: 1;
-      //     transition: 1s ease-out;
-      //     margin-right: -360px;
-      //     margin-bottom: -8px;
-
-      //     & svg {
-      //       transition: 1s ease-out;
-      //       margin-top: -7px;
-      //       margin-right: 100px;
-      //       opacity: 1;
-      //       pointer-events: none;
-      //     }
-
-      //     & span {
-      //       transition:  all 0s;
-      //       opacity: 1;
-      //     }  
-      //   }
-
-      //   & > h2 {
-      //     font-size: 110px;
-      //     line-height: 118px;
-      //     color: #2C2D2D;
-      //     transform: translateX(195px);
-      //     transition: 1s ease-out;
-      //   }
-
-      //   & + div {
-      //     transition: 1s ease-out;
-      //     flex-grow: 1;
-
-      //     &::before,
-      //     &::after {
-      //       transition: 1s ease-out;
-      //       opacity: 1;
-      //     }
-
-      //     transform: translateX(202px) translateY(18px);
-      //     & div[class*="picture"] {
-      //       opacity: 0;
-      //       transition: 1s ease-out;
-      //     }
-      //   }
-      // }
-    }
-  }
-
-  // .wrapper:has(:not(:first-of-type):hover) {
-  //   & div:first-child {
-  //     transition: 1s ease-out;
-  //     flex-grow: 1;
-
-  //       &::before {
-  //         display: none;
-  //       }
-
-  //       & > h2 {
-  //         transform: translateX(-135px) translateY(15px);
-  //         transition: 1s ease-out;
-  //       }
-
-  //       & div[class*="picture"] {
-  //         opacity: 0;
-  //         transition: 1s ease-out;
-  //         transform: translateX(-100px);
-  //       }
-  //   }
-
-  //   & div:last-child {
-  //     transition: 1s ease-out;
-  //     flex-grow: 1;
-      
-  //     & > a[class*="link"] {
-  //       margin-left: -390px;
-  //       transition: 1s ease-out;
-
-  //       & svg {
-  //         margin-top: -7px;
-  //         margin-right: 100px;
-  //         opacity: 1;
-  //         transition: 1s ease-out;
-  //       }
-
-  //       & span {
-  //         opacity: 1;
-  //         transition: 1s ease-out;
-  //       }  
-  //     }
-
-  //     & > h2 {
-  //       font-size: 110px;
-  //       line-height: 118px;
-  //       color: #2C2D2D;
-  //       transform: translateX(-120px) translateY(7px);
-  //       transition: 1s ease-out;
-  //     }
-
-  //     & div[class*="picture"] {
-  //       transform: scale(2) translateX(-50px) translateY(8px);
-  //       transition: 1s ease-out;
-  //     }
-  //   }
-  // }
 
   .centerLine {
     &::before {
@@ -461,52 +339,38 @@
     grid-template-columns: repeat(2, 1fr);
     display: flex;
     padding: 0 10px;
-
-    & > div {
-      cursor: pointer;
-      transition: 1s ease-out;
-
+    
+    & > div {   
       &:hover {
         & > div[class*="picture"] {
           opacity: 1;
-          transform: scale(1.4) translateX(18px) translateY(2px);
+          transform: scale(1.30) translateX(25px);
           transition: 1s ease-out;
         }
-
-        & > a[class*="link"] {
-          opacity: 1;
-          transform: translateX(116px);
-          transition: 1s ease-out;
+        
+        &::before {
+          display: none;
         }
-
-        & > h2 {
-          font-size: 120px;
-          line-height: 129px;
-          transform: translateX(116px) translateY(-10px);
-          transition: 1s ease-out;
-          color: #2C2D2D;
+        &::after {
+          display: none;
         }
 
         & + div {
-          transition: 1s ease-out;
-          transform: translateX(162px) translateY(1px);
-
-          &::before,
-          &::after {
+          & h2 {
+            transform: translateX(160px) translateY(0px);
             transition: 1s ease-out;
-            opacity: 1;
           }
+          
 
           & div[class*="picture"] {
             opacity: 0;
-            transition: 0.3 ease-out;
+            transform: translateX(268.6px);
+            transition: 0.3s ease-out;
           }
-        } 
+        }
+        
+          
       }
-    }
-
-    &:after {
-      display: none;
     }
   }
 
@@ -514,134 +378,16 @@
     & div:first-child {
 
         & > h2 {
-          transform: translateX(-133px) translateY(0);
+          transform: translateX(-136px) translateY(-1px);
           transition: 1s ease-out;
         }
 
         & div[class*="picture"] {
-          opacity: 0;
-          transform: translateX(-100px);
+          transform: translateX(-268.6px);
           transition: 0.3s ease-out;
         }
-
-        & a[class*="link"] {
-          transform: translateX(-100px);
-          transition: 1s ease-out;
-        }
-    }   
-
-    & div:last-child {
-      & > h2 {
-        font-size: 120px;
-        line-height: 129px;
-        transform: translateX(-90px) translateY(-10px);
-        transition: 1s ease-out;
-      }
-
-      & div[class*="picture"] {
-        transform: scale(1.2) translateX(-24px);
-        transition: 0.3s ease-out;
-      }
-
-      & > a[class*="link"] {
-        opacity: 1;
-        transform: translateX(-90px);
-        transition: 1s ease-out;
-      }
-    }
+    } 
   }
-  // .wrapper {
-  //   column-gap: unset;
-  //   grid-template-columns: repeat(2, 1fr);
-  //   display: flex;
-  //   padding: 0 10px;
-
-    // & div {
-    //   transition: all .6s;
-    //   flex-grow: 1;
-    //   &:hover {
-        
-    //     & div[class*="picture"] {
-    //       opacity: 1;
-    //       transform: scale(1.1) translateX(20px);
-    //     }
-
-    //     & > a[class*="link"] {
-    //       opacity: 1;
-
-    //       & svg {
-    //         margin-top: -7px;
-    //         margin-right: 45px;
-    //       }
-
-    //       & span {
-    //         left: -30px;
-    //       }  
-    //     }
-
-    //     & > h2 {
-    //       font-size: 110px;
-    //       line-height: 118px;
-    //       color: #2C2D2D;
-    //       transform: translateX(110px);
-    //     }
-
-    //     & + div {
-    //       transition: all .6s;
-    //       flex-grow: 1;
-
-    //       transform: translateX(180px);
-    //       & div[class*="picture"] {
-    //         opacity: 0;
-    //       }
-    //     }
-    //   }
-    // 
-
-  //   &:after {
-  //     display: none;
-  //   }
-  // }
-
-  // .wrapper:has(:not(:first-of-type):hover) {
-  //   & div:first-child {
-
-  //       & > h2 {
-  //         transform: translateX(-120px);
-  //       }
-
-  //       & div[class*="picture"] {
-  //         opacity: 0;
-  //       }
-
-        
-  //   }
-
-  //   & div:last-child {
-  //     & > h2 {
-  //       font-size: 110px;
-  //       line-height: 118px;
-  //       transform: translateX(-90px);
-  //     }
-
-  //     & div[class*="picture"] {
-  //       transform: translateX(-10px);
-  //     }
-
-  //     & > a[class*="link"] {
-  //       opacity: 1;
-
-  //       & svg {
-  //         margin-top: -7px;
-  //         margin-right: -100px;
-  //       }
-
-  //       & span {
-  //         left: 115px;
-  //       }  
-  //     }
-  //   }
-  // }
 }
 
 @media (min-width: $width-desktop-lg) {
@@ -663,198 +409,54 @@
     column-gap: unset;
     grid-template-columns: repeat(2, 1fr);
     display: flex;
+    justify-content: space-between;
     padding: 0 53px;
 
     & > div {
-      transition: 1s ease-out;
-
-      &:hover {
-        & > div[class*="picture"] {
-          opacity: 1;
-          transform: scale(1.25) translateX(20px);
-          transition: 1s ease-out;
-        }
-
-        & > a[class*="link"] {
-          opacity: 1;
-          transform: translateX(127px);
-          transition: 1s ease-out;
-        }
-
-        & > h2 {
-          font-size: 155px;
-          line-height: 155px;
-          transform: translateX(127px) translateY(-11px);
-          transition: 1s ease-out;
-          color: #2C2D2D;
-        }
-
-        & + div {
-          transition: 1s ease-out;
-          flex-grow: 1;
-          transform: translateX(170px);
-
-          &::before,
-          &::after {
-            transition: 1s ease-out;
-            opacity: 1;
-          }
-
-          & div[class*="picture"] {
-            opacity: 0;
-            transition: 0.3 ease-out;
-          }
-        }
           
+    &:hover {
+      & > div[class*="picture"] {
+        opacity: 1;
+        transform: scale(1.25) translateX(20px);
+        transition: 1s ease-out;
+      }
+        
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: none;
+      }
+
+      & + div {
+        & h2 {
+          transform: translateX(153px);
+          transition: 1s ease-out;
+        
+        }
+       
+        & div[class*="picture"] {
+            opacity: 0;
+            transform: translateX(268.6px);
+            transition: 0.3s ease-out;
+          }
+        }  
       }
     }
   }
 
   .wrapper:has(:not(:first-of-type):hover) {
     & div:first-child {
-
-        & > h2 {
-          transform: translateX(-116px);
-          transition: 1s ease-out;
-        }
-
-        & div[class*="picture"] {
-          opacity: 0;
-          transform: translateX(-100px);
-          transition: 0.3s ease-out;
-        }
-
-        & a[class*="link"] {
-          transform: translateX(-100px);
-          transition: 1s ease-out;
-        }
-    }   
-
-    & div:last-child {
       & > h2 {
-        font-size: 155px;
-        line-height: 155px;
-        transform: translateX(-88px) translateY(-13px);
+        transform: translateX(-120px);
         transition: 1s ease-out;
       }
 
       & div[class*="picture"] {
-        transform: scale(1.1) translateX(4px);
+        transform: translateX(-268.6px);
         transition: 0.3s ease-out;
       }
-
-      & > a[class*="link"] {
-        opacity: 1;
-        transform: translateX(-88px);
-        transition: 1s ease-out;
-
-        // & svg {
-        //   margin-top: -7px;
-        //   margin-right: -100px;
-        // }
-
-        // & span {
-        //   left: 115px;
-        // }  
-      }
-    }
+    }     
   }
-
-  //   .wrapper {
-  //     column-gap: unset;
-  //     grid-template-columns: repeat(2, 1fr);
-  //     display: flex;
-  //     padding: 0 10px;
-  
-  //     & div {
-  //       transition: all .6s;
-  //       flex-grow: 1;
-  //       &:hover {
-          
-  //         & div[class*="picture"] {
-  //           opacity: 1;
-  //           transform: scale(1.1) translateX(20px);
-  //         }
-  
-  //         & > a[class*="link"] {
-  //           opacity: 1;
-  
-  //           & svg {
-  //             margin-top: -7px;
-  //             margin-right: 45px;
-  //           }
-  
-  //           & span {
-  //             left: -30px;
-  //           }  
-  //         }
-  
-  //         & > h2 {
-  //           font-size: 155px;
-  //           line-height: 155px;
-  //           color: #2C2D2D;
-  //           transform: translateX(110px);
-  //         }
-  
-  //         & + div {
-  //           transition: all .6s;
-  //           flex-grow: 1;
-  
-  //           transform: translateX(180px);
-  //           & div[class*="picture"] {
-  //             opacity: 0;
-  //           }
-  //         }
-  //       }
-  //     }
-  
-  //     &:after {
-  //       display: none;
-  //     }
-  //   }
-  
-  //   .wrapper:has(:not(:first-of-type):hover) {
-  //     & div:first-child {
-  
-  //         & > h2 {
-  //           transform: translateX(-120px);
-  //         }
-  
-  //         & div[class*="picture"] {
-  //           opacity: 0;
-  //         }
-  
-          
-  //     }
-  
-  //     & div:last-child {
-  //       & > h2 {
-  //         font-size: 155px;
-  //         line-height: 155px;
-  //         transform: translateX(-90px);
-  //       }
-  
-  //       & div[class*="picture"] {
-  //         transform: translateX(-10px);
-  //       }
-  
-  //       & > a[class*="link"] {
-  //         opacity: 1;
-  
-  //         & svg {
-  //           margin-top: -7px;
-  //           margin-right: -100px;
-  //         }
-  
-  //         & span {
-  //           left: 115px;
-  //         }  
-  //       }
-  //     }
-  //   }
-
-  //   &:after {
-  //     content: none;
-  //   }
-  // }
 }

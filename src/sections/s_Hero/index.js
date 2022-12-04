@@ -46,7 +46,7 @@ import {sizes} from "../../data/sizes";
 //     topPic.current.style.clipPath = `circle(230px at ${xBlockPercent}% ${yBlockPercent}%);`
 // }}
 
-export const S_Hero = ({className, data}) => {
+export const S_Hero = ({className, data, setIsPopupClose}) => {
     const interactiveBlock = useRef(null);
     const topPic = useRef(null);
     const cls = classNames(classes.root, {[className]: className });
@@ -138,7 +138,7 @@ export const S_Hero = ({className, data}) => {
             <ul className={classes.listInfo}>
                 {data.list_description.map((el, i) => <li key={i} className={classes.item}>{el.text}</li>)}
             </ul>
-            <C_MainButton text={"Получить предложение"} onClick={() => console.log('click')} className={classes.mainButton} />
+            <C_MainButton text={"Получить предложение"} onClick={() => setIsPopupClose(false)} className={classes.mainButton} />
 
             <div
                 className={classes.interactiveBlock}

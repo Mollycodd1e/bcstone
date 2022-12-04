@@ -28,6 +28,7 @@
   top: 20px;
   z-index: 10;
   min-height: 141px;
+  background-color: #acacac;
 }
 
 .card_wrapper a {
@@ -176,12 +177,18 @@
   
   .card_wrapper {
     min-height: 289px;
-  }
-    
-  .card_wrapper img {
-    min-height: 289px;
+    position: relative;
   }
   
+  .card_wrapper span {
+    overflow: visible !important;
+  }
+  
+  .card_wrapper img {
+    min-height: 289px;
+    box-shadow: 0px 3px 5px rgb(0, 0, 0 , 0.75);
+  }
+
   .card_wrapper a {
     min-height: 299px;
     padding-bottom: 6px;
@@ -236,6 +243,7 @@
   .card_wrapper img {
     transition: 0.5s ease-out;
     border-radius: 15px;
+    box-shadow: none;
   }
 
   .card_wrapper_hover img {

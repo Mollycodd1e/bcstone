@@ -110,6 +110,20 @@
   }
 }
 
+@media (min-width: $width-notebook) {
+  .closeIcon {
+    right: 72px;
+    top: calc(50% - 256px);
+  }
+}
+
+@media (min-width: $width-desktop-sm) {
+  .closeIcon {
+    right: 113px;
+    top: calc(50% - 213px);
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .closeIcon {
     right: 113px;

@@ -438,13 +438,13 @@
     &::after {
       transform: translateX(0);
       opacity: 1;
-      transition: 1.1s ease-out;
+      transition: 1.5s ease-out;
     }
 
     &::before {
       transform: translateX(0);
       opacity: 1;
-      transition: 1.1s ease-out;
+      transition: 1.5s ease-out;
     }
   }
 
@@ -473,7 +473,7 @@
 
   .subTitleShown {
     opacity: 1;
-    transition: 1s ease-out;
+    transition: 0.6s ease-out;
   }
 
   .ProjectTitle {
@@ -485,15 +485,16 @@
     & .wrap_title {
       font-size: 113px;
       line-height: 121px;
-      transform: translateY(182px);
     }
 
     & .wrap_title {
       margin: 0 !important;
+      transform: translateY(256px);
     }
 
     & .bg_text {
       margin: 0 0 -60px -576px !important;
+      transform: translateY(197px);
     }
   }
 
@@ -501,13 +502,12 @@
     & .bg_text,
     & .wrap_title {
       transform: translateY(0);
-      transition: 1s ease-out;
+      transition: 1.5s ease-out;
     }
   }
 
   .root .C_MainButton {
     margin-top: 0;
-    padding: 11px 42px 10px;
   }
 
   .mapView {
@@ -521,7 +521,7 @@
 
   .SwitcherShown {
     opacity: 1;
-    transition: 1s ease-out;
+    transition: 0.6s ease-out;
   }
 }
 
@@ -572,7 +572,7 @@
   }
 
   .ProjectTitle {
-    margin: 54px 0 8px 110px;
+    margin: 54px 0 8px 10px;
 
     & .bg_text,
     & .wrap_title {
@@ -587,7 +587,7 @@
 
   .root .C_MainButton {
     margin-top: 33px;
-    padding: 12px 45px 12px 45px;
+    // padding: 12px 45px 12px 46px;
     letter-spacing: -0.03em;
   }
 
@@ -640,7 +640,7 @@
   }
 
   .ProjectTitle {
-    margin: 57px 0 13px -53px;
+    margin: 57px 0 13px -153px;
 
     & .bg_text,
     & .wrap_title {
@@ -662,13 +662,13 @@
     & .bg_text,
     & .wrap_title {
       transform: translateY(0);
-      transition: 0.6s ease-out;
+      transition: 2s ease-out;
     }
   }
 
   .root .C_MainButton {
     margin-top: 40px;
-    padding: 12px 45px 12px 45px;
+    // padding: 12px 45px 12px 45px;
     margin-left: -2px;
   }
 

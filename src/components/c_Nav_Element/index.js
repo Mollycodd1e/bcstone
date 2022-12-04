@@ -16,11 +16,12 @@ export const C_Nav_Element = ({className, item, el, _key}) => {
             className={cls}
         >
             <Link href={`#${name}`}>
-                <span className={classNames({[classes.chevronWrapper]: toggle && sub.length !== 0})}>
+                <span className={classNames({[classes.chevronWrapper]: toggle && sub.length !== 0})} 
+                onMouseOver={() => setToggle(prev => true)}
+                onMouseOut={() => setToggle(prev => false)}
+                >
                     <span
                         className={classes.firstLvlMenuName}
-                        onMouseOver={() => setToggle(prev => true)}
-                        onMouseOut={() => setToggle(prev => false)}
                         // onClick={() => setToggle(prev => !prev)}
                     >
                         {name}

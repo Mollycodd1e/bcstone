@@ -33,7 +33,16 @@ $width: 14px;
 }
 
 .dark {
-  background-color: $color-close-btn-dark;
+  background-color: #F6F6F6;
+
+  &:before,
+  &:after {
+    background-color: #969696;
+  }
+
+  &:hover {
+    background-color: $color-close-btn-line-light;
+  }
 }
 
 .light {

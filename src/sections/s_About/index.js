@@ -5,7 +5,7 @@ import {C_ContentAbout} from "../../components/c_ContentAbout";
 // import {C_MainButton} from "../../components/c_MainButton";
 // import {sizes} from "../../data/sizes";
 
-export const S_About = ({className, menuOnTop, data, width, setIsAboutPopupClose, popup}) => {
+export const S_About = ({className, menuOnTop, data, width, setIsAboutPopupClose, popup, setIsPopupClose}) => {
     const cls = classNames(classes.root, {[classes.menuOnTop]:menuOnTop, [className]: className});
 
     const title = useRef();
@@ -33,7 +33,7 @@ export const S_About = ({className, menuOnTop, data, width, setIsAboutPopupClose
         });
     }
 
-    let options = { rootMargin: '300px', threshold: [0.5] };
+    let options = { rootMargin: '0px', threshold: [0] };
     let optionsLine = { rootMargin: '100px 0px -950px 0px', threshold: [0] };
 
     let observer = new IntersectionObserver( onEntryTitle, options);
@@ -56,7 +56,7 @@ export const S_About = ({className, menuOnTop, data, width, setIsAboutPopupClose
                     <div className={classes.title}>
                         Девелопер
                     </div>
-                    <C_ContentAbout data={data} setIsAboutPopupClose={setIsAboutPopupClose} popup={popup}/>
+                    <C_ContentAbout data={data} setIsPopupClose={setIsPopupClose} setIsAboutPopupClose={setIsAboutPopupClose} popup={popup}/>
                 </div>
             </div>
         </div>

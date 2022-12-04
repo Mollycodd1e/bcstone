@@ -6,6 +6,9 @@ export const C_FormCopy = ({className, header, description, ready}) => {
   
   const cls = classNames(classes.root, {[className]: className});
 
+  const [isConfirmed, setIsConfirmed] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
+
   const [isNameValid, setIsNameValid] = useState(true);
   const [isNameLength, setIsNameLength] = useState(false);
   const [isMailValid, setIsMailValid] = useState(true);
@@ -58,8 +61,47 @@ export const C_FormCopy = ({className, header, description, ready}) => {
   const onFormSubmitCheck = () => {
     if (isNameValid && isMailValid && isMailLength && isCheck) {
         setIsSubmit(true);
-        console.log(nameInput);
-        console.log(mailInput);
+        // console.log(nameInput);
+        // console.log(mailInput);
+
+        setIsProcessing(true);
+
+        // отправляем данные в comagic
+        Comagic.addOfflineRequest({
+            'name': nameInput,
+            'email': mailInput,
+            'message': 'Отправка данных'
+        }, function (o) {
+            let response = JSON.parse(o.response);
+
+            if (response.success) {
+                // GTM & Metrika
+                if (ga) {
+                    ga("create", "UA-206121389-1", {name: "tracker"});
+                    ga('tracker.send', 'event', 'submit', 'send_button', {
+                        'hitCallback': function () {
+                            console.log('my own GTM code works!!');
+                        }
+                    });
+                }
+
+                if (ym) {
+                    ym(84684538, 'reachGoal', 'send_button');
+                    console.log('ym: 84684538  - Yandex');
+                } else {
+                    yaCounter84684538.reachGoal('send_button');
+                    console.log('yaCounter84684538  - Yandex');
+                }
+
+                // Pixel
+                fbq('track', 'SubmitApplication');
+
+                setIsConfirmed(true);
+            } else {
+                console.error('CoMagic response failed!', response);
+                setIsProcessing(false);
+            }
+        });
     } 
     if (!isMailLength) {
         setIsMailNeed(true);

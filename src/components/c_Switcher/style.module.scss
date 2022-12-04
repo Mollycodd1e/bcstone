@@ -34,6 +34,13 @@
     }
   }
 
+  & .list:hover {
+    color: #2B2C2D;
+    &:before {
+      background-image: url("../../img/s_list_icon_mob_active.png");
+    }
+  }
+
   & .map {
     &:before {
       background-image: url("../../img/s_map_icon.png");
@@ -42,6 +49,13 @@
       background-size: 12px 16px;
       top: -2px;
       left: 12px;
+    }
+  }
+
+  & .map:hover {
+    color: #2B2C2D;
+    &:before {
+      background-image: url("../../img/s_map_icon_active.png");
     }
   }
 }
@@ -163,6 +177,12 @@
         left: 19px;
         top: 4px;
         background-image: url("../../img/s_list_icon.png");
+      }
+    }
+
+    & .list:hover {
+      &:before {
+        background-image: url("../../img/s_list_icon_active.png");
       }
     }
 

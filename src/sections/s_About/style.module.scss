@@ -227,21 +227,23 @@
       font-size: 113px;
       line-height: 121px;
       opacity: 0;
-      transform: translateY(215px);
     }
 
     & .title {
       margin: -2px 0 133px -169px !important;
+      transform: translateY(296px);
     }
 
     & .bg_text {
       margin: 0 0 -60px -655px !important;
+      transform: translateY(216px);
     }
 
     &::before {
       right: 0;
       top: 225px;
       opacity: 0;
+      transform: translateX(165px);
     }
 
     &::after {
@@ -257,7 +259,7 @@
       &::after {
         transform: translateX(0);
         opacity: 1;
-        transition: 1s ease-out;
+        transition: 1.5s ease-out;
       }
     }
   }
@@ -267,14 +269,15 @@
     & .title {
       opacity: 1;
       transform: translateY(0);
-      transition: 1s ease-out;
+      transition: 1.5s ease-out;
     }
 
     &::before {
       right: 158px;
       top: 225px;
+      transform: translateX(0);
       opacity: 1;
-      transition: 1s ease-out;
+      transition: 1.5s ease-out;
     }
   }
 }

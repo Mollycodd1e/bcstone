@@ -144,10 +144,10 @@ export default function Home() {
                                     <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
                                         <C_FullForm data={mainPageData[0]} className={classes.fullFormIndexSection} popup={true}/>
                                     </S_Popup>
-                                    <S_Hero data={mainPageData[0]} />
+                                    <S_Hero data={mainPageData[0]} setIsPopupClose={setIsPopupClose}/>
                                     <S_Top_Commercial data={mainPageData[0]} />
                                     <S_Projects data={mainPageData[0]} className={"projects-bg"} setIsPopupClose={setIsPopupClose}/>
-                                    <S_About data={mainPageData[0]} width={width} setIsAboutPopupClose={setIsAboutPopupClose} popup={isAboutPopupClose}/>
+                                    <S_About data={mainPageData[0]} width={width} setIsPopupClose={setIsPopupClose} setIsAboutPopupClose={setIsAboutPopupClose} popup={isAboutPopupClose}/>
                                     <C_SliderVideoPopup data={mainPageData[0]} sliderVideoPopupContent={sliderVideoPopupContent} setIsAboutPopupClose={setIsAboutPopupClose} isAboutPopupClose={isAboutPopupClose} popup={isAboutPopupClose}/>
                                     <S_Sales data={mainPageData[0]} />
                                     <S_FullForm data={mainPageData[0]} />
