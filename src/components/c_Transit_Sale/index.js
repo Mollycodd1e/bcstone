@@ -1,36 +1,14 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
 import Link from "next/link";
-import { useRef } from 'react';
-import { useState } from 'react';
 
 export const C_Transit_Sale = ({className, url, name, type, picture ,setIsHover, number, setIsHoveredItem}) => {
     const cls = classNames(classes.root, {[classes.reverse]: type === "retail", [className]: className });
-    const salesRef = useRef();
-    const [isSales, setIsSales] = useState(false);
-
-    function onEntry(entry) {
-        entry.forEach(change => {
-          if (change.isIntersecting) {
-            setIsSales(true);
-          } else {
-            // setIsSales(false);
-          }
-        });
-    }
-  
-    let options = { rootMargin: '0px 0px -50px 0px', threshold: [0.5] };
-  
-    let observer = new IntersectionObserver( onEntry, options);
-  
-    if (salesRef.current) {
-        observer.observe(salesRef.current);
-    }
 
     return (
         <Link href={window.location.hostname === 'localhost' ? `/${url}` : `/${url}.html`}>
             <div
-                className={classNames(cls,{[classes.titleShown]: isSales})} ref={salesRef}
+                className={cls}
                 onMouseOver={() => (setIsHover(true), setIsHoveredItem(number))} onMouseOut={() => setIsHover(false)}
             >   
                     <div className={classes.picture}

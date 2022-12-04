@@ -85,6 +85,7 @@
     opacity: 1;
   }
 }
+
 .inputError {
   & .inputCommon {
     border-color: $color-error-border;
@@ -119,6 +120,7 @@
   color: #E6E6E6;
   padding: 9px 10px 8px 23px;
   font-family: "Codec Cold News", "Arial", sans-serif;
+  cursor: pointer;
 
   &::placeholder {
     font-size: 12px;
@@ -186,6 +188,7 @@
 .checkboxWrapper {
   padding-left: 19px;
   width: 280px;
+  cursor: pointer;
 }
 
 .checkboxLabel {

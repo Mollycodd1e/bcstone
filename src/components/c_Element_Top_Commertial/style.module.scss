@@ -183,6 +183,10 @@ $decor-margin-lg: 0 14px 0 0;
   text-decoration: underline;
   color: rgba(43, 44, 44, 0.55);
   margin-top: auto;
+
+  &:hover {
+    color: #808080;
+  }
 }
 
 @include card(  $width: $width-sm,
