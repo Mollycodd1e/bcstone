@@ -8,6 +8,9 @@
 }
 
 .wrapRoot {
+  padding-top: 75px;
+  margin-top: -75px;
+  background-clip:content-box;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;

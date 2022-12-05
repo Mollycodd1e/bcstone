@@ -303,11 +303,11 @@ $pos: -12px;
 
 .closeBtnWrapper {
   position: relative;
-  width: 200px;
-  height: 50px;
+  width: 170px;
+  height: 30px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -10px;
+  right: -15px;
 }
 
 .faceWrap {
@@ -391,7 +391,7 @@ $pos: -12px;
     //transition: bottom .5s ease-out !important;
     box-shadow: unset;
   }
-  
+
   .faceWrap {
     &:hover {
       cursor: pointer;
@@ -421,6 +421,12 @@ $pos: -12px;
       padding-bottom: 20px !important;
       box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16) !important;
 
+      & .closeAllBtn {
+
+        font-size: 14px;
+        line-height: 15px;
+      }
+
       & a[class*='mainCardBtn'],
       & a[class*='CardBtn'],
       & button[class*='mainCardBtn'],
@@ -435,6 +441,7 @@ $pos: -12px;
 
       & a[class*='mainCardBtn'] {
         bottom: -7px;
+        transition: 0.5s ease-out;
       }
 
       @include desk_map_card;
@@ -450,12 +457,17 @@ $pos: -12px;
       .faceWrap {
         &:hover {
           & .С_CardFace {
-            transform: translateY(-20px);
+            transform: translateY(-10px);
             transition: 0.5s ease-out;
             z-index: 2;
             box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
           }
-    
+          
+          & a[class*='mainCardBtn'] {
+            transform: translateY(10px);
+            transition: 0.5s ease-out;
+          }
+
           & button[class*='CardBtn'] {
             font-size: 16px;
             line-height: 18px;
@@ -527,6 +539,13 @@ $pos: -12px;
       & .С_CardFace {
         bottom: calc(#{$faceBtm} + 40px);
       }
+
+      & button[class*='CardBtn'] {
+        transform: translateY(10px);
+        transition: 0.5s ease-out;
+        font-size: 18px;
+        line-height: 19px;
+       }
     }
   }
 
@@ -537,7 +556,7 @@ $pos: -12px;
     & a[class*='CardBtn'],
     & button[class*='mainCardBtn'],
     & button[class*='CardBtn'] {
-     padding-bottom: 12px;
+      padding-bottom: 12px;
       font-size: 18px;
       line-height: 19px;
     }
@@ -556,6 +575,28 @@ $pos: -12px;
       & a[class*='mainCardBtn'] {
         bottom: -7px;
       }
+      .faceWrap {
+        &:hover {
+          & .С_CardFace {
+            
+            transition: 0.5s ease-out;
+            z-index: 2;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+          }
+          
+          & a[class*='mainCardBtn'] {
+            transform: translateY(10px);
+            transition: 0.5s ease-out;
+          }
+
+          & button[class*='CardBtn'] {
+            font-size: 18px;
+            line-height: 19px;
+            padding-bottom: 8px;
+           }
+        }
+      }
+      
 
       @include desk_map_card;
       padding-top: 22px;
@@ -568,6 +609,17 @@ $pos: -12px;
 
   .CardBtn {
     bottom: -21px;
+  }
+
+  .CloseBtn {
+    top: 0;
+    right: 2px;
+  }
+
+  .closeAllBtn {
+    right: 16px;
+    top: 0;
+    border-radius: 15px;
   }
 }
 

@@ -16,7 +16,7 @@ export const S_Sales = ({className, data}) => {
           if (change.isIntersecting) {
             setIsTitle(true);
           } else {
-            // setIsTitle(false);
+            setIsTitle(false);
           }
         });
     }

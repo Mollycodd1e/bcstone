@@ -73,8 +73,8 @@ export const S_Projects = ({className, data, setIsPopupClose}) => {
     }
     
     return (
-        <div className={classes.wrapRoot}>
-            <div className={classNames(cls,{[classes.lineDecor] : isLine})}  id={'Проекты'}>
+        <div className={classes.wrapRoot} id={'Проекты'}>
+            <div className={classNames(cls,{[classes.lineDecor] : isLine})}>
                 <div className={classNames(classes.ProjectTitle,{[classes.titleShown] : isTitle})} ref={ref}>
                     <div className={classes.bg_text}>Проекты</div>
                     <div className={classes.wrap_title}>

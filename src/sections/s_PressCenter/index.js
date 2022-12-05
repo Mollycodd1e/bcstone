@@ -69,8 +69,8 @@ export const S_PressCenter = ({className, data}) => {
     }
 
     return (
-        <div className={classes.wrapRoot}>
-            <div className={classNames(cls,{[classes.lineShown]: isCenter})} id={'Пресс-центр'}>
+        <div className={classes.wrapRoot} id={'Пресс-центр'}>
+            <div className={classNames(cls,{[classes.lineShown]: isCenter})}>
                 <div className={classes.wrapper}>
                     <div className={classNames(classes.PressCenterTitle,{[classes.titleShown]: isTitle})} ref={titleRef}>
                         <div className={classes.bg_text}>Новости</div>
