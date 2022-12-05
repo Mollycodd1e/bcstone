@@ -29,15 +29,17 @@ export const C_RegularCard = ({
     link,
     setIsPopupClose,
     onCardCloseClick,
-    i
+    i,
+    cardsAmount
 }) => {
     const [isCardHovered, setIsCardHovered] = useState(false);
     const cls = classNames(classes.root, { [classes.map_mod]: isMapMode});
     const [isCloseAllBtn, setIsCloseAllBtn] = useState(false);
     const [width, height] = useContext(Context);
-
+    console.log(cardsAmount)
     return (
         <div className={cls}>
+            <div className={classes.closeBtnWrapper} onClick={ (evt) => onBtnCloseClick === null ?  evt.target.parentNode.parentNode.style='display: none;' : onBtnCloseClick} onMouseLeave={() => setIsCloseAllBtn(false)}>
             { isBtnClose ?
                 
                 <С_CloseBtn
@@ -49,11 +51,12 @@ export const C_RegularCard = ({
                 />
                 : null
             }
-            {width >= sizes.widthDesktopSm ?
+            {width >= sizes.widthDesktopSm && cardsAmount > 1 ? 
                 <button className={classNames(classes.closeAllBtn,{[classes.closeAllBtnShown]: isCloseAllBtn})} onClick={() => (setIsCloseAllBtn(false), (onCardCloseClick()))}>Закрыть все</button>
                 : null
             }
             {/* add button link */}
+            </div>
             <div className={classes.wrapper} onClick={() => isCardHovered ? '' : null}>
                     <div className={classes.faceWrap} onMouseEnter={() => setIsCardHovered(true)} onMouseOut={() => setIsCardHovered(false)}>
                         <С_CardFace

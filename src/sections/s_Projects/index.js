@@ -52,7 +52,7 @@ export const S_Projects = ({className, data, setIsPopupClose}) => {
         });
     }
 
-    let options = { rootMargin: '-140px', threshold: [0.5] };
+    let options = { rootMargin: '-50px', threshold: [0.5] };
     let optionsSub = { rootMargin: '-200px', threshold: [0.5] };
     let optionsLine = {threshold: [1] };
 
