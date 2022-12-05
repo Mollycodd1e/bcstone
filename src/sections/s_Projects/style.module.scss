@@ -587,7 +587,6 @@
 
   .root .C_MainButton {
     margin-top: 33px;
-    // padding: 12px 45px 12px 46px;
     letter-spacing: -0.03em;
   }
 
@@ -662,13 +661,12 @@
     & .bg_text,
     & .wrap_title {
       transform: translateY(0);
-      transition: 2s ease-out;
+      transition: 1.5s ease-out;
     }
   }
 
   .root .C_MainButton {
     margin-top: 40px;
-    // padding: 12px 45px 12px 45px;
     margin-left: -2px;
   }
 

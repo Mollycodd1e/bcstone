@@ -284,7 +284,7 @@
     min-height: 154px;
     max-width: 292px;
     margin-top: -20px;
-    transition: 0.5s;
+    transition: 0.5s ease-out;
   }
   
   .card_wrapper span {
@@ -326,7 +326,6 @@
   }
   
   .description_wrapper {
-    //position: absolute;
     width: 340px;
     margin-top: 25px;
     padding-bottom: 39px;

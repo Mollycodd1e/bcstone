@@ -376,7 +376,7 @@ $pos: -12px;
   .С_CardFace {
     position: relative;
     bottom: calc(#{$faceBtm} + 10px);
-    transition: bottom .5s ease-out;
+    transition: bottom .5s ease-out !important;
     box-shadow: unset;
   }
   
@@ -507,7 +507,7 @@ $pos: -12px;
   .С_CardFace {
     position: relative;
     bottom: calc(#{$faceBtm} + 10px);
-    transition: bottom .5s ease-out;
+    transition: bottom .5s ease-out !important;
   }
 
   .faceWrap {
@@ -563,7 +563,7 @@ $pos: -12px;
   .С_CardFace {
     position: relative;
     bottom: calc(#{$faceBtm} + 10px);
-    transition: bottom .5s ease-out;
+    transition: bottom .5s ease-out !important;
   }
 
   .faceWrap {
