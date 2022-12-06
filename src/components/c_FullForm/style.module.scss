@@ -168,7 +168,8 @@
 
   &:hover {
     background-color: #2B2C2C !important;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #CCCCCC;
+    transition: 1.3s ease-out;
     
     & span:last-child {
       color: white !important;

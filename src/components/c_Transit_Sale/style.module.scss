@@ -363,7 +363,7 @@
         // opacity: 1;
         margin-top: 5px;
         margin-right: -18px;
-        transition: 1s ease-out;;
+        transition: 0.6s ease-out;;
       }
     }
   }
@@ -374,33 +374,33 @@
       line-height: 118px;
       left: 143px;
       top: 6px;
-      transition: 1s ease-out;
+      transition: 0.6s ease-out;
       color: #2C2D2D;
     }
 
     & .link {
       opacity: 1;
-      transition: 1s ease-out;
+      transition: 0.6s ease-out;
       left: 90px;
       pointer-events: none;
 
       & span {
         font-size: 31px;
         line-height: 33px;
-        transition: 1s ease-out;
+        transition: 0.6s ease-out;
         pointer-events: none;
       }
     }
 
     & .picture {
       transform: scale(1.1) translateX(47px);
-      transition: 1s ease-out;
+      transition: 0.6s ease-out;
     }
 
     &.reverse:hover {
       & .link {
         opacity: 1;
-        transition: 1s ease-out;
+        transition: 0.6s ease-out;
         pointer-events: none;
       }
     }    
@@ -412,13 +412,13 @@
         opacity: 1;
         left: -18px;
         top: 12px;
-        transition: 1s ease-out;
+        transition: 0.6s ease-out;
         pointer-events: none;
 
         & span {
           font-size: 31px;
           line-height: 33px;
-          transition: 1s ease-out;
+          transition: 0.6s ease-out;
           pointer-events: none;
         }
       }
@@ -428,13 +428,13 @@
         line-height: 118px;
         left: -105px;
         top: 8px;
-        transition: 1s ease-out;
+        transition: 0.6s ease-out;
         color: #2C2D2D;
       }
 
       & .picture {
         transform: scale(1.1) translateX(-37px);
-        transition: 1s ease-out;
+        transition: 0.6s ease-out;
       }
     }
   }
@@ -478,7 +478,7 @@
     width: 226px;
     height: 295px;
     background-size: 226px 295px;
-    transition: 1s ease-out;
+    transition: 0.3s ease-out;
     justify-self: flex-start;
     position: relative;
     left: 10px;
@@ -527,12 +527,12 @@
         opacity: 1;
         left: -98px;
         top: -3px;
-        transition: 1s ease-out;
+        transition: 0.6s ease-out;
 
         & span {
           font-size: 31px;
           line-height: 33px;
-          transition: 1s ease-out;
+          transition: 0.6s ease-out;
         }
       }
 
@@ -541,13 +541,13 @@
         line-height: 129px;
         left: -89px;
         top: -7px;
-        transition: 1s ease-out;
+        transition: 0.6s ease-out;
         color: #2C2D2D;
       }
 
       & .picture {
         transform: scale(1.1) translateX(-17px) translateY(-10px);
-        transition: 1s ease-out;
+        transition: 0.6s ease-out;
       }
     }
   }
@@ -558,25 +558,25 @@
       line-height: 129px;
       left: 115px;
       top: -10px;
-      transition: 1s ease-out;
+      transition: 0.6s ease-out;
       color: #2C2D2D;
     }
 
     & .link {
       opacity: 1;
-      transition: 1s ease-out;
+      transition: 0.6s ease-out;
       left: 121px;
 
       & span {
         font-size: 31px;
         line-height: 33px;
-        transition: 1s ease-out;
+        transition: 0.6s ease-out;
       }
     }
 
     & .picture {
       transform: scale(1.25) translateX(47px);
-      transition: 1s ease-out;
+      transition: 0.6s ease-out;
     }  
   }
 
@@ -635,7 +635,7 @@
         opacity: 0;
         top: -17px;
         // left: -122px;
-        transition: 1s ease-out;
+        transition: 0.6s ease-out;
 
         & svg {
           opacity: 1;
@@ -651,13 +651,13 @@
       & .title {
         top: -18px;
         left: 5px;
-        transition: 1s ease-out;
+        transition: 0.6s ease-out;
       }
 
       & .picture {
         left: 31px;
         justify-self: flex-end;
-        transition: 1s ease-out;
+        transition: 0.6s ease-out;
       }
     }
   }
@@ -668,14 +668,12 @@
         opacity: 1;
         left: -125px;
         top: -35px;
-        // left: -163px;
-        // top: -30px;
-        transition: 1s ease-out;
+        transition: 0.6s ease-out;
 
         & span {
           font-size: 31px;
           line-height: 33px;
-          transition: 1s ease-out;
+          transition: 0.6s ease-out;
         }
       }
 
@@ -684,13 +682,13 @@
         line-height: 166px;
         left: -84px;
         top: -23px;
-        transition: 1s ease-out;
+        transition: 0.6s ease-out;
         color: #2C2D2D;
       }
 
       & .picture {
         transform: scale(1.1) translateX(5px);
-        transition: 1s ease-out;
+        transition: 0.6s ease-out;
       }
     }
   }
@@ -713,7 +711,7 @@
     position: relative;
     left: 0;
     top: -39px;
-    transition: 1s ease-out;
+    transition: 0.6s ease-out;
     align-self: flex-start;
 
     & svg {
@@ -721,12 +719,12 @@
       position: relative;
       top: -3px;
       left: 0;
-      transition: 1s ease-out;
+      transition: 0.6s ease-out;
     }
 
     & span {
       opacity: 1;
-      transition: 1s ease-out;
+      transition: 0.6s ease-out;
     }
   }
 
@@ -745,7 +743,7 @@
     font-size: 101px;
     line-height: 109px;
     color: #EFEFEF;
-    transition: 1s ease-out;
+    transition: 0.6s ease-out;
     align-self: flex-end;
     position: relative;
     top: -21px;
@@ -758,31 +756,31 @@
       line-height: 155px;
       left: 116px;
       top: -25px;
-      transition: 1s ease-out;
+      transition: 0.6s ease-out;
       color: #2C2D2D;
     }
 
     & .link {
       opacity: 1;
-      transition: 1s ease-out;
+      transition: 0.6s ease-out;
       left: 118px;
 
       & span {
         font-size: 31px;
         line-height: 33px;
-        transition: 1s ease-out;
+        transition: 0.6s ease-out;
       }
     }
 
     & .picture {
       transform: scale(1.25) translateX(23px);
-      transition: 1s ease-out;
+      transition: 0.6s ease-out;
     }
 
     &.reverse:hover {
       & .link {
         opacity: 1;
-        transition: 1s ease-out;
+        transition: 0.6s ease-out;
       }
     }    
   }

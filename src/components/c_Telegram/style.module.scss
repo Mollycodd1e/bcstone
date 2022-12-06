@@ -35,6 +35,10 @@
   border: 1px solid #c6c6c6;
   border-radius: 20px;
   cursor: pointer;
+
+  &:hover {
+    color: #808080;
+  }
 }
 
 .root svg {

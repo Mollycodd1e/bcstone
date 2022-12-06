@@ -215,6 +215,12 @@
       }
     }
   }
+}
+
+@media (min-width: $width-desktop-md) {
+  .root {
+    margin: 0 0 41px -3px;
+  }
 } 
     // & .list {
     //   &:before {

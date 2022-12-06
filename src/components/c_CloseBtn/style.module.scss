@@ -5,6 +5,8 @@ $width: 14px;
 .root {
   width: 3.7rem;
   height: 3.7rem;
+  max-width: 30px;
+  max-height: 30px;
   border-radius: 50%;
   position: relative;
   cursor: pointer;

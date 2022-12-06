@@ -8,6 +8,9 @@
 }
 
 .wrapRoot {
+  padding-top: 75px;
+  margin-top: -75px;
+  background-clip:content-box;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -489,12 +492,14 @@
 
     & .wrap_title {
       margin: 0 !important;
-      transform: translateY(256px);
+      // transform: translateY(256px);
+      transform: translateY(296px);
     }
 
     & .bg_text {
       margin: 0 0 -60px -576px !important;
-      transform: translateY(197px);
+      // transform: translateY(197px);
+      transform: translateY(216px);
     }
   }
 

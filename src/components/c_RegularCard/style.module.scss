@@ -271,7 +271,7 @@ $pos: -12px;
 }
 
 .closeAllBtn {
-  display: none;
+  opacity: 0;
   content: '';
   position: absolute;
   top: -10px;
@@ -288,6 +288,8 @@ $pos: -12px;
   background-color: #F6F6F6;
   color: #969696;
   cursor: pointer;
+  transition: 0.5s ease-out;
+  margin-right: 20px;
 
   &:hover {
     background-color: #ffffff;
@@ -295,7 +297,17 @@ $pos: -12px;
 }
 
 .closeAllBtnShown {
-  display: block;
+  opacity: 1;
+  transition: 0.5s ease-out;
+}
+
+.closeBtnWrapper {
+  position: relative;
+  width: 170px;
+  height: 30px;
+  position: absolute;
+  top: -10px;
+  right: -15px;
 }
 
 .faceWrap {
@@ -376,10 +388,10 @@ $pos: -12px;
   .С_CardFace {
     position: relative;
     bottom: calc(#{$faceBtm} + 10px);
-    transition: bottom .5s ease-out !important;
+    //transition: bottom .5s ease-out !important;
     box-shadow: unset;
   }
-  
+
   .faceWrap {
     &:hover {
       cursor: pointer;
@@ -409,6 +421,12 @@ $pos: -12px;
       padding-bottom: 20px !important;
       box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16) !important;
 
+      & .closeAllBtn {
+
+        font-size: 14px;
+        line-height: 15px;
+      }
+
       & a[class*='mainCardBtn'],
       & a[class*='CardBtn'],
       & button[class*='mainCardBtn'],
@@ -423,13 +441,14 @@ $pos: -12px;
 
       & a[class*='mainCardBtn'] {
         bottom: -7px;
+        transition: 0.5s ease-out;
       }
 
       @include desk_map_card;
       padding-top: 22px;
 
       & .С_CardFace {
-        transition: 0.6s;
+        transition: 0.5s;
         z-index: 1;
         bottom: unset !important;
         box-shadow: unset;
@@ -438,12 +457,17 @@ $pos: -12px;
       .faceWrap {
         &:hover {
           & .С_CardFace {
-            transform: translateY(-20px);
+            transform: translateY(-10px);
             transition: 0.5s ease-out;
             z-index: 2;
             box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
           }
-    
+          
+          & a[class*='mainCardBtn'] {
+            transform: translateY(10px);
+            transition: 0.5s ease-out;
+          }
+
           & button[class*='CardBtn'] {
             font-size: 16px;
             line-height: 18px;
@@ -507,7 +531,7 @@ $pos: -12px;
   .С_CardFace {
     position: relative;
     bottom: calc(#{$faceBtm} + 10px);
-    transition: bottom .5s ease-out !important;
+    // transition: bottom .5s ease-out !important;
   }
 
   .faceWrap {
@@ -515,6 +539,13 @@ $pos: -12px;
       & .С_CardFace {
         bottom: calc(#{$faceBtm} + 40px);
       }
+
+      & button[class*='CardBtn'] {
+        transform: translateY(10px);
+        transition: 0.5s ease-out;
+        font-size: 18px;
+        line-height: 19px;
+       }
     }
   }
 
@@ -525,7 +556,7 @@ $pos: -12px;
     & a[class*='CardBtn'],
     & button[class*='mainCardBtn'],
     & button[class*='CardBtn'] {
-     padding-bottom: 12px;
+      padding-bottom: 12px;
       font-size: 18px;
       line-height: 19px;
     }
@@ -544,6 +575,28 @@ $pos: -12px;
       & a[class*='mainCardBtn'] {
         bottom: -7px;
       }
+      .faceWrap {
+        &:hover {
+          & .С_CardFace {
+            
+            transition: 0.5s ease-out;
+            z-index: 2;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+          }
+          
+          & a[class*='mainCardBtn'] {
+            transform: translateY(10px);
+            transition: 0.5s ease-out;
+          }
+
+          & button[class*='CardBtn'] {
+            font-size: 18px;
+            line-height: 19px;
+            padding-bottom: 8px;
+           }
+        }
+      }
+      
 
       @include desk_map_card;
       padding-top: 22px;
@@ -557,13 +610,24 @@ $pos: -12px;
   .CardBtn {
     bottom: -21px;
   }
+
+  .CloseBtn {
+    top: 0;
+    right: 2px;
+  }
+
+  .closeAllBtn {
+    right: 16px;
+    top: 0;
+    border-radius: 15px;
+  }
 }
 
 @media (min-width: $width-desktop-lg) {
   .С_CardFace {
     position: relative;
     bottom: calc(#{$faceBtm} + 10px);
-    transition: bottom .5s ease-out !important;
+    // transition: bottom .5s ease-out !important;
   }
 
   .faceWrap {
