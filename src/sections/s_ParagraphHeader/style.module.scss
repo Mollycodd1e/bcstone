@@ -1,20 +1,22 @@
 @import '../../styles/style';
 
 .root {
-  font-family: "Codec Cold News", "Arial", sans-serif;
-
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 800;
+  font-family: "Codec Cold", "Arial", sans-serif;
+  padding: 20px 33px 10px 30px;
+  font-size: 22px;
+  line-height: 23px;
+  font-weight: 700;
   letter-spacing: -0.1px;
   color: #2B2C2C;
-
+  text-align: left;
+  width: 100%;
 }
 
 @media (min-width: $width-tablet-md) {
   .root {
     font-size: 30px;
     line-height: 32px;
+    padding: 10px 165px 5px 130px;
   }
 }
 
@@ -22,5 +24,6 @@
   .root {
     font-size: 36px;
     line-height: 36px;
+    padding: 10px 713px 15px 418px;
   }
 }
