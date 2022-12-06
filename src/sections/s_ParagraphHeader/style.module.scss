@@ -2,21 +2,25 @@
 
 .root {
   font-family: "Codec Cold News", "Arial", sans-serif;
-  font-weight: normal;
 
-  letter-spacing: -0.03em;
-  text-align: left;
-  color: #2c2b2c;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 800;
+  letter-spacing: -0.1px;
+  color: #2B2C2C;
+
 }
 
 @media (min-width: $width-tablet-md) {
   .root {
-
+    font-size: 30px;
+    line-height: 32px;
   }
 }
 
 @media (min-width: $width-desktop-lg) {
   .root {
     font-size: 36px;
+    line-height: 36px;
   }
 }
