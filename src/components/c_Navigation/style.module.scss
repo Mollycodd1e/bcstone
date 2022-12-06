@@ -198,13 +198,17 @@ $menuTransition: .4s;
 
   .C_MainButton {
     margin-left: auto;
-    padding: 12px 40px 11px;
+    padding: 10px 34px;
   }
 }
 
 @media (min-width: $width-desktop-md) {
   .C_Logo {
     margin: 0 150px 0 0;
+  }
+  
+  .C_MainButton {
+    padding: 11px 41px 12px 41px
   }
 }
 
@@ -215,6 +219,6 @@ $menuTransition: .4s;
 
   .C_MainButton {
     margin-left: 0;
-    padding: 12px 40px 11px;
+    padding: 11px 42px 12px 41px;
   }
 }
