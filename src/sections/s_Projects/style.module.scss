@@ -513,6 +513,10 @@
 
   .root .C_MainButton {
     margin-top: 0;
+
+    &:hover {
+      border-color: #DDDDDD;
+    }
   }
 
   .mapView {

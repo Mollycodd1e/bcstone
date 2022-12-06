@@ -58,7 +58,7 @@ export const Cc_ComponentGenerator = ({pageData}) => {
                     text={sortedArr[elPosition].content.text}
                 />,
                 "form": <S_Form header={sortedArr[elPosition].content.title} description={sortedArr[elPosition].content.description} ready={sortedArr[elPosition].content.success}/>,
-                // "paragraph_header": <S_ParagraphHeader text={sortedArr[elPosition].content.text}/>,
+                "paragraph_header": <S_ParagraphHeader text={sortedArr[elPosition].content.text}/>,
                 // "separator": <S_Seperator />
             }
         )

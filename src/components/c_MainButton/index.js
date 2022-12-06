@@ -22,7 +22,7 @@ export const C_MainButton = ({className, text, onClick, mode = false, link}) => 
                     className={cls}
                     onClick={(e) => onClick(e)}
                     onMouseOver={(e) => {
-                        if (width <= sizes.widthDesktopSm) {
+                        if (width < sizes.widthDesktopSm) {
                             e.preventDefault()
                         } else {
                             let rect = btnEl.current.getBoundingClientRect();
@@ -45,7 +45,7 @@ export const C_MainButton = ({className, text, onClick, mode = false, link}) => 
                         }
                     }}
                     onMouseOut={(e) => {
-                        if (width <= sizes.widthDesktopSm) {
+                        if (width < sizes.widthDesktopSm) {
                             e.preventDefault()
                         } else {
                             // spanEl.current.style.left = e.pageX - btnEl.current.offsetLeft + "px";
@@ -78,7 +78,7 @@ export const C_MainButton = ({className, text, onClick, mode = false, link}) => 
                     className={cls}
                     href={link}
                     onMouseOver={(e) => {
-                        if (width <= sizes.widthDesktopSm) {
+                        if (width < sizes.widthDesktopSm) {
                             e.preventDefault()
                         } else {
                             let rect = btnEl.current.getBoundingClientRect();
@@ -101,7 +101,7 @@ export const C_MainButton = ({className, text, onClick, mode = false, link}) => 
                         }
                     }}
                     onMouseOut={(e) => {
-                        if (width <= sizes.widthDesktopSm) {
+                        if (width < sizes.widthDesktopSm) {
                             e.preventDefault()
                         } else {
                             // spanEl.current.style.left = e.pageX - btnEl.current.offsetLeft + "px";
