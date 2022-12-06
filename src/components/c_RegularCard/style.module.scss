@@ -4,11 +4,13 @@ $widthCard_tab: 352px;
 $widthCard_tab_map: 271px;
 $widthCard_deskMd: 400px;
 $widthCard_desk: 439px;
+$widthCard_deskSm_map: 312px;
 $widthCard_desk_map: 348px;
 
 $heightCard_tabSm_map: 332px;
 $heightCard_tab: 339px;
 $heightCard_desk: 423px;
+$heightCard_deskSm_map: 362px;
 $heightCard_desk_map: 405px;
 
 $boxShadow_map: 0 3px 6px rgba(0, 0, 0, 0.16);
@@ -17,6 +19,7 @@ $borderRadius_tab: 15px;
 $borderRadius_tab: 15px;
 $borderRadius_desk: 15px;
 $borderRadius_desk_map: 10px;
+$borderRadius_deskSm_map: 15px;
 
 $border_mob: 1px solid #d9d9d9;
 
@@ -26,6 +29,7 @@ $widthPic_tabSm_map: 224px;
 $widthPic_tab: 352px;
 $widthPic_deskMd: 400px;
 $widthPic_desk: 439px;
+$widthPic_deskSm_map: 290px;
 $widthPic_desk_map: 324px;
 
 $heightPic_tab: 201px;
@@ -34,6 +38,7 @@ $heightPic_tabSm_map: 152px;
 $heightPic_deskSm: 208px;
 $heightPic_desk: 262px;
 $heightPic_deskMd: 237px;
+$heightPic_deskSm_map: 172px;
 $heightPic_desk_map: 193px;
 
 $heightLogo_tabSm_map: 16px;
@@ -235,6 +240,36 @@ $pos: -12px;
   );
 }
 
+@mixin deskSm_map_card {
+  @include card($widthCard: $widthCard_deskSm_map,
+    $heightCard: $heightCard_deskSm_map,
+    $borderRadius: $borderRadius_deskSm_map,
+    $paddingCard: $paddingCard_tab_desk,
+    $widthPic: $widthPic_deskSm_map,
+    $heightPic: $heightPic_deskSm_map,
+    $heightLogo: $heightLogo_desk_map,
+    $listTemplateColumns: $listTemplateColumns_tab_desk,
+    $listTemplateColumnsGap: $listTemplateColumnsGap_tab_desk,
+    $listTemplateRows: $listTemplateRows_tab_desk,
+    $listTemplateAreas: $listTemplateAreas_threeRows,
+  );
+}
+
+@mixin deskMd_map_card {
+  @include card($widthCard: $widthCard_desk_map,
+    $heightCard: $heightCard_desk_map,
+    $borderRadius: $borderRadius_deskSm_map,
+    $paddingCard: $paddingCard_tab_desk,
+    $widthPic: $widthPic_desk_map,
+    $heightPic: $heightPic_desk_map,
+    $heightLogo: $heightLogo_desk_map,
+    $listTemplateColumns: $listTemplateColumns_tab_desk,
+    $listTemplateColumnsGap: $listTemplateColumnsGap_tab_desk,
+    $listTemplateRows: $listTemplateRows_tab_desk,
+    $listTemplateAreas: $listTemplateAreas_threeRows,
+  );
+}
+
 @mixin desk_map_card {
   @include card($widthCard: $widthCard_desk_map,
     $heightCard: $heightCard_desk_map,
@@ -415,9 +450,12 @@ $pos: -12px;
     }
 
     &.map_mod {
+      @include deskSm_map_card;
+      width: 312px;
       z-index: 10 !important;
       height: 100% !important;
-      min-height: 405px;
+      // min-height: 405px;
+      min-height: unset;
       padding-bottom: 20px !important;
       box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16) !important;
 
@@ -430,10 +468,9 @@ $pos: -12px;
       & a[class*='CardBtn'],
       & button[class*='mainCardBtn'],
       & button[class*='CardBtn'] {
-        padding-bottom: 4px;
         font-size: 16px;
         line-height: 18px;
-        padding-bottom: 8px;
+        padding-bottom: 5px;
         z-index: 0;
         font-family: 'Codec Cold', Arial, sans-serif;
       }
@@ -444,7 +481,6 @@ $pos: -12px;
         transition: 0.5s ease-out;
       }
 
-      @include desk_map_card;
       padding-top: 22px;
 
       & .С_CardFace {
@@ -473,7 +509,7 @@ $pos: -12px;
           & a[class*='CardBtn'] {
             font-size: 16px;
             line-height: 18px;
-            padding-bottom: 8px;
+            padding-bottom: 5px;
            }
         }
       }
@@ -482,8 +518,16 @@ $pos: -12px;
         border-radius: 10px;
       }
 
-      @include desk_map_card;
-      padding-top: 22px;
+      .closeAllBtn {
+        right: 10px;
+        top: -2px;
+        border-radius: 15px;
+      }
+
+      .CloseBtn {
+        top: -2px;
+        right: -5px;
+      }
 
       & .С_CardFace {
         bottom: unset !important;
@@ -495,16 +539,20 @@ $pos: -12px;
       }
 
       & .С_CardInfo {
-        margin-top: 37px;
-        padding: 0 0 0 33px !important;
+        margin-top: 33px;
+        padding: 0 0 0 18px !important;
       }
 
       & ul[class*='list'] {
         display: flex !important;
         flex-direction: row;
         flex-wrap: wrap;
-        margin-top: 18px;
-        padding-left: 28px;
+        margin-top: 14px;
+        padding-left: 40px;
+
+        & li {
+          margin-bottom: 5px;
+        }
 
         & li:first-child {
           margin-right: 15px;
@@ -525,8 +573,8 @@ $pos: -12px;
   }
 
   .closeBtnWrapper {
-    top: 0;
-    right: 0;
+    top: -10px;
+    right: -10px;
   }
 
   .CardBtn {
@@ -564,36 +612,42 @@ $pos: -12px;
 
   .root {
     @include deskMd_card;
-
+    min-height: 405px;
     & a[class*='mainCardBtn'],
     & a[class*='CardBtn'],
     & button[class*='mainCardBtn'],
     & button[class*='CardBtn'] {
-      padding-bottom: 4px;
+      padding-bottom: 11px;
       font-size: 18px;
       line-height: 19px;
     }
 
     &.map_mod {
+      @include deskMd_map_card;
 
       & a[class*='mainCardBtn'],
       & a[class*='CardBtn'],
       & button[class*='mainCardBtn'],
       & button[class*='CardBtn'] {
-        padding-bottom: 4px;
+        padding-bottom: 7px;
         font-size: 18px;
         line-height: 19px;
+        border-radius: 10px;
       }
 
       & a[class*='mainCardBtn'],
       & button[class*='mainCardBtn'] {
-        bottom: -10px;
+        bottom: -9px;
+      }
+
+      .CloseBtn {
+        top: -2px;
+        right: -3px;
       }
 
       .faceWrap {
         &:hover {
           & .С_CardFace {
-            
             transition: 0.5s ease-out;
             z-index: 2;
             box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
@@ -601,7 +655,7 @@ $pos: -12px;
           
           & a[class*='mainCardBtn'],
           & button[class*='mainCardBtn'] {
-            transform: translateY(10px);
+            transform: translateY(11px);
             transition: 0.5s ease-out;
           }
 
@@ -609,17 +663,32 @@ $pos: -12px;
           & a[class*='CardBtn'] {
             font-size: 18px;
             line-height: 19px;
-            padding-bottom: 4px;
+            padding-bottom: 6px;
            }
         }
       }
       
-
-      @include desk_map_card;
       padding-top: 22px;
 
       & .С_CardFace {
         bottom: unset !important;
+      }
+
+      & .С_CardInfo {
+        margin-top: 37px;
+        padding: 0 0 0 36px !important;
+      }
+
+      & ul[class*='list'] {
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 17px;
+        padding-left: 28px;
+
+        & li {
+          margin-bottom: 7px;
+        }
       }
     }
   }
@@ -636,14 +705,14 @@ $pos: -12px;
   .closeAllBtn {
     right: 16px;
     top: 0;
+    padding: 7px 0 9px 0;
     border-radius: 15px;
   }
 
   .closeBtnWrapper {
     top: -10px;
-    right: -15px;
+    right: -10px;
   }
-
 }
 
 @media (min-width: $width-desktop-lg) {
@@ -663,48 +732,71 @@ $pos: -12px;
 
   .root {
     @include desk_card;
+
     & a[class*='mainCardBtn'],
     & a[class*='CardBtn'],
     & button[class*='mainCardBtn'],
     & button[class*='CardBtn'] {
-      padding-bottom: 5px;
+      padding-bottom: 10px;
       font-size: 18px;
       line-height: 19px;
     }
 
     &.map_mod {
+      @include desk_map_card;
       height: 459px;
       & a[class*='mainCardBtn'],
       & a[class*='CardBtn'],
       & button[class*='mainCardBtn'],
       & button[class*='CardBtn'] {
-        padding-bottom: 5px;
+        padding-bottom: 7px;
         font-size: 18px;
         line-height: 19px;
-        // padding-bottom: 8px;
       }
 
       & a[class*='mainCardBtn'],
       & button[class*='mainCardBtn'] {
-         bottom: -7px;
+         bottom: -9px;
       }
 
-      @include desk_map_card;
+      .CloseBtn {
+        top: 0;
+        right: 0;
+      }
+
+      .closeAllBtn {
+        right: 14px;
+        top: 0;
+        padding: 7px 0 9px 0;
+        border-radius: 15px;
+      }
+
       padding-top: 22px;
 
       & .С_CardFace {
         bottom: unset !important;
       }
       
+      & .С_CardInfo {
+        margin-top: 39px;
+        padding: 0 0 0 36px !important;
+      }
+
       .faceWrap {
         &:hover {  
           & button[class*='CardBtn'],
           & a[class*='CardBtn'] {
             font-size: 18px;
             line-height: 19px;
+            padding-bottom: 6px;
            }
         }
       }
     }
+  }
+
+  .closeBtnWrapper {
+    top: -10px;
+    right: -10px;
   }
 }
