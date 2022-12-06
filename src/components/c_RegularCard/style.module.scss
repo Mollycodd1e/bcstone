@@ -396,7 +396,7 @@ $pos: -12px;
     &:hover {
       cursor: pointer;
       & .С_CardFace {
-        bottom: calc(20px);
+        bottom: calc(10px);
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
       }
     }
@@ -409,7 +409,7 @@ $pos: -12px;
     & a[class*='CardBtn'],
     & button[class*='mainCardBtn'],
     & button[class*='CardBtn'] {
-      padding-bottom: 12px;
+      padding-bottom: 7px;
       font-size: 16px;
       line-height: 18px;
     }
@@ -422,7 +422,6 @@ $pos: -12px;
       box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16) !important;
 
       & .closeAllBtn {
-
         font-size: 14px;
         line-height: 15px;
       }
@@ -439,7 +438,8 @@ $pos: -12px;
         font-family: 'Codec Cold', Arial, sans-serif;
       }
 
-      & a[class*='mainCardBtn'] {
+      & a[class*='mainCardBtn'],
+      & button[class*='mainCardBtn'] {
         bottom: -7px;
         transition: 0.5s ease-out;
       }
@@ -463,12 +463,14 @@ $pos: -12px;
             box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
           }
           
-          & a[class*='mainCardBtn'] {
+          & a[class*='mainCardBtn'],
+          & button[class*='mainCardBtn'] {
             transform: translateY(10px);
             transition: 0.5s ease-out;
           }
 
-          & button[class*='CardBtn'] {
+          & button[class*='CardBtn'],
+          & a[class*='CardBtn'] {
             font-size: 16px;
             line-height: 18px;
             padding-bottom: 8px;
@@ -541,17 +543,23 @@ $pos: -12px;
 
   .faceWrap {
     &:hover {
+      // & .С_CardFace {
+      //   bottom: calc(#{$faceBtm} + 40px);
+      // }
+
       & .С_CardFace {
-        bottom: calc(#{$faceBtm} + 40px);
+        bottom: calc(20px);
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
       }
 
-      & button[class*='CardBtn'] {
-        transform: translateY(10px);
-        transition: 0.5s ease-out;
-        font-size: 18px;
-        line-height: 19px;
-       }
-    }
+      // & button[class*='CardBtn'],
+      // & a[class*='CardBtn'] {
+      //   transform: translateY(10px);
+      //   transition: 0.5s ease-out;
+      //   font-size: 18px;
+      //   line-height: 19px;
+      //  }
+      }
   }
 
   .root {
@@ -561,7 +569,7 @@ $pos: -12px;
     & a[class*='CardBtn'],
     & button[class*='mainCardBtn'],
     & button[class*='CardBtn'] {
-      padding-bottom: 12px;
+      padding-bottom: 4px;
       font-size: 18px;
       line-height: 19px;
     }
@@ -572,14 +580,16 @@ $pos: -12px;
       & a[class*='CardBtn'],
       & button[class*='mainCardBtn'],
       & button[class*='CardBtn'] {
-        padding-bottom: 6px;
+        padding-bottom: 4px;
         font-size: 18px;
         line-height: 19px;
       }
 
-      & a[class*='mainCardBtn'] {
-        bottom: -7px;
+      & a[class*='mainCardBtn'],
+      & button[class*='mainCardBtn'] {
+        bottom: -10px;
       }
+
       .faceWrap {
         &:hover {
           & .С_CardFace {
@@ -589,15 +599,17 @@ $pos: -12px;
             box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
           }
           
-          & a[class*='mainCardBtn'] {
+          & a[class*='mainCardBtn'],
+          & button[class*='mainCardBtn'] {
             transform: translateY(10px);
             transition: 0.5s ease-out;
           }
 
-          & button[class*='CardBtn'] {
+          & button[class*='CardBtn'],
+          & a[class*='CardBtn'] {
             font-size: 18px;
             line-height: 19px;
-            padding-bottom: 8px;
+            padding-bottom: 4px;
            }
         }
       }
@@ -655,9 +667,9 @@ $pos: -12px;
     & a[class*='CardBtn'],
     & button[class*='mainCardBtn'],
     & button[class*='CardBtn'] {
-      padding-bottom: 12px;
+      padding-bottom: 5px;
       font-size: 18px;
-      line-height: 18px;
+      line-height: 19px;
     }
 
     &.map_mod {
@@ -666,14 +678,15 @@ $pos: -12px;
       & a[class*='CardBtn'],
       & button[class*='mainCardBtn'],
       & button[class*='CardBtn'] {
-        padding-bottom: 4px;
+        padding-bottom: 5px;
         font-size: 18px;
         line-height: 19px;
-        padding-bottom: 8px;
+        // padding-bottom: 8px;
       }
 
-      & a[class*='mainCardBtn'] {
-        bottom: -7px;
+      & a[class*='mainCardBtn'],
+      & button[class*='mainCardBtn'] {
+         bottom: -7px;
       }
 
       @include desk_map_card;
@@ -685,7 +698,8 @@ $pos: -12px;
       
       .faceWrap {
         &:hover {  
-          & button[class*='CardBtn'] {
+          & button[class*='CardBtn'],
+          & a[class*='CardBtn'] {
             font-size: 18px;
             line-height: 19px;
            }

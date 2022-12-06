@@ -27,7 +27,7 @@ export const S_Projects = ({className, data, setIsPopupClose}) => {
           if (change.isIntersecting) {
             setIsTitle(true);
           } else {
-            // setIsTitle(false);
+            setIsTitle(false);
           }
         });
     }
