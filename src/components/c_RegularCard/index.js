@@ -36,7 +36,7 @@ export const C_RegularCard = ({
     const cls = classNames(classes.root, { [classes.map_mod]: isMapMode});
     const [isCloseAllBtn, setIsCloseAllBtn] = useState(false);
     const [width, height] = useContext(Context);
-    console.log(cardsAmount)
+
     return (
         <div className={cls}>
             <div className={classes.closeBtnWrapper} onClick={ (evt) => onBtnCloseClick === null ?  evt.target.parentNode.parentNode.style='display: none;' : onBtnCloseClick} onMouseLeave={() => setIsCloseAllBtn(false)}>
