@@ -522,6 +522,11 @@ $pos: -12px;
     }
   }
 
+  .closeBtnWrapper {
+    top: 0;
+    right: 0;
+  }
+
   .CardBtn {
     bottom: -20px;
   }
@@ -621,6 +626,12 @@ $pos: -12px;
     top: 0;
     border-radius: 15px;
   }
+
+  .closeBtnWrapper {
+    top: -10px;
+    right: -15px;
+  }
+
 }
 
 @media (min-width: $width-desktop-lg) {

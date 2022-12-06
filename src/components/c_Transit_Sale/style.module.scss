@@ -320,6 +320,7 @@
 
 @media (min-width: $width-desktop-sm) {
   .root {
+    cursor: pointer;
     position: relative;
     flex-grow: 1;
     padding: 60px 0 76px 0;
@@ -336,6 +337,7 @@
         top: 13px;
         left: 48px;
         pointer-events: none;
+        cursor: pointer;
 
         & svg {
           opacity: 1;
@@ -383,6 +385,10 @@
       transition: 0.6s ease-out;
       left: 90px;
       pointer-events: none;
+
+      & svg {
+        pointer-events: none;
+      }
 
       & span {
         font-size: 31px;
