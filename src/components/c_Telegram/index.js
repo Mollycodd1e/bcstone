@@ -7,7 +7,7 @@ export const C_Telegram = ({className, telegram}) => {
 
   return (
     <div className={cls}>
-    <a className={classes.qr_code} />
+    <a href="https://t.me/stone_by_stonehedge" target="_blank" rel='noreferrer' className={classes.qr_code}/>
     <div className={classes.telegram_wrapper}>
       <p>Подписывайтесь на наш канал и{'\u00A0'}будьте в курсе событий</p>
       <a href="https://t.me/stone_by_stonehedge" target="_blank" rel='noreferrer'>

@@ -18,7 +18,7 @@ export const S_About = ({className, menuOnTop, data, width, setIsAboutPopupClose
           if (change.isIntersecting) {
             setIsAboutTitle(true);
           } else {
-            setIsAboutTitle(false);
+            // setIsAboutTitle(false);
           }
         });
     }
