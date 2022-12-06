@@ -1,4 +1,4 @@
-import { S_Tags } from "../../sections/s_Tags";
+import {S_Tags} from "../../sections/s_Tags";
 import {S_Header} from "../../sections/s_Header";
 import {S_Video} from "../../sections/s_Video";
 import {S_Text} from "../../sections/s_Text";
@@ -7,6 +7,7 @@ import {S_Quote} from "../../sections/s_Quote";
 import {S_Picture} from "../../sections/s_Picture";
 import {S_MoreInfoBtn} from "../../sections/s_MoreInfoBtn";
 import {S_Form} from "../../sections/s_Form";
+import {S_ParagraphHeader} from "../../sections/s_ParagraphHeader";
 
 export const Cc_ComponentGenerator = ({pageData}) => {
 
@@ -52,8 +53,13 @@ export const Cc_ComponentGenerator = ({pageData}) => {
                     src={sortedArr[elPosition].content.image && sortedArr[elPosition].content.image.src}
                     description={sortedArr[elPosition].content.description}
                 />,
-                "button": <S_MoreInfoBtn />,
+                "button": <S_MoreInfoBtn
+                    url={sortedArr[elPosition].content.url}
+                    text={sortedArr[elPosition].content.text}
+                />,
                 "form": <S_Form header={sortedArr[elPosition].content.title} description={sortedArr[elPosition].content.description} ready={sortedArr[elPosition].content.success}/>,
+                // "paragraph_header": <S_ParagraphHeader text={sortedArr[elPosition].content.text}/>,
+                // "separator": <S_Seperator />
             }
         )
     }

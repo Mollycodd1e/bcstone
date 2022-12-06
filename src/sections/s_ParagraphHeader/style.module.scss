@@ -1,0 +1,22 @@
+@import '../../styles/style';
+
+.root {
+  font-family: "Codec Cold News", "Arial", sans-serif;
+  font-weight: normal;
+
+  letter-spacing: -0.03em;
+  text-align: left;
+  color: #2c2b2c;
+}
+
+@media (min-width: $width-tablet-md) {
+  .root {
+
+  }
+}
+
+@media (min-width: $width-desktop-lg) {
+  .root {
+    font-size: 36px;
+  }
+}
