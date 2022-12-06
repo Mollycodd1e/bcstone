@@ -25,40 +25,56 @@ export const Cc_ComponentGenerator = ({pageData}) => {
         return (
             {
                 "hashtags": <S_Tags
+                    key={elPosition}
                     hashtagList={sortedArr[elPosition].content.list}
                 />,
                 "topic": <S_Header
+                    key={elPosition}
                     header={sortedArr[elPosition].content.title}
                     text={sortedArr[elPosition].content.description}
                     data={sortedArr[elPosition].content.date}
                 />,
                 "video": <S_Video
+                    key={elPosition}
                     url={sortedArr[elPosition].content.url}
                     description={sortedArr[elPosition].content.description}
                 />,
                 "text": <S_Text
+                    key={elPosition}
                     text={sortedArr[elPosition].content.text}
                 />,
                 "slider": <S_Slider
+                    key={elPosition}
                     items={sortedArr[elPosition].content.gallery}
                     description={sortedArr[elPosition].content.description}
                 />,
                 "quote": <S_Quote
+                    key={elPosition}
                     photo={sortedArr[elPosition].content.photo && sortedArr[elPosition].content.photo.src}
                     name={sortedArr[elPosition].content.name}
                     description={sortedArr[elPosition].content.description}
                     text={sortedArr[elPosition].content.text}
                 />,
                 "picture": <S_Picture
+                    key={elPosition}
                     src={sortedArr[elPosition].content.image && sortedArr[elPosition].content.image.src}
                     description={sortedArr[elPosition].content.description}
                 />,
                 "button": <S_MoreInfoBtn
+                    key={elPosition}
                     url={sortedArr[elPosition].content.url}
                     text={sortedArr[elPosition].content.text}
                 />,
-                "form": <S_Form header={sortedArr[elPosition].content.title} description={sortedArr[elPosition].content.description} ready={sortedArr[elPosition].content.success}/>,
-                "paragraph_header": <S_ParagraphHeader text={sortedArr[elPosition].content.text}/>,
+                "form": <S_Form
+                    key={elPosition}
+                    header={sortedArr[elPosition].content.title}
+                    description={sortedArr[elPosition].content.description}
+                    ready={sortedArr[elPosition].content.success}
+                />,
+                "paragraph_header": <S_ParagraphHeader
+                    key={elPosition}
+                    text={sortedArr[elPosition].content.text}
+                />,
                 // "separator": <S_Seperator />
             }
         )

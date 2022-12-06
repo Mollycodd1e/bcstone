@@ -2,7 +2,7 @@
 
 .root {
   width: 100%;
-  margin-top: 20px;
+  //margin-top: 20px;
   padding: 0 29px 10px 30px;
   margin-bottom: 20px;
 }
@@ -32,7 +32,7 @@
 
 @media (min-width: $width-tablet-md) {
   .root {
-    margin-top: 88px;
+    //margin-top: 88px;
     padding: 0 130px 10px 130px;
   }
 
@@ -57,7 +57,7 @@
 @media (min-width: $width-desktop-lg) {
   .root {
     display: flex;
-    margin-top: 152px;
+    //margin-top: 152px;
     padding: 0 399px 10px 418px;
   }
 
