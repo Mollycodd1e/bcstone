@@ -73,7 +73,7 @@ export default function News() {
 
     const {contacts, copyright} = footerData;
 
-    const NewsPageData = data.length !==0 ? data.data[1].data : '';
+    const NewsPageData = data.length !==0 ? data.data[5].data : '';
 
     return (
             <Context.Provider value={[width, height]}>
