@@ -18,7 +18,7 @@ export const S_About = ({className, menuOnTop, data, width, setIsAboutPopupClose
           if (change.isIntersecting) {
             setIsAboutTitle(true);
           } else {
-            // setIsAboutTitle(false);
+            setIsAboutTitle(false);
           }
         });
     }
@@ -47,14 +47,17 @@ export const S_About = ({className, menuOnTop, data, width, setIsAboutPopupClose
         observerLine.observe(lineRef.current);
     }
     return (
-        <div className={classes.wrapRoot}>
-            <div className={classNames(cls,{[classes.lineShown]: isAboutLine})} ref={lineRef} id={'Девелопер'}>
+        <div className={classes.wrapRoot} id={'Девелопер'}>
+            <div className={classNames(cls,{[classes.lineShown]: isAboutLine})} ref={lineRef}>
                 <div className={classNames(classes.frame,{[classes.titleShown]: isAboutTitle})} ref={title}>
-                    <div className={classes.bg_text}>
-                        О нас
-                    </div>
-                    <div className={classes.title}>
-                        Девелопер
+                  {/* обертка для титула */}
+                    <div className={classes.AboutTitle}>
+                      <div className={classes.bg_text}>
+                          О нас
+                      </div>
+                      <div className={classes.title}>
+                          Девелопер
+                      </div>
                     </div>
                     <C_ContentAbout data={data} setIsPopupClose={setIsPopupClose} setIsAboutPopupClose={setIsAboutPopupClose} popup={popup}/>
                 </div>

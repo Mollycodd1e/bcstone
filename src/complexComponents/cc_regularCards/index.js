@@ -2,7 +2,7 @@ import {cards} from "../../data/helper";
 import {C_RegularCard} from "../../components/c_RegularCard";
 import React from "react";
 
-export const CC_regularCards = (className, isBtnClose, onBtnCloseClick, onCardCloseClick, setIsPopupClose, isMapMode, data) => {
+export const CC_regularCards = (className, isBtnClose, onBtnCloseClick, onCardCloseClick, setIsPopupClose, isMapMode, data, cardsAmount) => {
     const {projects} = data;
     const rCards = projects.map((card, i) => <C_RegularCard
             isMapMode={isMapMode}
@@ -26,6 +26,7 @@ export const CC_regularCards = (className, isBtnClose, onBtnCloseClick, onCardCl
             i={i}
             onCardCloseClick={onCardCloseClick}
             setIsPopupClose={setIsPopupClose}
+            cardsAmount={cardsAmount}
         />
     // const rCards = cards.map((card, i) => <C_RegularCard
     //         isMapMode={isMapMode}

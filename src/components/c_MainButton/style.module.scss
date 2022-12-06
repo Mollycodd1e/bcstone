@@ -23,6 +23,7 @@ $time: 0.7s;
   &:hover {
     background-color: white;
     border-color:#DDDDDD;
+    transition: 1.3s ease-out;
 
     & .text {
       color: $color-dark-primary;

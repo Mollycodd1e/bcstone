@@ -13,7 +13,8 @@ export const С_CloseBtn = ({className, mode, onClick, setIsCloseAllBtn, i}) => 
         }
     );
     return (
+        // <div className={classes.btnWrapper}>
+        // <button className={cls} onClick={(evt) => onClick === null ?  evt.target.parentNode.style='display: none;' : onClick()} onMouseEnter={() => setIsCloseAllBtn(true)} onMouseLeave={() => setIsCloseAllBtn(false)}/>
         <button className={cls} onClick={(evt) => onClick === null ?  evt.target.parentNode.style='display: none;' : onClick()} onMouseEnter={() => setIsCloseAllBtn(true)}/>
-        // <button className={cls} onClick={(e) => e.target.parentNode.style='display: none;'} />
     )
 }

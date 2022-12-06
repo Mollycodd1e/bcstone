@@ -236,7 +236,7 @@
     }
   
     & div:nth-child(2) {
-      top: 44rem;
+      top: 43.7rem;
       right: 6.5rem;
     }
   
@@ -268,8 +268,14 @@
   
     & > div {
 
+      & button {
+        font-size: 18px;
+        line-height: 19px;
+        transition: 0.5s ease-out;
+      }
+
       & > div:nth-child(1) {
-        top: 0px;
+        top: -4px;
         right: 2.1rem;
       }
     

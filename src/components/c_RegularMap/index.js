@@ -14,7 +14,7 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
     const close = () => setIsCardVisible(false);
     const [shownSliders, setShownSliders] = useState([]);
     const [width, height] = useContext(Context);
-    const rCards = CC_regularCards(classes.RegularCard, isBtnClose, shownSliders.length > 1 && width >= sizes.widthDesktopSm ? null : () => close(), () => close(), setIsPopUpVisible, isMapMode, data);
+    const rCards = CC_regularCards(classes.RegularCard, isBtnClose, shownSliders.length > 1 && width >= sizes.widthDesktopSm ? null : () => close(), () => close(), setIsPopUpVisible, isMapMode, data, shownSliders.length);
     const [initialSlide, setInitialSlide] = useState(0);
     const [clustersProjects, setClustersProjects] = useState([]);
     
@@ -53,12 +53,12 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
                             </div>
                         : isCardVisible && width >= sizes.widthTabletMd ?
                             <div className={classes.fourCards}>
-                                {
+                                {   (console.log(shownSliders),
                                     shownSliders.slice(0, 4).map((slide, i) => {
                                         return (<div key={i}>
                                             {rCards[slide]}
                                         </div>)
-                                    })
+                                    }))
                                 }
                             </div>
                             // <div className={classes.oneCard}>

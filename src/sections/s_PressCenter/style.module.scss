@@ -2,11 +2,14 @@
 
   .wrapRoot {
     width: 100vw;
+    padding-top: 150px;
+    margin-top: -150px;
     max-width: $width-desktop-lg;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     background-color: white;
+    background-clip:content-box;
   }
 
   .root {
