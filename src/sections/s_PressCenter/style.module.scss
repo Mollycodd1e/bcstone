@@ -270,6 +270,10 @@
 @media (min-width: $width-notebook) {
   .wrapper {
     padding-bottom: 69px;
+
+    &::after {
+      bottom: 40px;
+    }
   }
 
   .root .C_MainButton {
