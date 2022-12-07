@@ -295,6 +295,15 @@ $pos: -12px;
   &.map_mod {
     @include mob_tab_map_card;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+
+    .closeBtnWrapper {
+      position: relative;
+      width: 170px;
+      height: 30px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
 }
 
@@ -341,8 +350,6 @@ $pos: -12px;
   width: 170px;
   height: 30px;
   position: absolute;
-  top: -10px;
-  right: -15px;
 }
 
 .faceWrap {
@@ -559,6 +566,13 @@ $pos: -12px;
         right: -5px;
       }
 
+      .closeBtnWrapper {
+        // top: -10px;
+        // right: -10px;
+        top: -10px;
+        right: -10px;
+      }
+
       & .С_CardFace {
         bottom: unset !important;
       }
@@ -603,8 +617,10 @@ $pos: -12px;
   }
 
   .closeBtnWrapper {
+    // top: -10px;
+    // right: -10px;
     top: -10px;
-    right: -10px;
+    right: -15px;
   }
 
   .CardBtn {
@@ -792,6 +808,11 @@ $pos: -12px;
       .CloseBtn {
         top: 0;
         right: 0;
+      }
+
+      .closeBtnWrapper {
+        top: -10px;
+        right: -12px;
       }
 
       .closeAllBtn {

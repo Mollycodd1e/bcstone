@@ -11,7 +11,8 @@ $time: 0.7s;
   border-width: 0;
   font-weight: normal;
   padding: 8px 22px 9px 22px;
-  background-color: $color-dark-primary;
+  // background-color: $color-dark-primary;
+  background-color: #2B2C2C;
   font-size: 12px;
   line-height: 13px;
   border-radius: 21px;
@@ -165,8 +166,9 @@ $time: 0.7s;
   .mode {
     text-decoration: unset;
     margin: 0 0 0 5px;
-    padding: 10px 34px 10px;
-    background-color: $color-dark-primary;
+    padding: 10px 34px 9px;
+    // background-color: $color-dark-primary;
+    background-color: #2B2C2C;
     border: 1px solid #707070;
 
     &:hover {
@@ -201,7 +203,7 @@ $time: 0.7s;
   .mode {
     border-radius: 22px;
     margin: -3px 0 0 8px;
-    padding: 11px 41px 12px 41px;
+    padding: 11px 41px 11px 41px;
 
     & .text {
       font-size: 18px;
@@ -224,6 +226,6 @@ $time: 0.7s;
 
   .mode {
     margin: -3px 0 0 -6px;
-    padding: 11px 42px 12px 41px;
+    padding: 11px 42px 11px 41px;
   }
 }

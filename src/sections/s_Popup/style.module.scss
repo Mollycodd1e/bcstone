@@ -38,6 +38,10 @@
   top: calc(50% - 235px);
   cursor: pointer;
   z-index: 10;
+
+  &:hover {
+    opacity: 0.75;
+  }
 }
 
 .closePopup {
@@ -126,7 +130,8 @@
 
 @media (min-width: $width-desktop-lg) {
   .closeIcon {
-    right: 113px;
-    top: calc(50% - 235px);
+    right: 50%;
+    top: calc(50% - 216px);
+    margin-right: -847px;
   }
 }
