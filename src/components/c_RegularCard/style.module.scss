@@ -381,6 +381,16 @@ $pos: -12px;
   .root{
     @include tabSm_card;
 
+    & ul[class*='list'] {
+      display: flex !important;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      & li:nth-child(3) {
+        margin-right: 100px;
+      }
+    }
+    
     &.map_mod {
       @include tabSm_map_card;
     }
@@ -412,8 +422,18 @@ $pos: -12px;
 @media (min-width: $width-notebook) {
   .root{
     @include tabSm_card;
-  }
 
+    & ul[class*='list'] {
+      display: flex !important;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      & li:nth-child(3) {
+        margin-right: 100px;
+      }
+    }
+  }
+  
   .CardBtn {
     bottom: -19px;
   }
@@ -439,6 +459,16 @@ $pos: -12px;
 
   .root {
     @include deskSm_card;
+
+    & ul[class*='list'] {
+      display: grid !important;
+      flex-direction: row;
+      flex-wrap: wrap;
+    
+      & li:nth-child(3) {
+        margin-right: unset;
+      }
+    }
 
     & a[class*='mainCardBtn'],
     & a[class*='CardBtn'],
