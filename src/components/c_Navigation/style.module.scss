@@ -166,6 +166,12 @@ $menuTransition: .4s;
   }
 }
 
+@media (max-width: 1439px) {
+  .C_MainButton {
+    border: none !important;
+  }
+}
+
 @media (min-width: $width-desktop-sm) {
   .C_Logo {
     margin: 0 113px 0 0;

@@ -7,7 +7,7 @@ import { sizes } from '../../data/sizes';
 import {Context} from "../../library";
 import Link from 'next/link';
 
-export const C_PressCard = ({className, date, image, title, description}) => {
+export const C_PressCard = ({className, newsId, date, image, title, description}) => {
     
     const cls = classNames(classes.root, {[className]: className});
     const textRef = useRef();
@@ -60,7 +60,7 @@ export const C_PressCard = ({className, date, image, title, description}) => {
     return (
         <div className={classNames(cls, {[classes.element_show]: isVisible})}>
             <div className={classNames(classes.data, {[classes.data_hover]: isHover})}>{dayOfNews}/{monthOfNews}</div>
-            <Link href={'#'}>
+            <Link href={`https://bc-stone.ru/news.html?id=${newsId}`} target="_blank">
                 <div className={classNames(classes.card_wrapper, {[classes.card_wrapper_hover]: isHover})} onMouseEnter={() => onHover()} onMouseLeave={() => onLeave()}>      
                     <Image src={image} layout='fill'/>
                     {/* <a href='#' onMouseEnter={() => onHover()} onMouseLeave={() => onLeave()}>Читать</a> */}

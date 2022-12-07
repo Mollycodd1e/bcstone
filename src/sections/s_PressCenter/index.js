@@ -33,7 +33,7 @@ export const S_PressCenter = ({className, data}) => {
     }).slice(0, 6);
     
     cuttedElements.forEach(item => {
-      allCards.push(<C_PressCard date={item.date} image={item.image} title={item.title} description={item.fullTextWithoutImg}/>)
+      allCards.push(<C_PressCard newsId={item.id} date={item.date} image={item.image} title={item.title} description={item.fullTextWithoutImg}/>)
     });
 
     function onEntry(entry) {

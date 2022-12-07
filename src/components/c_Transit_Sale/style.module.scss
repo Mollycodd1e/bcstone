@@ -24,6 +24,7 @@
     }
 
     & .link {
+      cursor: pointer;
       justify-self: flex-end;
     }
 
@@ -49,6 +50,7 @@
 }
 
 .link {
+  cursor: pointer;
   grid-area: link;
   display: flex;
   flex-direction: column;
