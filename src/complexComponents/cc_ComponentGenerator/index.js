@@ -11,15 +11,15 @@ import {S_ParagraphHeader} from "../../sections/s_ParagraphHeader";
 
 export const Cc_ComponentGenerator = ({pageData}) => {
 
-    const sortedData = pageData && pageData.length !==0 && pageData.sort(function (a, b) {
-        if (a.order > b.order) {
-            return 1;
-        }
-        if (a.order < b.order) {
-            return -1;
-        }
-        return 0;
-    });
+    // const sortedData = pageData && pageData.length !==0 && pageData.sort(function (a, b) {
+    //     if (a.order > b.order) {
+    //         return 1;
+    //     }
+    //     if (a.order < b.order) {
+    //         return -1;
+    //     }
+    //     return 0;
+    // });
 
     const componentCreator = (elPosition, sortedArr) => {
         return (
@@ -83,7 +83,7 @@ export const Cc_ComponentGenerator = ({pageData}) => {
     return (
       <>
           {pageData ?
-              sortedData.map((el, i, arr) => {
+              pageData.map((el, i, arr) => {
                   if (el.isShown) {
                       return componentCreator(i, arr)[el.type]
                   }
