@@ -14,11 +14,11 @@ export const C_Nav_Element = ({className, item, el, _key, briefing}) => {
         <li
             key={_key}
             className={cls}
-        >
+        >   <a href={`/#${name}`}>
             {/* <Link scroll={false} href={document.querySelector(`#${name}`) && window.location.hostname === 'localhost' ? `#${name}` : 
                 !document.querySelector(`#${name}`) && window.location.hostname === 'localhost' ? `/#${name}` : `/${name}.html}`}> */}
-                <a href={!briefing && window.location.hostname === 'localhost' ? `/#Develop` : 
-                briefing && window.location.hostname === 'localhost' ? `/#Develop` : `/${name}.html}`}>
+                {/* <a href={!briefing && window.location.hostname === 'localhost' ? `/#${name}` :  */}
+                {/* briefing && window.location.hostname === 'localhost' ? `/#${name}` : `/${name}.html}`}> */}
                 <span className={classNames({[classes.chevronWrapper]: toggle && sub.length !== 0})} 
                 onMouseOver={() => setToggle(prev => true)}
                 onMouseOut={() => setToggle(prev => false)}
