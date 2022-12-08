@@ -97,7 +97,7 @@ export default function News() {
                     {data.length !== 0 ? (
                             <>
                                 <div className={`common_top_bg + ${classes.common_top_bg_news}`}  ref={topMenuEl} id="top">
-                                    <S_MenuC menuOnTop={menuOnTop} data={mainPageData[0]} />
+                                    <S_MenuC menuOnTop={menuOnTop} data={mainPageData[0]}/>
                                 </div>
                                 <Cc_ComponentGenerator pageData={NewsPageData} />
                                  <S_Footer phone_number={contacts.phone} mail={contacts.mail} address={contacts.address}
