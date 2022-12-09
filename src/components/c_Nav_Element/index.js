@@ -9,7 +9,7 @@ export const C_Nav_Element = ({className, item, el, _key, briefing}) => {
 
     const [toggle, setToggle] = useState(false);
     const {name, sub} = el;
-    console.log(toggle)
+
     return (
         <li
             key={_key}

@@ -17,11 +17,14 @@ export const C_Switcher = ({className, isListView, setIsListView, setIsSwitcher,
           }
         });
     }
+
     let optionsSwitcher = { rootMargin: '-230px', threshold: [0.5] };
     let observerSwitcher = new IntersectionObserver( onEntrySwitcher, optionsSwitcher);
+
     if (switcherRef.current) {
         observerSwitcher.observe(switcherRef.current);
     }
+    
     return (
         <div className={cls} onClick={() => setIsListView(prev => !prev)} ref={switcherRef}>
             <span className={classes.list}>списком</span>

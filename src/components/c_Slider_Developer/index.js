@@ -68,7 +68,7 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
                 onInit={(evt) => {
                     set_my_swiper(evt)
                 }}
-                loop={width >= sizes.widthDesktopSm  ? false : loop}
+                loop={loop}
             >   
                 {items.map((item, i) => {
                     return (

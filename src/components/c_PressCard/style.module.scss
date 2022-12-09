@@ -43,7 +43,7 @@
   margin: 0 auto !important;
 }
 
-.card_wrapper a {
+.card_wrapper button{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -120,7 +120,7 @@
     width: 241px !important;
   }
   
-  .card_wrapper a {
+  .card_wrapper button{
     width: 241px;
     top: 23px;
     min-height: 118px;
@@ -177,7 +177,7 @@
     width: 292px !important;
   }
   
-  .card_wrapper a {
+  .card_wrapper button{
     width: 292px;
     min-height: 150px;
     max-height: 150px;
@@ -229,7 +229,7 @@
     width: 292px !important;
   }
   
-  .card_wrapper a {
+  .card_wrapper button{
     width: 292px;
     min-height: 150px;
     max-height: 150px;
@@ -302,7 +302,7 @@
     transition: 0.5s ease-out;
   }
 
-  .card_wrapper a {
+  .card_wrapper button{
     position: absolute;
     width: 292px;
     min-height: 156px;
@@ -313,7 +313,7 @@
     margin-top: 3px;
   }
   
-  .card_wrapper_hover a {
+  .card_wrapper_hover button{
     position: absolute;
     top: 23px;
     min-height: 156px;
@@ -369,14 +369,14 @@
     margin-bottom: 25px;
   }
 
-  .card_wrapper a {
+  .card_wrapper button{
     width: 324px;
     min-height: 178px;
     max-height: 178px;
     padding-bottom: 6px;
   }
   
-  .card_wrapper_hover a {
+  .card_wrapper_hover button{
     min-height: 178px;
     max-height: 178px;
   }
@@ -444,11 +444,11 @@
     transition: 0.5s ease-out;
   }
 
-  .card_wrapper a {
+  .card_wrapper button{
     padding-bottom: 6px;
   }
   
-  .card_wrapper_hover a {
+  .card_wrapper_hover button{
     top: 23px;
     min-height: 178px;
     max-height: 178px;

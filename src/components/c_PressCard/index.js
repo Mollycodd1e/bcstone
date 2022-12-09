@@ -5,7 +5,6 @@ import {useRef, useState } from 'react';
 import { useContext} from 'react';
 import { sizes } from '../../data/sizes';
 import {Context} from "../../library";
-import Link from 'next/link';
 
 export const C_PressCard = ({className, newsId, date, image, title, description}) => {
     
@@ -60,13 +59,12 @@ export const C_PressCard = ({className, newsId, date, image, title, description}
     return (
         <div className={classNames(cls, {[classes.element_show]: isVisible})}>
             <div className={classNames(classes.data, {[classes.data_hover]: isHover})}>{dayOfNews}/{monthOfNews}</div>
-            <Link href={`https://bc-stone.ru/news.html?id=${newsId}`} target="_blank">
-                <div className={classNames(classes.card_wrapper, {[classes.card_wrapper_hover]: isHover})} onMouseEnter={() => onHover()} onMouseLeave={() => onLeave()}>      
-                    <Image src={image} layout='fill'/>
-                    {/* <a href='#' onMouseEnter={() => onHover()} onMouseLeave={() => onLeave()}>Читать</a> */}
-                    <a href=''>Читать</a>
-                </div>
-            </Link>  
+                <a href={`https://bc-stone.ru/news.html?id=${newsId}`}>
+                    <div className={classNames(classes.card_wrapper, {[classes.card_wrapper_hover]: isHover})} onMouseEnter={() => onHover()} onMouseLeave={() => onLeave()}>      
+                        <Image src={image} layout='fill'/>
+                        <button href={`https://bc-stone.ru/news.html?id=${newsId}`}>Читать</button>
+                    </div>
+                </a>
             <div className={classes.description_wrapper}>
               <h3>{cropTitle}</h3>
               <p ref={textRef} dangerouslySetInnerHTML={{ __html: cropContent}}></p>

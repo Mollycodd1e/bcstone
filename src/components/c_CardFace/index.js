@@ -24,15 +24,16 @@ export const С_CardFace = ({className, logo, alt, img, img2x, imgMob, img2xMob,
                 {extraInfo !== '' ? <div className={classes.extraInfo} dangerouslySetInnerHTML={{ __html: extraInfo}} /> : null}
 
             </div> : 
-            <Link href={link}>
+
+            <a href={link}> 
                 <div className={cls}>
                 <div
                     className={classes.pic}
                     style={{ backgroundImage:  `url("${img}")`}}
                 />
                 {extraInfo !== '' ? <div className={classes.extraInfo} dangerouslySetInnerHTML={{ __html: extraInfo}} /> : null}
-
                 </div>
-            </Link>
+            </a>
+
     )
 }
