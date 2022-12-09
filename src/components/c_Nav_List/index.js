@@ -5,7 +5,7 @@ import {C_Nav_Element} from "../c_Nav_Element";
 
 export const C_Nav_List = ({className, data,  briefing}) => {
     const cls = classNames(classes.root, {[className]: className});
-    console.log(data)
+
     return (
         <ul className={cls}>
             {data.nav.map((el, item) => {
