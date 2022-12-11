@@ -325,10 +325,6 @@
     position: unset;
   }
 
-  .popupTitle {
-    max-width: 380px;
-  }
-
   .fields {
     grid-area: fields;
     padding: 64px 0 0;
@@ -359,6 +355,11 @@
       left: 38px;
       //margin-right: 298px;
     }
+  }
+
+  .popupTitle {
+    margin: 0 10px 0 0;
+    max-width: 380px;
   }
 
   .description {
