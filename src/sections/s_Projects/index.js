@@ -90,7 +90,7 @@ export const S_Projects = ({className, data, setIsPopupClose}) => {
                 <C_Switcher
                     className={classNames(classes.Switcher,{[classes.SwitcherShown]: isSwitcher})} setIsSwitcher={setIsSwitcher}
                     isListView={isListView}
-                    setIsListView={() => setIsListView(prev => !prev)}
+                    setIsListView={setIsListView}
                     isSubTitle={isSubTitle}
                 />
                 {isListView

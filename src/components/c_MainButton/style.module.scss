@@ -76,7 +76,8 @@ $time: 0.7s;
 .mode {
   font-size: 16px;
   line-height: 18px;
-  text-decoration: underline #2B2C2C;
+  text-decoration: underline;
+  text-decoration-color: #2B2C2C !important;
   background-color: unset;
   padding: 0;
 

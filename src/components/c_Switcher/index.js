@@ -26,9 +26,9 @@ export const C_Switcher = ({className, isListView, setIsListView, setIsSwitcher,
     }
     
     return (
-        <div className={cls} onClick={() => setIsListView(prev => !prev)} ref={switcherRef}>
-            <span className={classes.list}>списком</span>
-            <span className={classes.map}>на карте</span>
+        <div className={cls} ref={switcherRef}>
+            <span className={classes.list} onClick={() => setIsListView(true)}>списком</span>
+            <span className={classes.map} onClick={() => setIsListView(false)}>на карте</span>
             {/*<div className={classes.first} dangerouslySetInnerHTML={{ __html: list}} />*/}
             {/*<div className={classes.second} dangerouslySetInnerHTML={{ __html: map}} />*/}
             {/*<div className={classes.activeBg} />*/}

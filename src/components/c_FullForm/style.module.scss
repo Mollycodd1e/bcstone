@@ -141,6 +141,10 @@
   height: 69px;
 }
 
+.popupTitle {
+  max-width: 200px;
+}
+
 .description {
   font-size: 14px;
   line-height: 15px;
@@ -257,6 +261,10 @@
     left: 0;
   }
 
+  .popupFields {
+    max-width: 380px;
+  }
+
   .checkboxLabel {
     &:before {
       left: -19px;
@@ -277,6 +285,12 @@
         }
       }
     }
+  }
+}
+
+@media (min-width: 480px) {
+  .frame {
+    padding: 61px 32px 49px 49px;
   }
 }
 
@@ -309,6 +323,10 @@
     grid-area: titles;
     flex-direction: column-reverse;
     position: unset;
+  }
+
+  .popupTitle {
+    max-width: 380px;
   }
 
   .fields {
@@ -545,10 +563,6 @@
     padding: calc(1280px - 100vw) 0 0 0;
   }
 
-  .popupFields {
-    padding: 80px 0 0 0;
-  }
-
   .title {
     &::before {
       left: 86px;
@@ -609,6 +623,10 @@
       transform: translateX(-154px) translateY(-144px);
       //margin-right: 298px;
     }
+  }
+
+  .popupTitle {
+    max-width: 410px;
   }
 
   .textShown {
@@ -703,6 +721,10 @@
     }
   }
 
+  .popupTitle {
+    max-width: 450px;
+  }
+
   .description {
     font-size: 18px;
     line-height: 18px;
@@ -762,6 +784,10 @@
       left: -222px;
       bottom: 38px;
     }
+  }
+
+  .popupTitle {
+    max-width: 450px;
   }
 
   .description {

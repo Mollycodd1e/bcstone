@@ -49,10 +49,16 @@
 }
 
 .fullFormIndexSection {
+  padding: 0;
+  margin-top: 0;
 
   & > div {
     border-radius: 15px;
   }
+}
+
+.formWrapper {
+  min-width: 100%;
 }
 
 @media (min-width: $width-mobile-pre-md) {
@@ -72,9 +78,27 @@
   }
 }
 
+@media (min-width: 480px) {
+  .fullFormIndexSection {
+
+    & > div {
+      &::before {
+        right: -14px;
+      }
+    }
+  }
+}
+
 @media (min-width: $width-tablet-sm) {
   .root {
 
+  } 
+  
+  .fullFormIndexSection {
+    max-width: unset;
+    padding: 0 30px;
+    grid-template-columns: 270px 250px;
+    grid-column-gap: 30px;
   }
 
   .closeIcon {
@@ -83,6 +107,7 @@
     background-image: url("../../img/s_close_icon.svg");
     background-size: 46px 46px;
     right: 60px;
+    margin-right: unset;
     top: calc(50% - 200px);
   }
 
@@ -103,12 +128,17 @@
     height: 52px;
     background-size: 52px 52px;
     right: 74px;
-    top: calc(50% - 230px);
+    top: calc(50% - 256px);
   }
 
   .fullFormIndexSection {
+    padding: 0 52px;
+
     & > div {
       border-radius: 20px;
+      & > div {
+        grid-column-gap: 40px;
+      }
     }
   }
 }
@@ -124,13 +154,46 @@
     right: 72px;
     top: calc(50% - 256px);
   }
+
+  .fullFormIndexSection {
+    & > div {
+      & > div {
+        grid-column-gap: 90px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1285px) {
+  .closeIcon {
+    top: calc(50% - 220px);
+  }
 }
 
 @media (min-width: $width-desktop-sm) {
   .closeIcon {
     right: 113px;
-    top: calc(50% - 213px);
+    top: calc(50% - 240px);
   }
+
+  .fullFormIndexSection {
+    padding: 0 66px;
+
+    & > div {
+      & > div {
+        grid-column-gap: 75px;
+
+        & h3 {
+          margin-left: 10px;
+        }
+
+        & span[class*='description'] {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
 }
 
 @media (min-width: $width-desktop-lg) {
@@ -138,5 +201,13 @@
     right: 50%;
     top: calc(50% - 216px);
     margin-right: -847px;
+  }
+
+  .fullFormIndexSection {
+    & > div {
+      & > div {
+        grid-column-gap: 60px;
+      }
+    }
   }
 }

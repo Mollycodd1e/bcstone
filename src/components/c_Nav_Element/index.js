@@ -4,7 +4,7 @@ import {useState} from "react";
 import Link from 'next/link';
 import {C_Nav_Sub_List} from "../c_Nav_Sub_List";
 
-export const C_Nav_Element = ({className, item, el, _key, briefing}) => {
+export const C_Nav_Element = ({className, item, el, _key, briefing, setIsMobileMenuOpen}) => {
     const cls = classNames(classes.root, {[className]: className});
 
     const [toggle, setToggle] = useState(false);
@@ -14,7 +14,7 @@ export const C_Nav_Element = ({className, item, el, _key, briefing}) => {
         <li
             key={_key}
             className={cls}
-            
+            onClick={sub.length !== 0 ? null : () => setIsMobileMenuOpen(false)}
         >   <a href={`/#${name}`}>
             {/* <Link scroll={false} href={document.querySelector(`#${name}`) && window.location.hostname === 'localhost' ? `#${name}` : 
                 !document.querySelector(`#${name}`) && window.location.hostname === 'localhost' ? `/#${name}` : `/${name}.html}`}> */}

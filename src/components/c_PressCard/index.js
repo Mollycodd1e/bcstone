@@ -36,12 +36,12 @@ export const C_PressCard = ({className, newsId, date, image, title, description}
         cropTitle = title;
         cropContent = description;
     } else if ((newTitle.length >= 22) && (newTitle.length < 50) && (newContent.length >= 50)) {
-        spaceNumberTitle = newTitle.slice(0, 50).lastIndexOf(' ');
-        cropTitle = newTitle.slice(0, spaceNumberTitle);
+        spaceNumberTitle = newTitle.slice(0, width >= sizes.widthDesktopSm ? 35 : 40).lastIndexOf(' ');
+        cropTitle = newTitle.slice(0, spaceNumberTitle) + '...';
         spaceNumberContent = newContent.slice(0, width < sizes.widthTabletMd ? 95 : width >= sizes.widthDesktopLg ? 90 : width >= sizes.widthDesktopSm ? 86 : 105).lastIndexOf(' ');
         cropContent = newContent.slice(0, spaceNumberContent) + '...';
     } else if ((newTitle.length >= 22) && (newContent.length >= 50)) {
-        spaceNumberTitle = newTitle.slice(0, 30).lastIndexOf(' ');
+        spaceNumberTitle = newTitle.slice(0, 40).lastIndexOf(' ');
         cropTitle = newTitle.slice(0, spaceNumberTitle) + '...';
         spaceNumberContent = newContent.slice(0, width < sizes.widthTabletMd ? 90 :width >= sizes.widthDesktopLg ? 90 : width >= sizes.widthDesktopSm ? 70 : 105).lastIndexOf(' ');
         cropContent = newContent.slice(0, spaceNumberContent) + '...';
