@@ -126,26 +126,44 @@ export default function News() {
                                 {/*    <C_FullForm data={mainPageData[0]} className={classes.fullFormIndexSection} popup={true}/>*/}
                                 {/*</S_Popup>*/}
                                 {/*<Cc_ComponentGenerator pageData={NewsPageData} />*/}
+                                <div className={classes.newsWrapper}>
+                                    <div className={classes.title}>
+                                        Новости STONE
+                                    </div>
+                                    <ul className={classes.newsList}>
+                                        {newsData.map((el, i) => {
+                                            return (
+                                                <li className={classes.newsItem} key={i} onClick={() => setShownNews(i)}>
+                                                    <div className={classes.newsDate}>
+                                                        {el.date}
+                                                    </div>
+                                                    <div className={classes.newsTitle}>
+                                                        {el.title}
+                                                    </div>
+                                                </li>
+                                            )
+                                        })}
+                                    </ul>
+                                    {/*<div className={classes.commonTags}>*/}
+                                    {/*    common tags*/}
+                                    {/*</div>*/}
+                                    <div>
+                                        <div className={classes.imgWrapper}>
+                                            <img src={newsData[shownNews].image} />
 
-                                <div>
-                                    {newsData.map((el, i) => {
-                                        return (
-                                            <div key={i} onClick={() => setShownNews(i)}>
-                                                <div>
-                                                    {el.date}
-                                                </div>
-                                                <div>
-                                                    {el.title}
-                                                </div>
-                                            </div>
-                                        )
-                                    })}
-                                </div>
-                                <div>
-                                    <img src={newsData[shownNews].image} />
-                                    <div dangerouslySetInnerHTML={{ __html: newsData[shownNews].fullTextWithoutImg}}>
+                                            {/*<div className={classes.socials}>*/}
+                                            {/*    socials*/}
+                                            {/*</div>*/}
+                                        </div>
+                                        <div className={classes.descriptionWrapper}>
+                                            <div className={classes.description} dangerouslySetInnerHTML={{ __html: newsData[shownNews].fullTextWithoutImg}} />
+                                            {/*<div className={classes.personalTags}>*/}
+                                            {/*    personal tags*/}
+                                            {/*</div>*/}
+                                        </div>
                                     </div>
                                 </div>
+
                               <S_Footer phone_number={contacts.phone} mail={contacts.mail} address={contacts.address}
                                     sales_number={contacts.sales} telegram={contacts.telegram} copyright={copyright}/>
                             </>
