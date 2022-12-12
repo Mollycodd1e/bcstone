@@ -94,6 +94,7 @@ export default function News() {
     }
 
     const {contacts, copyright} = mocks;
+    const [isPopupClose, setIsPopupClose] = useState(true);
 
     const NewsPageData = data.length !==0 ? data.data[1].data : '';
 
@@ -120,8 +121,11 @@ export default function News() {
                     {data.length !== 0 && newsData.length !== 0 ? (
                             <>
                                 <div className={`common_top_bg + ${classes.common_top_bg_news}`}  ref={topMenuEl} id="top">
-                                    <S_MenuC menuOnTop={menuOnTop} data={mainPageData[0]} />
+                                    <S_MenuC menuOnTop={menuOnTop} data={mainPageData[0]} setIsPopupClose={setIsPopupClose} briefing={true}/>
                                 </div>
+                                <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
+                                    <C_FullForm data={mainPageData[0]} className={classes.fullFormIndexSection} popup={true}/>
+                                </S_Popup>
                                 {/*<S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>*/}
                                 {/*    <C_FullForm data={mainPageData[0]} className={classes.fullFormIndexSection} popup={true}/>*/}
                                 {/*</S_Popup>*/}
