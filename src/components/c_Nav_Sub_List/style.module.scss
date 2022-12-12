@@ -2,12 +2,12 @@
 
 .root {
   margin: 0 0 0 20px;
-  transition: margin $menuTransition ease-out, padding $menuTransition ease-out;
+  transition: margin 1s ease-out, padding 1s ease-out;
 
   & .secondLvlMenuEl {
     max-height: 0;
     overflow: hidden;
-    transition: max-height $menuTransition ease-out;
+    transition: 1s ease-out;
   }
 
   &.secondLvlMenuElWrapperActive {
@@ -16,6 +16,7 @@
 
     & .secondLvlMenuEl {
       max-height: 500px;
+      transition: 1s ease-out;
     }
   }
 }

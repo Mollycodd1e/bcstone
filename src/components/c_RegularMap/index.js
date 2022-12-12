@@ -7,10 +7,12 @@ import {Context} from "../../library";
 import {C_BasicMap} from "../c_BasicMap";
 import {C_Slider} from "../c_Slider";
 import {CC_regularCards} from "../../complexComponents/cc_regularCards";
+import { useRef } from "react";
 
 export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUpVisible, isMapMode, data}) => {
     const cls = classNames(classes.root, { [className]: className });
     const [isCardVisible, setIsCardVisible] = useState(false);
+    const cardRef = useRef();
     const close = () => setIsCardVisible(false);
     const [shownSliders, setShownSliders] = useState([]);
     const [width, height] = useContext(Context);
@@ -32,8 +34,12 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
     //     console.log('initialSlide', initialSlide)
     // }, [initialSlide]);
 
+    const closeCard = (evt) => {
+        cardRef.current.contains(evt.target) ? null : setIsCardVisible(false);
+    }
+
     return (
-        <div className={cls} >
+        <div className={cls} ref={cardRef}>
                     <C_BasicMap
                         initialSlide={initialSlide}
                         setInitialSlide={setInitialSlide}
@@ -46,12 +52,13 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
                         setShownSliders={setShownSliders}
                     />
                     {
-                        isCardVisible && width < sizes.widthTabletMd
+                        isCardVisible && width < sizes.widthTabletMd && shownSliders.length > 1
                         ?
                             <div className={classNames(classes.wrapperSlider, { [classes.mapSlider]: width === sizes.widthTabletSm })}>
                                 <C_Slider map={true} isBtnClose={isBtnClose} items={rCards} initialSlide={shownSliders[0]} setIsPopUpVisible={setIsPopUpVisible} slidersSpaceBetween={width >= 768 ? -200 : -215}/>
                             </div>
-                        : isCardVisible && width >= sizes.widthTabletMd ?
+                        // : isCardVisible && width >= sizes.widthTabletMd ?
+                        : isCardVisible  ?
                             <div className={classes.fourCards}>
                                 {   (console.log(shownSliders),
                                     shownSliders.slice(0, 4).map((slide, i) => {

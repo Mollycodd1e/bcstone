@@ -3,8 +3,9 @@ import classNames from "classnames";
 // import main_data from "../../data/main.json";
 import {C_Nav_Element} from "../c_Nav_Element";
 
-export const C_Nav_List = ({className, data}) => {
+export const C_Nav_List = ({className, data,  briefing, setIsMobileMenuOpen}) => {
     const cls = classNames(classes.root, {[className]: className});
+
     return (
         <ul className={cls}>
             {data.nav.map((el, item) => {
@@ -12,6 +13,8 @@ export const C_Nav_List = ({className, data}) => {
                     el={el}
                     item={item}
                     key={el+item}
+                    briefing={briefing}
+                    setIsMobileMenuOpen={setIsMobileMenuOpen}
                 />
             })}
         </ul>

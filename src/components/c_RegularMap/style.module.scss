@@ -45,8 +45,10 @@
 
   
   & > div:nth-child(1) {
-    top: 0;
-    right: 13rem;
+    top: 8px;
+    // right: 13rem;
+    right: 50%;
+    margin-right: -70px;
   }
 
   & div:nth-child(2) {
@@ -103,6 +105,14 @@
 
   .mapSlider {
     overflow: visible;
+  }
+
+  .fourCards {
+    & > div:nth-child(1) {
+      top: 0;
+      right: 10rem;
+      margin-right: 0;
+    }
   }
 }
 
