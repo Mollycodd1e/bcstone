@@ -4,9 +4,12 @@ import Script from 'next/script'
 import axios from "axios";
 import Head from 'next/head';
 import classes from  './styleNews.module.scss';
+import popupClasses from "../src/sections/s_Popup/style.module.scss";
 import { S_Footer } from "../src/sections/s_Footer";
 import { S_MenuC } from "../src/sections/s_MenuC";
 import {Cc_ComponentGenerator} from "../src/complexComponents/cc_ComponentGenerator";
+import {S_Popup} from "../src/sections/s_Popup";
+import {C_FullForm} from "../src/components/c_FullForm";
 
 export default function News() {
     const [width, height] = useWindowSize();
@@ -72,7 +75,7 @@ export default function News() {
     }
 
     const {contacts, copyright} = footerData;
-
+    const [isPopupClose, setIsPopupClose] = useState(true);
     const NewsPageData = data.length !==0 ? data.data[5].data : '';
 
     return (
@@ -97,8 +100,11 @@ export default function News() {
                     {data.length !== 0 ? (
                             <>
                                 <div className={`common_top_bg + ${classes.common_top_bg_news}`}  ref={topMenuEl} id="top">
-                                    <S_MenuC menuOnTop={menuOnTop} data={mainPageData[0]} />
+                                    <S_MenuC menuOnTop={menuOnTop} data={mainPageData[0]} setIsPopupClose={setIsPopupClose} briefing={true}/>
                                 </div>
+                                <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
+                                    <C_FullForm data={mainPageData[0]} className={popupClasses.fullFormIndexSection} popup={true}/>
+                                </S_Popup>
                                 <Cc_ComponentGenerator pageData={NewsPageData} />
                                  <S_Footer phone_number={contacts.phone} mail={contacts.mail} address={contacts.address}
                                     sales_number={contacts.sales} telegram={contacts.telegram} copyright={copyright}/>

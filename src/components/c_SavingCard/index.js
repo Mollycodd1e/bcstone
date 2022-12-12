@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import Image from 'next/image';
 import {useState} from 'react';
 import { useRef } from 'react';
-import Link from 'next/link';
 
 export const C_SavingCard = ({className, image, description, title, item}) => {
     const {link} = item;
@@ -41,16 +40,14 @@ export const C_SavingCard = ({className, image, description, title, item}) => {
 
     return (
         <div className={classNames(cls,{[classes.cardShown]: isCard})} ref={cardRef}>
-            <Link href={window.location.hostname === 'localhost' ? `/${link}` : `/${link}.html`}>
+            <a href={window.location.hostname === 'localhost' ? `/${link}` : `/${link}.html`}>
                 <div className={classNames(classes.card_wrapper, {[classes.card_wrapper_hover]: isHover})}  onMouseEnter={() => onHover()} onMouseLeave={() => onLeave()}>   
                     <h3>{title}</h3>     
                     <Image src={image} layout='fill'/>
-                    {/* <a href='#' onMouseEnter={() => onHover()} onMouseLeave={() => onLeave()}>Подробнее</a> */}
-                    {/* <a href='#'>{isHover === false && window.innerWidth >=1440 ? null : 'Подробнее'}</a> */}
-                    <a>Подробнее</a>
+                    <button href={window.location.hostname === 'localhost' ? `/${link}` : `/${link}.html`}>Подробнее</button>
                     <div className={classes.card_shadow}></div>
                 </div>
-            </Link>
+            </a>
             <p>{description}</p>
         </div>
     )

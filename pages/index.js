@@ -92,16 +92,6 @@ export default function Home() {
     const [isAboutPopupClose, setIsAboutPopupClose] = useState(true);
 
     const mocks = {
-        saving: [
-            {
-                url: '',
-                description: 'Бизнес-центры и офисные кварталы будут реализованы в Белорусском деловом районе и других перспективных Бизнес-районах Москвы'
-            },
-            {
-                url: '',
-                description: 'Бизнес-центры и офисные кварталы будут реализованы в Белорусском деловом районе и других перспективных Бизнес-районах Москвы'
-            }
-        ],
         contacts: {
             phone: '+7 (495) 124-45-67',
             mail: 'sales@bc-stone.ru',
@@ -137,10 +127,10 @@ export default function Home() {
                     {/*TODO: googletagmanager 2 ? */}
                     {/*<noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7GL33F";height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>*/}
                     
-                    {data.length !== 0 ? (
+                    {data.length !== 0 && newsData.length !== 0 ? (
                             <>
                                 <div className={`common_top_bg`}  ref={topMenuEl}>
-                                    <S_Menu menuOnTop={menuOnTop} data={mainPageData[0]} setIsPopupClose={setIsPopupClose} />
+                                    <S_Menu menuOnTop={menuOnTop} data={mainPageData[0]} setIsPopupClose={setIsPopupClose}/>
                                     <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
                                         <C_FullForm data={mainPageData[0]} className={classes.fullFormIndexSection} popup={true}/>
                                     </S_Popup>

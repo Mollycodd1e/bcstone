@@ -72,7 +72,22 @@ export const C_FullForm = ({className, data, popup}) => {
     const onButtonClick = (e) => {
         e.preventDefault();
 
-        if (isPhoneValid && isNameValid && isEmailValid && isCheckValid) {
+        if (!name && !phone) {
+            setErrorNameText(`${fieldText.require}`);
+            setErrorNameCode(`${errorType.orange}`);
+            setErrorPhoneText(`${fieldText.require}`);
+            setErrorPhoneCode(`${errorType.orange}`);
+        } else if (!name) {
+            setErrorNameText(`${fieldText.require}`);
+            setErrorNameCode(`${errorType.orange}`);
+        } else if (!phone) {
+            setErrorPhoneText(`${fieldText.require}`);
+            setErrorPhoneCode(`${errorType.orange}`);
+        } else {
+        }
+
+        // if (isPhoneValid && isNameValid && isEmailValid && isCheckValid) {
+        if (isPhoneValid && isNameValid && isCheckValid) {
             console.log("phone ", phone)
             console.log("name", name)
             console.log("email", email)
@@ -130,7 +145,12 @@ export const C_FullForm = ({className, data, popup}) => {
             <div className={classes.wrapper_frame}>
                 <div className={classes.frame}>
                     <div className={classNames(classes.titles,{[classes.textShown] : isTitle})} ref={titleRef}>
-                        <h3 dangerouslySetInnerHTML={{ __html: !isConfirmed ? title : titleSuccess}} className={classes.title}/>
+                        {popup ? 
+                            <h3 dangerouslySetInnerHTML={{ __html: !isConfirmed ? 'Оставьте заявку и получите консультацию' : titleSuccess}} 
+                                className={classNames(classes.title,{[classes.popupTitle] : popup})}/> :
+                            <h3 dangerouslySetInnerHTML={{ __html: !isConfirmed ? title : titleSuccess}} className={classes.title}/>
+                            
+                        }
                         <span dangerouslySetInnerHTML={{ __html: !isConfirmed ? description : descriptionSuccess}} className={classes.description}/>
                     </div>
                     <div className={classNames(classes.fields,{[classes.popupFields] : popup})}>
@@ -151,11 +171,13 @@ export const C_FullForm = ({className, data, popup}) => {
                                 placeholder={'Как к вам обращаться *'}
                                 value={name}
                                 onChange={(e) => {
-                                    setName(prev => e.target.value);
+                                    setName(e.target.value);
                                     if (!e.target.value) {
+                                        setErrorNameText(``);
+                                        setErrorNameCode(``);
                                         setIsNameValid(false);
-                                        setErrorNameText(`${fieldText.require}`);
-                                        setErrorNameCode(`${errorType.orange}`);
+                                        // setErrorNameText(`${fieldText.require}`);
+                                        // setErrorNameCode(`${errorType.orange}`);
                                     } else if (e.target.value && (!validName.test(e.target.value))) {
                                         setIsNameValid(false);
                                         setErrorNameText(`${fieldText.error.name}`);
@@ -186,8 +208,10 @@ export const C_FullForm = ({className, data, popup}) => {
 
                                            if (phoneNumber.toString().length > 0 && phoneNumber.toString().length < 11) {
                                                setIsPhoneValid(false);
-                                               setErrorPhoneText(`${fieldText.require}`);
-                                               setErrorPhoneCode(`${errorType.orange}`);
+                                            //    setErrorPhoneText(`${fieldText.require}`);
+                                            //    setErrorPhoneCode(`${errorType.orange}`);
+                                               setErrorPhoneText(``);
+                                               setErrorPhoneCode(``);
                                            } else {
                                                setIsPhoneValid(true);
                                                setErrorPhoneText(``);
