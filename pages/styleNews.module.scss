@@ -4,7 +4,7 @@
 .common_top_bg_news {
   height: 41px;
   background: transparent;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.161);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.161);
 }
 
 @media (min-width: $width-tablet-sm) {
@@ -26,8 +26,16 @@
 }
 
 .newsWrapper {
+  margin-top: 22px;
   display: grid;
-  margin-top: 60px;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas:
+          "title"
+          "newsList"
+          "commonTags"
+          "imgWrapper"
+          "descriptionWrapper";
 }
 
 .title {
@@ -37,9 +45,8 @@
   white-space: nowrap;
   font-size: 22px;
   line-height: 22px;
-  //padding-left: 1.25rem;
-  //padding-right: 1.25rem;
   border-bottom: 1px solid #acacac;
+  grid-area: title;
 }
 
 .newsList {
@@ -48,6 +55,7 @@
   padding: 18px 1.25rem 20px;
   max-height: 330px;
   overflow: auto;
+  grid-area: newsList;
 
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
@@ -74,8 +82,17 @@
   margin: 0 0 17px;
 }
 
+.commonTags {
+  grid-area: commonTags;
+}
+
+.imgWrapper {
+  grid-area: imgWrapper;
+}
+
 .descriptionWrapper {
   margin: 0 0 20px;
+  grid-area: descriptionWrapper;
 }
 
 .description {
@@ -147,15 +164,20 @@
     margin-bottom: 8px;
     font-weight: bold;
   }
+}
 
-  @media (max-width: 1550px) {
+
+@media (max-width: 1550px) {
+  .pressWrapper {
     & .pressTitle {
       font-size: 6vw;
       right: 150px;
     }
   }
+}
 
-  @media (max-width: 1919px) {
+@media (max-width: 1700px) {
+  .pressWrapper {
     padding: 0;
 
     & .pressTitle {
@@ -208,12 +230,28 @@
   }
 }
 
-
-
-
 @media (min-width: $width-tablet-sm) {
   .newsWrapper {
-    margin-top: 160px;
+    margin: 0;
+    background-image: linear-gradient(#fff,#fff),linear-gradient(#f8f8f8,#f8f8f8);
+    background-repeat: no-repeat;
+    background-size: 35% 100%,65% 100%;
+    background-position: left,right;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+          "title"
+          "newsList"
+          "commonTags"
+          "imgWrapper"
+          "descriptionWrapper";
+  }
+
+  .title {
+    margin-top: 25px;
+    font-size: 50px;
+    line-height: 50px;
+    border: none;
   }
 }
 
