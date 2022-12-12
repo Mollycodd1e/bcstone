@@ -4,6 +4,7 @@ import Script from 'next/script'
 import axios from "axios";
 import Head from 'next/head';
 import classes from  './styleNews.module.scss';
+import classess from "../src/sections/s_Popup/style.module.scss";
 import { S_Footer } from "../src/sections/s_Footer";
 import { S_MenuC } from "../src/sections/s_MenuC";
 import {Cc_ComponentGenerator} from "../src/complexComponents/cc_ComponentGenerator";

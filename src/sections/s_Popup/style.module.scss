@@ -64,6 +64,7 @@
 @media (min-width: $width-mobile-pre-md) {
   .fullFormIndexSection {
     & > div {
+
       &::before {
         background-image: url('../../img/popup-line-360.png');
         width: 91px;

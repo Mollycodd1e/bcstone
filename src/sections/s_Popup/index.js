@@ -27,7 +27,7 @@ export const S_Popup = ({className, data, isPopupClose, setIsPopupClose, childre
             <button className={classes.closeIcon} onClick={() => setIsPopupClose(true)}/>
             <div className={classes.formWrapper} ref={formRef}>
               {children}  
-              </div>  
+            </div>  
         </div>
     )
 }
