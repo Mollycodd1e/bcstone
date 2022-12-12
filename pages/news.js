@@ -17,6 +17,8 @@ import { S_Form } from "../src/sections/s_Form";
 import { S_Footer } from "../src/sections/s_Footer";
 import { S_MenuC } from "../src/sections/s_MenuC";
 import {Cc_ComponentGenerator} from "../src/complexComponents/cc_ComponentGenerator";
+import { S_Popup } from "../src/sections/s_Popup";
+import { C_FullForm } from "../src/components/c_FullForm";
 
 // const GenerateComponent = (pageData) => {
 //     const componentCreatorObj = {
@@ -166,6 +168,7 @@ export default function News() {
 
     const {contacts, copyright} = mocks;
 
+    const [isPopupClose, setIsPopupClose] = useState(true);
     const NewsPageData = data.length !==0 ? data.data[1].data : '';
 
     return (
@@ -190,8 +193,11 @@ export default function News() {
                     {data.length !== 0 ? (
                             <>
                                 <div className={`common_top_bg + ${classes.common_top_bg_news}`}  ref={topMenuEl} id="top">
-                                    <S_MenuC menuOnTop={menuOnTop} data={mainPageData[0]} />
+                                    <S_MenuC menuOnTop={menuOnTop} data={mainPageData[0]} setIsPopupClose={setIsPopupClose}/>
                                 </div>
+                                <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
+                                    <C_FullForm data={mainPageData[0]} className={classes.fullFormIndexSection} popup={true}/>
+                                </S_Popup>
                                 {/*<S_Tags hashtagList={NewsPageData[0].content.list}/>*/}
                                 <Cc_ComponentGenerator pageData={NewsPageData} />
                                 {/*<S_Header */}
