@@ -1,11 +1,5 @@
 @import '../src/styles/style.scss';
 
-//.common_top_bg_news {
-//  height: 41px;
-//  background: transparent;
-//  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.161);
-//}
-
 .newsWrapper {
   display: grid;
   margin-top: 60px;
@@ -68,6 +62,127 @@
     color: #3362e8;
   }
 }
+
+.pressWrapper {
+  position: relative;
+  max-width: 1920px;
+  width: 100%;
+
+  & .pressTitle {
+    position: absolute;
+    top: 220px;
+    right: 345px;
+    font-size: 100px;
+    line-height: 100px;
+    color: #2b2c2d;
+    font-weight: 900;
+  }
+
+  & .pressInfo {
+    margin-top: 103px;
+    margin-bottom: 142px;
+    background-image: linear-gradient(#efefef, #efefef), linear-gradient(#d6d6d6, #d6d6d6);
+    background-repeat: no-repeat;
+    background-size: 97% 93%, 97% 91%;
+    background-position: top left, right bottom;
+    padding: 67px 53px 84px;
+    display: flex;
+    flex-direction: column;
+    width: 57%;
+  }
+
+  & .pressText {
+    width: 65%;
+    font-size: 16px;
+    color: #2b2c2d;
+    margin-bottom: 37px;
+  }
+
+  & .phoneLink,
+  & .emailLink {
+    font-weight: bold;
+    font-size: 20px;
+    color: #2b2c2d;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  & .phoneLink {
+    margin-bottom: 9px;
+  }
+
+  & .emailLink {
+    font-weight: normal;
+    margin-bottom: 42px;
+  }
+
+  & .name {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  @media (max-width: 1550px) {
+    & .pressTitle {
+      font-size: 6vw;
+      right: 150px;
+    }
+  }
+
+  @media (max-width: 1919px) {
+    padding: 0;
+
+    & .pressTitle {
+      position: static;
+      font-size: 22px;
+      line-height: 22px;
+      margin-bottom: 13px;
+    }
+
+    & .pressInfo {
+      margin-top: 0;
+      margin-bottom: 0;
+      background-image: linear-gradient(#efefef, #efefef), linear-gradient(#d6d6d6, #d6d6d6);
+      background-repeat: no-repeat;
+      background-size: 100% 95%, 100% 100%;
+      background-position: center, right bottom;
+      padding: 54px 20px 52px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    & .pressText {
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      margin-bottom: 26px;
+    }
+
+    & .phoneLink {
+      font-size: 16px;
+      text-decoration: underline;
+      margin-bottom: 13px;
+    }
+
+    & .emailLink {
+      font-size: 12px;
+      margin-bottom: 26px;
+    }
+
+    & .name {
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+
+    & .post {
+      font-size: 12px;
+    }
+  }
+}
+
 
 
 

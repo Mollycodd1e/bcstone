@@ -147,19 +147,39 @@ export default function News() {
                                     {/*<div className={classes.commonTags}>*/}
                                     {/*    common tags*/}
                                     {/*</div>*/}
-                                    <div>
-                                        <div className={classes.imgWrapper}>
-                                            <img src={newsData[shownNews].image} />
+                                    <div className={classes.imgWrapper}>
+                                        <img src={newsData[shownNews].image} />
 
-                                            {/*<div className={classes.socials}>*/}
-                                            {/*    socials*/}
-                                            {/*</div>*/}
-                                        </div>
-                                        <div className={classes.descriptionWrapper}>
+                                        {/*<div className={classes.socials}>*/}
+                                        {/*    socials*/}
+                                        {/*</div>*/}
+                                    </div>
+                                    <div className={classes.descriptionWrapper}>
                                             <div className={classes.description} dangerouslySetInnerHTML={{ __html: newsData[shownNews].fullTextWithoutImg}} />
                                             {/*<div className={classes.personalTags}>*/}
                                             {/*    personal tags*/}
                                             {/*</div>*/}
+                                        </div>
+                                </div>
+                                <div className={classes.pressWrapper}>
+                                    <div className={classes.pressInfo}>
+                                        <div className={classes.pressTitle}>
+                                            Пресс-служба
+                                        </div>
+                                        <div className={classes.pressText}>
+                                            По вопросам информационного сотрудничества, а также партнерских мероприятий обращайтесь в пресс-службу компании STONE HEDGE:
+                                        </div>
+                                        <a href="tel:+74951064350" className={classes.phoneLink}>
+                                            +7 495 106-43-50
+                                        </a>
+                                        <a href="mailto:pr@stonehedge.ru" className={classes.emailLink}>
+                                            pr@stonehedge.ru
+                                        </a>
+                                        <div className={classes.name}>
+                                            Татьяна Желанова
+                                        </div>
+                                        <div className={classes.post}>
+                                            Руководитель PR-отдела
                                         </div>
                                     </div>
                                 </div>
