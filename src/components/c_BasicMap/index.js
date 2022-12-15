@@ -7,6 +7,9 @@ import useSupercluster from "use-supercluster";
 
 export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isCardVisible, data, clustersProjects, setClustersProjects, shownSliders, setShownSliders}) => {
 
+    useEffect(() => {
+
+    },[data])
     const {map_settings} = data;
     const mapRef = useRef();
     const [bounds, setBounds] = useState(null);
@@ -45,7 +48,8 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                     defaultCenter={{lat: parseFloat(map_settings.lat), lng: parseFloat(map_settings.lng)}}
                     defaultZoom={parseFloat(map_settings.defaultZoom)}
                     options={
-                        {   fullscreenControl: false,
+                        {   
+                            fullscreenControl: false,
                             fullscreenControlOptions: {position: -1},
                             styles: mapStyles.styles,
                             minZoom: parseFloat(map_settings.minZoom),

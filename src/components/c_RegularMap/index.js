@@ -37,7 +37,8 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
     const closeCard = (evt) => {
         cardRef.current.contains(evt.target) ? null : setIsCardVisible(false);
     }
-
+    // console.log(shownSliders)
+    // console.log(rCards.filter((item, i ) => shownSliders.includes(i, 0)))
     return (
         <div className={cls} ref={cardRef}>
                     <C_BasicMap
@@ -55,17 +56,17 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
                         isCardVisible && width < sizes.widthTabletMd && shownSliders.length > 1
                         ?
                             <div className={classNames(classes.wrapperSlider, { [classes.mapSlider]: width === sizes.widthTabletSm })}>
-                                <C_Slider map={true} isBtnClose={isBtnClose} items={rCards} initialSlide={shownSliders[0]} setIsPopUpVisible={setIsPopUpVisible} slidersSpaceBetween={width >= 768 ? -200 : -215}/>
+                                <C_Slider map={true} isBtnClose={isBtnClose} items={rCards.filter((item, i ) => shownSliders.includes(i, 0))} initialSlide={shownSliders[0]} setIsPopUpVisible={setIsPopUpVisible} slidersSpaceBetween={width >= 768 ? -200 : -215}/>
                             </div>
                         // : isCardVisible && width >= sizes.widthTabletMd ?
                         : isCardVisible  ?
                             <div className={classes.fourCards}>
-                                {   (console.log(shownSliders),
+                                { 
                                     shownSliders.slice(0, 4).map((slide, i) => {
                                         return (<div key={i}>
                                             {rCards[slide]}
                                         </div>)
-                                    }))
+                                    })
                                 }
                             </div>
                             // <div className={classes.oneCard}>

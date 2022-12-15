@@ -40,7 +40,7 @@
 
 @media (min-width: $width-desktop-sm) {
   .root {
-    margin: 0;
+    margin: 4px 0 0 0;
     padding: 18px 0 0;
     visibility: hidden;
     opacity: 0;
@@ -75,6 +75,9 @@
 }
 
 @media (min-width: $width-desktop-md) {
+  .root {
+    margin: 4px 0 0 0;
+  }
   .secondLvlMenuEl {
     font-size: 20px;
   }
@@ -82,7 +85,7 @@
 
 @media (min-width: $width-desktop-lg) {
   .root {
-    margin: 0;
+    // margin: 0;
     padding: 18px 0 0;
     visibility: hidden;
     opacity: 0;
