@@ -146,9 +146,9 @@ export default function News() {
                                             )
                                         })}
                                     </ul>
-                                    {/*<div className={classes.commonTags}>*/}
-                                    {/*    common tags*/}
-                                    {/*</div>*/}
+                                    <div className={classes.commonTags}>
+
+                                    </div>
                                     <div className={classes.imgWrapper}>
                                         <img src={newsData[shownNews].image} />
 
