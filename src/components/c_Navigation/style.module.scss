@@ -14,7 +14,7 @@ $menuTransition: .4s;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("../../img/s_burger.svg");
-  transition: background-image $menuTransition;
+  //transition: background-image $menuTransition;
   cursor: pointer;
   z-index: 10;
   position: absolute;

@@ -19,7 +19,6 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
     const rCards = CC_regularCards(classes.RegularCard, isBtnClose, shownSliders.length > 1 && width >= sizes.widthDesktopSm ? null : () => close(), () => close(), setIsPopUpVisible, isMapMode, data, shownSliders.length);
     const [initialSlide, setInitialSlide] = useState(0);
     const [clustersProjects, setClustersProjects] = useState([]);
-    
    
     useEffect(() => {
         // console.log('clustersProjects', clustersProjects)
@@ -34,32 +33,28 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
     //     console.log('initialSlide', initialSlide)
     // }, [initialSlide]);
 
-    const closeCard = (evt) => {
-        cardRef.current.contains(evt.target) ? null : setIsCardVisible(false);
-    }
-    // console.log(shownSliders)
-    // console.log(rCards.filter((item, i ) => shownSliders.includes(i, 0)))
     return (
-        <div className={cls} ref={cardRef}>
+        <div className={cls} >
                     <C_BasicMap
                         initialSlide={initialSlide}
                         setInitialSlide={setInitialSlide}
                         setIsCardVisible={setIsCardVisible}
                         isCardVisible={isCardVisible}
                         data={data}
-                        clustersProjects={clustersProjects}
+                        //clustersProjects={clustersProjects}
                         setClustersProjects={setClustersProjects}
                         shownSliders={shownSliders}
                         setShownSliders={setShownSliders}
                     />
+                    
                     {
                         isCardVisible && width < sizes.widthTabletMd && shownSliders.length > 1
                         ?
                             <div className={classNames(classes.wrapperSlider, { [classes.mapSlider]: width === sizes.widthTabletSm })}>
-                                <C_Slider map={true} isBtnClose={isBtnClose} items={rCards.filter((item, i ) => shownSliders.includes(i, 0))} initialSlide={shownSliders[0]} setIsPopUpVisible={setIsPopUpVisible} slidersSpaceBetween={width >= 768 ? -200 : -215}/>
+                                <C_Slider map={true} isBtnClose={isBtnClose} items={rCards.filter((item, i ) => shownSliders.includes(i, 0))} initialSlide={shownSliders[0]} setIsPopUpVisible={setIsPopUpVisible} slidersSpaceBetween={width >= 768 ? -200 : -215} loop={false}/>
                             </div>
                         // : isCardVisible && width >= sizes.widthTabletMd ?
-                        : isCardVisible  ?
+                        : isCardVisible ?                            
                             <div className={classes.fourCards}>
                                 { 
                                     shownSliders.slice(0, 4).map((slide, i) => {
