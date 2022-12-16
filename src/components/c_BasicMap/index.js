@@ -44,7 +44,7 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
             <div className={classes.wrapMap}>
                 {points.length !== 0 ? <GoogleMapReact
                 
-                    defaultCenter={{lat: parseFloat(map_settings.lat), lng: parseFloat(map_settings.lng)}}
+                    defaultCenter={{lat: latitude, lng: longitude}}
                     defaultZoom={parseFloat(map_settings.defaultZoom)}
                     options={
                         {   
@@ -60,9 +60,8 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                     onGoogleApiLoaded={({ map }) => {
                         mapRef.current = map;
                     }}
-                   
+                    resetBoundsOnResize={true}
                     onChange={({ zoom, bounds }) => {
-                        console.log(bounds)
                         setZoom(zoom)
                         setBounds([
                             bounds.nw.lng,
@@ -75,7 +74,6 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                     {
                         clusters.map((project, i) => {
                             const [ longitude, latitude ] = project.geometry.coordinates;
-                            console.log(longitude)
                             const {
                                 cluster: isCluster,
                                 point_count: pointCount
