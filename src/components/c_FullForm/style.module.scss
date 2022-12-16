@@ -64,6 +64,7 @@
 .wrapperInputCommon {
   width: 100%;
   position: relative;
+  transition: 0.4s ease-out;
 
   &:not(:last-of-type) {
     margin-bottom: 17px;
@@ -78,6 +79,7 @@
   & .inputCommon {
     border-color: $color-require-border;
     margin-bottom: 10px;
+    transition: 0.4s ease-out;
   }
 
   & .errorMessage {
@@ -90,6 +92,7 @@
   & .inputCommon {
     border-color: $color-error-border;
     margin-bottom: 10px;
+    transition: 0.4s ease-out;
   }
 
   & .errorMessage {
@@ -121,6 +124,7 @@
   padding: 9px 10px 8px 23px;
   font-family: "Codec Cold News", "Arial", sans-serif;
   cursor: pointer;
+  transition: 0.4s ease-out;
 
   &::placeholder {
     font-size: 12px;
