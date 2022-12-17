@@ -157,10 +157,14 @@ export default function News() {
                                         {/*</div>*/}
                                     </div>
                                     <div className={classes.descriptionWrapper}>
-                                            <div className={classes.description} dangerouslySetInnerHTML={{ __html: newsData[shownNews].fullTextWithoutImg}} />
-                                            {/*<div className={classes.personalTags}>*/}
-                                            {/*    personal tags*/}
-                                            {/*</div>*/}
+                                        <div className={classes.description} dangerouslySetInnerHTML={{ __html: newsData[shownNews].fullTextWithoutImg}} />
+                                            <div className={classes.tags}>
+                                                {newsData[shownNews].tags?.map((el, i) => {
+                                                    return (
+                                                            <div className={classes.theTag} key={i}>#{el}</div>
+                                                    )
+                                                })}
+                                            </div>
                                         </div>
                                 </div>
                                 <div className={classes.pressWrapper}>
