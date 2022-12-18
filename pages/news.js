@@ -137,14 +137,28 @@ export default function News() {
         })
     },[newsData]);
 
-    // useEffect(() => {
-    //     // установить новость по id в адресной строке
-    //     newsData?.forEach((el, i) => {
-    //         if (router.query.id === el.id.toString()) {
-    //             setShownNews(i)
-    //         }
-    //     })
-    // },[newsData]);
+    useEffect(() => {
+        // установить новость по id в адресной строке
+        filteredNews(newsData,filters)?.forEach((el, i) => {
+            if (router.query.id === el.id.toString()) {
+                setShownNews(i)
+            }
+
+            // let queryParams = new URLSearchParams(window.location.search);
+            // // добавить id параметром
+            // queryParams.set("id", el.id.toString());
+            // history.replaceState(null, null, "?" + queryParams.toString());
+        })
+    },[newsData]);
+
+    useEffect(() => {
+        // filteredNews(newsData,filters)?.forEach((el, i) => {
+            let queryParams = new URLSearchParams(window.location.search);
+            // добавить id параметром
+            queryParams.set("id", filteredNews(newsData,filters) && filteredNews(newsData,filters)[0] && filteredNews(newsData,filters)[0].id.toString());
+            history.replaceState(null, null, "?" + queryParams.toString());
+        // })
+    },[filters.length]);
 
     return (
             <Context.Provider value={[width, height]}>
@@ -198,10 +212,10 @@ export default function News() {
                                                         queryParams.set("id", el.id.toString());
                                                         history.replaceState(null, null, "?" + queryParams.toString());
                                                         // добавить теги параметрами
-                                                        el.tags?.forEach((el, i) => {
-                                                            queryParams.set(`hs_${i + 1}`, el);
-                                                            history.replaceState(null, null, "?" + queryParams.toString());
-                                                        })
+                                                        // el.tags?.forEach((el, i) => {
+                                                        //     queryParams.set(`hs_${i + 1}`, el);
+                                                        //     history.replaceState(null, null, "?" + queryParams.toString());
+                                                        // })
                                                     }}>
                                                     <div className={classes.newsDate}>
                                                         {el.date}
@@ -229,7 +243,11 @@ export default function News() {
                                                           }
                                                           return [...prev, el]
                                                       })
-                                                      setShownNews(0);
+                                                      // setShownNews(0);
+                                                      // let queryParams = new URLSearchParams(window.location.search);
+                                                      // // добавить id параметром
+                                                      // queryParams.set("id", filteredNews(newsData,filters)[shownNews].id.toString());
+                                                      // history.replaceState(null, null, "?" + queryParams.toString());
                                                   }}
                                               >
                                                   #{el}
@@ -254,7 +272,11 @@ export default function News() {
                                                                 key={i}
                                                                 onClick={() => {
                                                                     setFilters((prev) => [el]);
-                                                                    // setShownNews(prev => 0);
+                                                                    // setShownNews(0);
+                                                                    // let queryParams = new URLSearchParams(window.location.search);
+                                                                    // // добавить id параметром
+                                                                    // queryParams.set("id", filteredNews(newsData,filters)[shownNews].id.toString());
+                                                                    // history.replaceState(null, null, "?" + queryParams.toString());
                                                                 }}
                                                             >#{el}</div>
                                                     )
