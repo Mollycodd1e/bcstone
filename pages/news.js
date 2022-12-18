@@ -1,18 +1,15 @@
 import {useEffect, useRef, useState} from "react";
 import { useRouter } from 'next/router'
 import {useWindowSize, Context} from "../src/library";
-import Script from 'next/script'
 import axios from "axios";
 import Head from 'next/head';
 import classes from  './styleNews.module.scss';
 import popupClasses from "../src/sections/s_Popup/style.module.scss";
 import { S_Footer } from "../src/sections/s_Footer";
 import { S_MenuC } from "../src/sections/s_MenuC";
-import {Cc_ComponentGenerator} from "../src/complexComponents/cc_ComponentGenerator";
 import {C_FullForm} from "../src/components/c_FullForm";
 import {S_Popup} from "../src/sections/s_Popup";
 import classNames from 'classnames';
-import {log} from "util";
 
 export default function News() {
     const [width, height] = useWindowSize();
@@ -39,13 +36,6 @@ export default function News() {
     const [shownNews, setShownNews] = useState(0);
     const [allTags, setAllTags] = useState([]);
     const [filters, setFilters] = useState([] );
-
-    // useEffect(() => {
-    //     if (router.query.filter) {
-    //         setFilters([router.query.filter]);
-    //         // filteredNews(newsData, [router.query.filter]);
-    //     }
-    // }, [])
 
     const filteredNews = (news, filtersArr) => {
         // filtersArr - массив по которому будем фильтровать уже выведенные фильтры
@@ -127,10 +117,6 @@ export default function News() {
     const {contacts, copyright} = mocks;
     const [isPopupClose, setIsPopupClose] = useState(true);
 
-    // const NewsPageData = data.length !==0 ? data.data[1].data : '';
-
-    // console.log('newsData', newsData)
-
     useEffect(() => {
         newsData?.forEach((el) => {
             // собрать все теги (без обработки на уникальность)
@@ -150,14 +136,11 @@ export default function News() {
         }
     },[newsData]);
 
-
     useEffect(() => {
-        // filteredNews(newsData,filters)?.forEach((el, i) => {
-            let queryParams = new URLSearchParams(window.location.search);
-            // добавить id параметром
-            queryParams.set("id", filteredNews(newsData,filters) && filteredNews(newsData,filters)[0] && filteredNews(newsData,filters)[0].id.toString());
-            history.replaceState(null, null, "?" + queryParams.toString());
-        // })
+        let queryParams = new URLSearchParams(window.location.search);
+        // добавить id параметром
+        queryParams.set("id", filteredNews(newsData,filters) && filteredNews(newsData,filters)[0] && filteredNews(newsData,filters)[0].id.toString());
+        history.replaceState(null, null, "?" + queryParams.toString());
     },[filters.length]);
 
     return (
@@ -187,10 +170,6 @@ export default function News() {
                                         <C_FullForm data={mainPageData[0]} className={popupClasses.fullFormIndexSection} popup={true}/>
                                     </S_Popup>
                                 </div>
-                                {/*<S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>*/}
-                                {/*    <C_FullForm data={mainPageData[0]} className={classes.fullFormIndexSection} popup={true}/>*/}
-                                {/*</S_Popup>*/}
-                                {/*<Cc_ComponentGenerator pageData={NewsPageData} />*/}
                                 <div className={classes.newsWrapper}>
                                     <div className={classes.title}>
                                         Новости STONE
@@ -211,11 +190,6 @@ export default function News() {
                                                         // добавить id параметром
                                                         queryParams.set("id", el.id.toString());
                                                         history.replaceState(null, null, "?" + queryParams.toString());
-                                                        // добавить теги параметрами
-                                                        // el.tags?.forEach((el, i) => {
-                                                        //     queryParams.set(`hs_${i + 1}`, el);
-                                                        //     history.replaceState(null, null, "?" + queryParams.toString());
-                                                        // })
                                                     }}>
                                                     <div className={classes.newsDate}>
                                                         {el.date}
@@ -243,11 +217,6 @@ export default function News() {
                                                           }
                                                           return [...prev, el]
                                                       })
-                                                      // setShownNews(0);
-                                                      // let queryParams = new URLSearchParams(window.location.search);
-                                                      // // добавить id параметром
-                                                      // queryParams.set("id", filteredNews(newsData,filters)[shownNews].id.toString());
-                                                      // history.replaceState(null, null, "?" + queryParams.toString());
                                                   }}
                                               >
                                                   #{el}
@@ -272,11 +241,6 @@ export default function News() {
                                                                 key={i}
                                                                 onClick={() => {
                                                                     setFilters((prev) => [el]);
-                                                                    // setShownNews(0);
-                                                                    // let queryParams = new URLSearchParams(window.location.search);
-                                                                    // // добавить id параметром
-                                                                    // queryParams.set("id", filteredNews(newsData,filters)[shownNews].id.toString());
-                                                                    // history.replaceState(null, null, "?" + queryParams.toString());
                                                                 }}
                                                             >#{el}</div>
                                                     )
@@ -328,7 +292,6 @@ export default function News() {
                     }
 
                 </div>
-                {/*<Script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3xsHwkwIhhfEFp3og9dunH0Jw39tsxi0" strategy="beforeInteractive"/>*/}
             </Context.Provider>
     )
 }
