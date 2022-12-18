@@ -12,6 +12,7 @@ import {Cc_ComponentGenerator} from "../src/complexComponents/cc_ComponentGenera
 import {C_FullForm} from "../src/components/c_FullForm";
 import {S_Popup} from "../src/sections/s_Popup";
 import classNames from 'classnames';
+import {log} from "util";
 
 export default function News() {
     const [width, height] = useWindowSize();
@@ -37,7 +38,14 @@ export default function News() {
     const [newsData, setNewsData] = useState([]);
     const [shownNews, setShownNews] = useState(0);
     const [allTags, setAllTags] = useState([]);
-    const [filters, setFilters] = useState([]);
+    const [filters, setFilters] = useState([] );
+
+    // useEffect(() => {
+    //     if (router.query.filter) {
+    //         setFilters([router.query.filter]);
+    //         // filteredNews(newsData, [router.query.filter]);
+    //     }
+    // }, [])
 
     const filteredNews = (news, filtersArr) => {
         // filtersArr - массив по которому будем фильтровать уже выведенные фильтры
@@ -135,21 +143,13 @@ export default function News() {
                 setShownNews(i)
             }
         })
+
+        if (router.query.filter) {
+            setFilters([router.query.filter]);
+            // filteredNews(newsData, [router.query.filter]);
+        }
     },[newsData]);
 
-    useEffect(() => {
-        // установить новость по id в адресной строке
-        filteredNews(newsData,filters)?.forEach((el, i) => {
-            if (router.query.id === el.id.toString()) {
-                setShownNews(i)
-            }
-
-            // let queryParams = new URLSearchParams(window.location.search);
-            // // добавить id параметром
-            // queryParams.set("id", el.id.toString());
-            // history.replaceState(null, null, "?" + queryParams.toString());
-        })
-    },[newsData]);
 
     useEffect(() => {
         // filteredNews(newsData,filters)?.forEach((el, i) => {
