@@ -12,7 +12,9 @@ export const S_Tags = ({className, hashtagList}) => {
             <C_BackButton />   
             <ul>
                 {hashtagList.map((hashtag, i) =>
-                    <li key={hashtag.id + i} >
+                    <li
+                        key={hashtag.id + i}
+                    >
                         <C_Tag text={hashtag.name}/>
                     </li>    
                 )}

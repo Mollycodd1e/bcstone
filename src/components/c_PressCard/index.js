@@ -59,10 +59,10 @@ export const C_PressCard = ({className, newsId, date, image, title, description}
     return (
         <div className={classNames(cls, {[classes.element_show]: isVisible})}>
             <div className={classNames(classes.data, {[classes.data_hover]: isHover})}>{dayOfNews}/{monthOfNews}</div>
-                <a href={`https://bc-stone.ru/news.html?id=${newsId}`}>
+                <a href={window.location.hostname === 'localhost' ? `/news?id=${newsId}` : `/news.html?id=${newsId}`}>
                     <div className={classNames(classes.card_wrapper, {[classes.card_wrapper_hover]: isHover})} onMouseEnter={() => onHover()} onMouseLeave={() => onLeave()}>      
                         <Image src={image} layout='fill'/>
-                        <button href={`https://bc-stone.ru/news.html?id=${newsId}`}>Читать</button>
+                        <button href={window.location.hostname === 'localhost' ? `/news?id=${newsId}` : `/news.html?id=${newsId}`}>Читать</button>
                     </div>
                 </a>
             <div className={classes.description_wrapper}>
