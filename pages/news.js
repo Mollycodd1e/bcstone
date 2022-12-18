@@ -143,7 +143,16 @@ export default function News() {
                                     <ul className={classes.newsList}>
                                         {newsData.map((el, i) => {
                                             return (
-                                                <li className={classes.newsItem} key={i} onClick={() => setShownNews(i)}>
+                                                <li
+                                                    className={classes.newsItem}
+                                                    key={i}
+                                                    onClick={() => {
+                                                        setShownNews(i);
+
+                                                        let queryParams = new URLSearchParams(window.location.search);
+                                                        queryParams.set("id", el.id.toString());
+                                                        history.replaceState(null, null, "?"+queryParams.toString());
+                                                    }}>
                                                     <div className={classes.newsDate}>
                                                         {el.date}
                                                     </div>
