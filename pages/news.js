@@ -50,10 +50,15 @@ export default function News() {
 
             // пересечение коллекций можно представить следующим образом
             const intersection = new Set([...tagsSet].filter(x => filterArrSet.has(x)));
+
             // вывод элемента, в котором есть хотя бы один тег из фильтра
             // или если массив-для-фильтрации пустой - вывести оригинал
-            if (intersection.size !== 0 || filterArrSet.size === 0) return el;
+            return intersection.size !== 0 || filterArrSet.size === 0;
         });
+
+        if (newNews.length === 0) {
+            return news;
+        }
 
         return newNews;
     }
