@@ -1,4 +1,5 @@
 import {useEffect, useRef, useState} from "react";
+import { useRouter } from 'next/router'
 import {useWindowSize, Context} from "../src/library";
 import Script from 'next/script'
 import axios from "axios";
@@ -13,7 +14,7 @@ import {S_Popup} from "../src/sections/s_Popup";
 
 export default function News() {
     const [width, height] = useWindowSize();
-
+    const router = useRouter();
     const topMenuEl = useRef(null);
     const [menuOnTop, isMenuOnTop] = useState(false);
 
@@ -101,9 +102,19 @@ export default function News() {
 
     useEffect(() => {
         newsData?.forEach((el) => {
+            // собрать все теги (без обработки на уникальность)
             setAllTags((prev) => [...prev, ...el.tags] );
         })
-    },[newsData])
+    },[newsData]);
+
+    useEffect(() => {
+        // установить новость по id в адресной строке
+        newsData?.forEach((el, i) => {
+            if (router.query.id === el.id.toString()) {
+                setShownNews(i)
+            }
+        })
+    },[newsData]);
 
     return (
             <Context.Provider value={[width, height]}>
@@ -147,11 +158,20 @@ export default function News() {
                                                     className={classes.newsItem}
                                                     key={i}
                                                     onClick={() => {
+                                                        // установить новость
                                                         setShownNews(i);
+                                                        // очистить параметры в поисковой строке
+                                                        history.pushState({}, null, location.href.split('?')[0]);
 
                                                         let queryParams = new URLSearchParams(window.location.search);
+                                                        // добавить id параметром
                                                         queryParams.set("id", el.id.toString());
-                                                        history.replaceState(null, null, "?"+queryParams.toString());
+                                                        history.replaceState(null, null, "?" + queryParams.toString());
+                                                        // добавить теги параметрами
+                                                        el.tags?.forEach((el, i) => {
+                                                            queryParams.set(`hs_${i + 1}`, el);
+                                                            history.replaceState(null, null, "?" + queryParams.toString());
+                                                        })
                                                     }}>
                                                     <div className={classes.newsDate}>
                                                         {el.date}
