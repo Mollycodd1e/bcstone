@@ -11,6 +11,7 @@ import { S_MenuC } from "../src/sections/s_MenuC";
 import {Cc_ComponentGenerator} from "../src/complexComponents/cc_ComponentGenerator";
 import {C_FullForm} from "../src/components/c_FullForm";
 import {S_Popup} from "../src/sections/s_Popup";
+import classNames from 'classnames';
 
 export default function News() {
     const [width, height] = useWindowSize();
@@ -36,6 +37,28 @@ export default function News() {
     const [newsData, setNewsData] = useState([]);
     const [shownNews, setShownNews] = useState(0);
     const [allTags, setAllTags] = useState([]);
+    const [filters, setFilters] = useState([]);
+
+    const filteredNews = (news, filtersArr) => {
+        // filtersArr - массив по которому будем фильтровать уже выведенные фильтры
+        // функция работает по принципу пересчечения
+        const newNews = news.filter((el) => {
+            const { tags } = el;
+            // теги самих новостей в виде коллекции
+            const tagsSet = new Set(tags);
+
+            // теги фильтра новостей в виде коллекции
+            const filterArrSet = new Set(filtersArr);
+
+            // пересечение коллекций можно представить следующим образом
+            const intersection = new Set([...tagsSet].filter(x => filterArrSet.has(x)));
+            // вывод элемента, в котором есть хотя бы один тег из фильтра
+            // или если массив-для-фильтрации пустой - вывести оригинал
+            if (intersection.size !== 0 || filterArrSet.size === 0) return el;
+        });
+
+        return newNews;
+    }
 
     useEffect(() => {
         const fetchData = async () => {
@@ -105,16 +128,23 @@ export default function News() {
             // собрать все теги (без обработки на уникальность)
             setAllTags((prev) => [...prev, ...el.tags] );
         })
-    },[newsData]);
 
-    useEffect(() => {
         // установить новость по id в адресной строке
-        newsData?.forEach((el, i) => {
+        filteredNews(newsData,filters)?.forEach((el, i) => {
             if (router.query.id === el.id.toString()) {
                 setShownNews(i)
             }
         })
     },[newsData]);
+
+    // useEffect(() => {
+    //     // установить новость по id в адресной строке
+    //     newsData?.forEach((el, i) => {
+    //         if (router.query.id === el.id.toString()) {
+    //             setShownNews(i)
+    //         }
+    //     })
+    // },[newsData]);
 
     return (
             <Context.Provider value={[width, height]}>
@@ -135,7 +165,7 @@ export default function News() {
                 {/*<noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7GL33F";height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>*/}
 
                 <div className={"page-wrapper"}>                                  
-                    {data.length !== 0 && newsData.length !== 0 ? (
+                    {data.length !== 0 && filteredNews(newsData,filters).length !== 0 ? (
                             <>
                                 <div className={`common_top_bg + ${classes.common_top_bg_news}`}  ref={topMenuEl} id="top">
                                     <S_MenuC menuOnTop={menuOnTop} data={mainPageData[0]} setIsPopupClose={setIsPopupClose} briefing={true}/>
@@ -152,7 +182,7 @@ export default function News() {
                                         Новости STONE
                                     </div>
                                     <ul className={classes.newsList}>
-                                        {newsData.map((el, i) => {
+                                        {filteredNews(newsData,filters).map((el, i) => {
                                             return (
                                                 <li
                                                     className={classes.newsItem}
@@ -185,26 +215,48 @@ export default function News() {
                                     </ul>
                                     <div className={classes.commonTags}>
                                         {[...new Set(allTags)].map((el, i) => {
+                                            const filtersCollection = new Set(filters);
                                             return (
-                                              <div key={i} className={classes.commonTagsElement}>
+                                              <div
+                                                  key={i}
+                                                  className={classNames(classes.commonTagsElement, {[classes.commonTagsElementActive]: filtersCollection.has(el)})}
+                                                  onClick={() => {
+                                                      setFilters(prev => {
+                                                          const localCollectionFilters = new Set(prev);
+                                                          if (localCollectionFilters.has(el)) {
+                                                              localCollectionFilters.delete(el);
+                                                              return [...localCollectionFilters]
+                                                          }
+                                                          return [...prev, el]
+                                                      })
+                                                      setShownNews(0);
+                                                  }}
+                                              >
                                                   #{el}
                                               </div>
                                             );
                                         })}
                                     </div>
                                     <div className={classes.imgWrapper}>
-                                        <img src={newsData[shownNews].image} />
+                                        <img src={filteredNews(newsData,filters)[shownNews] && filteredNews(newsData,filters)[shownNews].image && filteredNews(newsData,filters)[shownNews].image } />
 
                                         {/*<div className={classes.socials}>*/}
                                         {/*    socials*/}
                                         {/*</div>*/}
                                     </div>
                                     <div className={classes.descriptionWrapper}>
-                                        <div className={classes.description} dangerouslySetInnerHTML={{ __html: newsData[shownNews].fullTextWithoutImg}} />
+                                        <div className={classes.description} dangerouslySetInnerHTML={{ __html: filteredNews(newsData,filters)[shownNews] && filteredNews(newsData,filters)[shownNews].fullTextWithoutImg && filteredNews(newsData,filters)[shownNews].fullTextWithoutImg}} />
                                             <div className={classes.tags}>
-                                                {newsData[shownNews].tags?.map((el, i) => {
+                                                {filteredNews(newsData,filters)[shownNews] && filteredNews(newsData,filters)[shownNews].tags?.map((el, i) => {
                                                     return (
-                                                            <div className={classes.theTag} key={i}>#{el}</div>
+                                                            <div
+                                                                className={classes.theTag}
+                                                                key={i}
+                                                                onClick={() => {
+                                                                    setFilters((prev) => [el]);
+                                                                    // setShownNews(prev => 0);
+                                                                }}
+                                                            >#{el}</div>
                                                     )
                                                 })}
                                             </div>
