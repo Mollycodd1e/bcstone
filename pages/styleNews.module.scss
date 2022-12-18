@@ -84,6 +84,24 @@
 
 .commonTags {
   grid-area: commonTags;
+  display: flex;
+  align-content: center;
+  max-width: 80%;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+
+.commonTagsElement {
+  font-size: 10px;
+  line-height: 12px;
+  margin: 0 0 5px 10px;
+  cursor: pointer;
+  padding: 3px 10px 1px;
+  background-color: #acacac;
+  border-radius: 11px;
+  color: #fff;
+  font-weight: bold;
 }
 
 .imgWrapper {
@@ -322,6 +340,15 @@
       margin: 0 0 5px 10px;
       font-size: 12px;
     }
+  }
+
+  .commonTags {
+    margin-left: 20px;
+  }
+
+  .commonTagsElement {
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 

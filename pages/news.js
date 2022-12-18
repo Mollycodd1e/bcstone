@@ -34,6 +34,7 @@ export default function News() {
     const [data, setData] = useState([]);
     const [newsData, setNewsData] = useState([]);
     const [shownNews, setShownNews] = useState(0);
+    const [allTags, setAllTags] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -94,9 +95,16 @@ export default function News() {
     const {contacts, copyright} = mocks;
     const [isPopupClose, setIsPopupClose] = useState(true);
 
-    const NewsPageData = data.length !==0 ? data.data[1].data : '';
+    // const NewsPageData = data.length !==0 ? data.data[1].data : '';
 
-    console.log('newsData', newsData)
+    // console.log('newsData', newsData)
+
+    useEffect(() => {
+        newsData?.forEach((el) => {
+            setAllTags((prev) => [...prev, ...el.tags] );
+        })
+    },[newsData])
+
     return (
             <Context.Provider value={[width, height]}>
                 <Head>
@@ -147,7 +155,13 @@ export default function News() {
                                         })}
                                     </ul>
                                     <div className={classes.commonTags}>
-
+                                        {[...new Set(allTags)].map((el, i) => {
+                                            return (
+                                              <div key={i} className={classes.commonTagsElement}>
+                                                  #{el}
+                                              </div>
+                                            );
+                                        })}
                                     </div>
                                     <div className={classes.imgWrapper}>
                                         <img src={newsData[shownNews].image} />
