@@ -18,13 +18,19 @@ export const C_Element_Top_Commertial = ({className, element}) => {
     let spaceNumberContent;
     let cropContent;
 
-    if ((newTitle.length < 43) && (newContent.length >= 75)) {
+
+    if ((newTitle.length < 22) && (newContent.length < 75)) {
+        cropTitle = title;
+        cropContent = content;
+    } else if ((newTitle.length < 43) && (newContent.length >= 75)) {
         cropTitle = title;
         spaceNumberContent = newContent.slice(0, 75).lastIndexOf(' ');
         cropContent = newContent.slice(0, spaceNumberContent) + '...';
     } else if ((newTitle.length < 43) && (newContent.length < 75)) {
         cropTitle = title;
-        cropContent = content;
+        // cropContent = content;
+        spaceNumberContent = newContent.slice(0, 44).lastIndexOf(' ');
+        cropContent = newContent.slice(0, spaceNumberContent) + '...';
     } else if ((newTitle.length >= 43) && (newTitle.length < 50) && (newContent.length >= 50)) {
         spaceNumberTitle = newTitle.slice(0, 50).lastIndexOf(' ');
         cropTitle = newTitle.slice(0, spaceNumberTitle);
