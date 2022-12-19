@@ -1,19 +1,19 @@
 import {useEffect, useRef, useState} from "react";
+import { useRouter } from 'next/router'
 import {useWindowSize, Context} from "../src/library";
-import Script from 'next/script'
 import axios from "axios";
 import Head from 'next/head';
 import classes from  './styleNews.module.scss';
 import popupClasses from "../src/sections/s_Popup/style.module.scss";
 import { S_Footer } from "../src/sections/s_Footer";
 import { S_MenuC } from "../src/sections/s_MenuC";
-import {Cc_ComponentGenerator} from "../src/complexComponents/cc_ComponentGenerator";
 import {C_FullForm} from "../src/components/c_FullForm";
 import {S_Popup} from "../src/sections/s_Popup";
+import classNames from 'classnames';
 
 export default function News() {
     const [width, height] = useWindowSize();
-
+    const router = useRouter();
     const topMenuEl = useRef(null);
     const [menuOnTop, isMenuOnTop] = useState(false);
 
@@ -34,6 +34,34 @@ export default function News() {
     const [data, setData] = useState([]);
     const [newsData, setNewsData] = useState([]);
     const [shownNews, setShownNews] = useState(0);
+    const [allTags, setAllTags] = useState([]);
+    const [filters, setFilters] = useState([] );
+
+    const filteredNews = (news, filtersArr) => {
+        // filtersArr - массив по которому будем фильтровать уже выведенные фильтры
+        // функция работает по принципу пересчечения
+        const newNews = news.filter((el) => {
+            const { tags } = el;
+            // теги самих новостей в виде коллекции
+            const tagsSet = new Set(tags);
+
+            // теги фильтра новостей в виде коллекции
+            const filterArrSet = new Set(filtersArr);
+
+            // пересечение коллекций можно представить следующим образом
+            const intersection = new Set([...tagsSet].filter(x => filterArrSet.has(x)));
+
+            // вывод элемента, в котором есть хотя бы один тег из фильтра
+            // или если массив-для-фильтрации пустой - вывести оригинал
+            return intersection.size !== 0 || filterArrSet.size === 0;
+        });
+
+        if (newNews.length === 0) {
+            return news;
+        }
+
+        return newNews;
+    }
 
     useEffect(() => {
         const fetchData = async () => {
@@ -94,9 +122,32 @@ export default function News() {
     const {contacts, copyright} = mocks;
     const [isPopupClose, setIsPopupClose] = useState(true);
 
-    const NewsPageData = data.length !==0 ? data.data[1].data : '';
+    useEffect(() => {
+        newsData?.forEach((el) => {
+            // собрать все теги (без обработки на уникальность)
+            setAllTags((prev) => [...prev, ...el.tags] );
+        })
 
-    console.log('newsData', newsData)
+        // установить новость по id в адресной строке
+        filteredNews(newsData,filters)?.forEach((el, i) => {
+            if (router.query.id === el.id.toString()) {
+                setShownNews(i)
+            }
+        })
+
+        if (router.query.filter) {
+            setFilters([router.query.filter]);
+            // filteredNews(newsData, [router.query.filter]);
+        }
+    },[newsData]);
+
+    useEffect(() => {
+        let queryParams = new URLSearchParams(window.location.search);
+        // добавить id параметром
+        queryParams.set("id", filteredNews(newsData,filters) && filteredNews(newsData,filters)[0] && filteredNews(newsData,filters)[0].id.toString());
+        history.replaceState(null, null, "?" + queryParams.toString());
+    },[filters.length]);
+
     return (
             <Context.Provider value={[width, height]}>
                 <Head>
@@ -116,7 +167,7 @@ export default function News() {
                 {/*<noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7GL33F";height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>*/}
 
                 <div className={"page-wrapper"}>                                  
-                    {data.length !== 0 && newsData.length !== 0 ? (
+                    {data.length !== 0 && filteredNews(newsData,filters).length !== 0 ? (
                             <>
                                 <div className={`common_top_bg + ${classes.common_top_bg_news}`}  ref={topMenuEl} id="top">
                                     <S_MenuC menuOnTop={menuOnTop} data={mainPageData[0]} setIsPopupClose={setIsPopupClose} briefing={true}/>
@@ -124,18 +175,27 @@ export default function News() {
                                         <C_FullForm data={mainPageData[0]} className={popupClasses.fullFormIndexSection} popup={true}/>
                                     </S_Popup>
                                 </div>
-                                {/*<S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>*/}
-                                {/*    <C_FullForm data={mainPageData[0]} className={classes.fullFormIndexSection} popup={true}/>*/}
-                                {/*</S_Popup>*/}
-                                {/*<Cc_ComponentGenerator pageData={NewsPageData} />*/}
                                 <div className={classes.newsWrapper}>
                                     <div className={classes.title}>
                                         Новости STONE
                                     </div>
                                     <ul className={classes.newsList}>
-                                        {newsData.map((el, i) => {
+                                        {filteredNews(newsData,filters).map((el, i) => {
                                             return (
-                                                <li className={classes.newsItem} key={i} onClick={() => setShownNews(i)}>
+                                                <li
+                                                    className={classes.newsItem}
+                                                    key={i}
+                                                    onClick={() => {
+                                                        // установить новость
+                                                        setShownNews(i);
+                                                        // очистить параметры в поисковой строке
+                                                        history.pushState({}, null, location.href.split('?')[0]);
+
+                                                        let queryParams = new URLSearchParams(window.location.search);
+                                                        // добавить id параметром
+                                                        queryParams.set("id", el.id.toString());
+                                                        history.replaceState(null, null, "?" + queryParams.toString());
+                                                    }}>
                                                     <div className={classes.newsDate}>
                                                         {el.date}
                                                     </div>
@@ -147,20 +207,50 @@ export default function News() {
                                         })}
                                     </ul>
                                     <div className={classes.commonTags}>
-
+                                        {[...new Set(allTags)].map((el, i) => {
+                                            const filtersCollection = new Set(filters);
+                                            return (
+                                              <div
+                                                  key={i}
+                                                  className={classNames(classes.commonTagsElement, {[classes.commonTagsElementActive]: filtersCollection.has(el)})}
+                                                  onClick={() => {
+                                                      setFilters(prev => {
+                                                          const localCollectionFilters = new Set(prev);
+                                                          if (localCollectionFilters.has(el)) {
+                                                              localCollectionFilters.delete(el);
+                                                              return [...localCollectionFilters]
+                                                          }
+                                                          return [...prev, el]
+                                                      })
+                                                  }}
+                                              >
+                                                  #{el}
+                                              </div>
+                                            );
+                                        })}
                                     </div>
                                     <div className={classes.imgWrapper}>
-                                        <img src={newsData[shownNews].image} />
+                                        <img src={filteredNews(newsData,filters)[shownNews] && filteredNews(newsData,filters)[shownNews].image && filteredNews(newsData,filters)[shownNews].image } />
 
                                         {/*<div className={classes.socials}>*/}
                                         {/*    socials*/}
                                         {/*</div>*/}
                                     </div>
                                     <div className={classes.descriptionWrapper}>
-                                            <div className={classes.description} dangerouslySetInnerHTML={{ __html: newsData[shownNews].fullTextWithoutImg}} />
-                                            {/*<div className={classes.personalTags}>*/}
-                                            {/*    personal tags*/}
-                                            {/*</div>*/}
+                                        <div className={classes.description} dangerouslySetInnerHTML={{ __html: filteredNews(newsData,filters)[shownNews] && filteredNews(newsData,filters)[shownNews].fullTextWithoutImg && filteredNews(newsData,filters)[shownNews].fullTextWithoutImg}} />
+                                            <div className={classes.tags}>
+                                                {filteredNews(newsData,filters)[shownNews] && filteredNews(newsData,filters)[shownNews].tags?.map((el, i) => {
+                                                    return (
+                                                            <div
+                                                                className={classes.theTag}
+                                                                key={i}
+                                                                onClick={() => {
+                                                                    setFilters((prev) => [el]);
+                                                                }}
+                                                            >#{el}</div>
+                                                    )
+                                                })}
+                                            </div>
                                         </div>
                                 </div>
                                 <div className={classes.pressWrapper}>
@@ -207,7 +297,6 @@ export default function News() {
                     }
 
                 </div>
-                {/*<Script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3xsHwkwIhhfEFp3og9dunH0Jw39tsxi0" strategy="beforeInteractive"/>*/}
             </Context.Provider>
     )
 }

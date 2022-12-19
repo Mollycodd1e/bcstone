@@ -84,6 +84,28 @@
 
 .commonTags {
   grid-area: commonTags;
+  display: flex;
+  align-content: center;
+  max-width: 80%;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+
+.commonTagsElement {
+  font-size: 10px;
+  line-height: 12px;
+  margin: 0 0 5px 10px;
+  cursor: pointer;
+  padding: 3px 10px 1px;
+  background-color: #acacac;
+  border-radius: 11px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.commonTagsElementActive {
+  background-color: #000;
 }
 
 .imgWrapper {
@@ -166,6 +188,30 @@
   }
 }
 
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  margin-bottom: 26px;
+
+  .theTag {
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 10px;
+    color: #707070;
+    transition: color 0.2s;
+    margin: 0 0 5px 10px;
+
+    &:hover {
+      color: #2b2c2d;
+    }
+
+    & .active {
+      color: #2b2c2d;
+    }
+  }
+}
 
 @media (max-width: 1550px) {
   .pressWrapper {
@@ -276,6 +322,26 @@
     //max-width: 378px;
     //min-width: 200px;
     margin-right: 10px;
+    max-height: 530px;
+  }
+
+  .newsItem {
+
+  }
+
+
+  .newsDate {
+    font-size: 12px;
+    color: #707070;
+    margin-bottom: 7px;
+  }
+
+  .newsTitle {
+    font-size: 16px;
+    line-height: 18px;
+    color: #2b2c2d;
+    font-weight: 400;
+    margin: 0 0 25px;
   }
 
   .imgWrapper {
@@ -289,6 +355,29 @@
   .descriptionWrapper {
     //width: 20vw;
     //max-width: 625px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  .tags {
+    margin: 48px 0 0 0;
+
+    .theTag {
+      margin: 0 0 5px 10px;
+      font-size: 12px;
+    }
+  }
+
+  .commonTags {
+    margin-left: 20px;
+  }
+
+  .commonTagsElement {
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 
