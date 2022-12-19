@@ -193,6 +193,8 @@
     margin: 0 auto;
 
     & > div {
+      max-width: 1788px;
+      
       & > div {
         padding: 136px 220px 125px 190px;
         grid-column-gap: 90px;

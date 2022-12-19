@@ -39,7 +39,7 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
         zoom,
         options: { radius: parseFloat(map_settings.clusterRadius), maxZoom: parseFloat(map_settings.maxZoom) }
     });
-    
+
         return (
             <div className={classes.wrapMap}>
                 {points.length !== 0 ? <GoogleMapReact
@@ -70,7 +70,7 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                             bounds.nw.lat
                         ]);
                     }}
-                >
+                >   
                     {
                         clusters.map((project, i) => {
                             const [ longitude, latitude ] = project.geometry.coordinates;
@@ -109,7 +109,7 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                     />
                                 );
                             }
-
+                       
                             return (
                                 <C_MainMarker
                                     key={i}
