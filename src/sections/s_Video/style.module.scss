@@ -14,10 +14,17 @@
   }
 }
 
+@media (min-width: $width-desktop-sm) {
+  .root {
+    padding-top: 20px;
+    margin: 0;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
     display: flex;
-    padding: 0 413px 10px 418px;
-    margin-top: 28px;
+    padding: 20px 413px 20px 418px;
+    // margin-top: 28px;
   }
 }

@@ -3,8 +3,8 @@
 .root {
   width: 100%;
   //margin-top: 20px;
-  padding: 10px 29px 10px 30px;
-  margin-bottom: 20px;
+  padding: 20px 29px 20px 30px;
+  margin-bottom: 0;
 }
 
 .root img {
@@ -33,7 +33,7 @@
 @media (min-width: $width-tablet-md) {
   .root {
     //margin-top: 88px;
-    padding: 10px 130px 10px 130px;
+    padding: 20px 130px 20px 130px;
   }
 
   .root img {
@@ -58,7 +58,8 @@
   .root {
     display: flex;
     //margin-top: 152px;
-    padding: 10px 399px 10px 418px;
+    padding: 20px 399px 20px 418px;
+    // margin-bottom: 0;
   }
 
   .root img {
