@@ -10,6 +10,11 @@ import { S_MenuC } from "../src/sections/s_MenuC";
 import {C_FullForm} from "../src/components/c_FullForm";
 import {S_Popup} from "../src/sections/s_Popup";
 import classNames from 'classnames';
+// import {
+//     VKShareButton,
+//     VKIcon,
+// } from 'next-share';
+
 
 export default function News() {
     const [width, height] = useWindowSize();
@@ -148,11 +153,25 @@ export default function News() {
         history.replaceState(null, null, "?" + queryParams.toString());
     },[filters.length]);
 
+
+    // let sliced = filteredNews(newsData,filters)[shownNews]?.previewText.slice(0,100).length < filteredNews(newsData,filters)[shownNews]?.previewText.length ? `${filteredNews(newsData,filters)[shownNews]?.previewText.slice(0,100)}...` : filteredNews(newsData,filters)[shownNews]?.previewText.slice(0,100);
+    // if (sliced.length < myNews.previewText.length) {
+    //     sliced += '...';
+    // }
+
     return (
             <Context.Provider value={[width, height]}>
                 <Head>
                     <title>STONE HEDGE</title>
                     <meta name="description" content="STONE HEDGE" />
+                    <meta name='data-url:twitter'  content={`https://bc-stone.ru/news.html?id=${filteredNews(newsData,filters)[shownNews]?.id}`} />
+                    <meta name='data-image'  content={`${filteredNews(newsData,filters)[shownNews]?.image}`} />
+                    <meta name='data-image:twitter'  content={`${filteredNews(newsData,filters)[shownNews]?.image}`} />
+                    <meta name='og:title'  content={`${filteredNews(newsData,filters)[shownNews]?.title}`} />
+                    <meta name='og:description'  content={filteredNews(newsData,filters)[shownNews]?.previewText.slice(0,100).length < filteredNews(newsData,filters)[shownNews]?.previewText.length ? `${filteredNews(newsData,filters)[shownNews]?.previewText.slice(0,100)}...` : filteredNews(newsData,filters)[shownNews]?.previewText.slice(0,100)} />
+
+
+
                     {/*TODO: facebook-domain-verification ? */}
                     {/*<meta name="facebook-domain-verification" content="9z0sixxjkzgui2ay20ckf44xvhjnhk" />*/}
                     <link rel="icon" href="/favicon.ico" />
@@ -233,8 +252,15 @@ export default function News() {
                                         <img src={filteredNews(newsData,filters)[shownNews] && filteredNews(newsData,filters)[shownNews].image && filteredNews(newsData,filters)[shownNews].image } />
 
                                         {/*<div className={classes.socials}>*/}
-                                        {/*    socials*/}
+                                        {/*    <span>Поделиться новостью</span>*/}
+                                        {/*    <VKShareButton*/}
+                                        {/*        url={window.location}*/}
+                                        {/*        // image={'../src/in'}*/}
+                                        {/*    >*/}
+                                        {/*        <VKIcon size={32} round />*/}
+                                        {/*    </VKShareButton>*/}
                                         {/*</div>*/}
+
                                     </div>
                                     <div className={classes.descriptionWrapper}>
                                         <div className={classes.description} dangerouslySetInnerHTML={{ __html: filteredNews(newsData,filters)[shownNews] && filteredNews(newsData,filters)[shownNews].fullTextWithoutImg && filteredNews(newsData,filters)[shownNews].fullTextWithoutImg}} />

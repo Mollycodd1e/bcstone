@@ -13,9 +13,16 @@
   }
 }
 
+@media (min-width: $width-desktop-sm) {
+  .root {
+    margin-top: 20px;
+    padding-bottom: 40px;
+  }
+}
+
 @media (min-width: $width-desktop-lg) {
   .root {
-    margin-top: 44px;
-    padding: 0 418px 45px 418px;
+    margin-top: 20px;
+    padding: 0 418px 40px 418px;
   }
 }

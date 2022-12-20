@@ -17,7 +17,7 @@
   font-size: 16px;
   line-height: 18px;
   color: $color-dark-primary;
-  transition: color $menuTransition;
+  transition: color 0.4s ease-out;
 
   &:hover {
     color: $color-gray-twelve !important;

@@ -47,7 +47,7 @@ export const C_SliderVideoPopup = ({className, data, isAboutPopupClose, setIsAbo
                         slidesPerView={1}
                         pagination={width < sizes.widthTabletSm ? {"clickable": true} : false}
                         slidersSpaceBetween={0}
-                        loop={width < sizes.widthDesktopLg}
+                        loop={true}
                         />
                     : <iframe  src={!popup ? sliderVideoPopupContent.video.src : ''} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
                 }

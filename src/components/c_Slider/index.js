@@ -10,7 +10,7 @@ import { useState, useRef } from "react";
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
-export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = -225, slidesPerView = 3, saving, press, map, loop}) => {
+export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = -225, slidesPerView = 3, saving, press, map, loop, loopedSlides}) => {
     const cls = classNames(classes.root, { [className]: className });
     // autoplay={{
     //     delay: 10000,
@@ -67,8 +67,9 @@ export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnClose
                 pagination={(saving && window.innerWidth) >= 768 || map && (window.innerWidth < 768) ? false : {"clickable": true}}
                 className={classNames(classes.swiper, {[classes.swiperSaving]: saving}, {[classes.swiperMode]: isBtnClose},{[classes.swiperPress]: press}, {[classes.swiperShow]: isVisible && press},{[classes.mapShow]: isVisible && map})}
                 initialSlide={Number(initialSlide) || 0}
+                loopedSlides={loopedSlides}
                 onSlideChange={(swiper) => setActiveSlide(swiper.realIndex)}
-            >
+            >   
                 {items.map((item, i) => {
                     return (
                         <SwiperSlide className = {classNames(classes.swiperSlide,{[classes.swiperSlideActive]: activeSlide === i})} key={i}>
