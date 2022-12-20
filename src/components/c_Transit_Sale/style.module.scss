@@ -489,6 +489,7 @@
     transition: 0.3s ease-out;
     justify-self: flex-start;
     position: relative;
+    pointer-events: none;
     left: 10px;
   }
 
@@ -504,6 +505,7 @@
     position: relative;
     left: 5px;
     top: -10px;
+    pointer-events: none;
   }
 }
 

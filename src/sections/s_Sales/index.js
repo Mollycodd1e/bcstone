@@ -35,9 +35,12 @@ export const S_Sales = ({className, data}) => {
                 <div className={classNames(classes.wrapper, {[classes.centerLine]: !isHover}, {[classes.titleSlides]: isTitle})} ref={titleRef}>
                     {data.sales.map((el, i) => {
                         const {type, name, url, picture} = el;
-                        return (<C_Transit_Sale type={type} name={name} url={url} picture={picture} key={i} number={i} setIsHover={setIsHover} setIsHoveredItem={setIsHoveredItem}/>)
+                        return (
+                            <C_Transit_Sale type={type} name={name} url={url} picture={picture} key={i} number={i} setIsHover={setIsHover} setIsHoveredItem={setIsHoveredItem}/>
+                        )
                     })}
                 </div>
+                
                 {isHover ? 
                     <div className={classes.dots}>
                         <div className={classNames(classes.sliderDot, {[classes.sliderToRight]: isHover && isHoveredItem === 1}, {[classes.sliderToLeft]: isHover && isHoveredItem === 0})}></div>

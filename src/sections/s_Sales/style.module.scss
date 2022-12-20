@@ -204,13 +204,16 @@
     justify-content: space-between;
     padding: 0 10px;
 
-    & > div {
+    // & > div {
+    & > a {
+    
       & h2 {
         opacity: 0;
         transform: translateY(40px);
       }
 
-      & + div {
+      // & + div {
+      & + a {
         & h2 {
           transform: translateY(-40px);
           opacity: 0;
@@ -243,7 +246,8 @@
       }
     }
 
-    & > div {   
+    // & > div {   
+    & > a {
       &:hover {
         & > div[class*="picture"] {
           opacity: 1;
@@ -258,7 +262,8 @@
           display: none;
         }
 
-        & + div {
+        // & + div {
+        & + a {
           & h2 {
             transform: translateX(168px) translateY(17px);
             transition: 0.6s ease-out;
@@ -275,14 +280,16 @@
   }
 
   .titleSlides {
-    & > div {
+    // & > div {
+    & > a {
       & h2 {
         opacity: 1;
         transform: translateY(0px);
         transition: 0.6s ease-out;
       }
 
-      & + div {
+      // & + div {
+      & + a {
         & h2 {
           transform: translateY(0px);
           opacity: 1;
@@ -293,7 +300,8 @@
   }
 
   .wrapper:has(:not(:first-of-type):hover) {
-    & div:first-child {
+    // & div:first-child {
+    & a:first-child {
 
         & > h2 {
           transform: translateX(-132px) translateY(18px);

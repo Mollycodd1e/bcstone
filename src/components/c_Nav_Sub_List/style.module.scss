@@ -50,8 +50,19 @@
     top: 14px;
     left: -25px;
 
+
+    & .secondLvlMenuEl {
+      max-height: 0;
+      transition: 0.3s ease-out;
+    }
+
     &.secondLvlMenuElWrapperActive {
       margin: 0;
+
+      & .secondLvlMenuEl {
+        max-height: 500px;
+        transition: 0.4s ease-out;
+      }
     }
   }
 

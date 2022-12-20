@@ -6,11 +6,14 @@ export const C_Transit_Sale = ({className, url, name, type, picture ,setIsHover,
     const cls = classNames(classes.root, {[classes.reverse]: type === "retail", [className]: className });
 
     return (
-        <Link href={window.location.hostname === 'localhost' ? `/${url}` : `/${url}.html`}>
-            <div
+        
+        // <Link href={window.location.hostname === 'localhost' ? `/${url}` : `/${url}.html`}>
+            <a className={cls} href={window.location.hostname === 'localhost' ? `/${url}` : `/${url}.html`}
+            onMouseOver={() => (setIsHover(true), setIsHoveredItem(number))} onMouseOut={() => setIsHover(false)}>
+            {/* <div  href={window.location.hostname === 'localhost' ? `/${url}` : `/${url}.html`}
                 className={cls}
                 onMouseOver={() => (setIsHover(true), setIsHoveredItem(number))} onMouseOut={() => setIsHover(false)}
-            >   
+            >    */}
                     <div className={classes.picture}
                          style={{backgroundImage:  `url("${picture.src}")`}}/>
 
@@ -36,7 +39,8 @@ export const C_Transit_Sale = ({className, url, name, type, picture ,setIsHover,
                         </a>
 
                     <h2 className={classes.title}>{name}</h2>
-            </div>
-        </Link>
+            {/* </div> */}
+            </a>
+        // </Link>
     )
 }
