@@ -10,7 +10,7 @@ export const C_Element_Top_Commertial = ({className, element}) => {
     const {title, content, link, link_text, color} = element;
 
     const [width, height] = useContext(Context);
-    title = 'Старт продаж! Бизнес-центр STONE Дмитровская'
+
     let newTitle = title;
     let spaceNumberTitle;
     let cropTitle;
