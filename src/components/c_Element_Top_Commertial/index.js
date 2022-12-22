@@ -10,7 +10,7 @@ export const C_Element_Top_Commertial = ({className, element}) => {
     const {title, content, link, link_text, color} = element;
 
     const [width, height] = useContext(Context);
-
+    title = 'Старт продаж! Бизнес-центр STONE Дмитровская'
     let newTitle = title;
     let spaceNumberTitle;
     let cropTitle;
@@ -19,29 +19,29 @@ export const C_Element_Top_Commertial = ({className, element}) => {
     let cropContent;
 
 
-    if ((newTitle.length < 22) && (newContent.length < 75)) {
+    if ((newTitle.length <= 22) && (newContent.length < 75)) {
         cropTitle = title;
         cropContent = content;
-    } else if ((newTitle.length < 43) && (newContent.length >= 75)) {
+    } else if ((newTitle.length <= 35) && (newContent.length >= 75)) {
         cropTitle = title;
         spaceNumberContent = newContent.slice(0, 75).lastIndexOf(' ');
         cropContent = newContent.slice(0, spaceNumberContent) + '...';
-    } else if ((newTitle.length < 43) && (newContent.length < 75)) {
+    } else if ((newTitle.length <= 35) && (newContent.length < 75)) {
         cropTitle = title;
         // cropContent = content;
         spaceNumberContent = newContent.slice(0, 44).lastIndexOf(' ');
         cropContent = newContent.slice(0, spaceNumberContent) + '...';
-    } else if ((newTitle.length >= 43) && (newTitle.length < 50) && (newContent.length >= 50)) {
-        spaceNumberTitle = newTitle.slice(0, 50).lastIndexOf(' ');
-        cropTitle = newTitle.slice(0, spaceNumberTitle);
-        spaceNumberContent = newContent.slice(0, width < sizes.widthTabletMd ? 50 : width >= sizes.widthDesktopSm ? 46 : 70).lastIndexOf(' ');
-        cropContent = newContent.slice(0, spaceNumberContent) + '...';
-    } else if ((newTitle.length >= 43) && (newContent.length >= 50)) {
-        spaceNumberTitle = newTitle.slice(0, 50).lastIndexOf(' ');
+    } else if ((newTitle.length > 35) && (newTitle.length < 50) && (newContent.length >= 50)) {
+        spaceNumberTitle = newTitle.slice(0, 40).lastIndexOf(' ');
         cropTitle = newTitle.slice(0, spaceNumberTitle) + '...';
         spaceNumberContent = newContent.slice(0, width < sizes.widthTabletMd ? 50 : width >= sizes.widthDesktopSm ? 46 : 70).lastIndexOf(' ');
         cropContent = newContent.slice(0, spaceNumberContent) + '...';
-    } else if ((newTitle.length >= 43) && (newContent.length <= 50)) {
+    } else if ((newTitle.length > 35) && (newContent.length >= 50)) {
+        spaceNumberTitle = newTitle.slice(0, 40).lastIndexOf(' ');
+        cropTitle = newTitle.slice(0, spaceNumberTitle) + '...';
+        spaceNumberContent = newContent.slice(0, width < sizes.widthTabletMd ? 50 : width >= sizes.widthDesktopSm ? 46 : 70).lastIndexOf(' ');
+        cropContent = newContent.slice(0, spaceNumberContent) + '...';
+    } else if ((newTitle.length > 35) && (newContent.length <= 50)) {
         spaceNumberTitle = newTitle.slice(0, 40).lastIndexOf(' ');
         cropTitle = newTitle.slice(0, spaceNumberTitle) + '...';
         cropContent = content;

@@ -153,12 +153,12 @@
 }
 
 .root button {
-  width: 194px;
+  min-width: 194px;
   height: 32px;
   font-size: 12px;
   line-height: 13px;
   font-family: "Codec Cold News", "Arial", sans-serif;
-  padding: 0;
+  padding: 0 41px;
   margin-top: 38px;
   border-radius: 16px;
   border: none;
@@ -279,8 +279,9 @@
   }
 
   .root button {
-    width: 254px;
+    min-width: 254px;
     height: 43px;
+    padding: 0 43px;
     font-size: 18px;
     line-height: 19px;
     margin-top: 26px;
