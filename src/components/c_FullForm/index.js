@@ -88,55 +88,55 @@ export const C_FullForm = ({className, data, popup}) => {
 
         // if (isPhoneValid && isNameValid && isEmailValid && isCheckValid) {
         if (isPhoneValid && isNameValid && isCheckValid) {
-            console.log("phone ", phone)
-            console.log("name", name)
-            console.log("email", email)
-            console.log("isCheckValid", isCheckValid)
-            setIsConfirmed(true);
-        //     setIsProcessing(true);
-        //
-        //     // отправляем данные в comagic
-        //     /* eslint-disable */
-        //     Comagic.addOfflineRequest({
-        //         'name': name,
-        //         'phone': phone,
-        //         'email': email,
-        //         'message': 'Отправка данных'
-        //     }, function (o) {
-        //         let response = JSON.parse(o.response);
-        //
-        //         if (response.success) {
-        //             // GTM & Metrika
-        //             if (ga) {
-        //                 ga("create", "UA-206121389-1", {name: "tracker"});
-        //                 ga('tracker.send', 'event', 'submit', 'send_button', {
-        //                     'hitCallback': function () {
-        //                         console.log('my own GTM code works!!');
-        //                     }
-        //                 });
-        //             }
-        //
-        //             if (ym) {
-        //                 ym(84684538, 'reachGoal', 'send_button');
-        //                 console.log('ym: 84684538  - Yandex');
-        //             } else {
-        //                 yaCounter84684538.reachGoal('send_button');
-        //                 console.log('yaCounter84684538  - Yandex');
-        //             }
-        //
-        //             // Pixel
-        //             fbq('track', 'SubmitApplication');
-        //
-        //             setIsConfirmed(true);
-        //         } else {
-        //             console.error('CoMagic response failed!', response);
-        //             setIsProcessing(false);
-        //         }
-        //     });
-        // } else if (name.length === 0) {
-        //     setIsNameValid(false);
-        // } else if (phone.length === 0) {
-        //     setIsPhoneValid(false);
+            // console.log("phone ", phone)
+            // console.log("name", name)
+            // console.log("email", email)
+            // console.log("isCheckValid", isCheckValid)
+            // setIsConfirmed(true);
+            setIsProcessing(true);
+
+            // отправляем данные в comagic
+            /* eslint-disable */
+            Comagic.addOfflineRequest({
+                'name': name,
+                'phone': phone,
+                'email': email,
+                'message': 'Отправка данных'
+            }, function (o) {
+                let response = JSON.parse(o.response);
+
+                if (response.success) {
+                    // GTM & Metrika
+                    if (ga) {
+                        ga("create", "UA-198733963-1", {name: "tracker"});
+                        ga('tracker.send', 'event', 'submit', 'send_button', {
+                            'hitCallback': function () {
+                                console.log('my own GTM code works!!');
+                            }
+                        });
+                    }
+
+                    if (ym) {
+                        ym(80263774, 'reachGoal', 'send_button');
+                        console.log('ym: 80263774  - Yandex');
+                    } else {
+                        yaCounter80263774.reachGoal('send_button');
+                        console.log('yaCounter80263774  - Yandex');
+                    }
+
+                    // Pixel
+                    fbq('track', 'SubmitApplication');
+
+                    setIsConfirmed(true);
+                } else {
+                    console.error('CoMagic response failed!', response);
+                    setIsProcessing(false);
+                }
+            });
+        } else if (name.length === 0) {
+            setIsNameValid(false);
+        } else if (phone.length === 0) {
+            setIsPhoneValid(false);
         }
     }
 

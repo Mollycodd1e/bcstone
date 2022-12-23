@@ -83,18 +83,13 @@ export default function News() {
                 <Head>
                     <title>STONE HEDGE</title>
                     <meta name="description" content="STONE HEDGE" />
-                    {/*TODO: facebook-domain-verification ? */}
-                    {/*<meta name="facebook-domain-verification" content="9z0sixxjkzgui2ay20ckf44xvhjnhk" />*/}
-                    <link rel="icon" href="/favicon.ico" />
-                    {/*TODO: googletagmanager 1 ? */}
-                    {/*                    <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':*/}
-                    {/*new Date().getTime(),event:'gtm.js'});var f=d.getByTagName(s)[0],*/}
-                    {/*j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=*/}
-                    {/*'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);*/}
-                    {/*})(window,document,'script','dataLayer','GTM-N7GL33F')`}}></script>*/}
+                    <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                    new Date().getTime(),event:'gtm.js'});var f=d.getByTagName(s)[0],
+                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                    })(window,document,'script','dataLayer','GTM-WZJD3HM')`}}></script>
                 </Head>
-                {/*TODO: googletagmanager 2 ? */}
-                {/*<noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7GL33F";height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>*/}
+                <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZJD3HM";height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>
 
                 <div className={"page-wrapper"}>                                  
                     {data.length !== 0 ? (
