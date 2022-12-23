@@ -69,6 +69,7 @@ export const C_FormCopy = ({className, header, description, ready}) => {
         // отправляем данные в comagic
         Comagic.addOfflineRequest({
             'name': nameInput,
+            'phone': '70000000000',
             'email': mailInput,
             'message': 'Отправка данных'
         }, function (o) {
