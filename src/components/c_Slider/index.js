@@ -42,7 +42,7 @@ export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnClose
 
     var func = function(i) {
         setTimeout(function(){
-            console.log(i)
+            // console.log(i)
         }, 10000 * i)
       };
 

@@ -69,6 +69,7 @@ export const C_FormCopy = ({className, header, description, ready}) => {
         // отправляем данные в comagic
         Comagic.addOfflineRequest({
             'name': nameInput,
+            'phone': '70000000000',
             'email': mailInput,
             'message': 'Отправка данных'
         }, function (o) {
@@ -77,7 +78,7 @@ export const C_FormCopy = ({className, header, description, ready}) => {
             if (response.success) {
                 // GTM & Metrika
                 if (ga) {
-                    ga("create", "UA-206121389-1", {name: "tracker"});
+                    ga("create", "UA-198733963-1", {name: "tracker"});
                     ga('tracker.send', 'event', 'submit', 'send_button', {
                         'hitCallback': function () {
                             console.log('my own GTM code works!!');
@@ -86,11 +87,11 @@ export const C_FormCopy = ({className, header, description, ready}) => {
                 }
 
                 if (ym) {
-                    ym(84684538, 'reachGoal', 'send_button');
-                    console.log('ym: 84684538  - Yandex');
+                    ym(80263774, 'reachGoal', 'send_button');
+                    console.log('ym: 80263774  - Yandex');
                 } else {
-                    yaCounter84684538.reachGoal('send_button');
-                    console.log('yaCounter84684538  - Yandex');
+                    yaCounter80263774.reachGoal('send_button');
+                    console.log('yaCounter80263774  - Yandex');
                 }
 
                 // Pixel
