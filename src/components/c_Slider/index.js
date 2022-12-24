@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import classes from './style.module.scss';
 import classNames from "classnames";
@@ -6,7 +6,9 @@ import classNames from "classnames";
 import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper';
 import {Swiper, SwiperSlide} from "swiper/swiper-react.cjs.js";
 import { useState, useRef } from "react";
-
+import {Context} from "../../library";
+import { useContext } from 'react';
+import {sizes} from "../../data/sizes";
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
@@ -22,23 +24,26 @@ export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnClose
     const [activeSlide, setActiveSlide] = useState(0);
     const [isVisible, setVisible] = useState(false);
     const ref = useRef();
+    const [width, height] = useContext(Context);
 
-    function onEntry(entry) {
-        entry.forEach(change => {
-          if (change.isIntersecting) {
-              setVisible(true);
-          } else {
-            setVisible(false);
-          }
-        });
-    }
+    useEffect(() => {
+        function onEntry(entry) {
+            entry.forEach(change => {
+              if (change.isIntersecting) {
+                  setVisible(true);
+              } else {
+                setVisible(false);
+              }
+            });
+        }
+        
+        let options = {threshold: [0] };
+        let observer = new IntersectionObserver( onEntry, options);
     
-    let options = {threshold: [0] };
-    let observer = new IntersectionObserver( onEntry, options);
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+        if (ref.current) {
+          observer.observe(ref.current);
+        }
+    })
 
     var func = function(i) {
         setTimeout(function(){
@@ -62,9 +67,9 @@ export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnClose
                 slidesPerView={slidesPerView}
                 spaceBetween={slidersSpaceBetween}
                 centeredSlides={true}
-                allowTouchMove={saving && window.innerWidth >= 768 ? false : true}
+                allowTouchMove={saving && width >= sizes.widthTabletSm ? false : true}
                 loop={loop}
-                pagination={(saving && window.innerWidth) >= 768 || map && (window.innerWidth < 768) ? false : {"clickable": true}}
+                pagination={saving && width >= sizes.widthTabletSm || map && (width < sizes.widthTabletSm) ? false : {"clickable": true}}
                 className={classNames(classes.swiper, {[classes.swiperSaving]: saving}, {[classes.swiperMode]: isBtnClose},{[classes.swiperPress]: press}, {[classes.swiperShow]: isVisible && press},{[classes.mapShow]: isVisible && map})}
                 initialSlide={Number(initialSlide) || 0}
                 loopedSlides={loopedSlides}

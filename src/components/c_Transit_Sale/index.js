@@ -6,8 +6,8 @@ export const C_Transit_Sale = ({className, url, name, type, picture ,setIsHover,
     const cls = classNames(classes.root, {[classes.reverse]: type === "retail", [className]: className });
 
     return (
-        
-        // <Link href={window.location.hostname === 'localhost' ? `/${url}` : `/${url}.html`}>
+        <>
+            {(typeof window !== 'undefined') && 
             <a className={cls} href={window.location.hostname === 'localhost' ? `/${url}` : `/${url}.html`}
             onMouseOver={() => (setIsHover(true), setIsHoveredItem(number))} onMouseOut={() => setIsHover(false)}>
             {/* <div  href={window.location.hostname === 'localhost' ? `/${url}` : `/${url}.html`}
@@ -41,6 +41,8 @@ export const C_Transit_Sale = ({className, url, name, type, picture ,setIsHover,
                     <h2 className={classes.title}>{name}</h2>
             {/* </div> */}
             </a>
+            }
+        </>
         // </Link>
     )
 }

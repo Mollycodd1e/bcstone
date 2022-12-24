@@ -1,6 +1,6 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
-import {log} from "util";
+
 import { useContext} from 'react';
 import { sizes } from '../../data/sizes';
 import {Context} from "../../library";
@@ -62,10 +62,12 @@ export const C_Element_Top_Commertial = ({className, element}) => {
                 <span className={classes.content}>
                     {cropContent}
                 </span>
-                <a  className={classes.link}
-                    href={window.location.hostname === 'localhost' ? `/${link}` : `/${link}.html`}>
-                    Подробнее
-                </a>
+                {(typeof window !== 'undefined') && 
+                    <a  className={classes.link}
+                        href={window.location.hostname === 'localhost' ? `/${link}` : `/${link}.html`}>
+                        Подробнее
+                    </a>
+                }
             </div>
        </div>
     )

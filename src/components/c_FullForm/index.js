@@ -1,7 +1,7 @@
 import InputMask from 'react-input-mask';
 import classNames from 'classnames';
 import classes from './style.module.scss';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Context} from "../../library";
 import { useContext } from 'react';
 import {sizes} from "../../data/sizes";
@@ -29,23 +29,26 @@ export const C_FullForm = ({className, data, popup}) => {
     const [isEmailValid, setIEmailValid] = useState(true);
     const [isCheckValid, setIsCheckValid] = useState(false);
 
-    function onEntryTitle(entry) {
-        entry.forEach(change => {
-          if (change.isIntersecting) {
-            setIsTitle(true);
-          } else {
-            // setIsTitle(false);
-          }
-        });
-    }
-
-    let options = { rootMargin: '0px', threshold: [0.5] };
-
-    let observer = new IntersectionObserver( onEntryTitle, options);
-
-    if (titleRef.current) {
-        observer.observe(titleRef.current);
-    }
+    useEffect(() => {
+        function onEntryTitle(entry) {
+            entry.forEach(change => {
+              if (change.isIntersecting) {
+                setIsTitle(true);
+              } else {
+                // setIsTitle(false);
+              }
+            });
+        }
+    
+        let options = { rootMargin: '0px', threshold: [0.5] };
+    
+        let observer = new IntersectionObserver( onEntryTitle, options);
+    
+        if (titleRef.current) {
+            observer.observe(titleRef.current);
+        }
+    })
+    
 
     const validName = /^(([a-zA-Zа-яА-ЯЁё-]{1,30}))$/u;
 

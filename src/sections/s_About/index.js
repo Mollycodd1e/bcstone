@@ -2,6 +2,7 @@ import classes from './style.module.scss';
 import classNames from "classnames";
 import React, { useRef, useState } from "react";
 import {C_ContentAbout} from "../../components/c_ContentAbout";
+import { useEffect } from 'react';
 // import {C_MainButton} from "../../components/c_MainButton";
 // import {sizes} from "../../data/sizes";
 
@@ -13,7 +14,8 @@ export const S_About = ({className, menuOnTop, data, width, setIsAboutPopupClose
     const [isAboutTitle, setIsAboutTitle] = useState(false);
     const [isAboutLine, setIsAboutLine] = useState(false);
 
-    function onEntryTitle(entry) {
+    useEffect(() => {
+      function onEntryTitle(entry) {
         entry.forEach(change => {
           if (change.isIntersecting) {
             setIsAboutTitle(true);
@@ -46,6 +48,8 @@ export const S_About = ({className, menuOnTop, data, width, setIsAboutPopupClose
     if (lineRef.current) {
         observerLine.observe(lineRef.current);
     }
+    })
+    
     return (
         <div className={classes.wrapRoot} id={'Девелопер'}>
             <div className={classNames(cls,{[classes.lineShown]: isAboutLine})} ref={lineRef}>

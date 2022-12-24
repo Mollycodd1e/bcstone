@@ -9,6 +9,7 @@ import {Context} from "../../library";
 import {C_RegularMap} from "../../components/c_RegularMap";
 import {C_CombineRegularCards} from "../../components/c_CombineRegularCards";
 import {C_MainButton} from "../../components/c_MainButton";
+import { useEffect } from "react";
 
 export const S_Projects = ({className, data, setIsPopupClose}) => {
     const [isListView, setIsListView] = useState(true);
@@ -22,7 +23,8 @@ export const S_Projects = ({className, data, setIsPopupClose}) => {
     const [isSubTitle, setSubIsTitle] = useState(false);
     const [isSwitcher, setIsSwitcher] = useState(false);
 
-    function onEntry(entry) {
+    useEffect(() => {
+      function onEntry(entry) {
         entry.forEach(change => {
           if (change.isIntersecting) {
             setIsTitle(true);
@@ -30,47 +32,49 @@ export const S_Projects = ({className, data, setIsPopupClose}) => {
             // setIsTitle(false);
           }
         });
-    }
+      }
 
-    function onEntrySub(entry) {
-        entry.forEach(change => {
-          if (change.isIntersecting) {
-            setSubIsTitle(true);
-          } else {
-            // setSubIsTitle(false);
-          }
-        });
-    }
+      function onEntrySub(entry) {
+          entry.forEach(change => {
+            if (change.isIntersecting) {
+              setSubIsTitle(true);
+            } else {
+              // setSubIsTitle(false);
+            }
+          });
+      }
 
-    function onEntryLine(entry) {
-        entry.forEach(change => {
-          if (change.isIntersecting) {
-            setIsLine(true);
-          } else {
-            // setIsLine(false);
-          }
-        });
-    }
+      function onEntryLine(entry) {
+          entry.forEach(change => {
+            if (change.isIntersecting) {
+              setIsLine(true);
+            } else {
+              // setIsLine(false);
+            }
+          });
+      }
 
-    let options = { rootMargin: '-50px', threshold: [0.5] };
-    let optionsSub = { rootMargin: '-200px', threshold: [0.5] };
-    let optionsLine = {threshold: [1] };
+      let options = { rootMargin: '-50px', threshold: [0.5] };
+      let optionsSub = { rootMargin: '-200px', threshold: [0.5] };
+      let optionsLine = {threshold: [1] };
 
-    let observer = new IntersectionObserver( onEntry, options);
-    let observerSub = new IntersectionObserver( onEntrySub, optionsSub);
-    let observerLine = new IntersectionObserver( onEntryLine, optionsLine);
+      let observer = new IntersectionObserver( onEntry, options);
+      let observerSub = new IntersectionObserver( onEntrySub, optionsSub);
+      let observerLine = new IntersectionObserver( onEntryLine, optionsLine);
 
-    if (ref.current) {
-        observer.observe(ref.current);
-    }
+      if (ref.current) {
+          observer.observe(ref.current);
+      }
 
-    if (subRef.current) {
-        observerSub.observe(subRef.current);
-    }
+      if (subRef.current) {
+          observerSub.observe(subRef.current);
+      }
 
-    if (linesRef.current) {
-        observerLine.observe(linesRef.current);
-    }
+      if (linesRef.current) {
+          observerLine.observe(linesRef.current);
+      }
+    })
+    
     
     return (
         <div className={classes.wrapRoot} id={'Проекты'}>
