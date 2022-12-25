@@ -23,31 +23,31 @@ export const S_About = ({className, menuOnTop, data, width, setIsAboutPopupClose
             // setIsAboutTitle(false);
           }
         });
-    }
+      }
 
-    function onEntryLine(entry) {
-        entry.forEach(change => {
-          if (change.isIntersecting) {
-            setIsAboutLine(true);
-          } else {
-            // setIsAboutLine(false);
-          }
-        });
-    }
+      function onEntryLine(entry) {
+          entry.forEach(change => {
+            if (change.isIntersecting) {
+              setIsAboutLine(true);
+            } else {
+              // setIsAboutLine(false);
+            }
+          });
+      }
 
-    let options = { rootMargin: '0px', threshold: [0] };
-    let optionsLine = { rootMargin: '100px 0px -950px 0px', threshold: [0] };
+      let options = { rootMargin: '0px', threshold: [0] };
+      let optionsLine = { rootMargin: '100px 0px -950px 0px', threshold: [0] };
 
-    let observer = new IntersectionObserver( onEntryTitle, options);
-    let observerLine = new IntersectionObserver( onEntryLine, optionsLine);
+      let observer = new IntersectionObserver( onEntryTitle, options);
+      let observerLine = new IntersectionObserver( onEntryLine, optionsLine);
 
-    if (title.current) {
-        observer.observe(title.current);
-    }
+      if (title.current) {
+          observer.observe(title.current);
+      }
 
-    if (lineRef.current) {
-        observerLine.observe(lineRef.current);
-    }
+      if (lineRef.current) {
+          observerLine.observe(lineRef.current);
+      }
     })
     
     return (

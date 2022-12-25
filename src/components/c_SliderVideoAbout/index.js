@@ -22,13 +22,26 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIs
 
     const [heightBlock, setHeightBlock] = useState(0);
 
+    let retina;
+
+    if (typeof window !== "undefined") {
+        retina = window.devicePixelRatio > 1;
+    }  
+
     useEffect(() => {
         showDivWidth()
         setHeightBlock(divBlock.current.getBoundingClientRect().width / 1.4756)
     }, [width])
 
+    
     const elements = slider.gallery.map((el, i) => {
-        return <C_SliderElementAbout key={i} img={el.src}/>
+        {if (width < sizes.widthTabletMd) {
+            return <C_SliderElementAbout key={i} 
+            img={retina ? el.src : el.src}/>
+        } else {
+            return <C_SliderElementAbout key={i} 
+            img={retina ? el.src : el.src}/>
+        }}
     })
     
     useEffect(() => {
