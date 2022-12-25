@@ -94,6 +94,12 @@ export const S_Hero = ({className, data, setIsPopupClose}) => {
         }
     }
 
+    let retina;
+
+    if (typeof window !== "undefined") {
+        retina = window.devicePixelRatio > 1;
+    }  
+
     return (
         <div className={cls} >
             {/*<div className={classes.textBlock}>*/}
@@ -143,20 +149,39 @@ export const S_Hero = ({className, data, setIsPopupClose}) => {
             <div
                 className={classes.interactiveBlock}
                 ref={interactiveBlock}
-            >
-                <div
-                    className={classes.btmPic}
-                    style={{
-                        backgroundImage:  `url("${data.hero_image.front_img.src}")`
-                    }}
-                />
-                <div
-                    className={classNames(classes.topPic, {[classes.topPicAnimation]:isAnimation})}
-                    ref={topPic}
-                    style={{
-                        backgroundImage:  `url("${data.hero_image.back_img.src}")`
-                    }}
-                />
+            >   
+                {width < sizes.widthTabletMd ?
+                    <div
+                        className={classes.btmPic}
+                        style={{
+                            backgroundImage:  `url("${retina ? data.hero_image.front_img.src : data.hero_image.front_img.src}")`
+                        }}
+                    />
+                :
+                    <div
+                        className={classes.btmPic}
+                        style={{
+                            backgroundImage:  `url("${retina ? data.hero_image.front_img.src : data.hero_image.front_img.src}")`
+                        }}
+                    />
+                }
+                {width < sizes.widthTabletMd ?
+                    <div
+                        className={classNames(classes.topPic, {[classes.topPicAnimation]:isAnimation})}
+                        ref={topPic}
+                        style={{
+                            backgroundImage:  `url("${retina ? data.hero_image.back_img.src : data.hero_image.back_img.src}")`
+                        }}
+                    />
+                :
+                    <div
+                        className={classNames(classes.topPic, {[classes.topPicAnimation]:isAnimation})}
+                        ref={topPic}
+                        style={{
+                            backgroundImage:  `url("${retina ? data.hero_image.back_img.src : data.hero_image.back_img.src}")`
+                        }}
+                    />
+                }
                 <div className={classNames(classes.hover, {[classes.animationOff]:isAnimationOff})}
                      onMouseOver={(e) => {
                          isDesktop ? updateCursor(e, topPic, interactiveBlock, 0) : e.preventDefault()
