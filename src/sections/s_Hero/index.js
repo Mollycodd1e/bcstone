@@ -146,7 +146,7 @@ export const S_Hero = ({className, data, setIsPopupClose}) => {
                 <li className={classes.item} >Доходность до 40%</li>
                 <li className={classes.item} >Рассрочка 0%</li>
                 <li className={classes.item} >Рассрочка 0%</li>
-                <li className={classes.item} >Офисный девелопер №1 <a href="https://realty.rbc.ru/news/6318526d9a794714f4879983" target="_blank">по версии РБК</a></li>
+                <li className={classes.item} >Офисный девелопер №1 <a href="https://realty.rbc.ru/news/6318526d9a794714f4879983" target="_blank" rel="noreferrer">по версии РБК</a></li>
             </ul>
             <C_MainButton text={"Получить предложение"} onClick={() => setIsPopupClose(false)} className={classes.mainButton} />
 
