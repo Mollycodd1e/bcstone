@@ -145,7 +145,7 @@ export const S_Hero = ({className, data, setIsPopupClose}) => {
                 {/*{data.list_description.map((el, i) => <li key={i+100} className={classes.item} dangerouslySetInnerHTML={{ __html: el}}/>)}*/}
                 <li className={classes.item} >Доходность до 40%</li>
                 <li className={classes.item} >Рассрочка 0%</li>
-                <li className={classes.item} >Рассрочка 0%</li>
+                <li className={classes.item} >Вложения от 11,6 млн руб.</li>
                 <li className={classes.item} >Офисный девелопер №1 <a href="https://realty.rbc.ru/news/6318526d9a794714f4879983" target="_blank" rel="noreferrer">по версии РБК</a></li>
             </ul>
             <C_MainButton text={"Получить предложение"} onClick={() => setIsPopupClose(false)} className={classes.mainButton} />
