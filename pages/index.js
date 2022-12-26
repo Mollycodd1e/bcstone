@@ -54,11 +54,25 @@ const mainPageData = [
         "slug": "main_page",
         "logo_title": "Бизнес-центры класса а",
         "titile_description": "Продажа / аренда офисов и ритейла <br/>в Москве у метро",
-        "list_description": [
+        "list_description2": [
             "Доходность до 40%",
             "Рассрочка 0%",
             "Вложения от 11,6 млн руб.",
-            "Офисный девелопер №1 <a href=\"https://realty.rbc.ru/news/6318526d9a794714f4879983\" target=\"_blank\">по версии РБК</>"
+            "Офисный девелопер №1 <a href=\"https://realty.rbc.ru/news/6318526d9a794714f4879983\" target=\"_blank\" >по версии РБК</>"
+        ],
+        "list_description": [
+            {
+                "text": "Доходность до 40%"
+            },
+            {
+                "text": "Рассрочка 0%"
+            },
+            {
+                "text": "Вложения от 11,6 млн руб."
+            },
+            {
+                "text": "Офисный девелопер №1 по версии РБК"
+            }
         ],
         "phone": {
             "phone_number_decoration": "+7 (495) 023-10-65",
@@ -148,7 +162,10 @@ const mainPageData = [
             {
                 "name": "Ленинский",
                 "img": {
-                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/0c/633471f6a6fde5a9e8e017f3239d77/6vr3pRVZA9q2JWqsF5PhkoWqo9Y29DE66fpaDFx9.jpg"
+                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/0c/633471f6a6fde5a9e8e017f3239d77/sPftYHeOSSXBe8DqVnUT3Imh4U08NZhttXuRttMw.jpg"
+                },
+                "img_not_retina": {
+                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/bb/f4e507d196788477193a92a3866f1a/Cp88s4b3dgEQC7CCjS79bZAfZpGFbFCuQmy0xe5w.jpg"
                 },
                 "extraInfo": "",
                 "logo": {
@@ -183,7 +200,10 @@ const mainPageData = [
             {
                 "name": "Савёловская",
                 "img": {
-                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/92/5edce4c7cbe0f5674bcb7c5c8a672b/Ae1sp9ggoYNwzEGxfIZEXaBPk5XHjXWHPsYYiGym.jpg"
+                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/92/5edce4c7cbe0f5674bcb7c5c8a672b/Ofaox1hghk6Zp96j79VnXyvuN8XB0jfIlwiU5HuO.jpg"
+                },
+                "img_not_retina": {
+                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/42/8a9ac3d0a422c6d6153976fbb44e25/8QePuo3mOa0ofY7HO8DosjLTdZaO5507CzNb0LEk.jpg"
                 },
                 "extraInfo": "",
                 "logo": {
@@ -218,7 +238,10 @@ const mainPageData = [
             {
                 "name": "Towers",
                 "img": {
-                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/17/e25aa43857149c1df733e663eaf90a/c3yTwdUahRjCQe94rlexVAEzHNg1YuGYmD5Uxexw.jpg"
+                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/17/e25aa43857149c1df733e663eaf90a/kEQtvEXysbyQTTGzpt9RbE607XhJ3YwR6tcOodCr.jpg"
+                },
+                "img_not_retina": {
+                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/43/f92aef1db4bb3698f5e7c1bbff9b62/jEA79QxG8kP3gXlgKyMQEdkKDmPQyqxzDukasnMB.jpg"
                 },
                 "extraInfo": "",
                 "logo": {
@@ -253,7 +276,10 @@ const mainPageData = [
             {
                 "name": "Курская",
                 "img": {
-                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/5f/f082869ff0a15201b7757607d017db/ZkTOhMYXX38g94qVsmuXVkfyHRAUhZMUSbGr39Ms.jpg"
+                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/5f/f082869ff0a15201b7757607d017db/05LWws4ce6B8VS7suylQWca3xZuA0mnRemLMtJUk.jpg"
+                },
+                "img_not_retina": {
+                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/00/c08d7ba606d3a6c352851f164bba67/LjAAsp7Q5Ag51zV15o7w0YyrWoujjjSk0X7u8p9u.jpg"
                 },
                 "extraInfo": "",
                 "logo": {
@@ -288,7 +314,10 @@ const mainPageData = [
             {
                 "name": "Tower A",
                 "img": {
-                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/8b/1141042c5008cfb586b64cf5f0d37f/Tp27YNxcAUVVXqp4Koz7Xc2x56xPCuZZsEbBGCwm.jpg"
+                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/8b/1141042c5008cfb586b64cf5f0d37f/v2wt9HlAAD6n6etavmX05UpounqJX3EMvHVwZ1kW.jpg"
+                },
+                "img_not_retina": {
+                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/ba/170158aee83616a87ca496aee91449/064tWEuhrjhtdH2nFhcfqtcFZpgCgcqf3dJfz3xu.jpg"
                 },
                 "extraInfo": "Tower A",
                 "logo": {
@@ -343,16 +372,30 @@ const mainPageData = [
                     "isVisible": true,
                     "gallery": [
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/3a/57efcacb39c1a0480499d17ada75a0/Qub7y7wnZzY2401uGhlqCcpvmm9bIsirkY12RUQC.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/3a/57efcacb39c1a0480499d17ada75a0/TklqCjqnL79GHtTEdzkcr5y3ySRD2qUhnnc2FdJ2.jpg"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/3a/57efcacb39c1a0480499d17ada75a0/ri2WIvY1GOww0y6eD6kiWQT6EfCC6WHxd3ckzQMr.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/3a/57efcacb39c1a0480499d17ada75a0/Se1zEX6yYZAu7N5zcOi80LqVyajqdO5mffQndojp.jpg"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/3a/57efcacb39c1a0480499d17ada75a0/VAtqHWRpyWSTNnkFzUdACKZjXWJEeNSzGubkeqKD.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/3a/57efcacb39c1a0480499d17ada75a0/HSguqs01O9QghwkibJMbU6jUC0bPU4hjWc5G92NL.jpg"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/3a/57efcacb39c1a0480499d17ada75a0/vqqNX0nENrS4yAnS6w2AbOKOnIbre0zoS30HV1De.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/3a/57efcacb39c1a0480499d17ada75a0/cXzgHXR4PEhlvXNx0erhiMqpPIJH1KR4jBRnsJWi.jpg"
+                        }
+                    ],
+                    "gallery_not_retina": [
+                        {
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/b4/dfa22d3cde1dc5288efe8f41032599/u8rp7GpS4xdYeWqD5IwzjA3yZxll4SElId1dGNBo.jpg"
+                        },
+                        {
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/b4/dfa22d3cde1dc5288efe8f41032599/msqdGa3CJHZgAFNC8BqRrL6QOTsHSp9HZpkUcw94.jpg"
+                        },
+                        {
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/b4/dfa22d3cde1dc5288efe8f41032599/2VeI9Z4gYKZKMcchN4DXFGIdpA2GNkgFbocAWxKa.jpg"
+                        },
+                        {
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/b4/dfa22d3cde1dc5288efe8f41032599/z3l3PKxUKTAqxBxM6FiE24HOCmSlx3pkdKCFDDAU.jpg"
                         }
                     ]
                 },
