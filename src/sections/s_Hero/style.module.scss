@@ -322,6 +322,10 @@ $animationTimingHero: ease-out;
 .item {
   font-size: 12px;
   line-height: 17px;
+
+  & a {
+    color: #3b3bbb;
+  }
 }
 
 .mainButton {

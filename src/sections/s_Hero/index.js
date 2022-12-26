@@ -142,7 +142,7 @@ export const S_Hero = ({className, data, setIsPopupClose}) => {
             <div className={classes.mainTitle} />
             <div className={classes.listName} dangerouslySetInnerHTML={{ __html: data.titile_description}}/>
             <ul className={classes.listInfo}>
-                {data.list_description.map((el, i) => <li key={i} className={classes.item}>{el.text}</li>)}
+                {data.list_description.map((el, i) => <li key={i} className={classes.item} dangerouslySetInnerHTML={{ __html: el}}/>)}
             </ul>
             <C_MainButton text={"Получить предложение"} onClick={() => setIsPopupClose(false)} className={classes.mainButton} />
 

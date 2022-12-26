@@ -48,7 +48,8 @@
 }
 
 .callMe {
-  //display: none;
+  //display: none !important;
+  //opacity: 0 !important;
   background-image: url("../../img/s_call_icon.svg");
   @include iconMob;
   bottom: 80px;
