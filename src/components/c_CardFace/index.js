@@ -37,15 +37,15 @@ export const С_CardFace = ({className, logo, alt, img, img2x, imgMob, img2xMob,
         link === '' ? 
             <div className={cls} onClick={() =>  setIsPopupClose(false)}>
                 {width < sizes.widthTabletMd ?
-                    <div
-                        className={classes.pic}
-                        style={{backgroundImage:  isWebp ? `url("${retina ? img : img}")` : `url("${retina ? img : img}")`}}
-                    />  
+                        <div
+                            className={classes.pic}
+                            style={{backgroundImage:  isWebp ? `url("${retina ? img : img}")` : `url("${retina ? img : img}")`}}
+                        />  
                 : 
-                    <div
-                        className={classes.pic}
-                        style={{ backgroundImage:  isWebp ? `url("${retina ? img : img}")` : `url("${retina ? img : img}")`}}
-                    />  
+                        <div
+                            className={classes.pic}
+                            style={{ backgroundImage:  isWebp ? `url("${retina ? img : img}")` : `url("${retina ? img : img}")`}}
+                        />
                 }
                 {extraInfo !== '' ? <div className={classes.extraInfo} dangerouslySetInnerHTML={{ __html: extraInfo}} /> : null}
 
@@ -56,12 +56,12 @@ export const С_CardFace = ({className, logo, alt, img, img2x, imgMob, img2xMob,
                 {width < sizes.widthTabletMd ? 
                     <div
                         className={classes.pic}
-                        style={{ backgroundImage:  `url("${retina ? img : img}")`}}
+                        style={{ backgroundImage:  isWebp ? `url("${retina ? img : img}")` : `url("${retina ? img : img}")`}}
                     />
                 :
                     <div
                         className={classes.pic}
-                        style={{ backgroundImage:  `url("${retina ? img : img}")`}}
+                        style={{ backgroundImage:  isWebp ? `url("${retina ? img : img}")` : `url("${retina ? img : img}")`}}
                     />
                 }
                 {extraInfo !== '' ? <div className={classes.extraInfo} dangerouslySetInnerHTML={{ __html: extraInfo}} /> : null}

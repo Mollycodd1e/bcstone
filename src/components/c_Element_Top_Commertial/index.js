@@ -18,7 +18,6 @@ export const C_Element_Top_Commertial = ({className, element}) => {
     let spaceNumberContent;
     let cropContent;
 
-
     if ((newTitle.length <= 22) && (newContent.length < 75)) {
         cropTitle = title;
         cropContent = content;
