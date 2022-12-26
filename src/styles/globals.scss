@@ -196,7 +196,7 @@ input[type="radio"].visually-hidden {
   }
 }
 
-@media (min-width: $width-tablet-sm) {
+@media (max-width: $width-tablet-sm) {
   /* sitephone-2B2C2C.css | https://app.comagic.ru/widget/css/sitephone2/desktop/sitephone-2B2C2C.css */
 
   .comagic-c-sitephone-label__bubble--solid {
