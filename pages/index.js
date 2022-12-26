@@ -84,7 +84,7 @@ const mainPageData = [
                         "color": "#D5FD01"
                     },
                     {
-                        "link": "",
+                        "link": "/#Проекты",
                         "name": "Курская",
                         "color": "#5D6A63"
                     },
@@ -102,6 +102,11 @@ const mainPageData = [
                         "link": "https://stone-tws.ru/tower_a.html",
                         "name": "Towers | Tower A",
                         "color": "#283380"
+                    },
+                    {
+                        "link": "/#Проекты",
+                        "name": "Дмитровская",
+                        "color": "#7D5FA3"
                     }
                 ]
             },
