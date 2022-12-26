@@ -2006,44 +2006,39 @@ export default function Home() {
     const [isAboutPopupClose, setIsAboutPopupClose] = useState(true);
     
     return (
-        // <Context.Provider value={data}>
-            <Context.Provider value={[width, height]}>
-                <div className={"page-wrapper"}>
-                    <Head>
-                        <title>Премиальные бизнес-центры STONE</title>
-                        <meta name="description" content="Продажа или аренда премиальной офисной недвижимости у метро от девелопера STONE HEDGE. Статусные инвестиции для дальнейшей перепродажи, сдачи в аренду или размещения собственного бизнеса. Любые форматы от офисов, офисных этажей, офисных зданий до ритейла и торговой галереи." />
-                        <link rel="icon" href="/favicon.ico" />
+        <Context.Provider value={[width, height]}>
+            <div className={"page-wrapper"}>
+                <Head>
+                    <title>Премиальные бизнес-центры STONE</title>
+                    <meta name="description" content="Продажа или аренда премиальной офисной недвижимости у метро от девелопера STONE HEDGE. Статусные инвестиции для дальнейшей перепродажи, сдачи в аренду или размещения собственного бизнеса. Любые форматы от офисов, офисных этажей, офисных зданий до ритейла и торговой галереи." />
+                    <link rel="icon" href="/favicon.ico" />
 
-                                            <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                        new Date().getTime(),event:'gtm.js'});var f=d.getByTagName(s)[0],
-                        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                        })(window,document,'script','dataLayer','GTM-WZJD3HM')`}}></script>
-                    </Head>
-                    <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZJD3HM";height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>
+                    <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WZJD3HM')`}}></script>
+                </Head>
+                <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZJD3HM";height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>
 
-                        <div className={`common_top_bg`}  ref={topMenuEl}>
-                            <S_Menu menuOnTop={menuOnTop} data={mainPageData[0]} setIsPopupClose={setIsPopupClose}/>
-                            <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
-                                <C_FullForm data={mainPageData[0]} className={classes.fullFormIndexSection} popup={true}/>
-                            </S_Popup>
-                            <S_Hero data={mainPageData[0]} setIsPopupClose={setIsPopupClose}/>
-                            <S_Top_Commercial data={mainPageData[0]} />
-                            <S_Projects data={mainPageData[0]} className={"projects-bg"} setIsPopupClose={setIsPopupClose}/>
-                            <S_About data={mainPageData[0]} width={width} setIsPopupClose={setIsPopupClose} setIsAboutPopupClose={setIsAboutPopupClose} popup={isAboutPopupClose}/>
-                            <C_SliderVideoPopup data={mainPageData[0]} sliderVideoPopupContent={mainPageData[0].about_company.variableContent} setIsAboutPopupClose={setIsAboutPopupClose} isAboutPopupClose={isAboutPopupClose} popup={isAboutPopupClose}/>
-                            <S_Sales data={mainPageData[0]} />
-                            <S_FullForm data={mainPageData[0]} />
-                            <S_Bottom_Commercial data={mainPageData[0]}/>
-                            {/* <S_PressCenter data={mainPageData[0]}/> */}
-                            {newsData.length !== 0 ? <S_PressCenter data={newsData}/> : null}
-                            <S_Footer phone_number={mocks.contacts.phone} mail={mocks.contacts.mail} address={mocks.contacts.address} sales_number={mocks.contacts.sales} telegram={mocks.contacts.telegram} copyright={mocks.copyright} />
-                        </div>
-                    }
-
+                <div className={`common_top_bg`}  ref={topMenuEl}>
+                    <S_Menu menuOnTop={menuOnTop} data={mainPageData[0]} setIsPopupClose={setIsPopupClose}/>
+                    <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
+                        <C_FullForm data={mainPageData[0]} className={classes.fullFormIndexSection} popup={true}/>
+                    </S_Popup>
+                    <S_Hero data={mainPageData[0]} setIsPopupClose={setIsPopupClose}/>
+                    <S_Top_Commercial data={mainPageData[0]} />
+                    <S_Projects data={mainPageData[0]} className={"projects-bg"} setIsPopupClose={setIsPopupClose}/>
+                    <S_About data={mainPageData[0]} width={width} setIsPopupClose={setIsPopupClose} setIsAboutPopupClose={setIsAboutPopupClose} popup={isAboutPopupClose}/>
+                    <C_SliderVideoPopup data={mainPageData[0]} sliderVideoPopupContent={mainPageData[0].about_company.variableContent} setIsAboutPopupClose={setIsAboutPopupClose} isAboutPopupClose={isAboutPopupClose} popup={isAboutPopupClose}/>
+                    <S_Sales data={mainPageData[0]} />
+                    <S_FullForm data={mainPageData[0]} />
+                    <S_Bottom_Commercial data={mainPageData[0]}/>
+                    {newsData.length !== 0 ? <S_PressCenter data={newsData}/> : null}
+                    <S_Footer phone_number={mocks.contacts.phone} mail={mocks.contacts.mail} address={mocks.contacts.address} sales_number={mocks.contacts.sales} telegram={mocks.contacts.telegram} copyright={mocks.copyright} />
                 </div>
-                <Script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3xsHwkwIhhfEFp3og9dunH0Jw39tsxi0" strategy="beforeInteractive"/>
-            </Context.Provider>
-        // </Context.Provider>
+            </div>
+            <Script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3xsHwkwIhhfEFp3og9dunH0Jw39tsxi0" strategy="beforeInteractive"/>
+        </Context.Provider>
     )
 }
