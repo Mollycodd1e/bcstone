@@ -66,10 +66,12 @@ const mainPageData = [
         },
         "hero_image": {
             "front_img": {
-                "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/64/2cedfda78dced222cef684f3905b2a/MJ7tbsIy6BTv657HbXfvTM2QIgGjUxx62oXqMhiT.png"
+                "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/64/2cedfda78dced222cef684f3905b2a/MJ7tbsIy6BTv657HbXfvTM2QIgGjUxx62oXqMhiT.png",
+                "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/64/2cedfda78dced222cef684f3905b2a/MJ7tbsIy6BTv657HbXfvTM2QIgGjUxx62oXqMhiT.webp"
             },
             "back_img": {
-                "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/73/14584bc58b95db0acab53efa4d6bb8/eTD1vYsMb3lEIolKXqf2oZ2LAQECfjEdFh34k5OV.png"
+                "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/73/14584bc58b95db0acab53efa4d6bb8/eTD1vYsMb3lEIolKXqf2oZ2LAQECfjEdFh34k5OV.png",
+                "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/73/14584bc58b95db0acab53efa4d6bb8/eTD1vYsMb3lEIolKXqf2oZ2LAQECfjEdFh34k5OV.webp"
             }
         },
         "nav": [
@@ -82,7 +84,7 @@ const mainPageData = [
                         "color": "#D5FD01"
                     },
                     {
-                        "link": "/#Проекты",
+                        "link": "",
                         "name": "Курская",
                         "color": "#5D6A63"
                     },
@@ -148,7 +150,8 @@ const mainPageData = [
             {
                 "name": "Ленинский",
                 "img": {
-                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/0c/633471f6a6fde5a9e8e017f3239d77/sPftYHeOSSXBe8DqVnUT3Imh4U08NZhttXuRttMw.jpg"
+                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/0c/633471f6a6fde5a9e8e017f3239d77/sPftYHeOSSXBe8DqVnUT3Imh4U08NZhttXuRttMw.jpg",
+                    "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/0c/633471f6a6fde5a9e8e017f3239d77/sPftYHeOSSXBe8DqVnUT3Imh4U08NZhttXuRttMw.webp"
                 },
                 "img_not_retina": {
                     "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/bb/f4e507d196788477193a92a3866f1a/Cp88s4b3dgEQC7CCjS79bZAfZpGFbFCuQmy0xe5w.jpg"
@@ -186,7 +189,8 @@ const mainPageData = [
             {
                 "name": "Савёловская",
                 "img": {
-                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/92/5edce4c7cbe0f5674bcb7c5c8a672b/Ofaox1hghk6Zp96j79VnXyvuN8XB0jfIlwiU5HuO.jpg"
+                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/92/5edce4c7cbe0f5674bcb7c5c8a672b/Ofaox1hghk6Zp96j79VnXyvuN8XB0jfIlwiU5HuO.jpg",
+                    "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/92/5edce4c7cbe0f5674bcb7c5c8a672b/Ofaox1hghk6Zp96j79VnXyvuN8XB0jfIlwiU5HuO.webp"
                 },
                 "img_not_retina": {
                     "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/42/8a9ac3d0a422c6d6153976fbb44e25/8QePuo3mOa0ofY7HO8DosjLTdZaO5507CzNb0LEk.jpg"
@@ -224,7 +228,8 @@ const mainPageData = [
             {
                 "name": "Towers",
                 "img": {
-                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/17/e25aa43857149c1df733e663eaf90a/kEQtvEXysbyQTTGzpt9RbE607XhJ3YwR6tcOodCr.jpg"
+                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/17/e25aa43857149c1df733e663eaf90a/kEQtvEXysbyQTTGzpt9RbE607XhJ3YwR6tcOodCr.jpg",
+                    "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/17/e25aa43857149c1df733e663eaf90a/kEQtvEXysbyQTTGzpt9RbE607XhJ3YwR6tcOodCr.webp"
                 },
                 "img_not_retina": {
                     "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/43/f92aef1db4bb3698f5e7c1bbff9b62/jEA79QxG8kP3gXlgKyMQEdkKDmPQyqxzDukasnMB.jpg"
@@ -262,7 +267,8 @@ const mainPageData = [
             {
                 "name": "Курская",
                 "img": {
-                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/5f/f082869ff0a15201b7757607d017db/05LWws4ce6B8VS7suylQWca3xZuA0mnRemLMtJUk.jpg"
+                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/5f/f082869ff0a15201b7757607d017db/05LWws4ce6B8VS7suylQWca3xZuA0mnRemLMtJUk.jpg",
+                    "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/5f/f082869ff0a15201b7757607d017db/05LWws4ce6B8VS7suylQWca3xZuA0mnRemLMtJUk.webp"
                 },
                 "img_not_retina": {
                     "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/00/c08d7ba606d3a6c352851f164bba67/LjAAsp7Q5Ag51zV15o7w0YyrWoujjjSk0X7u8p9u.jpg"
@@ -300,7 +306,8 @@ const mainPageData = [
             {
                 "name": "Tower A",
                 "img": {
-                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/8b/1141042c5008cfb586b64cf5f0d37f/v2wt9HlAAD6n6etavmX05UpounqJX3EMvHVwZ1kW.jpg"
+                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/8b/1141042c5008cfb586b64cf5f0d37f/v2wt9HlAAD6n6etavmX05UpounqJX3EMvHVwZ1kW.jpg",
+                    "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/8b/1141042c5008cfb586b64cf5f0d37f/v2wt9HlAAD6n6etavmX05UpounqJX3EMvHVwZ1kW.webp"
                 },
                 "img_not_retina": {
                     "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/ba/170158aee83616a87ca496aee91449/064tWEuhrjhtdH2nFhcfqtcFZpgCgcqf3dJfz3xu.jpg"
@@ -334,6 +341,44 @@ const mainPageData = [
                     }
                 },
                 "isShownOnMap": false
+            },
+            {
+                "name": "STONE Дмитровская",
+                "img": {
+                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/a3/b1864303ad6641112955abf9aacf11/YYVSMYUzrrkUSXlNsg03LGrhTJhDuGhKhaOMYnyA.jpg"
+                },
+                "img_not_retina": {
+                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/df/d165435f1b447567dfd0fb27f6db32/AN1muY0w9nhlQyHn83VQ4GmXiPJ0WJxbFZL4tPm2.jpg"
+                },
+                "extraInfo": "",
+                "logo": {
+                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/ab/6a58d76893af8090fc3fa845209c6f/tYwntspFH6MxNEGDYQHjZLWrWlLf8lOFPMHzHzHb.svg"
+                },
+                "brandColor": {
+                    "first": "#7D5FA3",
+                    "text": "#FFFFFF"
+                },
+                "link": "",
+                "descriptionList": [
+                    "Дмитровская",
+                    "3 минуты",
+                    "Готовность: 2026",
+                    "49&nbsp;000 м&#178;"
+                ],
+                "order": "6",
+                "coordinates": {
+                    "lat": "55.789752643698705",
+                    "lng": "37.58600379646407"
+                },
+                "pin": {
+                    "default": {
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1f/b69c5d5575fd2885bf258184346c12/QFvH4i50SklKiBgqY58MZNJWaEBglnlOuI6tIOfS.svg"
+                    },
+                    "active": {
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/85/f081caefbfb101c3dfda3b0c64a452/Qw7i3BrfbKvWumhClZDzpQIN3p9GkcSoQT2FLFzZ.svg"
+                    }
+                },
+                "isShownOnMap": true
             }
         ],
         "map_settings": {
@@ -358,16 +403,20 @@ const mainPageData = [
                     "isVisible": true,
                     "gallery": [
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/3a/57efcacb39c1a0480499d17ada75a0/TklqCjqnL79GHtTEdzkcr5y3ySRD2qUhnnc2FdJ2.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/3a/57efcacb39c1a0480499d17ada75a0/TklqCjqnL79GHtTEdzkcr5y3ySRD2qUhnnc2FdJ2.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/3a/57efcacb39c1a0480499d17ada75a0/TklqCjqnL79GHtTEdzkcr5y3ySRD2qUhnnc2FdJ2.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/3a/57efcacb39c1a0480499d17ada75a0/Se1zEX6yYZAu7N5zcOi80LqVyajqdO5mffQndojp.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/3a/57efcacb39c1a0480499d17ada75a0/Se1zEX6yYZAu7N5zcOi80LqVyajqdO5mffQndojp.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/3a/57efcacb39c1a0480499d17ada75a0/Se1zEX6yYZAu7N5zcOi80LqVyajqdO5mffQndojp.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/3a/57efcacb39c1a0480499d17ada75a0/HSguqs01O9QghwkibJMbU6jUC0bPU4hjWc5G92NL.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/3a/57efcacb39c1a0480499d17ada75a0/HSguqs01O9QghwkibJMbU6jUC0bPU4hjWc5G92NL.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/3a/57efcacb39c1a0480499d17ada75a0/HSguqs01O9QghwkibJMbU6jUC0bPU4hjWc5G92NL.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/3a/57efcacb39c1a0480499d17ada75a0/cXzgHXR4PEhlvXNx0erhiMqpPIJH1KR4jBRnsJWi.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/3a/57efcacb39c1a0480499d17ada75a0/cXzgHXR4PEhlvXNx0erhiMqpPIJH1KR4jBRnsJWi.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/3a/57efcacb39c1a0480499d17ada75a0/cXzgHXR4PEhlvXNx0erhiMqpPIJH1KR4jBRnsJWi.webp"
                         }
                     ],
                     "gallery_not_retina": [
@@ -410,7 +459,8 @@ const mainPageData = [
                 "name": "Офисы",
                 "url": "offices_1",
                 "picture": {
-                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/58/ed25a5c3bcad15565cd98bd9f202ae/WwaHtg9GvzBlZKnOkmKzm1KZT5W1ZzH9mFKhL1ex.jpg"
+                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/58/ed25a5c3bcad15565cd98bd9f202ae/WwaHtg9GvzBlZKnOkmKzm1KZT5W1ZzH9mFKhL1ex.jpg",
+                    "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/58/ed25a5c3bcad15565cd98bd9f202ae/WwaHtg9GvzBlZKnOkmKzm1KZT5W1ZzH9mFKhL1ex.webp"
                 }
             },
             {
@@ -418,7 +468,8 @@ const mainPageData = [
                 "name": "Ритейл",
                 "url": "retail_1",
                 "picture": {
-                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/c5/6407029dd1977608445dcf4dceff42/b6LAdakxesXkqRXifE3yz8umf8zU7oIm5efNU9se.jpg"
+                    "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/c5/6407029dd1977608445dcf4dceff42/b6LAdakxesXkqRXifE3yz8umf8zU7oIm5efNU9se.jpg",
+                    "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/c5/6407029dd1977608445dcf4dceff42/b6LAdakxesXkqRXifE3yz8umf8zU7oIm5efNU9se.webp"
                 }
             }
         ],
@@ -439,7 +490,8 @@ const mainPageData = [
                     "link": "commercial_4",
                     "order": "1",
                     "pic": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/77/3e737fd48f81a18596e7b77e4af8dc/lExxy00f8Dy3wxrfbHyMhWJvK3job0kJmnQPlNhZ.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/77/3e737fd48f81a18596e7b77e4af8dc/lExxy00f8Dy3wxrfbHyMhWJvK3job0kJmnQPlNhZ.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/77/3e737fd48f81a18596e7b77e4af8dc/lExxy00f8Dy3wxrfbHyMhWJvK3job0kJmnQPlNhZ.webp"
                     }
                 },
                 {
@@ -448,7 +500,8 @@ const mainPageData = [
                     "link": "commercial_5",
                     "order": "2",
                     "pic": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/e6/893855ea6b3feefffa37be875cba05/PPA1WyBUeCUgwTjz4sNnwdI8koUsDg2wAxqhSCgt.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/e6/893855ea6b3feefffa37be875cba05/PPA1WyBUeCUgwTjz4sNnwdI8koUsDg2wAxqhSCgt.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/e6/893855ea6b3feefffa37be875cba05/PPA1WyBUeCUgwTjz4sNnwdI8koUsDg2wAxqhSCgt.webp"
                     }
                 }
             ]
@@ -464,7 +517,8 @@ const mainPageData = [
                     "link": "",
                     "order": "1",
                     "pic": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/75/180bcd0fc3bb61d4482eba9826e72b/JR2juU9uIEw0njyHnbgbMlC7vqTSU0FgLAZxWR4Z.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/75/180bcd0fc3bb61d4482eba9826e72b/JR2juU9uIEw0njyHnbgbMlC7vqTSU0FgLAZxWR4Z.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/75/180bcd0fc3bb61d4482eba9826e72b/JR2juU9uIEw0njyHnbgbMlC7vqTSU0FgLAZxWR4Z.webp"
                     },
                     "date": "20/04"
                 },
@@ -474,7 +528,8 @@ const mainPageData = [
                     "link": "",
                     "order": "2",
                     "pic": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/7e/c138cd541e6410bd3a6589eb400924/1c6XWqRHYRJj0QpyancETxBgObmPD5dBXo2ZyN0K.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/7e/c138cd541e6410bd3a6589eb400924/1c6XWqRHYRJj0QpyancETxBgObmPD5dBXo2ZyN0K.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/7e/c138cd541e6410bd3a6589eb400924/1c6XWqRHYRJj0QpyancETxBgObmPD5dBXo2ZyN0K.webp"
                     },
                     "date": "21/04"
                 },
@@ -484,7 +539,8 @@ const mainPageData = [
                     "link": "",
                     "order": "3",
                     "pic": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/a5/b215a6704454e4c1ecb98fd2ef3c8f/DxQRpbbFsXNE291aYjqif28Wc5PcFlW5hurbr6mz.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/a5/b215a6704454e4c1ecb98fd2ef3c8f/DxQRpbbFsXNE291aYjqif28Wc5PcFlW5hurbr6mz.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/a5/b215a6704454e4c1ecb98fd2ef3c8f/DxQRpbbFsXNE291aYjqif28Wc5PcFlW5hurbr6mz.webp"
                     },
                     "date": "22/04"
                 }
@@ -550,7 +606,8 @@ const mainPageData = [
                 "type": "picture",
                 "content": {
                     "image": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/a3/e061cca40c85b1db4e0c27dbe82c3e/ZWmPgSh4hInQR5FBqdkjFqLGTGSSGhp4niQAm54e.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/a3/e061cca40c85b1db4e0c27dbe82c3e/ZWmPgSh4hInQR5FBqdkjFqLGTGSSGhp4niQAm54e.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/a3/e061cca40c85b1db4e0c27dbe82c3e/ZWmPgSh4hInQR5FBqdkjFqLGTGSSGhp4niQAm54e.webp"
                     },
                     "description": "Снимок с вручения премии, которая внесла большой вклад."
                 }
@@ -562,19 +619,24 @@ const mainPageData = [
                 "content": {
                     "gallery": [
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/a5/f8b6bb70e4a842b5407fd00c58940c/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/a5/f8b6bb70e4a842b5407fd00c58940c/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/a5/f8b6bb70e4a842b5407fd00c58940c/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/a5/f8b6bb70e4a842b5407fd00c58940c/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/a5/f8b6bb70e4a842b5407fd00c58940c/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/a5/f8b6bb70e4a842b5407fd00c58940c/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/a5/f8b6bb70e4a842b5407fd00c58940c/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/a5/f8b6bb70e4a842b5407fd00c58940c/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/a5/f8b6bb70e4a842b5407fd00c58940c/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/a5/f8b6bb70e4a842b5407fd00c58940c/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/a5/f8b6bb70e4a842b5407fd00c58940c/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/a5/f8b6bb70e4a842b5407fd00c58940c/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/a5/f8b6bb70e4a842b5407fd00c58940c/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/a5/f8b6bb70e4a842b5407fd00c58940c/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/a5/f8b6bb70e4a842b5407fd00c58940c/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.webp"
                         }
                     ],
                     "description": "Фотографии с вручения премии, которая, несомненно, внесла вклад."
@@ -588,7 +650,8 @@ const mainPageData = [
                     "description": "Руководитель департамента оценки и аналитики STONE HEDGE",
                     "name": "Кристина Недря",
                     "photo": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/05/ce2f6569135ba35ff28421d1571cab/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/05/ce2f6569135ba35ff28421d1571cab/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/05/ce2f6569135ba35ff28421d1571cab/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.webp"
                     },
                     "text": "«Генеральный директор STONE HEDGE Максим Гейзер второй год подряд вошёл в число самых влиятельных персон рынка коммерческой недвижимости рейтинга CRE 100. В списке CRE 100 генеральный директор STONE HEDGE был высоко отмечен в числе лидеров отрасли и занял 16 позицию в категории Девелопмент»"
                 }
@@ -638,19 +701,24 @@ const mainPageData = [
                 "content": {
                     "gallery": [
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/61/f2d5a0aff46b4a4ab57e71dc13dc17/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/61/f2d5a0aff46b4a4ab57e71dc13dc17/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/61/f2d5a0aff46b4a4ab57e71dc13dc17/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/61/f2d5a0aff46b4a4ab57e71dc13dc17/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/61/f2d5a0aff46b4a4ab57e71dc13dc17/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/61/f2d5a0aff46b4a4ab57e71dc13dc17/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/61/f2d5a0aff46b4a4ab57e71dc13dc17/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/61/f2d5a0aff46b4a4ab57e71dc13dc17/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/61/f2d5a0aff46b4a4ab57e71dc13dc17/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/61/f2d5a0aff46b4a4ab57e71dc13dc17/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/61/f2d5a0aff46b4a4ab57e71dc13dc17/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/61/f2d5a0aff46b4a4ab57e71dc13dc17/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/61/f2d5a0aff46b4a4ab57e71dc13dc17/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/61/f2d5a0aff46b4a4ab57e71dc13dc17/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/61/f2d5a0aff46b4a4ab57e71dc13dc17/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.webp"
                         }
                     ],
                     "description": "Фотографии с вручения премии, которая, несомненно, внесла вклад."
@@ -708,7 +776,8 @@ const mainPageData = [
                 "type": "picture",
                 "content": {
                     "image": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/66/af9d38a0e9e29e32508e4e5a2acbec/LoUouilT7pJc3Xd7eTNkRuFJe97LqgVUnnSKRMnh.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/66/af9d38a0e9e29e32508e4e5a2acbec/LoUouilT7pJc3Xd7eTNkRuFJe97LqgVUnnSKRMnh.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/66/af9d38a0e9e29e32508e4e5a2acbec/LoUouilT7pJc3Xd7eTNkRuFJe97LqgVUnnSKRMnh.webp"
                     },
                     "description": "Новый бизнес-центр в составе премиального офисного квартала STONE Towers "
                 }
@@ -729,7 +798,8 @@ const mainPageData = [
                     "description": "Управляющий партнер STONE HEDGE",
                     "name": "Анастасия Малкова",
                     "photo": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/da/11f87ed42476ba1df49440ac1c4a35/TTzCfHhzUE9k9reYmvtmvYQvHEdcmRFuV8DtPWzJ.png"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/da/11f87ed42476ba1df49440ac1c4a35/TTzCfHhzUE9k9reYmvtmvYQvHEdcmRFuV8DtPWzJ.png",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/da/11f87ed42476ba1df49440ac1c4a35/TTzCfHhzUE9k9reYmvtmvYQvHEdcmRFuV8DtPWzJ.webp"
                     },
                     "text": "«Открытие продаж в Tower D стало одним из самых ожидаемых событий на офисном рынке как возможность приобрести качественный офис класса А по стартовым ценам в фактически готовом офисном квартале»"
                 }
@@ -748,7 +818,8 @@ const mainPageData = [
                 "type": "picture",
                 "content": {
                     "image": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/ca/2e61cb043b68bcdbf43a652962ec1d/Bkyiyc0ZsEBJXC0pxJuAksdeLQWaALuISZ9NjDmO.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/ca/2e61cb043b68bcdbf43a652962ec1d/Bkyiyc0ZsEBJXC0pxJuAksdeLQWaALuISZ9NjDmO.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/ca/2e61cb043b68bcdbf43a652962ec1d/Bkyiyc0ZsEBJXC0pxJuAksdeLQWaALuISZ9NjDmO.webp"
                     },
                     "description": "Премиальный офисный квартал STONE Towers "
                 }
@@ -785,19 +856,24 @@ const mainPageData = [
                 "content": {
                     "gallery": [
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1e/e8a0df572dd5aac2e053f1a5b523e4/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1e/e8a0df572dd5aac2e053f1a5b523e4/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/1e/e8a0df572dd5aac2e053f1a5b523e4/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1e/e8a0df572dd5aac2e053f1a5b523e4/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1e/e8a0df572dd5aac2e053f1a5b523e4/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/1e/e8a0df572dd5aac2e053f1a5b523e4/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1e/e8a0df572dd5aac2e053f1a5b523e4/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1e/e8a0df572dd5aac2e053f1a5b523e4/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/1e/e8a0df572dd5aac2e053f1a5b523e4/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1e/e8a0df572dd5aac2e053f1a5b523e4/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1e/e8a0df572dd5aac2e053f1a5b523e4/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/1e/e8a0df572dd5aac2e053f1a5b523e4/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1e/e8a0df572dd5aac2e053f1a5b523e4/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1e/e8a0df572dd5aac2e053f1a5b523e4/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/1e/e8a0df572dd5aac2e053f1a5b523e4/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.webp"
                         }
                     ],
                     "description": "Фотографии с вручения премии, которая, несомненно, внесла вклад."
@@ -877,7 +953,8 @@ const mainPageData = [
                 "type": "picture",
                 "content": {
                     "image": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/16/9d19f3ca11d9959710f45b7fa7d2b7/PlK4B2ROQ8QcMPKGlfTpZVLhWRTtNoaDURvYX0zo.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/16/9d19f3ca11d9959710f45b7fa7d2b7/PlK4B2ROQ8QcMPKGlfTpZVLhWRTtNoaDURvYX0zo.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/16/9d19f3ca11d9959710f45b7fa7d2b7/PlK4B2ROQ8QcMPKGlfTpZVLhWRTtNoaDURvYX0zo.webp"
                     },
                     "description": "Бизнес-центр STONE Дмитровская "
                 }
@@ -913,7 +990,8 @@ const mainPageData = [
                 "type": "picture",
                 "content": {
                     "image": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/95/8c9953fe489d04a90623c1f0284c3d/ibTvGXbIDEiSCDdDXkXGUgMUvw2Z83cYKgXC6LZO.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/95/8c9953fe489d04a90623c1f0284c3d/ibTvGXbIDEiSCDdDXkXGUgMUvw2Z83cYKgXC6LZO.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/95/8c9953fe489d04a90623c1f0284c3d/ibTvGXbIDEiSCDdDXkXGUgMUvw2Z83cYKgXC6LZO.webp"
                     },
                     "description": "Первый качественный бизнес-центр в районе м. «Дмитровская»"
                 }
@@ -933,19 +1011,24 @@ const mainPageData = [
                 "content": {
                     "gallery": [
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/20/ee393d19d1f554c9017bdd50e17146/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/20/ee393d19d1f554c9017bdd50e17146/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/20/ee393d19d1f554c9017bdd50e17146/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/20/ee393d19d1f554c9017bdd50e17146/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/20/ee393d19d1f554c9017bdd50e17146/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/20/ee393d19d1f554c9017bdd50e17146/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/20/ee393d19d1f554c9017bdd50e17146/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/20/ee393d19d1f554c9017bdd50e17146/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/20/ee393d19d1f554c9017bdd50e17146/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/20/ee393d19d1f554c9017bdd50e17146/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/20/ee393d19d1f554c9017bdd50e17146/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/20/ee393d19d1f554c9017bdd50e17146/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/20/ee393d19d1f554c9017bdd50e17146/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/20/ee393d19d1f554c9017bdd50e17146/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/20/ee393d19d1f554c9017bdd50e17146/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.webp"
                         }
                     ],
                     "description": "Фотографии с вручения премии, которая, несомненно, внесла вклад."
@@ -959,7 +1042,8 @@ const mainPageData = [
                     "description": "Руководитель департамента оценки и аналитики STONE HEDGE",
                     "name": "Кристина Недря",
                     "photo": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/a7/9693af54019f34f72ef059d3e3f67c/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/a7/9693af54019f34f72ef059d3e3f67c/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/a7/9693af54019f34f72ef059d3e3f67c/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.webp"
                     },
                     "text": "«Генеральный директор STONE HEDGE Максим Гейзер второй год подряд вошёл в число самых влиятельных персон рынка коммерческой недвижимости рейтинга CRE 100. В списке CRE 100 генеральный директор STONE HEDGE был высоко отмечен в числе лидеров отрасли и занял 16 позицию в категории Девелопмент»"
                 }
@@ -1073,7 +1157,8 @@ const mainPageData = [
                 "type": "picture",
                 "content": {
                     "image": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/f3/efeddd435c7778ce27f4cee3343eff/ZWmPgSh4hInQR5FBqdkjFqLGTGSSGhp4niQAm54e.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/f3/efeddd435c7778ce27f4cee3343eff/ZWmPgSh4hInQR5FBqdkjFqLGTGSSGhp4niQAm54e.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/f3/efeddd435c7778ce27f4cee3343eff/ZWmPgSh4hInQR5FBqdkjFqLGTGSSGhp4niQAm54e.webp"
                     },
                     "description": "Снимок с вручения премии, которая внесла большой вклад."
                 }
@@ -1085,19 +1170,24 @@ const mainPageData = [
                 "content": {
                     "gallery": [
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/fc/e055c4aa3975e090212195c4966cf0/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/fc/e055c4aa3975e090212195c4966cf0/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/fc/e055c4aa3975e090212195c4966cf0/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/fc/e055c4aa3975e090212195c4966cf0/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/fc/e055c4aa3975e090212195c4966cf0/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/fc/e055c4aa3975e090212195c4966cf0/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/fc/e055c4aa3975e090212195c4966cf0/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/fc/e055c4aa3975e090212195c4966cf0/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/fc/e055c4aa3975e090212195c4966cf0/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/fc/e055c4aa3975e090212195c4966cf0/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/fc/e055c4aa3975e090212195c4966cf0/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/fc/e055c4aa3975e090212195c4966cf0/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/fc/e055c4aa3975e090212195c4966cf0/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/fc/e055c4aa3975e090212195c4966cf0/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/fc/e055c4aa3975e090212195c4966cf0/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.webp"
                         }
                     ],
                     "description": "Фотографии с вручения премии, которая, несомненно, внесла вклад."
@@ -1111,7 +1201,8 @@ const mainPageData = [
                     "description": "Руководитель департамента оценки и аналитики STONE HEDGE",
                     "name": "Кристина Недря",
                     "photo": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/03/ec7b632025ed613d60a3cd07ba6ed4/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/03/ec7b632025ed613d60a3cd07ba6ed4/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/03/ec7b632025ed613d60a3cd07ba6ed4/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.webp"
                     },
                     "text": "«Генеральный директор STONE HEDGE Максим Гейзер второй год подряд вошёл в число самых влиятельных персон рынка коммерческой недвижимости рейтинга CRE 100. В списке CRE 100 генеральный директор STONE HEDGE был высоко отмечен в числе лидеров отрасли и занял 16 позицию в категории Девелопмент»"
                 }
@@ -1181,7 +1272,8 @@ const mainPageData = [
                 "type": "picture",
                 "content": {
                     "image": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/97/cfe389c222bd5064156d4848b13a7e/IYaQdnXTFp5D2qSSRNt28sEjD2jAZIwS46q3LrmT.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/97/cfe389c222bd5064156d4848b13a7e/IYaQdnXTFp5D2qSSRNt28sEjD2jAZIwS46q3LrmT.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/97/cfe389c222bd5064156d4848b13a7e/IYaQdnXTFp5D2qSSRNt28sEjD2jAZIwS46q3LrmT.webp"
                     },
                     "description": "Премиальный бизнес-центр STONE Ленинский"
                 }
@@ -1200,7 +1292,8 @@ const mainPageData = [
                 "type": "picture",
                 "content": {
                     "image": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/fe/f65e86b38822cc0248fdf513e06504/bCWLqSOTDF3nT6ZkLVjuwl8iRRHfy4utu9C7S78Q.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/fe/f65e86b38822cc0248fdf513e06504/bCWLqSOTDF3nT6ZkLVjuwl8iRRHfy4utu9C7S78Q.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/fe/f65e86b38822cc0248fdf513e06504/bCWLqSOTDF3nT6ZkLVjuwl8iRRHfy4utu9C7S78Q.webp"
                     },
                     "description": "Премиальный офисный квартал STONE Towers "
                 }
@@ -1219,7 +1312,8 @@ const mainPageData = [
                 "type": "picture",
                 "content": {
                     "image": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/90/435d33993f617c2a61a771809da524/ggEayqH3dbbu5cKSb2o3BiA5fQABjZX1cev5r4v0.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/90/435d33993f617c2a61a771809da524/ggEayqH3dbbu5cKSb2o3BiA5fQABjZX1cev5r4v0.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/90/435d33993f617c2a61a771809da524/ggEayqH3dbbu5cKSb2o3BiA5fQABjZX1cev5r4v0.webp"
                     },
                     "description": "Бизнес-центр STONE Савеловская"
                 }
@@ -1248,19 +1342,24 @@ const mainPageData = [
                 "content": {
                     "gallery": [
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/74/a6228869faa9053e53643e011679b8/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/74/a6228869faa9053e53643e011679b8/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/74/a6228869faa9053e53643e011679b8/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/74/a6228869faa9053e53643e011679b8/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/74/a6228869faa9053e53643e011679b8/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/74/a6228869faa9053e53643e011679b8/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/74/a6228869faa9053e53643e011679b8/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/74/a6228869faa9053e53643e011679b8/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/74/a6228869faa9053e53643e011679b8/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/74/a6228869faa9053e53643e011679b8/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/74/a6228869faa9053e53643e011679b8/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/74/a6228869faa9053e53643e011679b8/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/74/a6228869faa9053e53643e011679b8/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/74/a6228869faa9053e53643e011679b8/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/74/a6228869faa9053e53643e011679b8/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.webp"
                         }
                     ],
                     "description": "Фотографии с вручения премии, которая, несомненно, внесла вклад."
@@ -1274,7 +1373,8 @@ const mainPageData = [
                     "description": "Руководитель департамента оценки и аналитики STONE HEDGE",
                     "name": "Кристина Недря",
                     "photo": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/65/dc514be12b66f352de0e664b323c87/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/65/dc514be12b66f352de0e664b323c87/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/65/dc514be12b66f352de0e664b323c87/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.webp"
                     },
                     "text": "«Генеральный директор STONE HEDGE Максим Гейзер второй год подряд вошёл в число самых влиятельных персон рынка коммерческой недвижимости рейтинга CRE 100. В списке CRE 100 генеральный директор STONE HEDGE был высоко отмечен в числе лидеров отрасли и занял 16 позицию в категории Девелопмент»"
                 }
@@ -1362,7 +1462,8 @@ const mainPageData = [
                 "type": "picture",
                 "content": {
                     "image": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/e4/f54efef72e1dd9df135bd0969021a2/pRv5qA5zaUsBt0P9Yo0TmbYzLKva2eJ6pIUsYzKC.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/e4/f54efef72e1dd9df135bd0969021a2/pRv5qA5zaUsBt0P9Yo0TmbYzLKva2eJ6pIUsYzKC.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/e4/f54efef72e1dd9df135bd0969021a2/pRv5qA5zaUsBt0P9Yo0TmbYzLKva2eJ6pIUsYzKC.webp"
                     },
                     "description": "Премиальный офисный квартал STONE Towers "
                 }
@@ -1393,19 +1494,24 @@ const mainPageData = [
                 "content": {
                     "gallery": [
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/0a/417c947f777cf29abfd10d338151d8/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/0a/417c947f777cf29abfd10d338151d8/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/0a/417c947f777cf29abfd10d338151d8/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/0a/417c947f777cf29abfd10d338151d8/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/0a/417c947f777cf29abfd10d338151d8/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/0a/417c947f777cf29abfd10d338151d8/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/0a/417c947f777cf29abfd10d338151d8/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/0a/417c947f777cf29abfd10d338151d8/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/0a/417c947f777cf29abfd10d338151d8/XXDsb2C2K7Ni8Qjjo2L4aRE9DofHmepuO1hTa9Ea.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/0a/417c947f777cf29abfd10d338151d8/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/0a/417c947f777cf29abfd10d338151d8/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/0a/417c947f777cf29abfd10d338151d8/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/0a/417c947f777cf29abfd10d338151d8/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/0a/417c947f777cf29abfd10d338151d8/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/0a/417c947f777cf29abfd10d338151d8/OzUhsLd1oOpaK1Mu8X1Zs8jrqnbk8yV43QUfxgNH.webp"
                         }
                     ],
                     "description": "Фотографии с вручения премии, которая, несомненно, внесла вклад."
@@ -1427,7 +1533,8 @@ const mainPageData = [
                     "description": "Руководитель департамента оценки и аналитики STONE HEDGE",
                     "name": "Кристина Недря",
                     "photo": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/09/a76643db26590e566d562bb2e82fee/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/09/a76643db26590e566d562bb2e82fee/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/09/a76643db26590e566d562bb2e82fee/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.webp"
                     },
                     "text": "«Генеральный директор STONE HEDGE Максим Гейзер второй год подряд вошёл в число самых влиятельных персон рынка коммерческой недвижимости рейтинга CRE 100. В списке CRE 100 генеральный директор STONE HEDGE был высоко отмечен в числе лидеров отрасли и занял 16 позицию в категории Девелопмент»"
                 }
@@ -1506,7 +1613,8 @@ const mainPageData = [
                 "type": "picture",
                 "content": {
                     "image": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/f8/d16b7a1a66f110dd48a68f4275ef7a/k5fDOFCAeEvW00CrPkHZ13u5DD9A5uBSTURywlcF.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/f8/d16b7a1a66f110dd48a68f4275ef7a/k5fDOFCAeEvW00CrPkHZ13u5DD9A5uBSTURywlcF.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/f8/d16b7a1a66f110dd48a68f4275ef7a/k5fDOFCAeEvW00CrPkHZ13u5DD9A5uBSTURywlcF.webp"
                     },
                     "description": "Карта офисных проектов STONE"
                 }
@@ -1543,19 +1651,24 @@ const mainPageData = [
                 "content": {
                     "gallery": [
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1f/17b2ac2b393bc3765fff2edbd0c1d7/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1f/17b2ac2b393bc3765fff2edbd0c1d7/giBXqbJUQQorddJF5OsPQ0JIF0rqo2TOb7fBMBlF.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/1f/17b2ac2b393bc3765fff2edbd0c1d7/giBXqbJUQQorddJF5OsPQ0JIF0rqo2TOb7fBMBlF.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1f/17b2ac2b393bc3765fff2edbd0c1d7/MKZr0yJzeJdyn5EkTqFc3Tii5PBf49iz3cpDJA3J.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1f/17b2ac2b393bc3765fff2edbd0c1d7/MKZr0yJzeJdyn5EkTqFc3Tii5PBf49iz3cpDJA3J.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/1f/17b2ac2b393bc3765fff2edbd0c1d7/MKZr0yJzeJdyn5EkTqFc3Tii5PBf49iz3cpDJA3J.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1f/17b2ac2b393bc3765fff2edbd0c1d7/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1f/17b2ac2b393bc3765fff2edbd0c1d7/kSUF6cRzndk8ubuW0lD5jjSjPeqSM5MIubn7SKMM.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/1f/17b2ac2b393bc3765fff2edbd0c1d7/kSUF6cRzndk8ubuW0lD5jjSjPeqSM5MIubn7SKMM.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1f/17b2ac2b393bc3765fff2edbd0c1d7/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1f/17b2ac2b393bc3765fff2edbd0c1d7/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/1f/17b2ac2b393bc3765fff2edbd0c1d7/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1f/17b2ac2b393bc3765fff2edbd0c1d7/WhFsPWStmOqcBRsxRYhpQcJywoUTnoB3xFA81aJs.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1f/17b2ac2b393bc3765fff2edbd0c1d7/WhFsPWStmOqcBRsxRYhpQcJywoUTnoB3xFA81aJs.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/1f/17b2ac2b393bc3765fff2edbd0c1d7/WhFsPWStmOqcBRsxRYhpQcJywoUTnoB3xFA81aJs.webp"
                         }
                     ],
                     "description": "Бизнес-центры класса А от офисного девелопера №1"
@@ -1625,19 +1738,24 @@ const mainPageData = [
                 "content": {
                     "gallery": [
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/15/112e146bc04f29a6800ddc72eea0c0/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/15/112e146bc04f29a6800ddc72eea0c0/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/15/112e146bc04f29a6800ddc72eea0c0/13rUkwqJkpVSpZxbTvy6eEQc0ALODuDaC7E7vrP0.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/15/112e146bc04f29a6800ddc72eea0c0/MKZr0yJzeJdyn5EkTqFc3Tii5PBf49iz3cpDJA3J.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/15/112e146bc04f29a6800ddc72eea0c0/MKZr0yJzeJdyn5EkTqFc3Tii5PBf49iz3cpDJA3J.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/15/112e146bc04f29a6800ddc72eea0c0/MKZr0yJzeJdyn5EkTqFc3Tii5PBf49iz3cpDJA3J.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/15/112e146bc04f29a6800ddc72eea0c0/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/15/112e146bc04f29a6800ddc72eea0c0/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/15/112e146bc04f29a6800ddc72eea0c0/1RZXSYmRNJg238qPPcGjONXtHp0kvurCno4bvZDV.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/15/112e146bc04f29a6800ddc72eea0c0/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/15/112e146bc04f29a6800ddc72eea0c0/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/15/112e146bc04f29a6800ddc72eea0c0/M5lU4FO9F8BapSthMfeBhnKLESukMqUe7Pheg4eO.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/15/112e146bc04f29a6800ddc72eea0c0/WhFsPWStmOqcBRsxRYhpQcJywoUTnoB3xFA81aJs.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/15/112e146bc04f29a6800ddc72eea0c0/WhFsPWStmOqcBRsxRYhpQcJywoUTnoB3xFA81aJs.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/15/112e146bc04f29a6800ddc72eea0c0/WhFsPWStmOqcBRsxRYhpQcJywoUTnoB3xFA81aJs.webp"
                         }
                     ],
                     "description": "Бизнес-центры класса А от офисного девелопера №1"
@@ -1651,7 +1769,8 @@ const mainPageData = [
                     "description": "Руководитель департамента оценки и аналитики STONE HEDGE",
                     "name": "Кристина Недря",
                     "photo": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/c3/52620014c0b48c1f3230975686da99/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/c3/52620014c0b48c1f3230975686da99/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/c3/52620014c0b48c1f3230975686da99/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.webp"
                     },
                     "text": "«Генеральный директор STONE HEDGE Максим Гейзер второй год подряд вошёл в число самых влиятельных персон рынка коммерческой недвижимости рейтинга CRE 100. В списке CRE 100 генеральный директор STONE HEDGE был высоко отмечен в числе лидеров отрасли и занял 16 позицию в категории Девелопмент»"
                 },
@@ -1659,7 +1778,8 @@ const mainPageData = [
                     "description": "Руководитель департамента оценки и аналитики STONE HEDGE",
                     "name": "Кристина Недря",
                     "photo": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/15/f1eba1187c285af7845fde486647a6/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/15/f1eba1187c285af7845fde486647a6/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/15/f1eba1187c285af7845fde486647a6/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.webp"
                     },
                     "text": "«Генеральный директор STONE HEDGE Максим Гейзер второй год подряд вошёл в число самых влиятельных персон рынка коммерческой недвижимости рейтинга CRE 100. В списке CRE 100 генеральный директор STONE HEDGE был высоко отмечен в числе лидеров отрасли и занял 16 позицию в категории Девелопмент»"
                 }
@@ -1742,7 +1862,8 @@ const mainPageData = [
                 "type": "picture",
                 "content": {
                     "image": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/f7/952ae82e72e39a4d171898230b06f4/cPeBGBxD5piXvK6wl4fUOpLTkZGJ3wAP27n5mjPt.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/f7/952ae82e72e39a4d171898230b06f4/cPeBGBxD5piXvK6wl4fUOpLTkZGJ3wAP27n5mjPt.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/f7/952ae82e72e39a4d171898230b06f4/cPeBGBxD5piXvK6wl4fUOpLTkZGJ3wAP27n5mjPt.webp"
                     },
                     "description": "Ритейл — один из самых ликвидных и статусных активов в портфеле инвестора"
                 }
@@ -1778,7 +1899,8 @@ const mainPageData = [
                 "type": "picture",
                 "content": {
                     "image": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/a7/a4e390193e8175cc84aa0242b446c6/6Pc9TDWEO7FxhZlTm4DgrsiizmZrgEHVMYtwCGXY.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/a7/a4e390193e8175cc84aa0242b446c6/6Pc9TDWEO7FxhZlTm4DgrsiizmZrgEHVMYtwCGXY.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/a7/a4e390193e8175cc84aa0242b446c6/6Pc9TDWEO7FxhZlTm4DgrsiizmZrgEHVMYtwCGXY.webp"
                     },
                     "description": "Предложения торговых помещений разного формата от девелопера STONE HEDGE"
                 }
@@ -1815,19 +1937,24 @@ const mainPageData = [
                 "content": {
                     "gallery": [
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/8d/5e682854ed16ee514b1fa8e87c1519/nfDG4XfG6JXJUworxPyUHVkayQKrkKldgBKSF7y2.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/8d/5e682854ed16ee514b1fa8e87c1519/nfDG4XfG6JXJUworxPyUHVkayQKrkKldgBKSF7y2.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/8d/5e682854ed16ee514b1fa8e87c1519/nfDG4XfG6JXJUworxPyUHVkayQKrkKldgBKSF7y2.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/8d/5e682854ed16ee514b1fa8e87c1519/MgeNdJZNTuLUcTeWC0Qm6eGgfC1eLY8ARy9wntWn.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/8d/5e682854ed16ee514b1fa8e87c1519/MgeNdJZNTuLUcTeWC0Qm6eGgfC1eLY8ARy9wntWn.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/8d/5e682854ed16ee514b1fa8e87c1519/MgeNdJZNTuLUcTeWC0Qm6eGgfC1eLY8ARy9wntWn.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/8d/5e682854ed16ee514b1fa8e87c1519/pGBXUrpVbK8ypH4epDElkjg0KrdqePpK88YSOKf0.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/8d/5e682854ed16ee514b1fa8e87c1519/pGBXUrpVbK8ypH4epDElkjg0KrdqePpK88YSOKf0.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/8d/5e682854ed16ee514b1fa8e87c1519/pGBXUrpVbK8ypH4epDElkjg0KrdqePpK88YSOKf0.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/8d/5e682854ed16ee514b1fa8e87c1519/MAAuWZoVYffOH2REve04ykVakvcBVOlEnuqfl8Ov.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/8d/5e682854ed16ee514b1fa8e87c1519/MAAuWZoVYffOH2REve04ykVakvcBVOlEnuqfl8Ov.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/8d/5e682854ed16ee514b1fa8e87c1519/MAAuWZoVYffOH2REve04ykVakvcBVOlEnuqfl8Ov.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/8d/5e682854ed16ee514b1fa8e87c1519/46C2NgSpg8R6jGctraSvYcagNiu3DkrOp1UTpkKN.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/8d/5e682854ed16ee514b1fa8e87c1519/46C2NgSpg8R6jGctraSvYcagNiu3DkrOp1UTpkKN.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/8d/5e682854ed16ee514b1fa8e87c1519/46C2NgSpg8R6jGctraSvYcagNiu3DkrOp1UTpkKN.webp"
                         }
                     ],
                     "description": "Ритейл в премиальном бизнес-центре STONE Ленинский "
@@ -1865,16 +1992,20 @@ const mainPageData = [
                 "content": {
                     "gallery": [
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/d9/f700bbf588e628dc4da7d1e9ecb5ee/jhY9xWip0TZ0lFUaVoPgi8aACyJHqo3J9qDD4t2t.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/d9/f700bbf588e628dc4da7d1e9ecb5ee/jhY9xWip0TZ0lFUaVoPgi8aACyJHqo3J9qDD4t2t.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/d9/f700bbf588e628dc4da7d1e9ecb5ee/jhY9xWip0TZ0lFUaVoPgi8aACyJHqo3J9qDD4t2t.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/d9/f700bbf588e628dc4da7d1e9ecb5ee/wOlg8W77WYLEj8thdemP65mT7BI8q7rfOkRDiWO7.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/d9/f700bbf588e628dc4da7d1e9ecb5ee/wOlg8W77WYLEj8thdemP65mT7BI8q7rfOkRDiWO7.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/d9/f700bbf588e628dc4da7d1e9ecb5ee/wOlg8W77WYLEj8thdemP65mT7BI8q7rfOkRDiWO7.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/d9/f700bbf588e628dc4da7d1e9ecb5ee/69LxfqRUi8JZTfievox8HQWxwLNZM3g0Ch1QWYkP.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/d9/f700bbf588e628dc4da7d1e9ecb5ee/69LxfqRUi8JZTfievox8HQWxwLNZM3g0Ch1QWYkP.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/d9/f700bbf588e628dc4da7d1e9ecb5ee/69LxfqRUi8JZTfievox8HQWxwLNZM3g0Ch1QWYkP.webp"
                         },
                         {
-                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/d9/f700bbf588e628dc4da7d1e9ecb5ee/xll8fqMONsvH99hMiO2kJMzIBLssrmZ0vsrWbDeU.jpg"
+                            "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/d9/f700bbf588e628dc4da7d1e9ecb5ee/xll8fqMONsvH99hMiO2kJMzIBLssrmZ0vsrWbDeU.jpg",
+                            "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/d9/f700bbf588e628dc4da7d1e9ecb5ee/xll8fqMONsvH99hMiO2kJMzIBLssrmZ0vsrWbDeU.webp"
                         }
                     ],
                     "description": "Торговые помещения в бизнес-центрах класса А"
@@ -1911,7 +2042,8 @@ const mainPageData = [
                 "type": "picture",
                 "content": {
                     "image": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/4f/070e3487d08a9e5d54a76411c6ad8a/ZWmPgSh4hInQR5FBqdkjFqLGTGSSGhp4niQAm54e.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/4f/070e3487d08a9e5d54a76411c6ad8a/ZWmPgSh4hInQR5FBqdkjFqLGTGSSGhp4niQAm54e.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/4f/070e3487d08a9e5d54a76411c6ad8a/ZWmPgSh4hInQR5FBqdkjFqLGTGSSGhp4niQAm54e.webp"
                     },
                     "description": "Снимок с вручения премии, которая внесла большой вклад."
                 }
@@ -1933,7 +2065,8 @@ const mainPageData = [
                     "description": "Руководитель департамента оценки и аналитики STONE HEDGE",
                     "name": "Кристина Недря",
                     "photo": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/b7/f7c2cf03c8f35f3ea49da21825027e/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.jpg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/b7/f7c2cf03c8f35f3ea49da21825027e/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.jpg",
+                        "srcWebp": "https://satellites.stonehedge.ru/storage/peculiar_fields/b7/f7c2cf03c8f35f3ea49da21825027e/4l1oWCaQizXkYqcWoiGSRyzpS4WxZCRBxkotUVeC.webp"
                     },
                     "text": "«Генеральный директор STONE HEDGE Максим Гейзер второй год подряд вошёл в число самых влиятельных персон рынка коммерческой недвижимости рейтинга CRE 100. В списке CRE 100 генеральный директор STONE HEDGE был высоко отмечен в числе лидеров отрасли и занял 16 позицию в категории Девелопмент»"
                 }
