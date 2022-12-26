@@ -142,7 +142,6 @@ export default function News() {
 
         if (router.query.filter) {
             setFilters([router.query.filter]);
-            // filteredNews(newsData, [router.query.filter]);
         }
     },[newsData]);
 
@@ -169,16 +168,17 @@ export default function News() {
                     <meta name='data-image:twitter'  content={`${filteredNews(newsData,filters)[shownNews]?.image}`} />
                     <meta name='og:title'  content={`${filteredNews(newsData,filters)[shownNews]?.title}`} />
                     <meta name='og:description'  content={filteredNews(newsData,filters)[shownNews]?.previewText.slice(0,100).length < filteredNews(newsData,filters)[shownNews]?.previewText.length ? `${filteredNews(newsData,filters)[shownNews]?.previewText.slice(0,100)}...` : filteredNews(newsData,filters)[shownNews]?.previewText.slice(0,100)} />
-
                     <link rel="icon" href="/favicon.ico" />
-                                        <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                    new Date().getTime(),event:'gtm.js'});var f=d.getByTagName(s)[0],
-                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                    })(window,document,'script','dataLayer','GTM-WZJD3HM')`}}></script>
+
+                    <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WZJD3HM')`}}></script>
                 </Head>
                 <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZJD3HM";height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>
-                <div className={"page-wrapper"}>                                  
+
+                <div className={"page-wrapper"}>
                     {data.length !== 0 && filteredNews(newsData,filters).length !== 0 ? (
                             <>
                                 <div className={`common_top_bg + ${classes.common_top_bg_news}`}  ref={topMenuEl} id="top">
@@ -314,7 +314,6 @@ export default function News() {
                             </div>
                         )
                     }
-
                 </div>
             </Context.Provider>
     )

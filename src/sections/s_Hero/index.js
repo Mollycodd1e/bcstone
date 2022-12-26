@@ -94,6 +94,12 @@ export const S_Hero = ({className, data, setIsPopupClose}) => {
         }
     }
 
+    let retina;
+
+    if (typeof window !== "undefined") {
+        retina = window.devicePixelRatio > 1;
+    }  
+
     return (
         <div className={cls} >
             {/*<div className={classes.textBlock}>*/}
@@ -136,27 +142,50 @@ export const S_Hero = ({className, data, setIsPopupClose}) => {
             <div className={classes.mainTitle} />
             <div className={classes.listName} dangerouslySetInnerHTML={{ __html: data.titile_description}}/>
             <ul className={classes.listInfo}>
-                {data.list_description.map((el, i) => <li key={i} className={classes.item}>{el.text}</li>)}
+                {/*{data.list_description.map((el, i) => <li key={i+100} className={classes.item} dangerouslySetInnerHTML={{ __html: el}}/>)}*/}
+                <li className={classes.item} >Доходность до 40%</li>
+                <li className={classes.item} >Рассрочка 0%</li>
+                <li className={classes.item} >Рассрочка 0%</li>
+                <li className={classes.item} >Офисный девелопер №1 <a href="https://realty.rbc.ru/news/6318526d9a794714f4879983" target="_blank" rel="noreferrer">по версии РБК</a></li>
             </ul>
             <C_MainButton text={"Получить предложение"} onClick={() => setIsPopupClose(false)} className={classes.mainButton} />
 
             <div
                 className={classes.interactiveBlock}
                 ref={interactiveBlock}
-            >
-                <div
-                    className={classes.btmPic}
-                    style={{
-                        backgroundImage:  `url("${data.hero_image.front_img.src}")`
-                    }}
-                />
-                <div
-                    className={classNames(classes.topPic, {[classes.topPicAnimation]:isAnimation})}
-                    ref={topPic}
-                    style={{
-                        backgroundImage:  `url("${data.hero_image.back_img.src}")`
-                    }}
-                />
+            >   
+                {width < sizes.widthTabletMd ?
+                    <div
+                        className={classes.btmPic}
+                        style={{
+                            backgroundImage:  `url("${retina ? data.hero_image.front_img.src : data.hero_image.front_img.src}")`
+                        }}
+                    />
+                :
+                    <div
+                        className={classes.btmPic}
+                        style={{
+                            backgroundImage:  `url("${retina ? data.hero_image.front_img.src : data.hero_image.front_img.src}")`
+                        }}
+                    />
+                }
+                {width < sizes.widthTabletMd ?
+                    <div
+                        className={classNames(classes.topPic, {[classes.topPicAnimation]:isAnimation})}
+                        ref={topPic}
+                        style={{
+                            backgroundImage:  `url("${retina ? data.hero_image.back_img.src : data.hero_image.back_img.src}")`
+                        }}
+                    />
+                :
+                    <div
+                        className={classNames(classes.topPic, {[classes.topPicAnimation]:isAnimation})}
+                        ref={topPic}
+                        style={{
+                            backgroundImage:  `url("${retina ? data.hero_image.back_img.src : data.hero_image.back_img.src}")`
+                        }}
+                    />
+                }
                 <div className={classNames(classes.hover, {[classes.animationOff]:isAnimationOff})}
                      onMouseOver={(e) => {
                          isDesktop ? updateCursor(e, topPic, interactiveBlock, 0) : e.preventDefault()

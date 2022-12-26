@@ -2,13 +2,15 @@ import classes from './style.module.scss';
 import classNames from "classnames";
 import {list, map} from "../../img/svgInlineImg";
 import { useRef } from 'react';
+import { useEffect } from 'react';
 
 export const C_Switcher = ({className, isListView, setIsListView, setIsSwitcher, isSubTitle}) => {
     const cls = classNames(classes.root, {[classes.listViewActive]: isListView, [classes.mapViewActive]: !isListView, [className]: className });
 
     const switcherRef = useRef();
 
-    function onEntrySwitcher(entry) {
+    useEffect(() => {
+      function onEntrySwitcher(entry) {
         entry.forEach(change => {
           if (change.isIntersecting) {
             isSubTitle ? setIsSwitcher(true) : null;
@@ -24,6 +26,8 @@ export const C_Switcher = ({className, isListView, setIsListView, setIsSwitcher,
     if (switcherRef.current) {
         observerSwitcher.observe(switcherRef.current);
     }
+    })
+    
     
     return (
         <div className={cls} ref={switcherRef}>

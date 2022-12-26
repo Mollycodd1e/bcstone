@@ -7,13 +7,15 @@ import classes from './style.module.scss';
 import { C_OnTopBtn } from '../../components/c_OnTopBtn';
 import { useRef } from 'react';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 export const S_Footer = ({className, phone_number, mail, address, sales_number, telegram, copyright}) => {
   const footerRef = useRef();
   const [isFooter, setIsFooter] = useState(false);
   const cls = classNames(classes.root, {[className]: className});
 
-  function onEntry(entry) {
+  useEffect(() => {
+    function onEntry(entry) {
       entry.forEach(change => {
         if (change.isIntersecting) {
           setIsFooter(true);
@@ -21,16 +23,17 @@ export const S_Footer = ({className, phone_number, mail, address, sales_number, 
           setIsFooter(false);
         }
       });
-  }
+    }
 
-  let options = {rootMargin: '0px 0px 0px 0px', threshold:[0.25]};
+    let options = {rootMargin: '0px 0px 0px 0px', threshold:[0.25]};
 
-  let observer = new IntersectionObserver( onEntry, options);
+    let observer = new IntersectionObserver( onEntry, options);
 
-  if (footerRef.current) {
-      observer.observe(footerRef.current);
-  }
-
+    if (footerRef.current) {
+        observer.observe(footerRef.current);
+    }
+  })
+  
   return (
       <div className={classes.wrapRoot} id={'Контакты'}>
           <div className={cls} ref={footerRef}>

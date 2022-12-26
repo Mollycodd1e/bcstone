@@ -65,7 +65,7 @@ export function C_Navigation({className, data, setIsPopupClose,  briefing}) {
                 onTouchMove={(e) => handleTouchMove(e)}
             >
                 <C_Logo className={classes.C_Logo} />
-                <C_Nav_List className={classes.C_Nav_List} data={data} briefing={ briefing} setIsMobileMenuOpen={setIsMobileMenuOpen}/>
+                <C_Nav_List className={classes.C_Nav_List} data={data} briefing={ briefing} setIsMobileMenuOpen={setIsMobileMenuOpen} setIsPopupClose={setIsPopupClose}/>
                 <C_MainButton text={"Оставить заявку"} onClick={() => (setIsPopupClose(false), setIsMobileMenuOpen(false))} className={classes.C_MainButton} mode={true} />
                 {/*<c_MainButton text={"Оставить заявку"} onClick={() => console.log('click')} className={classes.c_MainButton} mode={true} />*/}
             </div>

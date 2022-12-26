@@ -2,6 +2,7 @@ import React, {useRef, useState} from "react";
 import classes from './style.module.scss';
 import classNames from "classnames";
 import {C_Transit_Sale} from "../../components/c_Transit_Sale";
+import { useEffect } from "react";
 
 export const S_Sales = ({className, data}) => {
     const cls = classNames(classes.root, {[className]: className});
@@ -11,23 +12,25 @@ export const S_Sales = ({className, data}) => {
     const [isHoveredItem, setIsHoveredItem] = useState(0);
     const titleRef = useRef();
 
-    function onEntry(entry) {
-        entry.forEach(change => {
-          if (change.isIntersecting) {
-            setIsTitle(true);
-          } else {
-            setIsTitle(false);
-          }
-        });
-    }
-  
-    let options = { rootMargin: '0px 0px -50px 0px', threshold: [0.5] };
-  
-    let observer = new IntersectionObserver( onEntry, options);
-  
-    if (titleRef.current) {
-        observer.observe(titleRef.current);
-    }
+    useEffect(() => {
+        function onEntry(entry) {
+            entry.forEach(change => {
+              if (change.isIntersecting) {
+                setIsTitle(true);
+              } else {
+                setIsTitle(false);
+              }
+            });
+        }
+      
+        let options = { rootMargin: '0px 0px -50px 0px', threshold: [0.5] };
+      
+        let observer = new IntersectionObserver( onEntry, options);
+      
+        if (titleRef.current) {
+            observer.observe(titleRef.current);
+        }
+    })
 
     return (
         <div className={classes.wrapRoot}>

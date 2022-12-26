@@ -15,6 +15,7 @@ export const C_RegularCard = ({
     logo,
     alt,
     img,
+    img_not_retina,
     img2x,
     imgMob,
     img2xMob,
@@ -64,6 +65,7 @@ export const C_RegularCard = ({
                             logo={logo}
                             alt={alt}
                             img={img}
+                            img_not_retina={img_not_retina}
                             img2x={img2x}
                             imgMob={imgMob}
                             img2xMob={img2xMob}

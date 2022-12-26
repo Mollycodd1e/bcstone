@@ -8,7 +8,7 @@ export const C_Quote = ({className, photo, name, description}) => {
 
   return (
       <div className={cls}>
-         <Image src={photo} width={76} height={76} />
+         <Image src={photo} width={76} height={76} alt="Фото цитируемого"/>
          <div className={classes.author_name_wrapper}>
            <p>{name}</p>
            <span>{description}</span>

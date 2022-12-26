@@ -1,6 +1,6 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
-import {log} from "util";
+
 import { useContext} from 'react';
 import { sizes } from '../../data/sizes';
 import {Context} from "../../library";
@@ -26,11 +26,13 @@ export const C_Element_Top_Commertial = ({className, element}) => {
         cropTitle = title;
         spaceNumberContent = newContent.slice(0, 75).lastIndexOf(' ');
         cropContent = newContent.slice(0, spaceNumberContent) + '...';
+    } else if ((newTitle.length <= 35) && (newContent.length < 40)) {
+        cropTitle = title;
+        cropContent = content;
     } else if ((newTitle.length <= 35) && (newContent.length < 75)) {
         cropTitle = title;
-        // cropContent = content;
         spaceNumberContent = newContent.slice(0, 44).lastIndexOf(' ');
-        cropContent = newContent.slice(0, spaceNumberContent) + '...';
+        cropContent = newContent.slice(0, spaceNumberContent) + '...';  
     } else if ((newTitle.length > 35) && (newTitle.length < 50) && (newContent.length >= 50)) {
         spaceNumberTitle = newTitle.slice(0, 40).lastIndexOf(' ');
         cropTitle = newTitle.slice(0, spaceNumberTitle) + '...';
@@ -60,10 +62,12 @@ export const C_Element_Top_Commertial = ({className, element}) => {
                 <span className={classes.content}>
                     {cropContent}
                 </span>
-                <a  className={classes.link}
-                    href={window.location.hostname === 'localhost' ? `/${link}` : `/${link}.html`}>
-                    Подробнее
-                </a>
+                {(typeof window !== 'undefined') && 
+                    <a  className={classes.link}
+                        href={window.location.hostname === 'localhost' ? `/${link}` : `/${link}.html`}>
+                        Подробнее
+                    </a>
+                }
             </div>
        </div>
     )

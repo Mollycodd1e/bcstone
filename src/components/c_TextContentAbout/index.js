@@ -5,6 +5,7 @@ import {C_SliderVideoAbout} from "../c_SliderVideoAbout";
 import {C_MainButton} from "../c_MainButton";
 import {sizes} from "../../data/sizes";
 import {Context} from "../../library";
+import { useEffect } from 'react';
 
 export const C_TextContentAbout = ({className, data, setIsPopupClose}) => {
     const [width, height] = useContext(Context);
@@ -18,7 +19,8 @@ export const C_TextContentAbout = ({className, data, setIsPopupClose}) => {
     const text = useRef();
     const subDescription = useRef();
 
-    function onEntryLogo(entry) {
+    useEffect(() => {
+      function onEntryLogo(entry) {
         entry.forEach(change => {
           if (change.isIntersecting) {
             setIsLogo(true);
@@ -71,6 +73,8 @@ export const C_TextContentAbout = ({className, data, setIsPopupClose}) => {
     if (text.current) {
         observerPlans.observe(text.current);
     }
+    })
+    
 
     return (
         <div className={cls}>

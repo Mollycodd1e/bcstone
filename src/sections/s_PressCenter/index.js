@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import classes from './style.module.scss';
 import classNames from "classnames";
@@ -8,6 +8,8 @@ import { C_MainButton } from "../../components/c_MainButton";
 import {sizes} from "../../data/sizes";
 import { useState } from "react";
 import { useRef } from "react";
+import {Context} from "../../library";
+import { useContext} from 'react';
 
 export const S_PressCenter = ({className, data}) => {
     
@@ -16,6 +18,7 @@ export const S_PressCenter = ({className, data}) => {
     const data_4 = data;
     const allCards = [];
     const [isCenter, setIsCenter] = useState(false);
+    const [width, height] = useContext(Context);
     const [isTitle, setIsTitle] = useState(false);
     const centerRef = useRef();
     const titleRef = useRef();
@@ -28,15 +31,29 @@ export const S_PressCenter = ({className, data}) => {
     //   allCards.push(<C_PressCard date={item.date} image={item.pic.src} title={item.title} description={item.content}/>)
     // });
 
+    let retina;
+
+    if (typeof window !== "undefined") {
+        retina = window.devicePixelRatio > 1;
+    }  
+
     let cuttedElements = data_4.sort(function (a, b) {
       return new Date(b.date) - new Date(a.date);
     }).slice(0, 6);
     
-    cuttedElements.forEach(item => {
-      allCards.push(<C_PressCard newsId={item.id} date={item.date} image={item.image} title={item.title} description={item.fullTextWithoutImg}/>)
-    });
+    if (width < sizes.widthTabletMd) {
+      cuttedElements.forEach(item => {
+        allCards.push(<C_PressCard newsId={item.id} date={item.date} image={retina ? item.image : item.image} title={item.title} description={item.fullTextWithoutImg}/>)
+      }); 
+    } else {
+      cuttedElements.forEach(item => {
+        allCards.push(<C_PressCard newsId={item.id} date={item.date} image={retina ? item.image : item.image} title={item.title} description={item.fullTextWithoutImg}/>)
+      });
+    }
 
-    function onEntry(entry) {
+
+    useEffect(() => {
+      function onEntry(entry) {
         entry.forEach(change => {
           if (change.isIntersecting) {
             setIsTitle(true);
@@ -44,29 +61,30 @@ export const S_PressCenter = ({className, data}) => {
             // setIsTitle(false);
           }
         });
-    }
-    function onEntryCenter(entry) {
-        entry.forEach(change => {
-          if (change.isIntersecting) {
-            setIsCenter(true);
-          } else {
-            // setIsCenter(false);
-          }
-        });
-    }
-    let options = { rootMargin: '50px', threshold: [0.5] };
-    let optionsCenter = { threshold: [0.5] };
+      }
+      function onEntryCenter(entry) {
+          entry.forEach(change => {
+            if (change.isIntersecting) {
+              setIsCenter(true);
+            } else {
+              // setIsCenter(false);
+            }
+          });
+      }
+      let options = { rootMargin: '50px', threshold: [0.5] };
+      let optionsCenter = { threshold: [0.5] };
 
-    let observer = new IntersectionObserver( onEntry, options);
-    let observerCenter = new IntersectionObserver( onEntryCenter, optionsCenter);
+      let observer = new IntersectionObserver( onEntry, options);
+      let observerCenter = new IntersectionObserver( onEntryCenter, optionsCenter);
 
-    if (titleRef.current) {
-        observer.observe(titleRef.current);
-    }
+      if (titleRef.current) {
+          observer.observe(titleRef.current);
+      }
 
-    if (centerRef.current) {
-        observerCenter.observe(centerRef.current);
-    }
+      if (centerRef.current) {
+          observerCenter.observe(centerRef.current);
+      }
+    })
 
     return (
         <div className={classes.wrapRoot} id={'Пресс-центр'}>

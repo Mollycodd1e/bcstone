@@ -7,7 +7,7 @@ export const C_Copyright = ({className, copyright}) => {
 
   return (
       <div className={cls}>
-        <div>{copyright.name}</div>
+        <div><a href={'/policy.html'}>{copyright.name}</a></div>
         <div>{copyright.author}</div>
         <div>{copyright.description}</div>
       </div>

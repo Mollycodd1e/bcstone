@@ -6,8 +6,8 @@ export const C_Transit_Sale = ({className, url, name, type, picture ,setIsHover,
     const cls = classNames(classes.root, {[classes.reverse]: type === "retail", [className]: className });
 
     return (
-        
-        // <Link href={window.location.hostname === 'localhost' ? `/${url}` : `/${url}.html`}>
+        <>
+            {(typeof window !== 'undefined') && 
             <a className={cls} href={window.location.hostname === 'localhost' ? `/${url}` : `/${url}.html`}
             onMouseOver={() => (setIsHover(true), setIsHoveredItem(number))} onMouseOut={() => setIsHover(false)}>
             {/* <div  href={window.location.hostname === 'localhost' ? `/${url}` : `/${url}.html`}
@@ -17,7 +17,7 @@ export const C_Transit_Sale = ({className, url, name, type, picture ,setIsHover,
                     <div className={classes.picture}
                          style={{backgroundImage:  `url("${picture.src}")`}}/>
 
-                        <a className={classes.link}>
+                        <div className={classes.link}>
                             <svg className={classes.roundButton} xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52">
                                 <g id="кнопка_Перейти" data-name="кнопка Перейти" transform="translate(-276 -1037)">
                                     <g id="Эллипс_15" data-name="Эллипс 15" transform="translate(276 1037)" fill="none" stroke="#c4c4c4" strokeWidth="1">
@@ -35,12 +35,14 @@ export const C_Transit_Sale = ({className, url, name, type, picture ,setIsHover,
                                 </g>
                             </svg>
 
-                            <span className={classes.buttonText}>перейти</span>
-                        </a>
+                                <span className={classes.buttonText}>перейти</span>
+                            </div>
 
-                    <h2 className={classes.title}>{name}</h2>
-            {/* </div> */}
-            </a>
+                        <h2 className={classes.title}>{name}</h2>
+                {/* </div> */}
+                </a>
+            }
+        </>
         // </Link>
     )
 }
