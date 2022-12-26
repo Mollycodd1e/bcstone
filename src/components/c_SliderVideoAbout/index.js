@@ -21,6 +21,7 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIs
     }
 
     const [heightBlock, setHeightBlock] = useState(0);
+    const [isWebp, setIsWebp] = useState(false);
 
     let retina;
 
@@ -33,14 +34,30 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIs
         setHeightBlock(divBlock.current.getBoundingClientRect().width / 1.4756)
     }, [width])
 
+    useEffect(() => {
+        setIsWebp(false);
+        function canUseWebp() {
+            // Создаем элемент canvas
+            let elem = document.createElement('canvas');
+            // Приводим элемент к булеву типу
+            if (!!(elem.getContext && elem.getContext('2d'))) {
+                // Создаем изображение в формате webp, возвращаем индекс искомого элемента и сразу же проверяем его
+                setIsWebp(true);
+                return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+            }
+            // Иначе Webp не используем
+            return false;
+        };
+        canUseWebp();
+    },[])
     
     const elements = slider.gallery.map((el, i) => {
         {if (width < sizes.widthTabletMd) {
             return <C_SliderElementAbout key={i} 
-            img={retina ? el.src : el.src}/>
+             img={isWebp ? `${retina ? el.src : el.src}`: `${retina ? el.src : el.src}`}/>
         } else {
             return <C_SliderElementAbout key={i} 
-            img={retina ? el.src : el.src}/>
+            img={isWebp ? `${retina ? el.src : el.src}`: `${retina ? el.src : el.src}`}/>
         }}
     })
     

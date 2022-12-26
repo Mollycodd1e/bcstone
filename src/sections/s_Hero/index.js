@@ -1,7 +1,7 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
 import {C_MainButton} from "../../components/c_MainButton";
-import React, {useContext, useRef, useState} from "react";
+import React, {useContext, useEffect, useRef, useState} from "react";
 import {Context} from "../../library";
 import {sizes} from "../../data/sizes";
 
@@ -54,6 +54,7 @@ export const S_Hero = ({className, data, setIsPopupClose}) => {
     // const isDesktop = width >= sizes.widthDesktopLg;
     const isDesktop = width >= sizes.widthDesktopSm;
     const [isAnimation, setIsAnimation] = useState(false);
+    const [isWebp, setIsWebp] = useState(false);
     const [isAnimationOff, setIsAnimationOff] = useState(false);
     const updateCursor = (e, topPic, interactiveBlock, customCircleSize = undefined, isTouchEvent = false) => {
         const rect = interactiveBlock.current.getBoundingClientRect();
@@ -99,6 +100,23 @@ export const S_Hero = ({className, data, setIsPopupClose}) => {
     if (typeof window !== "undefined") {
         retina = window.devicePixelRatio > 1;
     }  
+
+    useEffect(() => {
+        setIsWebp(false);
+        function canUseWebp() {
+            // Создаем элемент canvas
+            let elem = document.createElement('canvas');
+            // Приводим элемент к булеву типу
+            if (!!(elem.getContext && elem.getContext('2d'))) {
+                // Создаем изображение в формате webp, возвращаем индекс искомого элемента и сразу же проверяем его
+                setIsWebp(true);
+                return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+            }
+            // Иначе Webp не используем
+            return false;
+        };
+        canUseWebp();
+    },[])
 
     return (
         <div className={cls} >
@@ -151,17 +169,20 @@ export const S_Hero = ({className, data, setIsPopupClose}) => {
                 ref={interactiveBlock}
             >   
                 {width < sizes.widthTabletMd ?
+
                     <div
                         className={classes.btmPic}
                         style={{
-                            backgroundImage:  `url("${retina ? data.hero_image.front_img.src : data.hero_image.front_img.src}")`
+                            backgroundImage:  isWebp ? `url("${retina ? data.hero_image.front_img.src : data.hero_image.front_img.src}")` :
+                                                       `url("${retina ? data.hero_image.front_img.src : data.hero_image.front_img.src}")`
                         }}
                     />
                 :
                     <div
                         className={classes.btmPic}
                         style={{
-                            backgroundImage:  `url("${retina ? data.hero_image.front_img.src : data.hero_image.front_img.src}")`
+                            backgroundImage:  isWebp ? `url("${retina ? data.hero_image.front_img.src : data.hero_image.front_img.src}")` :
+                                                       `url("${retina ? data.hero_image.front_img.src : data.hero_image.front_img.src}")`
                         }}
                     />
                 }

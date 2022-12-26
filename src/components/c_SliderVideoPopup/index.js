@@ -19,13 +19,45 @@ export const C_SliderVideoPopup = ({className, data, isAboutPopupClose, setIsAbo
     }
 
     const [heightBlock, setHeightBlock] = useState(0);
+    const [isWebp, setIsWebp] = useState(false);
+
+    let retina;
+
+    if (typeof window !== "undefined") {
+        retina = window.devicePixelRatio > 1;
+    }  
+
     useEffect(() => {
         showDivWidth()
         setHeightBlock(divBlock.current.getBoundingClientRect().width / 1.4756)
     }, [width])
 
+    useEffect(() => {
+        setIsWebp(false);
+        function canUseWebp() {
+            // Создаем элемент canvas
+            let elem = document.createElement('canvas');
+            // Приводим элемент к булеву типу
+            if (!!(elem.getContext && elem.getContext('2d'))) {
+                // Создаем изображение в формате webp, возвращаем индекс искомого элемента и сразу же проверяем его
+                setIsWebp(true);
+                return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+            }
+            // Иначе Webp не используем
+            return false;
+        };
+        canUseWebp();
+    },[])
+
     const elements = sliderVideoPopupContent.slider.gallery.map((el, i) => {
-        return <C_SliderPopupElement key={i} img={el.src} popup={popup}/>
+        // return <C_SliderPopupElement key={i} img={el.src} popup={popup}/>
+        {if (width < sizes.widthTabletMd) {
+            return <C_SliderPopupElement key={i} 
+             img={isWebp ? `${retina ? el.src : el.src}`: `${retina ? el.src : el.src}`} popup={popup}/>
+        } else {
+            return <C_SliderPopupElement key={i} 
+            img={isWebp ? `${retina ? el.src : el.src}`: `${retina ? el.src : el.src}`} popup={popup}/>
+        }}
     })
 
     const closePopup = (evt) => {

@@ -45,7 +45,7 @@ export const C_SliderC = ({className, isBtnClose, items, initialSlide, onBtnClos
                         return (
                              <SwiperSlide className = {classes.swiperSlide} key={i}>
                                 <div className={classes.image_wrapper}>
-                                  <Image src={item} layout='fill'/>
+                                  <Image src={item} layout='fill' alt="Фото бизнес-центра"/>
                                 </div> 
                              </SwiperSlide>
                         )

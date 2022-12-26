@@ -7,7 +7,7 @@ export const C_SliderPopupElement = ({className, img}) => {
     return (
         // <div className={cls} style={{ backgroundImage:  `url("${img}")`}} />
         <div className={cls}>
-            <Image src={`${img}`} layout='fill'/>
+            <Image src={`${img}`} layout='fill' alt='Фото бизнес-центра'/>
         </div>
     )
 }
