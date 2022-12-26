@@ -2,7 +2,7 @@ import classes from './style.module.scss';
 import classNames from "classnames";
 import {C_Nav_Sub_Element} from "../c_Nav_Sub_Element";
 
-export const C_Nav_Sub_List = ({className, item, toggle, setToggle, el}) => {
+export const C_Nav_Sub_List = ({className, item, toggle, setToggle, el, setIsPopupClose}) => {
     const cls = classNames(classes.root, {[classes.secondLvlMenuElWrapperActive]:toggle && el.sub.length !== 0, [className]: className});
     return (
         <div
@@ -21,6 +21,7 @@ export const C_Nav_Sub_List = ({className, item, toggle, setToggle, el}) => {
                         el={el}
                         i={i}
                         key={el+i}
+                        setIsPopupClose={setIsPopupClose}
                     />
                 })}
             </ul>

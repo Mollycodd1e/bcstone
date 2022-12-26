@@ -84,7 +84,7 @@ const mainPageData = [
                         "color": "#D5FD01"
                     },
                     {
-                        "link": "/#Проекты",
+                        "link": "",
                         "name": "Курская",
                         "color": "#5D6A63"
                     },
@@ -104,7 +104,7 @@ const mainPageData = [
                         "color": "#283380"
                     },
                     {
-                        "link": "/#Проекты",
+                        "link": "",
                         "name": "Дмитровская",
                         "color": "#7D5FA3"
                     }
@@ -334,8 +334,8 @@ const mainPageData = [
                 ],
                 "order": "5",
                 "coordinates": {
-                    "lat": "55.808417643698705",
-                    "lng": "37.57607079646407"
+                    "lat": "55.789752643698705",
+                    "lng": "37.58600379646407"
                 },
                 "pin": {
                     "default": {
