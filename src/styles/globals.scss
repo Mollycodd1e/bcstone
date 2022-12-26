@@ -195,3 +195,44 @@ input[type="radio"].visually-hidden {
     display: block;
   }
 }
+
+@media (max-width: $width-tablet-sm) {
+  .comagic-c-sitephone-label__bubble--solid {
+    height: 42px !important;
+    width: 42px !important;
+  }
+
+  .comagic-c-sitephone-label {
+    height: 42px !important;
+    width: 42px !important;
+  }
+
+  .comagic-c-sitephone-label__icon {
+    margin-left: 11px !important;
+    margin-top: 13px !important;
+    height: 20px !important;
+    width: 20px !important;
+  }
+
+  .comagic-c-sitephone-label__bubble--empty-outer {
+    top: -38px !important;
+    left: -38px !important;
+  }
+
+  .comagic-c-sitephone-label__bubble--empty-inner {
+    top: -38px !important;
+    left: -38px !important;
+  }
+
+  .comagic-o-rack {
+     padding: unset !important;
+  }
+  .comagic-o-rack--bottom{
+    padding-bottom: 75px !important;
+  }
+
+  .comagic-c-consultant-label{
+    width: 54px !important;
+  }
+
+}

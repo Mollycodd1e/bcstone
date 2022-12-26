@@ -368,7 +368,7 @@ const mainPageData = [
                     "Дмитровская",
                     "3 минуты",
                     "Готовность: 2026",
-                    "49&nbsp;000 м&#178;"
+                    "От 45&nbsp;м&#178;"
                 ],
                 "order": "6",
                 "coordinates": {
@@ -377,10 +377,10 @@ const mainPageData = [
                 },
                 "pin": {
                     "default": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1f/b69c5d5575fd2885bf258184346c12/QFvH4i50SklKiBgqY58MZNJWaEBglnlOuI6tIOfS.svg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/1f/b69c5d5575fd2885bf258184346c12/erEbElr4ZAjlVwFl5WPGWf1kdjfrdPd4mwUEaUnH.svg"
                     },
                     "active": {
-                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/85/f081caefbfb101c3dfda3b0c64a452/Qw7i3BrfbKvWumhClZDzpQIN3p9GkcSoQT2FLFzZ.svg"
+                        "src": "https://satellites.stonehedge.ru/storage/peculiar_fields/85/f081caefbfb101c3dfda3b0c64a452/VOZlltG9IZ0XIFoIrqpKtL3KV7qdSrGvoZcWIyG7.svg"
                     }
                 },
                 "isShownOnMap": true
