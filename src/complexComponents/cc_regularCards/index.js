@@ -10,6 +10,7 @@ export const CC_regularCards = (className, isBtnClose, onBtnCloseClick, onCardCl
             logo={card.logo.src}
             alt={card.name}
             img={card.img.src}
+            img_not_retina={card.img_not_retina.src}
             img2x={card.img.src}
             imgMob={card.img.src}
             img2xMob={card.img.src}

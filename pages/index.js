@@ -367,8 +367,8 @@ const mainPageData = [
                 ],
                 "order": "6",
                 "coordinates": {
-                    "lat": "55.789752643698705",
-                    "lng": "37.58600379646407"
+                    "lat": "55.808417",
+                    "lng": "37.576070"
                 },
                 "pin": {
                     "default": {
