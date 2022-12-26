@@ -112,6 +112,120 @@
     right: 24px;
     bottom: 138px;
   }
+
+
+
+  /* sitephone-2B2C2C.css | https://app.comagic.ru/widget/css/sitephone2/desktop/sitephone-2B2C2C.css */
+
+  .comagic-c-sitephone-label__bubble--solid {
+    height: 42px;
+    width: 42px;
+  }
+
+  .comagic-c-sitephone-label {
+    height: 42px;
+    width: 42px;
+  }
+
+  .comagic-c-sitephone-label__icon {
+    margin-left: 11px;
+    margin-top: 13px;
+    height: 20px;
+    width: 20px;
+  }
+
+  .comagic-c-sitephone-label__bubble--empty-outer {
+    top: -38px;
+    left: -38px;
+  }
+
+  .comagic-c-sitephone-label__bubble--empty-inner {
+    top: -38px;
+    left: -38px;
+  }
+
+  .comagic-o-rack--bottom {
+    padding-bottom: 75px;
+  }
+
+
+  /* consultant-2196F3.css | https://app.comagic.ru/widget/css/consultant/desktop/consultant-2196F3.css */
+
+  .comagic-o-rack--bottom {
+    /* justify-content: flex-end; */
+    padding-bottom: 85px;
+    margin-left: 216px;
+  }
+  .comagic-o-rack {
+    /* padding: 25px; */
+  }
+
+
+  .comagic-o-rack--right {
+    /* right: 0; */
+  }
+
+  .comagic-c-consultant-label {
+    /* width: 60px; */
+    width: 54px;
+  }
+
+  /* sitephone-2B2C2C.css | https://app.comagic.ru/widget/css/sitephone2/desktop/sitephone-2B2C2C.css */
+
+
+
+  .comagic-c-sitephone-label__icon {
+    margin-left: 11px;
+    margin-top: 13px;
+    height: 20px;
+    width: 20px;
+  }
+
+  .comagic-c-sitephone-label__bubble--empty-outer {
+    top: -38px;
+    left: -38px;
+  }
+
+  .comagic-c-sitephone-label__bubble--empty-inner {
+    top: -38px;
+    left: -38px;
+  }
+
+  .comagic-o-rack--bottom {
+    padding-bottom: 75px;
+  }
+
+  .comagic-o-rack {
+    /* padding: 25px; */
+  }
+
+  /* consultant-2196F3.css | https://app.comagic.ru/widget/css/consultant/desktop/consultant-2196F3.css */
+
+  .comagic-o-rack--bottom {
+    /* justify-content: flex-end; */
+    padding-bottom: 85px;
+    margin-left: 216px;
+  }
+
+  .comagic-o-rack {
+    /* z-index: 100002; */
+    /* position: fixed; */
+    /* display: flex; */
+    /* top: 0; */
+    /* bottom: 0; */
+    /* flex-direction: column; */
+    /* pointer-events: none; */
+    /* padding: 25px; */
+  }
+
+  .comagic-o-rack--right {
+    /* right: 0; */
+  }
+
+  .comagic-c-consultant-label {
+    width: 54px;
+  }
+
 }
 
 @media (min-width: $width-tablet-md) {
