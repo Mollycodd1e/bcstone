@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useRef, useState} from "react";
 import classes from './style.module.scss';
 import classNames from "classnames";
-import {C_Slider} from "../c_Slider";
+// import {C_Slider} from "../c_Slider";
 import {C_SliderElementAbout} from "../c_SliderElementAbout";
 import {Context} from "../../library";
 import {sizes} from "../../data/sizes";
@@ -21,44 +21,15 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIs
     }
 
     const [heightBlock, setHeightBlock] = useState(0);
-    const [isWebp, setIsWebp] = useState(false);
-
-    let retina;
-
-    if (typeof window !== "undefined") {
-        retina = window.devicePixelRatio > 1;
-    }  
 
     useEffect(() => {
         showDivWidth()
         setHeightBlock(divBlock.current.getBoundingClientRect().width / 1.4756)
     }, [width])
-
-    useEffect(() => {
-        setIsWebp(false);
-        function canUseWebp() {
-            // Создаем элемент canvas
-            let elem = document.createElement('canvas');
-            // Приводим элемент к булеву типу
-            if (!!(elem.getContext && elem.getContext('2d'))) {
-                // Создаем изображение в формате webp, возвращаем индекс искомого элемента и сразу же проверяем его
-                setIsWebp(true);
-                return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
-            }
-            // Иначе Webp не используем
-            return false;
-        };
-        canUseWebp();
-    },[])
     
     const elements = slider.gallery.map((el, i) => {
-        {if (width < sizes.widthTabletMd) {
             return <C_SliderElementAbout key={i} 
-             img={isWebp ? `${retina ? el.src : el.src}`: `${retina ? el.src : el.src}`}/>
-        } else {
-            return <C_SliderElementAbout key={i} 
-            img={isWebp ? `${retina ? el.src : el.src}`: `${retina ? el.src : el.src}`}/>
-        }}
+             img={el.src}/>
     })
     
     useEffect(() => {

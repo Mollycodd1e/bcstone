@@ -29,6 +29,8 @@
 }
 
 .card_wrapper img {
+  z-index: 2;
+  // position: relative;
   margin-top: -20px;
   border-radius: 8px;
   top: 20px;
@@ -58,7 +60,7 @@
   padding: 0;
   padding-bottom: 2px;
   margin-left: 9px;
-  z-index: 0;
+  z-index: -1;
   border-radius: 8px;
   text-align: center;
   border: none;
@@ -128,7 +130,7 @@
     padding-bottom: 2px;
     margin-left: 0px;
     margin-top: 23px;
-    z-index: 0;
+    // z-index: 0;
   }
   
   .description_wrapper h3 {
@@ -223,6 +225,9 @@
   .card_wrapper img {
     min-height: 141px;
     max-width: 292px;
+    min-width: 292px;
+    max-height: 174px;
+    object-fit: cover;
   }
   
   .card_wrapper span {
