@@ -82,7 +82,7 @@ const mainPageData = [
                         "color": "#D5FD01"
                     },
                     {
-                        "link": "",
+                        "link": "/#Проекты",
                         "name": "Курская",
                         "color": "#5D6A63"
                     },
