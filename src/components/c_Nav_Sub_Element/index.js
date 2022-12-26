@@ -1,7 +1,7 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
 
-export const C_Nav_Sub_Element = ({className, el, i, _key}) => {
+export const C_Nav_Sub_Element = ({className, el, i, _key, setIsPopupClose}) => {
     const cls = classNames(classes.root, {[className]: className});
     const {name, color, link} = el;
 
@@ -9,18 +9,35 @@ export const C_Nav_Sub_Element = ({className, el, i, _key}) => {
         <li
             className={cls}
             key={_key}
-        >
-            <a
+        >{link.length != 0 ?
+            (<a
                 href={`${link}`}
                 // target={"_blank"}
-                className={classes.projectName} onClick={() => setTimeout(() => document.location.assign(`${link}`), 500)}>
+                className={classes.projectName}
+                onClick={() => setTimeout(() => document.location.assign(`${link}`), 500)}>
                 <span className={classes.marked}>STONE </span>
                 <span>{name}</span>
                 <span
                     className={classes.underline}
                     style={{backgroundColor: `${color}`}}
                 />
-            </a>
+            </a>) : (
+                <a
+                    href={`/`}
+                    // target={"_blank"}
+                    className={classes.projectName}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        setIsPopupClose(false);
+                    }}>
+                    <span className={classes.marked}>STONE </span>
+                    <span>{name}</span>
+                    <span
+                        className={classes.underline}
+                        style={{backgroundColor: `${color}`}}
+                    />
+                </a>
+            )}
         </li>
     )
 }

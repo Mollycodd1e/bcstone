@@ -102,6 +102,11 @@ const mainPageData = [
                         "link": "https://stone-tws.ru/tower_a.html",
                         "name": "Towers | Tower A",
                         "color": "#283380"
+                    },
+                    {
+                        "link": "",
+                        "name": "Дмитровская",
+                        "color": "#7D5FA3"
                     }
                 ]
             },
