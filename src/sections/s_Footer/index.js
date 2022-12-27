@@ -5,6 +5,7 @@ import { C_LogoSH } from '../../components/c_LogoSH';
 import { C_Copyright } from '../../components/c_Copyright';
 import classes from './style.module.scss';
 import { C_OnTopBtn } from '../../components/c_OnTopBtn';
+import { C_CallUsBtn } from '../../components/c_CallUsBtn';
 import { useRef } from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -49,6 +50,7 @@ export const S_Footer = ({className, phone_number, mail, address, sales_number, 
                       </div>
                 </div>
                 <C_OnTopBtn className={classes.footer_ontop_btn}/>
+                <C_CallUsBtn />
           </div>
       </div>
   )
