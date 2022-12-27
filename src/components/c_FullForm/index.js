@@ -126,8 +126,12 @@ export const C_FullForm = ({className, data, popup}) => {
                         console.log('yaCounter80263774  - Yandex');
                     }
 
-                    // Pixel
-                    fbq('track', 'SubmitApplication');
+                    try {
+                        // Pixel
+                        fbq('track', 'SubmitApplication');
+                    } catch (error) {
+                        console.log(error);
+                    }
 
                     setIsConfirmed(true);
                 } else {
