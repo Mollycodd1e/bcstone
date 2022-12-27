@@ -5,12 +5,13 @@
   width: 100%;
   margin-right: auto;
   margin-top: 10px;
-  padding: 0 25px 10px 30px;
+  //padding: 0 25px 10px 30px;
   margin-bottom: 20px;
 }
 
 .root .description {
   margin-top: 3px;
+  margin: 3px 25px 0 30px;
 }
 
 @media (min-width: $width-tablet-md) {
@@ -22,6 +23,7 @@
   }
 
   .root .description {
+    margin: 0;
     margin-left: 100px;
     margin-top: 6px;
   }

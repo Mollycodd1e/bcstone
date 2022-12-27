@@ -1,20 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import classes from './style.module.scss';
 import classNames from "classnames";
 import Image from 'next/image';
-
+import {Context} from "../../library";
 import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper';
 import {Swiper, SwiperSlide} from "swiper/swiper-react.cjs.js";
+import { sizes } from "../../data/sizes";
 // // install Swiper modules
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
-export const C_SliderC = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = 200}) => {
+export const C_SliderC = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = 250}) => {
     const cls = classNames(classes.root, { [className]: className });
 
     const [my_swiper, set_my_swiper] = useState({});
     const [slide, setSlide] = useState(0);
-
+    const [width, height] = useContext(Context);
     return (
         <div className={cls}>
             <button className={classes.swiper_button_prev} onClick={() => (my_swiper.slidePrev(), slide > 0 ? setSlide(slide - 1) : setSlide(slide))}
@@ -29,7 +30,8 @@ export const C_SliderC = ({className, isBtnClose, items, initialSlide, onBtnClos
                 }}
                 speed={700}
                 slidesPerView={1}
-                spaceBetween={slidersSpaceBetween}
+                spaceBetween={width > sizes.widthTabletMd ? 200 : -50}
+                  
                 centeredSlides={true}                
                 pagination={{
                     el:'.swiper-pagination',
@@ -40,12 +42,16 @@ export const C_SliderC = ({className, isBtnClose, items, initialSlide, onBtnClos
                     }}
                 className={classNames(classes.swiper, {[classes.swiperMode]: isBtnClose})}
                 initialSlide={Number(initialSlide) || 0}
-            >     
+            >   
                 {items.map((item, i) => {
                         return (
                              <SwiperSlide className = {classes.swiperSlide} key={i}>
                                 <div className={classes.image_wrapper}>
-                                  <Image src={item} layout='fill' alt="Фото бизнес-центра"/>
+                                  {width < sizes.widthTabletMd ?
+                                    <img src={item.src} alt="Фото бизнес-центра"/>
+                                  :
+                                    <Image src={item} layout='fill' alt="Фото бизнес-центра"/> 
+                                  }
                                 </div> 
                              </SwiperSlide>
                         )

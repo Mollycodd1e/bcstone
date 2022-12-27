@@ -10,25 +10,33 @@
 .image_wrapper {
   display: block;
   min-height: 175px;
-  height: 51.04167vw;
+  //height: 51.04167vw;
   max-height: 439px;
+  // width: 100%;
+  margin-left: 9.4%;
+  width: 80vw;
+  max-width: 622px;
 }
 
 .root .image_wrapper img {
     display: block;
-    width: 100%;
+    //width: 100%;
     min-height: 175px;
-    min-width: 258px;
-    height: auto;
+    //min-width: 258px;
+    // height: auto;
     max-height: 439px;
-    margin: 0 auto;
+    //margin: 0 auto;
     border-radius: 8px;
+    width: 80vw;
+    max-width: 622px;
+    //margin-left: 30px;
 }
 
-.root .swiper {
+.swiper {
   display: block;
-  min-width: 250px;
+  //min-width: 320px;
   width: 100%;
+  //width: 1000px;
   height: 100%;
   display: flex;
   justify-items: center;
@@ -76,8 +84,10 @@
 .swiperSlide {
   min-height: 175px;
   height: 100%;
-  max-width: 100%;
-  width: 100%;
+  min-width: 256px;
+  // width: 80vw;
+  //max-width: 100%;
+  //width: 100%;
 }
 
 .swiper_button_next,
