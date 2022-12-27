@@ -77,6 +77,7 @@ const mainPageData = [
         "nav": [
             {
                 "name": "Проекты",
+                'anchor': "offers",
                 "sub": [
                     {
                         "link": "https://stone-svl.ru/",
