@@ -147,13 +147,22 @@ export const C_FullForm = ({className, data, popup}) => {
             <div className={classes.wrapper_frame}>
                 <div className={classes.frame}>
                     <div className={classNames(classes.titles,{[classes.textShown] : isTitle})} ref={titleRef}>
-                        {popup ? 
-                            <h3 dangerouslySetInnerHTML={{ __html: !isConfirmed ? 'Оставьте заявку и получите консультацию' : titleSuccess}} 
+                        {/*{popup ?*/}
+                        {/*    <h3 dangerouslySetInnerHTML={{ __html: !isConfirmed ? 'Оставьте заявку и получите консультацию' : titleSuccess}} */}
+                        {/*        className={classNames(classes.title,{[classes.popupTitle] : popup})}/> :*/}
+                        {/*    <h3 dangerouslySetInnerHTML={{ __html: !isConfirmed ? title : titleSuccess}} className={classes.title}/>*/}
+                        {/*    */}
+                        {/*}*/}
+                        {popup ?
+                            !isConfirmed ? <h3 dangerouslySetInnerHTML={{ __html: 'Оставьте заявку и получите консультацию'}}
                                 className={classNames(classes.title,{[classes.popupTitle] : popup})}/> :
-                            <h3 dangerouslySetInnerHTML={{ __html: !isConfirmed ? title : titleSuccess}} className={classes.title}/>
-                            
+                                <h3 dangerouslySetInnerHTML={{ __html: titleSuccess}}
+                                    className={classNames(classes.title,{[classes.popupTitle] : popup})}/>
+                            : !isConfirmed ? <h3 dangerouslySetInnerHTML={{ __html: title}} className={classes.title}/> :
+                            <h3 dangerouslySetInnerHTML={{ __html: titleSuccess}} className={classes.title}/>
                         }
-                        <span dangerouslySetInnerHTML={{ __html: !isConfirmed ? description : descriptionSuccess}} className={classes.description}/>
+                        {!isConfirmed ? <span dangerouslySetInnerHTML={{ __html: description}} className={classes.description}/> : <span dangerouslySetInnerHTML={{ __html: descriptionSuccess}} className={classes.description}/>}
+                        {/*<span dangerouslySetInnerHTML={{ __html: !isConfirmed ? description : descriptionSuccess}} className={classes.description}/>*/}
                     </div>
                     <div className={classNames(classes.fields,{[classes.popupFields] : popup})}>
                         <div
