@@ -38,7 +38,7 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, onBtn
                 centeredSlides={true}
                 pagination={pagination}
                 className={classNames(classes.swiper, {[classes.swiperMode]: isBtnClose})}
-                initialSlide={Number(initialSlide) || 0}
+                initialSlide={Number(initialSlide) || 1}
                 onSlideChange={
                     (data) => {
                         setSelectedSlide(data.realIndex);
