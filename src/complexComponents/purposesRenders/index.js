@@ -13,6 +13,7 @@ export const purposesRenders = () => {
                     layout="intrinsic"
                     width={contentOfficesMaxMobSizes.width}
                     height={contentOfficesMaxMobSizes.height}
+                    alt={'офис'}
                 />
             )
         }
