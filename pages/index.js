@@ -112,14 +112,17 @@ const mainPageData = [
             },
             {
                 "name": "Пресс-центр",
+                "anchor": "press-center",
                 "sub": []
             },
             {
                 "name": "Девелопер",
+                "anchor": "developer",
                 "sub": []
             },
             {
                 "name": "Контакты",
+                "anchor": "contacts",
                 "sub": []
             }
         ],
