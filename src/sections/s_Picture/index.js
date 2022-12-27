@@ -10,7 +10,7 @@ export const S_Picture = ({className, src, description}) => {
     return (
         <div className={cls}>
           <div className={classes.image_wrapper}>
-            <Image src={src} layout='fill'/>
+            <Image src={src} layout='fill' alt={'новостной обзор'}/>
           </div>
           <C_Description description={description} />
         </div>
