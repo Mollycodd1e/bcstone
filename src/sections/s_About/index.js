@@ -51,7 +51,7 @@ export const S_About = ({className, menuOnTop, data, width, setIsAboutPopupClose
     })
     
     return (
-        <div className={classes.wrapRoot} id={'Девелопер'}>
+        <div className={classes.wrapRoot} id={'developer'}>
             <div className={classNames(cls,{[classes.lineShown]: isAboutLine})} ref={lineRef}>
                 <div className={classNames(classes.frame,{[classes.titleShown]: isAboutTitle})} ref={title}>
                   {/* обертка для титула */}

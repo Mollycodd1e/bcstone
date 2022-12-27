@@ -35,7 +35,7 @@ export const S_Footer = ({className, phone_number, mail, address, sales_number, 
   })
   
   return (
-      <div className={classes.wrapRoot} id={'Контакты'}>
+      <div className={classes.wrapRoot} id={'contacts'}>
           <div className={cls} ref={footerRef}>
                 <div className={classNames(classes.footer_wrapper, {[classes.footerShown]: isFooter})} >
                       <h2><span>{copyright.header}</span></h2>

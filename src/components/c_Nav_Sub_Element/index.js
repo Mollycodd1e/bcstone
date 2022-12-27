@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 export const C_Nav_Sub_Element = ({className, el, i, _key, setIsPopupClose}) => {
     const cls = classNames(classes.root, {[className]: className});
-    const {name, color, link} = el;
+    const {name, color, link, anchor} = el;
 
     return (
         <li

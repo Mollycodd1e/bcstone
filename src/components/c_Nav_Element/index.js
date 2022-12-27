@@ -8,14 +8,14 @@ export const C_Nav_Element = ({className, item, el, _key, briefing, setIsMobileM
     const cls = classNames(classes.root, {[className]: className});
 
     const [toggle, setToggle] = useState(false);
-    const {name, sub} = el;
+    const {name, anchor, sub} = el;
 
     return (
         <li
             key={_key}
             className={cls}
             onClick={sub.length !== 0 ? null : () => setIsMobileMenuOpen(false)}
-        >   <a href={`/#${name}`}>
+        >   <a href={`/#${anchor}`}>
             {/* <Link scroll={false} href={document.querySelector(`#${name}`) && window.location.hostname === 'localhost' ? `#${name}` : 
                 !document.querySelector(`#${name}`) && window.location.hostname === 'localhost' ? `/#${name}` : `/${name}.html}`}> */}
                 {/* <a href={!briefing && window.location.hostname === 'localhost' ? `/#${name}` :  */}
