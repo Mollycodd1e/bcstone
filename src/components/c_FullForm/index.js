@@ -95,7 +95,7 @@ export const C_FullForm = ({className, data, popup}) => {
             // console.log("name", name)
             // console.log("email", email)
             // console.log("isCheckValid", isCheckValid)
-            // setIsConfirmed(true);
+            setIsConfirmed(false);
             setIsProcessing(true);
 
             // отправляем данные в comagic
