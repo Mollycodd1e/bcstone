@@ -95,7 +95,6 @@ export const C_FullForm = ({className, data, popup}) => {
             // console.log("name", name)
             // console.log("email", email)
             // console.log("isCheckValid", isCheckValid)
-            setIsConfirmed(false);
             setIsProcessing(true);
 
             // отправляем данные в comagic
@@ -268,7 +267,7 @@ export const C_FullForm = ({className, data, popup}) => {
                         </div>
                         
                         <C_MainButton text={"Получить предложение"} onClick={(e) => onButtonClick(e)}
-                                      className={classes.button}/>
+                                      className={classes.button} disabled={isProcessing}/>
                         {/* <button
                             ref={btnEl}
                             onClick={(e) => onButtonClick(e)}
