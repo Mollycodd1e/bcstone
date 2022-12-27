@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
-
+import { useWindowSize} from "../../library";
 import classes from './style.module.scss';
 import classNames from "classnames";
 import { C_Slider } from "../../components/c_Slider";
 import { C_PressCard } from "../../components/c_PressCard";
-import { C_MainButton } from "../../components/c_MainButton";
 import {sizes} from "../../data/sizes";
 import { useState } from "react";
 import { useRef } from "react";
@@ -12,7 +11,7 @@ import {Context} from "../../library";
 import { useContext} from 'react';
 
 export const S_PressCenter = ({className, data}) => {
-    
+    const size = useWindowSize();
     const cls = classNames(classes.root, {[className]: className });
     // const data_4 = data.news;
     const data_4 = data;
@@ -99,20 +98,20 @@ export const S_PressCenter = ({className, data}) => {
                     </div>
                     <div className={classes.sliderWrapper}>
                       <C_Slider className={classes.pressing} items={allCards} initialSlide={0} slidersSpaceBetween={
-                            window.innerWidth < sizes.widthTabletSm ? -255 :
-                            (window.innerWidth >= sizes.widthTabletMd && window.innerWidth < sizes.widthNotebook) ? -513 :
-                            (window.innerWidth >= sizes.widthNotebook && window.innerWidth < sizes.widthDesktopSm) ? -520 :
-                            (window.innerWidth >= sizes.widthDesktopSm && window.innerWidth < sizes.widthDesktopMd) ? 15 :
-                            (window.innerWidth >= sizes.widthDesktopMd && window.innerWidth < sizes.widthDesktopLg) ? -30 :
-                             window.innerWidth >= sizes.widthDesktopLg ? -15 : -170}
+                            size.innerWidth < sizes.widthTabletSm ? -255 :
+                            (size.innerWidth >= sizes.widthTabletMd && size.innerWidth < sizes.widthNotebook) ? -513 :
+                            (size.innerWidth >= sizes.widthNotebook && size.innerWidth < sizes.widthDesktopSm) ? -520 :
+                            (size.innerWidth >= sizes.widthDesktopSm && size.innerWidth < sizes.widthDesktopMd) ? 15 :
+                            (size.innerWidth >= sizes.widthDesktopMd && size.innerWidth < sizes.widthDesktopLg) ? -30 :
+                             size.innerWidth >= sizes.widthDesktopLg ? -15 : -170}
                             slidesPerView = {3} press={true} loop={true} loopedSlides={2}/>
                     </div>
                     {/* <div className={classes.btnWrapper}>
                         <a href="#">Подробнее</a>
                     </div> */}
-                    <div ref={centerRef}>
+                    {/*<div ref={centerRef}>
                       <C_MainButton className={classes.C_MainButton} text={'Подробнее'} link={window.location.hostname === 'localhost' ? `/news` : `/news.html`}/>
-                    </div>
+                    </div>*/}
                 </div>
             </div>
         </div>
