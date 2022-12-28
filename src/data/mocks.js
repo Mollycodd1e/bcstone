@@ -64,13 +64,13 @@ export const mainPageData = [
                 ]
             },
             {
-                "name": "Пресс-центр",
-                "anchor": "press-center",
+                "name": "Девелопер",
+                "anchor": "developer",
                 "sub": []
             },
             {
-                "name": "Девелопер",
-                "anchor": "developer",
+                "name": "Пресс-центр",
+                "anchor": "press-center",
                 "sub": []
             },
             {
