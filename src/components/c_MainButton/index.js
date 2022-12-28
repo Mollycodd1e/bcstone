@@ -4,7 +4,7 @@ import {useContext, useRef} from "react";
 import {Context} from "../../library";
 import {sizes} from "../../data/sizes";
 
-export const C_MainButton = ({className, text, onClick, mode = false, link}) => {
+export const C_MainButton = ({className, text, onClick, mode = false, link, disabled = false}) => {
     const btnEl = useRef(null);
     const spanEl = useRef(null);
     const cls = classNames(
@@ -20,6 +20,7 @@ export const C_MainButton = ({className, text, onClick, mode = false, link}) => 
                 <button
                     ref={btnEl}
                     className={cls}
+                    disabled={disabled}
                     onClick={(e) => onClick(e)}
                     onMouseOver={(e) => {
                         if (width < sizes.widthDesktopSm) {

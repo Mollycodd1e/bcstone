@@ -58,9 +58,9 @@ export const C_SavingCard = ({className, image, description, title, item}) => {
                     <div className={classNames(classes.card_wrapper, {[classes.card_wrapper_hover]: isHover})}  onMouseEnter={() => onHover()} onMouseLeave={() => onLeave()}>   
                         <h3>{title}</h3>
                         {width < sizes.widthTabletMd ?    
-                            <Image src={retina ? image : image} layout='fill'/>
+                            <Image src={retina ? image : image} layout='fill' alt={'коммерция'}/>
                         :
-                            <Image src={retina ? image : image} layout='fill'/>
+                            <Image src={retina ? image : image} layout='fill' alt={'коммерция'}/>
                         }
                         <button href={window.location.hostname === 'localhost' ? `/${link}` : `/${link}.html`}>Подробнее</button>
                         <div className={classes.card_shadow}></div>

@@ -77,6 +77,7 @@ const mainPageData = [
         "nav": [
             {
                 "name": "Проекты",
+                'anchor': "offers",
                 "sub": [
                     {
                         "link": "https://stone-svl.ru/",
@@ -2195,7 +2196,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <S_Sales data={mainPageData[0]} />
                     <S_FullForm data={mainPageData[0]} />
                     <S_Bottom_Commercial data={mainPageData[0]}/>
-                    {newsData.length !== 0 ? <S_PressCenter data={newsData}/> : null}
+                    <S_PressCenter data={newsData}/>
                     <S_Footer phone_number={mocks.contacts.phone} mail={mocks.contacts.mail} address={mocks.contacts.address} sales_number={mocks.contacts.sales} telegram={mocks.contacts.telegram} copyright={mocks.copyright} />
                 </div>
             </div>
