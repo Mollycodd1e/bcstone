@@ -63,7 +63,7 @@ export const S_Bottom_Commercial = ({className, data}) => {
                         (width >= sizes.widthDesktopMd && width < sizes.widthDesktopLg) ? -137 :
                         width >= sizes.widthDesktopLg ? -137 :
                         -215}
-                    saving={true}/>
+                    saving={true} centered={true}/>
                 </div>
             </div>
         </div>

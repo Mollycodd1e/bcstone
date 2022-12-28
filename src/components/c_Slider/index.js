@@ -12,7 +12,7 @@ import {sizes} from "../../data/sizes";
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
-export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = -225, slidesPerView = 3, saving, press, map, loop, loopedSlides}) => {
+export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = -225, slidesPerView = 3, saving, press, map, loop, loopedSlides, centered}) => {
     const cls = classNames(classes.root, { [className]: className });
     // autoplay={{
     //     delay: 10000,
@@ -66,7 +66,7 @@ export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnClose
                 }}
                 slidesPerView={slidesPerView}
                 spaceBetween={slidersSpaceBetween}
-                centeredSlides={true}
+                centeredSlides={centered ?? false}
                 allowTouchMove={saving && width >= sizes.widthTabletSm ? false : true}
                 loop={loop}
                 pagination={saving && width >= sizes.widthTabletSm || map && (width < sizes.widthTabletSm) ? false : {"clickable": true}}
