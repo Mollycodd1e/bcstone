@@ -1,27 +1,29 @@
 @import '../../styles/style';
 
 .root {
-  max-width: 861px;
+  //max-width: 861px;
   width: 100%;
   margin-right: auto;
   margin-top: 10px;
-  padding: 0 25px 10px 30px;
+  //padding: 0 25px 10px 30px;
   margin-bottom: 20px;
 }
 
 .root .description {
   margin-top: 3px;
+  margin: 3px 25px 0 30px;
 }
 
 @media (min-width: $width-tablet-md) {
   .root {
-    max-width: 1276px;
+    max-width: 1198px;
     margin-top: 24px;
     margin-bottom: 5px;
     padding: 0 77px 5px 30px;
   }
 
   .root .description {
+    margin: 0;
     margin-left: 100px;
     margin-top: 6px;
   }
