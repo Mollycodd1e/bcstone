@@ -41,7 +41,7 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
     return (
         <div className={cls}>
             <button className={classes.swiper_button_prev} onClick={() => (my_swiper.slidePrev(), slide > 0 ? (setSlide(slide - 1)) : setSlide(slide))}
-                    disabled={slide === 0}/>
+                    />
             <Swiper
                 onClick={onClick}
                 slidesPerView={slidesPerView}
@@ -80,7 +80,7 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
                 }
             </Swiper>
             <div className={classes.swiper_button_next} onClick={() => (my_swiper.slideNext(), slide < items.length -1 ? setSlide(slide + 1) : setSlide(slide))}
-                 disabled={(slide === (items.length-1))}/>
+                 />
             {/* <div className={`swiper-paginations + ${classes.swiper_pagination_custom}`}>        
                 <div className={classNames(classes.LiquidDot)}></div>
             </div> */}

@@ -10,7 +10,7 @@ import { sizes } from "../../data/sizes";
 // // install Swiper modules
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
-export const C_SliderC = ({className, isBtnClose, items, initialSlide}) => {
+export const C_SliderC = ({className, isBtnClose, items, initialSlide = 0}) => {
     const cls = classNames(classes.root, { [className]: className });
 
     const [my_swiper, set_my_swiper] = useState({});
@@ -23,11 +23,17 @@ export const C_SliderC = ({className, isBtnClose, items, initialSlide}) => {
     };
 
     const numSlider = (num, onClick) => {
-        const nums = [1,2,3,4,5];
+        let nums = [];
+
+        items.map((item, i) => {
+            nums.push(i + 1)
+        })
+
         return (
             <div className={classes.numbersWrapper} >
                 {nums.map((el) => {
-                    const selected = num === el ? 'regular__selected' : 'regular';
+                    const selected = num === el  ? 'regular__selected' : 'regular';
+
                     return <div key={el} className={classes[`${selected}`]} onClick={() => {
                         onClick(el)
                     }}>0{el}</div>
@@ -41,12 +47,15 @@ export const C_SliderC = ({className, isBtnClose, items, initialSlide}) => {
             <button className={classes.swiper_button_prev} onClick={() => (my_swiper.slidePrev(), slide > 0 ? setSlide(slide - 1) : setSlide(slide))}
             disabled={slide === 0}></button>
             <Swiper
+                observer={true}
+                observeParents={true}
                 onSwiper={setSwiperInstance}
                 navigation={{
                     prevEl: '.swiper_button_prev',
                     nextEl: '.swiper_button_next',
                 }}
                 speed={700}
+                // loop={true}
                 slidesPerView={'auto'}
                 spaceBetween={width > sizes.widthTabletMd ? 200 : 7}
                 onSlideChange={
