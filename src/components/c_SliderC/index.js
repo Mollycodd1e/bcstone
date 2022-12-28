@@ -74,6 +74,7 @@ export const C_SliderC = ({className, isBtnClose, items, initialSlide}) => {
                 onInit={(evt) => {
                     set_my_swiper(evt)
                 }}
+                loop={true}
                 initialSlide={Number(initialSlide) || 0}
             >   
                 {items.map((item, i) => {
