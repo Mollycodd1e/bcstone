@@ -44,6 +44,7 @@
 }
 
 .item {
+  font-family: "Codec Cold News", "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
   padding: 4.7px 15px 2px 12px;
@@ -141,7 +142,7 @@
   .item {
     font-size: 14px;
     line-height: 15px;
-    padding: 3px 15px 5px 17px;
+    padding: 4px 15px 4px 17px;
 
     &:not(:last-child) {
       margin: 0 0 8px 0;
@@ -162,7 +163,7 @@
     }
 
     &:nth-child(3) {
-      padding: 4px 15px 5px 17px;
+      //padding: 4px 15px 4px 17px;
       &:before {
         @include pseudo;
         top: 2px;
