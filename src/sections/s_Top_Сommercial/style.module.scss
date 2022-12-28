@@ -11,8 +11,7 @@
 
 .root {
   animation: deskElementsToTop;
-  animation-duration: 1s;
-  transition: 3s;
+  animation-duration: 1.5s;
 }
 
 .root > div:nth-child(1) {
