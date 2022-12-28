@@ -11,35 +11,7 @@ import {S_Popup} from "../src/sections/s_Popup";
 import {C_FullForm} from "../src/components/c_FullForm";
 import {S_Form} from "../src/sections/s_Form";
 import {C_Preloader} from "../src/components/c_Preloader";
-
-const footerData = {
-    contacts: {
-        phone: '+7 (495) 124-45-67',
-        mail: 'sales@bc-stone.ru',
-        address: 'г. Москва, Бумажный проезд, вл. 19',
-        sales: `Отдел продаж по телефону: пн.${'\u00A0'}- пт.: с${'\u00A0'}9:00 до${'\u00A0'}21:00 сб.${'\u00A0'}-${'\u00A0'}вс.:${'\u00A0'}c${'\u00A0'}9:30 до${'\u00A0'}20:00`,
-        telegram: '@stone_by_stonehedge'
-    },
-    copyright: {
-        header: `Инвестируйте Выгодно В${'\u00A0'}ликвидную недвижимость`,
-        name: 'Политика конфиденциальности',
-        author: '© АО «СТОУНХЕДЖ»',
-        description: `Содержимое данного сайта (включая размещенную информацию и материалы) охраняется авторским${'\u00A0'}правом (ст. 1271 ГК РФ). Запрещено копирование дизайна настоящего сайта, его структуры и отдельных элементов без предварительного письменного согласия АО «СТОУНХЕДЖ»`
-    },
-};
-const formData = {
-    "isShown": true,
-    "order": "09",
-    "type": "form",
-    "content": {
-        "title": "Новости рынка и старты продаж",
-        "description": "Подпишитесь на рассылку. Получайте аналитику и качественную подборку новостей рынка коммерческой недвижимости.",
-        "success": {
-            "title": "Готово!",
-            "description": "Подписка на новости активна. Вы всегда можете отменить почтовую рассылку в конце письма"
-        }
-    }
-};
+import {footerData, formData, mainPageData} from "../src/data/mocks";
 
 export default function News() {
     const [width, height] = useWindowSize();
@@ -81,11 +53,11 @@ export default function News() {
 
     }, []);
 
-    const mainPageData = data && data.data && data.data.length !== 0 && data.data.filter(el => {
-        if (el && el.id) {
-            return el.id === 2
-        }
-    });
+    // const mainPageData = data && data.data && data.data.length !== 0 && data.data.filter(el => {
+    //     if (el && el.id) {
+    //         return el.id === 2
+    //     }
+    // });
 
     const {contacts, copyright} = footerData;
     const [isPopupClose, setIsPopupClose] = useState(true);
@@ -107,17 +79,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             <div className={"page-wrapper"}>
                 <C_Preloader isPreloader={data.length === 0} />
+                <div className={`common_top_bg + ${classes.common_top_bg_news}`}  ref={topMenuEl} id="top">
+                    <S_MenuC menuOnTop={menuOnTop} data={mainPageData[0]} setIsPopupClose={setIsPopupClose} briefing={true}/>
+                </div>
+                <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
+                    <C_FullForm data={mainPageData[0]} className={popupClasses.fullFormIndexSection} popup={true}/>
+                </S_Popup>
+
                 {data.length !== 0 ? (
-                    <>
-                        <div className={`common_top_bg + ${classes.common_top_bg_news}`}  ref={topMenuEl} id="top">
-                            <S_MenuC menuOnTop={menuOnTop} data={mainPageData[0]} setIsPopupClose={setIsPopupClose} briefing={true}/>
-                        </div>
-                        <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
-                            <C_FullForm data={mainPageData[0]} className={popupClasses.fullFormIndexSection} popup={true}/>
-                        </S_Popup>
-                        <Cc_ComponentGenerator pageData={NewsPageData} />
-                    </>
+                    <Cc_ComponentGenerator pageData={NewsPageData} />
                 ) : null}
+
                 <S_Form
                     header={formData.content.title}
                     description={formData.content.description}
@@ -125,7 +97,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 />
                 <S_Footer phone_number={contacts.phone} mail={contacts.mail} address={contacts.address}
                           sales_number={contacts.sales} telegram={contacts.telegram} copyright={copyright}/>
-
             </div>
         </Context.Provider>
     )
