@@ -29,7 +29,7 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, onBtn
     return (
         <div className={cls}>
             <button className={classes.swiper_button_prev} onClick={() => (my_swiper.slidePrev(), slide > 0 ? setSlide(slide - 1) : setSlide(slide))}
-                    disabled={slide === 0}/>
+                    />
             <Swiper
                 observer={true}
                 observeParents={true}
@@ -38,7 +38,7 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, onBtn
                 centeredSlides={true}
                 pagination={pagination}
                 className={classNames(classes.swiper, {[classes.swiperMode]: isBtnClose})}
-                initialSlide={Number(initialSlide) || 0}
+                initialSlide={Number(initialSlide) || 1}
                 onSlideChange={
                     (data) => {
                         setSelectedSlide(data.realIndex);
@@ -63,7 +63,7 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, onBtn
                 }
             </Swiper>
             <div className={classes.swiper_button_next} onClick={() => (my_swiper.slideNext(), slide < items.length -1 ? setSlide(slide + 1) : setSlide(slide))}
-                 disabled={(slide === (items.length-1))}/>
+                 />
             {numSlider(selectedSlide, items)}
         </div>
     )
