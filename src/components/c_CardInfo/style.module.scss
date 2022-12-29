@@ -90,7 +90,11 @@
     &:before {
       @include pseudo;
       background-image: url("../../img/s_m2_icon.svg");
-      left: -25px;
+      left: -26px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 20px 18px;
+      width: 24px !important;
     }
   }
 }
