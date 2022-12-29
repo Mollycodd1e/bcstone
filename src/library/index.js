@@ -14,3 +14,4 @@ export const useWindowSize = () => {
 }
 
 export const Context = React.createContext();
+export const Slides = React.createContext();
