@@ -11,10 +11,11 @@ import {Context} from "../src/library";
 import {S_MenuC} from "../src/sections/s_MenuC";
 import ErrorPage from "next/error";
 import Query from "../src/hooks/query";
-
+import {useRouter} from "next/router";
 
 export default function Page({page}) {
     const size = useWindowSize();
+    const router = useRouter()
     const [pageData, setPageData] = useState(null);
     const [mainPageData, setMainPageData] = useState(null);
     const [newsData, setNewsData] = useState(null);
@@ -24,12 +25,11 @@ export default function Page({page}) {
         MainStore.getPagesAsync().then(r => {
             if (mounted) {
                 let getPageData = r.find(x => x.slug === page)
-                if(getPageData) {
+                if (getPageData) {
                     setPageData(getPageData)
                 } else {
-
+                    router.push('/404')
                 }
-
                 setMainPageData(r.find(x => x.slug === "main_page"))
             }
         })
@@ -39,14 +39,8 @@ export default function Page({page}) {
 
             }
         })
-
         return () => mounted = false;
     }, [])
-
-
-    if(!pageData){
-       return <ErrorPage statusCode={404}/>
-    }
 
 
     return (
@@ -63,9 +57,9 @@ export default function Page({page}) {
 
                 {!MainStore.loading.is('pageData') && pageData ?
                     <>
-                <Cc_ComponentGenerator pageData={pageData.data}/>
+                        <Cc_ComponentGenerator pageData={pageData.data}/>
                     </>
-                    :''}
+                    : ''}
             </div>
         </Context.Provider>
 
