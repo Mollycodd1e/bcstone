@@ -15,7 +15,7 @@ import {S_Bottom_Commercial} from '../src/sections/s_Bottom_Commercial';
 import {S_PressCenter} from '../src/sections/s_PressCenter';
 import {C_SliderVideoPopup} from '@/components/c_SliderVideoPopup';
 import MainStore from "../src/store/MainStore";
-import {MainBanner} from "../src/components/SkeletonComponent";
+import {MainBanner} from "@/components/SkeletonComponent";
 import useWindowSize from "../src/hooks/useWindowSize";
 
 function Home(props) {

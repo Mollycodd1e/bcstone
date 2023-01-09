@@ -8,10 +8,9 @@ import { useState } from "react";
 import { useRef } from "react";
 import {Context} from "../../library";
 import { useContext} from 'react';
-import useWindowSize from "../../hooks/useWindowSize";
 
 export const S_PressCenter = ({className, data}) => {
-    const size = useWindowSize();
+    const {width, height} = useContext(Context);
     const cls = classNames(classes.root, {[className]: className });
     const allCards = [];
 
@@ -30,7 +29,7 @@ export const S_PressCenter = ({className, data}) => {
       return new Date(b.date) - new Date(a.date);
     }).slice(0, 6);
     
-    if (size.width < sizes.widthTabletMd) {
+    if (width < sizes.widthTabletMd) {
       cuttedElements.forEach(item => {
         allCards.push(<C_PressCard newsId={item.id} date={item.date} image={retina ? item.image : item.image} title={item.title} description={item.fullTextWithoutImg}/>)
       }); 
@@ -86,12 +85,12 @@ export const S_PressCenter = ({className, data}) => {
                     </div>
                     <div className={classes.sliderWrapper}>
                       <C_Slider className={classes.pressing} items={allCards} initialSlide={0} slidersSpaceBetween={
-                            size.innerWidth < sizes.widthTabletSm ? -255 :
-                            (size.innerWidth >= sizes.widthTabletMd && size.innerWidth < sizes.widthNotebook) ? -513 :
-                            (size.innerWidth >= sizes.widthNotebook && size.innerWidth < sizes.widthDesktopSm) ? -520 :
-                            (size.innerWidth >= sizes.widthDesktopSm && size.innerWidth < sizes.widthDesktopMd) ? 15 :
-                            (size.innerWidth >= sizes.widthDesktopMd && size.innerWidth < sizes.widthDesktopLg) ? -30 :
-                             size.innerWidth >= sizes.widthDesktopLg ? -15 : -170}
+                            width < sizes.widthTabletSm ? -255 :
+                            (width >= sizes.widthTabletMd && width < sizes.widthNotebook) ? -513 :
+                            (width >= sizes.widthNotebook && width < sizes.widthDesktopSm) ? -520 :
+                            (width >= sizes.widthDesktopSm && width < sizes.widthDesktopMd) ? 15 :
+                            (width >= sizes.widthDesktopMd && width < sizes.widthDesktopLg) ? -30 :
+                             width >= sizes.widthDesktopLg ? -15 : -170}
                             slidesPerView = {3} press={true} loop={true} loopedSlides={6}/>
                     </div>
                 </div>
