@@ -6,7 +6,7 @@ import { useRef } from 'react';
 import { useEffect } from 'react';
 import {Context} from "../../library";
 import { useContext} from 'react';
-import {sizes} from "../../data/sizes";
+import {sizes} from "@/data/sizes";
 
 export const C_SavingCard = ({className, image, description, title, item}) => {
     const {link} = item;
