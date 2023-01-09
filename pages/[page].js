@@ -8,9 +8,6 @@ import {C_FullForm} from "@/components/c_FullForm";
 import MainStore from "../src/store/MainStore";
 import useWindowSize from "../src/hooks/useWindowSize";
 import {Context} from "../src/library";
-import {S_MenuC} from "../src/sections/s_MenuC";
-import ErrorPage from "next/error";
-import Query from "../src/hooks/query";
 import {useRouter} from "next/router";
 
 export default function Page({page}) {
@@ -48,8 +45,6 @@ export default function Page({page}) {
             <div className={"page-wrapper"}>
                 {!MainStore.loading.is('pageData') && mainPageData ?
                <div className={`common_top_bg + ${classes.common_top_bg_news}`} id="top">
-                    {/*<S_MenuC data={mainPageData} setIsPopupClose={setIsPopupClose}*/}
-                    {/*         briefing={true}/>*/}
                    <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
                        <C_FullForm data={mainPageData} className={popupClasses.fullFormIndexSection} popup={true}/>
                    </S_Popup>

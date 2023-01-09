@@ -17,6 +17,8 @@ import {C_SliderVideoPopup} from '@/components/c_SliderVideoPopup';
 import MainStore from "../src/store/MainStore";
 import {MainBanner} from "@/components/SkeletonComponent";
 import useWindowSize from "../src/hooks/useWindowSize";
+import {navData} from "@/data/mocks";
+import popupClasses from "../src/sections/s_Popup/style.module.scss";
 
 function Home(props) {
     const size = useWindowSize();
@@ -47,15 +49,6 @@ function Home(props) {
         <Context.Provider value={size}>
             <div className={`common_top_bg`}>
                 <>
-                    {/*{!MainStore.loading.is('pageData') && pageData ?*/}
-                    {/*    <>*/}
-                    {/*        /!*<S_Menu data={pageData} setIsPopupClose={setIsPopupClose}/>*!/*/}
-                    {/*        /!*<S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>*!/*/}
-                    {/*        /!*    <C_FullForm data={pageData} className={classes.fullFormIndexSection} popup={true}/>*!/*/}
-                    {/*        /!*</S_Popup>*!/*/}
-
-                    {/*    </>*/}
-                    {/*    : 'LOADING'}*/}
                     {!MainStore.loading.is('pageData') && pageData ?
                         <>
                             <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
@@ -76,11 +69,15 @@ function Home(props) {
 
                             <S_FullForm data={pageData}/>
                             <S_Bottom_Commercial data={pageData}/>
+                            <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
+                                <C_FullForm data={pageData} className={popupClasses.fullFormIndexSection} popup={true}/>
+                            </S_Popup>
                         </>
                         : <MainBanner/>}
                     {!MainStore.loading.is('newsData') && newsData ?
+                            <S_PressCenter data={newsData}/>
 
-                        <S_PressCenter data={newsData}/> : 'LOADING' }
+                         : 'LOADING' }
 
 
                 </>

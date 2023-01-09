@@ -8,7 +8,7 @@ export const C_Nav_List = ({className, data,  briefing, setIsMobileMenuOpen, set
 
     return (
         <ul className={cls}>
-            {data.nav.map((el, item) => {
+            {data.map((el, item) => {
                 return <C_Nav_Element
                     el={el}
                     item={item}

@@ -7,12 +7,9 @@ import 'swiper/css/scrollbar';
 
 import Head from "next/head";
 import {S_Footer} from "../src/sections/s_Footer";
-import {footerData, mainPageData} from "@/data/mocks";
+import {footerData, navData} from "@/data/mocks";
 import classes from "./styleNews.module.scss";
 import {S_MenuC} from "../src/sections/s_MenuC";
-import {S_Popup} from "../src/sections/s_Popup";
-import {C_FullForm} from "@/components/c_FullForm";
-import popupClasses from "../src/sections/s_Popup/style.module.scss";
 import {useState} from "react";
 import useWindowSize from "../src/hooks/useWindowSize";
 import {Context} from "../src/library";
@@ -20,7 +17,6 @@ import {Context} from "../src/library";
 export default function BcStone({Component, pageProps}) {
     const [isPopupClose, setIsPopupClose] = useState(true);
     const size = useWindowSize();
-
     return (
         <Context.Provider value={size}>
             <Head>
@@ -31,11 +27,8 @@ export default function BcStone({Component, pageProps}) {
             </Head>
 
              <div className={`common_top_bg + ${classes.common_top_bg_news}`} id="top">
-                 <S_MenuC data={mainPageData[0]} setIsPopupClose={setIsPopupClose}
+                 <S_MenuC data={navData} setIsPopupClose={setIsPopupClose}
                           briefing={true}/>
-                 <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
-                     <C_FullForm data={mainPageData[0]} className={popupClasses.fullFormIndexSection} popup={true}/>
-                 </S_Popup>
              </div>
 
             <div className={"page-wrapper"}>
