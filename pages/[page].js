@@ -1,22 +1,19 @@
-import {useEffect, useRef, useState} from "react";
-import Head from 'next/head';
+import {useEffect, useState} from "react";
 import classes from './styleNews.module.scss';
 import popupClasses from "../src/sections/s_Popup/style.module.scss";
 import {Cc_ComponentGenerator} from "../src/complexComponents/cc_ComponentGenerator";
 import {S_Popup} from "../src/sections/s_Popup";
 import {C_FullForm} from "@/components/c_FullForm";
 import MainStore from "../src/store/MainStore";
-import useWindowSize from "../src/hooks/useWindowSize";
-import {Context} from "../src/library";
 import {useRouter} from "next/router";
 
 export default function Page({page}) {
-    const size = useWindowSize();
-    const router = useRouter()
+    const router = useRouter();
     const [pageData, setPageData] = useState(null);
     const [mainPageData, setMainPageData] = useState(null);
     const [newsData, setNewsData] = useState(null);
     const [isPopupClose, setIsPopupClose] = useState(true);
+
     useEffect(() => {
         let mounted = true;
         MainStore.getPagesAsync().then(r => {

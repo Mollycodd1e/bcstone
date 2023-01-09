@@ -1,12 +1,17 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
-import { C_Navigation } from "../../components/c_Navigation";
-import { C_ContactsMenu } from "../../components/c_ContactsMenu";
-import { C_Logo } from "../../components/c_Logo";
+import { C_Navigation } from "@/components/c_Navigation";
+import { C_ContactsMenu } from "@/components/c_ContactsMenu";
+import { C_Logo } from "@/components/c_Logo";
 import {useRef, useState} from "react";
 import menuOnTop from "../../hooks/MenuOnTop";
+import {useMobxStores} from "../../store/stores";
 
 export const S_MenuC = ({className, data}) => {
+
+    //cSiteStore.switchPopUpFormState()
+
+
     const [isPopupClose, setIsPopupClose] = useState(true);
     const topMenuEl = useRef(null);
     const cls = classNames(classes.root, {[classes.menuOnTop]:menuOnTop(topMenuEl), [className]: className});

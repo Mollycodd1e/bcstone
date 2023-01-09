@@ -19,6 +19,7 @@ import {MainBanner} from "@/components/SkeletonComponent";
 import useWindowSize from "../src/hooks/useWindowSize";
 import {navData} from "@/data/mocks";
 import popupClasses from "../src/sections/s_Popup/style.module.scss";
+import {useMobxStores} from "../src/store/stores";
 
 function Home(props) {
     const size = useWindowSize();
@@ -51,8 +52,8 @@ function Home(props) {
                 <>
                     {!MainStore.loading.is('pageData') && pageData ?
                         <>
-                            <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
-                                <C_FullForm data={pageData} className={classes.fullFormIndexSection} popup={isPopupClose}/>
+                            <S_Popup isPopupClose={useMobxStores().popUpFormState} setIsPopupClose={setIsPopupClose}>
+                                <C_FullForm data={pageData} className={classes.fullFormIndexSection} popup={useMobxStores().popUpFormState}/>
                             </S_Popup>
                             <S_Hero data={pageData} setIsPopupClose={setIsPopupClose}/>
                             <S_Top_Commercial data={pageData}/>

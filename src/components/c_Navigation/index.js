@@ -4,6 +4,7 @@ import { C_Logo } from "../c_Logo";
 import { C_MainButton } from "../c_MainButton";
 import { C_Nav_List } from "../c_Nav_List";
 import { useEffect, useRef, useState } from "react";
+import {useMobxStores} from "../../store/stores";
 
 
 export function C_Navigation({className, data, setIsPopupClose,  briefing}) {

@@ -5,53 +5,11 @@ import React, {useContext, useRef, useState} from "react";
 import {Context} from "../../library";
 import {sizes} from "../../data/sizes";
 
-// onMouseDown={(e) => {
-//     const rect = topPic.current.getBoundingClientRect()
-//
-//     // console.log('Координата начала блока по X относительно документа:', rect.x + pageXOffset)
-//     // console.log('координата начала блока по Y относительно документа:', rect.y + pageYOffset)
-//     // console.log('Ширина блока:', topPic.current.clientWidth)
-//     // console.log('Высота блока:', topPic.current.clientHeight)
-//     // // console.log('Координата конца блока по X относительно документа:', rect.x + pageXOffset + topPic.current.clientWidth)
-//     // // console.log('Координата конца блока по Y относительно документа:', rect.y + pageYOffset + topPic.current.clientHeight)
-//     // console.log('Позиция курсора по X', e.pageX)
-//     // console.log('Позиция курсора по Y', e.pageY)
-//
-//     let xBlockPercent = Math.abs(Math.round((e.pageX - (rect.x + pageXOffset))/(topPic.current.clientWidth / 100)))
-//     let yBlockPercent = Math.abs(Math.round((e.pageY - (rect.y + pageYOffset))/(topPic.current.clientHeight / 100)))
-//     // console.log('Позиция курсора по X в % относительно блока', xBlockPercent)
-//     // console.log('Позиция курсора по Y в % относительно блока', yBlockPercent)
-//
-//
-//     topPic.current.style.clipPath = `circle(230px at ${xBlockPercent}% ${yBlockPercent}%);`
-// }}
-// onMouseUp={(e) => {
-//     const rect = topPic.current.getBoundingClientRect()
-//
-//     // console.log('Координата начала блока по X относительно документа:', rect.x + pageXOffset)
-//     // console.log('координата начала блока по Y относительно документа:', rect.y + pageYOffset)
-//     // console.log('Ширина блока:', topPic.current.clientWidth)
-//     // console.log('Высота блока:', topPic.current.clientHeight)
-//     // // console.log('Координата конца блока по X относительно документа:', rect.x + pageXOffset + topPic.current.clientWidth)
-//     // // console.log('Координата конца блока по Y относительно документа:', rect.y + pageYOffset + topPic.current.clientHeight)
-//     // console.log('Позиция курсора по X', e.pageX)
-//     // console.log('Позиция курсора по Y', e.pageY)
-//
-//     let xBlockPercent = Math.abs(Math.round((e.pageX - (rect.x + pageXOffset))/(topPic.current.clientWidth / 100)))
-//     let yBlockPercent = Math.abs(Math.round((e.pageY - (rect.y + pageYOffset))/(topPic.current.clientHeight / 100)))
-//     // console.log('Позиция курсора по X в % относительно блока', xBlockPercent)
-//     // console.log('Позиция курсора по Y в % относительно блока', yBlockPercent)
-//
-//
-//     topPic.current.style.clipPath = `circle(230px at ${xBlockPercent}% ${yBlockPercent}%);`
-// }}
-
 export const S_Hero = ({className, data, setIsPopupClose}) => {
     const interactiveBlock = useRef(null);
     const topPic = useRef(null);
     const cls = classNames(classes.root, {[className]: className });
     const {width, height} = useContext(Context);
-    // const isDesktop = width >= sizes.widthDesktopLg;
     const isDesktop = width >= sizes.widthDesktopSm;
     const [isAnimation, setIsAnimation] = useState(false);
     const [isAnimationOff, setIsAnimationOff] = useState(false);
@@ -102,47 +60,10 @@ export const S_Hero = ({className, data, setIsPopupClose}) => {
 
     return (
         <div className={cls} >
-            {/*<div className={classes.textBlock}>*/}
-            {/*    <div className={classes.titleHelper}>Бизнес-центры класса а</div>*/}
-            {/*    <div className={classes.mainTitle}>STONE</div>*/}
-            {/*    <div className={classes.listName}>Аренда / продажа офисов и ритейла <br/>в Москве у метро</div>*/}
-            {/*    <ul className={classes.listInfo}>*/}
-            {/*        <li className={classes.item}>Доходность до 45%</li>*/}
-            {/*        <li className={classes.item}>Окупаемость 6 лет</li>*/}
-            {/*        <li className={classes.item}>Вложения от 12 млн руб.</li>*/}
-            {/*        <li className={classes.item}>Девелопер STONE HEDGE</li>*/}
-            {/*    </ul>*/}
-            {/*    <c_MainButton text={"Получить предложение"} onClick={() => console.log('click')} className={classes.mainButton} />*/}
-            {/*</div>*/}
-
-            {/*<div*/}
-            {/*    className={classes.interactiveBlock}*/}
-            {/*    ref={interactiveBlock}*/}
-            {/*>*/}
-            {/*    <div className={classes.btmPic} />*/}
-            {/*    <div*/}
-            {/*        className={classes.topPic}*/}
-            {/*        ref={topPic}*/}
-            {/*    />*/}
-            {/*    <div className={classes.hover}*/}
-            {/*         onMouseOver={(e) => {*/}
-            {/*             updateCursor(e, topPic, interactiveBlock, 0)*/}
-            {/*         }}*/}
-            {/*         onMouseMove={(e) => {*/}
-            {/*             updateCursor(e, topPic, interactiveBlock)*/}
-            {/*         }}*/}
-            {/*         onMouseOut={(e) => {*/}
-            {/*             updateCursor(e, topPic, interactiveBlock, 0)*/}
-            {/*         }}*/}
-            {/*    />*/}
-            {/*</div>*/}
-
-
             <div className={classes.titleHelper}>{data.logo_title}</div>
             <div className={classes.mainTitle} />
             <div className={classes.listName} dangerouslySetInnerHTML={{ __html: data.titile_description}}/>
             <ul className={classes.listInfo}>
-                {/*{data.list_description.map((el, i) => <li key={i+100} className={classes.item} dangerouslySetInnerHTML={{ __html: el}}/>)}*/}
                 <li className={classes.item} >Доходность до 40%</li>
                 <li className={classes.item} >Рассрочка 0%</li>
                 <li className={classes.item} >Вложения от 11,6 млн руб.</li>
