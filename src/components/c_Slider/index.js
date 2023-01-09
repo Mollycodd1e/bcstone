@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState, useRef } from "react";
 import {Context} from "../../library";
 import { useContext } from 'react';
-import {sizes} from "@/data/sizes";
+import {sizes} from "../../data/sizes";
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
@@ -61,9 +61,9 @@ export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnClose
                     set_my_swiper(evt)
                 }}
                 slidesPerView={slidesPerView}
-              spaceBetween={slidersSpaceBetween}
+                spaceBetween={slidersSpaceBetween}
                 centeredSlides={centered ?? false}
-                allowTouchMove={!(saving && width >= sizes.widthTabletSm)}
+                allowTouchMove={saving && width >= sizes.widthTabletSm ? false : true}
                 loop={loop}
                 pagination={saving && width >= sizes.widthTabletSm || map && (width < sizes.widthTabletSm) ? false : {"clickable": true}}
                 className={classNames(classes.swiper, {[classes.swiperSaving]: saving}, {[classes.swiperMode]: isBtnClose},{[classes.swiperPress]: press})}
