@@ -58,6 +58,9 @@ function Home(props) {
                     {/*    : 'LOADING'}*/}
                     {!MainStore.loading.is('pageData') && pageData ?
                         <>
+                            <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
+                                <C_FullForm data={pageData} className={classes.fullFormIndexSection} popup={true}/>
+                            </S_Popup>
                             <S_Hero data={pageData} setIsPopupClose={setIsPopupClose}/>
                             <S_Top_Commercial data={pageData}/>
                             <S_Projects data={pageData} className={"projects-bg"} setIsPopupClose={setIsPopupClose}/>
