@@ -11,10 +11,6 @@ import { C_MainButton } from '../c_MainButton';
 export const C_FullForm = ({className, data, popup}) => {
     const cls = classNames(classes.root, "form", "form--top", {[className]: className});
     const {description, descriptionSuccess, title, titleSuccess} = data.main_form;
-
-    const {width, height} = useContext(Context);
-    const btnEl = useRef(null);
-    const spanEl = useRef(null);
     
     const [isConfirmed, setIsConfirmed] = useState(false);
     const [isProcessing, setIsProcessing] = useState(false);

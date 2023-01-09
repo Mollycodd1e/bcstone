@@ -46,13 +46,13 @@ function Home(props) {
     const [isAboutPopupClose, setIsAboutPopupClose] = useState(true);
 
     return (
-        <Context.Provider value={size}>
+
             <div className={`common_top_bg`}>
                 <>
                     {!MainStore.loading.is('pageData') && pageData ?
                         <>
                             <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
-                                <C_FullForm data={pageData} className={classes.fullFormIndexSection} popup={true}/>
+                                <C_FullForm data={pageData} className={classes.fullFormIndexSection} popup={isPopupClose}/>
                             </S_Popup>
                             <S_Hero data={pageData} setIsPopupClose={setIsPopupClose}/>
                             <S_Top_Commercial data={pageData}/>
@@ -66,12 +66,8 @@ function Home(props) {
                                                     isAboutPopupClose={isAboutPopupClose} popup={isAboutPopupClose}/>
                             </Slides.Provider>
                             <S_Sales data={pageData}/>
-
                             <S_FullForm data={pageData}/>
                             <S_Bottom_Commercial data={pageData}/>
-                            <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
-                                <C_FullForm data={pageData} className={popupClasses.fullFormIndexSection} popup={true}/>
-                            </S_Popup>
                         </>
                         : <MainBanner/>}
                     {!MainStore.loading.is('newsData') && newsData ?
@@ -82,7 +78,6 @@ function Home(props) {
 
                 </>
             </div>
-        </Context.Provider>
     )
 }
 

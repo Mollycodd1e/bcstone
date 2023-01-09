@@ -3,10 +3,11 @@ import classNames from "classnames";
 import { C_Navigation } from "../../components/c_Navigation";
 import { C_ContactsMenu } from "../../components/c_ContactsMenu";
 import { C_Logo } from "../../components/c_Logo";
-import {useRef} from "react";
+import {useRef, useState} from "react";
 import menuOnTop from "../../hooks/MenuOnTop";
 
-export const S_MenuC = ({className, data, setIsPopupClose}) => {
+export const S_MenuC = ({className, data}) => {
+    const [isPopupClose, setIsPopupClose] = useState(true);
     const topMenuEl = useRef(null);
     const cls = classNames(classes.root, {[classes.menuOnTop]:menuOnTop(topMenuEl), [className]: className});
     return (
