@@ -47,15 +47,15 @@ function Home(props) {
         <Context.Provider value={size}>
             <div className={`common_top_bg`}>
                 <>
-                    {!MainStore.loading.is('pageData') && pageData ?
-                        <>
-                            <S_Menu data={pageData} setIsPopupClose={setIsPopupClose}/>
-                            <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
-                                <C_FullForm data={pageData} className={classes.fullFormIndexSection} popup={true}/>
-                            </S_Popup>
+                    {/*{!MainStore.loading.is('pageData') && pageData ?*/}
+                    {/*    <>*/}
+                    {/*        /!*<S_Menu data={pageData} setIsPopupClose={setIsPopupClose}/>*!/*/}
+                    {/*        /!*<S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>*!/*/}
+                    {/*        /!*    <C_FullForm data={pageData} className={classes.fullFormIndexSection} popup={true}/>*!/*/}
+                    {/*        /!*</S_Popup>*!/*/}
 
-                        </>
-                        : 'LOADING'}
+                    {/*    </>*/}
+                    {/*    : 'LOADING'}*/}
                     {!MainStore.loading.is('pageData') && pageData ?
                         <>
                             <S_Hero data={pageData} setIsPopupClose={setIsPopupClose}/>

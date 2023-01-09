@@ -196,6 +196,10 @@
   position: relative;
   cursor: pointer;
 
+  & a {
+    text-decoration: underline;
+  }
+
   &:before {
     content: "";
     position: absolute;
