@@ -61,22 +61,24 @@ function Home(props) {
                             <S_Hero data={pageData} setIsPopupClose={setIsPopupClose}/>
                             <S_Top_Commercial data={pageData}/>
                             <S_Projects data={pageData} className={"projects-bg"} setIsPopupClose={setIsPopupClose}/>
-                           <Slides.Provider value={[slideIndex, setSlideIndex]}>
-                            <S_About data={pageData} width={size.width} setIsPopupClose={setIsPopupClose}
-                                     setIsAboutPopupClose={setIsAboutPopupClose} popup={isAboutPopupClose}/>
-                            <C_SliderVideoPopup data={pageData}
-                                                sliderVideoPopupContent={pageData.about_company.variableContent}
-                                                setIsAboutPopupClose={setIsAboutPopupClose}
-                                                isAboutPopupClose={isAboutPopupClose} popup={isAboutPopupClose}/>
-                        </Slides.Provider>
+                            <Slides.Provider value={[slideIndex, setSlideIndex]}>
+                                <S_About data={pageData} width={size.width} setIsPopupClose={setIsPopupClose}
+                                         setIsAboutPopupClose={setIsAboutPopupClose} popup={isAboutPopupClose}/>
+                                <C_SliderVideoPopup data={pageData}
+                                                    sliderVideoPopupContent={pageData.about_company.variableContent}
+                                                    setIsAboutPopupClose={setIsAboutPopupClose}
+                                                    isAboutPopupClose={isAboutPopupClose} popup={isAboutPopupClose}/>
+                            </Slides.Provider>
                             <S_Sales data={pageData}/>
 
                             <S_FullForm data={pageData}/>
                             <S_Bottom_Commercial data={pageData}/>
-
                         </>
-
                         : <MainBanner/>}
+                    {!MainStore.loading.is('newsData') && newsData ?
+
+                        <S_PressCenter data={newsData}/> : 'LOADING' }
+
 
                 </>
             </div>

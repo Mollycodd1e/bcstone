@@ -157,22 +157,11 @@
 }
 
 .button {
-  // font-size: 12px;
-  // line-height: 13px;
-  // letter-spacing: -0.01em;
-  // text-align: center;
   color: #000000;
-  // border-radius: 16px;
-  background: #ffffff;
+  background: #ffffff !important;
   border: 1px solid #707070;
-  // border-width: 0;
-  // padding: 10px 23px 9px 23px;
-  // font-family: "Codec Cold News", "Arial", sans-serif;
   margin-top: 30px;
   margin-bottom: 26px;
-  // cursor: pointer;
-  // overflow: hidden;
-  // transition: background-color 1.3s;
 
   &:hover {
     background-color: #2B2C2C !important;

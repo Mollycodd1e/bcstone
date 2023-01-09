@@ -1,23 +1,21 @@
 import React, { useEffect } from "react";
-import { useWindowSize} from "../../library";
 import classes from './style.module.scss';
 import classNames from "classnames";
-import { C_Slider } from "../../components/c_Slider";
-import { C_PressCard } from "../../components/c_PressCard";
-import {sizes} from "../../data/sizes";
+import { C_Slider } from "@/components/c_Slider";
+import { C_PressCard } from "@/components/c_PressCard";
+import {sizes} from "@/data/sizes";
 import { useState } from "react";
 import { useRef } from "react";
 import {Context} from "../../library";
 import { useContext} from 'react';
+import useWindowSize from "../../hooks/useWindowSize";
 
 export const S_PressCenter = ({className, data}) => {
-
+    const size = useWindowSize();
     const cls = classNames(classes.root, {[className]: className });
-    const data_4 = data;
     const allCards = [];
 
     const [isCenter, setIsCenter] = useState(false);
-    const {width, height} = useContext(Context);
     const [isTitle, setIsTitle] = useState(false);
     const centerRef = useRef();
     const titleRef = useRef();
@@ -28,11 +26,11 @@ export const S_PressCenter = ({className, data}) => {
         retina = window.devicePixelRatio > 1;
     }  
 
-    let cuttedElements = data_4.sort(function (a, b) {
+    let cuttedElements = data.sort(function (a, b) {
       return new Date(b.date) - new Date(a.date);
     }).slice(0, 6);
     
-    if (width < sizes.widthTabletMd) {
+    if (size.width < sizes.widthTabletMd) {
       cuttedElements.forEach(item => {
         allCards.push(<C_PressCard newsId={item.id} date={item.date} image={retina ? item.image : item.image} title={item.title} description={item.fullTextWithoutImg}/>)
       }); 
@@ -44,13 +42,10 @@ export const S_PressCenter = ({className, data}) => {
 
 
     useEffect(() => {
-        console.log(allCards.length)
       function onEntry(entry) {
         entry.forEach(change => {
           if (change.isIntersecting) {
             setIsTitle(true);
-          } else {
-            // setIsTitle(false);
           }
         });
       }
