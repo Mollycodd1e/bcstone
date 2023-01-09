@@ -4,8 +4,7 @@ import classes from './style.module.scss';
 import classNames from "classnames";
 
 import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper';
-import {Swiper, SwiperSlide} from "swiper/swiper-react.cjs.js";
-
+import { Swiper, SwiperSlide } from 'swiper/react';
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
 export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, pagination, slidersSpaceBetween, slidesPerView = 1, loop}) => {

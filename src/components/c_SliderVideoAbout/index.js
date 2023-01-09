@@ -10,7 +10,7 @@ import {C_SliderPopupElement} from "../c_SliderPopupElement";
 
 export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIsVideo, popup}) => {
     const cls = classNames(classes.root, {[className]: className});
-    const [width, height] = useContext(Context);
+    const {width, height} = useContext(Context);
 
     const {slider, video} = data.about_company.variableContent;
 

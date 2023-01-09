@@ -34,14 +34,14 @@
   align-items: center;
 }
 
-.С_Slider {
-  background-color: white;
+.C_Slider {
+ /* background-color: white;*/
   padding: 4px 0 36px 0;
-  //overflow: hidden;
+  overflow: hidden;
 }
 
 @media (min-width: $width-mobile-pre-md) {
-  .С_Slider {
+  .C_Slider {
     padding: 12px 0 36px 0;
   }
 }

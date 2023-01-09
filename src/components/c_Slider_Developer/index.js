@@ -1,13 +1,9 @@
 import React, {useContext, useEffect, useState} from "react";
-import {Context} from "../../library";
 import classes from './style.module.scss';
 import classNames from "classnames";
-import {sizes} from "../../data/sizes";
 
 import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper';
-import {Swiper, SwiperSlide} from "swiper/swiper-react.cjs.js";
-import { useRef } from "react";
-// install Swiper modules
+import { Swiper, SwiperSlide } from 'swiper/react';
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
 export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = -225, slidesPerView = 3, loop, onClick, onChange}) => {

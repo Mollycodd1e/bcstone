@@ -5,7 +5,7 @@ import {Context} from "../../library";
 import {sizes} from "../../data/sizes";
 
 export const AdvBtmList = () => {
-    const [width, height] = useContext(Context);
+    const {width, height} = useContext(Context);
     const isDesktop = width >= sizes.widthTabletMd;
 
     return advantagesBtm.map((el, i) => {

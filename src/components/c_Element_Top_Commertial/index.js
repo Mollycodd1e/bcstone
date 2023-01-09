@@ -9,7 +9,7 @@ export const C_Element_Top_Commertial = ({className, element}) => {
     const cls = classNames(classes.root, {[className]: className});
     const {title, content, link, link_text, color} = element;
 
-    const [width, height] = useContext(Context);
+    const {width, height} = useContext(Context);
 
     let newTitle = title;
     let spaceNumberTitle;
@@ -62,12 +62,10 @@ export const C_Element_Top_Commertial = ({className, element}) => {
                 <span className={classes.content}>
                     {cropContent}
                 </span>
-                {(typeof window !== 'undefined') && 
-                    <a  className={classes.link}
-                        href={window.location.hostname === 'localhost' ? `/${link}` : `/${link}.html`}>
+                    <a className={classes.link}
+                        href={`/${link}`}>
                         Подробнее
                     </a>
-                }
             </div>
        </div>
     )

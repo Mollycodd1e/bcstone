@@ -4,7 +4,7 @@ import classes from './style.module.scss';
 import classNames from "classnames";
 
 import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper';
-import {Swiper, SwiperSlide} from "swiper/swiper-react.cjs.js";
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState, useRef } from "react";
 import {Context} from "../../library";
 import { useContext } from 'react';
@@ -14,17 +14,13 @@ SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
 export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = -225, slidesPerView = 3, saving, press, map, loop, loopedSlides, centered}) => {
     const cls = classNames(classes.root, { [className]: className });
-    // autoplay={{
-    //     delay: 10000,
-    //         disableOnInteraction: false,
-    // }}
 
     const [my_swiper, set_my_swiper] = useState({});
     const [slide, setSlide] = useState(0);
     const [activeSlide, setActiveSlide] = useState(0);
     const [isVisible, setVisible] = useState(false);
     const ref = useRef();
-    const [width, height] = useContext(Context);
+    const {width, height} = useContext(Context);
 
     useEffect(() => {
         function onEntry(entry) {
@@ -45,16 +41,16 @@ export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnClose
         }
     })
 
-    var func = function(i) {
+/*    var func = function(i) {
         setTimeout(function(){
             // console.log(i)
         }, 10000 * i)
-      };
+      };*/
 
     return (
         <div className={cls}>
             {press ? <div className={classes.swiper_button_prev} onClick={() => (my_swiper.slidePrev(), slide > 0 ? setSlide(slide - 1) : setSlide(slide))}
-            disabled={slide === 0}></div> : null}
+            disabled={slide === 0}/> : null}
             <Swiper
                 ref={ref}
                 navigation={{
@@ -65,27 +61,26 @@ export const C_Slider = ({className, isBtnClose, items, initialSlide, onBtnClose
                     set_my_swiper(evt)
                 }}
                 slidesPerView={slidesPerView}
-                spaceBetween={slidersSpaceBetween}
+              spaceBetween={slidersSpaceBetween}
                 centeredSlides={centered ?? false}
                 allowTouchMove={saving && width >= sizes.widthTabletSm ? false : true}
                 loop={loop}
                 pagination={saving && width >= sizes.widthTabletSm || map && (width < sizes.widthTabletSm) ? false : {"clickable": true}}
-                className={classNames(classes.swiper, {[classes.swiperSaving]: saving}, {[classes.swiperMode]: isBtnClose},{[classes.swiperPress]: press}, {[classes.swiperShow]: isVisible && press},{[classes.mapShow]: isVisible && map})}
-                initialSlide={Number(initialSlide) || 0}
+                className={classNames(classes.swiper, {[classes.swiperSaving]: saving}, {[classes.swiperMode]: isBtnClose},{[classes.swiperPress]: press})}
+               initialSlide={0}
                 loopedSlides={loopedSlides}
                 onSlideChange={(swiper) => setActiveSlide(swiper.realIndex)}
-            >   
+            >
                 {items.map((item, i) => {
                     return (
                         <SwiperSlide className = {classNames(classes.swiperSlide,{[classes.swiperSlideActive]: activeSlide === i})} key={i}>
                             {item}
                         </SwiperSlide>    
-                    )                         
-                       
+                    )
                 })}
             </Swiper>
             {press ? <div className={classes.swiper_button_next} onClick={() => (my_swiper.slideNext(), slide < items.length -1 ? setSlide(slide + 1) : setSlide(slide))}
-            disabled={(slide === (items.length-1))}></div> : null}
+            disabled={(slide === (items.length-1))}/> : null}
         </div>
     )
 }

@@ -6,9 +6,7 @@ import { C_Copyright } from '../../components/c_Copyright';
 import classes from './style.module.scss';
 import { C_OnTopBtn } from '../../components/c_OnTopBtn';
 import { C_CallUsBtn } from '../../components/c_CallUsBtn';
-import { useRef } from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 export const S_Footer = ({className, phone_number, mail, address, sales_number, telegram, copyright}) => {
   const footerRef = useRef();

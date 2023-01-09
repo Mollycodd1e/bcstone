@@ -50,7 +50,7 @@ export const S_Hero = ({className, data, setIsPopupClose}) => {
     const interactiveBlock = useRef(null);
     const topPic = useRef(null);
     const cls = classNames(classes.root, {[className]: className });
-    const [width, height] = useContext(Context);
+    const {width, height} = useContext(Context);
     // const isDesktop = width >= sizes.widthDesktopLg;
     const isDesktop = width >= sizes.widthDesktopSm;
     const [isAnimation, setIsAnimation] = useState(false);

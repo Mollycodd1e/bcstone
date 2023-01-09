@@ -8,7 +8,7 @@ import {Context} from "../../library";
 import { useEffect } from 'react';
 
 export const C_TextContentAbout = ({className, data, setIsPopupClose}) => {
-    const [width, height] = useContext(Context);
+    const {width, height} = useContext(Context);
     const cls = classNames(classes.root, {[className]: className});
     const isTablet = width >= sizes.widthTabletMd;
     const {description, plans} = data.about_company;

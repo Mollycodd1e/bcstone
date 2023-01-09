@@ -15,7 +15,7 @@ export const C_RegularMap = ({className, isBtnClose, onBtnCloseClick, setIsPopUp
     const cardRef = useRef();
     const close = () => setIsCardVisible(false);
     const [shownSliders, setShownSliders] = useState([]);
-    const [width, height] = useContext(Context);
+    const {width, height} = useContext(Context);
     const rCards = CC_regularCards(classes.RegularCard, isBtnClose, shownSliders.length > 1 && width >= sizes.widthDesktopSm ? null : () => close(), () => close(), setIsPopUpVisible, isMapMode, data, shownSliders.length);
     const [initialSlide, setInitialSlide] = useState(0);
     const [clustersProjects, setClustersProjects] = useState([]);

@@ -6,7 +6,7 @@ import {useContext, useEffect} from "react";
 
 export const С_CardFace = ({className, logo, alt, img, img_not_retina, img2x, imgMob, img2xMob, extraInfo, link, setIsPopupClose}) => {
     const cls = classNames(classes.root, {[className]: className });
-    const [width, height] = useContext(Context);
+    const {width, height} = useContext(Context);
     // const isDesktop = width >= sizes.widthTabletMd;
 
     let retina;

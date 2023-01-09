@@ -11,24 +11,16 @@ import {Context} from "../../library";
 import { useContext} from 'react';
 
 export const S_PressCenter = ({className, data}) => {
-    const size = useWindowSize();
+
     const cls = classNames(classes.root, {[className]: className });
-    // const data_4 = data.news;
     const data_4 = data;
     const allCards = [];
+
     const [isCenter, setIsCenter] = useState(false);
-    const [width, height] = useContext(Context);
+    const {width, height} = useContext(Context);
     const [isTitle, setIsTitle] = useState(false);
     const centerRef = useRef();
     const titleRef = useRef();
-    // let cuttedElements = data_4 && data_4.list.length !==0 && data_4.list.slice(0, data_4.config.shownElements);
-    // cuttedElements.sort(function (a, b) {
-    //     return a.order - b.order;
-    // })
-
-    // cuttedElements.forEach(item => {
-    //   allCards.push(<C_PressCard date={item.date} image={item.pic.src} title={item.title} description={item.content}/>)
-    // });
 
     let retina;
 
@@ -52,6 +44,7 @@ export const S_PressCenter = ({className, data}) => {
 
 
     useEffect(() => {
+        console.log(allCards.length)
       function onEntry(entry) {
         entry.forEach(change => {
           if (change.isIntersecting) {
@@ -104,14 +97,8 @@ export const S_PressCenter = ({className, data}) => {
                             (size.innerWidth >= sizes.widthDesktopSm && size.innerWidth < sizes.widthDesktopMd) ? 15 :
                             (size.innerWidth >= sizes.widthDesktopMd && size.innerWidth < sizes.widthDesktopLg) ? -30 :
                              size.innerWidth >= sizes.widthDesktopLg ? -15 : -170}
-                            slidesPerView = {3} press={true} loop={true} loopedSlides={2}/>
+                            slidesPerView = {3} press={true} loop={true} loopedSlides={6}/>
                     </div>
-                    {/* <div className={classes.btnWrapper}>
-                        <a href="#">Подробнее</a>
-                    </div> */}
-                    {/*<div ref={centerRef}>
-                      <C_MainButton className={classes.C_MainButton} text={'Подробнее'} link={window.location.hostname === 'localhost' ? `/news` : `/news.html`}/>
-                    </div>*/}
                 </div>
             </div>
         </div>

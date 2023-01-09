@@ -36,7 +36,7 @@ export const C_RegularCard = ({
     const [isCardHovered, setIsCardHovered] = useState(false);
     const cls = classNames(classes.root, { [classes.map_mod]: isMapMode});
     const [isCloseAllBtn, setIsCloseAllBtn] = useState(false);
-    const [width, height] = useContext(Context);
+    const {width, height} = useContext(Context);
 
     return (
         <div className={cls}>

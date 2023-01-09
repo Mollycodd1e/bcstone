@@ -10,7 +10,7 @@ import { C_Slider } from "../c_Slider";
 
 export const C_CombineRegularCards = ({className, isBtnClose, onBtnCloseClick, isMapMode, data, setIsPopupClose}) => {
     const cls = classNames(classes.root, {[className]: className });
-    const [width, height] = useContext(Context);
+    const {width, height} = useContext(Context);
     const [isCards, setIsCards] = useState(false);
     const cards = useRef();
 
@@ -19,8 +19,6 @@ export const C_CombineRegularCards = ({className, isBtnClose, onBtnCloseClick, i
             entry.forEach(change => {
               if (change.isIntersecting) {
                 setIsCards(true);
-              } else {
-                // setIsCards(false);
               }
             });
         }

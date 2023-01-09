@@ -13,7 +13,7 @@ import { useEffect } from "react";
 
 export const S_Projects = ({className, data, setIsPopupClose}) => {
     const [isListView, setIsListView] = useState(true);
-    const [width, height] = useContext(Context);
+    const {width, height} = useContext(Context);
     const ref = useRef();
     const subRef = useRef();
     const linesRef = useRef(null);

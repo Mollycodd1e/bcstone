@@ -7,7 +7,7 @@ import React from "react";
 
 export const С_CardBtn = ({className, bgColorFirst, bgColorSecond, textColor, isMainCardBtn, link, setIsPopupClose}) => {
     const cls = classNames(classes.root, {[classes.mainCardBtn]: isMainCardBtn, [classes.secondaryCardBtn]: !isMainCardBtn, [className]: className });
-    const [width, height] = useContext(Context);
+    const {width, height} = useContext(Context);
     // const {setIsPopUpVisible} = useContext(Context);
     
     return (
