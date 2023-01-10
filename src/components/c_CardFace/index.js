@@ -21,11 +21,11 @@ export const С_CardFace = ({className, logo, alt, img, img_not_retina, img2x, i
                 {width < sizes.widthTabletMd ? 
                 <div
                     className={classes.pic}
-                    style={{ backgroundImage: `url("${retina ? isWebp? imgWebp : img : isWebp? img_not_retina_Webp : img_not_retina }")`}}
+                    style={{ backgroundImage: `url("${retina ? isWebp && imgWebp ? imgWebp : img : isWebp && img_not_retina_Webp ? img_not_retina_Webp : img_not_retina }")`}}
                 />
                 : <div
                     className={classes.pic}
-                    style={{ backgroundImage: `url("${retina ? isWebp? imgWebp : img : isWebp? img_not_retina_Webp : img_not_retina }")`}}
+                    style={{ backgroundImage: `url("${retina ? isWebp && imgWebp ? imgWebp : img : isWebp && img_not_retina_Webp ? img_not_retina_Webp : img_not_retina }")`}}
                   />
                 }
                 {extraInfo !== '' ? <div className={classes.extraInfo} dangerouslySetInnerHTML={{ __html: extraInfo}} /> : null}
@@ -37,12 +37,12 @@ export const С_CardFace = ({className, logo, alt, img, img_not_retina, img2x, i
                 {width < sizes.widthTabletMd ? 
                     <div
                         className={classes.pic}
-                        style={{ backgroundImage: `url("${retina ? isWebp? imgWebp : img : isWebp? img_not_retina_Webp : img_not_retina }")`}}
+                        style={{ backgroundImage: `url("${retina ? isWebp && imgWebp ? imgWebp : img : isWebp && img_not_retina_Webp ? img_not_retina_Webp : img_not_retina }")`}}
                     />
                 :
                     <div
                         className={classes.pic}
-                        style={{ backgroundImage: `url("${retina ? isWebp? imgWebp : img : isWebp? img_not_retina_Webp : img_not_retina }")`}}
+                        style={{ backgroundImage: `url("${retina ? isWebp && imgWebp ? imgWebp : img : isWebp && img_not_retina_Webp ? img_not_retina_Webp : img_not_retina }")`}}
                     />
                 }
                 {extraInfo !== '' ? <div className={classes.extraInfo} dangerouslySetInnerHTML={{ __html: extraInfo}} /> : null}

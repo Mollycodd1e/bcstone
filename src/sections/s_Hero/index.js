@@ -81,14 +81,14 @@ export const S_Hero = ({className, data, setIsPopupClose, isWebp}) => {
                     <div
                         className={classes.btmPic}
                         style={{
-                            backgroundImage:  `url("${retina ? isWebp? data.hero_image.front_img.srcWebp : data.hero_image.front_img.src : isWebp? data.hero_image.front_img.srcWebp : data.hero_image.front_img.src}")`
+                            backgroundImage:  `url("${retina ? isWebp && data.hero_image.front_img.srcWebp ? data.hero_image.front_img.srcWebp : data.hero_image.front_img.src : isWebp && data.hero_image.front_img.srcWebp? data.hero_image.front_img.srcWebp : data.hero_image.front_img.src}")`
                         }}
                     />
                 :
                     <div
                         className={classes.btmPic}
                         style={{
-                            backgroundImage:  `url("${retina ? isWebp? data.hero_image.front_img.srcWebp : data.hero_image.front_img.src : isWebp? data.hero_image.front_img.srcWebp : data.hero_image.front_img.src}")`
+                            backgroundImage:  `url("${retina ? isWebp && data.hero_image.front_img.srcWebp ? data.hero_image.front_img.srcWebp : data.hero_image.front_img.src : isWebp && data.hero_image.front_img.srcWebp? data.hero_image.front_img.srcWebp : data.hero_image.front_img.src}")`
                         }}
                     />
                 }
@@ -97,7 +97,7 @@ export const S_Hero = ({className, data, setIsPopupClose, isWebp}) => {
                         className={classNames(classes.topPic, {[classes.topPicAnimation]:isAnimation})}
                         ref={topPic}
                         style={{
-                            backgroundImage:  `url("${retina ? isWebp? data.hero_image.back_img.srcWebp : data.hero_image.back_img.src : isWebp? data.hero_image.back_img.srcWebp : data.hero_image.back_img.src}")`
+                            backgroundImage:  `url("${retina ? isWebp && data.hero_image.back_img.srcWebp ? data.hero_image.back_img.srcWebp : data.hero_image.back_img.src : isWebp && data.hero_image.back_img.srcWebp ? data.hero_image.back_img.srcWebp : data.hero_image.back_img.src}")`
                         }}
                     />
                 :
@@ -105,7 +105,7 @@ export const S_Hero = ({className, data, setIsPopupClose, isWebp}) => {
                         className={classNames(classes.topPic, {[classes.topPicAnimation]:isAnimation})}
                         ref={topPic}
                         style={{
-                            backgroundImage:  `url("${retina ? isWebp? data.hero_image.back_img.srcWebp : data.hero_image.back_img.src : isWebp? data.hero_image.back_img.srcWebp : data.hero_image.back_img.src}")`
+                            backgroundImage:  `url("${retina ? isWebp && data.hero_image.back_img.srcWebp ? data.hero_image.back_img.srcWebp : data.hero_image.back_img.src : isWebp && data.hero_image.back_img.srcWebp ? data.hero_image.back_img.srcWebp : data.hero_image.back_img.src}")`
                         }}
                     />
                 }

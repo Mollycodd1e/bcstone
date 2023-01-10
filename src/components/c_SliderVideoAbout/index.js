@@ -34,18 +34,18 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIs
     const elements = retina ? slider.gallery.map((el, i) => {
         {if (width < sizes.widthTabletMd) {
             return <C_SliderElementAbout key={i} 
-                                         img={isWebp ? el.srcWebp : el.src}/>
+                                         img={isWebp && el.srcWebp ? el.srcWebp : el.src}/>
         } else {
             return <C_SliderElementAbout key={i}
-                                         img={isWebp ? el.srcWebp : el.src}/>
+                                         img={isWebp && el.srcWebp ? el.srcWebp : el.src}/>
         }}
     }) : slider.gallery_not_retina.map((el, i) => {
         {if (width < sizes.widthTabletMd) {
             return <C_SliderElementAbout key={i}
-                                         img={isWebp ? el.srcWebp : el.src}/>
+                                         img={isWebp && el.srcWebp ? el.srcWebp : el.src}/>
         } else {
             return <C_SliderElementAbout key={i}
-                                         img={isWebp ? el.srcWebp : el.src}/>
+                                         img={isWebp && el.srcWebp ? el.srcWebp : el.src}/>
         }}
     })
 
