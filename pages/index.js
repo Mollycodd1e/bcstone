@@ -7,7 +7,7 @@ import {S_Projects} from "../src/sections/s_Projects";
 import {S_About} from "../src/sections/s_About";
 import {S_Sales} from "../src/sections/s_Sales";
 import {S_FullForm} from "../src/sections/s_FullForm";
-import {S_Popup} from "../src/sections/s_Popup";
+import S_Popup from "../src/sections/s_Popup";
 import classes from "../src/sections/s_Popup/style.module.scss";
 import {C_FullForm} from "@/components/c_FullForm";
 import {S_Bottom_Commercial} from '../src/sections/s_Bottom_Commercial';
@@ -16,8 +16,6 @@ import {C_SliderVideoPopup} from '@/components/c_SliderVideoPopup';
 import MainStore from "../src/store/MainStore";
 import {MainBanner} from "@/components/SkeletonComponent";
 import useWindowSize from "../src/hooks/useWindowSize";
-import popupClasses from "../src/sections/s_Popup/style.module.scss";
-import {useMobxStores} from "../src/store/stores";
 
 function Home(props) {
     const size = useWindowSize();

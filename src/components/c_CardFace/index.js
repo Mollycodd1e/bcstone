@@ -1,14 +1,14 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
 import {Context} from "../../library";
-import {sizes} from "../../data/sizes";
-import {useContext, useEffect} from "react";
+import {sizes} from "@/data/sizes";
+import {useContext} from "react";
+import {useStore} from "../../store/stores";
 
 export const С_CardFace = ({className, logo, alt, img, img_not_retina, img2x, imgMob, img2xMob, extraInfo, link, setIsPopupClose, isWebp, imgWebp, img_not_retina_Webp}) => {
     const cls = classNames(classes.root, {[className]: className });
     const {width, height} = useContext(Context);
-    // const isDesktop = width >= sizes.widthTabletMd;
-
+    const store = useStore();
     let retina;
 
     if (typeof window !== "undefined") {
@@ -17,7 +17,7 @@ export const С_CardFace = ({className, logo, alt, img, img_not_retina, img2x, i
 
     return (
         link === '' ? 
-            <div className={cls} onClick={() =>  setIsPopupClose(false)}>
+            <div className={cls} onClick={() => store.switchPopUpFormState()}>
                 {width < sizes.widthTabletMd ? 
                 <div
                     className={classes.pic}

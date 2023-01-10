@@ -5,20 +5,14 @@ import { C_ContactsMenu } from "@/components/c_ContactsMenu";
 import { C_Logo } from "@/components/c_Logo";
 import {useRef, useState} from "react";
 import menuOnTop from "../../hooks/MenuOnTop";
-import {useMobxStores} from "../../store/stores";
 
 export const S_MenuC = ({className, data}) => {
-
-    //cSiteStore.switchPopUpFormState()
-
-
-    const [isPopupClose, setIsPopupClose] = useState(true);
     const topMenuEl = useRef(null);
     const cls = classNames(classes.root, {[classes.menuOnTop]:menuOnTop(topMenuEl), [className]: className});
     return (
         <div className={cls} ref={topMenuEl}>
             <C_Logo className={classes.C_Logo_Menu} />
-            <C_Navigation className={classes.C_Navigation} data={data} setIsPopupClose={setIsPopupClose}/>
+            <C_Navigation className={classes.C_Navigation} data={data}/>
             <C_ContactsMenu className={classes.C_ContactsMenu} data={data} />
         </div>
     )

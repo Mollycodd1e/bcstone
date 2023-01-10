@@ -12,8 +12,6 @@ import classes from "./styleNews.module.scss";
 import {S_MenuC} from "../src/sections/s_MenuC";
 import useWindowSize from "../src/hooks/useWindowSize";
 import {Context} from "../src/library";
-import {observer} from "mobx-react-lite";
-import SiteStore from "../src/store/SiteStore";
 import {StoreProvider} from "../src/store/stores";
 
 
@@ -21,7 +19,7 @@ const BcStone = ({Component, pageProps}) => {
     const size = useWindowSize();
 
     return (
-        <StoreProvider value={SiteStore}>
+        <StoreProvider {...pageProps}>
             <Context.Provider value={size}>
                 <Head>
                     <title>Премиальные бизнес-центры STONE</title>
@@ -37,7 +35,6 @@ const BcStone = ({Component, pageProps}) => {
                 </div>
 
                 <div className={"page-wrapper"}>
-                 ТЕСТ не убирать   {SiteStore.popUpFormState}
                     <Component {...pageProps} />
                 </div>
                 <S_Footer phone_number={footerData.contacts.phone} mail={footerData.contacts.mail}
@@ -48,5 +45,4 @@ const BcStone = ({Component, pageProps}) => {
         </StoreProvider>
     )
 }
-export default observer(BcStone)
-
+export default BcStone

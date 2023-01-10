@@ -3,8 +3,8 @@ import classNames from "classnames";
 import {С_CardFace} from "../c_CardFace";
 import {С_CardInfo} from "../c_CardInfo";
 import {С_CloseBtn} from "../c_CloseBtn";
-import {С_CardBtn} from "../c_CardBtn";
-import {useState, useContext, useEffect} from 'react';
+import {C_CardBtn} from "../c_CardBtn";
+import { useState, useContext, useEffect } from 'react';
 import {sizes} from "../../data/sizes";
 import {Context} from "../../library";
 import Link from 'next/link';
@@ -96,7 +96,7 @@ export const C_RegularCard = ({
                             imgWebp={imgWebp}
                             img_not_retina_Webp={img_not_retina_Webp}
                         />
-                        <С_CardBtn
+                        <C_CardBtn
                             bgColorFirst={bgColorFirst}
                             bgColorSecond={bgColorSecond}
                             textColor={textColor}
