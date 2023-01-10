@@ -37,6 +37,7 @@ const BcStone = ({Component, pageProps}) => {
                 </div>
 
                 <div className={"page-wrapper"}>
+                 ТЕСТ не убирать   {SiteStore.popUpFormState}
                     <Component {...pageProps} />
                 </div>
                 <S_Footer phone_number={footerData.contacts.phone} mail={footerData.contacts.mail}

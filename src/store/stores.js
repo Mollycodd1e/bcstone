@@ -1,11 +1,11 @@
-import React from "react";
+import {createContext, useContext} from "react";
 
-const StoreContext = React.createContext(undefined);
+const StoreContext = createContext(undefined);
 
 export function StoreProvider(props) {
     return <StoreContext.Provider value={props.value}>{props.children}</StoreContext.Provider>;
 }
 
 export function useMobxStores() {
-    return React.useContext(StoreContext);
+    return useContext(StoreContext);
 }

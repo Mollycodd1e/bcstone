@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import {useEffect, useState} from "react";
-import {Context, Slides} from "../src/library";
-import {S_Menu} from "../src/sections/s_Menu";
+import {Slides} from "../src/library";
 import {S_Hero} from "../src/sections/s_Hero";
 import {S_Top_Commercial} from "../src/sections/s_Top_Сommercial";
 import {S_Projects} from "../src/sections/s_Projects";
@@ -17,7 +16,6 @@ import {C_SliderVideoPopup} from '@/components/c_SliderVideoPopup';
 import MainStore from "../src/store/MainStore";
 import {MainBanner} from "@/components/SkeletonComponent";
 import useWindowSize from "../src/hooks/useWindowSize";
-import {navData} from "@/data/mocks";
 import popupClasses from "../src/sections/s_Popup/style.module.scss";
 import {useMobxStores} from "../src/store/stores";
 
@@ -73,7 +71,6 @@ function Home(props) {
                         : <MainBanner/>}
                     {!MainStore.loading.is('newsData') && newsData ?
                             <S_PressCenter data={newsData}/>
-
                          : 'LOADING' }
 
 

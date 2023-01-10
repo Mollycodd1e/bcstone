@@ -1,32 +1,21 @@
 import classNames from 'classnames';
 import classes from './style.module.scss';
-import {useEffect, useRef} from "react";
+import {useRef} from "react";
+import SiteStore from "../../store/SiteStore";
+import useOnClickOutside from "../../hooks/useOnClickOutside";
 
-export const S_Popup = ({className, data, isPopupClose, setIsPopupClose, children}) => {
-    const cls = classNames(classes.root, {[className]: className, [classes.closePopup]:isPopupClose});
+export const S_Popup = ({className, children}) => {
 
-    const ref = useRef(null);
-    const formRef = useRef(null);
+    const cls = classNames(classes.root, {[className]: className, [classes.closePopup]:SiteStore.popUpFormState});
+    const formRef = useRef();
 
-    useEffect(() => {
-        ref.current.focus();
-      }, [isPopupClose]);
+    useOnClickOutside(formRef, () => {if(!SiteStore.popUpFormState) SiteStore.switchPopUpFormState()});
 
-    const closePopup = (evt) => {
-        if (evt.key === 'Escape') {
-            setIsPopupClose(true);
-        }
-    }
-
-    const closePopupAgain = (evt) => {
-        formRef.current.contains(evt.target) ? null : setIsPopupClose(true);
-    }
-    
     return (
-        <div className={cls} onKeyDown={(e) => closePopup(e)} tabIndex={-1} ref={ref} onClick={(e) => closePopupAgain(e)}>
-            <button className={classes.closeIcon} onClick={() => setIsPopupClose(true)}/>
+        <div className={cls} tabIndex={-1}>
             <div className={classes.formWrapper} ref={formRef}>
-              {children}  
+                <button className={classes.closeIcon} onClick={(e) => SiteStore.switchPopUpFormState()}/>
+                {children}
             </div>  
         </div>
     )

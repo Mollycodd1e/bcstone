@@ -1,9 +1,11 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
-import {C_MainButton} from "../../components/c_MainButton";
+import {C_MainButton} from "@/components/c_MainButton";
 import React, {useContext, useRef, useState} from "react";
 import {Context} from "../../library";
-import {sizes} from "../../data/sizes";
+import {sizes} from "@/data/sizes";
+import {useMobxStores} from "../../store/stores";
+import SiteStore from "../../store/SiteStore";
 
 export const S_Hero = ({className, data, setIsPopupClose}) => {
     const interactiveBlock = useRef(null);
@@ -69,7 +71,7 @@ export const S_Hero = ({className, data, setIsPopupClose}) => {
                 <li className={classes.item} >Вложения от 11,6 млн руб.</li>
                 <li className={classes.item} >Офисный девелопер №1 <a href="https://realty.rbc.ru/news/6318526d9a794714f4879983" target="_blank" rel="noreferrer">по версии РБК</a></li>
             </ul>
-            <C_MainButton text={"Получить предложение"} onClick={() => setIsPopupClose(false)} className={classes.mainButton} />
+            <C_MainButton text={"Получить предложение"} onClick={() => SiteStore.switchPopUpFormState()} className={classes.mainButton} />
 
             <div
                 className={classes.interactiveBlock}
