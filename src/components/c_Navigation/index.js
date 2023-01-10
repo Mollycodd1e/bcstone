@@ -19,7 +19,7 @@ export function C_Navigation({className, data, briefing}) {
                     !evt.target.classList.contains(classes.burger) &&
                     !evt.target.classList.contains(classes.elements) &&
                     evt.target.textContent !== 'Проекты') {
-                        setIsMobileMenuOpen(false);
+                    store.switchPopUpFormState()
                 }
             }
         })
