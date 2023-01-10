@@ -29,18 +29,19 @@ const BcStone = ({Component, pageProps}) => {
                        бизнеса. Любые форматы от офисов, офисных этажей, офисных зданий до ритейла и торговой галереи."/>
                     <link rel="icon" href={"/favicon.ico"}/>
                 </Head>
-
-                <div className={`common_top_bg + ${classes.common_top_bg_news}`} id="top">
-                    <S_MenuC data={navData} briefing={true}/>
-                </div>
-
                 <div className={"page-wrapper"}>
+                    <div className={`common_top_bg`} id="top">
+                        <S_MenuC data={navData} briefing={true}/>
+                    </div>
+
+
                     <Component {...pageProps} />
+
+                    <S_Footer phone_number={footerData.contacts.phone} mail={footerData.contacts.mail}
+                              address={footerData.contacts.address}
+                              sales_number={footerData.contacts.sales} telegram={footerData.contacts.telegram}
+                              copyright={footerData.copyright}/>
                 </div>
-                <S_Footer phone_number={footerData.contacts.phone} mail={footerData.contacts.mail}
-                          address={footerData.contacts.address}
-                          sales_number={footerData.contacts.sales} telegram={footerData.contacts.telegram}
-                          copyright={footerData.copyright}/>
             </Context.Provider>
         </StoreProvider>
     )

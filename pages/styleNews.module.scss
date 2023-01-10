@@ -1,10 +1,8 @@
 @import '../src/styles/style.scss';
 
-
 .common_top_bg_news {
   height: 41px;
   background: transparent;
- // box-shadow: 0 3px 5px rgba(0, 0, 0, 0.161);
 }
 
 @media (min-width: $width-tablet-sm) {
@@ -320,20 +318,13 @@
     font-size: 50px;
     line-height: 50px;
     border: none;
-
   }
 
   .newsList {
-    //padding-left: 0;
     width: 25vw;
     margin-right: 10px;
     max-height: 530px;
   }
-
-  .newsItem {
-
-  }
-
 
   .newsDate {
     font-size: 12px;
@@ -381,16 +372,4 @@
   .newsWrapper {
     padding-left: 129px;
   }
-}
-
-@media (min-width: $width-tablet-md) {
-  //.common_top_bg_news {
-  //  height: 100px;
-  //}
-}
-
-@media (min-width: $width-desktop-lg) {
-  //.common_top_bg_news {
-  //  height: 113px;
-  //}
 }
