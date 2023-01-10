@@ -104,7 +104,7 @@ export const S_PressCenter = ({className, data}) => {
                             (size.innerWidth >= sizes.widthDesktopSm && size.innerWidth < sizes.widthDesktopMd) ? 15 :
                             (size.innerWidth >= sizes.widthDesktopMd && size.innerWidth < sizes.widthDesktopLg) ? -30 :
                              size.innerWidth >= sizes.widthDesktopLg ? -15 : -170}
-                            slidesPerView = {3} press={true} loop={true} loopedSlides={2}/>
+                            slidesPerView = {size.innerWidth >= sizes.widthDesktopSm ? 3 : 3} press={true} loop={true} />
                     </div>
                     {/* <div className={classes.btnWrapper}>
                         <a href="#">Подробнее</a>

@@ -279,10 +279,10 @@
   }
 
   .swiperPress div[class="swiper-wrapper"] div {
-    opacity: 0;
+    opacity: 1;
 
     & div div:nth-child(3) {
-      transform: translateY(40px);
+      //transform: translateY(40px);
     }
   }
 
@@ -308,7 +308,10 @@
       animation-fill-mode: forwards;
 
       & div div:nth-child(3) {
-        transform: translateY(0);
+        // transform: translateY(0);
+        animation: fromBottomText;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
         transition: #{$i * 0.25}s ease-out;
       }
 
