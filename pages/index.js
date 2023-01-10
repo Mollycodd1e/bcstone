@@ -50,8 +50,8 @@ function Home(props) {
                 <>
                     {!MainStore.loading.is('pageData') && pageData ?
                         <>
-                            <S_Popup isPopupClose={useMobxStores().popUpFormState} setIsPopupClose={setIsPopupClose}>
-                                <C_FullForm data={pageData} className={classes.fullFormIndexSection} popup={useMobxStores().popUpFormState}/>
+                            <S_Popup>
+                                <C_FullForm data={pageData} className={classes.fullFormIndexSection} />
                             </S_Popup>
                             <S_Hero data={pageData} setIsPopupClose={setIsPopupClose}/>
                             <S_Top_Commercial data={pageData}/>

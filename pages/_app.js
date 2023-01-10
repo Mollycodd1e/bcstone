@@ -21,7 +21,6 @@ const BcStone = ({Component, pageProps}) => {
     const size = useWindowSize();
 
     return (
-        <StoreProvider value={SiteStore}>
             <Context.Provider value={size}>
                 <Head>
                     <title>Премиальные бизнес-центры STONE</title>
@@ -45,7 +44,6 @@ const BcStone = ({Component, pageProps}) => {
                           sales_number={footerData.contacts.sales} telegram={footerData.contacts.telegram}
                           copyright={footerData.copyright}/>
             </Context.Provider>
-        </StoreProvider>
     )
 }
 export default observer(BcStone)

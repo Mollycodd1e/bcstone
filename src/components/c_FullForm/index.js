@@ -2,13 +2,11 @@ import InputMask from 'react-input-mask';
 import classNames from 'classnames';
 import classes from './style.module.scss';
 import {useEffect, useState} from "react";
-import {Context} from "../../library";
-import { useContext } from 'react';
-import {sizes} from "../../data/sizes";
 import { useRef } from 'react';
 import { C_MainButton } from '../c_MainButton';
+import {useMobxStores} from "../../store/stores";
 
-export const C_FullForm = ({className, data, popup}) => {
+export const C_FullForm = ({className, data}) => {
     const cls = classNames(classes.root, "form", "form--top", {[className]: className});
     const {description, descriptionSuccess, title, titleSuccess} = data.main_form;
     
@@ -24,6 +22,7 @@ export const C_FullForm = ({className, data, popup}) => {
     const [isNameValid, setIsNameValid] = useState(false);
     const [isEmailValid, setIEmailValid] = useState(true);
     const [isCheckValid, setIsCheckValid] = useState(false);
+    const popup = useMobxStores().popUpFormState;
 
     useEffect(() => {
         function onEntryTitle(entry) {
