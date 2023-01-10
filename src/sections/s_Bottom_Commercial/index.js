@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 import {Context} from "../../library";
 import { useContext } from 'react';
 
-export const S_Bottom_Commercial = ({className, data}) => {
+export const S_Bottom_Commercial = ({className, data, isWebp}) => {
 
     const cls = classNames(classes.root, {[className]: className});
     const data_3 = data.bottom_commercial;
@@ -24,7 +24,7 @@ export const S_Bottom_Commercial = ({className, data}) => {
     })
 
     cuttedElements.forEach(item => {
-        allCards.push(<C_SavingCard item={item}  image={item.pic.src} title={item.title} description={item.content}/>)
+        allCards.push(<C_SavingCard item={item}  image={isWebp ? item.pic.srcWebp : item.pic.srcWebp} title={item.title} description={item.content}/>)
     });
 
     useEffect(() => {

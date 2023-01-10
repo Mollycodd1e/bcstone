@@ -8,7 +8,7 @@ import {sizes} from "../../data/sizes";
 import { C_SliderDeveloper } from "../c_Slider_Developer";
 import {C_SliderPopupElement} from "../c_SliderPopupElement";
 
-export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIsVideo, popup}) => {
+export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIsVideo, popup, isWebp}) => {
     const cls = classNames(classes.root, {[className]: className});
     const {width, height} = useContext(Context);
 
@@ -34,18 +34,18 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIs
     const elements = retina ? slider.gallery.map((el, i) => {
         {if (width < sizes.widthTabletMd) {
             return <C_SliderElementAbout key={i} 
-            img={el.src}/>
+                                         img={isWebp ? el.srcWebp : el.src}/>
         } else {
             return <C_SliderElementAbout key={i}
-                                         img={el.src}/>
+                                         img={isWebp ? el.srcWebp : el.src}/>
         }}
     }) : slider.gallery_not_retina.map((el, i) => {
         {if (width < sizes.widthTabletMd) {
             return <C_SliderElementAbout key={i}
-                                         img={el.src}/>
+                                         img={isWebp ? el.srcWebp : el.src}/>
         } else {
             return <C_SliderElementAbout key={i}
-                                         img={el.src}/>
+                                         img={isWebp ? el.srcWebp : el.src}/>
         }}
     })
 

@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 // import {C_MainButton} from "../../components/c_MainButton";
 // import {sizes} from "../../data/sizes";
 
-export const S_About = ({className, menuOnTop, data, width, setIsAboutPopupClose, popup, setIsPopupClose}) => {
+export const S_About = ({className, menuOnTop, data, width, setIsAboutPopupClose, popup, setIsPopupClose, isWebp}) => {
     const cls = classNames(classes.root, {[classes.menuOnTop]:menuOnTop, [className]: className});
 
     const title = useRef();
@@ -63,7 +63,7 @@ export const S_About = ({className, menuOnTop, data, width, setIsAboutPopupClose
                           Девелопер
                       </div>
                     </div>
-                    <C_ContentAbout data={data} setIsPopupClose={setIsPopupClose} setIsAboutPopupClose={setIsAboutPopupClose} popup={popup}/>
+                    <C_ContentAbout data={data} setIsPopupClose={setIsPopupClose} setIsAboutPopupClose={setIsAboutPopupClose} popup={popup} isWebp={isWebp}/>
                 </div>
             </div>
         </div>

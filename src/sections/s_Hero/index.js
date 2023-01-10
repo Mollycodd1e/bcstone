@@ -7,7 +7,7 @@ import {sizes} from "@/data/sizes";
 import {useMobxStores} from "../../store/stores";
 import SiteStore from "../../store/SiteStore";
 
-export const S_Hero = ({className, data, setIsPopupClose}) => {
+export const S_Hero = ({className, data, setIsPopupClose, isWebp}) => {
     const interactiveBlock = useRef(null);
     const topPic = useRef(null);
     const cls = classNames(classes.root, {[className]: className });
@@ -81,14 +81,14 @@ export const S_Hero = ({className, data, setIsPopupClose}) => {
                     <div
                         className={classes.btmPic}
                         style={{
-                            backgroundImage:  `url("${retina ? data.hero_image.front_img.src : data.hero_image.front_img.src}")`
+                            backgroundImage:  `url("${retina ? isWebp? data.hero_image.front_img.srcWebp : data.hero_image.front_img.src : isWebp? data.hero_image.front_img.srcWebp : data.hero_image.front_img.src}")`
                         }}
                     />
                 :
                     <div
                         className={classes.btmPic}
                         style={{
-                            backgroundImage:  `url("${retina ? data.hero_image.front_img.src : data.hero_image.front_img.src}")`
+                            backgroundImage:  `url("${retina ? isWebp? data.hero_image.front_img.srcWebp : data.hero_image.front_img.src : isWebp? data.hero_image.front_img.srcWebp : data.hero_image.front_img.src}")`
                         }}
                     />
                 }
@@ -97,7 +97,7 @@ export const S_Hero = ({className, data, setIsPopupClose}) => {
                         className={classNames(classes.topPic, {[classes.topPicAnimation]:isAnimation})}
                         ref={topPic}
                         style={{
-                            backgroundImage:  `url("${retina ? data.hero_image.back_img.src : data.hero_image.back_img.src}")`
+                            backgroundImage:  `url("${retina ? isWebp? data.hero_image.back_img.srcWebp : data.hero_image.back_img.src : isWebp? data.hero_image.back_img.srcWebp : data.hero_image.back_img.src}")`
                         }}
                     />
                 :
@@ -105,7 +105,7 @@ export const S_Hero = ({className, data, setIsPopupClose}) => {
                         className={classNames(classes.topPic, {[classes.topPicAnimation]:isAnimation})}
                         ref={topPic}
                         style={{
-                            backgroundImage:  `url("${retina ? data.hero_image.back_img.src : data.hero_image.back_img.src}")`
+                            backgroundImage:  `url("${retina ? isWebp? data.hero_image.back_img.srcWebp : data.hero_image.back_img.src : isWebp? data.hero_image.back_img.srcWebp : data.hero_image.back_img.src}")`
                         }}
                     />
                 }
