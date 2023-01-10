@@ -13,6 +13,6 @@ RewriteCond %{QUERY_STRING} ^tel=([0-9]+)$
 RewriteRule ^call$ call.php [L]
 
 
-RewriteCond %{REQUEST_URI} !\.htm?l$
+RewriteCond %{REQUEST_URI} !\.(htm?l|jpe?g|png|gif|svg|woff2|js|css|php|webp|ttf)$
 RewriteCond %{REQUEST_URI} !/$
 RewriteRule ^(.*)$ $1.html [L]
