@@ -3,7 +3,7 @@ import classNames from "classnames";
 import {С_CardFace} from "../c_CardFace";
 import {С_CardInfo} from "../c_CardInfo";
 import {С_CloseBtn} from "../c_CloseBtn";
-import {С_CardBtn} from "../c_CardBtn";
+import {C_CardBtn} from "../c_CardBtn";
 import { useState, useContext } from 'react';
 import {sizes} from "../../data/sizes";
 import {Context} from "../../library";
@@ -73,7 +73,7 @@ export const C_RegularCard = ({
                             link={link}
                             setIsPopupClose={setIsPopupClose}
                         />
-                        <С_CardBtn
+                        <C_CardBtn
                             bgColorFirst={bgColorFirst}
                             bgColorSecond={bgColorSecond}
                             textColor={textColor}

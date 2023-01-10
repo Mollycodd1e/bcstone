@@ -1,11 +1,11 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
 import React, {useContext, useRef, useState} from "react";
-import {C_SliderVideoAbout} from "../c_SliderVideoAbout";
 import {C_MainButton} from "../c_MainButton";
-import {sizes} from "../../data/sizes";
+import {sizes} from "@/data/sizes";
 import {Context} from "../../library";
-import { useEffect } from 'react';
+import {useEffect } from 'react';
+import {useStore} from "../../store/stores";
 
 export const C_TextContentAbout = ({className, data, setIsPopupClose}) => {
     const {width, height} = useContext(Context);
@@ -18,15 +18,11 @@ export const C_TextContentAbout = ({className, data, setIsPopupClose}) => {
     const [isPlans, setIsPlans] = useState(false);
     const text = useRef();
     const subDescription = useRef();
-
+    const store = useStore();
     useEffect(() => {
       function onEntryLogo(entry) {
         entry.forEach(change => {
-          if (change.isIntersecting) {
-            setIsLogo(true);
-          } else {
-            // setIsLogo(false)
-          }
+          if (change.isIntersecting) setIsLogo(true);
         });
     }
 
@@ -40,11 +36,7 @@ export const C_TextContentAbout = ({className, data, setIsPopupClose}) => {
 
     function onEntryDescription(entry) {
         entry.forEach(change => {
-          if (change.isIntersecting) {
-            setIsDescription(true);
-          } else {
-            // setIsDescription(false);
-          }
+          if (change.isIntersecting) setIsDescription(true);
         });
     }
 
@@ -58,11 +50,7 @@ export const C_TextContentAbout = ({className, data, setIsPopupClose}) => {
 
     function onEntryPlans(entry) {
         entry.forEach(change => {
-          if (change.isIntersecting) {
-            setIsPlans(true);
-          } else {
-            // setIsPlans(false);
-          }
+          if (change.isIntersecting) setIsPlans(true);
         });
     }
 
@@ -74,14 +62,13 @@ export const C_TextContentAbout = ({className, data, setIsPopupClose}) => {
         observerPlans.observe(text.current);
     }
     })
-    
 
     return (
         <div className={cls}>
             <div className={classNames(classes.stoneHedgeLogo,{[classes.stoneHedgeLogoShown]: isLogo})} ref={logo}/>
             <div className={classNames(classes.description,{[classes.descriptionShown]: isDescription})} dangerouslySetInnerHTML={{ __html: description}} ref={subDescription}/>
             <div className={classNames(classes.plans,{[classes.plansShown]: isPlans})} dangerouslySetInnerHTML={{ __html: plans}} ref={text}/>
-            {isTablet ? <C_MainButton text={"Получить предложение"} onClick={() => setIsPopupClose(false)}
+            {isTablet ? <C_MainButton text={"Получить предложение"} onClick={() => store.switchPopUpFormState()}
                                       className={classes.C_MainButton}/> : null}
         </div>
     )

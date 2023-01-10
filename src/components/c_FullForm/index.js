@@ -4,7 +4,7 @@ import classes from './style.module.scss';
 import {useEffect, useState} from "react";
 import { useRef } from 'react';
 import { C_MainButton } from '../c_MainButton';
-import {useMobxStores} from "../../store/stores";
+import {useStore} from "../../store/stores";
 
 export const C_FullForm = ({className, data}) => {
     const cls = classNames(classes.root, "form", "form--top", {[className]: className});
@@ -22,15 +22,14 @@ export const C_FullForm = ({className, data}) => {
     const [isNameValid, setIsNameValid] = useState(false);
     const [isEmailValid, setIEmailValid] = useState(true);
     const [isCheckValid, setIsCheckValid] = useState(false);
-    const popup = useMobxStores().popUpFormState;
+    const store = useStore()
+    const popup = store.popUpFormState;
 
     useEffect(() => {
         function onEntryTitle(entry) {
             entry.forEach(change => {
               if (change.isIntersecting) {
                 setIsTitle(true);
-              } else {
-                // setIsTitle(false);
               }
             });
         }
@@ -43,7 +42,7 @@ export const C_FullForm = ({className, data}) => {
             observer.observe(titleRef.current);
         }
     })
-    
+
 
     const validName = /^(([a-zA-Zа-яА-ЯЁё-]{1,30}))$/u;
 
