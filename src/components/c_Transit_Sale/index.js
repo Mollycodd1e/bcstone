@@ -2,8 +2,13 @@ import classes from './style.module.scss';
 import classNames from "classnames";
 import Link from "next/link";
 
-export const C_Transit_Sale = ({className, url, name, type, picture, setIsHover, number, setIsHoveredItem}) => {
+export const C_Transit_Sale = ({className, url, name, type, picture, setIsHover, number, setIsHoveredItem, isWebp}) => {
     const cls = classNames(classes.root, {[classes.reverse]: type === "retail", [className]: className});
+    let retina;
+
+    if (typeof window !== "undefined") {
+        retina = window.devicePixelRatio > 1;
+    }
 
     return (
         <>
@@ -11,7 +16,7 @@ export const C_Transit_Sale = ({className, url, name, type, picture, setIsHover,
             <a className={cls} href={url}
                onMouseOver={() => (setIsHover(true), setIsHoveredItem(number))} onMouseOut={() => setIsHover(false)}>
                 <div className={classes.picture}
-                     style={{backgroundImage: `url("${picture.src}")`}}/>
+                     style={{backgroundImage: `url("${retina ? isWebp && picture.srcWebp ? picture.srcWebp : picture.src : isWebp && picture.srcWebp ? picture.srcWebp : picture.src}")`}}/>
 
                 <div className={classes.link}>
                     <svg className={classes.roundButton} xmlns="http://www.w3.org/2000/svg" width="52" height="52"
