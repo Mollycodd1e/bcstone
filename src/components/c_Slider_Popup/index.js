@@ -13,13 +13,15 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, pagin
     const [selectedSlide, setSelectedSlide] = useState(0);
     const [my_swiper, set_my_swiper] = useState({});
 
-    const [swiper, setSwiper] = React.useState({});
+  const [swiper, setSwiper] = React.useState();
     const ref = useRef(null);
-    const isVisible = useOnScreen(ref);
-    if (swiper && !isVisible) {
-        console.log('initslide окна попапа' + initialSlide)
-        //swiper.slideTo(initialSlide);
-    }
+         const isVisible = useOnScreen(ref);
+           if (swiper && !isVisible) {
+               console.log('initslide окна попапа' + initialSlide)
+                swiper.slideTo(initialSlide);
+           }
+
+
 
    /* const [slide, setSlide] = useState(0);*/
     const numSlider = (selected, nums) => {
@@ -35,7 +37,7 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, pagin
 
     return (
         <div className={cls}  ref={ref}>
-            <button className={classes.swiper_button_prev} onClick={() => (swiper.slidePrev())}/>
+            <button className={classes.swiper_button_prev} onClick={() => (my_swiper.slidePrev())}/>
             <Swiper
                 /*observer={true}
                 observeParents={true}*/
@@ -52,9 +54,10 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, pagin
                 }}
                 onInit={(evt) => {
                     set_my_swiper(evt)
+                    setSwiper(evt)
                 }}
                 onSwiper={(evt) => {
-                    setSwiper(evt)
+
 
                 }}
                 loop={true}
@@ -69,9 +72,8 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, pagin
                 }
             </Swiper>
             <div className={classes.swiper_button_next} onClick={() => {
-                console.log('click')
-                console.log(swiper)
-                swiper.slideNext()
+
+                my_swiper.slideNext()
 
             }}/>
       {/*      {numSlider(selectedSlide, items)}*/}
