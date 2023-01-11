@@ -1,4 +1,4 @@
-import {MainBanner, News, Form, BusinessCenters} from "@/components/SkeletonComponent";
+import {MainBanner, News, Form, BusinessCenters, AboutUs, PressCentre, Mobile} from "@/components/SkeletonComponent";
 
 export default function Skeleton() {
     return (
@@ -7,6 +7,9 @@ export default function Skeleton() {
             <News/>
             <Form/>
             <BusinessCenters/>
+            <AboutUs/>
+            <PressCentre/>
+            <Mobile />
         </>
     )
 }
