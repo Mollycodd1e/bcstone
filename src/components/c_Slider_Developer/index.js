@@ -5,8 +5,8 @@ import classNames from "classnames";
 import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
-
-export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, slidersSpaceBetween = -225, slidesPerView = 3, loop, onClick, onChange}) => {
+//СЛАЙДЕР На Главной
+export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, pagination, slidersSpaceBetween = -225, slidesPerView = 3, loop, onClick, onChange}) => {
     const cls = classNames(classes.root, { [className]: className });
     const [selectedSlide, setSelectedSlide] = useState(0);
     const [my_swiper, set_my_swiper] = useState({});
@@ -25,15 +25,15 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
     
     return (
         <div className={cls}>
-            <button className={classes.swiper_button_prev} onClick={() => (my_swiper.slidePrev(), slide > 0 ? (setSlide(slide - 1)) : setSlide(slide))}
-                    disabled={slide === 0}/>
+            <button className={classes.swiper_button_prev} onClick={() => (my_swiper.slidePrev())}/>
             <Swiper
+                pagination={pagination}
                 onClick={onClick}
                 slidesPerView={slidesPerView}
                 spaceBetween={slidersSpaceBetween}
                 centeredSlides={true}
                 className={classNames(classes.swiper, {[classes.swiperMode]: isBtnClose})}
-                initialSlide={Number(initialSlide) || 0}
+                initialSlide={0}
                 onSlideChange={
                     (data) => {
                         setSelectedSlide(data.realIndex);
@@ -47,7 +47,7 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
                 onInit={(evt) => {
                     set_my_swiper(evt)
                 }}
-                loop={loop}
+                loop={true}
             >   
                 {items.map((item, i) => {
                     return (
@@ -58,12 +58,8 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
                 })
                 }
             </Swiper>
-            <div className={classes.swiper_button_next} onClick={() => (my_swiper.slideNext(), slide < items.length -1 ? setSlide(slide + 1) : setSlide(slide))}
-                 disabled={(slide === (items.length-1))}/>
-            {/* <div className={`swiper-paginations + ${classes.swiper_pagination_custom}`}>
-                <div className={classNames(classes.LiquidDot)}></div>
-            </div> */}
-            
+            <div className={classes.swiper_button_next} onClick={() => (my_swiper.slideNext())}/>
+
             {numSlider(selectedSlide, items)}
         </div>
     )

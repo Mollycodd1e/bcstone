@@ -8,18 +8,20 @@ import 'swiper/css/scrollbar';
 import Head from "next/head";
 import {S_Footer} from "../src/sections/s_Footer";
 import {footerData, navData} from "@/data/mocks";
-import classes from "./styleNews.module.scss";
 import {S_MenuC} from "../src/sections/s_MenuC";
 import useWindowSize from "../src/hooks/useWindowSize";
 import {Context} from "../src/library";
 import {StoreProvider} from "../src/store/stores";
 import {useRouter} from "next/router";
-
+import TagManager from 'react-gtm-module';
+import {useEffect} from "react";
 
 const BcStone = ({Component, pageProps}) => {
     const size = useWindowSize();
     const { pathname } = useRouter()
-    console.log(pathname)
+    useEffect(() => {
+        TagManager.initialize({ gtmId: 'GTM-WZJD3HM' });
+    }, []);
     return (
         <StoreProvider {...pageProps}>
             <Context.Provider value={size}>
