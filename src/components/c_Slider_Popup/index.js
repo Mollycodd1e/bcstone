@@ -21,6 +21,7 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, pagin
     if (swiper && !isVisible) {
 
         swiper.slideToLoop(initialSlide);
+        console.log('swiper anim ' + swiper.animating)
         swiper.updateSlides()
     }
              }
