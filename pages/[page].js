@@ -40,11 +40,9 @@ export default function Page({page}) {
     return (
         <div className={"page-wrapper"}>
             {!MainStore.loading.is('pageData') && mainPageData ?
-                <div className={`common_top_bg + ${classes.common_top_bg_news}`} id="top">
                     <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
                         <C_FullForm data={mainPageData} className={popupClasses.fullFormIndexSection} popup={true}/>
-                    </S_Popup>
-                </div> : 'LOADING'}
+                    </S_Popup> : 'LOADING'}
 
             {!MainStore.loading.is('pageData') && pageData ? <Cc_ComponentGenerator pageData={pageData.data}/>
                 : ''}
