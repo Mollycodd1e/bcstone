@@ -7,6 +7,8 @@ import {Context, Slides} from "../../library";
 import {sizes} from "../../data/sizes";
 import { C_SliderDeveloper } from "../c_Slider_Developer";
 import {C_SliderPopupElement} from "../c_SliderPopupElement";
+import {Swiper} from "swiper/react";
+
 
 export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIsVideo, popup, isWebp}) => {
     const cls = classNames(classes.root, {[className]: className});
@@ -19,6 +21,7 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIs
     const [heightBlock, setHeightBlock] = useState(0);
     let [slideIndex, setSlideIndex] = useContext(Slides);
     const handleSlideChange = (event) => {
+        console.log('индекс слайда' + event)
         setSlideIndex(event.activeIndex);
     }
     let retina;
@@ -68,12 +71,13 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIs
                     className={classes.С_Slider}
                     isBtnClose={false}
                     items={elements}
-                    onInit={(evt) => {
+              /*      onInit={(evt) => {
                         set_my_swiper(evt)
-                    }}
+                    }}*/
                     slidesPerView={width < sizes.widthTabletSm ? 3 : 1}
                     slidersSpaceBetween={width < sizes.widthMobilePreMd ? -215 : width < sizes.widthTabletSm ? -120 : 0}
                     loop={true}
+                    initialSlide={0}
                     />
                 :  (video.isVisible ? setIsVideo(true) : setIsVideo(false),
                         <div className={classes.iframeWrapper}>
