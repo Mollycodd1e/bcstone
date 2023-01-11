@@ -78,7 +78,7 @@ function Home(props) {
                                                     setIsAboutPopupClose={setIsAboutPopupClose}
                                                     isAboutPopupClose={isAboutPopupClose} popup={isAboutPopupClose} isWebp={isWebp}/>
                             </Slides.Provider>
-                            <S_Sales data={pageData}/>
+                            <S_Sales data={pageData} isWebp={isWebp}/>
                             <S_FullForm data={pageData}/>
                             <S_Bottom_Commercial data={pageData} isWebp={isWebp}/>
                         </>
