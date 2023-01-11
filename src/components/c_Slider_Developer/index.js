@@ -36,7 +36,6 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
                 initialSlide={0}
                 onSlideChange={
                     (data) => {
-                        console.log('слайдер главной' + data.realIndex)
                         setSelectedSlide(data.realIndex);
                         onChange(data);
                     }

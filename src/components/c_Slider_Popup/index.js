@@ -21,7 +21,6 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, pagin
     if (swiper && !isVisible) {
 
         swiper.slideToLoop(initialSlide);
-        console.log('swiper anim ' + swiper.animating)
         swiper.updateSlides()
     }
              }
@@ -53,7 +52,7 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, pagin
                 pagination={true}
                 initialSlide={initialSlide}
                 className={classNames(classes.swiper, {[classes.swiperMode]: isBtnClose})}
-
+                loopPreventsSlide={false}
                 navigation={{
                     prevEl: '.swiper_button_prev',
                     nextEl: '.swiper_button_next',
@@ -78,15 +77,8 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, pagin
                 }
             </Swiper>
             <div className={classes.swiper_button_next} onClick={() => {
-                console.log('fire click')
-                console.log('---')
-                console.log(swiper)
-                console.log('---')
                 swiper.slideNext()
-
             }}/>
-            <button onClick={()=>(swiper.slideToLoop(3))}>впфцрпы</button>
-      {/*      {numSlider(selectedSlide, items)}*/}
         </div>
     )
 }

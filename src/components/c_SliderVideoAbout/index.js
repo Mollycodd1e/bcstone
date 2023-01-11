@@ -21,7 +21,6 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIs
     const [heightBlock, setHeightBlock] = useState(0);
     let [slideIndex, setSlideIndex] = useContext(Slides);
     const handleSlideChange = (event) => {
-        console.log('индекс слайда' + event)
         setSlideIndex(event.realIndex);
     }
     let retina;
