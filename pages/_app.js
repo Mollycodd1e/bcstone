@@ -13,11 +13,13 @@ import {S_MenuC} from "../src/sections/s_MenuC";
 import useWindowSize from "../src/hooks/useWindowSize";
 import {Context} from "../src/library";
 import {StoreProvider} from "../src/store/stores";
+import {useRouter} from "next/router";
 
 
 const BcStone = ({Component, pageProps}) => {
     const size = useWindowSize();
-
+    const { pathname } = useRouter()
+    console.log(pathname)
     return (
         <StoreProvider {...pageProps}>
             <Context.Provider value={size}>
@@ -30,13 +32,10 @@ const BcStone = ({Component, pageProps}) => {
                     <link rel="icon" href={"/favicon.ico"}/>
                 </Head>
                 <div className={"page-wrapper"}>
-                    <div className={`common_top_bg`} id="top">
+                    <div className={`common_top_bg ${(pathname === '/') ? 'gray' : ''}`}>
                         <S_MenuC data={navData} briefing={true}/>
-                    </div>
-
-
                     <Component {...pageProps} />
-
+                    </div>
                     <S_Footer phone_number={footerData.contacts.phone} mail={footerData.contacts.mail}
                               address={footerData.contacts.address}
                               sales_number={footerData.contacts.sales} telegram={footerData.contacts.telegram}
@@ -47,3 +46,4 @@ const BcStone = ({Component, pageProps}) => {
     )
 }
 export default BcStone
+

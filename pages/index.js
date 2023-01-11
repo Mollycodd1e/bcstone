@@ -61,15 +61,13 @@ function Home(props) {
     }, [])
 
     return (
-
-            <div className={`common_top_bg`}>
                 <>
                     {!MainStore.loading.is('pageData') && pageData ?
                         <>
                             <S_Popup>
                                 <C_FullForm data={pageData} className={classes.fullFormIndexSection} />
                             </S_Popup>
-                            <S_Hero data={pageData} setIsPopupClose={setIsPopupClose} isWebp={isWebp}/>
+                            <S_Hero data={pageData} isWebp={isWebp}/>
                             <S_Top_Commercial data={pageData}/>
                             <S_Projects data={pageData} className={"projects-bg"} setIsPopupClose={setIsPopupClose}/>
                             <Slides.Provider value={[slideIndex, setSlideIndex]}>
@@ -88,10 +86,7 @@ function Home(props) {
                     {!MainStore.loading.is('newsData') && newsData ?
                             <S_PressCenter data={newsData}/>
                          : 'LOADING' }
-
-
                 </>
-            </div>
     )
 }
 

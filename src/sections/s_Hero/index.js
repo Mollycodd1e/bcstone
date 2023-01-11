@@ -6,7 +6,7 @@ import {Context} from "../../library";
 import {sizes} from "@/data/sizes";
 import {useStore} from "../../store/stores";
 
-export const S_Hero = ({className, data, setIsPopupClose, isWebp}) => {
+export const S_Hero = ({className, data, isWebp}) => {
     const interactiveBlock = useRef(null);
     const topPic = useRef(null);
     const cls = classNames(classes.root, {[className]: className });

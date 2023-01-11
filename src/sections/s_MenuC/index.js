@@ -10,6 +10,7 @@ export const S_MenuC = ({className, data}) => {
     const topMenuEl = useRef(null);
     const cls = classNames(classes.root, {[classes.menuOnTop]:menuOnTop(topMenuEl), [className]: className});
     return (
+
         <div className={cls} ref={topMenuEl}>
             <C_Logo className={classes.C_Logo_Menu} />
             <C_Navigation className={classes.C_Navigation} data={data}/>

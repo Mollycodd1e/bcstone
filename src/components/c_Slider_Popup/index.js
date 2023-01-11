@@ -18,10 +18,14 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, pagin
     if (swiper && !isVisible) {
         swiper.slideTo(initialSlide);
     }
-
+/*useRef(()=>{
+    swiper.slideTo(initialSlide);
+    },[])*/
     const [my_swiper, set_my_swiper] = useState({});
     const [slide, setSlide] = useState(initialSlide);
     const numSlider = (selected, nums) => {
+        console.log('sel'+selected)
+        console.log('len' + nums.length)
         return (
             <div className={classes.numbersWrapper} >
                 {nums.map((el, i) => {
@@ -36,16 +40,18 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, pagin
         <div className={cls}  ref={ref}>
             <button className={classes.swiper_button_prev} onClick={() => (my_swiper.slidePrev(), slide > 0 ? setSlide(slide - 1) : setSlide(slide))}/>
             <Swiper
-                observer={true}
-                observeParents={true}
-                slidesPerView={slidesPerView}
+                /*observer={true}
+                observeParents={true}*/
+                slidesPerView={1}
                 spaceBetween={slidersSpaceBetween}
-                centeredSlides={true}
-                pagination={pagination}
-                className={classNames(classes.swiper, {[classes.swiperMode]: isBtnClose})}
+               /* centeredSlides={true}*/
+                pagination={true}
                 initialSlide={Number(initialSlide) || 0}
+                className={classNames(classes.swiper, {[classes.swiperMode]: isBtnClose})}
+               /* initialSlide={0}*/
                 onSlideChange={
                     (data) => {
+                        console.log(data.realIndex)
                         setSelectedSlide(data.realIndex);
                     }
                 }
@@ -54,12 +60,13 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, pagin
                     nextEl: '.swiper_button_next',
                 }}
                 onInit={(evt) => {
+
                     set_my_swiper(evt)
                 }}
                 onSwiper={(s) => {
                     setSwiper(s);
                 }}
-                loop={loop}
+                loop={true}
             >
                 {items.map((item, i) => {
                     return (

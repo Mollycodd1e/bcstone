@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import classes from './styleNews.module.scss';
 import popupClasses from "../src/sections/s_Popup/style.module.scss";
 import {Cc_ComponentGenerator} from "../src/complexComponents/cc_ComponentGenerator";
-import {S_Popup} from "../src/sections/s_Popup";
+import S_Popup from "../src/sections/s_Popup";
 import {C_FullForm} from "@/components/c_FullForm";
 import MainStore from "../src/store/MainStore";
 import {useRouter} from "next/router";

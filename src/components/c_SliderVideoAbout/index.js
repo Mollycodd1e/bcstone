@@ -68,7 +68,9 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIs
                     className={classes.С_Slider}
                     isBtnClose={false}
                     items={elements}
-                    initialSlide={0}
+                    onInit={(evt) => {
+                        set_my_swiper(evt)
+                    }}
                     slidesPerView={width < sizes.widthTabletSm ? 3 : 1}
                     slidersSpaceBetween={width < sizes.widthMobilePreMd ? -215 : width < sizes.widthTabletSm ? -120 : 0}
                     loop={true}
