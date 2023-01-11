@@ -36,6 +36,7 @@ export const News = (props) => {
     </ContentLoader>
     )
 }
+
 export const Form = (props) => {
     return (
         //ФОРМА
@@ -128,9 +129,120 @@ export const BusinessCenters = (props) => {
             <rect x="896" y="246" width="352" height="236" rx="3"/>
             <rect x="906" y="497" width="235" height="19" rx="3"/>
 
+        </ContentLoader>
+    )
+}
+
+export const Mobile = (props) => {
+    return (
+        //МОБИЛКА
+        <ContentLoader
+            speed={2}
+            width={535}
+            height={411}
+            viewBox="0 0 535 411"
+            backgroundColor="#f3f3f3"
+            foregroundColor="#ecebeb"
+            {...props}
+        >
+            <rect x="0" y="0" width="505" height="69"/>
+            <rect x="0" y="80" width="535" height="19"/>
+            <rect x="0" y="106" width="535" height="19"/>
+            <rect x="0" y="132" width="535" height="19"/>
+            <rect x="0" y="188" width="385" height="41" rx="18"/>
+            <rect x="0" y="257" width="385" height="41" rx="18"/>
+            <rect x="0" y="326" width="254" height="41" rx="18"/>
+            <circle cx="10" cy="401" r="10"/>
+            <rect x="27" y="395" width="361" height="12"/>
+        </ContentLoader>
+    )
+}
+
+export const AboutUs = (props) => {
+    return (
+        //О НАС
+        <ContentLoader
+            speed={2}
+            width={1095}
+            height={656}
+
+            viewBox="0 0 1095 656"
+            backgroundColor="#f3f3f3"
+            foregroundColor="#ecebeb"
+            {...props}
+        >
+            <rect x="148" y="0" width="623" height="80"/>
+            <rect x="0" y="161" width="554" height="397" rx="16"/>
+            <circle cx="235" cy="599" r="21"/>
+            <circle cx="309" cy="599" r="21"/>
+            <rect x="629" y="225" width="315" height="34"/>
+            <rect x="629" y="275" width="487" height="12"/>
+            <rect x="629" y="293" width="418" height="12"/>
+
+            <rect x="629" y="333" width="487" height="12"/>
+            <rect x="629" y="354" width="487" height="12"/>
+            <rect x="629" y="372" width="487" height="12"/>
+
+            <rect x="629" y="393" width="435" height="12"/>
+            <rect x="629" y="412" width="291" height="12"/>
+
+            <rect x="629" y="439" width="487" height="12"/>
+            <rect x="629" y="478" width="487" height="12"/>
+            <rect x="629" y="372" width="487" height="12"/>
+
+            <rect x="629" y="499" width="435" height="12"/>
+
+            <rect x="629" y="520" width="487" height="12"/>
+            <rect x="629" y="539" width="487" height="12"/>
+
+            <rect x="629" y="560" width="435" height="12"/>
+
+            <rect x="629" y="612" width="255" height="37" rx="26"/>
+
+        </ContentLoader>
+    )
+}
 
 
+export const PressCentre = (props) => {
+    return (
+        //ПРЕСС_ЦЕНТР
+        <ContentLoader
+            speed={2}
+            width={1177}
+            height={514}
 
+            viewBox="0 0 1177 514"
+            backgroundColor="#f3f3f3"
+            foregroundColor="#ecebeb"
+            {...props}
+        >
+            <rect x="299" y="0" width="593" height="65"/>
+
+            <rect x="190" y="509" width="238" height="4"/>
+            <rect x="756" y="509" width="238" height="4"/>
+            <circle cx="572" cy="511" r="3"/>
+            <circle cx="586" cy="511" r="3"/>
+            <circle cx="600" cy="511" r="3"/>
+            <circle cx="614" cy="511" r="3"/>
+
+            <rect x="0" y="119" width="78" height="22"/>
+            <rect x="0" y="157" width="292" height="195" rx="16"/>
+            <rect x="0" y="368" width="292" height="21"/>
+            <rect x="0" y="396" width="292" height="21"/>
+            <rect x="0" y="424" width="165" height="21"/>
+
+            <rect x="445" y="119" width="78" height="22"/>
+            <rect x="445" y="157" width="292" height="195" rx="16"/>
+            <rect x="445" y="368" width="292" height="21"/>
+            <rect x="445" y="396" width="292" height="21"/>
+            <rect x="445" y="424" width="165" height="21"/>
+
+            <rect x="885" y="119" width="78" height="22"/>
+            <rect x="885" y="157" width="292" height="195" rx="16"/>
+            <rect x="885" y="368" width="292" height="21"/>
+            <rect x="885" y="396" width="292" height="21"/>
+            <rect x="885" y="424" width="165" height="21"/>
         </ContentLoader>
     )
 }
