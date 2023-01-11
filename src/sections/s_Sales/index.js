@@ -4,7 +4,7 @@ import classNames from "classnames";
 import {C_Transit_Sale} from "../../components/c_Transit_Sale";
 import { useEffect } from "react";
 
-export const S_Sales = ({className, data}) => {
+export const S_Sales = ({className, data, isWebp}) => {
     const cls = classNames(classes.root, {[className]: className});
     const [selectedType, setSelectedType] = useState('')
     const [isHover, setIsHover] = useState(false);
@@ -39,7 +39,7 @@ export const S_Sales = ({className, data}) => {
                     {data.sales.map((el, i) => {
                         const {type, name, url, picture} = el;
                         return (
-                            <C_Transit_Sale type={type} name={name} url={url} picture={picture} key={i} number={i} setIsHover={setIsHover} setIsHoveredItem={setIsHoveredItem}/>
+                            <C_Transit_Sale type={type} name={name} url={url} picture={picture} key={i} number={i} setIsHover={setIsHover} setIsHoveredItem={setIsHoveredItem} isWebp={isWebp}/>
                         )
                     })}
                 </div>
