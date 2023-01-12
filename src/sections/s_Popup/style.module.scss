@@ -204,3 +204,17 @@
     }
   }
 }
+
+.banners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & div {
+    width: 90vw !important;
+  }
+
+  & svg {
+    width: 90vw !important;
+  }
+}
