@@ -153,7 +153,7 @@ export const C_FormCopy = ({className, header, description, ready}) => {
             <div className={classNames(classes.input__checkbox_wrapper, {[classes.input__checkbox_wrapper_need]: !isCheck && isError})}>
               <input className={'visually-hidden'} type="checkbox" name="data" id="id-data" 
                  onChange={() => onAgreementCheck()}/>
-              <label htmlFor="id-data">Я согласен с <a href={'/policy.html'}>политикой</a> обработки персональных данных</label>
+              <label htmlFor="id-data">Я согласен с <a href={'/policy'}>политикой</a> обработки персональных данных</label>
               {/*{isError ? <div className={classes.agreement_error}>Обязательное поле</div> : null}*/}
             </div>
           </fieldset>

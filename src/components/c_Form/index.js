@@ -263,7 +263,7 @@ export function Form({formClassName, isPopUp}) {
                     />
                     <span className={classes.personal}>
                             Нажимая кнопку, вы соглашаетесь<br/>с&nbsp;
-                        <a href="policy.html">обработкой персональных данных</a>
+                        <a href="policy">обработкой персональных данных</a>
                         </span>
                     <div className={classNames(classes.formNote, {[classes.formNotePopUp]: isPopUp})}>
                         Уникальное предложение

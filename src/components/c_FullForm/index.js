@@ -328,7 +328,7 @@ export const C_FullForm = ({className, data}) => {
                             <label
                                 className={classes.checkboxLabel}
                                 htmlFor={popup ? "agreed" : "agreed1"}
-                            >Я согласен с <a href={'/policy.html'}>политикой</a> обработки персональных данных</label>
+                            >Я согласен с <a href={'/policy'}>политикой</a> обработки персональных данных</label>
                         </div>
                     </div>
                 </div>
