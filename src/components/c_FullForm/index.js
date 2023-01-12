@@ -22,6 +22,7 @@ export const C_FullForm = ({className, data}) => {
     const [isNameValid, setIsNameValid] = useState(false);
     const [isEmailValid, setIEmailValid] = useState(true);
     const [isCheckValid, setIsCheckValid] = useState(false);
+    const [isOnlyCheckboxUnpushed, setIsOnlyCheckboxUnpushed] = useState(false);
     const store = useStore()
     const popup = store.popUpFormState;
 
@@ -81,6 +82,10 @@ export const C_FullForm = ({className, data}) => {
             setErrorPhoneText(`${fieldText.require}`);
             setErrorPhoneCode(`${errorType.orange}`);
         } else {
+        }
+
+        if (isPhoneValid && isNameValid && !isCheckValid) {
+            setIsOnlyCheckboxUnpushed(true);
         }
 
         // if (isPhoneValid && isNameValid && isEmailValid && isCheckValid) {
@@ -308,7 +313,7 @@ export const C_FullForm = ({className, data}) => {
                         <span className={classes.text}>Получить предложение</span></button> */}
 
                         <div
-                            className={classNames(classes.checkboxWrapper)}
+                            className={classNames(classes.checkboxWrapper, {[classes.checkboxWrapperDrilling]: isOnlyCheckboxUnpushed})}
 
                         >
                             <input
