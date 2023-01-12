@@ -47,7 +47,7 @@ function Home(props) {
                     {!MainStore.loading.is('pageData') && pageData ?
                         <>
                             <S_Popup>
-                                <C_FullForm data={pageData} className={classes.fullFormIndexSection} />
+                                <C_FullForm data={pageData} className={classes.fullFormIndexSection} popup={true}/>
                             </S_Popup>
                             <S_Hero data={pageData}/>
                             <S_Top_Commercial data={pageData}/>

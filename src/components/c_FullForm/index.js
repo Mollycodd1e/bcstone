@@ -4,9 +4,8 @@ import classes from './style.module.scss';
 import {useEffect, useState} from "react";
 import { useRef } from 'react';
 import { C_MainButton } from '../c_MainButton';
-import {useStore} from "../../store/stores";
 
-export const C_FullForm = ({className, data}) => {
+export const C_FullForm = ({className, data, popup}) => {
     const cls = classNames(classes.root, "form", "form--top", {[className]: className});
     const {description, descriptionSuccess, title, titleSuccess} = data.main_form;
     
@@ -23,8 +22,7 @@ export const C_FullForm = ({className, data}) => {
     const [isEmailValid, setIEmailValid] = useState(true);
     const [isCheckValid, setIsCheckValid] = useState(false);
     const [isOnlyCheckboxUnpushed, setIsOnlyCheckboxUnpushed] = useState(false);
-    const store = useStore()
-    const popup = store.popUpFormState;
+
 
     useEffect(() => {
         function onEntryTitle(entry) {
