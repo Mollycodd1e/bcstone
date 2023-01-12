@@ -63,7 +63,7 @@ export const C_Element_Top_Commertial = ({className, element}) => {
                     {cropContent}
                 </span>
                     <a className={classes.link}
-                        href={`/${link}`} target="_blank">
+                        href={`/${link}`} target="_blank" rel="noreferrer">
                         Подробнее
                     </a>
             </div>
