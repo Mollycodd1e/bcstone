@@ -186,6 +186,32 @@
   padding-left: 19px;
   width: 280px;
   cursor: pointer;
+  position: relative;
+}
+
+@keyframes drill {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 14px;
+  }
+  40% {
+    left: -12px;
+  }
+  60% {
+    left: 10px;
+  }
+  80% {
+    left: -8px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.checkboxWrapperDrilling {
+  animation: drill 1s ease-in-out;
 }
 
 .checkboxLabel {
