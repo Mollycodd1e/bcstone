@@ -13,8 +13,12 @@ export class SiteStore {
         })*/
     }
 
-    switchPopUpFormState = () => {
-        this.popUpFormState = !this.popUpFormState;
+    switchPopUpFormState = (state) => {
+        if(state){
+            this.popUpFormState = state
+        } else {
+            this.popUpFormState = !this.popUpFormState;
+        }
     }
 }
 //const SiteStore = new siteStore();

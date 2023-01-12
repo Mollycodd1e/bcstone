@@ -3,12 +3,14 @@ import classes from './style.module.scss';
 import {useRef} from "react";
 import {useStore} from "../../store/stores";
 import {observer} from "mobx-react-lite";
+import useOnClickOutside from "../../hooks/useOnClickOutside";
 
 const S_Popup = observer(function S_Popup({className, children}) {
     const store = useStore()
     const cls = classNames(classes.root, {[className]: className, [classes.closePopup]:store.popUpFormState});
     const formRef = useRef();
-  //  useOnClickOutside(formRef, () => {if(!store.popUpFormState) store.switchPopUpFormState()});
+    //TODO Проверить почему хук не выгружается
+    useOnClickOutside(formRef, () => store.switchPopUpFormState('false'));
 
     return (
         <div className={cls} tabIndex={-1}>
