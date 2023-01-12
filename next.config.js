@@ -3,10 +3,15 @@ module.exports = {
 }
 
 module.exports = {
+  i18n: {
+    locales: ['ru'],
+    defaultLocale: 'ru',
+  },
   images: {
     loader: 'akamai',
     path: '',
   },
+
 /*  plugins: [
     "postcss-flexbugs-fixes",
     [
