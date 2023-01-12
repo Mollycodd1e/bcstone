@@ -203,7 +203,6 @@ export const AboutUs = (props) => {
     )
 }
 
-
 export const PressCentre = (props) => {
     return (
         //ПРЕСС_ЦЕНТР
