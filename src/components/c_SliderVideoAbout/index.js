@@ -8,11 +8,14 @@ import {sizes} from "../../data/sizes";
 import { C_SliderDeveloper } from "../c_Slider_Developer";
 import {C_SliderPopupElement} from "../c_SliderPopupElement";
 import {Swiper} from "swiper/react";
+import {useStore} from "../../store/stores";
 
 
-export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIsVideo, popup, isWebp}) => {
+export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIsVideo, popup}) => {
     const cls = classNames(classes.root, {[className]: className});
     const {width, height} = useContext(Context);
+    const store = useStore();
+    const isWebp = store.isWebp;
 
     const {slider, video} = data.about_company.variableContent;
 

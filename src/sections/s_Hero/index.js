@@ -6,7 +6,7 @@ import {Context} from "../../library";
 import {sizes} from "@/data/sizes";
 import {useStore} from "../../store/stores";
 
-export const S_Hero = ({className, data, isWebp}) => {
+export const S_Hero = ({className, data}) => {
     const interactiveBlock = useRef(null);
     const topPic = useRef(null);
     const cls = classNames(classes.root, {[className]: className });
@@ -15,6 +15,7 @@ export const S_Hero = ({className, data, isWebp}) => {
     const [isAnimation, setIsAnimation] = useState(false);
     const [isAnimationOff, setIsAnimationOff] = useState(false);
     const store = useStore();
+    const isWebp = store.isWebp;
     const updateCursor = (e, topPic, interactiveBlock, customCircleSize = undefined, isTouchEvent = false) => {
         const rect = interactiveBlock.current.getBoundingClientRect();
         let xBlockPercent = 0;

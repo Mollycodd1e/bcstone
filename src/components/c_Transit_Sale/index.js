@@ -1,9 +1,12 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
 import Link from "next/link";
+import {useStore} from "../../store/stores";
 
-export const C_Transit_Sale = ({className, url, name, type, picture, setIsHover, number, setIsHoveredItem, isWebp}) => {
+export const C_Transit_Sale = ({className, url, name, type, picture, setIsHover, number, setIsHoveredItem}) => {
     const cls = classNames(classes.root, {[classes.reverse]: type === "retail", [className]: className});
+    const store = useStore();
+    const isWebp = store.isWebp;
     let retina;
 
     if (typeof window !== "undefined") {

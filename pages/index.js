@@ -41,24 +41,6 @@ function Home(props) {
 
     const [isPopupClose, setIsPopupClose] = useState(true);
     const [isAboutPopupClose, setIsAboutPopupClose] = useState(true);
-    const [isWebp, setIsWebp] = useState(false);
-
-    useEffect(() => {
-        setIsWebp(false);
-        function canUseWebp() {
-            // Создаем элемент canvas
-            let elem = document.createElement('canvas');
-            // Приводим элемент к булеву типу
-            if (!!(elem.getContext && elem.getContext('2d'))) {
-                // Создаем изображение в формате webp, возвращаем индекс искомого элемента и сразу же проверяем его
-                setIsWebp(true);
-                return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
-            }
-            // Иначе Webp не используем
-            return false;
-        }
-        canUseWebp();
-    }, [])
 
     return (
                 <>
@@ -67,20 +49,20 @@ function Home(props) {
                             <S_Popup>
                                 <C_FullForm data={pageData} className={classes.fullFormIndexSection} />
                             </S_Popup>
-                            <S_Hero data={pageData} isWebp={isWebp}/>
+                            <S_Hero data={pageData}/>
                             <S_Top_Commercial data={pageData}/>
                             <S_Projects data={pageData} className={"projects-bg"} setIsPopupClose={setIsPopupClose}/>
                             <Slides.Provider value={[slideIndex, setSlideIndex]}>
                                 <S_About data={pageData} width={size.width} setIsPopupClose={setIsPopupClose}
-                                         setIsAboutPopupClose={setIsAboutPopupClose} popup={isAboutPopupClose} isWebp={isWebp}/>
+                                         setIsAboutPopupClose={setIsAboutPopupClose} popup={isAboutPopupClose}/>
                                 <C_SliderVideoPopup data={pageData}
                                                     sliderVideoPopupContent={pageData.about_company.variableContent}
                                                     setIsAboutPopupClose={setIsAboutPopupClose}
-                                                    isAboutPopupClose={isAboutPopupClose} popup={isAboutPopupClose} isWebp={isWebp}/>
+                                                    isAboutPopupClose={isAboutPopupClose} popup={isAboutPopupClose}/>
                             </Slides.Provider>
-                            <S_Sales data={pageData} isWebp={isWebp}/>
+                            <S_Sales data={pageData}/>
                             <S_FullForm data={pageData}/>
-                            <S_Bottom_Commercial data={pageData} isWebp={isWebp}/>
+                            <S_Bottom_Commercial data={pageData}/>
                         </>
                         : <div className={classes.banners}>
                             <MainBanner/>

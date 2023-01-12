@@ -5,10 +5,11 @@ import {sizes} from "@/data/sizes";
 import {useContext} from "react";
 import {useStore} from "../../store/stores";
 
-export const С_CardFace = ({className, logo, alt, img, img_not_retina, img2x, imgMob, img2xMob, extraInfo, link, setIsPopupClose, isWebp, imgWebp, img_not_retina_Webp}) => {
+export const С_CardFace = ({className, logo, alt, img, img_not_retina, img2x, imgMob, img2xMob, extraInfo, link, setIsPopupClose, imgWebp, img_not_retina_Webp}) => {
     const cls = classNames(classes.root, {[className]: className });
     const {width, height} = useContext(Context);
     const store = useStore();
+    const isWebp = store.isWebp;
     let retina;
 
     if (typeof window !== "undefined") {

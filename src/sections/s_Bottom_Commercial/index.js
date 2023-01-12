@@ -9,12 +9,15 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import {Context} from "../../library";
 import { useContext } from 'react';
+import {useStore} from "../../store/stores";
 
-export const S_Bottom_Commercial = ({className, data, isWebp}) => {
+export const S_Bottom_Commercial = ({className, data}) => {
 
     const cls = classNames(classes.root, {[className]: className});
     const data_3 = data.bottom_commercial;
     const ref= useRef();
+    const store = useStore();
+    const isWebp = store.isWebp;
     const {width, height} = useContext(Context);
     const [isLine, setIsLine] = useState(false);
     const allCards = [];

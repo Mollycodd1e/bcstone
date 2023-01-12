@@ -35,24 +35,6 @@ export const C_RegularCard = ({
     imgWebp,
     img_not_retina_Webp,
 }) => {
-    const [isWebp, setIsWebp] = useState(false);
-    useEffect(() => {
-        setIsWebp(false);
-        function canUseWebp() {
-            // Создаем элемент canvas
-            let elem = document.createElement('canvas');
-            // Приводим элемент к булеву типу
-            if (!!(elem.getContext && elem.getContext('2d'))) {
-                // Создаем изображение в формате webp, возвращаем индекс искомого элемента и сразу же проверяем его
-                setIsWebp(true);
-                return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
-            }
-            // Иначе Webp не используем
-            return false;
-        }
-        canUseWebp();
-    }, [])
-
     const [isCardHovered, setIsCardHovered] = useState(false);
     const cls = classNames(classes.root, { [classes.map_mod]: isMapMode});
     const [isCloseAllBtn, setIsCloseAllBtn] = useState(false);
@@ -92,7 +74,6 @@ export const C_RegularCard = ({
                             extraInfo={extraInfo}
                             link={link}
                             setIsPopupClose={setIsPopupClose}
-                            isWebp={isWebp}
                             imgWebp={imgWebp}
                             img_not_retina_Webp={img_not_retina_Webp}
                         />

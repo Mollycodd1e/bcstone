@@ -5,11 +5,14 @@ import {Context, Slides} from "../../library";
 import {sizes} from "../../data/sizes";
 import {C_SliderPopup} from "../c_Slider_Popup";
 import { C_SliderPopupElement } from "../c_SliderPopupElement";
+import {useStore} from "../../store/stores";
 
-export const C_SliderVideoPopup = ({data, isAboutPopupClose, setIsAboutPopupClose, popup, sliderVideoPopupContent, isWebp}) => {
+export const C_SliderVideoPopup = ({data, isAboutPopupClose, setIsAboutPopupClose, popup, sliderVideoPopupContent}) => {
     const {width, height} = useContext(Context);
     const [slideIndex, setSlideIndex] = useContext(Slides);
     const {slider, video} = data.about_company.variableContent;
+    const store = useStore();
+    const isWebp = store.isWebp;
 
     const divBlock = useRef(null);
 
@@ -40,7 +43,6 @@ export const C_SliderVideoPopup = ({data, isAboutPopupClose, setIsAboutPopupClos
                         pagination={width < sizes.widthTabletSm ? {"clickable": true} : false}
                         slidersSpaceBetween={0}
                         loop={true}
-                        isWebp={isWebp}
                         />
                     : <iframe  src={!popup ? sliderVideoPopupContent.video.src : ''} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen/>
                 }
