@@ -6,7 +6,7 @@ import { useRef } from 'react';
 import { useEffect } from 'react';
 import {Context} from "../../library";
 import { useContext} from 'react';
-import {sizes} from "../../data/sizes";
+import {sizes} from "@/data/sizes";
 
 export const C_SavingCard = ({className, image, description, title, item}) => {
     const {link} = item;
@@ -15,7 +15,7 @@ export const C_SavingCard = ({className, image, description, title, item}) => {
     const [isHover, setHover] = useState(false);
     const cardRef = useRef();
     const [isCard, setIsCard] = useState(false);
-    const [width, height] = useContext(Context);
+    const {width, height} = useContext(Context);
 
     const onHover = function() {
         setHover(true);
@@ -30,8 +30,6 @@ export const C_SavingCard = ({className, image, description, title, item}) => {
             entry.forEach(change => {
               if (change.isIntersecting) {
                 setIsCard(true);
-              } else {
-                // setIsCard(false);
               }
             });
         }
@@ -53,8 +51,7 @@ export const C_SavingCard = ({className, image, description, title, item}) => {
 
     return (
         <div className={classNames(cls,{[classes.cardShown]: isCard})} ref={cardRef}>
-            {(typeof window !== 'undefined') && 
-                <a href={window.location.hostname === 'localhost' ? `/${link}` : `/${link}.html`}>
+                <a href={`/${link}`}>
                     <div className={classNames(classes.card_wrapper, {[classes.card_wrapper_hover]: isHover})}  onMouseEnter={() => onHover()} onMouseLeave={() => onLeave()}>   
                         <h3>{title}</h3>
                         {width < sizes.widthTabletMd ?    
@@ -62,11 +59,10 @@ export const C_SavingCard = ({className, image, description, title, item}) => {
                         :
                             <Image src={retina ? image : image} layout='fill' alt={'коммерция'}/>
                         }
-                        <button href={window.location.hostname === 'localhost' ? `/${link}` : `/${link}.html`}>Подробнее</button>
-                        <div className={classes.card_shadow}></div>
+                        <a href={`/${link}`}>Подробнее</a>
+                        <div className={classes.card_shadow}/>
                     </div>
                 </a>
-            }
             <p>{description}</p>
         </div>
     )

@@ -1,34 +1,23 @@
 import React, { useEffect } from "react";
-import { useWindowSize} from "../../library";
 import classes from './style.module.scss';
 import classNames from "classnames";
-import { C_Slider } from "../../components/c_Slider";
-import { C_PressCard } from "../../components/c_PressCard";
-import {sizes} from "../../data/sizes";
+import { C_Slider } from "@/components/c_Slider";
+import { C_PressCard } from "@/components/c_PressCard";
+import {sizes} from "@/data/sizes";
 import { useState } from "react";
 import { useRef } from "react";
 import {Context} from "../../library";
 import { useContext} from 'react';
 
 export const S_PressCenter = ({className, data}) => {
-    const size = useWindowSize();
+    const {width, height} = useContext(Context);
     const cls = classNames(classes.root, {[className]: className });
-    // const data_4 = data.news;
-    const data_4 = data;
     const allCards = [];
+
     const [isCenter, setIsCenter] = useState(false);
-    const [width, height] = useContext(Context);
     const [isTitle, setIsTitle] = useState(false);
     const centerRef = useRef();
     const titleRef = useRef();
-    // let cuttedElements = data_4 && data_4.list.length !==0 && data_4.list.slice(0, data_4.config.shownElements);
-    // cuttedElements.sort(function (a, b) {
-    //     return a.order - b.order;
-    // })
-
-    // cuttedElements.forEach(item => {
-    //   allCards.push(<C_PressCard date={item.date} image={item.pic.src} title={item.title} description={item.content}/>)
-    // });
 
     let retina;
 
@@ -36,7 +25,7 @@ export const S_PressCenter = ({className, data}) => {
         retina = window.devicePixelRatio > 1;
     }  
 
-    let cuttedElements = data_4.sort(function (a, b) {
+    let cuttedElements = data.sort(function (a, b) {
       return new Date(b.date) - new Date(a.date);
     }).slice(0, 6);
     
@@ -56,8 +45,6 @@ export const S_PressCenter = ({className, data}) => {
         entry.forEach(change => {
           if (change.isIntersecting) {
             setIsTitle(true);
-          } else {
-            // setIsTitle(false);
           }
         });
       }
@@ -98,20 +85,14 @@ export const S_PressCenter = ({className, data}) => {
                     </div>
                     <div className={classes.sliderWrapper}>
                       <C_Slider className={classes.pressing} items={allCards} initialSlide={0} slidersSpaceBetween={
-                            size.innerWidth < sizes.widthTabletSm ? -255 :
-                            (size.innerWidth >= sizes.widthTabletMd && size.innerWidth < sizes.widthNotebook) ? -513 :
-                            (size.innerWidth >= sizes.widthNotebook && size.innerWidth < sizes.widthDesktopSm) ? -520 :
-                            (size.innerWidth >= sizes.widthDesktopSm && size.innerWidth < sizes.widthDesktopMd) ? 15 :
-                            (size.innerWidth >= sizes.widthDesktopMd && size.innerWidth < sizes.widthDesktopLg) ? -30 :
-                             size.innerWidth >= sizes.widthDesktopLg ? -15 : -170}
-                            slidesPerView = {3} press={true} loop={true} loopedSlides={2}/>
+                            width < sizes.widthTabletSm ? -255 :
+                            (width >= sizes.widthTabletMd && width < sizes.widthNotebook) ? -513 :
+                            (width >= sizes.widthNotebook && width < sizes.widthDesktopSm) ? -520 :
+                            (width >= sizes.widthDesktopSm && width < sizes.widthDesktopMd) ? 15 :
+                            (width >= sizes.widthDesktopMd && width < sizes.widthDesktopLg) ? -30 :
+                             width >= sizes.widthDesktopLg ? -15 : -170}
+                            slidesPerView = {3} press={true} loop={true} loopedSlides={6}/>
                     </div>
-                    {/* <div className={classes.btnWrapper}>
-                        <a href="#">Подробнее</a>
-                    </div> */}
-                    {/*<div ref={centerRef}>
-                      <C_MainButton className={classes.C_MainButton} text={'Подробнее'} link={window.location.hostname === 'localhost' ? `/news` : `/news.html`}/>
-                    </div>*/}
                 </div>
             </div>
         </div>

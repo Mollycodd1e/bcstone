@@ -1,16 +1,18 @@
 @import '../../styles/style';
 
 .wrapRoot {
-  width: 100vw;
-  max-width: $width-desktop-lg;
-  display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .root {
   background: radial-gradient(#fff 0%, #808080 300%);
+  max-width: 1920px;
 }
 
 .footer_wrapper {

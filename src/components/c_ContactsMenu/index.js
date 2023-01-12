@@ -7,7 +7,7 @@ export const C_ContactsMenu = ({className, data}) => {
         <div className={cls}>
             <a href={"#"} className={classes.callMe} />
             <a href={"https://api.whatsapp.com/send?phone=79645640722"} className={classes.whatsapp} />
-            <a href={`tel:${data.phone.phone_number}`} className={classes.phone}>{data.phone.phone_number_decoration}</a>
+            <a href={'tel:+74950231065'} className={classes.phone}>+7 (495) 023-10-65</a>
         </div>
     )
 }

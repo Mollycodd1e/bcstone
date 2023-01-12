@@ -11,16 +11,6 @@ import {S_ParagraphHeader} from "../../sections/s_ParagraphHeader";
 
 export const Cc_ComponentGenerator = ({pageData}) => {
 
-    // const sortedData = pageData && pageData.length !==0 && pageData.sort(function (a, b) {
-    //     if (a.order > b.order) {
-    //         return 1;
-    //     }
-    //     if (a.order < b.order) {
-    //         return -1;
-    //     }
-    //     return 0;
-    // });
-
     const componentCreator = (elPosition, sortedArr) => {
         return (
             {
@@ -65,12 +55,12 @@ export const Cc_ComponentGenerator = ({pageData}) => {
                     url={sortedArr[elPosition].content.url}
                     text={sortedArr[elPosition].content.text}
                 />,
-                // "form": <S_Form
-                //     key={elPosition}
-                //     header={sortedArr[elPosition].content.title}
-                //     description={sortedArr[elPosition].content.description}
-                //     ready={sortedArr[elPosition].content.success}
-                // />,
+                 "form": <S_Form
+                     key={elPosition}
+                     header={sortedArr[elPosition].content.title}
+                     description={sortedArr[elPosition].content.description}
+                     ready={sortedArr[elPosition].content.success}
+                 />,
                 "paragraph_header": <S_ParagraphHeader
                     key={elPosition}
                     text={sortedArr[elPosition].content.text}

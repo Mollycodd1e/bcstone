@@ -2,19 +2,12 @@ import InputMask from 'react-input-mask';
 import classNames from 'classnames';
 import classes from './style.module.scss';
 import {useEffect, useState} from "react";
-import {Context} from "../../library";
-import { useContext } from 'react';
-import {sizes} from "../../data/sizes";
 import { useRef } from 'react';
 import { C_MainButton } from '../c_MainButton';
 
 export const C_FullForm = ({className, data, popup}) => {
     const cls = classNames(classes.root, "form", "form--top", {[className]: className});
     const {description, descriptionSuccess, title, titleSuccess} = data.main_form;
-
-    const [width, height] = useContext(Context);
-    const btnEl = useRef(null);
-    const spanEl = useRef(null);
     
     const [isConfirmed, setIsConfirmed] = useState(false);
     const [isProcessing, setIsProcessing] = useState(false);
@@ -28,14 +21,14 @@ export const C_FullForm = ({className, data, popup}) => {
     const [isNameValid, setIsNameValid] = useState(false);
     const [isEmailValid, setIEmailValid] = useState(true);
     const [isCheckValid, setIsCheckValid] = useState(false);
+    const [isOnlyCheckboxUnpushed, setIsOnlyCheckboxUnpushed] = useState(false);
+
 
     useEffect(() => {
         function onEntryTitle(entry) {
             entry.forEach(change => {
               if (change.isIntersecting) {
                 setIsTitle(true);
-              } else {
-                // setIsTitle(false);
               }
             });
         }
@@ -48,7 +41,7 @@ export const C_FullForm = ({className, data, popup}) => {
             observer.observe(titleRef.current);
         }
     })
-    
+
 
     const validName = /^(([a-zA-Zа-яА-ЯЁё-]{1,30}))$/u;
 
@@ -87,6 +80,10 @@ export const C_FullForm = ({className, data, popup}) => {
             setErrorPhoneText(`${fieldText.require}`);
             setErrorPhoneCode(`${errorType.orange}`);
         } else {
+        }
+
+        if (isPhoneValid && isNameValid && !isCheckValid) {
+            setIsOnlyCheckboxUnpushed(true);
         }
 
         // if (isPhoneValid && isNameValid && isEmailValid && isCheckValid) {
@@ -151,12 +148,6 @@ export const C_FullForm = ({className, data, popup}) => {
             <div className={classes.wrapper_frame}>
                 <div className={classes.frame}>
                     <div className={classNames(classes.titles,{[classes.textShown] : isTitle})} ref={titleRef}>
-                        {/*{popup ?*/}
-                        {/*    <h3 dangerouslySetInnerHTML={{ __html: !isConfirmed ? 'Оставьте заявку и получите консультацию' : titleSuccess}} */}
-                        {/*        className={classNames(classes.title,{[classes.popupTitle] : popup})}/> :*/}
-                        {/*    <h3 dangerouslySetInnerHTML={{ __html: !isConfirmed ? title : titleSuccess}} className={classes.title}/>*/}
-                        {/*    */}
-                        {/*}*/}
                         {popup ?
                             !isConfirmed ? <h3 dangerouslySetInnerHTML={{ __html: 'Оставьте заявку и получите консультацию'}}
                                 className={classNames(classes.title,{[classes.popupTitle] : popup})}/> :
@@ -166,7 +157,7 @@ export const C_FullForm = ({className, data, popup}) => {
                             <h3 dangerouslySetInnerHTML={{ __html: titleSuccess}} className={classes.title}/>
                         }
                         {!isConfirmed ? <span dangerouslySetInnerHTML={{ __html: description}} className={classes.description}/> : <span dangerouslySetInnerHTML={{ __html: descriptionSuccess}} className={classes.description}/>}
-                        {/*<span dangerouslySetInnerHTML={{ __html: !isConfirmed ? description : descriptionSuccess}} className={classes.description}/>*/}
+
                     </div>
                     <div className={classNames(classes.fields,{[classes.popupFields] : popup})}>
                         <div
@@ -320,7 +311,7 @@ export const C_FullForm = ({className, data, popup}) => {
                         <span className={classes.text}>Получить предложение</span></button> */}
 
                         <div
-                            className={classNames(classes.checkboxWrapper)}
+                            className={classNames(classes.checkboxWrapper, {[classes.checkboxWrapperDrilling]: isOnlyCheckboxUnpushed})}
 
                         >
                             <input
@@ -335,7 +326,7 @@ export const C_FullForm = ({className, data, popup}) => {
                             <label
                                 className={classes.checkboxLabel}
                                 htmlFor={popup ? "agreed" : "agreed1"}
-                            >Я согласен с обработкой персональных данных</label>
+                            >Я согласен с <a href={'/policy'}>политикой</a> обработки персональных данных</label>
                         </div>
                     </div>
                 </div>

@@ -28,6 +28,8 @@ export const CC_regularCards = (className, isBtnClose, onBtnCloseClick, onCardCl
             onCardCloseClick={onCardCloseClick}
             setIsPopupClose={setIsPopupClose}
             cardsAmount={cardsAmount}
+            imgWebp={card.img.srcWebp}
+            img_not_retina_Webp={card.img_not_retina.srcWebp}
         />
     // const rCards = cards.map((card, i) => <C_RegularCard
     //         isMapMode={isMapMode}

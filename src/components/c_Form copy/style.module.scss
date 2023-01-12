@@ -109,6 +109,10 @@
   line-height: 10px;
   height: 15px;
   cursor: pointer;
+
+  & a {
+    text-decoration: underline;
+  }
 }
 
 .root .input__checkbox_wrapper input:not(:checked) + label::before {

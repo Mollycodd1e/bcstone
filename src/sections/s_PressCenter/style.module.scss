@@ -150,9 +150,8 @@
       position: absolute;
       content: "";
       width: 627px;
-      //margin-left: -367px;
       height: 56px;
-      bottom: 19px;
+      bottom: 8px;
       background-image: url('../../img/press-line-768.png');
       background-repeat: no-repeat;
       background-size: 627px 16px;
@@ -227,7 +226,7 @@
 
     &::after {
       width: 801px;
-      bottom: 10px;
+      bottom: -3px;
       background-image: url('../../img/press-line-1000.png');
       background-size: 801px 16px;
     }
@@ -272,7 +271,7 @@
     padding-bottom: 69px;
 
     &::after {
-      bottom: 40px;
+      bottom: 28px;
     }
   }
 

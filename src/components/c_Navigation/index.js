@@ -4,25 +4,26 @@ import { C_Logo } from "../c_Logo";
 import { C_MainButton } from "../c_MainButton";
 import { C_Nav_List } from "../c_Nav_List";
 import { useEffect, useRef, useState } from "react";
+import {useStore} from "../../store/stores";
 
 
-export function C_Navigation({className, data, setIsPopupClose,  briefing}) {
+export function C_Navigation({className, data, briefing}) {
     const cx = classNames(classes.root, { [className]: className });
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const burgerRef = useRef(null);
-
+    const store = useStore()
     useEffect(() => {
         window.addEventListener('click', function (evt) {
             if (burgerRef.current) {
-                if (burgerRef.current.classList.contains(classes.showElements) && 
+                if (burgerRef.current.classList.contains(classes.showElements) &&
                     !evt.target.classList.contains(classes.burger) &&
                     !evt.target.classList.contains(classes.elements) &&
                     evt.target.textContent !== 'Проекты') {
-                        setIsMobileMenuOpen(false);
+                    store.switchPopUpFormState()
                 }
             }
         })
-    })
+    },[isMobileMenuOpen])
 
 
     let x1 = null;
@@ -65,9 +66,8 @@ export function C_Navigation({className, data, setIsPopupClose,  briefing}) {
                 onTouchMove={(e) => handleTouchMove(e)}
             >
                 <C_Logo className={classes.C_Logo} />
-                <C_Nav_List className={classes.C_Nav_List} data={data} briefing={ briefing} setIsMobileMenuOpen={setIsMobileMenuOpen} setIsPopupClose={setIsPopupClose}/>
-                <C_MainButton text={"Оставить заявку"} onClick={() => (setIsPopupClose(false), setIsMobileMenuOpen(false))} className={classes.C_MainButton} mode={true} />
-                {/*<c_MainButton text={"Оставить заявку"} onClick={() => console.log('click')} className={classes.c_MainButton} mode={true} />*/}
+                <C_Nav_List className={classes.C_Nav_List} data={data} briefing={ briefing} setIsMobileMenuOpen={setIsMobileMenuOpen}/>
+                <C_MainButton text={"Оставить заявку"} onClick={() => (store.switchPopUpFormState())} className={classes.C_MainButton} mode={true} />
             </div>
         </nav>
     )

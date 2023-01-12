@@ -7,7 +7,8 @@ export const C_Tag = ({className, text}) => {
 
   const cls = classNames(classes.root, {[className]: className});
   return (
-      <a href={window.location.hostname === 'localhost' ? `/news?filter=${text}` : `/news.html?filter=${text}`}>
+      /*<a href={window.location.hostname === 'localhost' ? `/news?filter=${text}` : `/news.html?filter=${text}`}>*/
+      <a href={`/news?filter=${text}`}>
           <div
               className={cls}
           >

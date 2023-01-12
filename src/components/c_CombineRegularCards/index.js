@@ -10,7 +10,7 @@ import { C_Slider } from "../c_Slider";
 
 export const C_CombineRegularCards = ({className, isBtnClose, onBtnCloseClick, isMapMode, data, setIsPopupClose}) => {
     const cls = classNames(classes.root, {[className]: className });
-    const [width, height] = useContext(Context);
+    const {width, height} = useContext(Context);
     const [isCards, setIsCards] = useState(false);
     const cards = useRef();
 
@@ -19,8 +19,6 @@ export const C_CombineRegularCards = ({className, isBtnClose, onBtnCloseClick, i
             entry.forEach(change => {
               if (change.isIntersecting) {
                 setIsCards(true);
-              } else {
-                // setIsCards(false);
               }
             });
         }
@@ -40,7 +38,7 @@ export const C_CombineRegularCards = ({className, isBtnClose, onBtnCloseClick, i
         <div className={cls}>
             {width < sizes.widthDesktopSm
                 ?
-                    <C_Slider centered={true} isBtnClose={isBtnClose} items={rCards} initialSlide={0} slidersSpaceBetween={width < sizes.widthTabletSm ? -225 : width < sizes.widthTabletMd ? 180 : width < sizes.widthNotebook ? 280 : width < sizes.widthDesktopSm ? 80 : -150}/>
+                    <C_Slider isBtnClose={isBtnClose} items={rCards} initialSlide={0} slidersSpaceBetween={width < sizes.widthTabletSm ? -225 : width < sizes.widthTabletMd ? 180 : width < sizes.widthNotebook ? 280 : width < sizes.widthDesktopSm ? 80 : -150}/>
                 :
                     <div className={classNames(classes.cards,{[classes.cardsShown]: isCards})} ref={cards}>
                         {rCards.map((card, i) => {

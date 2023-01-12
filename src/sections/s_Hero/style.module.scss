@@ -712,7 +712,7 @@ $animationTimingHero: ease-out;
 
 @media (min-width: $width-desktop-sm) {
   .root {
-    padding: 95px 0 91px 5px;
+    padding: 0 0 91px 5px;
     grid-template-rows: 69px 179px 97px 132px 91px;
     grid-template-columns: 657px 1fr;
     width: 1207px;
@@ -817,7 +817,7 @@ $animationTimingHero: ease-out;
 
 @media (min-width: $width-desktop-md) {
   .root {
-    padding: 95px 0 91px 5px;
+    padding: 0 0 91px 5px;
     grid-template-rows: 69px 192px 103px 144px 91px;
     grid-template-columns: 657px 1fr;
     width: 1360px;

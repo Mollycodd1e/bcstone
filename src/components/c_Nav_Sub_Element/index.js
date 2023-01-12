@@ -1,9 +1,11 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
+import {useStore} from "../../store/stores";
 
 export const C_Nav_Sub_Element = ({className, el, i, _key, setIsPopupClose}) => {
     const cls = classNames(classes.root, {[className]: className});
     const {name, color, link, anchor} = el;
+    const store = useStore();
 
     return (
         <li
@@ -24,11 +26,10 @@ export const C_Nav_Sub_Element = ({className, el, i, _key, setIsPopupClose}) => 
             </a>) : (
                 <a
                     href={`/`}
-                    // target={"_blank"}
                     className={classes.projectName}
                     onClick={(e) => {
                         e.preventDefault();
-                        setIsPopupClose(false);
+                        store.switchPopUpFormState();
                     }}>
                     <span className={classes.marked}>STONE </span>
                     <span>{name}</span>

@@ -14,17 +14,14 @@
   position: relative;
   padding-bottom: 3.5rem;
 
-  div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"] {
+  div[class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizonta"] {
     bottom: 0 !important;
 
     span[class="swiper-pagination-bullet"] {
-      // width: 8px !important;
-      // height: 8px !important;
       width: 4px !important;
       height: 4px !important;
       border: 3px solid #707070 !important;
       background: transparent !important;
-      // border: 1px solid #2b2c2d !important;
       opacity: 1 !important;
     }
 
