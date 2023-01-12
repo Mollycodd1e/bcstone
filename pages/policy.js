@@ -21,7 +21,7 @@ export default function Policy({page}) {
                     конфиденциальности»), составлена в соответствии с требованиями Федерального закона от 27.07.2006.
                     №152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных Пользователя
                     Сайта,
-                    доменное имя: <a href="https://bc-stone.ru" target="_blank">bc-stone.ru</a> (далее
+                    доменное имя: <a href="https://bc-stone.ru" target="_blank" rel='noreferrer'>bc-stone.ru</a> (далее
                     – «Сайт»), компанией АО "СТОУНХЕДЖ".
                 </p>
                 <div className={policyWrap}>
@@ -305,7 +305,7 @@ export default function Policy({page}) {
                         файл
                         cookie, который сообщает о том, что Пользователь отказался от использования любых других файлов
                         cookie. Более подробную информацию о cookie и принципах их работы можно найти на <a
-                        href="https://ru.wikipedia.org/wiki/Cookie" target="_blank">ресурсе</a>.
+                        href="https://ru.wikipedia.org/wiki/Cookie" target="_blank" rel='noreferrer'>ресурсе</a>.
                     </p>
                 </div>
                 <div className={policyWrap}>
