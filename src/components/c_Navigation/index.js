@@ -15,7 +15,7 @@ export function C_Navigation({className, data, briefing}) {
     useEffect(() => {
         window.addEventListener('click', function (evt) {
             if (burgerRef.current) {
-                if (burgerRef.current.classList.contains(classes.showElements) && 
+                if (burgerRef.current.classList.contains(classes.showElements) &&
                     !evt.target.classList.contains(classes.burger) &&
                     !evt.target.classList.contains(classes.elements) &&
                     evt.target.textContent !== 'Проекты') {
@@ -23,7 +23,7 @@ export function C_Navigation({className, data, briefing}) {
                 }
             }
         })
-    })
+    },[isMobileMenuOpen])
 
 
     let x1 = null;
