@@ -38,7 +38,7 @@ export const C_CombineRegularCards = ({className, isBtnClose, onBtnCloseClick, i
         <div className={cls}>
             {width < sizes.widthDesktopSm
                 ?
-                    <C_Slider isBtnClose={isBtnClose} items={rCards} initialSlide={0} slidersSpaceBetween={width < sizes.widthTabletSm ? -225 : width < sizes.widthTabletMd ? 180 : width < sizes.widthNotebook ? 280 : width < sizes.widthDesktopSm ? 80 : -150}/>
+                    <C_Slider loop={true} isBtnClose={isBtnClose} items={rCards} initialSlide={0} slidersSpaceBetween={width < sizes.widthTabletSm ? -225 : width < sizes.widthTabletMd ? 180 : width < sizes.widthNotebook ? 280 : width < sizes.widthDesktopSm ? 80 : -150}/>
                 :
                     <div className={classNames(classes.cards,{[classes.cardsShown]: isCards})} ref={cards}>
                         {rCards.map((card, i) => {
