@@ -6,6 +6,8 @@ import S_Popup from "../src/sections/s_Popup";
 import {C_FullForm} from "@/components/c_FullForm";
 import MainStore from "../src/store/MainStore";
 import {useRouter} from "next/router";
+import {Form, News} from "@/components/SkeletonComponent";
+import classNames from "classnames";
 
 export default function Page({page}) {
     const router = useRouter();
@@ -42,10 +44,13 @@ export default function Page({page}) {
             {!MainStore.loading.is('pageData') && mainPageData ?
                     <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
                         <C_FullForm data={mainPageData} className={popupClasses.fullFormIndexSection} popup={true}/>
-                    </S_Popup> : 'LOADING'}
+                    </S_Popup>
+                : null}
 
             {!MainStore.loading.is('pageData') && pageData ? <Cc_ComponentGenerator pageData={pageData.data}/>
-                : ''}
+                : <div className={classNames(popupClasses.banners, popupClasses.banners_mode)}>
+                    <News/>
+                </div>}
         </div>
 
     )
