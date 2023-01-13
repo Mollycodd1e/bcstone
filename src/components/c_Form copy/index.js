@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import classes from './style.module.scss';
 
 export const C_FormCopy = ({className, header, description, ready}) => {
@@ -153,8 +153,7 @@ export const C_FormCopy = ({className, header, description, ready}) => {
             <div className={classNames(classes.input__checkbox_wrapper, {[classes.input__checkbox_wrapper_need]: !isCheck && isError})}>
               <input className={'visually-hidden'} type="checkbox" name="data" id="id-data" 
                  onChange={() => onAgreementCheck()}/>
-              <label htmlFor="id-data">Я согласен с <a href={'/policy'}>политикой</a> обработки персональных данных</label>
-              {/*{isError ? <div className={classes.agreement_error}>Обязательное поле</div> : null}*/}
+              <label htmlFor="id-data">Я согласен с <a href={'/policy'} target="_blank" rel="noreferrer">политикой</a> обработки персональных данных</label>
             </div>
           </fieldset>
         </form>

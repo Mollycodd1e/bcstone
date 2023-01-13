@@ -1,7 +1,7 @@
 import InputMask from 'react-input-mask';
 import classNames from 'classnames';
 import classes from './style.module.scss';
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import { useRef } from 'react';
 import { C_MainButton } from '../c_MainButton';
 
@@ -326,7 +326,7 @@ export const C_FullForm = ({className, data, popup}) => {
                             <label
                                 className={classes.checkboxLabel}
                                 htmlFor={popup ? "agreed" : "agreed1"}
-                            >Я согласен с <a href={'/policy'}>политикой</a> обработки персональных данных</label>
+                            >Я согласен с <a href={'/policy'} target="_blank" rel="noreferrer">политикой</a> обработки персональных данных</label>
                         </div>
                     </div>
                 </div>
