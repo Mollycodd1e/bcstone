@@ -3,6 +3,18 @@ import {makePersistable} from 'mobx-persist-store';
 import SiteService from "../api/SiteService";
 import {LoadingState} from "mobx-loading-state";
 
+function lessThanOneHourAgo (date){
+    const HOUR = 1000 * 60 * 60;
+    const anHourAgo = Date.now() - HOUR;
+    return date > anHourAgo;
+}
+function dataExist (data){
+    if( data.length !== 0 || data.updateDt || lessThanOneHourAgo(data.updateDt)){
+        return true
+    }
+    return false
+}
+
 export class mainStore {
     loading = new LoadingState();
     newsData;
@@ -14,7 +26,7 @@ export class mainStore {
         if (typeof window !== 'undefined') {
             makePersistable(this, {
                 name: 'mobxStore',
-                properties: ['newsData', 'pagesData'],
+                properties: ['newsData', 'pagesData','newsDataUpdateDt', 'pagesDataUpdateDt'],
                 storage: window.localStorage
             }).finally();
         }
@@ -26,34 +38,36 @@ export class mainStore {
         if (!this.newsData || this.newsData.length === 0) {
         try {
             this.loading.on('newsData');
-            const data = await this.siteService.getNews();
+            let data = await this.siteService.getNews();
             this.loading.off('newsData');
-           /* runInAction(() => {*/
-                return this.newsData = data;
+            /* runInAction(() => {*/
+                this.newsData = {...{data: data}, ...{updateDt: new Date()}};
+                return this.newsData.data;
             /*})*/
         } catch (error) {
             return this.status = "error";
         }
         } else {
-            return this.newsData;
+            return this.newsData.data;
         }
 
     };
 
     getPagesAsync = async () => {
-        if (!this.pagesData || this.pagesData.length === 0) {
+        if (dataExist(this.pagesData)) {
         try {
             this.loading.on('pageData');
             const data = await this.siteService.getPages();
             this.loading.off('pageData');
            // runInAction(() => {
-                return this.pagesData = data.data;
+            this.pagesData = {...data, ...{updateDt: new Date()}};
+            return this.pagesData;
            // });
         } catch (error) {
             return this.status = "error";
         }
         } else {
-              return this.pagesData;
+              return this.pagesData.data;
           }
     };
 }
