@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 import Head from "next/head";
+import Script from 'next/script'
 import {S_Footer} from "../src/sections/s_Footer";
 import {footerData, navData} from "@/data/mocks";
 import {S_MenuC} from "../src/sections/s_MenuC";
@@ -45,6 +46,8 @@ const BcStone = ({Component, pageProps}) => {
                               copyright={footerData.copyright}/>
                 </div>
             </Context.Provider>
+            <Script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3xsHwkwIhhfEFp3og9dunH0Jw39tsxi0"
+                    strategy="beforeInteractive"/>
         </StoreProvider>
     )
 }

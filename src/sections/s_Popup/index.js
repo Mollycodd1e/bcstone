@@ -17,7 +17,7 @@ const S_Popup = observer(function S_Popup({className, children}) {
             <div className={classes.formWrapper} ref={formRef}>
                 <button className={classes.closeIcon} onClick={(e) =>  store.switchPopUpFormState()}/>
                 {children}
-            </div>  
+            </div>
         </div>
     )
 })
