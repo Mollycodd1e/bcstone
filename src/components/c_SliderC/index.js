@@ -71,7 +71,6 @@ export const C_SliderC = ({className, isBtnClose, items, initialSlide}) => {
                                         <Image src={item} layout='fill' alt="Фото бизнес-центра"/>
                                     </div> 
                                   }
-                                
                              </SwiperSlide>
                         )
                     })
