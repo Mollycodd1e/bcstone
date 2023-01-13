@@ -212,9 +212,21 @@
 
   & div {
     width: 90vw !important;
+    //height: 100vw !important;
   }
 
   & svg {
     width: 90vw !important;
+    //height: 100vw !important;
+  }
+}
+
+.banners_mode {
+  & div {
+    height: 100vw !important;
+  }
+
+  & svg {
+    height: 100vw !important;
   }
 }
