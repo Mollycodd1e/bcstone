@@ -5,7 +5,7 @@ import {Context} from "../../library";
 
 export const locationsMaps = (setIsPopUpVisible) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [width, height] = useContext(Context);
+    const {width, height} = useContext(Context);
     return offices[1].data.map((el, i) => {
         const {id, lat, lng} = el;
             return (

@@ -11,7 +11,7 @@ export const C_PressCard = ({className, newsId, date, image, title, description}
     const cls = classNames(classes.root, {[className]: className});
     const textRef = useRef();
     const [isHover, setHover] = useState(false);
-    const [width, height] = useContext(Context);
+    const {width, height} = useContext(Context);
 
     const onHover = function() {
         setHover(true);
@@ -59,10 +59,10 @@ export const C_PressCard = ({className, newsId, date, image, title, description}
     return (
         <div className={classNames(cls, {[classes.element_show]: isVisible})}>
             <div className={classNames(classes.data, {[classes.data_hover]: isHover})}>{dayOfNews}/{monthOfNews}</div>
-                <a href={window.location.hostname === 'localhost' ? `/news?id=${newsId}` : `/news.html?id=${newsId}`}>
+                <a href={`/news?id=${newsId}`}>
                     <div className={classNames(classes.card_wrapper, {[classes.card_wrapper_hover]: isHover})} onMouseEnter={() => onHover()} onMouseLeave={() => onLeave()}>      
                         <Image src={image} layout='fill' alt={`${cropTitle}`}/>
-                        <button href={window.location.hostname === 'localhost' ? `/news?id=${newsId}` : `/news.html?id=${newsId}`}>Читать</button>
+                        <button href={`/news?id=${newsId}`}>Читать</button>
                     </div>
                 </a>
             <div className={classes.description_wrapper}>

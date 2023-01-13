@@ -31,7 +31,7 @@
   background-color: #acacac;
 }
 
-.card_wrapper button{
+.card_wrapper a{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -108,7 +108,7 @@
     min-height: 152px;
   }
   
-  .card_wrapper button{
+  .card_wrapper a{
     min-height: 154px;
     font-size: 13px;
     line-height: 14px;
@@ -148,7 +148,7 @@
     border-radius: 15px;
   }
 
-  .card_wrapper button{
+  .card_wrapper a{
     min-height: 220px;
     padding-bottom: 2px;
     padding-left: 1px;
@@ -189,7 +189,7 @@
     box-shadow: 0px 3px 5px rgb(0, 0, 0 , 0.75);
   }
 
-  .card_wrapper button{
+  .card_wrapper a{
     min-height: 299px;
     padding-bottom: 6px;
     padding-left: 2px;
@@ -252,7 +252,7 @@
     transition: 0.5s ease-out;
   }
 
-  .card_wrapper button{
+  .card_wrapper a{
     min-height: 283px;
     padding-bottom: 7px;
     border-radius: 15px;
@@ -300,7 +300,7 @@
     min-height: 333px;
   }
 
-  .card_wrapper button{
+  .card_wrapper a{
     min-height: 330px;
     padding-bottom: 10px;
     padding-left: 0;

@@ -1,33 +1,25 @@
 import classNames from 'classnames';
 import classes from './style.module.scss';
-import {useEffect, useRef} from "react";
+import {useRef} from "react";
+import {useStore} from "../../store/stores";
+import {observer} from "mobx-react-lite";
+import useOnClickOutside from "../../hooks/useOnClickOutside";
 
-export const S_Popup = ({className, data, isPopupClose, setIsPopupClose, children}) => {
-    const cls = classNames(classes.root, {[className]: className, [classes.closePopup]:isPopupClose});
+const S_Popup = observer(function S_Popup({className, children}) {
+    const store = useStore()
+    const cls = classNames(classes.root, {[className]: className, [classes.closePopup]:store.popUpFormState});
+    const formRef = useRef();
+    //TODO Проверить почему хук не выгружается
+    useOnClickOutside(formRef, () => store.switchPopUpFormState('false'));
 
-    const ref = useRef(null);
-    const formRef = useRef(null);
-
-    useEffect(() => {
-        ref.current.focus();
-      }, [isPopupClose]);
-
-    const closePopup = (evt) => {
-        if (evt.key === 'Escape') {
-            setIsPopupClose(true);
-        }
-    }
-
-    const closePopupAgain = (evt) => {
-        formRef.current.contains(evt.target) ? null : setIsPopupClose(true);
-    }
-    
     return (
-        <div className={cls} onKeyDown={(e) => closePopup(e)} tabIndex={-1} ref={ref} onClick={(e) => closePopupAgain(e)}>
-            <button className={classes.closeIcon} onClick={() => setIsPopupClose(true)}/>
+        <div className={cls} tabIndex={-1}>
             <div className={classes.formWrapper} ref={formRef}>
-              {children}  
+                <button className={classes.closeIcon} onClick={(e) =>  store.switchPopUpFormState()}/>
+                {children}
             </div>  
         </div>
     )
-}
+})
+
+export default S_Popup

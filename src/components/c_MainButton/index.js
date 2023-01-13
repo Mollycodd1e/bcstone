@@ -12,7 +12,7 @@ export const C_MainButton = ({className, text, onClick, mode = false, link, disa
         {[className]: className,
         [classes.mode]: mode}
     );
-    const [width, height] = useContext(Context);
+    const {width, height} = useContext(Context);
 
     return (
         <>

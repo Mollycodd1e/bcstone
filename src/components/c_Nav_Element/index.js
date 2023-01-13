@@ -4,7 +4,7 @@ import {useState} from "react";
 import Link from 'next/link';
 import {C_Nav_Sub_List} from "../c_Nav_Sub_List";
 
-export const C_Nav_Element = ({className, item, el, _key, briefing, setIsMobileMenuOpen, setIsPopupClose}) => {
+export const C_Nav_Element = ({className, item, el, _key, briefing, setIsMobileMenuOpen}) => {
     const cls = classNames(classes.root, {[className]: className});
 
     const [toggle, setToggle] = useState(false);
@@ -45,7 +45,6 @@ export const C_Nav_Element = ({className, item, el, _key, briefing, setIsMobileM
                     toggle={toggle}
                     setToggle={setToggle}
                     el={el}
-                    setIsPopupClose={setIsPopupClose}
                 />
             
         </li>

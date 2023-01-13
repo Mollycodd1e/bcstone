@@ -34,7 +34,6 @@
 
 .frame {
   width: 100%;
-  //background-image: radial-gradient(rgb(74, 74, 74) 0%, rgb(43, 44, 45) 70%);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -157,22 +156,11 @@
 }
 
 .button {
-  // font-size: 12px;
-  // line-height: 13px;
-  // letter-spacing: -0.01em;
-  // text-align: center;
   color: #000000;
-  // border-radius: 16px;
-  background: #ffffff;
+  background: #ffffff !important;
   border: 1px solid #707070;
-  // border-width: 0;
-  // padding: 10px 23px 9px 23px;
-  // font-family: "Codec Cold News", "Arial", sans-serif;
   margin-top: 30px;
   margin-bottom: 26px;
-  // cursor: pointer;
-  // overflow: hidden;
-  // transition: background-color 1.3s;
 
   &:hover {
     background-color: #2B2C2C !important;
@@ -198,6 +186,32 @@
   padding-left: 19px;
   width: 280px;
   cursor: pointer;
+  position: relative;
+}
+
+@keyframes drill {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 14px;
+  }
+  40% {
+    left: -12px;
+  }
+  60% {
+    left: 10px;
+  }
+  80% {
+    left: -8px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.checkboxWrapperDrilling {
+  animation: drill 1s ease-in-out;
 }
 
 .checkboxLabel {
@@ -206,6 +220,10 @@
   width: 100%;
   position: relative;
   cursor: pointer;
+
+  & a {
+    text-decoration: underline;
+  }
 
   &:before {
     content: "";
@@ -239,7 +257,6 @@
 @media (min-width: $width-mobile-pre-md) {
   .frame {
     width: 100%;
-    //background-image: radial-gradient(rgb(74, 74, 74) 0%, rgb(43, 44, 45) 70%);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -299,10 +316,6 @@
 }
 
 @media (min-width: $width-tablet-sm) {
-  .root {
-    padding: 10px 30px 14px 30px;
-  }
-
   .wrapper_frame {
     border-radius: 20px;
 
@@ -332,7 +345,6 @@
   .fields {
     grid-area: fields;
     padding: 64px 0 0;
-    //padding: calc(1089px - 100vw) 0 0;
     width: 100%;
     max-width: unset;
     position: unset;
@@ -357,7 +369,6 @@
       z-index: 10;
       bottom: -125px;
       left: 38px;
-      //margin-right: 298px;
     }
   }
 
@@ -428,7 +439,6 @@
     font-size: 15px;
     line-height: 16px;
     border-radius: 21.5px;
-    //padding: 10px 39px 10px 39px;
     margin: 0 0 28px 0;
   }
 
@@ -454,10 +464,6 @@
 }
 
 @media (min-width: $width-tablet-md) {
-  .root {
-    padding: 0 52px;
-  }
-
   .frame {
     padding: 86.2px 48px 87.2px;
     grid-template-columns: auto auto;
@@ -465,9 +471,7 @@
   }
 
   .fields {
-    //padding: 88px 0 0;
     padding: calc(1089px - 100vw) 0 0;
-    //width: 388px;
   }
 
   .title {
@@ -555,10 +559,6 @@
 }
 
 @media (min-width: $width-notebook) {
-  .root {
-    padding: 0 51px;
-  }
-
   .frame {
     padding: 94.2px 48px 88.2px 89px;
     grid-column-gap: 160px;
@@ -601,10 +601,6 @@
 }
 
 @media (min-width: $width-desktop-sm) {
-  .root {
-    margin-top: 55px;
-    padding: 0 66px;
-  }
 
   .title {
     font-size: 44px;
@@ -626,7 +622,6 @@
       bottom: 42px;
       left: -243px;
       transform: translateX(-154px) translateY(-144px);
-      //margin-right: 298px;
     }
   }
 
@@ -683,13 +678,8 @@
 
   .frame {
     padding: 136px 220px 125px 190px;
-    //border-radius: 20px;
-    //padding: 134px 394px 125px 203px;
-    // display: grid;
-    // grid-template-columns: 691px 390px;
     grid-column-gap: 140px;
     grid-template-columns: auto auto;
-    // justify-content: center;
   }
 
   .fields {
@@ -707,11 +697,6 @@
 }
 
 @media (min-width: $width-desktop-md) {
-  .root {
-    margin-top: 55px;
-    padding: 0 66px;
-  }
-
   .title {
     font-size: 50px;
     line-height: 54px;
@@ -756,7 +741,7 @@
   }
 
   .frame {
-    padding: 136px 115px 127px 120px;
+    padding: 136px 115px 127px 220px;
     grid-column-gap: 140px;
   }
 
@@ -773,8 +758,6 @@
 
 @media (min-width: $width-desktop-lg) {
   .root {
-    padding: 0 66px;
-    margin-top: 46px;
     max-width: 1920px;
   }
 
@@ -802,9 +785,7 @@
   }
 
   .frame {
-    //border-radius: 20px;
     padding: 136px 185px 127px 285px;
-    //grid-template-columns: 691px 390px;
     grid-column-gap: 112px;
     justify-content: center;
   }

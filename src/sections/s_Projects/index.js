@@ -1,19 +1,16 @@
-import React, {useContext, useRef, useState} from "react";
+import React, {useRef, useState} from "react";
 
 import classes from './style.module.scss';
 import classNames from "classnames";
-import {C_Switcher} from "../../components/c_Switcher";
-import {cardsTitle} from "../../data/helper";
-import {sizes} from "../../data/sizes";
-import {Context} from "../../library";
-import {C_RegularMap} from "../../components/c_RegularMap";
-import {C_CombineRegularCards} from "../../components/c_CombineRegularCards";
-import {C_MainButton} from "../../components/c_MainButton";
+import {C_Switcher} from "@/components/c_Switcher";
+import {C_RegularMap} from "@/components/c_RegularMap";
+import {C_CombineRegularCards} from "@/components/c_CombineRegularCards";
+import {C_MainButton} from "@/components/c_MainButton";
 import { useEffect } from "react";
+import {useStore} from "../../store/stores";
 
 export const S_Projects = ({className, data, setIsPopupClose}) => {
     const [isListView, setIsListView] = useState(true);
-    const [width, height] = useContext(Context);
     const ref = useRef();
     const subRef = useRef();
     const linesRef = useRef(null);
@@ -22,14 +19,12 @@ export const S_Projects = ({className, data, setIsPopupClose}) => {
     const [isTitle, setIsTitle] = useState(false);
     const [isSubTitle, setSubIsTitle] = useState(false);
     const [isSwitcher, setIsSwitcher] = useState(false);
-
+    const store = useStore();
     useEffect(() => {
       function onEntry(entry) {
         entry.forEach(change => {
           if (change.isIntersecting) {
             setIsTitle(true);
-          } else {
-            // setIsTitle(false);
           }
         });
       }
@@ -38,8 +33,6 @@ export const S_Projects = ({className, data, setIsPopupClose}) => {
           entry.forEach(change => {
             if (change.isIntersecting) {
               setSubIsTitle(true);
-            } else {
-              // setSubIsTitle(false);
             }
           });
       }
@@ -48,8 +41,6 @@ export const S_Projects = ({className, data, setIsPopupClose}) => {
           entry.forEach(change => {
             if (change.isIntersecting) {
               setIsLine(true);
-            } else {
-              // setIsLine(false);
             }
           });
       }
@@ -117,7 +108,7 @@ export const S_Projects = ({className, data, setIsPopupClose}) => {
                     />
                 }
                 <div className={classes.btnWrapper} ref={linesRef}>
-                  <C_MainButton text={"Получить предложение"} onClick={() => setIsPopupClose(false)} className={classes.C_MainButton}/>
+                  <C_MainButton text={"Получить предложение"} onClick={() => store.switchPopUpFormState()} className={classes.C_MainButton}/>
                 </div>
             </div>
         </div>

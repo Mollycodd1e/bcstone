@@ -1,7 +1,5 @@
 <?php
-if(isset($_GET['tel']) && $_GET['tel'] != "")
-{
-
+if (isset($_GET['tel']) && $_GET['tel'] != "") {
     $tel = $_GET['tel'];
     header("Location: tel://$tel");
     header('Cache-Control: no-cache, no-store, must-revalidate'); // HTTP 1.1.

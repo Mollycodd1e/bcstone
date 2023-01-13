@@ -9,13 +9,16 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import {Context} from "../../library";
 import { useContext } from 'react';
+import {useStore} from "../../store/stores";
 
 export const S_Bottom_Commercial = ({className, data}) => {
 
     const cls = classNames(classes.root, {[className]: className});
     const data_3 = data.bottom_commercial;
     const ref= useRef();
-    const [width, height] = useContext(Context);
+    const store = useStore();
+    const isWebp = store.isWebp;
+    const {width, height} = useContext(Context);
     const [isLine, setIsLine] = useState(false);
     const allCards = [];
     let cuttedElements = data_3 && data_3.list.length !==0 && data_3.list.slice(0, data_3.config.shownElements);
@@ -24,7 +27,7 @@ export const S_Bottom_Commercial = ({className, data}) => {
     })
 
     cuttedElements.forEach(item => {
-        allCards.push(<C_SavingCard item={item}  image={item.pic.src} title={item.title} description={item.content}/>)
+        allCards.push(<C_SavingCard item={item}  image={isWebp ? item.pic.srcWebp : item.pic.srcWebp} title={item.title} description={item.content}/>)
     });
 
     useEffect(() => {
@@ -51,9 +54,9 @@ export const S_Bottom_Commercial = ({className, data}) => {
     return (
         <div className={classes.wrapRoot}>
             <div className={classNames(cls,{[classes.lineShown]: isLine})} ref={ref}>
-                <h2>Сохраните сбережения в&nbsp;недвижимости</h2>
+                <h2>Сохраните сбережения в недвижимости</h2>
                 <div className={classes.sliderWrapper}>
-                    <C_Slider className={classes.saving} items={allCards} initialSlide={0} slidesPerView = {width >= sizes.widthTabletSm ? 2 : 3}
+                    <C_Slider className={classes.saving} items={allCards} initialSlide={0} slidesPerView={2}
                     slidersSpaceBetween={
                         (width >= sizes.widthMobilePreMd && width < sizes.widthTabletSm) ? -225 :
                         (width >= sizes.widthTabletSm && width < sizes.widthTabletMd) ? 15 :

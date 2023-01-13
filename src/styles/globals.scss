@@ -4,7 +4,7 @@ html {
   /* 10px */
   //font-size: 62.5%;
   font-size: 10px;
-  scroll-behavior: smooth;
+  //scroll-behavior: smooth;
 }
 
 html,
@@ -40,10 +40,12 @@ img {
 }
 
 .common_top_bg {
-  display: flex;
+  //display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+}
+.gray {
   background: radial-gradient(#fff 0%, #808080 300%);
 }
 

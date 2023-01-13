@@ -5,9 +5,8 @@ import classNames from "classnames";
 import Image from 'next/image';
 import {Context} from "../../library";
 import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper';
-import {Swiper, SwiperSlide} from "swiper/swiper-react.cjs.js";
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { sizes } from "../../data/sizes";
-// // install Swiper modules
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
 export const C_SliderC = ({className, isBtnClose, items, initialSlide}) => {
@@ -15,7 +14,7 @@ export const C_SliderC = ({className, isBtnClose, items, initialSlide}) => {
 
     const [my_swiper, set_my_swiper] = useState({});
     const [slide, setSlide] = useState(0);
-    const [width, height] = useContext(Context);
+    const {width, height} = useContext(Context);
 
     const [swiperInstance, setSwiperInstance] = useState(null);
 
@@ -72,7 +71,6 @@ export const C_SliderC = ({className, isBtnClose, items, initialSlide}) => {
                                         <Image src={item} layout='fill' alt="Фото бизнес-центра"/>
                                     </div> 
                                   }
-                                
                              </SwiperSlide>
                         )
                     })
