@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "build-static": "next build && next export",
-    "start-prod": "next start -p 8000",
-    "start-dev": "next start -p 8001",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {

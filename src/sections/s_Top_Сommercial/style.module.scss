@@ -70,14 +70,14 @@
 
 @media (min-width: $width-notebook) {
   .root {
-    margin: 94px 0 55px 0;
+    margin: 94px auto 94px;
     padding: 0 69px;
   }
 }
 
 @media (min-width: $width-desktop-sm) {
   .root {
-    margin: 5px 0 5px 0;
+    margin: 94px auto 31px;
     padding: 0 41px 60px;
     max-width: 1364px;
     animation: deskElementsToTop;
@@ -87,7 +87,7 @@
 
 @media (min-width: $width-desktop-md) {
   .root {
-    margin: 31px 0 5px 0;
+    margin: 31px auto;
     padding: 0 41px 60px;
     max-width: 1556px;
   }
@@ -95,7 +95,7 @@
 
 @media (min-width: $width-desktop-lg) {
   .root {
-    margin: 22px 0 5px 0;
+    margin: 30px auto 0;
     max-width: 1615px;
   }
 }
