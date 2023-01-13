@@ -22,6 +22,7 @@ const BcStone = ({Component, pageProps}) => {
     useEffect(() => {
         TagManager.initialize({ gtmId: 'GTM-WZJD3HM' });
     }, []);
+    //TODO вывести все эелементы из div common_top_bg
     return (
         <StoreProvider {...pageProps}>
             <Context.Provider value={size}>
