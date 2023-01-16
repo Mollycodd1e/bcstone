@@ -1,6 +1,9 @@
 import React from "react"
 import ContentLoader from "react-content-loader"
 
+const mainColor = "#D7D7D7";
+const animationColor = "#EFEDED";
+
 export const News = (props) => {
     //НОВОСТЬ
     return (
@@ -9,8 +12,8 @@ export const News = (props) => {
         width={773}
         height={956}
         viewBox="0 0 773 956"
-        backgroundColor="#f3f3f3"
-        foregroundColor="#ecebeb"
+        backgroundColor={mainColor}
+        foregroundColor={animationColor}
         {...props}
     >
         <rect x="13" y="0" width="93" height="30" rx="15" ry="15"/>
@@ -45,8 +48,8 @@ export const Form = (props) => {
             width={761}
             height={485}
             viewBox="0 0 761 485"
-            backgroundColor="#f3f3f3"
-            foregroundColor="#ecebeb"
+            backgroundColor={mainColor}
+            foregroundColor={animationColor}
             {...props}
         >
             <rect x="113" y="37" width="505" height="69" rx="3"/>
@@ -68,14 +71,13 @@ export const Form = (props) => {
 export const MainBanner = (props) => {
     return (
         //Баннер на главной старнице
-        <div style={{ width: "1207px"}}>
         <ContentLoader
             speed={2}
            /* width={810}
             height={530}*/
             viewBox="0 0 810 530"
-            backgroundColor="#8D8D8D"
-            foregroundColor="#f3f3f3"
+            backgroundColor={mainColor}
+            foregroundColor={animationColor}
             {...props}
         >
             <rect x="8" y="0" width="171" height="14" rx="3"/>
@@ -97,7 +99,6 @@ export const MainBanner = (props) => {
             <rect x="556" y="401" width="223" height="118" rx="21"/>
 
         </ContentLoader>
-        </div>
     )
 }
 
@@ -109,8 +110,8 @@ export const BusinessCenters = (props) => {
             width={1248}
             height={686}
             viewBox="0 0 1248 686"
-            backgroundColor="#f3f3f3"
-            foregroundColor="#ecebeb"
+            backgroundColor={mainColor}
+            foregroundColor={animationColor}
             {...props}
         >
             <rect x="238" y="0" width="774" height="65" rx="3"/>
@@ -141,8 +142,8 @@ export const Mobile = (props) => {
             width={535}
             height={411}
             viewBox="0 0 535 411"
-            backgroundColor="#f3f3f3"
-            foregroundColor="#ecebeb"
+            backgroundColor={mainColor}
+            foregroundColor={animationColor}
             {...props}
         >
             <rect x="0" y="0" width="505" height="69"/>
@@ -167,8 +168,8 @@ export const AboutUs = (props) => {
             height={656}
 
             viewBox="0 0 1095 656"
-            backgroundColor="#f3f3f3"
-            foregroundColor="#ecebeb"
+            backgroundColor={mainColor}
+            foregroundColor={animationColor}
             {...props}
         >
             <rect x="148" y="0" width="623" height="80"/>
@@ -212,8 +213,8 @@ export const PressCentre = (props) => {
             height={514}
 
             viewBox="0 0 1177 514"
-            backgroundColor="#f3f3f3"
-            foregroundColor="#ecebeb"
+            backgroundColor={mainColor}
+            foregroundColor={animationColor}
             {...props}
         >
             <rect x="299" y="0" width="593" height="65"/>
