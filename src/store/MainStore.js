@@ -35,7 +35,7 @@ export class mainStore {
     }
 
     async getNewsAsync() {
-        if (!this.newsData || this.newsData.length === 0) {
+        if (this.dataExist(this.newsData) !== true) {
             try {
                 this.loading.on('newsData');
                 let data = await this.siteService.getNews();
