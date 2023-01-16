@@ -3,20 +3,12 @@ import {makePersistable} from 'mobx-persist-store';
 import SiteService from "../api/SiteService";
 import {LoadingState} from "mobx-loading-state";
 
-function lessThanOneHourAgo (date){
-    const HOUR = 1000 * 60 * 60;
-    const anHourAgo = Date.now() - HOUR;
-    return date > anHourAgo;
-}
-function dataExist (data){
-    if( data.length !== 0 || data.updateDt || lessThanOneHourAgo(data.updateDt)){
-        return true
-    }
-    return false
-}
+let version = require('package.json').version;
+
 
 export class mainStore {
     loading = new LoadingState();
+    version;
     newsData;
     pagesData;
     status = "initial";
@@ -26,27 +18,36 @@ export class mainStore {
         if (typeof window !== 'undefined') {
             makePersistable(this, {
                 name: 'mobxStore',
-                properties: ['newsData', 'pagesData','newsDataUpdateDt', 'pagesDataUpdateDt'],
+                properties: ['version', 'newsData', 'pagesData', 'newsDataUpdateDt', 'pagesDataUpdateDt'],
                 storage: window.localStorage
-            }).finally();
+            }).finally(() => {
+                    if (!this.version || this.version < version) {
+                        this.version = version
+                        console.log('Новая версия приложения:', version)
+                        this.getNewsAsync().then(()=>console.log('Новости обновлены'));
+                        this.getPagesAsync().then(()=>console.log('Страницы обновлены'));
+                    }
+                }
+            );
         }
-        this.siteService = new SiteService();
 
+        this.siteService = new SiteService();
     }
 
     async getNewsAsync() {
         if (!this.newsData || this.newsData.length === 0) {
-        try {
-            this.loading.on('newsData');
-            let data = await this.siteService.getNews();
-            this.loading.off('newsData');
-            /* runInAction(() => {*/
-                this.newsData = {...{data: data}, ...{updateDt: new Date()}};
+            try {
+                this.loading.on('newsData');
+                let data = await this.siteService.getNews();
+                this.loading.off('newsData');
+                /* runInAction(() => {*/
+                this.newsData = {...{data: data}, ...{updateDt: Date.now()}};
                 return this.newsData.data;
-            /*})*/
-        } catch (error) {
-            return this.status = "error";
-        }
+                /*})*/
+            } catch (error) {
+                console.log('Ошибка при загрузке Новостей!')
+                return this.status = "error";
+            }
         } else {
             return this.newsData.data;
         }
@@ -54,22 +55,35 @@ export class mainStore {
     };
 
     getPagesAsync = async () => {
-        if (dataExist(this.pagesData)) {
-        try {
-            this.loading.on('pageData');
-            const data = await this.siteService.getPages();
-            this.loading.off('pageData');
-           // runInAction(() => {
-            this.pagesData = {...data, ...{updateDt: new Date()}};
-            return this.pagesData;
-           // });
-        } catch (error) {
-            return this.status = "error";
-        }
+        if (this.dataExist(this.pagesData) !== true) {
+            try {
+                this.loading.on('pageData');
+                const data = await this.siteService.getPages();
+                this.loading.off('pageData');
+                // runInAction(() => {
+                this.pagesData = {...data, ...{updateDt: Date.now()}};
+                return this.pagesData.data;
+                // });
+            } catch (error) {
+                console.log('Ошибка при загрузке Страниц!')
+                return this.status = "error";
+            }
         } else {
-              return this.pagesData.data;
-          }
+            return this.pagesData.data;
+        }
     };
+
+    updTimeCheck(date) {
+        const time = 1000 * 60 * 60;
+        const checkTime = Date.now() + time;
+        return (date < checkTime);
+    }
+
+    dataExist(data) {
+        if (typeof data !== 'undefined' && this.updTimeCheck(data.updateDt)) {
+            return true
+        }
+    }
 }
 
 const MainStore = new mainStore();
