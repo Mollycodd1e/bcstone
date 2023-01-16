@@ -1,14 +1,9 @@
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 import {useRouter} from 'next/router'
 
 import classes from './styleNews.module.scss';
-import popupClasses from "../src/sections/s_Popup/style.module.scss";
-import {S_MenuC} from "../src/sections/s_MenuC";
-import {C_FullForm} from "@/components/c_FullForm";
-import {S_Popup} from "../src/sections/s_Popup";
 import classNames from 'classnames';
 import MainStore from "../src/store/MainStore";
-import {S_Menu} from "../src/sections/s_Menu";
 
 const News = ({id}) => {
     const router = useRouter();
@@ -19,14 +14,7 @@ const News = ({id}) => {
     const [filters, setFilters] = useState([]);
 
     useEffect(() => {
-
-
         let mounted = true;
-        MainStore.getPagesAsync().then(r => {
-            if (mounted) {
-                //setPageData(r.find(x => x.id === 2))
-            }
-        })
         MainStore.getNewsAsync().then(r => {
             if (mounted) {
                 setNewsData(r)
@@ -34,7 +22,6 @@ const News = ({id}) => {
         })
         return () => mounted = false;
     }, [])
-
 
 
     const filteredNews = (news, filtersArr) => {
@@ -52,8 +39,6 @@ const News = ({id}) => {
 
         return newNews;
     }
-
-    const [isPopupClose, setIsPopupClose] = useState(true);
 
     useEffect(() => {
         newsData?.forEach((el) => {
@@ -73,22 +58,6 @@ const News = ({id}) => {
 
     return (
         <>
-
-            {/*
-                        <div className={`common_top_bg + ${classes.common_top_bg_news}`} ref={topMenuEl} id="top">
-                            <S_MenuC menuOnTop={menuOnTop} data={mainPageData[0]} setIsPopupClose={setIsPopupClose}
-                                     briefing={true}/>
-                            <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
-                                <C_FullForm data={mainPageData[0]} className={popupClasses.fullFormIndexSection}
-                                            popup={true}/>
-                            </S_Popup>
-                        </div>
-                        */}
-            {/*<div className={`common_top_bg + ${classes.common_top_bg_news}`} id="top">
-                <S_Menu data={pageData} setIsPopupClose={setIsPopupClose}/>
-                <S_Popup isPopupClose={isPopupClose} setIsPopupClose={setIsPopupClose}>
-                    <C_FullForm data={pageData} className={classes.fullFormIndexSection} popup={true}/>
-                </S_Popup></div>*/}
             <div className={classes.newsWrapper}>
                 <div className={classes.title}>
                     Новости STONE
@@ -192,7 +161,7 @@ const News = ({id}) => {
     )
 }
 
-News.getInitialProps = async ({ query }) => {
+News.getInitialProps = async ({query}) => {
     const {id} = query
     return {id}
 }
