@@ -369,7 +369,7 @@
   }
   
   .card_wrapper_hover {
-    margin-bottom: 25px;
+    //margin-bottom: 25px;
   }
 
   .card_wrapper button{
@@ -411,7 +411,7 @@
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
-    width: 476px;
+    //width: 476px;
     flex-flow: column;
   }
 
@@ -423,9 +423,10 @@
   }
   
   .data_hover {
-    position: relative;
-    transform: unset;
-    transition: 0;
+    //position: relative;
+    //transform: unset;
+    //transition: 0;
+    transform: translateY(-16px);
   }
 
   .card_wrapper {
