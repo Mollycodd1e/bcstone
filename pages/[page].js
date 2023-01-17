@@ -6,8 +6,17 @@ import S_Popup from "../src/sections/s_Popup";
 import {C_FullForm} from "@/components/c_FullForm";
 import MainStore from "../src/store/MainStore";
 import {useRouter} from "next/router";
-import {Form, News} from "@/components/SkeletonComponent";
+import {
+    AboutUs,
+    BusinessCenters,
+    Form,
+    FormMobile,
+    MainBanner,
+    MainBannerMobile, MobileNews,
+    News, OfficeRetailMobile
+} from "@/components/SkeletonComponent";
 import classNames from "classnames";
+import useWindowSize from "../src/hooks/useWindowSize";
 
 export default function Page({page}) {
     const router = useRouter();
@@ -15,6 +24,7 @@ export default function Page({page}) {
     const [mainPageData, setMainPageData] = useState(null);
     const [newsData, setNewsData] = useState(null);
     const [isPopupClose, setIsPopupClose] = useState(true);
+    const size = useWindowSize();
 
     useEffect(() => {
         let mounted = true;
@@ -48,9 +58,17 @@ export default function Page({page}) {
                 : null}
 
             {!MainStore.loading.is('pageData') && pageData ? <Cc_ComponentGenerator pageData={pageData.data}/>
-                : <div className={classNames(popupClasses.banners, popupClasses.banners_mode)}>
-                    <News/>
-                </div>}
+                : <>
+                    {size.width >= 768 ? (
+                        <div className={classNames(popupClasses.banners, popupClasses.banners_mode)}>
+                            <News/>
+                        </div>
+                    ):(
+                        <div className={classNames(popupClasses.banners, popupClasses.banners_mode, popupClasses.banners_mobile)}>
+                            <MobileNews/>
+                        </div>
+                    )}
+                </>}
         </div>
 
     )

@@ -14,8 +14,17 @@ import {S_Bottom_Commercial} from '../src/sections/s_Bottom_Commercial';
 import {S_PressCenter} from '../src/sections/s_PressCenter';
 import {C_SliderVideoPopup} from '@/components/c_SliderVideoPopup';
 import MainStore from "../src/store/MainStore";
-import {AboutUs, BusinessCenters, Form, MainBanner, PressCentre} from "@/components/SkeletonComponent";
+import {
+    AboutUs,
+    BusinessCenters,
+    Form, FormMobile,
+    MainBanner,
+    MainBannerMobile, OfficeRetailMobile,
+    PressCentre
+} from "@/components/SkeletonComponent";
 import useWindowSize from "../src/hooks/useWindowSize";
+import classNames from "classnames";
+import popupClasses from "../src/sections/s_Popup/style.module.scss";
 
 function Home(props) {
     const size = useWindowSize();
@@ -41,7 +50,6 @@ function Home(props) {
 
     const [isPopupClose, setIsPopupClose] = useState(true);
     const [isAboutPopupClose, setIsAboutPopupClose] = useState(true);
-
     return (
                 <>
                     {!MainStore.loading.is('pageData') && pageData ?
@@ -64,12 +72,22 @@ function Home(props) {
                             <S_FullForm data={pageData}/>
                             <S_Bottom_Commercial data={pageData}/>
                         </>
-                        : <div className={classes.banners}>
-                            <MainBanner/>
-                            <BusinessCenters/>
-                            <Form/>
-                            <AboutUs/>
-                          </div>}
+                        : <>
+                            {size && size.width >= 768 ?
+                                <div className={classes.banners}>
+                                    <MainBanner/>
+                                    <BusinessCenters/>
+                                    <Form/>
+                                    <AboutUs/>
+                                </div>
+                            :
+                                <div className={classNames(classes.banners, classes.banners_mobile)}>
+                                    <MainBannerMobile/>
+                                    <FormMobile/>
+                                    <OfficeRetailMobile/>
+                                </div>
+                            }
+                          </>}
                     {!MainStore.loading.is('newsData') && newsData ?
                             <S_PressCenter data={newsData}/>
                          : <div className={classes.banners}>
@@ -77,6 +95,6 @@ function Home(props) {
                            </div> }
                 </>
     )
-};
+}
 
 export default Home

@@ -134,7 +134,7 @@ export const BusinessCenters = (props) => {
     )
 }
 
-export const Mobile = (props) => {
+export const MobileNews = (props) => {
     return (
         //МОБИЛКА
         <ContentLoader
@@ -243,6 +243,90 @@ export const PressCentre = (props) => {
             <rect x="885" y="368" width="292" height="21"/>
             <rect x="885" y="396" width="292" height="21"/>
             <rect x="885" y="424" width="165" height="21"/>
+        </ContentLoader>
+    )
+}
+
+export const MainBannerMobile = (props) => {
+    return (
+        //Баннер на главной старнице - mobile
+        <ContentLoader
+            speed={2}
+            width={320}
+            height={518}
+            viewBox="0 0 320 518"
+            backgroundColor={mainColor}
+            foregroundColor={animationColor}
+            {...props}
+        >
+            <rect x="0" y="0" width="182" height="11"/>
+            <rect x="0" y="24" width="228" height="51"/>
+            <rect x="0" y="91" width="320" height="2"/>
+            <rect x="0" y="109" width="320" height="200"/>
+            <rect x="0" y="327" width="320" height="2"/>
+            <rect x="0" y="343" width="294" height="14"/>
+            <rect x="0" y="363" width="136" height="14"/>
+            <circle cx="4.75" cy="393.75" r="1.5"/>
+            <rect x="14" y="388" width="136" height="12"/>
+            <circle cx="4.75" cy="414.75" r="1.5"/>
+            <rect x="14" y="409" width="99" height="12"/>
+            <circle cx="4.75" cy="432.75" r="1.5"/>
+            <rect x="14" y="427" width="167" height="12"/>
+            <circle cx="4.75" cy="453.75" r="1.5"/>
+            <rect x="14" y="448" width="265" height="12"/>
+            <rect x="0" y="482" width="195" height="36" rx="26"/>
+        </ContentLoader>
+    )
+}
+
+export const FormMobile = (props) => {
+    return (
+        //ФОРМА - mobile
+        <ContentLoader
+            speed={2}
+            width={320}
+            height={417}
+            viewBox="0 0 320 417"
+            backgroundColor={mainColor}
+            foregroundColor={animationColor}
+            {...props}
+        >
+            <rect x="3" y="0" width="172" height="15"/>
+            <rect x="3" y="24" width="152" height="15"/>
+            <rect x="3" y="48" width="180" height="13"/>
+            <rect x="3" y="99" width="180" height="12"/>
+            <rect x="3" y="117" width="135" height="8"/>
+            <rect x="0" y="147" width="320" height="36" rx="26"/>
+            <rect x="0" y="200" width="320" height="36" rx="26"/>
+            <rect x="0" y="250" width="320" height="36" rx="26"/>
+            <rect x="0" y="334" width="195" height="36" rx="26"/>
+            <circle cx="9" cy="404" r="6"/>
+            <rect x="19" y="397" width="196" height="8"/>
+            <rect x="19" y="409" width="129" height="8"/>
+        </ContentLoader>
+    )
+}
+
+export const OfficeRetailMobile = (props) => {
+    return (
+        //офисы ритейл - mobile
+        <ContentLoader
+            speed={2}
+            width={320}
+            height={580}
+            viewBox="0 0 320 580"
+            backgroundColor={mainColor}
+            foregroundColor={animationColor}
+            {...props}
+        >
+            <rect x="54" y="57" width="159" height="169" rx="23"/>
+            <rect x="147" y="308" width="159" height="169" rx="23"/>
+            <circle cx="273" cy="153" r="26"/>
+            <circle cx="102" cy="400" r="26"/>
+            <rect x="47" y="245" width="175" height="28"/>
+            <rect x="140" y="495" width="175" height="28"/>
+            <rect x="242" y="202" width="65" height="10"/>
+            <rect x="70" y="450" width="65" height="10"/>
         </ContentLoader>
     )
 }
