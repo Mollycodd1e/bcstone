@@ -14,12 +14,12 @@ import {S_PressCenter} from '../src/sections/s_PressCenter';
 import {C_SliderVideoPopup} from '@/components/c_SliderVideoPopup';
 import MainStore from "../src/store/MainStore";
 import {
-    AboutUs,
+    AboutUs, AboutUsMobile,
     BusinessCenters,
     Form, FormMobile,
     MainBanner,
     MainBannerMobile, OfficeRetailMobile,
-    PressCentre
+    PressCentre, PressCentreMobile
 } from "@/components/SkeletonComponent";
 import classNames from "classnames";
 import {sizes} from "@/data/sizes";
@@ -76,6 +76,7 @@ function Home(props) {
                                     <MainBannerMobile/>
                                     <FormMobile/>
                                     <OfficeRetailMobile/>
+                                    <AboutUsMobile/>
                                 </div>
                             :
                                 <div className={classes.banners}>
@@ -88,11 +89,19 @@ function Home(props) {
                           </>}
                     {!MainStore.loading.is('newsData') && newsData ?
                             <S_PressCenter data={newsData}/>
-                         : <div className={classes.banners}>
-                            <PressCentre/>
-                           </div> }
+                         : <>
+                            {width < sizes.widthTabletSm ?
+                                <div className={classNames(classes.banners, classes.banners_mobile)}>
+                                    <PressCentreMobile/>
+                                </div> :
+                                <div className={classes.banners}>
+                                    <PressCentre/>
+                                </div>
+                            }
+                            </>
+                         }
                 </>
     )
-}
+};
 
 export default Home

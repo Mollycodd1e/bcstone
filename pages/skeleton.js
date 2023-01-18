@@ -5,8 +5,13 @@ import {
     BusinessCenters,
     AboutUs,
     PressCentre,
-    Mobile,
-    MainBannerMobile, FormMobile, OfficeRetailMobile, MobileNews
+    MainBannerMobile,
+    FormMobile,
+    OfficeRetailMobile,
+    MobileNews,
+    AboutUsMobile,
+    PressCentreMobile,
+    NewsMobile
 } from "@/components/SkeletonComponent";
 
 export default function Skeleton() {
@@ -18,10 +23,13 @@ export default function Skeleton() {
             <BusinessCenters/>
             <AboutUs/>
             <PressCentre/>
+            <PressCentreMobile/>
             <MobileNews/>
             <MainBannerMobile/>
             <FormMobile/>
             <OfficeRetailMobile/>
+            <AboutUsMobile/>
+            <NewsMobile/>
         </>
     )
 }
