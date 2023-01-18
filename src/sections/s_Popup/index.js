@@ -12,7 +12,7 @@ const S_Popup = observer(function S_Popup({className, children}) {
     //TODO Проверить почему хук не выгружается
     useOnClickOutside(formRef, (event) => {
         store.switchPopUpFormState('false')
-        event.preventDefault();
+        event.stopImmediatePropagation();
     });
 
     return (
