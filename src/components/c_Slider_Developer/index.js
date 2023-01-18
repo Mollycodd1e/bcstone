@@ -1,16 +1,23 @@
-import React, {useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import classes from './style.module.scss';
 import classNames from "classnames";
 
 import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import {Slides} from "../../library";
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 //СЛАЙДЕР На Главной
 export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, onBtnCloseClick, setIsPopUpVisible, pagination, slidersSpaceBetween = -225, slidesPerView = 3, loop, onClick, onChange}) => {
     const cls = classNames(classes.root, { [className]: className });
     const [selectedSlide, setSelectedSlide] = useState(0);
-    const [my_swiper, set_my_swiper] = useState({});
-    const [slide, setSlide] = useState(null);
+    const [swiper, setSwiper] = React.useState();
+    //TODO  вынести toSlide в пропс useEffetc перенести в c_SliderVideoAbout
+    let [slideIndex, setSlideIndex] = useContext(Slides);
+    useEffect(()=>{
+        if (swiper) {
+            swiper.slideToLoop(slideIndex);
+        }
+    }, [slideIndex])
 
     const numSlider = (selected, nums) => {
         return (
@@ -22,10 +29,11 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
             </div>
         )
     }
-    
+
+
     return (
         <div className={cls}>
-            <button className={classes.swiper_button_prev} onClick={() => (my_swiper.slidePrev())}/>
+            <button className={classes.swiper_button_prev} onClick={() => (swiper.slidePrev())}/>
             <Swiper
                 pagination={pagination}
                 onClick={onClick}
@@ -44,9 +52,7 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
                     prevEl: '.swiper_button_prev',
                     nextEl: '.swiper_button_next',
                 }}
-                onInit={(evt) => {
-                    set_my_swiper(evt)
-                }}
+                onInit={(evt) => setSwiper(evt)}
                 loop={true}
             >   
                 {items.map((item, i) => {
@@ -58,7 +64,7 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
                 })
                 }
             </Swiper>
-            <div className={classes.swiper_button_next} onClick={() => (my_swiper.slideNext())}/>
+            <div className={classes.swiper_button_next} onClick={() => (swiper.slideNext())}/>
 
             {numSlider(selectedSlide, items)}
         </div>

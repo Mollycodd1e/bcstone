@@ -1,53 +1,30 @@
-import React, {useState, useRef, useEffect} from "react";
+import React, {useRef, useEffect, useContext} from "react";
 import useOnScreen from "../../hooks/useOnScreen";
 import classes from './style.module.scss';
 import classNames from "classnames";
 
 import SwiperCore, {Navigation, Pagination, A11y, Autoplay} from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
+import {Slides} from "../../library";
 
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 //СЛАЙДЕР Попап
-export const C_SliderPopup = ({
-                                  className,
-                                  isBtnClose,
-                                  items,
-                                  initialSlide,
-                                  pagination,
-                                  slidersSpaceBetween,
-                                  slidesPerView = 1,
-                                  loop
-                              }) => {
+export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, pagination, slidersSpaceBetween,
+                                  slidesPerView = 1, loop}) => {
 
     const cls = classNames(classes.root, {[className]: className});
-    const [selectedSlide, setSelectedSlide] = useState(0);
-    const [my_swiper, set_my_swiper] = useState({});
-
+    let [slideIndex, setSlideIndex] = useContext(Slides);
     const [swiper, setSwiper] = React.useState();
     const ref = useRef(null);
     const isVisible = useOnScreen(ref);
     useEffect(
         () => {
             if (swiper && !isVisible) {
-
                 swiper.slideToLoop(initialSlide);
                 swiper.updateSlides()
             }
         }
     )
-
-
-    /* const [slide, setSlide] = useState(0);*/
-    const numSlider = (selected, nums) => {
-        return (
-            <div className={classes.numbersWrapper}>
-                {nums.map((el, i) => {
-                    const paginationClass = selected - 1 === i ? 'regular__selected' : 'regular';
-                    return <div key={i} className={classes[`${paginationClass}`]}/>
-                })}
-            </div>
-        )
-    }
 
     return (
         <div className={cls} ref={ref}>
@@ -66,14 +43,7 @@ export const C_SliderPopup = ({
                     prevEl: '.swiper_button_prev',
                     nextEl: '.swiper_button_next',
                 }}
-                onInit={(evt) => {
-                    /*set_my_swiper(evt)*/
-                    setSwiper(evt)
-                }}
-                onSwiper={(evt) => {
-
-
-                }}
+                onInit={(evt) => setSwiper(evt)}
                 pagination={{
                     el: `.${classes.numbersWrapper}`,
                     bulletClass: `${classes.regular}`,
@@ -82,6 +52,9 @@ export const C_SliderPopup = ({
                     renderBullet: (index, className) => {
                         return '<span class="' + className + '"></span>';
                     },
+                }}
+                onSlideChange={(evt)=>{
+                    setSlideIndex(evt.realIndex)
                 }}
                 loop={true}
             >

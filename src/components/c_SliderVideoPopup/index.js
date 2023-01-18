@@ -2,7 +2,7 @@ import React, {useContext, useEffect, useRef, useState} from "react";
 import classes from './style.module.scss';
 import classNames from "classnames";
 import {Context, Slides} from "../../library";
-import {sizes} from "../../data/sizes";
+import {sizes} from "@/data/sizes";
 import {C_SliderPopup} from "../c_Slider_Popup";
 import { C_SliderPopupElement } from "../c_SliderPopupElement";
 import {useStore} from "../../store/stores";

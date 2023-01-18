@@ -1,10 +1,8 @@
 import classes from './style.module.scss';
 import classNames from "classnames";
 import React, { useRef, useState } from "react";
-import {C_ContentAbout} from "../../components/c_ContentAbout";
+import {C_ContentAbout} from "@/components/c_ContentAbout";
 import { useEffect } from 'react';
-// import {C_MainButton} from "../../components/c_MainButton";
-// import {sizes} from "../../data/sizes";
 
 export const S_About = ({className, menuOnTop, data, width, setIsAboutPopupClose, popup, setIsPopupClose}) => {
     const cls = classNames(classes.root, {[classes.menuOnTop]:menuOnTop, [className]: className});
@@ -17,22 +15,16 @@ export const S_About = ({className, menuOnTop, data, width, setIsAboutPopupClose
     useEffect(() => {
       function onEntryTitle(entry) {
         entry.forEach(change => {
-          if (change.isIntersecting) {
-            setIsAboutTitle(true);
-          } else {
-            // setIsAboutTitle(false);
-          }
-        });
+            if (change.isIntersecting) {
+                setIsAboutTitle(true);
+            }
+        })
       }
 
       function onEntryLine(entry) {
           entry.forEach(change => {
-            if (change.isIntersecting) {
-              setIsAboutLine(true);
-            } else {
-              // setIsAboutLine(false);
-            }
-          });
+              if (change.isIntersecting) setIsAboutLine(true);
+          })
       }
 
       let options = { rootMargin: '0px', threshold: [0] };
