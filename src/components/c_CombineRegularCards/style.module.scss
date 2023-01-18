@@ -116,13 +116,13 @@
       transition: 1s ease-out;
 
       & div:nth-child(#{$i}) {
-      animation: Jumpin #{$i * 1.5}s cubic-bezier(.9,.03,.69,.22);
+      animation: Jumpin #{$i * 0.4}s cubic-bezier(.9,.03,.69,.22);
       transition: 0.5s ease-out;
       animation-fill-mode: forwards; 
 
       & div[class*='CardInfo'] {
         transform: translateY(0);
-        transition: #{$i * 0.40}s ease-out;
+        transition: #{$i * 0.4}s ease-out;
       }
       }
     }
