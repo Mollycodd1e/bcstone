@@ -411,8 +411,8 @@
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
-    //width: 476px;
-    flex-flow: column;
+    width: 472px;
+    flex-direction: row;
   }
 
   .data {
@@ -426,7 +426,7 @@
     //position: relative;
     //transform: unset;
     //transition: 0;
-    transform: translateY(-16px);
+    transform: translateY(0);
   }
 
   .card_wrapper {
@@ -468,6 +468,7 @@
   }
   
   .description_wrapper {
+    width: 100%;
     margin-right: -20px;
     width: 345px;
     margin-top: 5px;
