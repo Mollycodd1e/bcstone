@@ -9,7 +9,7 @@ export const C_MainMarker = ({className, onClick, imgDefault, imgActive, isPinAc
         <div className={cls} onClick={onClick}
              style={{ backgroundImage:  `url("${isPinActive ? imgActive : imgDefault}")`}}
         >
-            {pointCount}
+            <div>{pointCount}</div>
         </div>
     )
 }

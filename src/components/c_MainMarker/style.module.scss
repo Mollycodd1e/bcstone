@@ -18,7 +18,7 @@
   line-height: 29px;
   text-align: left;
   color: #2b2c2c;
-  padding: 8px 0 0 12.5px;
+  padding: 0;
   // transition: 0.5s ease-out;
 
   // &:hover {
@@ -26,4 +26,13 @@
   //   //box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.84);
   //   transition: 0.5s ease-out;
   // }
+
+  // Для центрирования цифр
+  div {
+    width: 42px;
+    height: 100%;
+    line-height: 37px;
+    padding-top: 5px;
+    text-align: center;
+  }
 }
