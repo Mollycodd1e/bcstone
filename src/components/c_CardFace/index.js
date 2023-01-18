@@ -2,7 +2,7 @@ import classes from './style.module.scss';
 import classNames from "classnames";
 import {Context} from "../../library";
 import {sizes} from "@/data/sizes";
-import {useContext} from "react";
+import React, {useContext} from "react";
 import {useStore} from "../../store/stores";
 
 export const С_CardFace = ({className, logo, alt, img, img_not_retina, img2x, imgMob, img2xMob, extraInfo, link, setIsPopupClose, imgWebp, img_not_retina_Webp}) => {
@@ -33,7 +33,7 @@ export const С_CardFace = ({className, logo, alt, img, img_not_retina, img2x, i
 
             </div> : 
 
-            <a href={link}> 
+            <a href={link} target={"_blank"} rel="noreferrer">
                 <div className={cls}>
                 {width < sizes.widthTabletMd ? 
                     <div

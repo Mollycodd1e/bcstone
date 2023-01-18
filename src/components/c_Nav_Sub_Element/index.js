@@ -14,9 +14,10 @@ export const C_Nav_Sub_Element = ({className, el, i, _key, setIsPopupClose}) => 
         >{link.length != 0 ?
             (<a
                 href={`${link}`}
-                // target={"_blank"}
+                target={"_blank"}
+                rel="noreferrer"
                 className={classes.projectName}
-                onClick={() => setTimeout(() => document.location.assign(`${link}`), 500)}>
+                /*onClick={() => setTimeout(() => document.location.assign(`${link}`), 500)}*/>
                 <span className={classes.marked}>STONE </span>
                 <span>{name}</span>
                 <span
