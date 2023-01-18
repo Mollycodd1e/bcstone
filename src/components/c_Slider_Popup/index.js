@@ -23,8 +23,7 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, pagin
                 swiper.slideToLoop(initialSlide);
                 swiper.updateSlides()
             }
-        }
-    ,[initialSlide])
+        })
 
     return (
         <div className={cls} ref={ref}>
@@ -36,7 +35,7 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, pagin
                 spaceBetween={slidersSpaceBetween}
                 /* centeredSlides={true}*/
                 /* pagination={true}*/
-                initialSlide={initialSlide}
+                initialSlide={0}
                 className={classNames(classes.swiper, {[classes.swiperMode]: isBtnClose})}
                 loopPreventsSlide={false}
                 navigation={{
@@ -54,8 +53,8 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, pagin
                     },
                 }}
                 onSlideChange={(evt)=>{
-                    console.log('изменен слайдер на в поп-апе')
-                        // setSlideIndex(evt.realIndex)
+                    console.log('изменен слайдер в поп-апе')
+                    if (isVisible) {setSlideIndex(evt.realIndex)}
                 }}
                 loop={true}
             >

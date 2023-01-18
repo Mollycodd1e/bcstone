@@ -13,11 +13,11 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
     const [swiper, setSwiper] = React.useState();
     //TODO  вынести toSlide в пропс useEffetc перенести в c_SliderVideoAbout
     let [slideIndex, setSlideIndex] = useContext(Slides);
-    /*useEffect(()=>{
+    useEffect(()=>{
         if (swiper) {
             swiper.slideToLoop(slideIndex);
         }
-    }, [slideIndex])*/
+    }, [slideIndex])
 
     const numSlider = (selected, nums) => {
         return (

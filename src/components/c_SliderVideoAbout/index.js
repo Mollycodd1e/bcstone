@@ -10,7 +10,6 @@ import {C_SliderPopupElement} from "../c_SliderPopupElement";
 import {Swiper} from "swiper/react";
 import {useStore} from "../../store/stores";
 
-
 export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIsVideo, popup}) => {
     const cls = classNames(classes.root, {[className]: className});
     const {width, height} = useContext(Context);
@@ -53,12 +52,6 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIs
                                          img={isWebp && el.srcWebp ? el.srcWebp : el.src}/>
         }}
     })
-
-    useEffect(() => {
-        if (width < sizes.widthTabletMd) {
-
-        }
-    },[width])
     
     useEffect(() => {
         video.isVisible ? setIsVideo(true) : setIsVideo(false);
@@ -73,9 +66,6 @@ export const C_SliderVideoAbout = ({className, data, setIsAboutPopupClose, setIs
                     className={classes.С_Slider}
                     isBtnClose={false}
                     items={elements}
-              /*      onInit={(evt) => {
-                        set_my_swiper(evt)
-                    }}*/
                     slidesPerView={width < sizes.widthTabletSm ? 3 : 1}
                     slidersSpaceBetween={width < sizes.widthMobilePreMd ? -215 : width < sizes.widthTabletSm ? -120 : 0}
                     loop={true}
