@@ -71,33 +71,35 @@ function Home(props) {
                             <S_Bottom_Commercial data={pageData}/>
                         </>
                         : <>
-                            {width < sizes.widthTabletSm ?
-                                <div className={classNames(classes.banners, classes.banners_mobile)}>
-                                    <MainBannerMobile/>
-                                    <FormMobile/>
-                                    <OfficeRetailMobile/>
-                                    <AboutUsMobile/>
-                                </div>
-                            :
-                                <div className={classes.banners}>
-                                    <MainBanner/>
-                                    <BusinessCenters/>
-                                    <Form/>
-                                    <AboutUs/>
-                                </div>
+                            {
+                                width ? <>{width < sizes.widthTabletSm ?
+                                    <div className={classNames(classes.banners, classes.banners_mobile)}>
+                                        <MainBannerMobile/>
+                                        <FormMobile/>
+                                        <OfficeRetailMobile/>
+                                        <AboutUsMobile/>
+                                    </div>
+                                    :
+                                    <div className={classes.banners}>
+                                        <MainBanner/>
+                                        <BusinessCenters/>
+                                        <Form/>
+                                        <AboutUs/>
+                                    </div>
+                                }</>: ''
                             }
                           </>}
                     {!MainStore.loading.is('newsData') && newsData ?
                             <S_PressCenter data={newsData}/>
                          : <>
-                            {width < sizes.widthTabletSm ?
+                            {width ? <>{width < sizes.widthTabletSm ?
                                 <div className={classNames(classes.banners, classes.banners_mobile)}>
                                     <PressCentreMobile/>
                                 </div> :
                                 <div className={classes.banners}>
                                     <PressCentre/>
                                 </div>
-                            }
+                            }</>: ''}
                             </>
                          }
                 </>
