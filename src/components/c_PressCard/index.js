@@ -62,7 +62,7 @@ export const C_PressCard = ({className, newsId, date, image, title, description}
                 <a href={`/news?id=${newsId}`}>
                     <div className={classNames(classes.card_wrapper, {[classes.card_wrapper_hover]: isHover})} onMouseEnter={() => onHover()} onMouseLeave={() => onLeave()}>      
                         <Image src={image} layout='fill' alt={`${cropTitle}`}/>
-                        <button href={`/news?id=${newsId}`}>Читать</button>
+                        <button>Читать</button>
                     </div>
                 </a>
             <div className={classes.description_wrapper}>

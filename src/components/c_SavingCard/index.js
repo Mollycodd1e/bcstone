@@ -59,7 +59,7 @@ export const C_SavingCard = ({className, image, description, title, item}) => {
                         :
                             <Image src={retina ? image : image} layout='fill' alt={'коммерция'}/>
                         }
-                        <a href={`/${link}`}>Подробнее</a>
+                        <button>Подробнее</button>
                         <div className={classes.card_shadow}/>
                     </div>
                 </a>
