@@ -1,6 +1,5 @@
-import Head from 'next/head';
-import {useEffect, useState} from "react";
-import {Slides} from "../src/library";
+import {useContext, useEffect, useState} from "react";
+import {Context, Slides} from "../src/library";
 import {S_Hero} from "../src/sections/s_Hero";
 import {S_Top_Commercial} from "../src/sections/s_Top_Сommercial";
 import {S_Projects} from "../src/sections/s_Projects";
@@ -14,11 +13,19 @@ import {S_Bottom_Commercial} from '../src/sections/s_Bottom_Commercial';
 import {S_PressCenter} from '../src/sections/s_PressCenter';
 import {C_SliderVideoPopup} from '@/components/c_SliderVideoPopup';
 import MainStore from "../src/store/MainStore";
-import {AboutUs, BusinessCenters, Form, MainBanner, PressCentre} from "@/components/SkeletonComponent";
-import useWindowSize from "../src/hooks/useWindowSize";
+import {
+    AboutUs, AboutUsMobile,
+    BusinessCenters,
+    Form, FormMobile,
+    MainBanner,
+    MainBannerMobile, OfficeRetailMobile,
+    PressCentre, PressCentreMobile
+} from "@/components/SkeletonComponent";
+import classNames from "classnames";
+import {sizes} from "@/data/sizes";
 
 function Home(props) {
-    const size = useWindowSize();
+    const {width, height} = useContext(Context);
     let [slideIndex, setSlideIndex] = useState(0);
 
     const [pageData, setPageData] = useState(null);
@@ -41,7 +48,6 @@ function Home(props) {
 
     const [isPopupClose, setIsPopupClose] = useState(true);
     const [isAboutPopupClose, setIsAboutPopupClose] = useState(true);
-
     return (
                 <>
                     {!MainStore.loading.is('pageData') && pageData ?
@@ -53,7 +59,7 @@ function Home(props) {
                             <S_Top_Commercial data={pageData}/>
                             <S_Projects data={pageData} className={"projects-bg"} setIsPopupClose={setIsPopupClose}/>
                             <Slides.Provider value={[slideIndex, setSlideIndex]}>
-                                <S_About data={pageData} width={size.width} setIsPopupClose={setIsPopupClose}
+                                <S_About data={pageData} width={width} setIsPopupClose={setIsPopupClose}
                                          setIsAboutPopupClose={setIsAboutPopupClose} popup={isAboutPopupClose}/>
                                 <C_SliderVideoPopup data={pageData}
                                                     sliderVideoPopupContent={pageData.about_company.variableContent}
@@ -64,17 +70,36 @@ function Home(props) {
                             <S_FullForm data={pageData}/>
                             <S_Bottom_Commercial data={pageData}/>
                         </>
-                        : <div className={classes.banners}>
-                            <MainBanner/>
-                            <BusinessCenters/>
-                            <Form/>
-                            <AboutUs/>
-                          </div>}
+                        : <>
+                            {width < sizes.widthTabletSm ?
+                                <div className={classNames(classes.banners, classes.banners_mobile)}>
+                                    <MainBannerMobile/>
+                                    <FormMobile/>
+                                    <OfficeRetailMobile/>
+                                    <AboutUsMobile/>
+                                </div>
+                            :
+                                <div className={classes.banners}>
+                                    <MainBanner/>
+                                    <BusinessCenters/>
+                                    <Form/>
+                                    <AboutUs/>
+                                </div>
+                            }
+                          </>}
                     {!MainStore.loading.is('newsData') && newsData ?
                             <S_PressCenter data={newsData}/>
-                         : <div className={classes.banners}>
-                            <PressCentre/>
-                           </div> }
+                         : <>
+                            {width < sizes.widthTabletSm ?
+                                <div className={classNames(classes.banners, classes.banners_mobile)}>
+                                    <PressCentreMobile/>
+                                </div> :
+                                <div className={classes.banners}>
+                                    <PressCentre/>
+                                </div>
+                            }
+                            </>
+                         }
                 </>
     )
 };

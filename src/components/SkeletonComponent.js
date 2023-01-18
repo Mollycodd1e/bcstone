@@ -44,6 +44,7 @@ export const Form = (props) => {
     return (
         //ФОРМА
         <ContentLoader
+            id={'developer'}
             speed={2}
             width={761}
             height={485}
@@ -106,6 +107,7 @@ export const BusinessCenters = (props) => {
     return (
         //Баннер на главной старнице
         <ContentLoader
+            id={'offers'}
             speed={2}
             width={1248}
             height={686}
@@ -134,7 +136,7 @@ export const BusinessCenters = (props) => {
     )
 }
 
-export const Mobile = (props) => {
+export const MobileNews = (props) => {
     return (
         //МОБИЛКА
         <ContentLoader
@@ -208,10 +210,10 @@ export const PressCentre = (props) => {
     return (
         //ПРЕСС_ЦЕНТР
         <ContentLoader
+            id={'press-center'}
             speed={2}
             width={1177}
             height={514}
-
             viewBox="0 0 1177 514"
             backgroundColor={mainColor}
             foregroundColor={animationColor}
@@ -243,6 +245,180 @@ export const PressCentre = (props) => {
             <rect x="885" y="368" width="292" height="21"/>
             <rect x="885" y="396" width="292" height="21"/>
             <rect x="885" y="424" width="165" height="21"/>
+        </ContentLoader>
+    )
+}
+
+export const MainBannerMobile = (props) => {
+    return (
+        //Баннер на главной старнице - mobile
+        <ContentLoader
+            speed={2}
+            width={320}
+            height={518}
+            viewBox="0 0 320 518"
+            backgroundColor={mainColor}
+            foregroundColor={animationColor}
+            {...props}
+        >
+            <rect x="0" y="0" width="182" height="11"/>
+            <rect x="0" y="24" width="228" height="51"/>
+            <rect x="0" y="91" width="320" height="2"/>
+            <rect x="0" y="109" width="320" height="200"/>
+            <rect x="0" y="327" width="320" height="2"/>
+            <rect x="0" y="343" width="294" height="14"/>
+            <rect x="0" y="363" width="136" height="14"/>
+            <circle cx="4.75" cy="393.75" r="1.5"/>
+            <rect x="14" y="388" width="136" height="12"/>
+            <circle cx="4.75" cy="414.75" r="1.5"/>
+            <rect x="14" y="409" width="99" height="12"/>
+            <circle cx="4.75" cy="432.75" r="1.5"/>
+            <rect x="14" y="427" width="167" height="12"/>
+            <circle cx="4.75" cy="453.75" r="1.5"/>
+            <rect x="14" y="448" width="265" height="12"/>
+            <rect x="0" y="482" width="195" height="36" rx="26"/>
+        </ContentLoader>
+    )
+}
+
+export const FormMobile = (props) => {
+    return (
+        //ФОРМА - mobile
+        <ContentLoader
+            id={'developer'}
+            speed={2}
+            width={320}
+            height={417}
+            viewBox="0 0 320 417"
+            backgroundColor={mainColor}
+            foregroundColor={animationColor}
+            {...props}
+        >
+            <rect x="3" y="0" width="172" height="15"/>
+            <rect x="3" y="24" width="152" height="15"/>
+            <rect x="3" y="48" width="180" height="13"/>
+            <rect x="3" y="99" width="180" height="12"/>
+            <rect x="3" y="117" width="135" height="8"/>
+            <rect x="0" y="147" width="320" height="36" rx="26"/>
+            <rect x="0" y="200" width="320" height="36" rx="26"/>
+            <rect x="0" y="250" width="320" height="36" rx="26"/>
+            <rect x="0" y="334" width="195" height="36" rx="26"/>
+            <circle cx="9" cy="404" r="6"/>
+            <rect x="19" y="397" width="196" height="8"/>
+            <rect x="19" y="409" width="129" height="8"/>
+        </ContentLoader>
+    )
+}
+
+export const OfficeRetailMobile = (props) => {
+    return (
+        //офисы ритейл - mobile
+        <ContentLoader
+            speed={2}
+            width={320}
+            height={580}
+            viewBox="0 0 320 580"
+            backgroundColor={mainColor}
+            foregroundColor={animationColor}
+            {...props}
+        >
+            <rect x="54" y="57" width="159" height="169" rx="23"/>
+            <rect x="147" y="308" width="159" height="169" rx="23"/>
+            <circle cx="273" cy="153" r="26"/>
+            <circle cx="102" cy="400" r="26"/>
+            <rect x="47" y="245" width="175" height="28"/>
+            <rect x="140" y="495" width="175" height="28"/>
+            <rect x="242" y="202" width="65" height="10"/>
+            <rect x="70" y="450" width="65" height="10"/>
+        </ContentLoader>
+    )
+}
+
+export const AboutUsMobile = (props) => {
+    return (
+        //о нас, девелопер - mobile
+        <ContentLoader
+            speed={2}
+            width={320}
+            height={560}
+            viewBox="0 0 320 560"
+            backgroundColor={mainColor}
+            foregroundColor={animationColor}
+            {...props}
+        >
+            <rect x="0" y="0" width="320" height="34"/>
+            <rect x="5.14" y="72" width="309.71" height="204" rx="7"/>
+            <rect x="13.38" y="320" width="287.07" height="34"/>
+            <rect x="94.66" y="377" width="118.33" height="13"/>
+            <rect x="31.9" y="398" width="244.89" height="13"/>
+            <rect x="31.9" y="419" width="244.89" height="13"/>
+            <rect x="31.9" y="440" width="244.89" height="13"/>
+            <rect x="40.13" y="486" width="232.54" height="10"/>
+            <rect x="20.58" y="502" width="270.61" height="10"/>
+            <rect x="12.35" y="518" width="283.99" height="10"/>
+            <rect x="14.41" y="534" width="283.99" height="10"/>
+            <rect x="71" y="550" width="170.8" height="10"/>
+        </ContentLoader>
+    )
+}
+
+export const PressCentreMobile = (props) => {
+    return (
+        //пресс-центр - mobile
+        <ContentLoader
+            id={'press-center'}
+            speed={2}
+            width={320}
+            height={419}
+            viewBox="0 0 320 419"
+            backgroundColor={mainColor}
+            foregroundColor={animationColor}
+            {...props}
+        >
+            <rect x="11" y="0" width="166" height="34"/>
+            <rect x="40" y="41" width="177" height="34"/>
+            <rect x="0" y="109" width="39" height="12"/>
+            <rect x="0" y="130" width="227" height="152" rx="7"/>
+            <rect x="0" y="299" width="195" height="13"/>
+            <rect x="0" y="319" width="200" height="13"/>
+            <rect x="0" y="344" width="224" height="9"/>
+            <rect x="0" y="357" width="224" height="9"/>
+            <rect x="0" y="370" width="123" height="9"/>
+            <circle cx="98" cy="415" r="4"/>
+            <circle cx="113" cy="415" r="4"/>
+            <circle cx="128" cy="415" r="4"/>
+        </ContentLoader>
+    )
+}
+
+export const NewsMobile = (props) => {
+    return (
+        //новости - mobile
+        <ContentLoader
+            speed={2}
+            width={320}
+            height={263}
+            viewBox="0 0 320 263"
+            backgroundColor={mainColor}
+            foregroundColor={animationColor}
+            {...props}
+        >
+            <rect x="13" y="0" width="191" height="18"/>
+            <rect x="13" y="25" width="325" height="2"/>
+            <rect x="13" y="32" width="277" height="10"/>
+            <rect x="13" y="49" width="289" height="10"/>
+            <rect x="13" y="81" width="47" height="6"/>
+            <rect x="13" y="93" width="311" height="10"/>
+            <rect x="13" y="110" width="202" height="10"/>
+            <rect x="13" y="110" width="202" height="10"/>
+            <rect x="13" y="143" width="47" height="6"/>
+            <rect x="13" y="154" width="262" height="10"/>
+            <rect x="13" y="171" width="298" height="10"/>
+            <rect x="13" y="188" width="160" height="10"/>
+            <rect x="12" y="222" width="66" height="17" rx="12"/>
+            <rect x="88" y="222" width="94" height="17" rx="12"/>
+            <rect x="12" y="246" width="104" height="17" rx="12"/>
+            <rect x="127" y="246" width="97" height="17" rx="12"/>
         </ContentLoader>
     )
 }

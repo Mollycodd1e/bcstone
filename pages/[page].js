@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import classes from './styleNews.module.scss';
 import popupClasses from "../src/sections/s_Popup/style.module.scss";
 import {Cc_ComponentGenerator} from "../src/complexComponents/cc_ComponentGenerator";
@@ -6,8 +6,19 @@ import S_Popup from "../src/sections/s_Popup";
 import {C_FullForm} from "@/components/c_FullForm";
 import MainStore from "../src/store/MainStore";
 import {useRouter} from "next/router";
-import {Form, News} from "@/components/SkeletonComponent";
+import {
+    AboutUs,
+    BusinessCenters,
+    Form,
+    FormMobile,
+    MainBanner,
+    MainBannerMobile, MobileNews,
+    News, OfficeRetailMobile
+} from "@/components/SkeletonComponent";
 import classNames from "classnames";
+import useWindowSize from "../src/hooks/useWindowSize";
+import {Context} from "../src/library";
+import {sizes} from "@/data/sizes";
 
 export default function Page({page}) {
     const router = useRouter();
@@ -15,6 +26,7 @@ export default function Page({page}) {
     const [mainPageData, setMainPageData] = useState(null);
     const [newsData, setNewsData] = useState(null);
     const [isPopupClose, setIsPopupClose] = useState(true);
+    const {width, height} = useContext(Context);
 
     useEffect(() => {
         let mounted = true;
@@ -48,9 +60,17 @@ export default function Page({page}) {
                 : null}
 
             {!MainStore.loading.is('pageData') && pageData ? <Cc_ComponentGenerator pageData={pageData.data}/>
-                : <div className={classNames(popupClasses.banners, popupClasses.banners_mode)}>
-                    <News/>
-                </div>}
+                : <>
+                    {width < sizes.widthTabletSm ? (
+                        <div className={classNames(popupClasses.banners, popupClasses.banners_mode, popupClasses.banners_mobile)}>
+                            <MobileNews/>
+                        </div>
+                    ):(
+                        <div className={classNames(popupClasses.banners, popupClasses.banners_mode)}>
+                            <News/>
+                        </div>
+                    )}
+                </>}
         </div>
 
     )
