@@ -10,7 +10,10 @@ const S_Popup = observer(function S_Popup({className, children}) {
     const cls = classNames(classes.root, {[className]: className, [classes.closePopup]:store.popUpFormState});
     const formRef = useRef();
     //TODO Проверить почему хук не выгружается
-    useOnClickOutside(formRef, () => store.switchPopUpFormState('false'));
+    useOnClickOutside(formRef, (event) => {
+        store.switchPopUpFormState('false')
+        event.preventDefault();
+    });
 
     return (
         <div className={cls} tabIndex={-1}>
