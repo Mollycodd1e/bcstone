@@ -24,7 +24,7 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, pagin
                 swiper.updateSlides()
             }
         }
-    )
+    ,[initialSlide])
 
     return (
         <div className={cls} ref={ref}>
@@ -54,7 +54,8 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, pagin
                     },
                 }}
                 onSlideChange={(evt)=>{
-                    setSlideIndex(evt.realIndex)
+                    console.log('изменен слайдер на в поп-апе')
+                        // setSlideIndex(evt.realIndex)
                 }}
                 loop={true}
             >
