@@ -21,32 +21,12 @@
   align-items: center;
 }
 
-// .cards {
-//   //width: 100%;
-//   width: 1788px;
-//   //overflow: hidden;
-//   //display: flex;
-//   //flex-wrap: wrap;
-//   //flex-direction: row;
-//   //align-items: center;
-//   justify-content: center;
-
-//   display: grid;
-//   grid-template-rows: repeat(2, auto);
-//   grid-template-columns: repeat(3, auto);
-//   grid-column-gap: 90px;
-//   grid-row-gap: 48px;
-// }
-
 @media (min-width: $width-tablet-sm) {
   .root {
-    //display: flex;
-    // overflow: unset;
     margin: 0 1px 18px 1px;
     width: 100%;
     flex-direction: row;
     align-items: unset;
-    //justify-content: space-between;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -54,13 +34,11 @@
 
 @media (min-width: $width-tablet-md) {
   .root {
-    //display: flex;
     overflow: unset;
     width: 100%;
     margin: 0 1px 18px 1px;
     flex-direction: row;
     align-items: unset;
-    //justify-content: space-between;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -86,9 +64,10 @@
     grid-template-columns: repeat(3, auto);
     grid-column-gap: 35px;
     grid-row-gap: 23px;
-    
+
     & div {
       opacity: 0;
+
       & div[class*='CardInfo'] {
         transform: translateY(180px);
       }
@@ -96,11 +75,20 @@
   }
 
   @keyframes Jumpin {
-    0% { opacity: 0; scale: 1; }
-    30% { opacity: 1; scale: 1}
-    100% { opacity: 1; scale: 1}
+    0% {
+      opacity: 0;
+      scale: 1;
+    }
+    30% {
+      opacity: 1;
+      scale: 1
+    }
+    100% {
+      opacity: 1;
+      scale: 1
+    }
   }
-  
+
   @keyframes fromBottomText {
     0% {
       transform: translateY(120px);
@@ -110,23 +98,24 @@
     }
   }
 
-  @for $i from 0 through 10 {
-    .cardsShown {
-      opacity: 1;
-      transition: 1s ease-out;
 
+  .cardsShown {
+    opacity: 1;
+    transition: 1.15s ease-out;
+    @for $i from 0 through 6 {
       & div:nth-child(#{$i}) {
-      animation: Jumpin #{$i * 0.4}s cubic-bezier(.9,.03,.69,.22);
-      transition: 0.5s ease-out;
-      animation-fill-mode: forwards; 
+        animation: Jumpin #{$i * 0.37}s cubic-bezier(.9, .03, .69, .22);
+        transition: 0.5s ease-out;
+        animation-fill-mode: forwards;
 
-      & div[class*='CardInfo'] {
-        transform: translateY(0);
-        transition: #{$i * 0.4}s ease-out;
-      }
+        & div[class*='CardInfo'] {
+          transform: translateY(0);
+          transition: #{$i * 0.5}s ease-out;
+        }
       }
     }
   }
+
 }
 
 @media (min-width: $width-desktop-md) {
@@ -152,7 +141,7 @@
     //flex-direction: row;
     //align-items: center;
     justify-content: center;
-  
+
     display: grid;
     grid-template-rows: repeat(2, auto);
     grid-template-columns: repeat(3, auto);
