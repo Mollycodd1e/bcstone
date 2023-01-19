@@ -44,7 +44,6 @@ export const C_SliderDeveloper = ({className, isBtnClose, items, initialSlide, o
                 initialSlide={0}
                 onSlideChange={
                     (data) => {
-                        console.log('изменен слайдер на главной')
                         setSelectedSlide(data.realIndex);
                         onChange(data);
                     }
