@@ -98,7 +98,7 @@
 
         & div[class*='CardInfo'] {
           transform: translateY(0);
-          transition: #{130}ms ease-out #{$i*191.6}ms;
+          transition: #{500}ms ease-out #{$i*191.6}ms;
         }
       }
     }
