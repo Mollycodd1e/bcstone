@@ -64,7 +64,7 @@
       opacity: 0;
 
       & div[class*='CardInfo'] {
-        transform: translateY(180px);
+        transform: translateY(35px);
       }
     }
   }
@@ -73,10 +73,6 @@
     0% {
       opacity: 0;
       scale: 1;
-    }
-    30% {
-      opacity: 1;
-      scale: 1
     }
     100% {
       opacity: 1;
@@ -96,13 +92,13 @@
   .cardsShown {
     @for $i from 0 through 6 {
       & div:nth-child(#{$i}) {
-        animation: Jumpin 2s cubic-bezier(.9, .03, .69, .22) #{$i*0.20}s;
+        animation: Jumpin 370ms cubic-bezier(.9, .03, .69, .22) #{$i*191.6}ms;
         transition: .5s ease-out;
         animation-fill-mode: forwards;
 
         & div[class*='CardInfo'] {
           transform: translateY(0);
-          transition: #{.5}s ease-out #{$i*0.20}s;
+          transition: #{130}ms ease-out #{$i*191.6}ms;
         }
       }
     }
