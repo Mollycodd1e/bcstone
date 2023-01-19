@@ -11,7 +11,7 @@ import {
     MobileNews,
     AboutUsMobile,
     PressCentreMobile,
-    NewsMobile
+    NewsMobile, TextPicture
 } from "@/components/SkeletonComponent";
 
 export default function Skeleton() {
@@ -30,6 +30,7 @@ export default function Skeleton() {
             <OfficeRetailMobile/>
             <AboutUsMobile/>
             <NewsMobile/>
+            <TextPicture/>
         </>
     )
 }

@@ -422,3 +422,23 @@ export const NewsMobile = (props) => {
         </ContentLoader>
     )
 }
+
+export const TextPicture = (props) => {
+    return (
+        //текст и картинка - mobile
+        <ContentLoader
+            speed={2}
+            width={320}
+            height={296}
+            viewBox="0 0 320 296"
+            backgroundColor={mainColor}
+            foregroundColor={animationColor}
+            {...props}
+        >
+            <rect x="0" y="0" width="320" height="10"/>
+            <rect x="0" y="17" width="320" height="10"/>
+            <rect x="0" y="34" width="149" height="10"/>
+            <rect x="0" y="61" width="320" height="235"/>
+        </ContentLoader>
+    )
+}
