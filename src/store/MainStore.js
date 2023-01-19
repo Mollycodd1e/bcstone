@@ -20,22 +20,14 @@ export class mainStore {
                 name: 'mobxStore',
                 properties: ['version', 'newsData', 'pagesData', 'newsDataUpdateDt', 'pagesDataUpdateDt'],
                 storage: window.localStorage
-            }).finally(() => {
-                    if (!this.version || this.version < version) {
-                        this.version = version
-                        console.log('Новая версия приложения:', version)
-                        this.getNewsAsync().then(()=>console.log('Новости обновлены'));
-                        this.getPagesAsync().then(()=>console.log('Страницы обновлены'));
-                    }
-                }
-            );
+            }).finally(() => {});
         }
 
         this.siteService = new SiteService();
     }
 
     async getNewsAsync() {
-        if (this.dataExist(this.newsData) !== true) {
+        if (this.dataExist(this.newsData) !== true || this.newVersion() === true) {
             try {
                 this.loading.on('newsData');
                 let data = await this.siteService.getNews();
@@ -55,7 +47,7 @@ export class mainStore {
     };
 
     getPagesAsync = async () => {
-        if (this.dataExist(this.pagesData) !== true) {
+        if (this.dataExist(this.pagesData) !== true || this.newVersion() === true) {
             try {
                 this.loading.on('pageData');
                 const data = await this.siteService.getPages();
@@ -83,6 +75,9 @@ export class mainStore {
         if (typeof data !== 'undefined' && this.updTimeCheck(data.updateDt)) {
             return true
         }
+    }
+    newVersion() {
+        if (!this.version || this.version < version) return true;
     }
 }
 
