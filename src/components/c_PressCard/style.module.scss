@@ -403,7 +403,12 @@
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
-    flex-flow: column;
+
+    //width: 476px;
+    width: 472px;
+    // flex-flow: column;
+    flex-direction: row;
+
   }
 
   .data {
@@ -414,7 +419,13 @@
   }
   
   .data_hover {
-    transform: translateY(-16px);
+
+    //position: relative;
+    //transform: unset;
+    //transition: 0;
+    // transform: translateY(-16px);
+    transform: translateY(0);
+
   }
 
   .card_wrapper {
@@ -458,6 +469,7 @@
   .description_wrapper {
     margin-right: -20px;
     width: 345px;
+    
     margin-top: 5px;
     padding-bottom: 39px;
     padding-left: 0;

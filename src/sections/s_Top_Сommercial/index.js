@@ -26,7 +26,7 @@ export const S_Top_Commercial = ({className, data}) => {
                 ? <div className={cls}>{elements}</div>
                 : <div className={classes.sliderWrapper}>
                     <C_Slider className={classes.C_Slider} isBtnClose={true} items={elements} initialSlide={0}
-                              slidersSpaceBetween={-70} loop={true} />
+                              slidersSpaceBetween={-225} loop={true} />
                 </div>
             }
         </>

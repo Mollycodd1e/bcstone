@@ -58,14 +58,14 @@ export const S_Bottom_Commercial = ({className, data}) => {
                 <div className={classes.sliderWrapper}>
                     <C_Slider className={classes.saving} items={allCards} initialSlide={0} slidesPerView={2}
                     slidersSpaceBetween={
-                        (width >= sizes.widthMobilePreMd && width < sizes.widthTabletSm) ? -225 :
+                        // (width >= sizes.widthMobilePreMd && width < sizes.widthTabletSm) ? -225 :
                         (width >= sizes.widthTabletSm && width < sizes.widthTabletMd) ? 15 :
                         (width >= sizes.widthTabletMd && width < sizes.widthNotebook) ? -130 :
                         (width >= sizes.widthNotebook && width < sizes.widthDesktopSm) ? 89 :
                         (width >= sizes.widthDesktopSm && width < sizes.widthDesktopMd) ? -288 :
                         (width >= sizes.widthDesktopMd && width < sizes.widthDesktopLg) ? -137 :
                         width >= sizes.widthDesktopLg ? -137 :
-                        -215}
+                        -475}
                     saving={true} centered={true}/>
                 </div>
             </div>

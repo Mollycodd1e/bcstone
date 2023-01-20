@@ -30,6 +30,7 @@
   //padding-top: 3rem;
   //align-items: center;
   justify-items: center;
+  padding-top: 16px;
   padding-bottom: 45px;
 }
 
@@ -219,6 +220,7 @@
     border: 1px solid #707070;
     border-radius: 20px;
     margin: 40px 30px 40px;
+    padding-top: 0;
     padding-bottom: 39px !important;
 
     &::after {
