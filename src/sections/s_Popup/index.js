@@ -9,10 +9,14 @@ const S_Popup = observer(function S_Popup({className, children}) {
     const store = useStore()
     const cls = classNames(classes.root, {[className]: className, [classes.closePopup]:store.popUpFormState});
     const formRef = useRef();
-    //TODO Проверить почему хук не выгружается
     useOnClickOutside(formRef, (event) => {
-        store.switchPopUpFormState('false')
-        event.preventDefault();
+        if(!store.popUpFormState) {
+            store.switchPopUpFormState('false')
+            event.preventDefault();
+            event.stopPropagation();
+            event.nativeEvent.stopImmediatePropagation();
+
+        }
     });
 
     return (

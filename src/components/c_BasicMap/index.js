@@ -99,13 +99,13 @@ export const C_BasicMap = ({initialSlide, setInitialSlide, setIsCardVisible, isC
                                             setClustersProjects(supercluster.getLeaves(project.id));
                                             !isClusterClick && isCardVisible ? null : setIsCardVisible(prev => !prev);
                                             setIsClusterClick(prev => !prev);
-
                                         }}
-                                        
-                                        imgDefault={map_settings.defaultPin.src}
-                                        imgActive={map_settings.activePin.src}
-                                        isPinActive={true}
+
+                                        imgDefault={map_settings.activePin.src}
+                                        imgActive={map_settings.defaultPin.src}
+                                        isPinActive={!isClusterClick}
                                         pointCount={pointCount}
+                                        className={!isClusterClick ? classes.color_inverse : ''}
                                     />
                                 );
                             }
