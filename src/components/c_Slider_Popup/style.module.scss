@@ -1,9 +1,9 @@
 @import '../../styles/style';
 
 .root {
-  //width: 1000px;
   display: flex;
   justify-items: center;
+  flex-direction: column;
 }
 
 .swiper {
