@@ -6,12 +6,13 @@ import {LoadingState} from "mobx-loading-state";
 let version = require('package.json').version;
 
 
-export class mainStore {
+export class MainStore {
     loading = new LoadingState();
     version;
     newsData;
     pagesData;
     status = "initial";
+    newVersion = false;
 
     constructor() {
         makeAutoObservable(this);
@@ -21,11 +22,10 @@ export class mainStore {
                 properties: ['version', 'newsData', 'pagesData', 'newsDataUpdateDt', 'pagesDataUpdateDt'],
                 storage: window.localStorage
             }).finally(() => {
-                    if (!this.version || this.version < version) {
-                        this.version = version
+                    if (this.version !== version) {
                         console.log('Новая версия приложения:', version)
-                        this.getNewsAsync().then(()=>console.log('Новости обновлены'));
-                        this.getPagesAsync().then(()=>console.log('Страницы обновлены'));
+                        this.newVersion = true
+                        this.version = version
                     }
                 }
             );
@@ -80,19 +80,13 @@ export class mainStore {
     }
 
     dataExist(data) {
-        if (typeof data !== 'undefined' && this.updTimeCheck(data.updateDt)) {
+        if ((typeof data !== 'undefined' && this.updTimeCheck(data.updateDt)) && !this.newVersion) {
             return true
         }
     }
+   /* newVersion() {
+        return !this.version || this.version < version;
+    }*/
 }
 
-const MainStore = new mainStore();
-/*if (typeof window !== 'undefined') {
-    window.addEventListener('storage', (e) => {
-        if (e.key === 'mobxStore') {
-            mainStore.hydrateStore().catch(() => {
-            });
-        }
-    });
-}*/
-export default MainStore;
+export default new MainStore();

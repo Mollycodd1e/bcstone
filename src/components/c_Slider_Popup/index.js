@@ -53,7 +53,6 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, pagin
                     },
                 }}
                 onSlideChange={(evt)=>{
-                    console.log('изменен слайдер в поп-апе')
                     if (isVisible) {setSlideIndex(evt.realIndex)}
                 }}
                 loop={true}
