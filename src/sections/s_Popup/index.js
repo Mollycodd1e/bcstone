@@ -14,6 +14,7 @@ const S_Popup = observer(function S_Popup({className, children}) {
             store.switchPopUpFormState('false')
             event.stopPropagation();
             event.stopImmediatePropagation();
+            event.preventDefault();
         }
     });
 
