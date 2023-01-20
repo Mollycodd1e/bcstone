@@ -11,11 +11,10 @@ const S_Popup = observer(function S_Popup({className, children}) {
     const formRef = useRef();
     useOnClickOutside(formRef, (event) => {
         if(!store.popUpFormState) {
-            store.switchPopUpFormState('false')
             event.preventDefault();
             event.stopPropagation();
-            event.nativeEvent.stopImmediatePropagation();
-
+            event.stopImmediatePropagation();
+            store.switchPopUpFormState('false')
         }
     });
 
