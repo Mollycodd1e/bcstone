@@ -52,13 +52,13 @@ export const C_PressCard = ({className, newsId, date, image, title, description}
     }
 
     const [isVisible, setVisible] = useState(false);
-
+//(mm>9 ? '' : '0') + mm
     const dayOfNews = new Date(date).getDate();
-    const monthOfNews = new Date(date).getMonth() + 1;
+    const monthOfNews = new Date(date).getMonth()+1;
     
     return (
         <div className={classNames(cls, {[classes.element_show]: isVisible})}>
-            <div className={classNames(classes.data, {[classes.data_hover]: isHover})}>{dayOfNews}/{monthOfNews}</div>
+            <div className={classNames(classes.data, {[classes.data_hover]: isHover})}>{dayOfNews}/{(monthOfNews>9? '': '0') + monthOfNews}</div>
                 <a href={`/news?id=${newsId}`}>
                     <div className={classNames(classes.card_wrapper, {[classes.card_wrapper_hover]: isHover})} onMouseEnter={() => onHover()} onMouseLeave={() => onLeave()}>      
                         <Image src={image} layout='fill' alt={`${cropTitle}`}/>
