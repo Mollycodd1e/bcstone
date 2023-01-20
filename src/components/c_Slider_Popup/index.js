@@ -46,7 +46,7 @@ export const C_SliderPopup = ({className, isBtnClose, items, initialSlide, pagin
                 pagination={{
                     el: `.${classes.numbersWrapper}`,
                     bulletClass: `${classes.regular}`,
-                    bulletActiveClass: `${classes.regular__selected}`,
+                    bulletActiveClass: `${classes.selected}`,
                     clickable: true,
                     renderBullet: (index, className) => {
                         return '<span class="' + className + '"></span>';

@@ -62,11 +62,20 @@
 }
 
 .numbersWrapper {
+  width: unset !important;
+  margin: 0 auto;
+  .regular {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap,4px);
+    background-color: rgba(0, 0, 0, 0.17);
 
-}
-
-.regular {
-
+  }
+  .selected{
+    background-color: rgb(0, 0, 0);
+  }
 }
 
 .swiper_button_next,
@@ -74,12 +83,6 @@
 .swiper_button_prev .swiper-button-disabled,
 .swiper_button_next .swiper-button-disabled {
   display: none;
-}
-
-@media (min-width: $width-mobile-pre-md) {
-  .swiper {
-    padding-bottom: 2.8rem;
-  }  
 }
 
 @media (min-width: $width-tablet-sm) {
@@ -104,10 +107,7 @@
   }
 
   @mixin pinParams{
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    margin-bottom: 9px;
+    margin-bottom: 9px !important;
   }
 
   .regular {
