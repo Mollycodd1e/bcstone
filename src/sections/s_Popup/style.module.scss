@@ -4,11 +4,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
   color: #fff;
   position: fixed;
   top: 0;
   left: 0;
+  padding-top: 50px;
   width: 100vw;
   height: 100vh;
   z-index: 25;
@@ -24,7 +25,7 @@
 .closeIcon {
   width: 30px;
   height: 30px;
-  margin: 20px 20px 0 0;
+  margin: 14px 20px 0 0;
   background-image: url("../../img/s_close_icon.svg");
   background-size: 30px 30px;
   background-repeat: no-repeat;
@@ -57,9 +58,15 @@
 .formWrapper {
   display: flex;
   justify-content: right;
+  width: 100%;
+  max-width: 1920px;
 }
 
 @media (min-width: $width-mobile-pre-md) {
+  .closeIcon {
+    margin: 15px 25px 0 0;
+  }
+
   .fullFormIndexSection {
     & > div {
 
@@ -89,9 +96,19 @@
 }
 
 @media (min-width: $width-tablet-sm) {
+  .root {
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .formWrapper {
+    padding: 0 30px;
+  }
+
   .closeIcon {
     width: 46px;
     height: 46px;
+    margin: 20px 30px 0 0;
     background-image: url("../../img/s_close_icon.svg");
     background-size: 46px 46px;
   }
@@ -110,11 +127,15 @@
 }
 
 @media (min-width: $width-tablet-md) {
-
   .closeIcon {
     width: 52px;
     height: 52px;
+    margin: 22px 22px 0 0;
     background-size: 52px 52px;
+  }
+
+  .formWrapper {
+    padding: 0 52px;
   }
 
   .fullFormIndexSection {
@@ -135,8 +156,9 @@
   .fullFormIndexSection {
     & > div {
       & > div {
-        padding: 94.2px 48px 88.2px 89px;
-        grid-column-gap: 90px;
+        // padding: 94.2px 48px 88.2px 89px;
+        padding: 94.2px 88px 88.2px 135px;
+        grid-column-gap: 106px;
       }
     }
 
@@ -147,13 +169,21 @@
 }
 
 @media (min-width: $width-desktop-sm) {
+  .formWrapper {
+    padding: 0 66px;
+  }
+
+  .closeIcon {
+    margin: 37px 47px 0 0;
+  }
+
   .fullFormIndexSection {
     & > div {
       max-width: 1788px;
       
       & > div {
-        padding: 136px 220px 125px 190px;
-        grid-column-gap: 90px;
+        padding: 136px 230px 125px 200px;
+        grid-column-gap: 100px;
 
         & h3 {
           margin-left: 0;
@@ -188,10 +218,14 @@
 
 @media (min-width: $width-desktop-lg) {
   .fullFormIndexSection {
+    min-width: 1788px;
+    margin: 0 auto;
+
     & > div {
       & > div {
-        padding: 136px 185px 127px 320px;
-        grid-column-gap: 60px;
+        // padding: 136px 185px 127px 320px;
+        padding: 134px 395px 114px 500px;
+        grid-column-gap: 70px;
 
         & h3 {
           margin-left: 0;

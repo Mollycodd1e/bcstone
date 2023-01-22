@@ -14,14 +14,15 @@ const S_Popup = observer(function S_Popup({className, children}) {
             event.preventDefault();
             event.stopPropagation();
             event.stopImmediatePropagation();
-            store.switchPopUpFormState('false')
+            store.switchPopUpFormState('false'),
+            formRef.current.children[1].reset()
         }
     });
-
+    
     return (
         <div className={cls} tabIndex={-1}>
             <div className={classes.formWrapper} ref={formRef}>
-                <button className={classes.closeIcon} onClick={(e) =>  store.switchPopUpFormState()}/>
+                <button className={classes.closeIcon} onClick={(e) =>  (store.switchPopUpFormState(),(formRef.current.children[1].reset()))}/>
                 {children}
             </div>
         </div>

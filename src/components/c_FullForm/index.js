@@ -5,10 +5,11 @@ import React, {useEffect, useState} from "react";
 import { useRef } from 'react';
 import { C_MainButton } from '../c_MainButton';
 
-export const C_FullForm = ({className, data, popup}) => {
+export const C_FullForm = ({className, data, popup, isPopupClose}) => {
     const cls = classNames(classes.root, "form", "form--top", {[className]: className});
+
     const {description, descriptionSuccess, title, titleSuccess} = data.main_form;
-    
+
     const [isConfirmed, setIsConfirmed] = useState(false);
     const [isProcessing, setIsProcessing] = useState(false);
 
@@ -21,8 +22,8 @@ export const C_FullForm = ({className, data, popup}) => {
     const [isNameValid, setIsNameValid] = useState(false);
     const [isEmailValid, setIEmailValid] = useState(true);
     const [isCheckValid, setIsCheckValid] = useState(false);
+    
     const [isOnlyCheckboxUnpushed, setIsOnlyCheckboxUnpushed] = useState(false);
-
 
     useEffect(() => {
         function onEntryTitle(entry) {
@@ -32,7 +33,7 @@ export const C_FullForm = ({className, data, popup}) => {
               }
             });
         }
-    
+
         let options = { rootMargin: '0px', threshold: [0.5] };
     
         let observer = new IntersectionObserver( onEntryTitle, options);
@@ -41,7 +42,6 @@ export const C_FullForm = ({className, data, popup}) => {
             observer.observe(titleRef.current);
         }
     })
-
 
     const validName = /^(([a-zA-Zа-яА-ЯЁё-]{1,30}))$/u;
 
@@ -56,6 +56,7 @@ export const C_FullForm = ({className, data, popup}) => {
     const errorType = {
         red: "red",
         orange: "orange",
+        green: "green",
     }
 
     const [errorNameText, setErrorNameText] = useState('');
@@ -68,7 +69,7 @@ export const C_FullForm = ({className, data, popup}) => {
     const onButtonClick = (e) => {
         e.preventDefault();
 
-        if (!name && !phone) {
+        if (!name && !phone || !name && phone.length < 11) {
             setErrorNameText(`${fieldText.require}`);
             setErrorNameCode(`${errorType.orange}`);
             setErrorPhoneText(`${fieldText.require}`);
@@ -76,7 +77,7 @@ export const C_FullForm = ({className, data, popup}) => {
         } else if (!name) {
             setErrorNameText(`${fieldText.require}`);
             setErrorNameCode(`${errorType.orange}`);
-        } else if (!phone) {
+        } else if (!phone || phone.length < 11) {
             setErrorPhoneText(`${fieldText.require}`);
             setErrorPhoneCode(`${errorType.orange}`);
         } else {
@@ -144,7 +145,13 @@ export const C_FullForm = ({className, data, popup}) => {
     }
 
     return (
-        <form className={cls}>
+        <form className={cls} onReset={() =>
+            (
+                isPhoneValid && phone.length > 0 ? '' : (setErrorPhoneText(``), setErrorPhoneCode(``)),
+                isNameValid ? '' : (setErrorNameText(``), setErrorNameCode(``), setName(``)),
+                isEmailValid ? '' : (setErrorEmailText(``), setErrorEmailCode(``), setEmail(``))
+            )
+        }>
             <div className={classes.wrapper_frame}>
                 <div className={classes.frame}>
                     <div className={classNames(classes.titles,{[classes.textShown] : isTitle})} ref={titleRef}>
@@ -167,6 +174,7 @@ export const C_FullForm = ({className, data, popup}) => {
                                     {
                                         [classes.inputRequire]: errorNameCode === errorType.orange,
                                         [classes.inputError]: errorNameCode === errorType.red,
+                                        [classes.inputSuccess]: isNameValid && name.length > 0,
                                     }
                                 )
                             }
@@ -204,6 +212,7 @@ export const C_FullForm = ({className, data, popup}) => {
                                     {
                                         [classes.inputRequire]: errorPhoneCode === errorType.orange,
                                         [classes.inputError]: errorPhoneCode === errorType.red,
+                                        [classes.inputSuccess]: isPhoneValid && phone.length === 11
                                     }
                                 )
                             }>
@@ -242,6 +251,7 @@ export const C_FullForm = ({className, data, popup}) => {
                                     {
                                         [classes.inputRequire]: errorEmailCode === errorType.orange,
                                         [classes.inputError]: errorEmailCode === errorType.red,
+                                        [classes.inputSuccess]: isEmailValid && email.length > 0
                                     }
                                 )
                             }>
