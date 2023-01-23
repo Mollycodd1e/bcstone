@@ -56,6 +56,10 @@
   top: calc(20% - 13px);
   cursor: pointer;
   z-index: 10;
+
+  &:hover {
+    opacity: 0.75;
+  }
 }
 
 .Popup_Slider {
@@ -84,7 +88,8 @@
     margin: 0 auto;
     margin-bottom: unset;
     overflow: unset;
-    border-radius: 20px;
+    border-radius: 15px;
+    max-height: 426px;
   }
 
   .Popup_Slider {
@@ -92,16 +97,15 @@
   }
 
   .popupVideoWrapper {
-    border-radius: 20px;
+    border-radius: 15px;
   
     & iframe {
       min-height: 426px;
       height: 67.82vw;
-      border-radius: 20px;
+      border-radius: 15px;
     }
   }
 
-  
   .closeIcon {
     width: 46px;
     height: 46px;
@@ -147,9 +151,12 @@
     min-width: 902px;
     max-width: 1092px;
     width: calc(100vw - 308px);
-    min-height: 650px;
+    //min-height: 650px;
+    min-height: 510px;
     height: unset;
     max-height: 650px;
+    // max-height: 510px;
+    top: calc(20% - 3px);
   }
 
   .popupVideoWrapper {  
